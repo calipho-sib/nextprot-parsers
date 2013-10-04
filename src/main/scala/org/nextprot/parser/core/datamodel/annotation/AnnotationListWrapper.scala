@@ -1,12 +1,9 @@
-package org.nextprot.parser.core.datamodel
+package org.nextprot.parser.core.datamodel.annotation
 
-abstract class AnnotationListWrapper {
+import org.nextprot.parser.core.datamodel.TemplateModel
 
-  val _datasource: String
-  val _accession: String
-  val _rowAnnotations: List[RawAnnotation]
-
-  def toXML =
+class AnnotationListWrapper (val _datasource: String, val _accession: String, val _rowAnnotations: List[RawAnnotation]) extends TemplateModel{
+  override def toXML =
     <com.genebio.nextprot.dataloader.swissprot.AnnotationListWrapper>
       <annotationCategory>GENERAL_ANNOTATION</annotationCategory>
       <ac>{ _accession }</ac>
@@ -19,5 +16,4 @@ abstract class AnnotationListWrapper {
         }
       }</wrappedBean>
     </com.genebio.nextprot.dataloader.swissprot.AnnotationListWrapper>
-
 }

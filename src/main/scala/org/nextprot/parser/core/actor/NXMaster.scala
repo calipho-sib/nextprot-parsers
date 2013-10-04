@@ -3,10 +3,8 @@ import akka.actor.{ ActorRef, ActorSystem, Props, Actor, Inbox }
 import java.io.File
 import java.io.OutputStream
 import scala.Array.canBuildFrom
-import org.nextprot.parser.core.datamodel.AnnotationListWrapper
 import java.io.FileWriter
 import scala.collection.mutable.ArrayBuffer
-import org.nextprot.parser.core.datamodel.AnnotationListWrapper
 import akka.routing.RoundRobinRouter
 import org.nextprot.parser.core.actor.message._
 import org.nextprot.parser.core.exception.NXException

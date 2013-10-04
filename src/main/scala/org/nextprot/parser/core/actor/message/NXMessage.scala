@@ -1,8 +1,8 @@
 package org.nextprot.parser.core.actor.message
 
 import java.io.File
-import org.nextprot.parser.core.datamodel.AnnotationListWrapper
 import org.nextprot.parser.core.exception.NXException
+import org.nextprot.parser.core.datamodel.TemplateModel
 
 sealed trait NXMessage
 
@@ -22,7 +22,7 @@ case class ParseFileMSG(val parserImpl: String, val file: File) extends NXMessag
  * Message sent from the  [[org.nextprot.parser.core.actor.NXWorker]] to the  [[org.nextprot.parser.core.actor.NXMaster]] to communicate that the file was parsed correctly
  * @param wrapper the wrapper (that contains an xml representation that resulted from the parsing
  */
-case class SuccessFileParsedMSG(val wrapper: AnnotationListWrapper) extends NXMessage
+case class SuccessFileParsedMSG(val wrapper: TemplateModel) extends NXMessage
 
 /**
  * Message sent from the  [[org.nextprot.parser.core.actor.NXWorker]] to the  [[org.nextprot.parser.core.actor.NXMaster]] to communicate that the file failed to be parsed because of a known reason
