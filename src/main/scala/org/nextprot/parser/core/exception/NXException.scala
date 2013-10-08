@@ -31,8 +31,12 @@ sealed abstract class NXExceptionType(val isError: Boolean, val description: Str
  * Expected exceptions returned from the parsing
  * @author Daniel Teixeira
  */
-class NXException(nxExceptionType: NXExceptionType, message: String) extends Exception {
+class NXException(file : File, nxExceptionType: NXExceptionType, message: String) extends Exception {
 
+  def this(nxExceptionType: NXExceptionType, message: String) = this(null, nxExceptionType, message )
+  
+  def this(file: File, e: NXException) = this(file, e.getNXExceptionType, e.getMessage)
+  
   /**
    * Constructor with an empty message, (usually the type and the description of the message is simply enough)
    */
@@ -50,6 +54,14 @@ class NXException(nxExceptionType: NXExceptionType, message: String) extends Exc
    */
   def getNXExceptionType(): NXExceptionType = {
     return nxExceptionType;
+  }
+  
+  
+  /**
+   * The file associated with the error
+   */
+  def getFile(): File = {
+    return file;
   }
 
 }

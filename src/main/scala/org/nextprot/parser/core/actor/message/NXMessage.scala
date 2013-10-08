@@ -16,7 +16,7 @@ object StartParsingMSG extends NXMessage
  * @param parserImpl the name of the parser implementation class
  * @param file the file to parse
  */
-case class ParseFileMSG(val parserImpl: String, val file: File) extends NXMessage
+case class ProcessMSG(val parserImpl: String, val file: File) extends NXMessage
 
 /**
  * Message sent from the  [[org.nextprot.parser.core.actor.NXWorker]] to the  [[org.nextprot.parser.core.actor.NXMaster]] to communicate that the file was parsed correctly
@@ -28,7 +28,7 @@ case class SuccessFileParsedMSG(val wrapper: TemplateModel) extends NXMessage
  * Message sent from the  [[org.nextprot.parser.core.actor.NXWorker]] to the  [[org.nextprot.parser.core.actor.NXMaster]] to communicate that the file failed to be parsed because of a known reason
  * @param exception the nextprot exception 
  */
-case class NXExceptionFoundMSG(val exception: NXException, val file:File) extends NXMessage
+case class NXExceptionFoundMSG(val exception: NXException) extends NXMessage
 
 /**
  * Message sent from the  [[org.nextprot.parser.core.actor.NXMaster]] to the  [[org.nextprot.parser.core.actor.NXListener]] to communicate that all workers have finished 
@@ -37,4 +37,4 @@ case class NXExceptionFoundMSG(val exception: NXException, val file:File) extend
  * @param errors the unexpected errors
  * @param files the files
  */
-case class EndActorSystemMSG(val success: Int, val errors : Traversable[NXException], files : List[File] ) extends NXMessage
+case class EndActorSystemMSG(val success: Int, val goldCount : Int, val silverCount : Int,  val errors : Traversable[NXException], files : List[File] ) extends NXMessage

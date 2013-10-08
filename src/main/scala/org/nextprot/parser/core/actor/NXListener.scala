@@ -24,7 +24,8 @@ class NXListener extends Actor {
 
   def receive = {
     case m: EndActorSystemMSG => {
-      printStats(m.success, m.errors, m.files);
+      printStats(m.success, m.goldCount, m.silverCount, m.errors, m.files);
+      printDetails(m.errors)
       context.system.shutdown()
     }
     case _ => {
@@ -32,11 +33,13 @@ class NXListener extends Actor {
     }
   }
 
-  def printStats(success: Int, errors: Traversable[NXException], files: List[File]) = {
+  def printStats(success: Int, goldCount: Int, silverCount: Int, errors: Traversable[NXException], files: List[File]) = {
     var existError = false;
     println
     println("############################################## Parsing statistics #########################################################")
     println("From a total of " + files.size + " entries: " + success + " entries were successfully parsed and " + errors.size + " discarded.");
+    println("Number of GOLD entries: " + goldCount);
+    println("Number of SILVER entries: " + silverCount);
     println("----------------------------------------------------------------------------------------------------------------------------")
     println("Discard / Error cases: ")
     errors.groupBy(e => e.getNXExceptionType).toList.sortWith(_._2.size > _._2.size).map(
@@ -57,7 +60,22 @@ class NXListener extends Actor {
 
     } else {
       println("Parsing fully successful. Bravo!")
-    } 
+    }
+  }
+
+  def printDetails(errors: Traversable[NXException]) = {
+
+    val detailsFileName = "details.log";
+    val fw = new FileWriter(detailsFileName, false)
+
+    errors.groupBy(e => e.getNXExceptionType).toList.map(
+      exs => {
+        fw.write(exs._2.size + " cases with " + exs._1.getClass().getSimpleName() + " (" + exs._1.description + "):\n")
+        exs._2.foreach(id => {
+          fw.write(id.getFile.getName()  + "\n" );
+        })
+      })
+    println("Detailed file: " + detailsFileName)
   }
 
 }

@@ -10,6 +10,7 @@ import org.nextprot.parser.core.actor.message._
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.NXProperties._
 import scala.xml.PrettyPrinter
+import org.nextprot.parser.core.constants.NXQuality
 
 /**
  * Master actor responsible to dispatch the files to different parsing actors (NXParserActor) and appends the wrapped beans into a single output file.
@@ -21,10 +22,12 @@ class NXMaster(nxParserImpl: String, files: List[File], listener: ActorRef) exte
   if (System.getProperty(outputFileProperty) != null) System.getProperty(outputFileProperty) else System.setProperty(outputFileProperty, "output.xml");
   if (System.getProperty(failedFileProperty) != null) System.getProperty(failedFileProperty) else System.setProperty(failedFileProperty, "failed-entries.log");
 
-  private val errors = ArrayBuffer[NXException]();
+  private val discardedCases = ArrayBuffer[NXException]();
 
   private var success = 0;
   private var filesCount = 0
+  private var goldCount = 0
+  private var silverCount = 0
 
   private val count = files.size;
   println("Found " + count + " files! Dispatching files between parsers ...")
@@ -47,31 +50,35 @@ class NXMaster(nxParserImpl: String, files: List[File], listener: ActorRef) exte
   }
 
   private def end = {
-    if (!errors.isEmpty) {
+    if (!discardedCases.isEmpty) {
       logFile.close
     }
     fw.write("</object-stream>");
     fw.close;
-    listener ! EndActorSystemMSG(success, errors, files)
+    listener ! EndActorSystemMSG(success, goldCount, silverCount, discardedCases, files)
   }
 
   def receive = {
     case StartParsingMSG => {
       fw.write("<object-stream>\n")
-      files.map(f => workerRouter ! ParseFileMSG(nxParserImpl, f))
+      files.map(f => workerRouter ! ProcessMSG(nxParserImpl, f))
     }
     case m: SuccessFileParsedMSG => {
       filesCount += 1
       success += 1
       fw.write(prettyPrinter.format(m.wrapper.toXML) + "\n")
+      m.wrapper.getQuality match {
+        case NXQuality.GOLD => goldCount+=1
+        case NXQuality.SILVER => silverCount+=1
+      }
       checkEnd
     }
     case m: NXExceptionFoundMSG => {
       filesCount += 1
-      errors += m.exception;
+      discardedCases += m.exception;
       if (m.exception.getNXExceptionType.isError) {
-        logFile.write(m.file.getAbsolutePath() + "\n");
-        println(m.file.getName() + " - " + m.exception.getNXExceptionType.getClass().getSimpleName() + " " + m.exception.getMessage)
+        logFile.write(m.exception.getFile.getAbsolutePath() + "\n");
+        println(m.exception.getFile.getName() + " - " + m.exception.getNXExceptionType.getClass().getSimpleName() + " " + m.exception.getMessage)
       }
       checkEnd
     }
