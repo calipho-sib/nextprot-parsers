@@ -65,7 +65,7 @@ class NXListener extends Actor {
 
   def printDetails(errors: Traversable[NXException]) = {
 
-    val detailsFileName = "details.log";
+    val detailsFileName = "hpa-subcell-details.log";
     val fw = new FileWriter(detailsFileName, false)
 
     errors.groupBy(e => e.getNXExceptionType).toList.map(
