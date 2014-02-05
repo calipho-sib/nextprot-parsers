@@ -76,6 +76,8 @@ class NXListener extends Actor {
         })
       })
     println("Detailed file: " + detailsFileName)
+    //println("Errors found:" + errors.size)
+    
   }
 
 }

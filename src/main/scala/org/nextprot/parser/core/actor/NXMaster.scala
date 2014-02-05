@@ -19,6 +19,7 @@ import org.nextprot.parser.core.constants.NXQuality
 
 class NXMaster(nxParserImpl: String, files: List[File], listener: ActorRef) extends Actor {
 
+  
   if (System.getProperty(outputFileProperty) != null) System.getProperty(outputFileProperty) else System.setProperty(outputFileProperty, "output.xml");
   if (System.getProperty(failedFileProperty) != null) System.getProperty(failedFileProperty) else System.setProperty(failedFileProperty, "failed-entries.log");
 
@@ -28,6 +29,7 @@ class NXMaster(nxParserImpl: String, files: List[File], listener: ActorRef) exte
   private var filesCount = 0
   private var goldCount = 0
   private var silverCount = 0
+  private var ecResult:scala.xml.Node = null;
 
   private val count = files.size;
   println("Found " + count + " files! Dispatching files between parsers ...")
@@ -49,30 +51,52 @@ class NXMaster(nxParserImpl: String, files: List[File], listener: ActorRef) exte
     }
   }
 
+  private def storeEcResult(r: scala.xml.Node) = {
+    //println("storing Ec result, length = " + r.toString().length());
+    ecResult = r;
+  }
+  
   private def end = {
     if (!discardedCases.isEmpty) {
       logFile.close
     }
-    fw.write("</object-stream>");
+    if (nxParserImpl.endsWith("HPAExpcontextNXParser")) {  // ExpContext special case
+    	println("Writing final XML to file, length before pretty printing:" + ecResult.toString().length())
+    	fw.write(prettyPrinter.format(ecResult) + "\n")        
+    } else {
+    	fw.write("</object-stream>");
+    }
     fw.close;
     listener ! EndActorSystemMSG(success, goldCount, silverCount, discardedCases, files)
   }
 
   def receive = {
-    case StartParsingMSG => {
-      fw.write("<object-stream>\n")
-      files.map(f => workerRouter ! ProcessMSG(nxParserImpl, f))
+    
+  	case StartParsingMSG => {
+      if (nxParserImpl.endsWith("HPAExpcontextNXParser")) {  // ExpContext special case
+	      files.map(f => workerRouter ! ProcessMSG(nxParserImpl, f))        
+      } else {
+	      fw.write("<object-stream>\n")
+	      files.map(f => workerRouter ! ProcessMSG(nxParserImpl, f))        
+      }
     }
+    
     case m: SuccessFileParsedMSG => {
       filesCount += 1
       success += 1
-      fw.write(prettyPrinter.format(m.wrapper.toXML) + "\n")
+      if (nxParserImpl.endsWith("HPAExpcontextNXParser")) {  // ExpContext special case (if any) !
+        storeEcResult(m.wrapper.toXML);
+      } else {
+    	  fw.write(prettyPrinter.format(m.wrapper.toXML) + "\n")        
+      }
       m.wrapper.getQuality match {
         case NXQuality.GOLD => goldCount+=1
         case NXQuality.SILVER => silverCount+=1
       }
       checkEnd
     }
+    
+    
     case m: NXExceptionFoundMSG => {
       filesCount += 1
       discardedCases += m.exception;
@@ -82,6 +106,7 @@ class NXMaster(nxParserImpl: String, files: List[File], listener: ActorRef) exte
       }
       checkEnd
     }
+    
     case _ => {
       println("Unexpected message received ")
       end

@@ -9,7 +9,7 @@ object NXProperties {
     /** Where to store the validated XML result file */   
   val outputFileProperty = "output.file"
    /** Where to store the parsing error report */
-  val failedFileProperty = "failed.file" 
+  val failedFileProperty = "failed.file"
     /** what specific parser to run (eg: HPA-subcell, HPA-expression, Bgee...) */
   val parserImplementationProperty = "parser.impl";
     /** Default folder where to find the input data */

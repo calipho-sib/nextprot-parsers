@@ -32,8 +32,14 @@ abstract class NXParserAppBase extends App {
       val listener = system.actorOf(Props[NXListener], name = "listener")
       val master = system.actorOf(Props(new NXMaster(parserImpl, files, listener)), name = "master")
 
-      // start the calculation
-      master ! StartParsingMSG
+      if (Class.forName(parserImpl).toString().endsWith("HPAExpcontextNXParser")) {
+	      // start expcontext special calculation
+	      master ! StartParsingMSG
+	      //master ! StartAccumulatingMSG
+      } else {
+	      // start the standard calculation
+	      master ! StartParsingMSG
+      }
 
     } else {
       println("Found 0 files")

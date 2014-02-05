@@ -11,6 +11,7 @@ sealed trait NXMessage
  */
 object StartParsingMSG extends NXMessage
 
+
 /**
  * Message sent from a [[org.nextprot.parser.core.actor.NXMaster]] to a [[org.nextprot.parser.core.actor.NXWorker]] to parse a file
  * @param parserImpl the name of the parser implementation class
