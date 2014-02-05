@@ -20,8 +20,8 @@ class NXWorker extends Actor {
         //TODO here we should change to use reflection, the parser will depend
         val parser = Class.forName(m.parserImpl).newInstance().asInstanceOf[org.nextprot.parser.core.NXParser];
         try {
-          val wrappedBean = parser.parse(m.file.getAbsolutePath())
-          sender ! SuccessFileParsedMSG(wrappedBean)
+    		val wrappedBean = parser.parse(m.file.getAbsolutePath())
+    		sender ! SuccessFileParsedMSG(wrappedBean)
         } catch {
           case e: NXException => {
             sender ! NXExceptionFoundMSG(new NXException(m.file, e))
