@@ -14,7 +14,8 @@ class RawAnnotation(val _datasource: String, val _cvTermAcc: String, val _cvTerm
       }
       <type>{ _type }</type>
       <description>{ _description.replace("\n", "") }</description>
-      <quality>{ _quality.toString() }</quality>{
+      {if (_quality != null)
+      {<quality>{ _quality.toString() }</quality>}
         if (_assocs != null) {
           <resourceAssocs>
             {
