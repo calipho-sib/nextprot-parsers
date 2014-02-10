@@ -13,7 +13,7 @@ class RawAnnotation(val _datasource: String, val _cvTermAcc: String, val _cvTerm
         }
       }
       <type>{ _type }</type>
-      <description>{ _description.replace("\n", "") }</description>
+      <description>{ scala.xml.PCData(_description.replace("\n", "")) }</description>
 
       {
         if (_quality != null)  {

@@ -4,9 +4,9 @@ import org.nextprot.parser.core.datamodel.biosequence.BioSequenceList
 import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
 import org.nextprot.parser.core.constants.NXQuality
-import org.nextprot.parser.core.datamodel.annotation.AnnotationListWrapper
+//import org.nextprot.parser.core.datamodel.annotation.AnnotationListWrapper
 
-class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val annots: AnnotationListWrapper, val _accession: String) {
+class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _accession: String) {
 
   def toXML =
     <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
@@ -26,7 +26,7 @@ class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSe
      <uniprotIds>
       <string>{ _accession}</string>
      </uniprotIds>
-     { annots }
+     { _annots.toXML }
     </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
 }
 
