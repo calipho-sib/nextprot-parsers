@@ -21,6 +21,7 @@ abstract class NXParserAppBase extends App {
   protected def initialize {
 
     val parserImpl = getParserImplementation;
+    val reducerImpl = getReducerImplementation;
     val files = getFilesForParsing
 
     if (!(files.isEmpty)) {
@@ -30,22 +31,15 @@ abstract class NXParserAppBase extends App {
       // create the result listener, which will print the result and shutdown the system
 
       val listener = system.actorOf(Props[NXListener], name = "listener")
-      val master = system.actorOf(Props(new NXMaster(parserImpl, files, listener)), name = "master")
+      val master = system.actorOf(Props(new NXMaster(parserImpl, reducerImpl, files, listener)), name = "master")
 
-      if (Class.forName(parserImpl).toString().endsWith("HPAExpcontextNXParser")) {
-	      // start expcontext special calculation
-	      master ! StartParsingMSG
-	      //master ! StartAccumulatingMSG
-      } else {
-	      // start the standard calculation
-	      master ! StartParsingMSG
-      }
+      master ! StartParsingMSG
 
     } else {
       println("Found 0 files")
     }
-    
-          println("Done")
+
+    println("Done")
   }
 
   private def getParserImplementation: String = {
@@ -53,7 +47,13 @@ abstract class NXParserAppBase extends App {
     if (System.getProperty(NXProperties.parserImplementationProperty) == null) {
       println(parserImplementationProperty + " property not found."); System.exit(1); return "";
     } else { Class.forName(System.getProperty(parserImplementationProperty)); return System.getProperty(parserImplementationProperty) };
+  }
 
+  private def getReducerImplementation: String = {
+
+    if (System.getProperty(NXProperties.reducerImplementationProperty) == null) {
+      println(reducerImplementationProperty + " property not found."); System.exit(1); return "";
+    } else { Class.forName(System.getProperty(reducerImplementationProperty)); return System.getProperty(reducerImplementationProperty) };
   }
 
   private def getFilesForParsing: List[File] = {
