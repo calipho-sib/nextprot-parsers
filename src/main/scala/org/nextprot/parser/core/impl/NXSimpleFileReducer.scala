@@ -5,6 +5,8 @@ import scala.xml.PrettyPrinter
 import org.nextprot.parser.core.NXReducer
 import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality
+import org.nextprot.parser.core.stats.StatisticsCollector
+import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
 
 class NXSimpleFileReducer extends NXReducer {
 
@@ -15,6 +17,8 @@ class NXSimpleFileReducer extends NXReducer {
     objects match {
       case tm: TemplateModel => {
         fw.write(prettyPrinter.format(tm.toXML) + "\n")
+        StatisticsCollectorSingleton.increment("ENTRIES-QUALITY", tm.getQuality.toString())
+
       }
       case _ => throw new ClassCastException
     }
