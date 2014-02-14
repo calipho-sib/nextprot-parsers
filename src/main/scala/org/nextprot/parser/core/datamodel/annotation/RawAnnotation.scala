@@ -2,7 +2,7 @@ package org.nextprot.parser.core.datamodel.annotation
 
 import org.nextprot.parser.core.constants.NXQuality._
 
-class RawAnnotation(val _datasource: String, val _cvTermAcc: String, val _cvTermCategory: String, val _isPropagableByDefault: Boolean, val _type: String, val _description: String, val _quality: NXQuality, val _assocs: List[AnnotationResourceAssoc]) {
+class RawAnnotation(val _qualifierType: String, val _datasource: String, val _cvTermAcc: String, val _cvTermCategory: String, val _isPropagableByDefault: Boolean, val _type: String, val _description: String, val _quality: NXQuality, val _assocs: List[AnnotationResourceAssoc]) {
   def toXML =
     <com.genebio.nextprot.dataloader.dto.RawAnnotation>
       <datasource>{ _datasource }</datasource>
@@ -19,6 +19,9 @@ class RawAnnotation(val _datasource: String, val _cvTermAcc: String, val _cvTerm
         if (_quality != null)  {
           <quality>{ _quality.toString() }</quality>
           }
+      }
+      {
+        if (_qualifierType != null)  { <qualifierType>{ _qualifierType }</qualifierType> }
       }
       
       {
