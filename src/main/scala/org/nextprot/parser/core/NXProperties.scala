@@ -12,6 +12,8 @@ object NXProperties {
   val failedFileProperty = "failed.file"
     /** what specific parser to run (eg: HPA-subcell, HPA-expression, Bgee...) */
   val parserImplementationProperty = "parser.impl";
+    /** What specific reducer to run */
+  val reducerImplementationProperty = "reducer.impl";
     /** Default folder where to find the input data */
   val directoryFilesProperty = "files.directory";
     /** A regular expression to filter input files in the default folder */

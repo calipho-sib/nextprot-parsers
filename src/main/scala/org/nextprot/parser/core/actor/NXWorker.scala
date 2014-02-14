@@ -17,7 +17,6 @@ class NXWorker extends Actor {
   def receive = {
     case m: ProcessMSG => {
       try {
-        //TODO here we should change to use reflection, the parser will depend
         val parser = Class.forName(m.parserImpl).newInstance().asInstanceOf[org.nextprot.parser.core.NXParser];
         try {
     		val wrappedBean = parser.parse(m.file.getAbsolutePath())

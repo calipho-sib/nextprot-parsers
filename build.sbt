@@ -13,11 +13,11 @@ name := "nextprot-parser-core"
 
 organization := "org.nextprot.parser.core"
 
-version := "0.8.0-SNAPSHOT"
+version := "0.9.0-SNAPSHOT"
 
 description := "Nextprot Parser Core"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.10.3"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature" )
 
@@ -31,7 +31,7 @@ javaOptions ++= Seq("-Dparser.impl=org.nextprot.parser.core.ParserTest",
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.2.0",
   "com.typesafe.akka" %% "akka-testkit" % "2.2.0",
-  "org.scalatest" % "scalatest_2.10" % "2.0.M7" % "test",
+  "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default"
 )
