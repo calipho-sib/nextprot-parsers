@@ -12,6 +12,7 @@ import org.nextprot.parser.core.actor.message.EndActorSystemMSG
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.NXProperties
+import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
 
 /**
  * Actor responsible responsible to print a final report and shutdown the actor system.
@@ -24,12 +25,13 @@ class NXListener extends Actor {
 
   def receive = {
     case m: EndActorSystemMSG => {
-      printStats(m.success, m.goldCount, m.silverCount, m.errors, m.files);
-      printDetails(m.errors)
+      StatisticsCollectorSingleton.printStats;
+      //printStats(m.success, m.goldCount, m.silverCount, m.errors, m.files);
+      //printDetails(m.errors)
       context.system.shutdown()
     }
-    case _ => {
-      println("Unexpected message received ")
+    case m: Any => {
+      println("Unexpected message received " + m )
     }
   }
 
@@ -72,12 +74,12 @@ class NXListener extends Actor {
       exs => {
         fw.write(exs._2.size + " cases with " + exs._1.getClass().getSimpleName() + " (" + exs._1.description + "):\n")
         exs._2.foreach(id => {
-          fw.write(id.getFile.getName()  + "\n" );
+          fw.write(id.getFile.getName() + "\n");
         })
       })
     println("Detailed file: " + detailsFileName)
     //println("Errors found:" + errors.size)
-    
+
   }
 
 }

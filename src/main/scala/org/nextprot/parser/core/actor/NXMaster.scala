@@ -55,8 +55,7 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
     if (!discardedCases.isEmpty) {
       logFile.close
     }
-    // listener ! EndActorSystemMSG(success, goldCount, silverCount, discardedCases, files)
-    StatisticsCollectorSingleton.printStats;
+    listener ! EndActorSystemMSG()
   }
 
   def receive = {
@@ -70,20 +69,18 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
       reducer.reduce(m.wrapper);
       filesCount += 1
       StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "success");
-
       checkEnd
     }
 
     case m: NXExceptionFoundMSG => {
-
       filesCount += 1
       discardedCases += m.exception;
       if (m.exception.getNXExceptionType.isError) {
-        StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "error." + m.exception.getNXExceptionType().getClass().getSimpleName());
+        StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "ERROR OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
         logFile.write(m.exception.getFile.getAbsolutePath() + "\n");
         println(m.exception.getFile.getName() + " - " + m.exception.getNXExceptionType.getClass().getSimpleName() + " " + m.exception.getMessage)
       } else {
-        StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "exception." + m.exception.getNXExceptionType().getClass().getSimpleName());
+        StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "DISCARDED CASES OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
       }
       checkEnd
     }

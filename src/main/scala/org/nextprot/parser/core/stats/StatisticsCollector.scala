@@ -22,11 +22,11 @@ class StatisticsCollector {
     println("Printing statistics:\n");
     stats.keys.foreach(metric => {
       val labels = stats.getOrElse(metric, null);
-      val totals : List [Integer] = labels.values.map(v => {v._2}).toList;
-      val sum : Integer = totals.reduceLeft(_ + _);
+      val totals: List[Integer] = labels.values.map(v => { v._2 }).toList;
+      val sum: Integer = totals.reduceLeft(_ + _);
       println("Metric = " + metric + " (" + sum + ")");
 
-      labels.values.foreach(value => {
+      labels.values.toList.sortWith(_._1.toString() < _._1.toString()).foreach(value => {
         println("> " + value._1 + ": " + value._2)
       })
       println

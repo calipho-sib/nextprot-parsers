@@ -38,4 +38,4 @@ case class NXExceptionFoundMSG(val exception: NXException) extends NXMessage
  * @param errors the unexpected errors
  * @param files the files
  */
-case class EndActorSystemMSG(val success: Int, val goldCount : Int, val silverCount : Int,  val errors : Traversable[NXException], files : List[File] ) extends NXMessage
+case class EndActorSystemMSG() extends NXMessage
