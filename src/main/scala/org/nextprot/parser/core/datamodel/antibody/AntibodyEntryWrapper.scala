@@ -4,9 +4,8 @@ import org.nextprot.parser.core.datamodel.biosequence.BioSequenceList
 import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
 import org.nextprot.parser.core.constants.NXQuality
-//import org.nextprot.parser.core.datamodel.annotation.AnnotationListWrapper
 
-class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _accession: String) {
+class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _uniprotIds: List[String]) {
 
   def toXML =
     <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
@@ -15,7 +14,7 @@ class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSe
         <dbXref>
           <resourceType>DATABASE</resourceType>
           <accession>{scala.xml.PCData(_dbxref)}</accession>
-          <version>{ _version } </version>
+          <version>{ _version }</version>
           <cvDatabase>
             <cvName>HPA</cvName>
           </cvDatabase>
@@ -24,15 +23,17 @@ class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSe
         { _propertyList.toXML }
       </wrappedBean>
      <uniprotIds>
-      <string>{ _accession}</string>
-     </uniprotIds>
+  		{
+  		_uniprotIds.map(id => {<string>{id}</string>} )
+  		}
+  	 </uniprotIds>
      { _annots.toXML }
     </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
 }
 
 class AntibodyEntryWrapperList(val _quality: NXQuality, val _antibodyList: List[AntibodyEntryWrapper]) extends TemplateModel {
 
-  override def toXML = <h> { _antibodyList.map(_.toXML) } </h>;
+  override def toXML = _antibodyList.map(_.toXML);
 
   override def getQuality: NXQuality = _quality;
 

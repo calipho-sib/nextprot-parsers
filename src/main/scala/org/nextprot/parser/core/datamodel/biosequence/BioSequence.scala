@@ -8,17 +8,15 @@ class BioSequenceList(val _sequences: List[BioSequence]) {
       <bioSequences>
   		{_sequences.map(_.toXML)}
       </bioSequences> }
-      //else null
-    
 }
 
 class BioSequence (val _sequence: String, val _sequenceType: String) {
   
   def toXML =
-        <com.genebio.nextprot.datamodel.identifier.BioSequence>
+     <com.genebio.nextprot.datamodel.identifier.BioSequence>
           <bioSequence>{_sequence}</bioSequence>
           <bioSequenceType>{_sequenceType}</bioSequenceType>
           <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
-        </com.genebio.nextprot.datamodel.identifier.BioSequence>
+     </com.genebio.nextprot.datamodel.identifier.BioSequence>
     
 }
