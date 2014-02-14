@@ -5,6 +5,8 @@ import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
 import org.nextprot.parser.core.constants.NXQuality
 
+case class AntibodyEntryWrapperList(val antibodyList: List[AntibodyEntryWrapper])
+
 class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _uniprotIds: List[String]) {
 
   def toXML =
@@ -29,12 +31,4 @@ class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSe
   	 </uniprotIds>
      { _annots.toXML }
     </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
-}
-
-class AntibodyEntryWrapperList(val _quality: NXQuality, val _antibodyList: List[AntibodyEntryWrapper]) extends TemplateModel {
-
-  override def toXML = _antibodyList.map(_.toXML);
-
-  override def getQuality: NXQuality = _quality;
-
 }
