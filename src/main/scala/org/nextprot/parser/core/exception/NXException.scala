@@ -25,7 +25,7 @@ object UNEXPECTED_EXCEPTION extends ErrorCase("Unexpected error");
  * @param description A description of the error
  * 
  */
-sealed abstract class NXExceptionType(val isError: Boolean, val description: String)
+sealed abstract class NXExceptionType(val isError: Boolean, val description: String) extends Serializable
 
 /**
  * Expected exceptions returned from the parsing
