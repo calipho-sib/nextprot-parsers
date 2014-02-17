@@ -18,8 +18,8 @@ abstract class NXPrettyReducer extends NXReducer {
   val prettyFormat = (System.getProperty(NXProperties.prettyPrint) != null)
 
   if (prettyFormat)
-    println("Warning! Using pretty print.... This configuration is n ot performant and will take some time... (useful for debug)");
-  else println("Not using pretty print (much more performant)! If you want to use pretty print use the system property \"-" + NXProperties.prettyPrint + "\"");
+    println("Warning! Using pretty print.... This configuration is not performant and will take some time... (useful for debug)");
+  else println("FYI - No pretty print is used,if you want to use pretty print use the system property \"-" + NXProperties.prettyPrint + "\" but be aware it is much slower....");
 
   final def getPrettyFormatIfNeeded(xml: Node): String = {
     if (prettyFormat)
