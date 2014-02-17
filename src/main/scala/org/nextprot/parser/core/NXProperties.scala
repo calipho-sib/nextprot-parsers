@@ -20,4 +20,7 @@ object NXProperties {
   val regularExpressionProperty = "files.expression"
    /** A file explicitly containing the input files to operate on (one per line) */
   val InputFilterFileProperty = "files.listfile";
+  /** Defines whether the output must be pretty printed or not (pretty printing may take a long time) */   
+  val prettyPrint = "pretty"
+
 }
