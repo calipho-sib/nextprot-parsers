@@ -12,9 +12,6 @@ class ExpressionHPAAnnotationsWrapper(
     override def toXML =
     
 		  <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
-		  	<wrappedBean>
-		  		<identifierType>GENE</identifierType>
-		  	</wrappedBean>
 		  	<ensgAccessionCode>{ _ensgAc }</ensgAccessionCode>
 		  	<uniprotIds>
   				{
