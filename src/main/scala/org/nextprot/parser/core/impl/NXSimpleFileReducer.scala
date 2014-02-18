@@ -7,18 +7,17 @@ import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.stats.StatisticsCollector
 import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.NXProperties
 
-class NXSimpleFileReducer extends NXReducer {
+class NXSimpleFileReducer extends NXPrettyReducer {
 
-  private val prettyPrinter = new PrettyPrinter(1000, 4);
-  private val fw = new FileWriter(System.getProperty("output.file"), false)
+  val fw = new FileWriter(System.getProperty("output.file"), false)
 
   def reduce(objects: Any) = {
     objects match {
       case tm: TemplateModel => {
-        fw.write(prettyPrinter.format(tm.toXML) + "\n")
+        fw.write(getPrettyFormatIfNeeded(tm.toXML) + "\n")
         StatisticsCollectorSingleton.increment("ENTRIES-QUALITY", tm.getQuality.toString())
-
       }
       case _ => throw new ClassCastException
     }
