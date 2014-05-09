@@ -13,11 +13,11 @@ name := "nextprot-parser-core"
 
 organization := "org.nextprot.parser.core"
 
-version := "0.10.0-SNAPSHOT"
+version := "0.11.0-SNAPSHOT"
 
 description := "Nextprot Parser Core"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature" )
 
