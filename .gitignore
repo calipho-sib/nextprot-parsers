@@ -1,0 +1,10 @@
+.settings
+.project
+.classpath
+.cache
+cache
+bin
+target
+log
+*.class
+output.xml
