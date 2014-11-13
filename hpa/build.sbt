@@ -25,7 +25,7 @@ fork := true
 
 // this is read only by sbt tool
 javaOptions ++= Seq(
-"-Dfiles.directory=../hpa-data",
+"-Dfiles.directory=../hpa-data-sample",
 "-Dfiles.expression=^ENSG.*.xml$",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
