@@ -1,0 +1,69 @@
+<com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+    <ensgAccessionCode>ENSG00000063177</ensgAccessionCode>
+    <uniprotIds>
+        <string>Q07020</string>
+    </uniprotIds>
+    <antibodyIds>
+        <string>HPA046572</string>
+    </antibodyIds>
+    <integrationLevel>integrated</integrationLevel>
+    <quality>SILVER</quality>
+    <subcellAnnotations>
+        <wrappedBean>
+            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
+                <datasource>Human protein atlas subcellular localization</datasource>
+                <isPropagableByDefault>true</isPropagableByDefault>
+                <cvTermAcc>SL-0188</cvTermAcc>
+                <cvTermCategory>Uniprot subcellular location</cvTermCategory>
+                <type>subcellular location</type>
+                <description><![CDATA[Main location.]]></description>
+                <quality>SILVER</quality>
+                <resourceAssocs>
+                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                        <resource class="source.DbXref">
+                            <resourceType>DATABASE</resourceType>
+                            <accession>ENSG00000063177/subcellular</accession>
+                            <cvDatabase>
+                                <cvName>HPA</cvName>
+                            </cvDatabase>
+                        </resource>
+                        <qualifierType>EXP</qualifierType>
+                        <qualityQualifier>SILVER</qualityQualifier>
+                        <isNegativeEvidence>false</isNegativeEvidence>
+                        <type>EVIDENCE</type>
+                        <assignedBy>
+                            <cvName>Human protein atlas subcellular localization</cvName>
+                        </assignedBy>
+                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                </resourceAssocs>
+            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
+            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
+                <datasource>Human protein atlas subcellular localization</datasource>
+                <isPropagableByDefault>true</isPropagableByDefault>
+                <cvTermAcc>SL-0086</cvTermAcc>
+                <cvTermCategory>Uniprot subcellular location</cvTermCategory>
+                <type>subcellular location</type>
+                <description><![CDATA[Main location.]]></description>
+                <quality>SILVER</quality>
+                <resourceAssocs>
+                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                        <resource class="source.DbXref">
+                            <resourceType>DATABASE</resourceType>
+                            <accession>ENSG00000063177/subcellular</accession>
+                            <cvDatabase>
+                                <cvName>HPA</cvName>
+                            </cvDatabase>
+                        </resource>
+                        <qualifierType>EXP</qualifierType>
+                        <qualityQualifier>SILVER</qualityQualifier>
+                        <isNegativeEvidence>false</isNegativeEvidence>
+                        <type>EVIDENCE</type>
+                        <assignedBy>
+                            <cvName>Human protein atlas subcellular localization</cvName>
+                        </assignedBy>
+                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                </resourceAssocs>
+            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
+        </wrappedBean>
+    </subcellAnnotations>
+</com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>

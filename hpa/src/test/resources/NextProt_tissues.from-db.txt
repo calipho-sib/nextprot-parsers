@@ -1,0 +1,1964 @@
+Inner layer of eyeball|Retina|TS-0865
+Inguinal part of abdomen|Groin|TS-2339
+Embryonic lung fibroblast|Embryonic lung fibroblast|TS-0254
+Fetal auditory apparatus|Fetal ear|TS-2111
+Mucosa of duodenum|Duodenal mucosa|TS-0213
+Retinal cone cell|Retinal cone cell|TS-0866
+Hematopoietic and immune systems|Hematopoietic and immune systems|TS-0449
+Retroperitoneal space|Retroperitoneal space|TS-2337
+Anatomical site|Body part|TS-2084
+Cervical epithelium|Uterine cervix epithelium|TS-0137
+Granular leucocyte|Granulocyte|TS-0422
+Leukocyte|Leukocyte|TS-0549
+Tonsil germinal center cell|Tonsil germinal center cell|TS-1288
+First arch|First arch|TS-2089
+Corpora lutea|Corpus luteum|TS-0181
+Head and neck|Head and neck|TS-2356
+Tonsil reaction centre|Tonsil germinal center cell|TS-1288
+Ovarian stroma|Ovarian stroma|TS-1246
+photoreceptor cell|Retinal photoreceptor|TS-0868
+Dermal papillae|Dermal papilla|TS-0431
+cerebellum molecular cell layer|Cerebellum molecular layer|TS-1248
+B-lymphoblast|B Lymphoblast|TS-2002
+Nasal mucus|Nasal mucus|TS-0658
+Brain occipital lobe|Occipital lobe|TS-0693
+Corneal stroma|Corneal stroma|TS-1138
+Human anatomical entity|Human anatomical entity|TS-2178
+Substantia nigra|Substantia nigra|TS-0990
+Epithelium of nose|Nasal epithelium|TS-0656
+Optic disk|Optic disk|TS-2153
+Carotid artery|Carotid artery|TS-0116
+Shoulder blade|Scapula|TS-0897
+Thoracic muscle|Thoracic muscle|TS-1037
+Oral epithelium|Oral epithelium|TS-0715
+Yellow body of ovary|Corpus luteum|TS-0181
+Extraembryonic tissue|Extraembryonic tissue|TS-2119
+Cerebral microglia|Brain microglia|TS-2150
+Mid-brain|Midbrain|TS-0630
+Interstitial cells of Leydig|Leydig cell|TS-1150
+Epididymis glandular cell|Epididymis glandular cell|TS-1276
+Interstitial cells of Cajal|Interstitial cell of Cajal|TS-2407
+Involuntary muscle cell|Smooth muscle cell|TS-2159
+Jejunum|Jejunum|TS-0496
+Oviduct glandular cell|Oviduct glandular cell|TS-1277
+Breast fibroblast|Mammary fibroblast|TS-0594
+Cerebral white matter|Cerebral white matter|TS-2362
+Cardiovascular system|Cardiovascular system|TS-1297
+Fluid and secretion|Fluid and secretion|TS-2101
+Peripheral blood T cell|Peripheral blood T-cell|TS-0770
+Vagina epithelium|Vaginal epithelium|TS-1325
+Erythrocyte|Erythrocyte|TS-0290
+Epithelium of vagina|Vaginal epithelium|TS-1325
+Peripheral ganglion|Ganglion|TS-0397
+Embryonic spinal cord|Embryonic spinal cord|TS-0261
+Epithelium of exocrine pancreas|Exocrine pancreas epithelium|TS-2108
+Superior vestibular nuclei|Superior vestibular nuclei|TS-2079
+Capillary endothelium|Capillary endothelium|TS-0112
+Fetal eye|Fetal eye|TS-0334
+Exocrine system|Exocrine system|TS-2057
+Adipocyte|Adipocyte|TS-0012
+Spermatozoa|Spermatozoon|TS-0949
+Mesenchyme|Mesenchymal cell|TS-0620
+Bronchoalveolar system|Bronchoalveolar system|TS-1296
+Retinal pigmented epithelium|Retinal pigment epithelium|TS-0869
+Vermix|Appendix|TS-1267
+Stomach glandular cells|Stomach glandular cell|TS-1284
+Chief cell of parathyroid gland|Parathyroid chief cell|TS-2140
+Salivary gland glandular cells|Salivary gland glandular cell|TS-1282
+Tonsil squamous cell|Tonsil squamous cell|TS-1253
+Fornicate gyrus|Limbic lobe|TS-2061
+Cardiac|Heart|TS-0445
+Appendix|Appendix|TS-1267
+Heart muscle myocytes|Heart muscle cell|TS-0115
+Liver and biliary system|Liver and biliary system|TS-1308
+T lymphocyte|T-cell|TS-1001
+Meninges of brain|Brain meninges|TS-2147
+Lip|Lip|TS-0558
+Parathyroid chief cell|Parathyroid chief cell|TS-2140
+Mucosa of nose|Nasal mucosa|TS-0657
+Tracheal epithelium|Tracheal epithelium|TS-1061
+Elbow|Elbow|TS-2222
+Prostate gland epithelial cell|Prostate epithelium|TS-2065
+Vascular|Vascular smooth muscle|TS-1107
+Reticulum trabeculare|Trabecular meshwork|TS-1058
+Neural tube|Neural tube|TS-2371
+Cementum|Dental cementum|TS-2163
+Kidney outer medulla|Kidney outer medulla|TS-0508
+Hippocampus neuroglial cell|Hippocampus glial cell|TS-1257
+Granular layer of cerebellar cortex|Cerebellum granular layer|TS-1247
+Striated myocyte|Striated muscle cell|TS-2157
+Fetal testis|Fetal testis|TS-0357
+Craniopharyngeal duct|Craniopharyngeal duct|TS-2347
+Ovocyte|Oocyte|TS-0711
+Myoepithelial cell of lactiferous gland|Mammary gland myoepithelial cell|TS-2378
+penile prepuce|Foreskin|TS-0383
+Bladder|Urinary bladder|TS-1090
+Esophagus|Esophagus|TS-0700
+Ilium|Ilium|TS-2200
+Neural ectoderm|Neuroectoderm|TS-1212
+Lingual epithelia|Tongue epithelium|TS-1051
+Subthalamic region|Subthalamus|TS-2048
+Blood platelet|Platelet|TS-0803
+Epithelium of body of uterus|Uterine corpus epithelium|TS-2154
+Gastric mucosa|Stomach mucosa|TS-0404
+Lumbar vertebrae|Lumbar vertebra|TS-2364
+Femoral artery|Femoral artery|TS-0321
+Paraganglia chromaffin|Paraganglia chromaffin|TS-2358
+Male gamete|Spermatozoon|TS-0949
+Epithelium of prostatic gland|Prostate epithelium|TS-2065
+Scalp|Scalp|TS-0896
+Spermatogonia|Spermatogonia|TS-2193
+Biliaropancreatic ampulla|Ampulla of Vater|TS-2348
+Megakaryoblast|Megakaryoblast|TS-0610
+Mucous membrane of nose|Nasal mucosa|TS-0657
+Lens epithelial cell|Lens epithelium|TS-0543
+Bony labyrinth|Osseous labyrinth|TS-2080
+Preoptic region of hypothalamus|Preoptic area of hypothalamus|TS-0822
+Cardiac ventricle|Heart ventricle|TS-0444
+Biliary duct|Bile duct|TS-0075
+Tonsil germinal center cells|Tonsil germinal center cell|TS-1288
+Endometrium stromal cell|Endometrium stroma|TS-1266
+Fetal retina|Fetal retina|TS-0349
+Chorioamniotic membrane|Chorioamniotic membrane|TS-0141
+Cytolytic T-cell|Cytotoxic T-cell|TS-0190
+Extra-embryonic tissue|Extraembryonic tissue|TS-2119
+Cecal appendix|Appendix|TS-1267
+Duodenum epithelium|Duodenal epithelium|TS-2087
+Hippocampus neuron|Hippocampus neuron|TS-1260
+Corpus, uterine|Uterine corpus|TS-1265
+Foot sole|Foot sole|TS-0379
+Kidney cells in glomeruli|Renal glomerulus|TS-0862
+Brain striatum|Corpus striatum|TS-0183
+Pancreatic|Pancreas|TS-0736
+Hip|Hip|TS-2226
+Uterine endometrium|Endometrium|TS-0276
+Epithelium of esophagus|Esophageal epithelium|TS-0698
+Glia|Glial cell|TS-0415
+Bronchiolar epithelium|Bronchiolar epithelium|TS-0570
+Trophoblast|Trophoblast|TS-1070
+Fibula|Fibula|TS-2203
+Visceral adipose tissue of abdominal region|Visceral adipose tissue of abdominal region|TS-2405
+Spinal cord meninges|Spinal cord meninges|TS-2148
+Cornea endothelium|Corneal endothelium|TS-0172
+conventional DC|Conventional dendritic cell|TS-2192
+Eye trabeculum|Trabecular meshwork|TS-1058
+Lung macrophages|Lung macrophage|TS-0576
+Small intestinal mucosa|Small intestine mucosa|TS-0941
+Ventricular system of brain|Ventricular system of brain|TS-1295
+Iris|Iris|TS-0491
+Epithelium of jejunum|Jejunal epithelium|TS-0494
+Lymph node non-germinal center cells|Lymph node nongerminal center cell|TS-2171
+Red pulp of spleen|Spleen red pulp|TS-1263
+Large bowel epithelium|Large intestine epithelium|TS-2105
+Parahippocampal gyrus|Parahippocampal gyrus|TS-2038
+Tonsillar squamous epithelial cell|Tonsil squamous cell|TS-1253
+Ovary follicle|Ovarian follicle|TS-0726
+Placenta|Placenta|TS-0799
+Abdominal subcutaneous adipose tissue|Subcutaneous adipose tissue of abdominal region|TS-2406
+heart endocardium|Endocardium|TS-2075
+Epithelium of prostate|Prostate epithelium|TS-2065
+Fetal amniotic fluid|Amniotic fluid|TS-0034
+Ankle|Ankle|TS-2219
+Vaginal epithelium|Vaginal epithelium|TS-1325
+Bronchioles|Bronchiole|TS-2003
+Brain macroglia|Brain macroglia|TS-2149
+Spleen cells in white pulp|Spleen white pulp|TS-1264
+Lateral ventricle neuron|Lateral ventricle neuron|TS-1261
+Knee|Knee|TS-2220
+Neutrophilic granulocyte|Neutrophil|TS-0688
+Reproductive system|Reproductive system|TS-1318
+Epididymal glandular cell|Epididymis glandular cell|TS-1276
+Endocardium|Endocardium|TS-2075
+musculo-skeletal system|Musculoskeletal system|TS-1311
+Para-aortic splanchnopleura|Para-aortic splanchnopleura|TS-2390
+Putamen|Putamen|TS-2041
+Abdomen|Abdomen|TS-0001
+Cerebellar|Cerebellum|TS-0125
+Retinal cone|Retinal cone cell|TS-0866
+Umbilical cord vein|Umbilical vein|TS-1082
+Tracheobronchia epithelium|Tracheobronchial epithelium|TS-1063
+Haematopoietic|Hematopoietic and immune systems|TS-0449
+Heart ventricle|Heart ventricle|TS-0444
+Helper T-lymphocyte|Helper T-cell|TS-1146
+Testes|Testis|TS-1030
+Follicle of ovary|Ovarian follicle|TS-0726
+Epithelium of distal colon|Distal colon epithelium|TS-0203
+Brain meninx|Brain meninges|TS-2147
+Nerve|Peripheral nerve|TS-0772
+Musculoskeletal system|Musculoskeletal system|TS-1311
+Natural killer T cell|Natural killer T cell|TS-2165
+Integumental system|Dermal system|TS-1299
+Bone cell|Bone cell|TS-2097
+Endocrine part of pancreas|Endocrine pancreas|TS-1302
+Salivary gland epithelium|Salivary gland epithelium|TS-2067
+Ileum mucosa|Ileal mucosa|TS-0470
+Lymphoid cell|Lymphoid cell|TS-1238
+Bronchus epithelial cell|Bronchus epithelial cell|TS-2399
+Lymph node lymphoid cell|Lymph node lymphoid cell|TS-1289
+Placenta decidual cells|Decidua placentalis|TS-0193
+Temporal cortex|Temporal lobe|TS-1020
+Unstriated muscle|Smooth muscle|TS-0943
+Embryonic trophoblast|Trophoblast|TS-1070
+Haematopoietic cell|Hematopoietic cell|TS-2017
+Uterine corpus epithelium|Uterine corpus epithelium|TS-2154
+Jejunum epithelium|Jejunal epithelium|TS-0494
+Gastrointestinal tract|Gastrointestinal tract|TS-0407
+Aorticopulmonary septum|Aortico-pulmonary septum|TS-2409
+Oesophageal epithelium|Esophageal epithelium|TS-0698
+Mouth roof|Palate|TS-2212
+Right ventricle|Heart right ventricle|TS-0443
+Lymphomyeloid system|Hemolymphoid and immune system|TS-2018
+Dermis|Dermis|TS-2076
+Melanocytes|Melanocyte|TS-0613
+Layer of synovial tissue|Synovium|TS-0998
+T-cell|T-cell|TS-1001
+Mammary gland glandular cell|Mammary gland glandular cell|TS-1272
+Lymph|Lymph|TS-0580
+Tendon synovium|Tendon synovium|TS-2139
+Choroid|Choroid|TS-2054
+Synovium|Synovium|TS-0998
+laryngopharynx|Hypopharynx|TS-2020
+Dental organ|Enamel organ|TS-0271
+Cerebrum cortex glial cell|Cerebral cortex glial cell|TS-1256
+Colon mucosa|Colon mucosa|TS-0164
+Optic II nerve|Optic nerve|TS-0713
+Nasal epithelium|Nasal epithelium|TS-0656
+Breast myoepithelial cells|Mammary gland myoepithelial cell|TS-2378
+Adipose|Adipose tissue|TS-0013
+Oral cavity|Mouth|TS-1315
+Brain microglia|Brain microglia|TS-2150
+Neutrophil granulocyte|Neutrophil|TS-0688
+Cytolytic T-lymphocyte|Cytotoxic T-cell|TS-0190
+Tunica vasculosa of eyeball|Uvea|TS-2228
+Thyroid gland|Thyroid|TS-1047
+Fetal esophagus|Fetal esophagus|TS-1185
+Renal proximal tubule|Renal proximal tubule|TS-0509
+Enamel|Tooth enamel|TS-1057
+Vein|Vein|TS-1108
+cerebellar granule layer|Cerebellum granular layer|TS-1247
+Cervix|Uterine cervix|TS-0134
+Nerve cement|Glial cell|TS-0415
+Ocular|Eye|TS-0309
+Corneal epithelial cell|Corneal epithelium|TS-0173
+Peripheral blood monocyte|Peripheral blood monocyte|TS-0768
+Thymus|Thymus|TS-1043
+Glia cell|Glial cell|TS-0415
+Muscle cell|Muscle cell|TS-2032
+Mesoderm|Mesoderm|TS-0623
+Motor neurons|Motor neuron|TS-2386
+Smooth muscle cell|Smooth muscle cell|TS-2159
+Lung alveoli|Alveolus|TS-0031
+Oral cavity epithelial cell|Oral epithelium|TS-0715
+Umbilical vein|Umbilical vein|TS-1082
+Oculus|Eye|TS-0309
+Gastro-intestinal system|Gastrointestinal tract|TS-0407
+Fetal adrenal tissue|Fetal adrenal gland|TS-0323
+Intestinal ileum|Ileum|TS-0472
+Spermatid|Spermatid|TS-0950
+Cervical canal of uterus|Uterine cervix|TS-0134
+Excretory system|Urinary system|TS-1323
+Oral mucosa|Oral mucosa|TS-0716
+Hematopoietic|Hematopoietic and immune systems|TS-0449
+Fallopian tube|Oviduct|TS-0732
+Developmental tissue|Developmental tissue|TS-2122
+Blood vessel vascular endothelium|Blood vessel vascular endothelium|TS-2155
+Subthalamic nucleus|Subthalamic nucleus|TS-1154
+Retinal ganglion cell layer|Retinal ganglion|TS-0867
+Spinal cord microglia|Spinal cord microglia|TS-2152
+Fat tissue|Adipose tissue|TS-0013
+Fetal lung|Fetal lung|TS-0345
+Endothelial cells|Endothelial cell|TS-2401
+Trophoderm|Trophoblast|TS-1070
+Stomach|Stomach|TS-0980
+Uterus womb|Uterine corpus|TS-1265
+Spinal cord meninx|Spinal cord meninges|TS-2148
+Phalanx|Phalanx|TS-2211
+Lung macrophage|Lung macrophage|TS-0576
+Smooth muscle myometrium|Myometrium|TS-0652
+Peripheral blood neutrophil|Peripheral blood neutrophil|TS-0769
+T-lymphoblast|T lymphoblast|TS-0999
+Medulla of adrenal gland|Adrenal medulla|TS-0018
+Peyer's patches|Peyer patch|TS-0780
+Epididymis epithelium|Epididymal epithelium|TS-2063
+Embryonic heart|Embryonic heart|TS-0247
+Chorion|Chorionic membrane|TS-0144
+Limbic system|Limbic system|TS-1307
+Retinal pigment epithelium|Retinal pigment epithelium|TS-0869
+Dentate gyrus|Dentate gyrus|TS-2388
+Renal tubule|Renal tubule|TS-1262
+Lactating mammary gland|Lactating mammary gland|TS-0513
+Peripheral nerve|Peripheral nerve|TS-0772
+Gallbladder glandular cells|Gall bladder glandular cell|TS-1278
+Plasmacytoid dendritic cell|Plasmacytoid dendritic cell|TS-0801
+CNS|Central nervous system|TS-0150
+Mouth floor|Mouth floor|TS-2207
+Mesenchymal stem cell|Mesenchymal stem cell|TS-0618
+Tunica interna of eyeball|Retina|TS-0865
+Gall bladder glandular cells|Gall bladder glandular cell|TS-1278
+Epididymis|Epididymis|TS-0285
+Cerebral gray matter|Cerebral grey matter|TS-2361
+Red blood corpuscle|Erythrocyte|TS-0290
+Second cranial nerve|Optic nerve|TS-0713
+Rectum|Rectum|TS-1180
+Posterior lobe of pituitary gland|Posterior pituitary|TS-0815
+Cartilage cell|Chondrocyte|TS-0138
+Lymphatic system|Lymphatic system|TS-2024
+Primary spermatocyte|Primary spermatocyte|TS-2194
+Vagina squamous epithelial cell|Vagina squamous cell|TS-1254
+Dorsal root ganglia|Spinal ganglion|TS-0954
+Myeloid stem cell|Myeloid stem cell|TS-2099
+Granular leukocyte|Granulocyte|TS-0422
+Endometrial|Endometrium|TS-0276
+Craniopharyngeal canal|Craniopharyngeal duct|TS-2347
+Epithelium of mucosa of mouth|Oral epithelium|TS-0715
+Uveal tract|Uvea|TS-2228
+Fetal pituitary gland|Fetal pituitary gland|TS-2117
+Vagina squamous epithelial cells|Vagina squamous cell|TS-1254
+Uterine cervix squamous epithelial cell|Uterine cervix squamous cell|TS-1251
+Radix pili|Hair root|TS-0433
+Epithelium|Epithelium|TS-0288
+Heart muscle|Heart muscle|TS-0440
+Grey matter of telencephalon|Cerebral grey matter|TS-2361
+Ganglia|Ganglion|TS-0397
+Renal cortex|Kidney cortex|TS-0503
+Duodenum|Duodenum|TS-0214
+Large bowel|Large intestine|TS-1306
+Pituitary gland|Pituitary gland|TS-0798
+Prostate epithelium|Prostate epithelium|TS-2065
+Oesophagus squamous epithelial cell|Esophageal squamous cell|TS-1250
+Fetus|Fetus|TS-0360
+White blood cell|Leukocyte|TS-0549
+Tarsal region|Ankle|TS-2219
+Tonsil reaction center|Tonsil germinal center cell|TS-1288
+B-lymphocyte|B-cell|TS-0068
+Fetal spleen|Fetal spleen|TS-0355
+Pancreatic juice|Pancreatic juice|TS-2235
+Tear gland|Lacrimal gland|TS-0512
+Caeca|Cecum|TS-0122
+Skeletal muscle myocyte|Skeletal muscle cell|TS-2158
+Kidney cortex|Kidney cortex|TS-0503
+PDC|Plasmacytoid dendritic cell|TS-0801
+Sympathetic ganglion|Sympathetic ganglion|TS-0994
+Cells in seminiferous ducts|Seminiferous tubule|TS-1239
+Pre-B cell|Pre-B cell|TS-0819
+Subcutaneous fat of abdominal region|Subcutaneous adipose tissue of abdominal region|TS-2406
+Heart atria|Heart atrium|TS-0437
+Inframammary breast|Inframammary fold|TS-2350
+Diaphragmatic muscle|Diaphragm|TS-0198
+Brown adipocyte|Brown adipose tissue|TS-0099
+Colon glandular cells|Colon glandular cell|TS-1274
+1st arch|First arch|TS-2089
+Deferent duct|Vas deferens|TS-1105
+Capillary|Capillary|TS-2006
+Fetal bone marrow|Fetal bone marrow|TS-2136
+Inner zone of renal medulla|Kidney inner medulla|TS-0506
+Optic disc|Optic disk|TS-2153
+lymph vessel|Lymphatic vessel|TS-2102
+Langerhans cell|Langerhans cell|TS-2375
+Uterine corpus|Uterine corpus|TS-1265
+cerebellar granule cell layer|Cerebellum granular layer|TS-1247
+Peripheral blood lymphocyte|Peripheral blood lymphocyte|TS-0767
+Retinal ganglia|Retinal ganglion|TS-0867
+Mucosa of jejunum|Jejunal mucosa|TS-0495
+Hypophysis|Pituitary gland|TS-0798
+Flank|Flank|TS-2336
+Mammary fibroblast|Mammary fibroblast|TS-0594
+Brain cortex glial cell|Cerebral cortex glial cell|TS-1256
+Arterial vessel|Artery|TS-0054
+Thymocyte|Thymocyte|TS-1042
+Small intestine glandular cells|Small intestine glandular cell|TS-1286
+Hippocampal dentate gyrus|Dentate gyrus|TS-2388
+RBC|Erythrocyte|TS-0290
+Corpus, uterine epithelium|Uterine corpus epithelium|TS-2154
+Large intestinal mucosa|Large intestine mucosa|TS-2106
+Duodenum mucosa|Duodenal mucosa|TS-0213
+Pleura|Pleura|TS-2081
+Renal glomerulus|Renal glomerulus|TS-0862
+Skeletal muscle myocytes|Skeletal muscle cell|TS-2158
+Mammary glands|Mammary gland|TS-0595
+Hypopharynx|Hypopharynx|TS-2020
+Skin epidermal cells|Epidermis|TS-0283
+Esophageal squamous cell|Esophageal squamous cell|TS-1250
+Regulatory T cell|Regulatory T cell|TS-2408
+Microgliocyte|Microglia|TS-0627
+Epithelium of duodenum|Duodenal epithelium|TS-2087
+Prepuce|Foreskin|TS-0383
+Lung alveolar cells|Pneumocyte|TS-2168
+Ciliary body|Ocular ciliary body|TS-0694
+Pectoral muscle|Pectoralis muscle|TS-0751
+Follicular fluid|Ovarian follicular fluid|TS-0728
+Endothelial cell|Endothelial cell|TS-2401
+Stria vascularis|Stria vascularis|TS-0982
+Transformed lymphocyte|Lymphoblast|TS-0581
+Melanocyte of skin|Skin Melanocyte|TS-2374
+lower chamber of heart|Heart ventricle|TS-0444
+Fetal sternum|Fetal sternum|TS-0356
+Corpus luteum of ovary|Corpus luteum|TS-0181
+Embryonic ectoderm|Ectoderm|TS-0216
+Basal nuclei|Basal ganglia|TS-1149
+cochlear spiral organ|Organ of Corti|TS-0717
+Monocyte-Macrophage Precursor Cells|Monoblast|TS-1195
+Thymus gland|Thymus|TS-1043
+Synovial cell|Synovial cell|TS-0995
+Connective tissue|Connective tissue|TS-2009
+Heart|Heart|TS-0445
+Endocrine-paracrine cell of prostate gland|Prostate glandular cell|TS-1280
+Lymph node germinal center|Lymph node germinal center cell|TS-1269
+Adluminal compartment of the seminiferous tubule|Adluminal compartment of the seminiferous tubule|TS-2196
+Occipital cortex|Occipital lobe|TS-0693
+Articular cartilage|Articular cartilage|TS-0055
+Cardiac left ventricle|Heart left ventricle|TS-0439
+Joint fluid|Synovial fluid|TS-0996
+Tongue epithelial cell|Tongue epithelium|TS-1051
+Gall|Bile|TS-1172
+Fetal hippocampus|Fetal hippocampus|TS-2115
+Craniocervical region|Head and neck|TS-2356
+Hair follicle dermal papillae|Dermal papilla|TS-0431
+Mesangial cell of glomerulus|Mesangial cell|TS-0617
+Forearm|Forearm|TS-2205
+Embryonic maxilla|Embryonic maxilla|TS-2400
+Skin fibroblasts|Skin fibroblast|TS-0935
+Nucleus of Luys|Subthalamic nucleus|TS-1154
+Diaphragm muscle|Diaphragm|TS-0198
+Periodontium|Periodontium|TS-2380
+Cervix of uterus|Uterine cervix|TS-0134
+Adipocytes|Adipocyte|TS-0012
+Follicle of hair|Hair follicle|TS-0432
+Decidua placentalis|Decidua placentalis|TS-0193
+Uterus body|Uterine corpus|TS-1265
+Pituitary neurointermediate lobe|Pituitary neurointermediate lobe|TS-0795
+Embryonic testis|Embryonic testis|TS-0266
+Trachea epithelium|Tracheal epithelium|TS-1061
+Epithelium of oviduct|Oviduct epithelium|TS-1316
+Seminal vesicle glandular cell|Seminal vesicle glandular cell|TS-1283
+Peripheral blood T-cell|Peripheral blood T-cell|TS-0770
+Spleen red pulp|Spleen red pulp|TS-1263
+Regulatory T lymphocyte|Regulatory T cell|TS-2408
+Bronchiolus|Bronchiole|TS-2003
+Cerebral cortex glial cells|Cerebral cortex glial cell|TS-1256
+Epithelium of mammary gland|Mammary epithelium|TS-0593
+Tonsil|Tonsil|TS-1053
+Neonatal skin|Neonatal skin|TS-1191
+Corneal endothelial cell|Corneal endothelium|TS-0172
+Oral cavity epithelium|Oral epithelium|TS-0715
+Optic nerve|Optic nerve|TS-0713
+Cerebellar cortex|Cerebellar cortex|TS-2000
+Fetal B lymphocyte|Fetal B-cell|TS-0326
+Fetal dura mater|Fetal dura mater|TS-2113
+Uterus endometrium stroma|Endometrium stroma|TS-1266
+Myofibroblast cell|Myofibroblast cell|TS-2410
+Secondary spermatocyte|Secondary spermatocyte|TS-2195
+Medulla of suprarenal gland|Adrenal medulla|TS-0018
+Preputial skin|Foreskin|TS-0383
+Cytotoxic T lymphocyte|Cytotoxic T-cell|TS-0190
+Cerebellar neuron|Cerebellar neuron|TS-2359
+Duodenal mucosa|Duodenal mucosa|TS-0213
+Pancreas islet cell|Pancreatic islet|TS-0741
+Large intestine epithelial cell|Large intestine epithelium|TS-2105
+Muscle of thorax|Thoracic muscle|TS-1037
+Lymph node non-germinal center|Lymph node nongerminal center cell|TS-2171
+Vertebrae|Vertebra|TS-2352
+Neuroepithelial cell|Neuroepithelium|TS-0682
+Bulbo-urethral gland|Bulbourethral gland|TS-0103
+Fetal fibroblast|Fetal fibroblast|TS-0335
+Gray matter of cerebrum|Cerebral grey matter|TS-2361
+Parathyroid glandular cell|Parathyroid glandular cell|TS-1279
+Bronchial epithelial cell|Bronchus epithelial cell|TS-2399
+Ovary|Ovary|TS-0730
+Blood vessel endothelium|Blood vessel vascular endothelium|TS-2155
+Sigmoid colon|Sigmoid colon|TS-2044
+Mesonephros|Mesonephros|TS-0624
+Cervical epithelial cell|Uterine cervix epithelium|TS-0137
+Vestibular nuclei|Vestibular nuclei|TS-2078
+Substantia propria of cornea|Corneal stroma|TS-1138
+Pancreatic islet cell|Pancreatic islet|TS-0741
+Bronchial epithelium|Bronchus epithelium|TS-1240
+Left heart ventricle|Heart left ventricle|TS-0439
+Leydig cells|Leydig cell|TS-1150
+Kidney distal tubule|Renal distal tubule|TS-0504
+Parasympathetic nervous system|Parasympathetic nervous system|TS-2094
+Olfactory sensory epithelium|Olfactory epithelium|TS-0703
+Osseous tissue|Bone tissue|TS-2011
+Hypothalamus|Hypothalamus|TS-0469
+Parietal lobe|Parietal lobe|TS-0747
+Embryonic structure|Embryonic structure|TS-2110
+Small intestine mucosa|Small intestine mucosa|TS-0941
+Heart right ventricle|Heart right ventricle|TS-0443
+Glomerus|Renal glomerulus|TS-0862
+Rectum glandular cell|Rectum glandular cell|TS-1281
+Caecal appendix|Appendix|TS-1267
+Tracheal epithelial cell|Tracheal epithelium|TS-1061
+Leg|Leg|TS-2206
+Brain parietal lobe|Parietal lobe|TS-0747
+Bulb|Medulla oblongata|TS-0607
+Eye|Eye|TS-0309
+Atrium of heart|Heart atrium|TS-0437
+spermatogonium|Spermatogonia|TS-2193
+Malphigian glomerulus|Renal glomerulus|TS-0862
+Embryonic germ layer|Embryonic tissue|TS-2100
+Fetal heart|Fetal heart|TS-0338
+Retinal rod cell|Retinal rod cell|TS-0870
+Small bowel|Small intestine|TS-0942
+Ovarian follicle cell|Ovarian follicle|TS-0726
+Joint|Joint|TS-2023
+Purkinje neuron|Purkinje cell|TS-0845
+Interstitial cell of Cajal|Interstitial cell of Cajal|TS-2407
+Amygdaloid body|Amygdala|TS-0037
+Skin Melanocytes|Skin Melanocyte|TS-2374
+Male genital system|Male reproductive system|TS-1310
+Pons Varolii|Pons|TS-0813
+Tissue macrophage|Histiocyte|TS-2019
+Umbilical cord|Umbilical cord|TS-1078
+Bronchotracheal epithelium|Tracheobronchial epithelium|TS-1063
+Embryonic thyroid|Embryonic thyroid|TS-2137
+Thigh epidermis|Thigh epidermis|TS-1033
+Mature oocyte|Ovum|TS-2191
+Macroglia|Macroglia|TS-2027
+Muscle fibroblast|Muscle fibroblast|TS-0643
+Hindlimb|Lower limb|TS-2215
+Caecal appendix glandular cell|Appendix glandular cell|TS-1271
+Embryonic stem cell|Embryonic stem cell|TS-0263
+Granulocyte|Granulocyte|TS-0422
+Visceral abdominal adipose tissue|Visceral adipose tissue of abdominal region|TS-2405
+Colon epithelium|Colon epithelium|TS-0163
+Kidney glomerus|Renal glomerulus|TS-0862
+Pancreatic acinar cell|Pancreatic acinar cell|TS-0737
+Bone marrow hematopoietic stem cell|Hematopoietic stem cell|TS-0448
+Sensory neuron|Sensory neuron|TS-2387
+Capillary vessel|Capillary|TS-2006
+Trabecular substance|Cancellous bone|TS-0110
+Genitalia|Reproductive system|TS-1318
+Synovia|Synovial fluid|TS-0996
+Neuraxis|Central nervous system|TS-0150
+Myocard|Heart muscle|TS-0440
+Peyer's patch|Peyer patch|TS-0780
+Endocrine pancreas|Endocrine pancreas|TS-1302
+Cerebral cortex endothelial cell|Cerebral cortex endothelial cell|TS-2372
+Foreskin keratinocyte|Foreskin keratinocyte|TS-0385
+Odontoblast|Odontoblast|TS-0696
+Spleen cells in red pulp|Spleen red pulp|TS-1263
+Feces|Feces|TS-2345
+Mediastinum|Mediastinum|TS-2338
+Sympathetic ganglia|Sympathetic ganglion|TS-0994
+Haematopoietic system|Hematopoietic and immune systems|TS-0449
+Thalamus|Thalamus|TS-1031
+Intestinal|Intestine|TS-0490
+Osseous labyrinth|Osseous labyrinth|TS-2080
+Hypothalamic|Hypothalamus|TS-0469
+Thymus lymphocyte|Thymocyte|TS-1042
+Blood vessel|Blood vessel|TS-0080
+Cranium|Skull|TS-2344
+Pneumocyte|Pneumocyte|TS-2168
+Vestibule|Inner ear vestibule|TS-0479
+Helper induced T-lymphocyte|Helper T-cell|TS-1146
+Ganglion cell layer|Retinal ganglion|TS-0867
+Cerebellum vermis|Vermis|TS-2059
+Paraganglion chromaffin|Paraganglia chromaffin|TS-2358
+Bone marrow stroma|Bone marrow stroma|TS-0085
+Cerebrum cortex neuron|Cerebral cortex neuron|TS-1259
+Blood plasma|Plasma|TS-0800
+Breast adipocytes|Breast adipocyte|TS-2377
+White adipose tissue|White adipose tissue|TS-1119
+Preputial glands|Preputial gland|TS-0824
+Germinal layer|Embryonic tissue|TS-2100
+Brain temporal cortex|Temporal lobe|TS-1020
+Cerebral cortex neuronal cell|Cerebral cortex neuron|TS-1259
+Cerebral cortex neuron|Cerebral cortex neuron|TS-1259
+Articular cartilage of joint|Articular cartilage|TS-0055
+Appendix glandular cell|Appendix glandular cell|TS-1271
+Sympathetic nervous system|Sympathetic nervous system|TS-2050
+Fibroblast|Fibroblast|TS-0362
+Prepuce of penis|Foreskin|TS-0383
+Retinal photoreceptor|Retinal photoreceptor|TS-0868
+Oral cavity mucosa squamous epithelial cell|Oral mucosa squamous cell|TS-1252
+Sense organ|Sense organ|TS-2043
+Bronchiolar epithelial cell|Bronchiolar epithelium|TS-0570
+Bile duct cells|Bile duct|TS-0075
+Vascular endothelial cell|Vascular endothelial cell|TS-2402
+Back|Back|TS-2223
+Corneal epithelium|Corneal epithelium|TS-0173
+Suprarenal medulla|Adrenal medulla|TS-0018
+Tooth pulp|Dental pulp|TS-0195
+Skeletal system|Skeletal system|TS-1320
+Renal corpuscle|Renal corpuscle|TS-1317
+Oral mucosa squamous cell|Oral mucosa squamous cell|TS-1252
+Tracheobronchial epithelium|Tracheobronchial epithelium|TS-1063
+Periodontal ligament|Periodontal ligament|TS-0763
+Aortic vascular smooth muscle|Aortic smooth muscle|TS-0048
+Helper T-cell|Helper T-cell|TS-1146
+Corpus luteum|Corpus luteum|TS-0181
+Stomach epithelium|Stomach epithelium|TS-2068
+Pre-B-lymphocyte|Pre-B cell|TS-0819
+Cutaneous appendage|Skin appendage|TS-0051
+Peritoneum|Peritoneum|TS-2072
+Epithelium of colon|Colon epithelium|TS-0163
+Synovial layer|Synovium|TS-0998
+Aortico-pulmonary septum|Aortico-pulmonary septum|TS-2409
+Heart muscle cell|Heart muscle cell|TS-0115
+Embryonic endoderm|Endoderm|TS-0273
+Palate|Palate|TS-2212
+Nail|Nail|TS-2034
+Coronary artery endothelium|Coronary arterial endothelium|TS-0175
+Stroma of endometrium|Endometrium stroma|TS-1266
+Scala media|Cochlear duct|TS-0152
+Anterior lobe of hypophysis|Pituitary anterior lobe|TS-0794
+Nervous system|Nervous system|TS-1313
+Glandular cells|Glandular cell|TS-2085
+Posterior pituitary|Posterior pituitary|TS-0815
+Fetal visual apparatus|Fetal eye|TS-0334
+Axilla|Axilla|TS-2208
+Dorsal nucleus of vagus nerve|Dorsal vagal nucleus|TS-2381
+Kidney glomerulus cell|Renal glomerulus|TS-0862
+Superior vestibular nucleus|Superior vestibular nuclei|TS-2079
+Pallium of the brain|Cerebral cortex|TS-0091
+Cortex of kidney|Kidney cortex|TS-0503
+Killer T cell|Cytotoxic T-cell|TS-0190
+Urinary bladder smooth muscle|Urinary bladder smooth muscle|TS-1087
+Blood|Blood|TS-0079
+Sputum|Sputum|TS-0963
+Purkinje's cell|Purkinje cell|TS-0845
+Aorta smooth muscle tissue|Aortic smooth muscle|TS-0048
+Conventional dendritic cell|Conventional dendritic cell|TS-2192
+Ito cell|Hepatic stellate cell|TS-0452
+Liver stellate cell|Hepatic stellate cell|TS-0452
+Lymphoblast|Lymphoblast|TS-0581
+Mammary epithelium|Mammary epithelium|TS-0593
+Appendix mucosa|Appendix mucosa|TS-2022
+Lingual epithelial cell|Tongue epithelium|TS-1051
+Hippocampus neural cell|Hippocampus neuron|TS-1260
+Cecal appendix glandular cell|Appendix glandular cell|TS-1271
+Pharyngeal|Pharynx|TS-0785
+Hindbrain|Hindbrain|TS-0457
+Mesenchymal cell|Mesenchymal cell|TS-0620
+Autonomic ganglion|Autonomic ganglion|TS-2340
+Preoptic nucleus|Preoptic area of hypothalamus|TS-0822
+Neural progenitor cells|Neural progenitor cell|TS-2394
+Rectal epithelium|Rectal epithelium|TS-2066
+Retina|Retina|TS-0865
+Extraocular muscle|Extraocular muscle|TS-0305
+Diencephalon|Diencephalon|TS-0199
+Sebaceous gland|Sebaceous gland|TS-2384
+Paratesticular tissue|Paratesticular tissue|TS-2355
+Metencephalon|Metencephalon|TS-2029
+Uterine cervix squamous cell|Uterine cervix squamous cell|TS-1251
+Pelvis|Pelvis|TS-2227
+Brain occipital cortex|Occipital lobe|TS-0693
+Caudate|Caudate nucleus|TS-0121
+Myofibroblast|Myofibroblast cell|TS-2410
+Uterine body epithelium|Uterine corpus epithelium|TS-2154
+Submaxillary gland|Submandibular gland|TS-0988
+Lymphocyte|Lymphocyte|TS-0583
+Neural retina|Neuroretina|TS-0685
+Horny layer of epidermis|Stratum corneum|TS-0981
+Cells in endometrial stroma|Endometrium stroma|TS-1266
+Esophagus squamous epithelial cells|Esophageal squamous cell|TS-1250
+Trabecular meshwork|Trabecular meshwork|TS-1058
+Appendix glandular cells|Appendix glandular cell|TS-1271
+Sphenoid bone|Sphenoid bone|TS-2343
+Pancreatic islet|Pancreatic islet|TS-0741
+Smooth muscle|Smooth muscle|TS-0943
+Pharynx|Pharynx|TS-0785
+Fluids and secretions|Fluid and secretion|TS-2101
+Pulmonary artery|Pulmonary artery|TS-0839
+Seminal vesicle|Seminal vesicle|TS-0919
+Urinary tract|Urinary system|TS-1323
+Inner ear|Inner ear|TS-0478
+Colorectal epithelial cell|Colon epithelium|TS-0163
+Alveolar macrophage|Alveolar macrophage|TS-0030
+Small intestinal epithelium|Small intestine epithelium|TS-2104
+Fetal cochlea|Fetal cochlea|TS-2112
+Skeletal system of head|Skull|TS-2344
+White pulp of spleen|Spleen white pulp|TS-1264
+Male germ cell|Male germ cell|TS-2369
+Spiral organ of Corti|Organ of Corti|TS-0717
+Rectal mucosa|Rectum mucosa|TS-2107
+Anal canal|Anal canal|TS-2160
+Fetal spinal cord|Fetal spinal cord|TS-0354
+Cerebral cortex neuropil|Cerebral cortex neuropil|TS-2396
+Cowpers gland|Bulbourethral gland|TS-0103
+Epidermal keratinocyte|Keratinocyte|TS-0500
+Aortic endothelium|Aortic endothelium|TS-0047
+Basophilic granulocyte|Basophil|TS-0073
+Peyer's gland|Peyer patch|TS-0780
+Choroid plexus|Choroid plexus|TS-0145
+Embryonic fibroblast|Embryonic fibroblast|TS-0239
+Body region|Body part|TS-2084
+Sciatic nerve|Sciatic nerve|TS-0899
+Hepatobiliary system|Liver and biliary system|TS-1308
+Hematopoietic stem cell|Hematopoietic stem cell|TS-0448
+Adrenal glomerulosa|Adrenal glomerulosa|TS-0017
+Ampulla of Vater|Ampulla of Vater|TS-2348
+Coronary arterial endothelium|Coronary arterial endothelium|TS-0175
+Slow skeletal muscle|Slow-twitch skeletal muscle|TS-0940
+Haematopoietic stem cell|Hematopoietic stem cell|TS-0448
+Spermatocyte|Spermatocyte|TS-0951
+Uterine endometrium stroma|Endometrium stroma|TS-1266
+Salivary gland|Salivary gland|TS-0892
+Molar|Molar|TS-0637
+Sella turcica|Sella turcica|TS-2342
+Respiratory system|Respiratory system|TS-1319
+Peripheral blood leukocyte|Peripheral blood leukocyte|TS-0766
+Retinal cone photoreceptor cells|Retinal cone cell|TS-0866
+Cell type|Cell type|TS-2035
+Esophagus squamous cell|Esophageal squamous cell|TS-1250
+Heart atrium|Heart atrium|TS-0437
+Endometrium stroma|Endometrium stroma|TS-1266
+Skeletal muscle cell|Skeletal muscle cell|TS-2158
+Bronchial epithelium cell|Bronchus epithelial cell|TS-2399
+Cerebellum|Cerebellum|TS-0125
+Retroperitoneum|Retroperitoneal space|TS-2337
+Embryonic tongue|Embryonic tongue|TS-2133
+Prostate glandular cells|Prostate glandular cell|TS-1280
+Subungual region|Subungual region|TS-2351
+Cerebellar vermis|Vermis|TS-2059
+Epithelium of thymus|Thymic epithelium|TS-1040
+Intestinal pacemaker cell|Interstitial cell of Cajal|TS-2407
+Breast myoepithelial cell|Mammary gland myoepithelial cell|TS-2378
+Jejunal mucosa|Jejunal mucosa|TS-0495
+Placental|Placenta|TS-0799
+Mesonephron|Mesonephros|TS-0624
+Dental cementum|Dental cementum|TS-2163
+Epithelium of gall bladder|Gall bladder epithelium|TS-1304
+Diaphragm|Diaphragm|TS-0198
+Synovial cells|Synovial cell|TS-0995
+Lens epithelium|Lens epithelium|TS-0543
+Distal colon epithelium|Distal colon epithelium|TS-0203
+Oviduct|Oviduct|TS-0732
+Cortex of suprarenal gland|Adrenal cortex|TS-0015
+Parotid gland|Parotid gland|TS-0748
+Cerebral cortex|Cerebral cortex|TS-0091
+ganglion of sympathetic nervous system|Sympathetic ganglion|TS-0994
+Reticulocyte|Reticulocyte|TS-0864
+Mucosa of stomach|Stomach mucosa|TS-0404
+Auditory apparatus|Ear|TS-1165
+Skin Melanocyte|Skin Melanocyte|TS-2374
+Temporal lobe|Temporal lobe|TS-1020
+Hepatocytes|Hepatocyte|TS-0454
+Schwalbe's corpuscle|Taste bud|TS-1015
+Kidney|Kidney|TS-0510
+Haploid germ cell|Gamete|TS-0395
+Cerebellum cells in molecular layer|Cerebellum molecular layer|TS-1248
+Cerebellar Purkinje neuron|Purkinje cell|TS-0845
+Distal colon mucosa|Distal colon mucosa|TS-1160
+Retinal ganglion cells|Retinal ganglion|TS-0867
+4th ventricle|Fourth ventricle|TS-2015
+Embryonic rhombencephalon|Embryonic rhombencephalon|TS-2118
+Subcutaneous adipose tissue of abdominal region|Subcutaneous adipose tissue of abdominal region|TS-2406
+Gastric tissue glandular cell|Stomach glandular cell|TS-1284
+Brown fat|Brown adipose tissue|TS-0099
+Eye vitreous humor|Eye vitreous humor|TS-0308
+Pineal|Pineal gland|TS-0789
+Astrocyte|Astrocyte|TS-0060
+Thigh|Thigh|TS-2039
+Neural ganglion|Ganglion|TS-0397
+Small bowel glandular cell|Small intestine glandular cell|TS-1286
+Colonic endothelial cell|Colon endothelial cell|TS-2397
+Langerhans|Langerhans cell|TS-2375
+Cerebral meninx|Brain meninges|TS-2147
+Trigeminal nucleus|Trigeminal nucleus|TS-2077
+Renal proximal convoluted tubule|Renal proximal convoluted tubule|TS-2198
+Uterine tube|Oviduct|TS-0732
+Small intestine glandular cell|Small intestine glandular cell|TS-1286
+Epidermal cells|Epidermis|TS-0283
+Duodenal epithelium|Duodenal epithelium|TS-2087
+Labia|Labia|TS-2210
+Retinal pigment epithelial cell|Retinal pigment epithelium|TS-0869
+Retinal ganglion|Retinal ganglion|TS-0867
+Myocyte|Muscle cell|TS-2032
+Cerebrum cortex neuronal cell|Cerebral cortex neuron|TS-1259
+Intermediate lobe of pituitary|Pituitary neurointermediate lobe|TS-0795
+Air sac|Alveolus|TS-0031
+Crystalline lens cortex|Lens cortex|TS-0542
+Eye lens|Lens|TS-0545
+Lateral ventricle neuronal cell|Lateral ventricle neuron|TS-1261
+Anal orifice|Anus|TS-2005
+Prostate|Prostate|TS-0828
+Respiratory system epithelial cell|Airway epithelium|TS-0023
+White matter of cerebrum|Cerebral white matter|TS-2362
+Osteoblast|Osteoblast|TS-0720
+Embryonic lung|Embryonic lung|TS-0253
+Oropharynx|Oropharynx|TS-0718
+Trachea epithelial cell|Tracheal epithelium|TS-1061
+Brain temporal lobe|Temporal lobe|TS-1020
+Hair follicle dermal papilla|Dermal papilla|TS-0431
+Corpus, uterine glandular cell|Uterine corpus glandular cell|TS-1287
+Inferior olivari nucleus|Inferior olivari nucleus|TS-2383
+Cochlear duct|Cochlear duct|TS-0152
+Rectum epithelium|Rectal epithelium|TS-2066
+Buccal mucosa|Buccal mucosa|TS-2349
+Ovarian stromal cell|Ovarian stroma|TS-1246
+Gastric tissue|Stomach|TS-0980
+Pulp of tooth|Dental pulp|TS-0195
+Cerebral artery|Cerebral artery|TS-0126
+Lymphatic endothelium|Lymphatic vessel vascular endothelium|TS-2156
+Extraembryonic fluid|Extraembryonic fluid|TS-2120
+Male reproductive system|Male reproductive system|TS-1310
+Antrum of Highmore|Maxillary sinus|TS-2231
+Renal pelvis|Renal pelvis|TS-2230
+Bone tissue|Bone tissue|TS-2011
+Hair root|Hair root|TS-0433
+Fetal kidney|Fetal kidney|TS-0342
+Tooth enamel organ|Enamel organ|TS-0271
+Epithelium of cornea|Corneal epithelium|TS-0173
+Stripped muscle tissue|Striated muscle|TS-2047
+Hematopoietic tissue|Hematopoietic tissue|TS-2142
+Meninx|Meninges|TS-1177
+Ascending colon|Ascending colon|TS-0057
+Thyroid|Thyroid|TS-1047
+Fecal matter|Feces|TS-2345
+Female germ cell|Female germ cell|TS-2368
+Anus|Anus|TS-2005
+Visual apparatus|Eye|TS-0309
+Monocyte|Monocyte|TS-0638
+Oral cavity mucosa|Oral mucosa|TS-0716
+Vaginal squamous epithelial cell|Vagina squamous cell|TS-1254
+Monoblast|Monoblast|TS-1195
+Airway epithelium|Airway epithelium|TS-0023
+Seminal gland|Seminal vesicle|TS-0919
+Bony labyrinth vestibule|Inner ear vestibule|TS-0479
+Kidney corpuscle|Renal corpuscle|TS-1317
+Rectum mucosa|Rectum mucosa|TS-2107
+Lateral ventricle|Lateral ventricle|TS-1230
+Esophageal epithelial cell|Esophageal epithelium|TS-0698
+Dorsal motor nucleus of vagus nerve|Dorsal vagal nucleus|TS-2381
+Endocrine gland|Endocrine gland|TS-1300
+Kidney medulla|Kidney medulla|TS-1157
+Tibial bone|Tibia|TS-1048
+Fetal brain|Fetal brain|TS-0328
+Oculomotor muscle|Extraocular muscle|TS-0305
+Oesophageal squamous epithelium|Esophageal squamous cell|TS-1250
+Cerebrospinal axis|Central nervous system|TS-0150
+Uterine body|Uterine corpus|TS-1265
+ES cell|Embryonic stem cell|TS-0263
+Prostate epithelial cell|Prostate epithelium|TS-2065
+Fetal colon|Fetal colon|TS-0331
+Sertoli cell|Sertoli cell|TS-0922
+Platelet|Platelet|TS-0803
+Hepatopancreatic ampulla|Ampulla of Vater|TS-2348
+Nose|Nose|TS-2037
+Olfactory epithelium|Olfactory epithelium|TS-0703
+Spermatozoan|Spermatozoon|TS-0949
+Keratinocyte|Keratinocyte|TS-0500
+Peripheral nervous system|Peripheral nervous system|TS-0808
+Epiderm|Epidermis|TS-0283
+Skeletal muscle|Skeletal muscle|TS-0933
+Nasal mucosa|Nasal mucosa|TS-0657
+Leucocyte|Leukocyte|TS-0549
+Artery smooth muscle|Artery smooth muscle|TS-1198
+Urinary system|Urinary system|TS-1323
+Transverse colon|Transverse colon|TS-2052
+Ectoderm|Ectoderm|TS-0216
+Dermal system|Dermal system|TS-1299
+Gall bladder|Gall bladder|TS-0394
+Thymic epithelial cell|Thymic epithelium|TS-1040
+Body of uterus|Uterine corpus|TS-1265
+Brain|Brain|TS-0095
+Cajal-Retzius cell|Cajal-Retzius cell|TS-1171
+Ovarian stroma cells|Ovarian stroma|TS-1246
+Chondroblast|Chondroblast|TS-2412
+Exocrine pancreas cell|Pancreatic acinar cell|TS-0737
+Mucus|Mucus|TS-2144
+Jugular vein endothelium|Jugular vein endothelium|TS-0498
+Heart left ventricle|Heart left ventricle|TS-0439
+Aorta|Aorta|TS-0046
+Spermatozoid|Spermatozoon|TS-0949
+Oral epithelial cell|Oral epithelium|TS-0715
+Ovarian follicular fluid|Ovarian follicular fluid|TS-0728
+Parathyroid gland chief cell|Parathyroid chief cell|TS-2140
+Alveolar cells|Pneumocyte|TS-2168
+Smooth muscle myocyte|Smooth muscle cell|TS-2159
+Foetal brain|Fetal brain|TS-0328
+Vascular endothelial cells|Vascular endothelial cell|TS-2402
+Mucosa of middle ear|Middle ear mucosa|TS-0631
+Suprarenal cortex|Adrenal cortex|TS-0015
+Urinary bladder epithelium|Urinary bladder urothelium|TS-1088
+Oocyte|Oocyte|TS-0711
+Inner ear vestibule|Inner ear vestibule|TS-0479
+T cell|T-cell|TS-1001
+Cecum|Cecum|TS-0122
+Myeloid leukocyte|Myeloid leukocyte|TS-2367
+Retina ganglion layer|Retinal ganglion|TS-0867
+Islet of Langerhans|Pancreatic islet|TS-0741
+Brain cortex|Cerebral cortex|TS-0091
+Lymph node germinal center cells|Lymph node germinal center cell|TS-1269
+Saliva|Saliva|TS-0891
+Cardiac muscle cell|Heart muscle cell|TS-0115
+Ileal|Ileum|TS-0472
+Lower limb|Lower limb|TS-2215
+Circulating blood|Peripheral blood|TS-0771
+Brown adipose tissue|Brown adipose tissue|TS-0099
+Epithelium of large intestine|Large intestine epithelium|TS-2105
+Epididymal|Epididymis|TS-0285
+Gum|Gingiva|TS-2074
+Pectoralis muscle|Pectoralis muscle|TS-0751
+Saphenous vein|Saphenous vein|TS-0893
+Joints|Joint|TS-2023
+Stripped muscle|Striated muscle|TS-2047
+Seminiferous tubule of testis|Seminiferous tubule|TS-1239
+Salivary gland glandular cell|Salivary gland glandular cell|TS-1282
+Vesica|Urinary bladder|TS-1090
+Mucosa of ileum|Ileal mucosa|TS-0470
+Nasopharyngeal epithelium|Nasopharyngeal epithelium|TS-0662
+Leptomeninges|Leptomeninges|TS-0546
+Head|Head|TS-0436
+Sensory organ|Sense organ|TS-2043
+Vaginal squamous cell|Vagina squamous cell|TS-1254
+Male haploid germ cell|Spermatozoon|TS-0949
+Ovary follicle cells|Ovarian follicle|TS-0726
+Cardiac myocyte|Heart muscle cell|TS-0115
+Cornea epithelial cell|Corneal epithelium|TS-0173
+Mucous membrane|Mucosa|TS-2031
+Vestibular nucleus|Vestibular nuclei|TS-2078
+Epidermis|Epidermis|TS-0283
+Chondrocyte|Chondrocyte|TS-0138
+Cerebrum cortex neural cell|Cerebral cortex neuron|TS-1259
+Helper induced T lymphocyte|Helper T-cell|TS-1146
+Arachnoid membrane|Arachnoid membrane|TS-0052
+Schwalbe corpuscle|Taste bud|TS-1015
+Osteoclast|Osteoclast|TS-0721
+Spermatozoon|Spermatozoon|TS-0949
+Embryonic brain|Embryonic brain|TS-0231
+Mast cell|Mast cell|TS-0603
+Gray matter of telencephalon|Cerebral grey matter|TS-2361
+Thyroid gland glandular cells|Thyroid gland glandular cell|TS-2166
+Skin keratinocytes|Keratinocyte|TS-0500
+Erythroblast|Erythroblast|TS-0289
+Spinal ganglion|Spinal ganglion|TS-0954
+Endothelial cells of cerebral cortex|Cerebral cortex endothelial cell|TS-2372
+Adnexa of skin|Skin appendage|TS-0051
+Between brain|Diencephalon|TS-0199
+Epithelium of seminal vesicle|Seminal vesicle epithelium|TS-2069
+Lymphatic vessel vascular endothelium|Lymphatic vessel vascular endothelium|TS-2156
+Peripheral blood T-lymphocyte|Peripheral blood T-cell|TS-0770
+Vermis of cerebellum|Vermis|TS-2059
+Fetal astrocyte|Fetal astrocyte|TS-0325
+Aortic endothelial cell|Aortic endothelium|TS-0047
+Pulmonary alveoli|Alveolus|TS-0031
+Spinal cord macroglia|Spinal cord macroglia|TS-2151
+Embryonic liver|Embryonic liver|TS-0252
+Testis cells in seminiferus ducts|Seminiferous tubule|TS-1239
+Skin Langerhans cell|Skin Langerhans cell|TS-2376
+Fetal skeletal muscle|Fetal skeletal muscle|TS-0351
+Veins|Vein|TS-1108
+Iliac region|Groin|TS-2339
+Ovary follicular fluid|Ovarian follicular fluid|TS-0728
+Vulva/Anal squamous cell|Vulva/Anal squamous cell|TS-1255
+Parathyroid gland epithelium|Parathyroid epithelium|TS-2141
+Blood capillary|Capillary|TS-2006
+Mammary region|Breast|TS-2083
+Uterus body glandular cell|Uterine corpus glandular cell|TS-1287
+Cancellated bone|Cancellous bone|TS-0110
+Testiculus|Testis|TS-1030
+Embryonic pharynx|Embryonic pharynx|TS-2091
+Parathyroid epithelium|Parathyroid epithelium|TS-2141
+Pons of Varolius|Pons|TS-0813
+Myelencephalon|Myelencephalon|TS-2365
+Mammary gland myoepithelial cell|Mammary gland myoepithelial cell|TS-2378
+Hair|Hair|TS-0430
+Intestine|Intestine|TS-0490
+Fetal|Fetus|TS-0360
+Foot sole tissue|Foot sole|TS-0379
+Middle ear mucosa|Middle ear mucosa|TS-0631
+Basal ganglia|Basal ganglia|TS-1149
+Sublingual salivary gland|Sublingual gland|TS-0987
+Membranous cochlea|Cochlear duct|TS-0152
+Lateral ventricle glial cells|Lateral ventricle glial cell|TS-1258
+Metatarsus|Metatarsus|TS-2221
+Brain hippocampus|Hippocampus|TS-0460
+Hepatic stellate cell|Hepatic stellate cell|TS-0452
+Pituitary|Pituitary gland|TS-0798
+Jugular vein|Jugular vein|TS-0497
+Pancreas|Pancreas|TS-0736
+Whole embryo|Embryo|TS-0229
+Skeletal ligament|Articular ligament|TS-2146
+Fetal small intestine|Fetal small intestine|TS-2134
+Skin appendages|Skin appendage|TS-0051
+Umbilical vein endothelial cell|Umbilical vein endothelium|TS-1081
+Adrenal gland cortex cell|Adrenal cortex|TS-0015
+Neuroglial cell|Glial cell|TS-0415
+Spinal cord|Spinal cord|TS-0953
+Ceca|Cecum|TS-0122
+Ciliary epithelium|Ocular ciliary epithelium|TS-0695
+Dorsal root ganglion|Spinal ganglion|TS-0954
+Hand|Hand|TS-2213
+Liver|Liver|TS-0564
+Adrenal|Adrenal gland|TS-0016
+Dental enamel|Tooth enamel|TS-1057
+Bone marrow hematopoietic cell|Bone marrow hematopoietic cell|TS-2109
+Fetal B-lymphocyte|Fetal B-cell|TS-0326
+Lumbar vertebra|Lumbar vertebra|TS-2364
+Corium|Dermis|TS-2076
+Pituitary anterior lobe|Pituitary anterior lobe|TS-0794
+Adrenal cortex|Adrenal cortex|TS-0015
+Glandula vesiculosa|Seminal vesicle|TS-0919
+Haemolymph system|Hemolymphoid and immune system|TS-2018
+First milk|Colostrum|TS-0167
+Cementum of tooth|Dental cementum|TS-2163
+Larynx|Larynx|TS-0532
+Macrophage|Macrophage|TS-0587
+NKT cell|Natural killer T cell|TS-2165
+Ventricle|Heart ventricle|TS-0444
+Artery|Artery|TS-0054
+cerebellum granule cell layer|Cerebellum granular layer|TS-1247
+Epithelium of stomach|Stomach epithelium|TS-2068
+Posterior cranial fossa|Posterior cranial fossa|TS-2354
+Distal colon|Distal colon|TS-0202
+Macroglia of brain|Brain macroglia|TS-2149
+Abdominal adipose tissue|Abdominal adipose tissue|TS-0002
+Granules of Langerhans|Pancreatic islet|TS-0741
+Cervix epithelium|Uterine cervix epithelium|TS-0137
+Megacaryoblast|Megakaryoblast|TS-0610
+Limbic cortex|Limbic lobe|TS-2061
+Megakaryocyte|Megakaryocyte|TS-0611
+Crystalline lens|Lens|TS-0545
+Thoracic diaphragm|Diaphragm|TS-0198
+Uterine tube epithelium|Oviduct epithelium|TS-1316
+Adrenocortical|Adrenal cortex|TS-0015
+Female gamete|Oocyte|TS-0711
+Colorectum|Colorectum|TS-1298
+Tonsillar squamous cell|Tonsil squamous cell|TS-1253
+Fetal lung fibroblast|Fetal lung fibroblast|TS-0346
+Fat cell|Adipocyte|TS-0012
+Vitreous humor|Eye vitreous humor|TS-0308
+lactiferous duct|Lactiferous duct|TS-2385
+Neuroretina|Neuroretina|TS-0685
+Adrenal gland|Adrenal gland|TS-0016
+Colon descendens|Descending colon|TS-2010
+Gall bladder glandular cell|Gall bladder glandular cell|TS-1278
+Migratory neural crest cell|Migratory neural crest cell|TS-2411
+Arteries|Artery|TS-0054
+Neutrophil|Neutrophil|TS-0688
+Urinary bladder|Urinary bladder|TS-1090
+Urethra|Urethra|TS-1132
+PNS|Peripheral nervous system|TS-0808
+Sympathetic chain|Sympathetic chain|TS-2049
+Epithalamus|Epithalamus|TS-2060
+Para-aortic splanchnopleure|Para-aortic splanchnopleura|TS-2390
+Ileal mucosa|Ileal mucosa|TS-0470
+B-cell|B-cell|TS-0068
+Melanocyte|Melanocyte|TS-0613
+Pulpa dentis|Dental pulp|TS-0195
+Extra-ocular muscle|Extraocular muscle|TS-0305
+Small intestine|Small intestine|TS-0942
+Atrial tissue of heart|Heart atrium|TS-0437
+Thyroid epithelium|Thyroid epithelium|TS-2167
+Neural stem cell|Neural stem cell|TS-2360
+Vermiform appendix glandular cell|Appendix glandular cell|TS-1271
+B cell|B-cell|TS-0068
+Hypodermis|Hypodermis|TS-2366
+Breast glandular cell|Mammary gland glandular cell|TS-1272
+Ventriculus tertius|Third ventricle|TS-2058
+Parathyroid gland|Parathyroid|TS-0745
+Tonsil nongerminal center|Tonsil nongerminal center cell|TS-2172
+Foreskin fibroblast|Foreskin fibroblast|TS-0384
+Outer zone of renal medulla|Kidney outer medulla|TS-0508
+Midbrain|Midbrain|TS-0630
+Colon endothelial cell|Colon endothelial cell|TS-2397
+Articular ligament|Articular ligament|TS-2146
+Occipital lobe|Occipital lobe|TS-0693
+Fallopian tube epithelium|Oviduct epithelium|TS-1316
+Suprarenal gland glandular cell|Adrenal gland glandular cell|TS-2177
+Mammary glandular cell|Mammary gland glandular cell|TS-1272
+Peripheral blood|Peripheral blood|TS-0771
+Umbilical artery|Umbilical artery|TS-1077
+Stria vascularis of cochlear duct|Stria vascularis|TS-0982
+Mandible|Mandible|TS-2225
+Amnion|Amnion|TS-0033
+Adipose tissue|Adipose tissue|TS-0013
+Skin Langerhans|Skin Langerhans cell|TS-2376
+Gamete|Gamete|TS-0395
+Myocardium|Heart muscle|TS-0440
+Thymic lymphocyte|Thymocyte|TS-1042
+first branchial arch|First arch|TS-2089
+Lymph node nongerminal center cell|Lymph node nongerminal center cell|TS-2171
+Ductus ejaculatorius|Ductus ejaculatorius|TS-0211
+Bronchus epithelium|Bronchus epithelium|TS-1240
+Breast adipocyte|Breast adipocyte|TS-2377
+Gamma delta T cells|Gamma delta T cells|TS-2393
+Epithelium of fallopian tube|Oviduct epithelium|TS-1316
+Cerebral hemisphere|Cerebral hemisphere|TS-2007
+Fetal cerebral cortex|Fetal cerebral cortex|TS-1211
+Womb|Uterus|TS-1102
+Fetal brain cortex|Fetal cerebral cortex|TS-1211
+Inguinal region|Groin|TS-2339
+1st branchial arch|First arch|TS-2089
+Exocrine pancreas|Exocrine pancreas|TS-1241
+Synovial fluid|Synovial fluid|TS-0996
+Sympathetic trunk|Sympathetic chain|TS-2049
+Gingiva|Gingiva|TS-2074
+Brainstem|Brain stem|TS-0093
+Caudate nucleus|Caudate nucleus|TS-0121
+Corpus, uterine glandular cells|Uterine corpus glandular cell|TS-1287
+Zona glomerulosa|Adrenal glomerulosa|TS-0017
+Visual cortex|Visual cortex|TS-1117
+Colon|Colon|TS-0158
+Jejunal smooth muscle|Jejunal smooth muscle|TS-1216
+Subthalamus|Subthalamus|TS-2048
+Hematolymphoid system|Hemolymphoid and immune system|TS-2018
+Ovarian follicle|Ovarian follicle|TS-0726
+Amnionic/chorionic membrane|Chorioamniotic membrane|TS-0141
+Motor neuron|Motor neuron|TS-2386
+Uterine cervix epithelium|Uterine cervix epithelium|TS-0137
+Ganglionic cell layer of retina|Retinal ganglion|TS-0867
+Thrombocyte|Platelet|TS-0803
+Myeloid cell|Myeloid cell|TS-0647
+Retinal photoreceptor cell|Retinal photoreceptor|TS-0868
+Treg|Regulatory T cell|TS-2408
+Colorectal|Colorectum|TS-1298
+Lactiferous gland duct|Lactiferous duct|TS-2385
+Paratesticular soft tissue|Paratesticular tissue|TS-2355
+Developmental anatomy|Embryonic structure|TS-2110
+Hemopoietic cell|Hematopoietic cell|TS-2017
+Extraembryonic structure|Extraembryonic tissue|TS-2119
+Lung endothelial cell|Lung endothelium|TS-0573
+Fetal liver|Fetal liver|TS-0344
+Fetal oesophagus|Fetal esophagus|TS-1185
+Penis|Penis|TS-0758
+Brain astrocyte|Astrocyte|TS-0060
+Aorta endothelial cell|Aortic endothelium|TS-0047
+Tongue epithelium|Tongue epithelium|TS-1051
+Encephalon|Brain|TS-0095
+Colonic smooth muscle|Colon smooth muscle|TS-0165
+Oral cavity mucosa squamous cell|Oral mucosa squamous cell|TS-1252
+Uterus endometrium|Endometrium|TS-0276
+Meninges of spinal cord|Spinal cord meninges|TS-2148
+Exocrine pancreas epithelium|Exocrine pancreas epithelium|TS-2108
+Macroglial cell|Macroglia|TS-2027
+cerebellar granular layer|Cerebellum granular layer|TS-1247
+Ligament|Ligament|TS-2145
+Caliculus gustatorius|Taste bud|TS-1015
+vulva/anal skin epidermal cells|Vulva/Anal skin epidermal cell|TS-2170
+Uterus womb epithelium|Uterine corpus epithelium|TS-2154
+Female reproductive system|Female reproductive system|TS-1303
+Endometrial stromal cell|Endometrium stroma|TS-1266
+Osteocyte|Osteocyte|TS-1167
+Connective tissue cell|Connective tissue cell|TS-2096
+Uvea|Uvea|TS-2228
+Hippocampus|Hippocampus|TS-0460
+Pancreas islet cells|Pancreatic islet|TS-0741
+Cerebrospinal fluid|Cerebrospinal fluid|TS-0130
+Malphigian corpuscle|Renal corpuscle|TS-1317
+Fetal pallium|Fetal cerebral cortex|TS-1211
+Serum|Serum|TS-0923
+Thyroid gland glandular cell|Thyroid gland glandular cell|TS-2166
+Mucosa of colon|Colon mucosa|TS-0164
+Thorax|Thorax|TS-1039
+Lateral thalamic nuclei|Lateral thalamic nuclei|TS-2028
+Bronchioli|Bronchiole|TS-2003
+Brain ventricular system|Ventricular system of brain|TS-1295
+Aggregated lymphoid nodules of small intestine|Peyer patch|TS-0780
+Prosencephalon|Forebrain|TS-0380
+Odontoblastic cell|Odontoblast|TS-0696
+Cancellous bone|Cancellous bone|TS-0110
+Lymphatic fluid|Lymph|TS-0580
+Cornea endothelial cell|Corneal endothelium|TS-0172
+Trophoblastic cells|Trophoblast|TS-1070
+Middle ear|Middle ear|TS-2233
+pars intermedia adenohypophysis|Pituitary neurointermediate lobe|TS-0795
+Abdominal Fat|Abdominal adipose tissue|TS-0002
+Epithelium of bronchus|Bronchus epithelium|TS-1240
+Ventricular system|Ventricular system of brain|TS-1295
+Metacarpus|Metacarpus|TS-2218
+Ilea|Ileum|TS-0472
+Submandibular gland|Submandibular gland|TS-0988
+Finger Phalanges|Phalanx|TS-2211
+Ectocervix|Uterine ectocervix|TS-1098
+Tonsil germinal center|Tonsil germinal center cell|TS-1288
+Breastbone|Sternum|TS-0972
+Mucosa of vermiform appendix|Appendix mucosa|TS-2022
+Renal epithelium|Kidney epithelium|TS-0505
+Oligodendroglia|Oligodendrocyte|TS-0709
+Olfactory bulb|Olfactory bulb|TS-0702
+Neural layer of retina|Neuroretina|TS-0685
+Neck|Neck|TS-2045
+Neck of uterus|Uterine cervix|TS-0134
+Epididymus|Epididymis|TS-0285
+Yolk sac|Yolk sac|TS-1130
+Epithelium of prostate gland|Prostate epithelium|TS-2065
+Grey matter of cerebrum|Cerebral grey matter|TS-2361
+Mastocyte|Mast cell|TS-0603
+Eosinophilic granulocyte|Eosinophil|TS-0279
+Microglia of spinal cord|Spinal cord microglia|TS-2152
+Gastric cardia|Cardia of stomach|TS-2391
+Fetal pancreas|Fetal pancreas|TS-0348
+Endothelium of lymphatic vessel|Lymphatic vessel vascular endothelium|TS-2156
+Colon endothelium|Colon endothelium|TS-0162
+Cone cell|Retinal cone cell|TS-0866
+Alveoli|Alveolus|TS-0031
+Mucosa of small intestine|Small intestine mucosa|TS-0941
+Renal outer medulla|Kidney outer medulla|TS-0508
+Seminiferous tubule epithelium|Seminiferous epithelium|TS-0920
+Thighbone|Femur|TS-0322
+Lymph node reaction center cells|Lymph node germinal center cell|TS-1269
+Nasopharynx respiratory epithelial cells|Nasopharyngeal epithelial cell|TS-2398
+Preputial gland|Preputial gland|TS-0824
+Synovial joint|Joint synovium|TS-2138
+Myoblast|Myoblast|TS-0650
+Neuropil|Neuropil|TS-2403
+Term placenta|Term placenta|TS-1027
+Luys' body|Subthalamic nucleus|TS-1154
+Fetal hypothalamus|Fetal hypothalamus|TS-2116
+Greater omentum|Greater omentum|TS-2073
+Fetal muscle|Fetal muscle|TS-0347
+Cerebral cortex neural cell|Cerebral cortex neuron|TS-1259
+Ocular ciliary body|Ocular ciliary body|TS-0694
+Fetal ovary|Fetal ovary|TS-2135
+Bronchiole|Bronchiole|TS-2003
+Omentum|Omentum|TS-2004
+Prostatic gland epithelium|Prostate epithelium|TS-2065
+Sensory epithelium|Neuroepithelium|TS-0682
+Jugular|Jugular vein|TS-0497
+Fallopian tube glandular cell|Oviduct glandular cell|TS-1277
+Foetus|Fetus|TS-0360
+Glomerular tuft|Renal glomerulus|TS-0862
+Anatomical system|Anatomical system|TS-2088
+Breast|Breast|TS-2083
+Preoptic area of hypothalamus|Preoptic area of hypothalamus|TS-0822
+Tongue|Tongue|TS-1050
+B lymphocyte|B-cell|TS-0068
+Skin appendage|Skin appendage|TS-0051
+Blindgut|Cecum|TS-0122
+Organ of Corti|Organ of Corti|TS-0717
+Urinary bladder urothelial cells|Urinary bladder urothelium|TS-1088
+Large intestine mucosa|Large intestine mucosa|TS-2106
+Exocrine acinar cell|Pancreatic acinar cell|TS-0737
+Submaxillary salivary gland|Submandibular gland|TS-0988
+Cortex of cerebral hemisphere|Cerebral cortex|TS-0091
+Uterine ectocervix|Uterine ectocervix|TS-1098
+Rib|Rib|TS-2209
+Vascular smooth muscle|Vascular smooth muscle|TS-1107
+Natural killer cell|Natural killer cell|TS-0664
+Cerebral macroglia|Brain macroglia|TS-2149
+Foetal cerebrum cortex|Fetal cerebral cortex|TS-1211
+Embryonic cerebral cortex|Embryonic cerebral cortex|TS-2382
+Aorta endothelium|Aortic endothelium|TS-0047
+Peyer patch|Peyer patch|TS-0780
+Mesencephalon|Midbrain|TS-0630
+Cardiac cell|Heart muscle cell|TS-0115
+Sperm cell|Spermatozoon|TS-0949
+Urothelium|Urothelium|TS-1096
+Neuroglia cell|Glial cell|TS-0415
+Forelimb|Upper limb|TS-2214
+Corpus striatum|Corpus striatum|TS-0183
+Cervix epithelial cell|Uterine cervix epithelium|TS-0137
+Parietal cortex|Parietal lobe|TS-0747
+Epithelium of small intestine|Small intestine epithelium|TS-2104
+Microglia of brain|Brain microglia|TS-2150
+Arm|Arm|TS-2204
+Dental pulp|Dental pulp|TS-0195
+Gallbladder epithelium|Gall bladder epithelium|TS-1304
+Stem cell|Stem cell|TS-2086
+Neural crest cell|Migratory neural crest cell|TS-2411
+Parathyroid|Parathyroid|TS-0745
+Slow-twitch skeletal muscle|Slow-twitch skeletal muscle|TS-0940
+Colon nerve tissue|Colon nerve tissue|TS-2373
+Mucosa|Mucosa|TS-2031
+Forebrain|Forebrain|TS-0380
+Lung alveolus|Alveolus|TS-0031
+Endothelium|Endothelium|TS-0278
+Lymphoid|Lymphoid tissue|TS-0584
+Cerebellum molecular layer|Cerebellum molecular layer|TS-1248
+Paradentium|Periodontium|TS-2380
+Epididymis glandular cells|Epididymis glandular cell|TS-1276
+Brain frontal lobe|Frontal lobe|TS-0389
+Cardiac atrium|Heart atrium|TS-0437
+Fetal bone|Fetal bone|TS-2014
+Esophageal epithelium|Esophageal epithelium|TS-0698
+Arterial smooth muscle|Artery smooth muscle|TS-1198
+Parapharyngeal space|Parapharyngeal space|TS-2357
+Ear|Ear|TS-1165
+Vulva/anal squamous epithelial cell|Vulva/Anal squamous cell|TS-1255
+Genital system|Reproductive system|TS-1318
+Colon neural tissue|Colon nerve tissue|TS-2373
+Portal vein|Portal vein|TS-0814
+Uterus endothelium|Uterine endothelium|TS-1099
+Pons|Pons|TS-0813
+Proximal convoluted tubule|Renal proximal convoluted tubule|TS-2198
+Hippocampus glial cell|Hippocampus glial cell|TS-1257
+Paraganglion|Paraganglia chromaffin|TS-2358
+Lymph node germinal center cell|Lymph node germinal center cell|TS-1269
+Blood serum|Serum|TS-0923
+Scapula bone|Scapula|TS-0897
+Articular chondrocyte|Articular chondrocyte|TS-0056
+Nervous system cell|Nervous system cell|TS-2040
+Epithelium of nasopharynx|Nasopharyngeal epithelium|TS-0662
+Horny layer|Stratum corneum|TS-0981
+Involuntary muscle|Smooth muscle|TS-0943
+smooth muscle tissue|Smooth muscle|TS-0943
+Zona glomerulosa of suprarenal gland|Adrenal glomerulosa|TS-0017
+Intestinum caecum|Cecum|TS-0122
+Thyroid follicular cell|Thyroid follicular cell|TS-1285
+Vermiform appendix|Appendix|TS-1267
+Smooth muscle cells|Smooth muscle cell|TS-2159
+Adrenal gland glandular cell|Adrenal gland glandular cell|TS-2177
+Inframammary crease|Inframammary fold|TS-2350
+Respiratory epithelium|Airway epithelium|TS-0023
+Large intestine epithelium|Large intestine epithelium|TS-2105
+Cerebral cortex glial cell|Cerebral cortex glial cell|TS-1256
+Colorectal smooth muscle|Colon smooth muscle|TS-0165
+CR cell|Cajal-Retzius cell|TS-1171
+Germ layer|Embryonic tissue|TS-2100
+Skin|Skin|TS-0934
+Cervix, uterine glandular cells|Uterine cervix glandular cell|TS-1273
+Tear|Tear|TS-1016
+Glial|Glial cell|TS-0415
+Fetal cartilage|Fetal cartilage|TS-0329
+Extremity|Limb|TS-0552
+Hippocampal gyrus|Parahippocampal gyrus|TS-2038
+Endoderm|Endoderm|TS-0273
+Uterine decidua|Decidua menstrualis|TS-2161
+pars intermedia|Pituitary neurointermediate lobe|TS-0795
+Lateral pharyngeal space|Parapharyngeal space|TS-2357
+Synovial tissue|Synovium|TS-0998
+Peripheral blood leucocyte|Peripheral blood leukocyte|TS-0766
+Descending colon|Descending colon|TS-2010
+Mucosa of large intestine|Large intestine mucosa|TS-2106
+Joint cartilage|Articular cartilage|TS-0055
+T-helper cell|Helper T-cell|TS-1146
+Mammary epithelial cell|Mammary epithelium|TS-0593
+Epithelium of seminiferous tubule|Seminiferous epithelium|TS-0920
+Ejaculatory duct|Ductus ejaculatorius|TS-0211
+Peripheral blood mononuclear cell|Peripheral blood mononuclear cell|TS-2370
+Purkinje cells|Purkinje cell|TS-0845
+Helper T lymphocyte|Helper T-cell|TS-1146
+venous vessel|Vein|TS-1108
+Cerebral spinal fluid|Cerebrospinal fluid|TS-0130
+Fovea|Fovea centralis|TS-2055
+Uterine|Uterus|TS-1102
+Vascular layer of eyeball|Uvea|TS-2228
+Aortic|Aorta|TS-0046
+Anterior pituitary gland|Pituitary anterior lobe|TS-0794
+Kidney glomeruli cell|Renal glomerulus|TS-0862
+Duodenum glandular cells|Duodenum glandular cell|TS-1275
+Epidermal|Epidermis|TS-0283
+Granulosa cell|Ovarian granulosa cell|TS-0729
+Oligodendroglia cell|Oligodendrocyte|TS-0709
+cerebellar molecular layer|Cerebellum molecular layer|TS-1248
+Lateral ventricle neural cell|Lateral ventricle neuron|TS-1261
+Gastric glandular cell|Stomach glandular cell|TS-1284
+Small intestinal glandular cell|Small intestine glandular cell|TS-1286
+Upper extremity|Upper limb|TS-2214
+Ovum|Ovum|TS-2191
+Egg|Ovum|TS-2191
+Colonic endothelium|Colon endothelium|TS-0162
+Mucosa of rectum|Rectum mucosa|TS-2107
+Oesophageal epithelial cell|Esophageal epithelium|TS-0698
+Spinal microglia|Spinal cord microglia|TS-2152
+Intermediate pituitary|Pituitary neurointermediate lobe|TS-0795
+Bones|Bone|TS-0088
+Fetal B-cell|Fetal B-cell|TS-0326
+Myoepithelial cell|Myoepithelial cell|TS-2379
+Pulmonary alveolus|Alveolus|TS-0031
+Colon glandular cell|Colon glandular cell|TS-1274
+Tunica mucosa uteri|Endometrium|TS-0276
+Phalanx bone|Phalanx|TS-2211
+Parotid|Parotid gland|TS-0748
+Visceral abdominal fat|Visceral adipose tissue of abdominal region|TS-2405
+Placenta decidua cells|Decidua placentalis|TS-0193
+Optic nerve head|Optic disk|TS-2153
+Bronchus respiratory epithelial cells|Bronchus epithelial cell|TS-2399
+Tonsil reaction center cells|Tonsil germinal center cell|TS-1288
+Autonomic ganglia|Autonomic ganglion|TS-2340
+Exocrine pancreas glandular cell|Pancreas exocrine glandular cell|TS-1242
+Heart muscle myocyte|Heart muscle cell|TS-0115
+Pancreas exocrine glandular cell|Pancreas exocrine glandular cell|TS-1242
+Ventral tegmentum|Ventral tegmental area|TS-2389
+Rectal glandular cell|Rectum glandular cell|TS-1281
+Tubulus renalis colligen|Renal collecting duct|TS-0860
+Endometrium|Endometrium|TS-0276
+Gestational structure|Gestational structure|TS-2092
+Oesophagus squamous cell|Esophageal squamous cell|TS-1250
+Gastric epithelium|Stomach epithelium|TS-2068
+Sphenoid|Sphenoid bone|TS-2343
+Adrenal gland glandular cells|Adrenal gland glandular cell|TS-2177
+Esophagus squamous epithelial cell|Esophageal squamous cell|TS-1250
+Zona glomerulosa of adrenal gland|Adrenal glomerulosa|TS-0017
+Epithelium of kidney|Kidney epithelium|TS-0505
+Ductless gland|Endocrine gland|TS-1300
+Parathyroid gland glandular cells|Parathyroid glandular cell|TS-1279
+Striated muscle|Striated muscle|TS-2047
+Kidney cells in tubules|Renal tubule|TS-1262
+Uterine endothelium|Uterine endothelium|TS-1099
+Groin|Groin|TS-2339
+Digestive system|Alimentary system|TS-1293
+Intra-abdominal fat|Visceral adipose tissue of abdominal region|TS-2405
+Promyelocyte|Promyelocyte|TS-0825
+Cochlear scala media|Cochlear duct|TS-0152
+Pineal organ|Pineal gland|TS-0789
+Anterior pituitary|Pituitary anterior lobe|TS-0794
+Appendix lymphoid tissue|Appendix lymphoid tissue|TS-1268
+Cell|Cell type|TS-2035
+Hepatic parenchymal cell|Hepatocyte|TS-0454
+Vagina squamous cell|Vagina squamous cell|TS-1254
+Vertebra|Vertebra|TS-2352
+Unstriated muscle cell|Smooth muscle cell|TS-2159
+Trabecular meshwork of the eye|Trabecular meshwork|TS-1058
+Oesophageal squamous epithelial cell|Esophageal squamous cell|TS-1250
+Bone marrow poietic cells|Bone marrow hematopoietic cell|TS-2109
+Epithelium of retinal pigment|Retinal pigment epithelium|TS-0869
+vestibule of bony labyrinth|Inner ear vestibule|TS-0479
+T-cytotoxic cell|Cytotoxic T-cell|TS-0190
+Renal glomerulus cell|Renal glomerulus|TS-0862
+Bile duct|Bile duct|TS-0075
+Cervix, uterine squamous epithelial cells|Uterine cervix squamous cell|TS-1251
+Gamma delta T cell|Gamma delta T cells|TS-2393
+Foetal pallium|Fetal cerebral cortex|TS-1211
+Salivary gland secretion|Saliva|TS-0891
+Hepatic perisinusoidal cell|Hepatic stellate cell|TS-0452
+Tonsil nongerminal center cell|Tonsil nongerminal center cell|TS-2172
+Small intestinal epithelial cell|Small intestine epithelium|TS-2104
+Stomach glandular cell|Stomach glandular cell|TS-1284
+Arachnoid|Arachnoid membrane|TS-0052
+Vagina|Vagina|TS-1103
+Lung fibroblast|Lung fibroblast|TS-0575
+Brain cortex neuron|Cerebral cortex neuron|TS-1259
+Smooth muscle of artery|Artery smooth muscle|TS-1198
+Retinal ganglion layer|Retinal ganglion|TS-0867
+Chorionic membrane|Chorionic membrane|TS-0144
+Right heart ventricle|Heart right ventricle|TS-0443
+Ovary stromal cells|Ovarian stroma|TS-1246
+Fallopian tube glandular cells|Oviduct glandular cell|TS-1277
+Striatum|Corpus striatum|TS-0183
+Dentate gyrus of hippocampal formation|Dentate gyrus|TS-2388
+Meninx of spinal cord|Spinal cord meninges|TS-2148
+Multicuspid tooth|Molar|TS-0637
+Sensory neurons|Sensory neuron|TS-2387
+Renal glomerular cell|Renal glomerulus|TS-0862
+Labyrinth|Inner ear|TS-0478
+Cowper's gland|Bulbourethral gland|TS-0103
+Mouth mucosa|Oral mucosa|TS-0716
+Sternum|Sternum|TS-0972
+Stria vascularis of cochlea|Stria vascularis|TS-0982
+Fetal frontal lobe|Fetal frontal lobe|TS-2114
+Regulatory T-cell|Regulatory T cell|TS-2408
+Extra-embryonic structure|Extraembryonic tissue|TS-2119
+Renal inner medulla|Kidney inner medulla|TS-0506
+Islets of Langerhans|Pancreatic islet|TS-0741
+Tonsil nongerminal center cells|Tonsil nongerminal center cell|TS-2172
+Colon ascendens|Ascending colon|TS-0057
+Endothelium of aorta|Aortic endothelium|TS-0047
+Umbilical cord blood|Umbilical cord blood|TS-1079
+Kidney distal convoluted tubule|Renal distal tubule|TS-0504
+EOM|Extraocular muscle|TS-0305
+Molaris|Molar|TS-0637
+Hippocampus neuronal cells|Hippocampus neuron|TS-1260
+Respiratory system epithelium|Airway epithelium|TS-0023
+Synovial membrane|Synovium|TS-0998
+Face|Face|TS-2216
+Tonsil lymphoid cell|Tonsil lymphoid cell|TS-1270
+Uterus|Uterus|TS-1102
+Cornea|Cornea|TS-0171
+Lymphoid tissue|Lymphoid tissue|TS-0584
+Scapula|Scapula|TS-0897
+Frontal cortex|Frontal lobe|TS-0389
+Renal|Kidney|TS-0510
+Epithelium of seminiferous tubule of testis|Seminiferous epithelium|TS-0920
+Myelin sheath|Myelin sheath|TS-2363
+Collecting duct of renal tubule|Renal collecting duct|TS-0860
+Hemangioblast|Hemangioblast|TS-2392
+Ocular lens|Lens|TS-0545
+Non-striated muscle cell|Smooth muscle cell|TS-2159
+Pineal body|Pineal gland|TS-0789
+Oral mucosa squamous epithelial cell|Oral mucosa squamous cell|TS-1252
+Fat|Adipose tissue|TS-0013
+Decidua menstrualis|Decidua menstrualis|TS-2161
+Cytotoxic T-cell|Cytotoxic T-cell|TS-0190
+Enteric nervous system|Enteric nervous system|TS-2093
+Island of Langerhans|Pancreatic islet|TS-0741
+Muscle tissue|Muscle|TS-0642
+Tracheal|Trachea|TS-1060
+Colon endothelial cells|Colon endothelial cell|TS-2397
+Adrenal medulla|Adrenal medulla|TS-0018
+Embryonic tissue|Embryonic tissue|TS-2100
+Autonomic nervous system|Autonomic nervous system|TS-2001
+Horny layers|Stratum corneum|TS-0981
+Killer T lymphocyte|Cytotoxic T-cell|TS-0190
+Bronchus|Bronchus|TS-1229
+Embryonic mesoderm|Mesoderm|TS-0623
+Male germinal epithelium|Seminiferous epithelium|TS-0920
+Olfactory mucosa|Olfactory mucosa|TS-2197
+Peripheral blood T lymphocyte|Peripheral blood T-cell|TS-0770
+Mouth|Mouth|TS-1315
+Nasal cartilage|Nasal cartilage|TS-0655
+Bone marrow hematopoietic cells|Bone marrow hematopoietic cell|TS-2109
+Uterine cervix|Uterine cervix|TS-0134
+Trabecular bone|Cancellous bone|TS-0110
+Body part|Body part|TS-2084
+Spinal macroglia|Spinal cord macroglia|TS-2151
+Non-striated muscle|Smooth muscle|TS-0943
+Stratum corneum|Stratum corneum|TS-0981
+cDC|Conventional dendritic cell|TS-2192
+Epithelium of trachea|Tracheal epithelium|TS-1061
+female genital system|Female reproductive system|TS-1303
+Cerebral meninges|Brain meninges|TS-2147
+Mammary gland|Mammary gland|TS-0595
+Foetal cerebral cortex|Fetal cerebral cortex|TS-1211
+Mesangial cell|Mesangial cell|TS-0617
+Mammary|Mammary gland|TS-0595
+Tonsil squamous epithelial cells|Tonsil squamous cell|TS-1253
+Internal ear|Inner ear|TS-0478
+Urine|Urine|TS-1092
+Oligodendrocyte|Oligodendrocyte|TS-0709
+Female haploid germ cell|Oocyte|TS-0711
+Tonsil non-germinal center cells|Tonsil nongerminal center cell|TS-2172
+Vas deferens|Vas deferens|TS-1105
+Lateral ventricle glial cell|Lateral ventricle glial cell|TS-1258
+Renal medulla|Kidney medulla|TS-1157
+Femur|Femur|TS-0322
+Leptomeninx|Leptomeninges|TS-0546
+Lymphatic vessel|Lymphatic vessel|TS-2102
+Bloodstream|Peripheral blood|TS-0771
+Trigeminal nuclei|Trigeminal nucleus|TS-2077
+Basal nucleus|Basal ganglia|TS-1149
+Spleen white pulp|Spleen white pulp|TS-1264
+Renal distal convoluted tubule|Renal distal tubule|TS-0504
+Fetal cerebrum cortex|Fetal cerebral cortex|TS-1211
+Lymphatic vessel vascular endothelial cell|Lymphatic vessel vascular endothelium|TS-2156
+Endometrial stroma|Endometrium stroma|TS-1266
+Extrinsic muscle of eyeball|Extraocular muscle|TS-0305
+Pulmonary vein|Pulmonary vein|TS-0840
+Tooth|Tooth|TS-1055
+Epithelium of mouth|Oral epithelium|TS-0715
+Interbrain|Diencephalon|TS-0199
+Epithelium of tonsil|Tonsil epithelium|TS-2070
+Lymph node reaction center|Lymph node germinal center cell|TS-1269
+Ovarian granulosa cell|Ovarian granulosa cell|TS-0729
+Colon epithelial cell|Colon epithelium|TS-0163
+Rectum glandular cells|Rectum glandular cell|TS-1281
+Eosinophil|Eosinophil|TS-0279
+Adrenal glandular cell|Adrenal gland glandular cell|TS-2177
+Semen|Semen|TS-0917
+Excrement|Feces|TS-2345
+Stool|Feces|TS-2345
+Sweat gland|Sweat gland|TS-0993
+Medulla oblongata|Medulla oblongata|TS-0607
+Foreskin|Foreskin|TS-0383
+Nipple|Nipple|TS-2234
+Dura mater|Dura mater|TS-2008
+Meninges|Meninges|TS-1177
+Cervix squamous cell|Uterine cervix squamous cell|TS-1251
+Bone|Bone|TS-0088
+Epithelium of tracheobronchia|Tracheobronchial epithelium|TS-1063
+Ovarian|Ovary|TS-0730
+Plasma|Plasma|TS-0800
+Spermatogonias|Spermatogonia|TS-2193
+Bulbourethral gland|Bulbourethral gland|TS-0103
+Adrenal gland medulla|Adrenal medulla|TS-0018
+Fovea centralis|Fovea centralis|TS-2055
+Left ventricle|Heart left ventricle|TS-0439
+Nasopharyngeal epithelial cell|Nasopharyngeal epithelial cell|TS-2398
+B Lymphoblast|B Lymphoblast|TS-2002
+Cytotoxic T-lymphocyte|Cytotoxic T-cell|TS-0190
+Pneumocytes|Pneumocyte|TS-2168
+Vulva/Anal skin|Vulva/Anal skin|TS-1231
+Epithelium of vermiform appendix|Appendix epithelium|TS-2062
+Cowper's glands|Bulbourethral gland|TS-0103
+Nasopharynx|Nasopharynx|TS-0663
+Purkinje cell|Purkinje cell|TS-0845
+Fetal telencephalon|Fetal telencephalon|TS-2404
+White matter of telencephalon|Cerebral white matter|TS-2362
+Epithelium of appendix|Appendix epithelium|TS-2062
+Ileum|Ileum|TS-0472
+Cortex of adrenal gland|Adrenal cortex|TS-0015
+Inner medulla of kidney|Kidney inner medulla|TS-0506
+Urinary bladder urothelium|Urinary bladder urothelium|TS-1088
+Tissue|Tissue|TS-2090
+Lymph gland|Lymph node|TS-0579
+Cytolytic T lymphocyte|Cytotoxic T-cell|TS-0190
+Cervical canal|Uterine cervix|TS-0134
+Kidney epithelium|Kidney epithelium|TS-0505
+Lymphoid progenitor cell|Lymphoid stem cell|TS-2025
+Tooth enamel|Tooth enamel|TS-1057
+Posterior pituitary gland|Posterior pituitary|TS-0815
+Hippocampal glial cell|Hippocampus glial cell|TS-1257
+Microglial cell|Microglia|TS-0627
+Mucosa of appendix|Appendix mucosa|TS-2022
+Colonic mucosa|Colon mucosa|TS-0164
+Jejunal epithelium|Jejunal epithelium|TS-0494
+ Ova|Ovum|TS-2191
+Pallium|Cerebral cortex|TS-0091
+Colon smooth muscle|Colon smooth muscle|TS-0165
+Posterior motor nucleus of vagus|Dorsal vagal nucleus|TS-2381
+Small intestine epithelial cell|Small intestine epithelium|TS-2104
+Gallbladder|Gall bladder|TS-0394
+Regulatory T-lymphocyte|Regulatory T cell|TS-2408
+Squamous cell|Squamous cell|TS-1249
+Lingual epithelium|Tongue epithelium|TS-1051
+Hippocampus neuronal cell|Hippocampus neuron|TS-1260
+Schwann cell|Schwann cell|TS-0898
+Ganglion|Ganglion|TS-0397
+Peripheral blood cell|Peripheral blood|TS-0771
+Nasal vestibule|Nasal vestibule|TS-0660
+Uterine cervix epithelial cell|Uterine cervix epithelium|TS-0137
+Preoptic nuclei|Preoptic area of hypothalamus|TS-0822
+Aorta smooth muscle|Aortic smooth muscle|TS-0048
+Amygdala|Amygdala|TS-0037
+Smooth muscle tissue cell|Smooth muscle cell|TS-2159
+Lens cortex|Lens cortex|TS-0542
+Uterine smooth muscle|Myometrium|TS-0652
+Embryonic head|Embryonic head|TS-0246
+3rd ventricle|Third ventricle|TS-2058
+Ureter|Ureter|TS-1084
+Kidney collecting duct|Renal collecting duct|TS-0860
+Basophil|Basophil|TS-0073
+Eosinophil granulocyte|Eosinophil|TS-0279
+Ventral tegmental area|Ventral tegmental area|TS-2389
+Amniotic fluid|Amniotic fluid|TS-0034
+Epithelium of gallbladder|Gall bladder epithelium|TS-1304
+Brain stem|Brain stem|TS-0093
+Pre-B lymphocyte|Pre-B cell|TS-0819
+Expectoration|Sputum|TS-0963
+Astroglia|Astrocyte|TS-0060
+Pancreas exocrine glandular cells|Pancreas exocrine glandular cell|TS-1242
+Embryo|Embryo|TS-0229
+Joint synovium|Joint synovium|TS-2138
+Renal distal tubule|Renal distal tubule|TS-0504
+Brain parietal cortex|Parietal lobe|TS-0747
+Myeloid progenitor cell|Myeloid stem cell|TS-2099
+Lymph node|Lymph node|TS-0579
+cartilage of nose|Nasal cartilage|TS-0655
+Lipocyte|Adipocyte|TS-0012
+Exocrine pancreatic acinar cell|Pancreatic acinar cell|TS-0737
+Pubic region|Hypogastrium|TS-2346
+Brain frontal cortex|Frontal lobe|TS-0389
+Colon nervous tissue|Colon nerve tissue|TS-2373
+Fetal cochlear organ|Fetal cochlea|TS-2112
+Bile|Bile|TS-1172
+Vulva/Anal epithelium|Vulva/Anal epithelium|TS-2071
+Suprarenal gland|Adrenal gland|TS-0016
+Vulva|Vulva|TS-1168
+Epithelial tissue|Epithelium|TS-0288
+Neuronal cell|Neuron|TS-0683
+Peripheral blood granulocyte|Peripheral blood granulocyte|TS-0765
+Myeloid|Myeloid cell|TS-0647
+Glandular cell|Glandular cell|TS-2085
+Globus pallidus|Globus pallidus|TS-2013
+Seminiferous epithelium|Seminiferous epithelium|TS-0920
+Kidney inner medulla|Kidney inner medulla|TS-0506
+Pericardium|Pericardium|TS-0761
+Osseous labyrinth vestibule|Inner ear vestibule|TS-0479
+Corneal fibroblast|Corneal fibroblast|TS-1159
+Cochlear canal|Cochlear duct|TS-0152
+Adrenal gland cortex|Adrenal cortex|TS-0015
+Hemolymphoid and immune system|Hemolymphoid and immune system|TS-2018
+Sacrum|Sacrum|TS-2201
+Striated Muscle Tissue Cell|Striated muscle cell|TS-2157
+Third ventricle|Third ventricle|TS-2058
+Cerebral cortex neuronal cells|Cerebral cortex neuron|TS-1259
+Cornea epithelium|Corneal epithelium|TS-0173
+Rhinopharynx|Nasopharynx|TS-0663
+Multipotent MSC stem cell|Mesenchymal stem cell|TS-0618
+Prostate gland epithelium|Prostate epithelium|TS-2065
+Parathyroid gland glandular cell|Parathyroid glandular cell|TS-1279
+Umbilical vein endothelium|Umbilical vein endothelium|TS-1081
+Cerebellar Purkinje cell|Purkinje cell|TS-0845
+Uterine cervix squamous epithelial cells|Uterine cervix squamous cell|TS-1251
+Neuroretinal cell|Neuroretina|TS-0685
+Sacral bone|Sacrum|TS-2201
+Pubis region|Hypogastrium|TS-2346
+Femoral bone|Femur|TS-0322
+Prostate glandular cell|Prostate glandular cell|TS-1280
+Mesothelium|Mesothelium|TS-1183
+Colonic epithelial cell|Colon epithelium|TS-0163
+Bowel|Intestine|TS-0490
+Lymphatic tissue|Lymphoid tissue|TS-0584
+Fetal spinal column|Fetal spinal cord|TS-0354
+Prostate gland|Prostate|TS-0828
+Molar tooth|Molar|TS-0637
+Chorion membrane|Chorionic membrane|TS-0144
+Testis|Testis|TS-1030
+Endocrine system|Endocrine system|TS-1301
+Lymphoblastoid|Lymphoblast|TS-0581
+Olfactory part of nasal mucosa|Olfactory mucosa|TS-2197
+Stomach mucosa|Stomach mucosa|TS-0404
+Lateral ventricle neuronal cells|Lateral ventricle neuron|TS-1261
+Abdominal subcutaneous fat|Subcutaneous adipose tissue of abdominal region|TS-2406
+Cardiac muscle|Heart muscle|TS-0440
+Uterine corpus glandular cell|Uterine corpus glandular cell|TS-1287
+Splenocyte|Splenocyte|TS-0957
+Inner ear vestibulum|Inner ear vestibule|TS-0479
+Cervix, uterine glandular cell|Uterine cervix glandular cell|TS-1273
+Gluteal region|Buttock|TS-2224
+Tonsil squamous epithelial cell|Tonsil squamous cell|TS-1253
+Vater's Ampulla|Ampulla of Vater|TS-2348
+Paranasal sinuses|Paranasal sinuses|TS-2082
+Lymphoreticular system|Lymphoid tissue|TS-0584
+T lymphoblast|T lymphoblast|TS-0999
+Cerebellum cortex|Cerebellar cortex|TS-2000
+Striated cell|Striated muscle cell|TS-2157
+Fetal cerebrum|Fetal telencephalon|TS-2404
+Striated muscle cell|Striated muscle cell|TS-2157
+Archistriatum|Amygdala|TS-0037
+Chest|Thorax|TS-1039
+Trachea|Trachea|TS-1060
+Oral mucosa squamous epithelial cells|Oral mucosa squamous cell|TS-1252
+Striated muscle myocyte|Striated muscle cell|TS-2157
+Marginal zone of spleen|Marginal zone of spleen|TS-2395
+Heart ventrical|Heart ventricle|TS-0444
+Lymph gland lymphoid cell|Lymph node lymphoid cell|TS-1289
+Large intestine|Large intestine|TS-1306
+Cerebellum cells in granular layer|Cerebellum granular layer|TS-1247
+Vitreous body|Eye vitreous humor|TS-0308
+Mature sperm cell|Spermatozoon|TS-0949
+Gastroesophageal junction|Cardia of stomach|TS-2391
+Lung endothelium|Lung endothelium|TS-0573
+Sublingual gland|Sublingual gland|TS-0987
+Semicircular canal|Semicircular canal|TS-2164
+Squamous epithelial cell|Squamous cell|TS-1249
+Mesenchymal|Mesenchymal cell|TS-0620
+Airway epithelial cell|Airway epithelium|TS-0023
+Spiral organ|Organ of Corti|TS-0717
+Cervix, uterine|Uterine cervix|TS-0134
+Alveolus of lung|Alveolus|TS-0031
+Retromolar triangle|Retromolar trigone|TS-2353
+Nephron tubule|Renal tubule|TS-1262
+Retromolar trigone|Retromolar trigone|TS-2353
+Neural stem cells|Neural stem cell|TS-2360
+Muscle|Muscle|TS-0642
+Lung|Lung|TS-0568
+Cartilage chondrocyte|Chondrocyte|TS-0138
+Fibroblasts|Fibroblast|TS-0362
+Cardiac atrial|Heart atrium|TS-0437
+Brain endothelium|Brain endothelium|TS-0092
+Bone marrow|Bone marrow|TS-0087
+Synoviocyte|Synovial cell|TS-0995
+Cervix squamous epithelial cell|Uterine cervix squamous cell|TS-1251
+Corneal endothelium|Corneal endothelium|TS-0172
+Cochlear organ|Cochlea|TS-0151
+Epididymal epithelium|Epididymal epithelium|TS-2063
+Breast glandular cells|Mammary gland glandular cell|TS-1272
+Kidney glomeruli cells|Renal glomerulus|TS-0862
+Testicular|Testis|TS-1030
+Neural crest|Neural crest|TS-0676
+Central nervous system|Central nervous system|TS-0150
+Myometrium|Myometrium|TS-0652
+Aortico-pulmonary spiral septum|Aortico-pulmonary septum|TS-2409
+Colonic epithelium|Colon epithelium|TS-0163
+Uterine tube glandular cell|Oviduct glandular cell|TS-1277
+Parathyroid chief cells|Parathyroid chief cell|TS-2140
+Gallbladder glandular cell|Gall bladder glandular cell|TS-1278
+Seminal fluid|Seminal plasma|TS-0918
+Alimentary system|Alimentary system|TS-1293
+Cartilage|Cartilage|TS-0118
+Radius|Radius|TS-2199
+Pituitary body|Pituitary gland|TS-0798
+Buttock|Buttock|TS-2224
+Haemopoietic tissue|Hematopoietic tissue|TS-2142
+Brain meninges|Brain meninges|TS-2147
+Fetal breastbone|Fetal sternum|TS-0356
+Gustatory bud|Taste bud|TS-1015
+Subthalamic nuclei|Subthalamic nucleus|TS-1154
+Large intestinal epithelium|Large intestine epithelium|TS-2105
+Fetal adrenal gland|Fetal adrenal gland|TS-0323
+Inframammary fold|Inframammary fold|TS-2350
+Coronary artery|Coronary artery|TS-0176
+Lacrimal gland|Lacrimal gland|TS-0512
+Epithelial cell|Epithelial cell|TS-2026
+Tonsil epithelium|Tonsil epithelium|TS-2070
+Uterine cervix glandular cell|Uterine cervix glandular cell|TS-1273
+Ovaries|Ovary|TS-0730
+Skin keratinocyte|Keratinocyte|TS-0500
+Small intestine epithelium|Small intestine epithelium|TS-2104
+Duodenum glandular cell|Duodenum glandular cell|TS-1275
+Epithelium of ciliary body|Ocular ciliary epithelium|TS-0695
+Kidney proximal tubule|Renal proximal tubule|TS-0509
+Keratocytes|Corneal fibroblast|TS-1159
+Cardiomyocyte|Heart muscle cell|TS-0115
+Blood vessel vascular endothelial cell|Blood vessel vascular endothelium|TS-2155
+Cervix glandular cell|Uterine cervix glandular cell|TS-1273
+Pineal gland|Pineal gland|TS-0789
+Epithelium of rectum|Rectal epithelium|TS-2066
+Mandibulla|Mandible|TS-2225
+Faeces|Feces|TS-2345
+Nasopharynx epithelium|Nasopharyngeal epithelium|TS-0662
+Telencephalon|Telencephalon|TS-1018
+Lower extremity|Lower limb|TS-2215
+Colostrum|Colostrum|TS-0167
+Neuroepithelium|Neuroepithelium|TS-0682
+Arachnoid mater|Arachnoid membrane|TS-0052
+Hair follicle|Hair follicle|TS-0432
+Scrotum|Scrotum|TS-2341
+Brown fat cell|Brown adipose tissue|TS-0099
+Lactiferous duct|Lactiferous duct|TS-2385
+Dens molaris|Molar|TS-0637
+Cerebromicrovascular endothelium|Brain endothelium|TS-0092
+Cardiac right ventricle|Heart right ventricle|TS-0443
+Seminal plasma|Seminal plasma|TS-0918
+Exocrine gland|Exocrine gland|TS-2012
+Periodontal membrane|Periodontal ligament|TS-0763
+Maxillary sinus|Maxillary sinus|TS-2231
+Spinal meninges|Spinal cord meninges|TS-2148
+MSC stem cell|Mesenchymal stem cell|TS-0618
+Spleen|Spleen|TS-0956
+Trunk|Trunk|TS-1071
+Cardia of stomach|Cardia of stomach|TS-2391
+Thorax muscle|Thoracic muscle|TS-1037
+Langerhans cell of skin|Skin Langerhans cell|TS-2376
+Natural killer T-cell|Natural killer T cell|TS-2165
+Neuron|Neuron|TS-0683
+Amniotic membrane|Amnion|TS-0033
+Acinar cell of pancreas|Pancreatic acinar cell|TS-0737
+Rhombencephalon|Hindbrain|TS-0457
+Fetal ear|Fetal ear|TS-2111
+Epithelium of salivary gland|Salivary gland epithelium|TS-2067
+Mucosa of mouth|Oral mucosa|TS-0716
+Epithelium of tongue|Tongue epithelium|TS-1051
+Foot|Foot|TS-0377
+Lymphoid stem cell|Lymphoid stem cell|TS-2025
+Limb|Limb|TS-0552
+Stroma of bone marrow|Bone marrow stroma|TS-0085
+T-lymphocyte|T-cell|TS-1001
+Gaster|Stomach|TS-0980
+Histiocyte|Histiocyte|TS-2019
+Uterus womb glandular cell|Uterine corpus glandular cell|TS-1287
+Corpusculum renale|Renal corpuscle|TS-1317
+Keratinocytes|Keratinocyte|TS-0500
+Epithelial cells of bronchus|Bronchus epithelial cell|TS-2399
+Corpus Luysi|Subthalamic nucleus|TS-1154
+Smooth muscle myocytes|Smooth muscle cell|TS-2159
+Aortic smooth muscle tissue|Aortic smooth muscle|TS-0048
+Carotid arteries|Carotid artery|TS-0116
+Epithelium of uterine cervix|Uterine cervix epithelium|TS-0137
+Keratocyte|Corneal fibroblast|TS-1159
+Alveolus|Alveolus|TS-0031
+Sinus|Paranasal sinuses|TS-2082
+Oesophagus|Esophagus|TS-0700
+Thyroid glandular cell|Thyroid gland glandular cell|TS-2166
+Lower jaw bone|Mandible|TS-2225
+Vestibular labyrinth|Inner ear vestibule|TS-0479
+CSF|Cerebrospinal fluid|TS-0130
+Renal collecting tubule|Renal collecting duct|TS-0860
+Seminal vesicle epithelium|Seminal vesicle epithelium|TS-2069
+Lymph node nongerminal center|Lymph node nongerminal center cell|TS-2171
+Epithelium of lens|Lens epithelium|TS-0543
+Epithelium of bronchiole|Bronchiolar epithelium|TS-0570
+Retinal rod|Retinal rod cell|TS-0870
+Frontal lobe|Frontal lobe|TS-0389
+Respiratory diaphragm|Diaphragm|TS-0198
+Agregated lymphatic nodule|Peyer patch|TS-0780
+Cochlea|Cochlea|TS-0151
+Microglia|Microglia|TS-0627
+Colorectal epithelium|Colon epithelium|TS-0163
+Limbic lobe|Limbic lobe|TS-2061
+Urothelium of urinary bladder|Urinary bladder urothelium|TS-1088
+Intra-abdominal adipose tissue|Visceral adipose tissue of abdominal region|TS-2405
+Nucleus of Bechterew|Superior vestibular nuclei|TS-2079
+Neuroectoderm|Neuroectoderm|TS-1212
+Blastocyst|Blastocyst|TS-0076
+Macroglia of spinal cord|Spinal cord macroglia|TS-2151
+Bronchi|Bronchus|TS-1229
+Hepatic|Liver|TS-0564
+Aorto-pulmonary septum|Aortico-pulmonary septum|TS-2409
+Thymic epithelium|Thymic epithelium|TS-1040
+Fetal tissue|Fetal tissue|TS-2124
+Lymph node nongerminal center cells|Lymph node nongerminal center cell|TS-2171
+Dermal papilla|Dermal papilla|TS-0431
+Ventral thalamus|Subthalamus|TS-2048
+Kidney tubule|Renal tubule|TS-1262
+Blind intestine|Cecum|TS-0122
+Subcommissural organ|Subcommissural organ|TS-0986
+Dentate gyrus of hippocampus|Dentate gyrus|TS-2388
+Fetal B cell|Fetal B-cell|TS-0326
+Cerebrum|Telencephalon|TS-1018
+Cementoblast|Cementoblast|TS-1164
+White adipocyte|White adipose tissue|TS-1119
+Hippocampus glial cells|Hippocampus glial cell|TS-1257
+Maxilla|Maxilla|TS-2217
+Corpus callosum|Corpus callosum|TS-0180
+Brain capillary|Brain capillary|TS-0090
+Neurohypophysis|Posterior pituitary|TS-0815
+Cerebral cortex endothelial cells|Cerebral cortex endothelial cell|TS-2372
+Neural progenitor cell|Neural progenitor cell|TS-2394
+Leydig cell|Leydig cell|TS-1150
+Caudatus|Caudate nucleus|TS-0121
+1st pharyngeal arch|First arch|TS-2089
+Urinary bladder urothelial cell|Urinary bladder urothelium|TS-1088
+Retinal|Retina|TS-0865
+Vulva/anal skin squamous epithelial cells|Vulva/Anal squamous cell|TS-1255
+Adenohypophysis|Pituitary anterior lobe|TS-0794
+Inframammary line|Inframammary fold|TS-2350
+Conjunctiva|Conjunctiva|TS-2232
+Notochord|Notochord|TS-0690
+Appendix epithelium|Appendix epithelium|TS-2062
+Hematopoietic cell|Hematopoietic cell|TS-2017
+Testicle|Testis|TS-1030
+Glomerular mesangial cell|Mesangial cell|TS-0617
+Bronchial trunk|Bronchus|TS-1229
+Chondrocytes|Chondrocyte|TS-0138
+Seminiferous tubule|Seminiferous tubule|TS-1239
+Seminiferous duct|Seminiferous tubule|TS-1239
+Retinal rod photoreceptor cells|Retinal rod cell|TS-0870
+T-helper lymphocyte|Helper T-cell|TS-1146
+Term myometrium|Term myometrium|TS-1026
+Synovial sheath|Synovium|TS-0998
+NK lymphocyte|Natural killer cell|TS-0664
+Gemma gustatoria|Taste bud|TS-1015
+Suprachiasmatic nucleus|Suprachiasmatic nucleus|TS-0992
+Embryonic|Embryo|TS-0229
+Cerebral grey matter|Cerebral grey matter|TS-2361
+Skin fibroblast|Skin fibroblast|TS-0935
+Cornea stroma|Corneal stroma|TS-1138
+Epithelium of uterine tube|Oviduct epithelium|TS-1316
+Spongy bone|Cancellous bone|TS-0110
+Integumentary system|Dermal system|TS-1299
+Hypogastrium|Hypogastrium|TS-2346
+Cerebrum cortex|Cerebral cortex|TS-0091
+Inferior olivary nuclei|Inferior olivari nucleus|TS-2383
+Enamel organ|Enamel organ|TS-0271
+Red blood cell|Erythrocyte|TS-0290
+Tendon|Tendon|TS-1021
+Fetal skin|Fetal skin|TS-0352
+Milk|Milk|TS-0636
+Aortic smooth muscle|Aortic smooth muscle|TS-0048
+Colon peripheral nerve/ganglion|Colon nerve tissue|TS-2373
+Liver parenchymal cell|Hepatocyte|TS-0454
+NK cell|Natural killer cell|TS-0664
+Enamel of tooth|Tooth enamel|TS-1057
+Taste bud|Taste bud|TS-1015
+Uterus body epithelium|Uterine corpus epithelium|TS-2154
+Appendix lymphoid|Appendix lymphoid tissue|TS-1268
+Mammary duct|Lactiferous duct|TS-2385
+Glial cell|Glial cell|TS-0415
+Tracheal tubule|Trachea|TS-1060
+Dendritic cell|Dendritic cell|TS-0194
+Hepatocyte|Hepatocyte|TS-0454
+Lens|Lens|TS-0545
+Nephron|Nephron|TS-1312
+Gastrointestinal system|Gastrointestinal tract|TS-0407
+Skeletal muscle tissue|Skeletal muscle|TS-0933
+Seminal vesicle glandular cells|Seminal vesicle glandular cell|TS-1283
+Renal collecting duct|Renal collecting duct|TS-0860
+Lymphoblast cell|Lymphoblast|TS-0581
+Embryonic kidney|Embryonic kidney|TS-0249
+Retina ganglion cell layer|Retinal ganglion|TS-0867
+Germ cell|Germ cell|TS-0411
+Caecum|Cecum|TS-0122
+Fetal thymus|Fetal thymus|TS-0359
+Outer medulla of kidney|Kidney outer medulla|TS-0508
+Cerebellum neuron|Cerebellar neuron|TS-2359
+Shoulder|Shoulder|TS-2229
+Cerebellum granular layer|Cerebellum granular layer|TS-1247
+Polymorphonuclear leukocytes|Neutrophil|TS-0688
+Lens fibers|Lens fibers|TS-0544
+Dorsal vagal nucleus|Dorsal vagal nucleus|TS-2381
+Pancreas islet of Langerhans|Pancreatic islet|TS-0741
+Oviduct epithelium|Oviduct epithelium|TS-1316
+Mammary gland duc|Lactiferous duct|TS-2385
+Epithelium of oral cavity|Oral epithelium|TS-0715
+Ocular ciliary epithelium|Ocular ciliary epithelium|TS-0695
+Humerus|Humerus|TS-2202
+Multipotent mesenchymal stromal cell|Mesenchymal stem cell|TS-0618
+Molecular layer of cerebellar cortex|Cerebellum molecular layer|TS-1248
+Ovarian stromal cells|Ovarian stroma|TS-1246
+Cells|Cell type|TS-2035
+Vermis|Vermis|TS-2059
+Upper limb|Upper limb|TS-2214
+Epithelium of epididymis|Epididymal epithelium|TS-2063
+Vulva/Anal skin epidermal cell|Vulva/Anal skin epidermal cell|TS-2170
+Neuroglia|Glial cell|TS-0415
+Gall bladder epithelium|Gall bladder epithelium|TS-1304
+Fourth ventricle|Fourth ventricle|TS-2015
+Basal ganglion|Basal ganglia|TS-1149
+Exocrine part of pancreas|Exocrine pancreas|TS-1241
+Tibia|Tibia|TS-1048
+Skull|Skull|TS-2344
