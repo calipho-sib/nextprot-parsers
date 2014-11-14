@@ -4,7 +4,7 @@ import scala.xml.NodeSeq
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_EXPR
 import org.nextprot.parser.hpa.subcell.cases.CASE_MULTIPLE_UNIPROT_MAPPING
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
 import org.nextprot.parser.hpa.constants.HPAValidationValue
 import org.nextprot.parser.hpa.constants.HPAValidationValue._
@@ -18,7 +18,7 @@ object HPAUtils {
     val HPAwbText = (antibodyElem \ "westernBlot" \ "verification").text;
     //In case there is no western blot experiment we use uncertain for western blot
     if (HPAwbText.isEmpty()) {
-      StatisticsCollectorSingleton.increment("COMPLEMENT-SPECS", "western blot missing => uncertain")
+      Stats.increment("COMPLEMENT-SPECS", "western blot missing => uncertain")
       return HPAValidationValue.withName("uncertain")
     } else {
       return HPAValidationValue.withName(HPAwbText)
@@ -48,7 +48,7 @@ object HPAUtils {
     //In case of CAB it is always supportive
 
     if (antibodyName.startsWith("CAB")) {
-      StatisticsCollectorSingleton.increment("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
+      Stats.increment("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
       HPAValidationValue.withName("supportive");
     } else {
       return HPAValidationValue.withName((antibodyElem \ "proteinArray" \ "verification").text);

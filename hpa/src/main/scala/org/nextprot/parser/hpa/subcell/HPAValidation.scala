@@ -7,7 +7,7 @@ import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import java.io.File
 import org.nextprot.parser.hpa.HPAConfig
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 
 object HPAValidation {
 
@@ -54,7 +54,7 @@ object HPAValidation {
     var isValid: Boolean = false
 
     if (rnamap.isEmpty) {
-      StatisticsCollectorSingleton.increment("COMPLEMENT-SPECS", "RNA is missing")
+      Stats.increment("COMPLEMENT-SPECS", "RNA is missing")
       return true // No cell line data for antibodies or No RNAseq data
     }
     cellLineList.foreach(cellLine => {

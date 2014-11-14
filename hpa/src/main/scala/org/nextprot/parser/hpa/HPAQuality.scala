@@ -10,7 +10,7 @@ import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 
 object HPAQuality {
 
@@ -24,17 +24,17 @@ object HPAQuality {
     abtype match {
 
       case "single" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "single but treated as ape");
+        Stats.increment("ENTRIES-TYPE", "single but treated as ape");
         return getQualityForIntegratedAntibody(entryElem, section)
       }
 
       case "selected" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "selected but treated as ape");
+        Stats.increment("ENTRIES-TYPE", "selected but treated as ape");
         return getQualityForIntegratedAntibody(entryElem, section)
       }
 
       case "ape" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "ape");
+        Stats.increment("ENTRIES-TYPE", "ape");
 
         return getQualityForIntegratedAntibody(entryElem, section)
         //return getQualityForIntegratedAntibody2014(entryElem, section) 

@@ -6,7 +6,7 @@ import org.nextprot.parser.core.NXReducer
 import org.nextprot.parser.core.datamodel.antibody.AntibodyEntryWrapperList
 import java.util.HashSet
 import scala.collection.mutable.TreeSet
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.core.NXProperties
 import org.nextprot.parser.core.impl.NXPrettyReducer
 
@@ -29,9 +29,9 @@ class HPAAntibodyReducer extends NXPrettyReducer {
             if (!antibodyNames.contains(antibodyAccession)) {
               antibodyNames.add(antibodyAccession);
               fw.write(getPrettyFormatIfNeeded(antibody.toXML) + "\n");
-              StatisticsCollectorSingleton.increment("ANTIBODY-COUNT", "NEW")
+              Stats.increment("ANTIBODY-COUNT", "NEW")
             } else {
-              StatisticsCollectorSingleton.increment("ANTIBODY-COUNT", "REPEATED")
+              Stats.increment("ANTIBODY-COUNT", "REPEATED")
             }
 
           });

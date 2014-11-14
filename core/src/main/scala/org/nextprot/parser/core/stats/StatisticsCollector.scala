@@ -3,7 +3,10 @@ package org.nextprot.parser.core.stats
 import java.util.TreeMap
 import scala.collection.concurrent.TrieMap
 
-object StatisticsCollectorSingleton extends StatisticsCollector;
+/**
+ * Stats is a singleton
+ */
+object Stats extends StatisticsCollector;
 
 class StatisticsCollector {
 
