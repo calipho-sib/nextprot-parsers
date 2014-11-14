@@ -4,9 +4,10 @@ import org.nextprot.parser.core.constants.NXQuality.NXQuality
 
 class AnnotationResourceAssoc(
     val _resourceClass: String, val _resourceType: String, val _accession: String, 
-    val _cvDatabaseName: String, val _qualifierType: String, val _isNegative: Boolean, 
+    val _cvDatabaseName: String, val _ecoCode: String,  val _ecoName: String, val _isNegative: Boolean, 
     val _type: String, val _quality: NXQuality, val _dataSource: String,
-    val _props: List[AnnotationResourceAssocProperty], val _expContext: ExperimentalContextSynonym) {
+    val _props: List[AnnotationResourceAssocProperty], val _expContext: ExperimentalContextSynonym
+    ) {
   def toXML =
     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
       <resource class={ _resourceClass }>
@@ -16,7 +17,10 @@ class AnnotationResourceAssoc(
           <cvName>{ _cvDatabaseName }</cvName>
         </cvDatabase>
       </resource>
-      <qualifierType>{ _qualifierType }</qualifierType>
+      <evidenceCode>
+      	<cvName>{ _ecoCode }</cvName>
+        <cvTermCategory>ECO</cvTermCategory>
+      </evidenceCode>
       {
         if (_quality != null) {<qualityQualifier>{ _quality.toString() }</qualityQualifier>}
       }

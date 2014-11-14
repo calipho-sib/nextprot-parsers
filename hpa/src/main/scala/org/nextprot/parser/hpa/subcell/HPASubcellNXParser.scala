@@ -98,7 +98,8 @@ class HPASubcellNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier + "/subcellular",
       _cvDatabaseName = "HPA",
-      _qualifierType = "EXP",
+      _ecoCode = "ECO:0001053", // check with Anne again, not found cv-eco.proxied
+      _ecoName = "Some ECO name for ECO:0001053",
       _isNegative = false,
       _type = "EVIDENCE",
       _quality = quality,

@@ -15,7 +15,8 @@ class ExperimentalContextWrapper(val _tissue: String, val _syns: List[Experiment
 					<cvTermCategory>NEXTPROT_TISSUE</cvTermCategory>
 				</tissue>
 				<detectionMethod>
-					<cvName>Spatial pattern of protein expression evidence</cvName>
+					<cvName>Immunolocalization evidence</cvName>
+					<cvAccession>ECO:0000087</cvAccession>
 					<cvTermCategory>ECO</cvTermCategory>
 				</detectionMethod>
 		{
