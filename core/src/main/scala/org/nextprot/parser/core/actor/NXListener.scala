@@ -12,7 +12,7 @@ import org.nextprot.parser.core.actor.message.EndActorSystemMSG
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.NXProperties
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 
 /**
  * Actor responsible responsible to print a final report and shutdown the actor system.
@@ -25,7 +25,7 @@ class NXListener extends Actor {
 
   def receive = {
     case m: EndActorSystemMSG => {
-      StatisticsCollectorSingleton.printStats;
+      Stats.printStats;
       //printStats(m.success, m.goldCount, m.silverCount, m.errors, m.files);
       //printDetails(m.errors)
       context.system.shutdown()

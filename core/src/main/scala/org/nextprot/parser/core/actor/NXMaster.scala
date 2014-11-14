@@ -14,7 +14,7 @@ import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.NXReducer
 import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.stats.StatisticsCollector
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 
 /**
  * Master actor responsible to dispatch the files to different parsing actors (NXParserActor) and appends the wrapped beans into a single output file.
@@ -68,7 +68,7 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
     case m: SuccessFileParsedMSG => {
       reducer.reduce(m.wrapper);
       filesCount += 1
-      StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "success");
+      Stats ++ ("ENTRIES-OUTPUT", "success");
       checkEnd
     }
 
@@ -76,11 +76,11 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
       filesCount += 1
       discardedCases += m.exception;
       if (m.exception.getNXExceptionType.isError) {
-        StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "ERROR OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
+        Stats.++("ENTRIES-OUTPUT", "ERROR OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
         logFile.write(m.exception.getFile.getAbsolutePath() + "\n");
         println(m.exception.getFile.getName() + " - " + m.exception.getNXExceptionType.getClass().getSimpleName() + " " + m.exception.getMessage)
       } else {
-        StatisticsCollectorSingleton.increment("ENTRIES-OUTPUT", "DISCARDED CASES OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
+        Stats ++ ("ENTRIES-OUTPUT", "DISCARDED CASES OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
       }
       checkEnd
     }

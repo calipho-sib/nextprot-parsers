@@ -6,7 +6,7 @@ import org.nextprot.parser.core.NXReducer
 import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.stats.StatisticsCollector
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.core.NXProperties
 import scala.xml.Elem
 import scala.xml.Node

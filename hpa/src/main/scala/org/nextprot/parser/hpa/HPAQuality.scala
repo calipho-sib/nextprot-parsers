@@ -3,14 +3,14 @@ import scala.xml.NodeSeq
 import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationValue
 import org.nextprot.parser.hpa.subcell.rules.AntibodyValidationRule
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
-import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
+import org.nextprot.parser.core.stats.Stats
 
 object HPAQuality {
 
@@ -24,17 +24,17 @@ object HPAQuality {
     abtype match {
 
       case "single" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "single but treated as ape");
+        Stats ++ ("ENTRIES-TYPE", "single but treated as ape");
         return getQualityForIntegratedAntibody(entryElem, section)
       }
 
       case "selected" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "selected but treated as ape");
+        Stats ++ ("ENTRIES-TYPE", "selected but treated as ape");
         return getQualityForIntegratedAntibody(entryElem, section)
       }
 
       case "ape" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "ape");
+        Stats ++ ("ENTRIES-TYPE", "ape");
 
         return getQualityForIntegratedAntibody(entryElem, section)
         //return getQualityForIntegratedAntibody2014(entryElem, section) 
@@ -72,14 +72,13 @@ object HPAQuality {
 
   /**
    * Returns the quality for the APE case - version 2014 - not used yet
+   * section can be either subcellularLocation or tissueExpression
    */
   def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
 
+    //TODO check section in te sl
     //Extract experiment reliability
     val reliabilityText = (entryElem \ section \ "verification").text;
-    if (reliabilityText.equals("n/a")) {
-      return getQualityForOneAntibody(selectAPEAntibodyForNotAvailablereliability(entryElem, section, false), section);
-    }
     val reliability = HPAAPEReliabilityValue withName reliabilityText
     val pa = getAPEPtroteinArrayQuality(entryElem)
     val wb = getAPEWesternBlotQuality(entryElem)
@@ -115,23 +114,6 @@ object HPAQuality {
     return HPAAPEValidationValue.Not_Supportive
   }
 
-  /**
-   * Defines rule to select the antibody with the best intensity
-   */
-  def selectAPEAntibodyForNotAvailablereliability(entryElem: NodeSeq, section: String, selectedCase: Boolean): NodeSeq = {
-
-    if(!selectedCase)
-    	StatisticsCollectorSingleton.increment("COMPLEMENT-SPECS", "APE is n/a")
-    else StatisticsCollectorSingleton.increment("COMPLEMENT-SPECS", "Selected is treated as APE")
-
-
-    val reliabilityText = (entryElem \ section \ "verification").text;
-    if (!(reliabilityText.equals("n/a") || selectedCase)) {
-      throw new Exception("This rule only applies when the reliability is not available or a selected case with multiple antibodies")
-    }
-    return (entryElem \ "antibody").maxBy(getScoreForAntibody(_, section));
-
-  }
 
   /**
    * Returns the score for one antibody

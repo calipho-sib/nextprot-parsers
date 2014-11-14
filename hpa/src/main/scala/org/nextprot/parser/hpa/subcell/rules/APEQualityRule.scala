@@ -5,8 +5,7 @@ import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
 import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.constants.NXQuality._
 import scala.collection.mutable.Map
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 
 case class APEQualityRule(reliability: HPAAPEReliabilityValue, hpaPA: HPAAPEValidationValue, hpaWB: HPAAPEValidationValue) {
 

@@ -9,7 +9,7 @@ jarName in assembly := "hpa-subcell.jar"
 
 mainClass in assembly := Some("org.nextprot.parser.core.HPANXParserApp")
 
-name := "hpa-subcell"
+name := "nextprot-parser-hpa"
 
 organization := "org.nextprot.parser.hpa"
 
@@ -41,7 +41,7 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.3.0"
+  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.20.0-SNAPSHOT"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////

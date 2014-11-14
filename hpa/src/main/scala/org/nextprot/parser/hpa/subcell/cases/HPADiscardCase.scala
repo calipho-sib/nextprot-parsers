@@ -1,7 +1,7 @@
 package org.nextprot.parser.hpa.subcell.cases
 import org.nextprot.parser.core.datamodel._
 import org.nextprot.parser.core.constants.NXQuality._
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 import org.nextprot.parser.core.exception._
 
 /**

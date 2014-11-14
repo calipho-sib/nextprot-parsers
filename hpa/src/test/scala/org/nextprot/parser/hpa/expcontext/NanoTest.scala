@@ -7,8 +7,8 @@ import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.constants.HPAValidationValue
 import scala.util.matching.Regex
 import scala.xml.PrettyPrinter
 import java.io.FileWriter

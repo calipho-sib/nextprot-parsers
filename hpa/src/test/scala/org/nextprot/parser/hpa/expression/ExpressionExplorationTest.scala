@@ -6,8 +6,8 @@ import java.io.File
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.constants.HPAValidationValue
 import scala.util.matching.Regex
 import scala.xml.PrettyPrinter
 import java.io.FileWriter
@@ -15,10 +15,9 @@ import org.nextprot.parser.core.datamodel.TemplateModel
 import akka.dispatch.Foreach
 import scala.collection.mutable.MutableList
 import org.nextprot.parser.hpa.subcell.HPAValidation
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
-import org.nextprot.parser.hpa.subcell.rules.APEQualityRule2014Stats
 import org.nextprot.parser.hpa.HPAUtils
 
 class ExpressionExplorationTest extends HPAExpressionTestBase {
@@ -187,32 +186,6 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
     println("files with pbm: " + pbm)
     if (pbm > 0) assert(false)
 
-  }
-
-  "Full set of HPA data " should " show statistics about each APE quality rule applied" in {
-
-    APEQualityRule2014Stats.reset
-
-    val dir = "nowhere/Users/pmichel/data/hpa/20140121";
-    //val dir = "src/test/resources/hpa/20140121";
-    var count: Integer = 0
-    var pbm: Integer = 0
-    getFilesForParsing(dir).foreach(f => {
-      count = count + 1
-      try {
-        new HPAExpressionNXParser().parse(f.getAbsolutePath());
-      } catch {
-        case e: Exception => {     pbm = pbm + 1  }
-      }
-    })
-    println("files checked : " + count)
-    println("files with pbm: " + pbm)
-
-    APEQualityRule2014Stats.show
-
-    val x = APEQualityRule(HPAAPEReliabilityValue.High, HPAValidationValue.Supportive)
-    println(x.toString())
-    
   }
 
   /**

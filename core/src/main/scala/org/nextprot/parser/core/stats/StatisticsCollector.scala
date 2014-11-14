@@ -3,13 +3,16 @@ package org.nextprot.parser.core.stats
 import java.util.TreeMap
 import scala.collection.concurrent.TrieMap
 
-object StatisticsCollectorSingleton extends StatisticsCollector;
+/**
+ * Stats is a singleton
+ */
+object Stats extends StatisticsCollector;
 
 class StatisticsCollector {
 
   val stats: TrieMap[String, TrieMap[String, (String, Integer)]] = new TrieMap()
 
-  def increment(metric: String, label: String) = {
+  def ++(metric: String, label: String) = {
     val metricValues = stats.getOrElse(metric, new TrieMap());
     val labelValue: (String, Integer) = metricValues.getOrElse(label, (label, 0));
     val newValue = labelValue._2 + 1;
