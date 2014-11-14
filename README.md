@@ -24,7 +24,10 @@ sbt publish
 
 ```
 
-You can configure project dependencies in eclipse as well
----------------------------------------------------------
+TEST
+----------
+To test simply use ```sbt test```but you can also use ``` test-only org.nextprot.parser.hpa.subcell.FullFileEntrySubcellTest ``` if you want to specify only one test
 
+You can configure project dependencies in eclipse
+-------------------------------------------------
 On eclipse define project dependencies and remove library (the jar)
