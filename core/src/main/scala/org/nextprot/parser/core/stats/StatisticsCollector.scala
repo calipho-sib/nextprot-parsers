@@ -1,6 +1,5 @@
 package org.nextprot.parser.core.stats
 
-import java.util.TreeMap
 import scala.collection.concurrent.TrieMap
 
 /**
@@ -13,11 +12,13 @@ class StatisticsCollector {
   val stats: TrieMap[String, TrieMap[String, (String, Integer)]] = new TrieMap()
 
   def ++(metric: String, label: String) = {
-    val metricValues = stats.getOrElse(metric, new TrieMap());
-    val labelValue: (String, Integer) = metricValues.getOrElse(label, (label, 0));
-    val newValue = labelValue._2 + 1;
-    metricValues.put(label, (label, newValue));
-    stats.put(metric, metricValues);
+    this.synchronized {
+    	val metricValues = stats.getOrElse(metric, new TrieMap());
+		val labelValue: (String, Integer) = metricValues.getOrElse(label, (label, 0));
+		val newValue = labelValue._2 + 1;
+		metricValues.put(label, (label, newValue));
+		stats.put(metric, metricValues);
+    }
   }
 
   def printStats = {

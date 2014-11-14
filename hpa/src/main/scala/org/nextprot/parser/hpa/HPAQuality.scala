@@ -39,7 +39,10 @@ object HPAQuality {
         return getQualityForIntegratedAntibody(entryElem, section)
         //return getQualityForIntegratedAntibody2014(entryElem, section) 
       }
-      case _ => throw new NXException(CASE_IFTYPE_UNKNOWN, abtype + " not found")
+      case _ => {
+        Stats ++ ("ENTRIES-TYPE", "unknown: " + abtype);
+        throw new NXException(CASE_IFTYPE_UNKNOWN, abtype + " not found")
+      }
 
     }
 

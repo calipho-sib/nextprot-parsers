@@ -113,16 +113,7 @@ class ErrosCasesSpec extends HPASubcellTestBase {
     assert(thrown.getNXExceptionType == CASE_IFTYPE_UNKNOWN)
   }
 
-  // HPA_PARS_SPEC_G3
-  it should "return the correct synthesis for APE according to rule G3" in {
-    assert(APEQualityRule(High, Uncertain).getQuality.equals(GOLD) &&
-      APEQualityRule(Medium, Supportive).getQuality.equals(SILVER) &&
-      APEQualityRule(Medium, Uncertain).getQuality.equals(SILVER) &&
-      APEQualityRule(Low, Supportive).getQuality.equals(SILVER) &&
-      APEQualityRule(Low, Uncertain).getQuality.equals(BRONZE) &&
-      APEQualityRule(Very_Low, Supportive).getQuality.equals(BRONZE) &&
-      APEQualityRule(Very_Low, Uncertain).getQuality.equals(BRONZE))
-  }
+
 
   // HPA_PARS_SPEC_G4
   it should "return the correct synthesis for Single/Selected according to rule G4" in {
