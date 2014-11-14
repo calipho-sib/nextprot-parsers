@@ -25,7 +25,7 @@ fork := true
 
 // this is read only by sbt tool
 javaOptions ++= Seq(
-"-Dfiles.directory=hpa-data",
+"-Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001",
 "-Dfiles.expression=^ENSG.*.xml$",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
@@ -41,7 +41,7 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.20.0-SNAPSHOT"
+  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.21.0-SNAPSHOT"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
