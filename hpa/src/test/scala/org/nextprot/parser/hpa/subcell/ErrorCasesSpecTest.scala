@@ -3,12 +3,11 @@ import org.scalatest._
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
-import org.nextprot.parser.hpa.subcell.rules.AntibodyValidationRule
+import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.hpa.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
+import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.core.NXParser
-import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
+import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.core.datamodel.annotation.AnnotationListWrapper
 import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.hpa.HPAUtils
@@ -114,28 +113,6 @@ class ErrosCasesSpec extends HPASubcellTestBase {
   }
 
 
-
-  // HPA_PARS_SPEC_G4
-  it should "return the correct synthesis for Single/Selected according to rule G4" in {
-    assert(AntibodyValidationRule(Supportive, Supportive, Supportive).getQuality.equals(GOLD))
-    assert(AntibodyValidationRule(Supportive, Supportive, Uncertain).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Supportive, Uncertain, Supportive).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Supportive, Supportive, Not_Supportive).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Supportive, Uncertain, Uncertain).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Supportive, Uncertain, Not_Supportive).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Uncertain, Supportive, Supportive).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Uncertain, Supportive, Not_Supportive).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Uncertain, Supportive, Uncertain).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Uncertain, Uncertain, Supportive).getQuality.equals(SILVER))
-    assert(AntibodyValidationRule(Supportive, Not_Supportive, Supportive).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Supportive, Not_Supportive, Uncertain).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Supportive, Not_Supportive, Not_Supportive).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Uncertain, Uncertain, Uncertain).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Uncertain, Uncertain, Not_Supportive).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Uncertain, Not_Supportive, Supportive).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Uncertain, Not_Supportive, Uncertain).getQuality.equals(BRONZE))
-    assert(AntibodyValidationRule(Uncertain, Not_Supportive, Not_Supportive).getQuality.equals(BRONZE))
-  }
 
   // HPA_PARS_SPEC_C1
   "The Western blot validation parsing utility" should "return a 'Uncertain' value when there is no WB data for antibody" in {

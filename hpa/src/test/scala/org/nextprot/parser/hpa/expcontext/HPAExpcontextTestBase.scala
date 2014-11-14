@@ -9,8 +9,7 @@ import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
-import org.nextprot.parser.hpa.subcell.rules.AntibodyValidationRule
+import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.hpa.constants.HPAValidationValue._
 import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 import org.nextprot.parser.core.datamodel.TemplateModel

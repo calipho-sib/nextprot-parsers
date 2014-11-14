@@ -1,9 +1,8 @@
-package org.nextprot.parser.hpa.subcell.rules
+
+package org.nextprot.parser.hpa.commons.rules
 
 import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue._
-import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.constants.NXQuality._
-import scala.collection.mutable.Map
 import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 
 case class APEQualityRule(reliability: HPAAPEReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
