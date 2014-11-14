@@ -1,13 +1,13 @@
 package org.nextprot.parser.hpa
 
 import scala.xml.NodeSeq
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue.HPAValidationValue
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_EXPR
 import org.nextprot.parser.hpa.subcell.cases.CASE_MULTIPLE_UNIPROT_MAPPING
 import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
+import org.nextprot.parser.hpa.constants.HPAValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationValue._
 
 object HPAUtils {
 

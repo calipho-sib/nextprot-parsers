@@ -1,7 +1,7 @@
 package org.nextprot.parser.hpa.subcell.rules
 
 import org.nextprot.parser.core.constants.NXQuality._
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.constants.HPAValidationValue._
 import org.nextprot.parser.core.stats.StatisticsCollector
 import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
 

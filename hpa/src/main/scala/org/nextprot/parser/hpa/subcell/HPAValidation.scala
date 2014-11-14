@@ -1,8 +1,8 @@
 package org.nextprot.parser.hpa.subcell
 
 import scala.xml.NodeSeq
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue.HPAValidationValue
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationValue
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import java.io.File

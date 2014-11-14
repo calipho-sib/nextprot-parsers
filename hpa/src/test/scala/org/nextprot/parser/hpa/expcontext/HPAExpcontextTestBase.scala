@@ -11,10 +11,8 @@ import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
 import org.nextprot.parser.hpa.subcell.rules.AntibodyValidationRule
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.subcell.constants.HPAValidationValue
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 import org.nextprot.parser.core.datamodel.TemplateModel
 import scala.xml.PrettyPrinter
 import java.io.FileWriter

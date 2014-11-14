@@ -9,7 +9,7 @@ jarName in assembly := "hpa-subcell.jar"
 
 mainClass in assembly := Some("org.nextprot.parser.core.HPANXParserApp")
 
-name := "hpa-subcell"
+name := "nextprot-parser-hpa"
 
 organization := "org.nextprot.parser.hpa"
 
