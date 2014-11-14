@@ -35,9 +35,9 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
   private val count = files.size;
   println("Found " + count + " files! Dispatching files between parsers ...")
 
-  private val processors = Runtime.getRuntime().availableProcessors();
-  println("Dispatching files through " + processors + " workers");
-  private val workerRouter = context.actorOf(Props[NXWorker].withRouter(RoundRobinRouter(processors)), name = "workerRouter");
+  private val workers = Runtime.getRuntime().availableProcessors(); //* 16;
+  println("Dispatching files through " + workers + " workers");
+  private val workerRouter = context.actorOf(Props[NXWorker].withRouter(RoundRobinRouter(workers)), name = "workerRouter");
   val logFileName = System.getProperty(failedFileProperty)
   private lazy val logFile: FileWriter = new FileWriter(logFileName, false)
 

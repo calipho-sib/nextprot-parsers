@@ -27,7 +27,7 @@ fork := true
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
 javaOptions ++= Seq(
 "-Xmx2000m",
-"-Dfiles.directory=/tmp/hpa-data",
+"-Dfiles.directory=hpa-data",
 "-Dfiles.expression=^ENSG.*.xml$",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",

@@ -19,7 +19,7 @@ class FullFileEntryExpressionTest extends HPAExpressionTestBase {
 
     val tm = hpaParser.parse(testFolder + "ENSG00000063177.xml");
     val output = tm.toXML;
-    println(output);
+    //println(output);
     
     assert(XMLComparator.compareXMLWithFile(output, new File(testFolder + "ExpectedOutputForENSG00000063177.xml")))
 
