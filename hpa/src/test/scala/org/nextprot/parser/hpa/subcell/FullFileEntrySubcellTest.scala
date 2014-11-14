@@ -2,7 +2,7 @@ package org.nextprot.parser.hpa.subcell
 
 import org.scalatest._
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
 import scala.xml.PrettyPrinter
 import scala.xml.XML
 import org.nextprot.parser.hpa.utils.XMLComparator

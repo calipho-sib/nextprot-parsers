@@ -10,10 +10,10 @@ import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.hpa.commons.rules.APEQualityRule
-import org.nextprot.parser.hpa.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.constants.HPAValidationValue
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 import org.nextprot.parser.core.datamodel.TemplateModel
 import scala.xml.PrettyPrinter
 import org.nextprot.parser.hpa.expcontext.HPAExpcontextConfig

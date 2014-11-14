@@ -1,4 +1,4 @@
-package org.nextprot.parser.hpa.constants
+package org.nextprot.parser.hpa.commons.constants
 
 /**
  * Used for WesterBlot and Protein Array values

@@ -3,13 +3,13 @@ import scala.xml.NodeSeq
 import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.constants.HPAValidationValue
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
 import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.core.stats.Stats
-import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue
-import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue._
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationIntegratedValue
+import org.nextprot.parser.hpa.commons.constants.HPAValidationIntegratedValue._
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 
 object HPAQuality {
   
@@ -61,9 +61,9 @@ object HPAQuality {
 
   }
   
-  def getReliabilityScore(entryElem: NodeSeq, section: String) : HPAAPEReliabilityValue = {
+  def getReliabilityScore(entryElem: NodeSeq, section: String) : HPAReliabilityValue = {
      //Extract experiment reliability
-    return HPAAPEReliabilityValue withName (entryElem \ section \ "verification").text
+    return HPAReliabilityValue withName (entryElem \ section \ "verification").text
   }
 
   /**

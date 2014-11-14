@@ -1,11 +1,11 @@
 
 package org.nextprot.parser.hpa.commons.rules
 
-import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationIntegratedValue._
 import org.nextprot.parser.core.constants.NXQuality._
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 
-case class APEQualityRule(reliability: HPAAPEReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
+case class APEQualityRule(reliability: HPAReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
 
 /* 
  * Specs quality rules for tissue expression / subcell.location - table for APE (and other cases since 11.2014), document version 12

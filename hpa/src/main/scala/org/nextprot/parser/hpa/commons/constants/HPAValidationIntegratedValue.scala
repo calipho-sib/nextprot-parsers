@@ -1,7 +1,7 @@
-package org.nextprot.parser.hpa.constants
+package org.nextprot.parser.hpa.commons.constants
 
-import org.nextprot.parser.hpa.constants.HPAValidationValue.HPAValidationValue
-import org.nextprot.parser.hpa.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue.HPAValidationValue
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
 
 
 /**

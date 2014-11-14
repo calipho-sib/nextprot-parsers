@@ -6,8 +6,8 @@ import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_EXPR
 import org.nextprot.parser.hpa.subcell.cases.CASE_MULTIPLE_UNIPROT_MAPPING
 import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
-import org.nextprot.parser.hpa.constants.HPAValidationValue
-import org.nextprot.parser.hpa.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
 
 object HPAUtils {
 

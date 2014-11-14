@@ -6,8 +6,8 @@ import java.io.File
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.constants.HPAValidationValue
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
 import scala.util.matching.Regex
 import scala.xml.PrettyPrinter
 import java.io.FileWriter
@@ -15,7 +15,7 @@ import org.nextprot.parser.core.datamodel.TemplateModel
 import akka.dispatch.Foreach
 import scala.collection.mutable.MutableList
 import org.nextprot.parser.hpa.subcell.HPAValidation
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue
 import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.hpa.HPAUtils

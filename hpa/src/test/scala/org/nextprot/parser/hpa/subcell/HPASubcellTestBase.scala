@@ -2,8 +2,8 @@ package org.nextprot.parser.hpa.subcell
 import org.scalatest._
 import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
+import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 
 abstract class HPASubcellTestBase extends FlatSpec with Matchers {
  
