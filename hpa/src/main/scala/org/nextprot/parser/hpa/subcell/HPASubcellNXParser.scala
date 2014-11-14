@@ -35,6 +35,8 @@ class HPASubcellNXParser extends NXParser {
 
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val accession = HPAUtils.getAccession(entryElem);
+    
+    //println(entryElem)
 
     HPAValidation.checkPreconditions(accession, entryElem)
 

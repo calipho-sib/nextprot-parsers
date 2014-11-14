@@ -20,15 +20,10 @@ class FullFileEntrySubcellTest extends HPASubcellTestBase {
 
     val tm = hpaParser.parse(testFolder + "ENSG00000063177.xml");
     val output = tm.toXML;
+    println(output);
     assert(XMLComparator.compareXMLWithFile(output, new File(testFolder + "ExpectedOutputForENSG00000063177.xml")))
 
   }
 
-  it should " parse successfully a special file" in {
 
-    val hpaParser = new HPASubcellNXParser();
-    val tm = hpaParser.parse("src/test/resources/org/nextprot/parser/hpa/subcell/ENSG00000122257.xml");
-    val output = tm.toXML;
-
-  }
 }

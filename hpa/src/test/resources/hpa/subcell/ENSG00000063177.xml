@@ -1,13 +1,25 @@
 
-  <entry url="http://www.proteinatlas.org/ENSG00000063177" version="12">
+  <entry url="http://www.proteinatlas.org/ENSG00000063177" version="13">
     <name>RPL18</name>
     <synonym>L18</synonym>
-    <identifier db="Ensembl" id="ENSG00000063177" version="73.37">
+    <identifier db="Ensembl" id="ENSG00000063177" version="75.37">
       <xref db="Uniprot/SWISSPROT" id="Q07020"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="single">
-      <summary type="tissue"><![CDATA[Normal tissues showed weak to moderate cytoplasmic staining. Neuronal cells of hippocampus, exocrine pancreas, rectum and stomach displayed strong positivity. Subsets of cells in seminiferus ducts of testis exhibited strong cytoplasmic and nuclear staining. Fallopian tube exhibited moderate cytoplasmic and membranous positivity. Bile duct cells, cells in glomeruli, endocrine gland, Leydig cells, smooth muscle, cardiac myocytes, glial cells and mesenchymal cells were negative.]]></summary>
-      <verification type="validation">uncertain</verification>
+    <proteinClasses>
+      <proteinClass id="Ri" name="Ribosomal proteins" parent_id=""/>
+      <proteinClass id="Pp" name="Plasma proteins" parent_id=""/>
+      <proteinClass id="Ua" name="UniProt - Evidence at protein level" parent_id=""/>
+      <proteinClass id="Ea" name="Protein evidence (Kim et al 2014)" parent_id=""/>
+      <proteinClass id="Eb" name="Protein evidence (Ezkurdia et al 2014)" parent_id=""/>
+    </proteinClasses>
+    <proteinEvidence evidence="Evidence at protein level">
+      <evidence evidence="Evidence at protein level" source="HPA"/>
+      <evidence evidence="Evidence at protein level" source="MS"/>
+      <evidence evidence="Evidence at protein level" source="UniProt"/>
+    </proteinEvidence>
+    <tissueExpression assayType="tissue" technology="IH" type="APE">
+      <summary type="tissue"><![CDATA[Normal tissues showed weak to moderate cytoplasmic staining. Neuronal cells of hippocampus, exocrine pancreas, rectum and stomach displayed strong positivity. Subsets of cells in seminiferus ducts of testis exhibited strong cytoplasmic and nuclear staining. Fallopian tube exhibited moderate cytoplasmic and membranous positivity. Bile duct cells, cells in glomeruli, endocrine gland, Leydig cells, smooth muscle, cardiac myocytes, glial cells and mesenchymal cells were negative. Detected at High or Medium expression level in 33 of 80 analyzed normal tissue cell types.]]></summary>
+      <verification type="reliability">uncertain</verification>
       <image imageType="selected">
         <tissue>liver</tissue>
         <imageUrl size="medium">http://www.proteinatlas.org/images/46572/116130_A_7_4_rna_selected.jpg</imageUrl>
@@ -36,769 +48,790 @@
         <tissue>adrenal gland</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>appendix</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>lymphoid tissue</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>bone marrow</tissue>
         <tissueCell>
           <cellType>hematopoietic cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>breast</tissue>
         <tissueCell>
           <cellType>adipocytes</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>myoepithelial cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>bronchus</tissue>
         <tissueCell>
           <cellType>respiratory epithelial cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>cerebellum</tissue>
         <tissueCell>
           <cellType>cells in granular layer</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>cells in molecular layer</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>Purkinje cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>cerebral cortex</tissue>
         <tissueCell>
           <cellType>endothelial cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>glial cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>neuronal cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>neuropil</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>cervix, uterine</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>squamous epithelial cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>colon</tissue>
         <tissueCell>
           <cellType>endothelial cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>duodenum</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
+        </tissueCell>
+      </data>
+      <data>
+        <tissue>endometrium 1</tissue>
+        <tissueCell>
+          <cellType>cells in endometrial stroma</cellType>
+          <level type="expression">not detected</level>
+        </tissueCell>
+        <tissueCell>
+          <cellType>glandular cells</cellType>
+          <level type="expression">medium</level>
+        </tissueCell>
+      </data>
+      <data>
+        <tissue>endometrium 2</tissue>
+        <tissueCell>
+          <cellType>cells in endometrial stroma</cellType>
+          <level type="expression">not detected</level>
+        </tissueCell>
+        <tissueCell>
+          <cellType>glandular cells</cellType>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>epididymis</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>esophagus</tissue>
         <tissueCell>
           <cellType>squamous epithelial cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>fallopian tube</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>gallbladder</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>heart muscle</tissue>
         <tissueCell>
           <cellType>myocytes</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>hippocampus</tissue>
         <tissueCell>
           <cellType>glial cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>neuronal cells</cellType>
-          <level type="staining">high</level>
+          <level type="expression">high</level>
         </tissueCell>
       </data>
       <data>
         <tissue>kidney</tissue>
         <tissueCell>
           <cellType>cells in glomeruli</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>cells in tubules</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>lateral ventricle</tissue>
         <tissueCell>
           <cellType>glial cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>neuronal cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>liver</tissue>
         <tissueCell>
           <cellType>bile duct cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>hepatocytes</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>lung</tissue>
         <tissueCell>
           <cellType>macrophages</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
         <tissueCell>
           <cellType>pneumocytes</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>lymph node</tissue>
         <tissueCell>
           <cellType>germinal center cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
         <tissueCell>
           <cellType>non-germinal center cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>nasopharynx</tissue>
         <tissueCell>
           <cellType>respiratory epithelial cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>oral mucosa</tissue>
         <tissueCell>
           <cellType>squamous epithelial cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>ovary</tissue>
         <tissueCell>
           <cellType>ovarian stroma cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>pancreas</tissue>
         <tissueCell>
           <cellType>exocrine glandular cells</cellType>
-          <level type="staining">high</level>
+          <level type="expression">high</level>
         </tissueCell>
         <tissueCell>
           <cellType>islets of Langerhans</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>parathyroid gland</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>placenta</tissue>
         <tissueCell>
           <cellType>decidual cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>trophoblastic cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>prostate</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>rectum</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">high</level>
+          <level type="expression">high</level>
         </tissueCell>
       </data>
       <data>
         <tissue>salivary gland</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>seminal vesicle</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>skeletal muscle</tissue>
         <tissueCell>
           <cellType>myocytes</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>skin 1</tissue>
         <tissueCell>
           <cellType>fibroblasts</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>keratinocytes</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>Langerhans</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>melanocytes</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>skin 2</tissue>
         <tissueCell>
           <cellType>epidermal cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>small intestine</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>smooth muscle</tissue>
         <tissueCell>
           <cellType>smooth muscle cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>soft tissue 1</tissue>
         <tissueCell>
           <cellType>adipocytes</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>chondrocytes</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>fibroblasts</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>peripheral nerve</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>soft tissue 2</tissue>
         <tissueCell>
           <cellType>adipocytes</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>fibroblasts</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>peripheral nerve</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>spleen</tissue>
         <tissueCell>
           <cellType>cells in red pulp</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
         <tissueCell>
           <cellType>cells in white pulp</cellType>
-          <level type="staining">low</level>
+          <level type="expression">low</level>
         </tissueCell>
       </data>
       <data>
         <tissue>stomach 1</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>stomach 2</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">high</level>
+          <level type="expression">high</level>
         </tissueCell>
       </data>
       <data>
         <tissue>testis</tissue>
         <tissueCell>
           <cellType>cells in seminiferous ducts</cellType>
-          <level type="staining">high</level>
+          <level type="expression">high</level>
         </tissueCell>
         <tissueCell>
           <cellType>Leydig cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>thyroid gland</tissue>
         <tissueCell>
           <cellType>glandular cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
         <tissue>tonsil</tissue>
         <tissueCell>
           <cellType>germinal center cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
           <cellType>non-germinal center cells</cellType>
-          <level type="staining">not detected</level>
+          <level type="expression">not detected</level>
         </tissueCell>
         <tissueCell>
           <cellType>squamous epithelial cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>urinary bladder</tissue>
         <tissueCell>
           <cellType>urothelial cells</cellType>
-          <level type="staining">medium</level>
-        </tissueCell>
-      </data>
-      <data>
-        <tissue>uterus 1</tissue>
-        <tissueCell>
-          <cellType>cells in endometrial stroma</cellType>
-          <level type="staining">not detected</level>
-        </tissueCell>
-        <tissueCell>
-          <cellType>glandular cells</cellType>
-          <level type="staining">medium</level>
-        </tissueCell>
-      </data>
-      <data>
-        <tissue>uterus 2</tissue>
-        <tissueCell>
-          <cellType>cells in endometrial stroma</cellType>
-          <level type="staining">not detected</level>
-        </tissueCell>
-        <tissueCell>
-          <cellType>glandular cells</cellType>
-          <level type="staining">low</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
       <data>
         <tissue>vagina</tissue>
         <tissueCell>
           <cellType>squamous epithelial cells</cellType>
-          <level type="staining">medium</level>
+          <level type="expression">medium</level>
         </tissueCell>
       </data>
     </tissueExpression>
     <subcellularLocation technology="IF" type="APE">
       <summary><![CDATA[Localized to the nucleoli & cytoplasm in both human and mouse cells.]]></summary>
-      <verification type="reliability">medium</verification>
+      <verification type="reliability">supportive</verification>
       <image imageType="selected">
         <imageUrl size="medium">http://www.proteinatlas.org/images/46572/if_selected.jpg</imageUrl>
       </image>
       <data>
-        <location status="main">nucleoli</location>
-        <location status="main">cytoplasm</location>
+        <location GOId="GO:0005730" status="main">nucleoli</location>
+        <location GOId="GO:0005737" status="main">cytoplasm</location>
       </data>
     </subcellularLocation>
     <rnaExpression technology="RNAseq">
       <data>
         <cellLine>A-431</cellLine>
-        <level fpkm="749.7" type="abundance">High</level>
+        <level fpkm="750.1" type="abundance">High</level>
       </data>
       <data>
-        <cellLine>A-549</cellLine>
-        <level fpkm="1523.1" type="abundance">High</level>
+        <cellLine>A549</cellLine>
+        <level fpkm="1523.3" type="abundance">High</level>
       </data>
       <data>
         <cellLine>AN3-CA</cellLine>
-        <level fpkm="850.4" type="abundance">High</level>
+        <level fpkm="850.7" type="abundance">High</level>
       </data>
       <data>
         <cellLine>BEWO</cellLine>
-        <level fpkm="773.4" type="abundance">High</level>
+        <level fpkm="773.7" type="abundance">High</level>
       </data>
       <data>
         <cellLine>CACO-2</cellLine>
-        <level fpkm="1314.0" type="abundance">High</level>
+        <level fpkm="1314.3" type="abundance">High</level>
       </data>
       <data>
         <cellLine>CAPAN-2</cellLine>
-        <level fpkm="732.7" type="abundance">High</level>
+        <level fpkm="733.1" type="abundance">High</level>
       </data>
       <data>
         <cellLine>Daudi</cellLine>
-        <level fpkm="1365.6" type="abundance">High</level>
+        <level fpkm="1365.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>EFO-21</cellLine>
-        <level fpkm="371.9" type="abundance">High</level>
+        <level fpkm="372.0" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HaCaT</cellLine>
-        <level fpkm="713.3" type="abundance">High</level>
+        <level fpkm="713.4" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HDLM-2</cellLine>
-        <level fpkm="671.8" type="abundance">High</level>
+        <level fpkm="672.3" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HEK 293</cellLine>
-        <level fpkm="1747.4" type="abundance">High</level>
+        <level fpkm="1747.8" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HEL</cellLine>
-        <level fpkm="735.3" type="abundance">High</level>
+        <level fpkm="735.6" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HeLa</cellLine>
-        <level fpkm="651.0" type="abundance">High</level>
+        <level fpkm="651.2" type="abundance">High</level>
       </data>
       <data>
-        <cellLine>Hep-G2</cellLine>
-        <level fpkm="1153.5" type="abundance">High</level>
+        <cellLine>Hep G2</cellLine>
+        <level fpkm="1153.7" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HL-60</cellLine>
-        <level fpkm="911.4" type="abundance">High</level>
+        <level fpkm="911.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>HMC-1</cellLine>
-        <level fpkm="662.7" type="abundance">High</level>
+        <level fpkm="662.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>K-562</cellLine>
-        <level fpkm="768.3" type="abundance">High</level>
+        <level fpkm="768.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>Karpas-707</cellLine>
-        <level fpkm="924.9" type="abundance">High</level>
+        <level fpkm="925.2" type="abundance">High</level>
       </data>
       <data>
-        <cellLine>MCF-7</cellLine>
+        <cellLine>MCF7</cellLine>
         <level fpkm="1230.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>MOLT-4</cellLine>
-        <level fpkm="846.3" type="abundance">High</level>
+        <level fpkm="846.7" type="abundance">High</level>
       </data>
       <data>
         <cellLine>NB-4</cellLine>
-        <level fpkm="4482.2" type="abundance">High</level>
+        <level fpkm="4483.3" type="abundance">High</level>
       </data>
       <data>
         <cellLine>NTERA-2</cellLine>
-        <level fpkm="760.9" type="abundance">High</level>
+        <level fpkm="761.0" type="abundance">High</level>
       </data>
       <data>
         <cellLine>PC-3</cellLine>
-        <level fpkm="928.4" type="abundance">High</level>
+        <level fpkm="928.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>REH</cellLine>
-        <level fpkm="970.3" type="abundance">High</level>
+        <level fpkm="970.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>RH-30</cellLine>
-        <level fpkm="571.7" type="abundance">High</level>
+        <level fpkm="572.0" type="abundance">High</level>
       </data>
       <data>
         <cellLine>RPMI-8226</cellLine>
-        <level fpkm="1221.1" type="abundance">High</level>
+        <level fpkm="1221.4" type="abundance">High</level>
       </data>
       <data>
-        <cellLine>RT-4</cellLine>
-        <level fpkm="1094.2" type="abundance">High</level>
+        <cellLine>RT4</cellLine>
+        <level fpkm="1094.6" type="abundance">High</level>
       </data>
       <data>
         <cellLine>SCLC-21H</cellLine>
-        <level fpkm="827.2" type="abundance">High</level>
+        <level fpkm="827.4" type="abundance">High</level>
       </data>
       <data>
         <cellLine>SH-SY5Y</cellLine>
-        <level fpkm="969.2" type="abundance">High</level>
+        <level fpkm="969.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>SiHa</cellLine>
-        <level fpkm="490.7" type="abundance">High</level>
+        <level fpkm="490.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>SK-BR-3</cellLine>
-        <level fpkm="1020.6" type="abundance">High</level>
+        <level fpkm="1020.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>SK-MEL-30</cellLine>
-        <level fpkm="791.5" type="abundance">High</level>
+        <level fpkm="792.2" type="abundance">High</level>
       </data>
       <data>
         <cellLine>THP-1</cellLine>
-        <level fpkm="1364.5" type="abundance">High</level>
+        <level fpkm="1365.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>TIME</cellLine>
-        <level fpkm="577.8" type="abundance">High</level>
+        <level fpkm="578.0" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-138 MG</cellLine>
-        <level fpkm="513.8" type="abundance">High</level>
+        <level fpkm="514.0" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-2 OS</cellLine>
-        <level fpkm="748.4" type="abundance">High</level>
+        <level fpkm="748.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-2197</cellLine>
-        <level fpkm="402.9" type="abundance">High</level>
+        <level fpkm="403.1" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-251 MG</cellLine>
-        <level fpkm="811.4" type="abundance">High</level>
+        <level fpkm="812.1" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-266/70</cellLine>
-        <level fpkm="920.6" type="abundance">High</level>
+        <level fpkm="920.7" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-266/84</cellLine>
-        <level fpkm="1020.3" type="abundance">High</level>
+        <level fpkm="1020.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-698</cellLine>
-        <level fpkm="863.3" type="abundance">High</level>
+        <level fpkm="863.5" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-87 MG</cellLine>
-        <level fpkm="373.6" type="abundance">High</level>
+        <level fpkm="373.9" type="abundance">High</level>
       </data>
       <data>
         <cellLine>U-937</cellLine>
-        <level fpkm="1117.1" type="abundance">High</level>
+        <level fpkm="1117.6" type="abundance">High</level>
       </data>
       <data>
         <cellLine>WM-115</cellLine>
-        <level fpkm="620.6" type="abundance">High</level>
+        <level fpkm="621.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>adipose tissue</tissue>
-        <level fpkm="535.9" type="abundance">High</level>
+        <level fpkm="524.0" type="abundance">High</level>
       </data>
       <data>
         <tissue>adrenal gland</tissue>
-        <level fpkm="683.8" type="abundance">High</level>
+        <level fpkm="684.4" type="abundance">High</level>
       </data>
       <data>
         <tissue>appendix</tissue>
-        <level fpkm="681.0" type="abundance">High</level>
+        <level fpkm="681.6" type="abundance">High</level>
       </data>
       <data>
         <tissue>bone marrow</tissue>
-        <level fpkm="927.1" type="abundance">High</level>
+        <level fpkm="927.4" type="abundance">High</level>
       </data>
       <data>
         <tissue>cerebral cortex</tissue>
-        <level fpkm="237.8" type="abundance">High</level>
+        <level fpkm="238.0" type="abundance">High</level>
       </data>
       <data>
         <tissue>colon</tissue>
-        <level fpkm="772.3" type="abundance">High</level>
+        <level fpkm="730.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>duodenum</tissue>
-        <level fpkm="757.2" type="abundance">High</level>
+        <level fpkm="757.6" type="abundance">High</level>
+      </data>
+      <data>
+        <tissue>endometrium 1</tissue>
+        <level fpkm="812.5" type="abundance">High</level>
       </data>
       <data>
         <tissue>esophagus</tissue>
-        <level fpkm="887.1" type="abundance">High</level>
+        <level fpkm="887.5" type="abundance">High</level>
+      </data>
+      <data>
+        <tissue>fallopian tube</tissue>
+        <level fpkm="1163.8" type="abundance">High</level>
       </data>
       <data>
         <tissue>gallbladder</tissue>
-        <level fpkm="612.0" type="abundance">High</level>
+        <level fpkm="612.3" type="abundance">High</level>
       </data>
       <data>
         <tissue>heart muscle</tissue>
-        <level fpkm="455.9" type="abundance">High</level>
+        <level fpkm="456.0" type="abundance">High</level>
       </data>
       <data>
         <tissue>kidney</tissue>
-        <level fpkm="458.0" type="abundance">High</level>
+        <level fpkm="458.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>liver</tissue>
-        <level fpkm="362.2" type="abundance">High</level>
+        <level fpkm="349.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>lung</tissue>
-        <level fpkm="531.2" type="abundance">High</level>
+        <level fpkm="538.8" type="abundance">High</level>
       </data>
       <data>
         <tissue>lymph node</tissue>
-        <level fpkm="1180.2" type="abundance">High</level>
+        <level fpkm="1181.0" type="abundance">High</level>
       </data>
       <data>
         <tissue>ovary</tissue>
-        <level fpkm="2009.0" type="abundance">High</level>
+        <level fpkm="1775.8" type="abundance">High</level>
       </data>
       <data>
         <tissue>pancreas</tissue>
-        <level fpkm="895.7" type="abundance">High</level>
+        <level fpkm="895.9" type="abundance">High</level>
       </data>
       <data>
         <tissue>placenta</tissue>
-        <level fpkm="703.3" type="abundance">High</level>
+        <level fpkm="636.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>prostate</tissue>
-        <level fpkm="805.2" type="abundance">High</level>
+        <level fpkm="805.6" type="abundance">High</level>
+      </data>
+      <data>
+        <tissue>rectum</tissue>
+        <level fpkm="650.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>salivary gland</tissue>
-        <level fpkm="1133.6" type="abundance">High</level>
+        <level fpkm="1133.9" type="abundance">High</level>
+      </data>
+      <data>
+        <tissue>skeletal muscle</tissue>
+        <level fpkm="463.3" type="abundance">High</level>
       </data>
       <data>
         <tissue>skin 1</tissue>
-        <level fpkm="961.6" type="abundance">High</level>
+        <level fpkm="962.0" type="abundance">High</level>
       </data>
       <data>
         <tissue>small intestine</tissue>
-        <level fpkm="700.9" type="abundance">High</level>
+        <level fpkm="701.3" type="abundance">High</level>
+      </data>
+      <data>
+        <tissue>smooth muscle</tissue>
+        <level fpkm="584.5" type="abundance">High</level>
       </data>
       <data>
         <tissue>spleen</tissue>
-        <level fpkm="795.0" type="abundance">High</level>
+        <level fpkm="795.3" type="abundance">High</level>
       </data>
       <data>
         <tissue>stomach 1</tissue>
-        <level fpkm="745.2" type="abundance">High</level>
+        <level fpkm="745.3" type="abundance">High</level>
       </data>
       <data>
         <tissue>testis</tissue>
-        <level fpkm="326.8" type="abundance">High</level>
+        <level fpkm="326.9" type="abundance">High</level>
       </data>
       <data>
         <tissue>thyroid gland</tissue>
-        <level fpkm="715.2" type="abundance">High</level>
+        <level fpkm="716.0" type="abundance">High</level>
+      </data>
+      <data>
+        <tissue>tonsil</tissue>
+        <level fpkm="1052.1" type="abundance">High</level>
       </data>
       <data>
         <tissue>urinary bladder</tissue>
-        <level fpkm="764.7" type="abundance">High</level>
-      </data>
-      <data>
-        <tissue>uterus 1</tissue>
-        <level fpkm="911.5" type="abundance">High</level>
+        <level fpkm="765.3" type="abundance">High</level>
       </data>
     </rnaExpression>
     <antibody id="HPA046572" releaseDate="2012-09-12" releaseVersion="10">
       <antigenSequence>KLKVCALRVTSRARSRILRAGGKILTFDQLALDSPKGCGTVLLSGPRKGREVYRHFGKAPGTPHSHTKPYVRSKGRKFERAR</antigenSequence>
       <tissueExpression assayType="tissue" technology="IH">
         <summary type="tissue"><![CDATA[Normal tissues showed weak to moderate cytoplasmic staining. Neuronal cells of hippocampus, exocrine pancreas, rectum and stomach displayed strong positivity. Subsets of cells in seminiferus ducts of testis exhibited strong cytoplasmic and nuclear staining. Fallopian tube exhibited moderate cytoplasmic and membranous positivity. Bile duct cells, cells in glomeruli, endocrine gland, Leydig cells, smooth muscle, cardiac myocytes, glial cells and mesenchymal cells were negative.]]></summary>
-        <verification type="validation">uncertain</verification>
+        <validation type="literatureConformity">Consistent with gene/protein characterization data</validation>
+        <validation type="RNAConsistency">Not at all consistent with RNAseq data</validation>
         <data>
           <tissue>adrenal gland</tissue>
           <tissueCell>
@@ -1416,6 +1449,136 @@
               <assayImage>
                 <image imageType="sampleImage">
                   <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_A_8_2.jpg</imageUrl>
+                </image>
+              </assayImage>
+            </sample>
+          </patient>
+        </data>
+        <data>
+          <tissue>endometrium 1</tissue>
+          <tissueCell>
+            <cellType>cells in endometrial stroma</cellType>
+            <level type="staining">not detected</level>
+            <level type="intensity">Negative</level>
+            <quantity>Negative</quantity>
+            <location>none</location>
+          </tissueCell>
+          <tissueCell>
+            <cellType>glandular cells</cellType>
+            <level type="staining">medium</level>
+            <level type="intensity">Moderate</level>
+            <quantity>75%-25%</quantity>
+            <location>cytoplasmic/membranous</location>
+          </tissueCell>
+          <patient>
+            <sex>Female</sex>
+            <age>37</age>
+            <patientId>974</patientId>
+            <sample>
+              <snomedParameters>
+                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
+              </snomedParameters>
+              <assayImage>
+                <image imageType="sampleImage">
+                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_5_3.jpg</imageUrl>
+                </image>
+              </assayImage>
+            </sample>
+          </patient>
+          <patient>
+            <sex>Female</sex>
+            <age>61</age>
+            <patientId>1185</patientId>
+            <sample>
+              <snomedParameters>
+                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
+              </snomedParameters>
+              <assayImage>
+                <image imageType="sampleImage">
+                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_4_3.jpg</imageUrl>
+                </image>
+              </assayImage>
+            </sample>
+          </patient>
+          <patient>
+            <sex>Female</sex>
+            <age>36</age>
+            <patientId>1317</patientId>
+            <sample>
+              <snomedParameters>
+                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
+              </snomedParameters>
+              <assayImage>
+                <image imageType="sampleImage">
+                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_6_3.jpg</imageUrl>
+                </image>
+              </assayImage>
+            </sample>
+          </patient>
+        </data>
+        <data>
+          <tissue>endometrium 2</tissue>
+          <tissueCell>
+            <cellType>cells in endometrial stroma</cellType>
+            <level type="staining">not detected</level>
+            <level type="intensity">Negative</level>
+            <quantity>Negative</quantity>
+            <location>none</location>
+          </tissueCell>
+          <tissueCell>
+            <cellType>glandular cells</cellType>
+            <level type="staining">low</level>
+            <level type="intensity">Weak</level>
+            <quantity>75%-25%</quantity>
+            <location>cytoplasmic/membranous</location>
+          </tissueCell>
+          <patient>
+            <sex>Female</sex>
+            <age>34</age>
+            <patientId>245</patientId>
+            <sample>
+              <snomedParameters>
+                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
+              </snomedParameters>
+              <assayImage>
+                <image imageType="sampleImage">
+                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_1_3.jpg</imageUrl>
+                </image>
+              </assayImage>
+            </sample>
+          </patient>
+          <patient>
+            <sex>Female</sex>
+            <age>63</age>
+            <patientId>393</patientId>
+            <sample>
+              <snomedParameters>
+                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
+              </snomedParameters>
+              <assayImage>
+                <image imageType="sampleImage">
+                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_2_3.jpg</imageUrl>
+                </image>
+              </assayImage>
+            </sample>
+          </patient>
+          <patient>
+            <sex>Female</sex>
+            <age>32</age>
+            <patientId>965</patientId>
+            <sample>
+              <snomedParameters>
+                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
+              </snomedParameters>
+              <assayImage>
+                <image imageType="sampleImage">
+                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_3_3.jpg</imageUrl>
                 </image>
               </assayImage>
             </sample>
@@ -3407,136 +3570,6 @@
               <assayImage>
                 <image imageType="sampleImage">
                   <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_A_4_5.jpg</imageUrl>
-                </image>
-              </assayImage>
-            </sample>
-          </patient>
-        </data>
-        <data>
-          <tissue>uterus 1</tissue>
-          <tissueCell>
-            <cellType>cells in endometrial stroma</cellType>
-            <level type="staining">not detected</level>
-            <level type="intensity">Negative</level>
-            <quantity>Negative</quantity>
-            <location>none</location>
-          </tissueCell>
-          <tissueCell>
-            <cellType>glandular cells</cellType>
-            <level type="staining">medium</level>
-            <level type="intensity">Moderate</level>
-            <quantity>75%-25%</quantity>
-            <location>cytoplasmic/membranous</location>
-          </tissueCell>
-          <patient>
-            <sex>Female</sex>
-            <age>37</age>
-            <patientId>974</patientId>
-            <sample>
-              <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
-                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
-              </snomedParameters>
-              <assayImage>
-                <image imageType="sampleImage">
-                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_5_3.jpg</imageUrl>
-                </image>
-              </assayImage>
-            </sample>
-          </patient>
-          <patient>
-            <sex>Female</sex>
-            <age>61</age>
-            <patientId>1185</patientId>
-            <sample>
-              <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
-                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
-              </snomedParameters>
-              <assayImage>
-                <image imageType="sampleImage">
-                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_4_3.jpg</imageUrl>
-                </image>
-              </assayImage>
-            </sample>
-          </patient>
-          <patient>
-            <sex>Female</sex>
-            <age>36</age>
-            <patientId>1317</patientId>
-            <sample>
-              <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
-                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
-              </snomedParameters>
-              <assayImage>
-                <image imageType="sampleImage">
-                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_6_3.jpg</imageUrl>
-                </image>
-              </assayImage>
-            </sample>
-          </patient>
-        </data>
-        <data>
-          <tissue>uterus 2</tissue>
-          <tissueCell>
-            <cellType>cells in endometrial stroma</cellType>
-            <level type="staining">not detected</level>
-            <level type="intensity">Negative</level>
-            <quantity>Negative</quantity>
-            <location>none</location>
-          </tissueCell>
-          <tissueCell>
-            <cellType>glandular cells</cellType>
-            <level type="staining">low</level>
-            <level type="intensity">Weak</level>
-            <quantity>75%-25%</quantity>
-            <location>cytoplasmic/membranous</location>
-          </tissueCell>
-          <patient>
-            <sex>Female</sex>
-            <age>34</age>
-            <patientId>245</patientId>
-            <sample>
-              <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
-                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
-              </snomedParameters>
-              <assayImage>
-                <image imageType="sampleImage">
-                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_1_3.jpg</imageUrl>
-                </image>
-              </assayImage>
-            </sample>
-          </patient>
-          <patient>
-            <sex>Female</sex>
-            <age>63</age>
-            <patientId>393</patientId>
-            <sample>
-              <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
-                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
-              </snomedParameters>
-              <assayImage>
-                <image imageType="sampleImage">
-                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_2_3.jpg</imageUrl>
-                </image>
-              </assayImage>
-            </sample>
-          </patient>
-          <patient>
-            <sex>Female</sex>
-            <age>32</age>
-            <patientId>965</patientId>
-            <sample>
-              <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
-                <snomed snomedCode="T-84000" tissueDescription="Endometrium"/>
-              </snomedParameters>
-              <assayImage>
-                <image imageType="sampleImage">
-                  <imageUrl size="large">http://www.proteinatlas.org/images/46572/116130_B_3_3.jpg</imageUrl>
                 </image>
               </assayImage>
             </sample>
@@ -9274,7 +9307,7 @@
             <location>cytoplasmic/membranous</location>
             <sample>
               <snomedParameters>
-                <snomed snomedCode="M-00100" tissueDescription="Normal tissue, NOS"/>
+                <snomed snomedCode="M-812033" tissueDescription="Urothelial carcinoma, High grade"/>
                 <snomed snomedCode="T-74000" tissueDescription="Urinary bladder"/>
               </snomedParameters>
               <assayImage>
@@ -9358,8 +9391,8 @@
             <cellLine>HEK 293</cellLine>
             <verification type="validation">supportive</verification>
             <level type="intensity">moderate</level>
-            <location>nucleoli</location>
-            <location>cytoplasm</location>
+            <location GOId="GO:0005730">nucleoli</location>
+            <location GOId="GO:0005737">cytoplasm</location>
             <assayImage>
               <image imageType="sampleImage">
                 <channel>antibody</channel>
@@ -9376,11 +9409,11 @@
             </assayImage>
           </data>
           <data>
-            <cellLine>MCF-7</cellLine>
+            <cellLine>MCF7</cellLine>
             <verification type="validation">supportive</verification>
             <level type="intensity">weak</level>
-            <location>nucleoli</location>
-            <location>cytoplasm</location>
+            <location GOId="GO:0005730">nucleoli</location>
+            <location GOId="GO:0005737">cytoplasm</location>
             <assayImage>
               <image imageType="sampleImage">
                 <channel>antibody</channel>
@@ -9400,8 +9433,8 @@
             <cellLine>U-2 OS</cellLine>
             <verification type="validation">supportive</verification>
             <level type="intensity">weak</level>
-            <location>nucleoli</location>
-            <location>cytoplasm</location>
+            <location GOId="GO:0005730">nucleoli</location>
+            <location GOId="GO:0005737">cytoplasm</location>
             <assayImage>
               <image imageType="sampleImage">
                 <channel>antibody</channel>
