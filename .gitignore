@@ -9,7 +9,4 @@ log
 *.class
 output.xml
 failed-entries.log
-hpa/ab-output.xml
-hpa/ec-output.xml
-hpa/expr-output.xml
-hpa/sl-output.xml
+*output.xml

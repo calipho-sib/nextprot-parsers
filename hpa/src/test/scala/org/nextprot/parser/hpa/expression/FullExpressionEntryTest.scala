@@ -13,8 +13,8 @@ import scala.util.matching.Regex
 import scala.xml.PrettyPrinter
 import java.io.FileWriter
 import org.nextprot.parser.hpa.subcell.HPAValidation
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
 import scala.xml.PrettyPrinter
+import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
 
 class FullExpressionEntryTest extends HPAExpressionTestBase {
 

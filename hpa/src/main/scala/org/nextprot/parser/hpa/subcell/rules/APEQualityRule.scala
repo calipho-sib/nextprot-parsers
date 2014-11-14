@@ -1,6 +1,5 @@
 package org.nextprot.parser.hpa.subcell.rules
 
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
 import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.constants.NXQuality._

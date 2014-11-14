@@ -5,15 +5,16 @@ import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.constants.HPAValidationValue
 import org.nextprot.parser.hpa.subcell.rules.AntibodyValidationRule
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
-import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
 import org.nextprot.parser.core.stats.Stats
+import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
+import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
+import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 
 object HPAQuality {
-
+  
+  
   /**
    * Returns the global quality for sub cellular location or tissue expression
    * @section = tissuueExpression or subcellularLocation
@@ -24,18 +25,31 @@ object HPAQuality {
     abtype match {
 
       case "single" => {
-        Stats ++ ("ENTRIES-TYPE", "single but treated as ape");
-        return getQualityForIntegratedAntibody(entryElem, section)
+        Stats ++ ("ENTRIES-TYPE", "single");
+        return getQualityForOneAntibody(entryElem, entryElem \ "antibody", section)
       }
 
       case "selected" => {
-        Stats ++ ("ENTRIES-TYPE", "selected but treated as ape");
-        return getQualityForIntegratedAntibody(entryElem, section)
+
+        if ((section == "subcellularLocation") && HPAUtils.isSelectedTreatedAsAPEForSubcell(entryElem)) {
+          Stats ++ ("ENTRIES-TYPE", "selected but treated as ape");
+          return getQualityForIntegratedAntibody(entryElem, section)
+        } else {
+
+          //Simple check that makes sure that there is only one antibody (selected)
+          val antibodySelected = (entryElem \ "antibody").filter(a => !(a \ section).isEmpty)
+          if (antibodySelected.length != 1) {
+            throw new NXException(CASE_MORE_THAN_ONE_ANTIBODY_FOUND_FOR_SELECTED, antibodySelected.length + " antibodies ")
+          }
+
+          Stats ++ ("ENTRIES-TYPE", "ape");
+          return getQualityForOneAntibody(entryElem, antibodySelected, section)
+
+        }
       }
 
       case "ape" => {
         Stats ++ ("ENTRIES-TYPE", "ape");
-
         return getQualityForIntegratedAntibody(entryElem, section)
         //return getQualityForIntegratedAntibody2014(entryElem, section) 
       }
@@ -44,29 +58,24 @@ object HPAQuality {
     }
 
   }
+  
+  def getReliabilityScore(entryElem: NodeSeq, section: String) : HPAAPEReliabilityValue = {
+     //Extract experiment reliability
+    return HPAAPEReliabilityValue withName (entryElem \ section \ "verification").text
+  }
 
   /**
    * Returns the quality for the single and selected case
    */
-  def getQualityForOneAntibody(antibodyElem: NodeSeq, section: String): NXQuality = {
+  def getQualityForOneAntibody(entryElem: NodeSeq, antibodyElem: NodeSeq, section: String): NXQuality = {
 
-    // section = tissueExpression or subcellularLocation so far....
-    val HPAVerifText =
-      section match {
-        case "subcellularLocation" => (antibodyElem \ section \ "subAssay" \ "verification").text
-        // we may have multiple tissueExpression elements, keep only the one with asssayType = tissue
-        case "tissueExpression" => {
-          val oneTe = (antibodyElem \ section).filter(s => (s \ "@assayType").text == "tissue");
-          (oneTe \ "verification").text
-        }
-        case _ => throw new Exception("section not expected: " + section)
-      }
-
-    val HPApa = HPAUtils.getProteinArray(antibodyElem);
-    val HPAgl = HPAValidationValue.withName(HPAVerifText); // global HPA quality evaluation
-    val HPAwb = HPAUtils.getWesternBlot(antibodyElem)
-
-    new AntibodyValidationRule(HPApa, HPAgl, HPAwb).getQuality;
+    val reliability = getReliabilityScore(entryElem, section)
+    val pa = HPAUtils.getProteinArray(antibodyElem)
+    val wb = HPAUtils.getWesternBlot(antibodyElem)
+    
+    new APEQualityRule(reliability, 
+    				   HPAAPEValidationValue.integrate(List(pa)), 
+    				   HPAAPEValidationValue.integrate(List(wb))).getQuality;
 
   }
 
@@ -76,12 +85,11 @@ object HPAQuality {
    */
   def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
 
-    //TODO check section in te sl
     //Extract experiment reliability
-    val reliabilityText = (entryElem \ section \ "verification").text;
-    val reliability = HPAAPEReliabilityValue withName reliabilityText
     val pa = getAPEPtroteinArrayQuality(entryElem)
     val wb = getAPEWesternBlotQuality(entryElem)
+    val reliability = getReliabilityScore(entryElem, section)
+
     return new APEQualityRule(reliability, pa, wb).getQuality;
 
   }
@@ -90,28 +98,16 @@ object HPAQuality {
    * Returns one out of the five values enumerated in HPAAPEValidationValue
    */
   def getAPEPtroteinArrayQuality(entryElem: NodeSeq): HPAAPEValidationValue = {
-    val abs = (entryElem \ "antibody").toList
-    val sup = abs.filter(ab => HPAUtils.getProteinArray(ab) == HPAValidationValue.Supportive).size
-    if (sup == abs.size) return HPAAPEValidationValue.SupportiveAll
-    if (sup >= 1) return HPAAPEValidationValue.SupportiveOne
-    val unc = abs.filter(ab => HPAUtils.getProteinArray(ab) == HPAValidationValue.Uncertain).size
-    if (unc == abs.size) return HPAAPEValidationValue.UncertainAll
-    if (unc >= 1) return HPAAPEValidationValue.UncertainOne
-    return HPAAPEValidationValue.Not_Supportive
+       val values = (entryElem \ "antibody").toList.map(ab => HPAUtils.getProteinArray(ab)).toList;
+       return HPAAPEValidationValue.integrate(values);
   }
 
   /**
    * Returns one out of the five values enumerated in HPAAPEValidationValue
    */
   def getAPEWesternBlotQuality(entryElem: NodeSeq): HPAAPEValidationValue = {
-    val abs = (entryElem \ "antibody").toList
-    val sup = abs.filter(ab => HPAUtils.getWesternBlot(ab) == HPAValidationValue.Supportive).size
-    if (sup == abs.size) return HPAAPEValidationValue.SupportiveAll
-    if (sup >= 1) return HPAAPEValidationValue.SupportiveOne
-    val unc = abs.filter(ab => HPAUtils.getWesternBlot(ab) == HPAValidationValue.Uncertain).size
-    if (unc == abs.size) return HPAAPEValidationValue.UncertainAll
-    if (unc >= 1) return HPAAPEValidationValue.UncertainOne
-    return HPAAPEValidationValue.Not_Supportive
+       val values = (entryElem \ "antibody").toList.map(ab => HPAUtils.getWesternBlot(ab)).toList;
+       return HPAAPEValidationValue.integrate(values);
   }
 
 
