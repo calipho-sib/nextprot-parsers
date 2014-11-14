@@ -65,7 +65,10 @@
           <cvName>HPA</cvName>
         </cvDatabase>
       </resource>
-      <qualifierType>EXP</qualifierType>
+      <evidenceCode>
+      	<cvName>ECO:0000087</cvName>
+        <cvTermCategory>ECO</cvTermCategory>
+      </evidenceCode>
       
       
       
@@ -95,7 +98,10 @@
           <cvName>HPA</cvName>
         </cvDatabase>
       </resource>
-      <qualifierType>EXP</qualifierType>
+      <evidenceCode>
+      	<cvName>ECO:0000087</cvName>
+        <cvTermCategory>ECO</cvTermCategory>
+      </evidenceCode>
       
       
       

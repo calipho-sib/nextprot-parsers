@@ -46,7 +46,7 @@ class ErrosCasesSpec extends HPASubcellTestBase {
    */
   it should "produce at least 1 annotation of type subcellular-location" in {
     val parser = new HPASubcellNXParser();
-    val rowAnnots = parser.parse("src/test/resources/ENSG_TEST_SPEC_G1.xml").asInstanceOf[HPAAnnotationsWrapper]._rowAnnotations
+    val rowAnnots = parser.parse("src/test/resources/hpa/subcell/subcell-file-input.xml").asInstanceOf[HPAAnnotationsWrapper]._rowAnnotations
     val SLCnt = rowAnnots.filter(annot => annot._type == "subcellular location").size
     assert(SLCnt >= 1)
   }
@@ -54,12 +54,14 @@ class ErrosCasesSpec extends HPASubcellTestBase {
   //HPA_PARS_SPEC_G1-3
   it should "produce 1 annotation of type subcellular-location labelled 'main' with CV term SL-0039 and 1 labelled 'additional' with CV term SL-0132" in {
     val parser = new HPASubcellNXParser();
-    val wrapper = parser.parse("src/test/resources/ENSG_TEST_SPEC_G1.xml");
+    val wrapper = parser.parse("src/test/resources/hpa/subcell/subcell-file-input.xml");
     val rowAnnots = ((wrapper.asInstanceOf[HPAAnnotationsWrapper]))._rowAnnotations
+    
+    assert(rowAnnots(0)._cvTermAcc == "SL-0188")
     assert(rowAnnots(0)._description.contains("Main location"))
-    assert(rowAnnots(0)._cvTermAcc == "SL-0039")
-    assert(rowAnnots(1)._description == "Note=Associated with actin filaments. Additional location.")
-    assert(rowAnnots(1)._cvTermAcc == "SL-0090")
+    assert(rowAnnots(1)._cvTermAcc == "SL-0086")
+    assert(rowAnnots(1)._description.contains("Main location"))
+
   }
 
   // HPA_PARS_D1

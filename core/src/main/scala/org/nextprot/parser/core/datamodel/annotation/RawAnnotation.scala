@@ -10,9 +10,6 @@ class RawAnnotation(val _qualifierType: String, val _datasource: String, val _cv
           <datasource>{ _datasource }</datasource>
         }
       }
-  
-
-
 
       <isPropagableByDefault>{ _isPropagableByDefault }</isPropagableByDefault>
       {
