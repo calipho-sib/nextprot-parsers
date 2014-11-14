@@ -5,7 +5,7 @@ import AssemblyKeys._ // put this at the top of the file
 
 assemblySettings
 
-jarName in assembly := "hpa-subcell.jar"
+jarName in assembly := "nextprot-parser-hpa.jar"
 
 mainClass in assembly := Some("org.nextprot.parser.core.HPANXParserApp")
 
@@ -13,9 +13,9 @@ name := "nextprot-parser-hpa"
 
 organization := "org.nextprot.parser.hpa"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.20.0-SNAPSHOT"
 
-description := "HPA subcellular parser"
+description := "HPA parser used for tissues subcellular locations and antibodies"
 
 scalaVersion := "2.10.4"
 
