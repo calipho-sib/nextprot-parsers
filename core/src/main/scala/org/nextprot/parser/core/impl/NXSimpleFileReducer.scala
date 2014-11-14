@@ -17,7 +17,7 @@ class NXSimpleFileReducer extends NXPrettyReducer {
     objects match {
       case tm: TemplateModel => {
         fw.write(getPrettyFormatIfNeeded(tm.toXML) + "\n")
-        Stats.increment("ENTRIES-QUALITY", tm.getQuality.toString())
+        Stats ++ ("ENTRIES-QUALITY", tm.getQuality.toString())
       }
       case _ => throw new ClassCastException
     }

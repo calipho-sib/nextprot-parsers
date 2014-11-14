@@ -24,17 +24,17 @@ object HPAQuality {
     abtype match {
 
       case "single" => {
-        Stats.increment("ENTRIES-TYPE", "single but treated as ape");
+        Stats ++ ("ENTRIES-TYPE", "single but treated as ape");
         return getQualityForIntegratedAntibody(entryElem, section)
       }
 
       case "selected" => {
-        Stats.increment("ENTRIES-TYPE", "selected but treated as ape");
+        Stats ++ ("ENTRIES-TYPE", "selected but treated as ape");
         return getQualityForIntegratedAntibody(entryElem, section)
       }
 
       case "ape" => {
-        Stats.increment("ENTRIES-TYPE", "ape");
+        Stats ++ ("ENTRIES-TYPE", "ape");
 
         return getQualityForIntegratedAntibody(entryElem, section)
         //return getQualityForIntegratedAntibody2014(entryElem, section) 

@@ -18,7 +18,7 @@ object HPAUtils {
     val HPAwbText = (antibodyElem \ "westernBlot" \ "verification").text;
     //In case there is no western blot experiment we use uncertain for western blot
     if (HPAwbText.isEmpty()) {
-      Stats.increment("COMPLEMENT-SPECS", "western blot missing => uncertain")
+      Stats ++ ("COMPLEMENT-SPECS", "western blot missing => uncertain")
       return HPAValidationValue.withName("uncertain")
     } else {
       return HPAValidationValue.withName(HPAwbText)
@@ -48,7 +48,7 @@ object HPAUtils {
     //In case of CAB it is always supportive
 
     if (antibodyName.startsWith("CAB")) {
-      Stats.increment("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
+      Stats ++ ("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
       HPAValidationValue.withName("supportive");
     } else {
       return HPAValidationValue.withName((antibodyElem \ "proteinArray" \ "verification").text);

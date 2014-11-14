@@ -54,7 +54,7 @@ object HPAValidation {
     var isValid: Boolean = false
 
     if (rnamap.isEmpty) {
-      Stats.increment("COMPLEMENT-SPECS", "RNA is missing")
+      Stats ++ ("COMPLEMENT-SPECS", "RNA is missing")
       return true // No cell line data for antibodies or No RNAseq data
     }
     cellLineList.foreach(cellLine => {
