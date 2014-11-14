@@ -7,8 +7,8 @@ import org.nextprot.parser.hpa.constants.HPAValidationValue
 import org.nextprot.parser.hpa.subcell.rules.AntibodyValidationRule
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
 import org.nextprot.parser.core.stats.Stats
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
+import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue
+import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue._
 import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue
 import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 
@@ -53,7 +53,10 @@ object HPAQuality {
         return getQualityForIntegratedAntibody(entryElem, section)
         //return getQualityForIntegratedAntibody2014(entryElem, section) 
       }
-      case _ => throw new NXException(CASE_IFTYPE_UNKNOWN, abtype + " not found")
+      case _ => {
+        Stats ++ ("ENTRIES-TYPE", "unknown: " + abtype);
+        throw new NXException(CASE_IFTYPE_UNKNOWN, abtype + " not found")
+      }
 
     }
 
@@ -74,8 +77,8 @@ object HPAQuality {
     val wb = HPAUtils.getWesternBlot(antibodyElem)
     
     new APEQualityRule(reliability, 
-    				   HPAAPEValidationValue.integrate(List(pa)), 
-    				   HPAAPEValidationValue.integrate(List(wb))).getQuality;
+    				   HPAValidationIntegratedValue.integrate(List(pa)), 
+    				   HPAValidationIntegratedValue.integrate(List(wb))).getQuality;
 
   }
 
@@ -95,19 +98,19 @@ object HPAQuality {
   }
 
   /**
-   * Returns one out of the five values enumerated in HPAAPEValidationValue
+   * Returns one out of the five values enumerated in HPAValidationIntegratedValue
    */
-  def getAPEPtroteinArrayQuality(entryElem: NodeSeq): HPAAPEValidationValue = {
+  def getAPEPtroteinArrayQuality(entryElem: NodeSeq): HPAValidationIntegratedValue = {
        val values = (entryElem \ "antibody").toList.map(ab => HPAUtils.getProteinArray(ab)).toList;
-       return HPAAPEValidationValue.integrate(values);
+       return HPAValidationIntegratedValue.integrate(values);
   }
 
   /**
-   * Returns one out of the five values enumerated in HPAAPEValidationValue
+   * Returns one out of the five values enumerated in HPAValidationIntegratedValue
    */
-  def getAPEWesternBlotQuality(entryElem: NodeSeq): HPAAPEValidationValue = {
+  def getAPEWesternBlotQuality(entryElem: NodeSeq): HPAValidationIntegratedValue = {
        val values = (entryElem \ "antibody").toList.map(ab => HPAUtils.getWesternBlot(ab)).toList;
-       return HPAAPEValidationValue.integrate(values);
+       return HPAValidationIntegratedValue.integrate(values);
   }
 
 

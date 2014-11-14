@@ -14,7 +14,7 @@ import scala.xml.PrettyPrinter
 import java.io.FileWriter
 import org.nextprot.parser.hpa.subcell.HPAValidation
 import scala.xml.PrettyPrinter
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
+import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue
 
 class FullExpressionEntryTest extends HPAExpressionTestBase {
 
@@ -81,43 +81,43 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     }
   }
 
-  "The HPAAPEValidationValue for western blot " should " equals supportiveAll for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals supportiveAll for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supAll.xml"
     val root = scala.xml.XML.loadFile(fname)
-    assert(HPAQuality.getAPEWesternBlotQuality(root) == HPAAPEValidationValue.SupportiveAll)
+    assert(HPAQuality.getAPEWesternBlotQuality(root) == HPAValidationIntegratedValue.SupportiveAll)
   }
 
-  "The HPAAPEValidationValue for western blot " should " equals supportiveOne for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals supportiveOne for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supOne.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAAPEValidationValue.SupportiveOne)
+    assert(result == HPAValidationIntegratedValue.SupportiveOne)
   }
 
-  "The HPAAPEValidationValue for western blot " should " equals uncertainAll for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals uncertainAll for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncAll.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAAPEValidationValue.UncertainAll)
+    assert(result == HPAValidationIntegratedValue.UncertainAll)
   }
 
-  "The HPAAPEValidationValue for western blot " should " equals uncertainOne for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals uncertainOne for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncOne.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAAPEValidationValue.UncertainOne)
+    assert(result == HPAValidationIntegratedValue.UncertainOne)
   }
 
-  "The HPAAPEValidationValue for western blot " should " equals nonSupportive for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals nonSupportive for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-nonsupp.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAAPEValidationValue.Not_Supportive)
+    assert(result == HPAValidationIntegratedValue.NotSupportiveAll)
   }
 
   "The HPAExpressionNXParser " should " process successfully a file with single antibody" in {

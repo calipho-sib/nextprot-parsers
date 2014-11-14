@@ -1,12 +1,12 @@
 package org.nextprot.parser.hpa.subcell.rules
 
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
+import org.nextprot.parser.hpa.constants.HPAValidationIntegratedValue._
 import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.constants.NXQuality._
 import scala.collection.mutable.Map
 import org.nextprot.parser.hpa.constants.HPAAPEReliabilityValue._
 
-case class APEQualityRule(reliability: HPAAPEReliabilityValue, hpaPA: HPAAPEValidationValue, hpaWB: HPAAPEValidationValue) {
+case class APEQualityRule(reliability: HPAAPEReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
 
 /* 
  * Specs quality rules for tissue expression / subcell.location - table for APE (and other cases since 11.2014), document version 12
@@ -40,9 +40,9 @@ HPA Reliability			HPA PA				           	WB									 NP
   def getQuality: NXQuality = {
     val res: NXQuality =
      APEQualityRule.this match {
-      case APEQualityRule(Not_supportive, _, _) => BRONZE  						// case 10,11,12,13
-      case APEQualityRule(Uncertain, Not_Supportive, _) => BRONZE               // case unspecified in specs but approved by Paula, mail 14.11.2014
-      case APEQualityRule(Uncertain, UncertainOne, Not_Supportive) => BRONZE	// case 9 with WB=non supp.
+      case APEQualityRule(NotSupportive, _, _) => BRONZE  						// case 10,11,12,13
+      case APEQualityRule(Uncertain, NotSupportiveAll, _) => BRONZE               // case unspecified in specs but approved by Paula, mail 14.11.2014
+      case APEQualityRule(Uncertain, UncertainOne, NotSupportiveAll) => BRONZE	// case 9 with WB=non supp.
       case APEQualityRule(Uncertain, UncertainOne, UncertainOne) => BRONZE		// case 9 with WB uncertain one
       case APEQualityRule(Uncertain, UncertainOne, UncertainAll) => BRONZE      // case unspecified in specs but approved by Paula, mail 14.11.2014
       case APEQualityRule(Uncertain, UncertainOne, SupportiveOne) => BRONZE		// case 9
@@ -62,9 +62,9 @@ HPA Reliability			HPA PA				           	WB									 NP
     // PA: never Non_Supportive !
     
     APEQualityRule.this match {
-      case APEQualityRule(Not_supportive, _, _) => BRONZE
-      case APEQualityRule(Uncertain, Not_Supportive, _) => BRONZE
-      case APEQualityRule(Uncertain, UncertainOne, Not_Supportive) => BRONZE
+      case APEQualityRule(NotSupportive, _, _) => BRONZE
+      case APEQualityRule(Uncertain, NotSupportiveAll, _) => BRONZE
+      case APEQualityRule(Uncertain, UncertainOne, NotSupportiveAll) => BRONZE
       case APEQualityRule(Uncertain, UncertainOne, UncertainOne) => BRONZE // check with Paula:OK
       case APEQualityRule(Uncertain, UncertainOne, UncertainAll) => BRONZE // check with Paula:OK
       case APEQualityRule(Uncertain, UncertainOne, SupportiveOne) => BRONZE
@@ -73,17 +73,17 @@ HPA Reliability			HPA PA				           	WB									 NP
       case APEQualityRule(Uncertain, SupportiveOne, _) => SILVER // check with Paula:OK 
       case APEQualityRule(Uncertain, SupportiveAll, _) => SILVER
 
-      case APEQualityRule(Supportive, Not_Supportive, _) => SILVER // does not exist
+      case APEQualityRule(Supportive, NotSupportiveAll, _) => SILVER // does not exist
       case APEQualityRule(Supportive, UncertainOne, _) => SILVER // doesn't exist
       case APEQualityRule(Supportive, UncertainAll, _) => SILVER 
 
-      case APEQualityRule(Supportive, SupportiveOne, Not_Supportive) => SILVER
+      case APEQualityRule(Supportive, SupportiveOne, NotSupportiveAll) => SILVER
       case APEQualityRule(Supportive, SupportiveOne, UncertainOne) => SILVER
       case APEQualityRule(Supportive, SupportiveOne, UncertainAll) => SILVER
       case APEQualityRule(Supportive, SupportiveOne, SupportiveOne) => GOLD
       case APEQualityRule(Supportive, SupportiveOne, SupportiveAll) => GOLD
 
-      case APEQualityRule(Supportive, SupportiveAll, Not_Supportive) => SILVER
+      case APEQualityRule(Supportive, SupportiveAll, NotSupportiveAll) => SILVER
       case APEQualityRule(Supportive, SupportiveAll, UncertainOne) => SILVER
       case APEQualityRule(Supportive, SupportiveAll, UncertainAll) => SILVER
       case APEQualityRule(Supportive, SupportiveAll, SupportiveOne) => GOLD

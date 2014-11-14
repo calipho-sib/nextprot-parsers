@@ -21,6 +21,7 @@ import org.nextprot.parser.hpa.expcontext.HPAExpcontextNXParser
 import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssocProperty
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym
 import org.nextprot.parser.hpa.datamodel.ExpHPAAnnotationsWrapper
+import org.nextprot.parser.core.stats.Stats
 
 object Caloha {
   val map = HPAExpcontextConfig.readTissueMapFile.map;
@@ -38,12 +39,13 @@ class HPAExpressionNXParser extends NXParser {
     val ensgId = HPAUtils.getEnsgId(entryElem)
     val integrationLevel = HPAUtils.getTissueExpressionType(entryElem)
     val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem)
-
     HPAValidation.checkPreconditionsForExpr(entryElem)
 
     val quality = HPAQuality.getQuality(entryElem, teSection);
-    if (quality.equals(BRONZE))
-      throw new NXException(CASE_BRONZE_QUALITY);
+    if (quality.equals(BRONZE)) {
+            Stats ++ ("BRONZE", "bronze")
+            throw new NXException(CASE_BRONZE_QUALITY);
+    }
 
     val data = HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "data"
     val teds = data.map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten;

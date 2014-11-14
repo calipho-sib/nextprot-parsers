@@ -24,7 +24,12 @@ object HPAValidation {
   def checkMainTissueExpression(entryElem: NodeSeq) = {
     val tesok = (entryElem \ "tissueExpression").
       filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IH")
-    if (tesok.size != 1) throw new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
+      Stats ++ ("CHECKING_TISSUE", "assayType")
+      
+    if (tesok.size != 1) {
+      Stats ++ ("CASE_ASSAY_TYPE_NOT_TISSUE", "not tissue")
+      throw new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
+    }
   }
 
   /**
