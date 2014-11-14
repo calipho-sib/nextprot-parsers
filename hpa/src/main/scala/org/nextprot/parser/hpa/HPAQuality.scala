@@ -10,8 +10,6 @@ import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue._
 import org.nextprot.parser.hpa.subcell.rules.APEQualityRule
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue._
 import org.nextprot.parser.hpa.subcell.constants.HPAAPEValidationValue
-import org.nextprot.parser.hpa.subcell.rules.APEQualityRule2014
-import org.nextprot.parser.hpa.subcell.constants.HPAAPEReliabilityValue2014
 import org.nextprot.parser.core.stats.StatisticsCollectorSingleton
 
 object HPAQuality {
@@ -26,34 +24,15 @@ object HPAQuality {
     abtype match {
 
       case "single" => {
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "single");
-
-        return getQualityForOneAntibody(entryElem \ "antibody", section)
+        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "single but treated as ape");
+        return getQualityForIntegratedAntibody(entryElem, section)
       }
+
       case "selected" => {
-
-        if ((section == "subcellularLocation") && HPAUtils.isSelectedTreatedAsAPEForSubcell(entryElem)) {
-          StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "selected=>ape");
-          return getQualityForIntegratedAntibody(entryElem, section, true)
-        }
-
-        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "selected");
-
-        val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ section).isEmpty)
-        val selectedAbs = selectableAbs.filter(a => {
-          if (section == "tissueExpression") {
-            (a \ "tissueExpression").filter(s => (s \ "@assayType").text == "tissue").length == 1
-          } else {
-            true
-          }
-        })
-
-        if (selectedAbs.length != 1) {
-          throw new NXException(CASE_MORE_THAN_ONE_ANTIBODY_FOUND_FOR_SELECTED, selectedAbs.length + " antibodies ")
-        }
-        return getQualityForOneAntibody(selectedAbs, section)
-
+        StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "selected but treated as ape");
+        return getQualityForIntegratedAntibody(entryElem, section)
       }
+
       case "ape" => {
         StatisticsCollectorSingleton.increment("ENTRIES-TYPE", "ape");
 
@@ -91,47 +70,20 @@ object HPAQuality {
 
   }
 
-  def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
-    getQualityForIntegratedAntibody(entryElem, section, false);
-  }
-
-  /**
-   * Returns the quality for the APE case
-   */
-  def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String, selectedCase: Boolean): NXQuality = {
-
-    //Extract experiment reliability
-    val reliabilityText = (entryElem \ section \ "verification").text;
-    if (reliabilityText.equals("n/a") || selectedCase) {
-      return getQualityForOneAntibody(selectAPEAntibodyForNotAvailablereliability(entryElem, section, selectedCase), section);
-    }
-
-    val reliability = HPAAPEReliabilityValue withName reliabilityText
-
-    //It is always supportive if all antibodies are supportive (if the antibody is a CAB it is always supportive)
-    var supportive = true;
-    entryElem \ "antibody" foreach (a => supportive &= ((a \ "@id").text.startsWith("CAB") || ((a \ "proteinArray" \ "verification").text) == "supportive"))
-
-    val HPApa = if (supportive) HPAValidationValue.Supportive else HPAValidationValue.Uncertain;
-
-    return new APEQualityRule(reliability, HPApa).getQuality;
-
-  }
-
   /**
    * Returns the quality for the APE case - version 2014 - not used yet
    */
-  def getQualityForIntegratedAntibody2014(entryElem: NodeSeq, section: String): NXQuality = {
+  def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
 
     //Extract experiment reliability
     val reliabilityText = (entryElem \ section \ "verification").text;
     if (reliabilityText.equals("n/a")) {
       return getQualityForOneAntibody(selectAPEAntibodyForNotAvailablereliability(entryElem, section, false), section);
     }
-    val reliability = HPAAPEReliabilityValue2014 withName reliabilityText
+    val reliability = HPAAPEReliabilityValue withName reliabilityText
     val pa = getAPEPtroteinArrayQuality(entryElem)
     val wb = getAPEWesternBlotQuality(entryElem)
-    return new APEQualityRule2014(reliability, pa, wb).getQuality;
+    return new APEQualityRule(reliability, pa, wb).getQuality;
 
   }
 

@@ -8,3 +8,4 @@ target
 log
 *.class
 output.xml
+failed-entries.log
