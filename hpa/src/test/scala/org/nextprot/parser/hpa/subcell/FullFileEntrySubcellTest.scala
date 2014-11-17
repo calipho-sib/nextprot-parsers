@@ -20,7 +20,7 @@ class FullFileEntrySubcellTest extends HPASubcellTestBase {
 
     val tm = hpaParser.parse(testFolder + "subcell-file-input.xml");
     val output = tm.toXML;
-    println(output);
+    //println(output);
     assert(XMLComparator.compareXMLWithFile(output, new File(testFolder + "subcell-expected-output.xml")))
 
   }
