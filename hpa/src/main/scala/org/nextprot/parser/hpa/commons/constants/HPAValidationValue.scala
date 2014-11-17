@@ -6,7 +6,7 @@ package org.nextprot.parser.hpa.commons.constants
 object HPAValidationValue extends Enumeration {
 
   type HPAValidationValue = Value
-  val Supportive, Not_Supportive, Uncertain = Value
+  val Supportive, NotSupportive, Uncertain = Value
   
   /**
    * Transforms value of XML to object enumeration
@@ -16,7 +16,7 @@ object HPAValidationValue extends Enumeration {
     s match {
       case "uncertain" => return Uncertain;
       case "supportive" => return Supportive;
-      case "non-supportive" => return Not_Supportive;
+      case "non-supportive" => return NotSupportive;
       case _ => throw new Exception(s + " not found for HPAValidationValue")
     }
     
