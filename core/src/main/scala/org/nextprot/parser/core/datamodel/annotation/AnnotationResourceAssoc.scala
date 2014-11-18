@@ -4,7 +4,7 @@ import org.nextprot.parser.core.constants.NXQuality.NXQuality
 
 class AnnotationResourceAssoc(
     val _resourceClass: String, val _resourceType: String, val _accession: String, 
-    val _cvDatabaseName: String, val _ecoCode: String,  val _ecoName: String, val _isNegative: Boolean, 
+    val _cvDatabaseName: String, val _eco: String , val _isNegative: Boolean, 
     val _type: String, val _quality: NXQuality, val _dataSource: String,
     val _props: List[AnnotationResourceAssocProperty], val _expContext: ExperimentalContextSynonym
     ) {
@@ -18,7 +18,7 @@ class AnnotationResourceAssoc(
         </cvDatabase>
       </resource>
       <evidenceCode>
-      	<cvName>{ _ecoCode }</cvName>
+      	<cvName>{ _eco }</cvName>
         <cvTermCategory>ECO</cvTermCategory>
       </evidenceCode>
       {

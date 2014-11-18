@@ -10,6 +10,7 @@ import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextListWrapper
 import scala.collection.mutable.MutableList
 import akka.dispatch.Foreach
+import org.nextprot.parser.core.constants.EvidenceCode
 
 class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
 
@@ -22,7 +23,7 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
   def accumulate(ted: TissueExpressionData, cme: CalohaMapEntry) = {
     if (!accu.containsKey(cme.ac)) accu.put(cme.ac, (cme.name, new TreeSet[String]()))
     val (_, s) = accu.get(cme.ac)
-    s.add(HPAExpcontextUtil.getSynonymForXml(ted))
+    s.add(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization))
   }
 
   // for mapping caloha: try to match with ti + ct first and then with ct only 
@@ -99,10 +100,11 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
     }
     val ecwlist = ecwlist1.map(e => {
       val ac = e._1; // unused ! but dont want to ignore it
-      val name = e._2._1;
+      val tissue = e._2._1;
       val syns = e._2._2;
+      val eco = EvidenceCode.ImmunoLocalization;
       val ecslist = syns.map(new ExperimentalContextSynonym(_)).toList
-      new ExperimentalContextWrapper(name, ecslist)
+      new ExperimentalContextWrapper(tissue, eco.code , eco.name ,ecslist)
     }).toList;
     val eclw = new ExperimentalContextListWrapper(ecwlist.toList, problems.toList.sorted)
     return eclw

@@ -1,6 +1,8 @@
 package org.nextprot.parser.hpa.expcontext
 
 import scala.xml.Node
+import org.nextprot.parser.core.constants.EvidenceCode
+
 
 object HPAExpcontextUtil {
 
@@ -28,12 +30,12 @@ object HPAExpcontextUtil {
 	
 	// eco->spatial pattern of protein expression evidence;tissue->liver;
 	// eco->spatial pattern of protein expression evidence;tissue->adrenal gland;cell type->glandular cells;
-	def getSynonymForXml(ted: TissueExpressionData) : String = {
+	def getSynonymForXml(ted: TissueExpressionData, eco: EvidenceCode.Value) : String = {
 		val cleanTissue = ted.tissue.replace(";", ",").toLowerCase()
 		if (ted.cellType==null) {
-			"eco->spatial pattern of protein expression evidence;tissue->"+ cleanTissue +";"
+			"eco->"+ eco.name + ";tissue->"+ cleanTissue +";"
 		} else {
-			"eco->spatial pattern of protein expression evidence;tissue->"+ cleanTissue +";cell type->"+ ted.cellType.toLowerCase() +";"
+			"eco->"+ eco.name + ";tissue->"+ cleanTissue +";cell type->"+ ted.cellType.toLowerCase() +";"
 		}
 	}
 	
