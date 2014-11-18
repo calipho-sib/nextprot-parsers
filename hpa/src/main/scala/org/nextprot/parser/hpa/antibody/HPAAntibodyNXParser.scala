@@ -16,6 +16,8 @@ import org.nextprot.parser.core.datamodel.antibody.AntibodyIdentifierPropertyLis
 import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssoc
 import org.nextprot.parser.core.datamodel.annotation.RawAnnotation
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
+import org.nextprot.parser.core.constants.EvidenceCode
+
 import org.nextprot.parser.hpa.HPAUtils
 
 /**
@@ -87,8 +89,7 @@ class HPAAntibodyNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier,
       _cvDatabaseName = "HPA",
-      _ecoCode = "ECO:0000087",
-      _ecoName = "Immunolocalization evidence",
+      _eco = EvidenceCode.ImmunoLocalization.code,
       _isNegative = false,
       _type = "SOURCE",
       _quality = null,

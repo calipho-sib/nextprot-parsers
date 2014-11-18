@@ -18,6 +18,7 @@ import org.nextprot.parser.hpa.HPAConfig
 import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.core.actor.NXWorker
 import org.nextprot.parser.hpa.datamodel.SubcellularHPAAnnotationsWrapper
+import org.nextprot.parser.core.constants.EvidenceCode
 
 object HPASubcellCvTerms {
   val map = HPAConfig.readHPACVTermsMapFile;
@@ -100,8 +101,7 @@ class HPASubcellNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier + "/subcellular",
       _cvDatabaseName = "HPA",
-      _ecoCode = "ECO:0001053", // check with Anne again, not found cv-eco.proxied
-      _ecoName = "Some ECO name for ECO:0001053",
+      _eco = EvidenceCode.ImmunocytoChemistry.code,
       _isNegative = false,
       _type = "EVIDENCE",
       _quality = quality,

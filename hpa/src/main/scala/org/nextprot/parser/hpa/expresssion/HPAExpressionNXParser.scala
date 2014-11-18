@@ -22,6 +22,8 @@ import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssocProp
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym
 import org.nextprot.parser.hpa.datamodel.ExpHPAAnnotationsWrapper
 import org.nextprot.parser.core.stats.Stats
+import org.nextprot.parser.core.constants.EvidenceCode
+
 
 object Caloha {
   val map = HPAExpcontextConfig.readTissueMapFile.map;
@@ -55,7 +57,7 @@ class HPAExpressionNXParser extends NXParser {
 
     val tsAnnotations = teds.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
       map(ted => {
-        val syn = HPAExpcontextUtil.getSynonymForXml(ted)
+        val syn = HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization)
         extractTissueSpecificityAnnotation(ensgId, quality, syn, ted.level, assayType)
       }).toList
 
@@ -130,8 +132,7 @@ class HPAExpressionNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier + "/" + assayType + "/" + tissue,
       _cvDatabaseName = "HPA",
-      _ecoCode = "ECO:0000087",
-      _ecoName = "Immunolocalization evidence",
+      _eco = EvidenceCode.ImmunoLocalization.code,
       _isNegative = negState,
       _type = "EVIDENCE",
       _quality = quality,
@@ -155,8 +156,7 @@ class HPAExpressionNXParser extends NXParser {
         _resourceType = "DATABASE",
         _accession = identifier + "/" + assayType,
         _cvDatabaseName = "HPA",
-        _ecoCode = "ECO:0000087",
-        _ecoName = "Immunolocalization evidence",
+        _eco = EvidenceCode.ImmunoLocalization.code,
         _isNegative = false,
         _type = "EVIDENCE",
         _quality = quality,

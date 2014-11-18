@@ -4,7 +4,7 @@ import org.nextprot.parser.core.datamodel.TemplateModel
 import org.nextprot.parser.core.constants.NXQuality
 import org.nextprot.parser.core.constants.NXQuality._
 
-class ExperimentalContextWrapper(val _tissue: String, val _syns: List[ExperimentalContextSynonym])  {
+class ExperimentalContextWrapper(val _tissue: String, val _ecoName:String, val _ecoAccession:String , val _syns: List[ExperimentalContextSynonym])  {
 
 	def toXML = {
 	    <com.genebio.nextprot.dataloader.context.ExperimentalContextWrapper>
@@ -15,8 +15,8 @@ class ExperimentalContextWrapper(val _tissue: String, val _syns: List[Experiment
 					<cvTermCategory>NEXTPROT_TISSUE</cvTermCategory>
 				</tissue>
 				<detectionMethod>
-					<cvName>Immunolocalization evidence</cvName>
-					<cvAccession>ECO:0000087</cvAccession>
+					<cvName>{ _ecoName }</cvName>
+					<cvAccession>{ _ecoAccession }</cvAccession>
 					<cvTermCategory>ECO</cvTermCategory>
 				</detectionMethod>
 		{
