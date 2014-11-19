@@ -13,7 +13,7 @@ name := "nextprot-parser-hpa"
 
 organization := "org.nextprot.parser.hpa"
 
-version := "0.20.0-SNAPSHOT"
+version := "0.21.0-SNAPSHOT"
 
 description := "HPA parser used for tissues subcellular locations and antibodies"
 

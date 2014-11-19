@@ -14,7 +14,7 @@ import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 object HPAQuality {
   
   
-  /**
+  /*
    * Returns the global quality for sub cellular location or tissue expression
    * @section = tissuueExpression or subcellularLocation
    */
