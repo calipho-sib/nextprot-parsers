@@ -50,7 +50,6 @@ object HPAQuality {
       case "ape" => {
         Stats ++ ("ENTRIES-TYPE", "ape");
         return getQualityForIntegratedAntibody(entryElem, section)
-        //return getQualityForIntegratedAntibody2014(entryElem, section) 
       }
       case _ => {
         Stats ++ ("ENTRIES-TYPE", "unknown: " + abtype);
