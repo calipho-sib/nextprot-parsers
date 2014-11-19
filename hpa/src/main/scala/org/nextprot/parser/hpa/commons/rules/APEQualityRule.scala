@@ -8,7 +8,7 @@ import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 case class APEQualityRule(reliability: HPAReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
 
 /* 
- * Specs quality rules for tissue expression / subcell.location - table for APE (and other cases since 11.2014), document version 12
+ * Specs quality rules for tissue expression / subcell.location - table for APE, document version 12 en evolution
  * 
  * HPA Reliability		HPA PA				       		WB						        	 NP
  * 
@@ -23,16 +23,24 @@ HPA Reliability			HPA PA			        		WB						         	 NP
  6 Uncertain		   supportive all AB		    supportive all AB				    	Silver
  7 Uncertain		   supportive all AB		    uncert./non-supp. at least one AB		Silver
  8 Uncertain		   uncertain at least one AB	supportive all AB						Silver
- 9 Uncertain		   uncertain at least one AB	uncert./non-supp. at least one AB		Bronze
+ 9 Uncertain		   uncertain at least one AB	mix of uncert, non-supp					Bronze << WB
  
 HPA Reliability			HPA PA				           	WB									 NP
 
 10 Non-supportive      supportive all AB		    supportive all AB						Bronze
-11 Non-supportive	   supportive all AB		    uncert./non-supp. at least one AB		Bronze
+11 Non-supportive	   supportive all AB		    Anything but all supportive 			Bronze << WB
 12 Non-supportive	   uncertain at least one AB	supportive all AB						Bronze
-13 Non-supportive	   uncertain at least one AB	uncert./non-supp. at least one AB		Bronze
+13 Non-supportive	   uncertain at least one AB	Anything but all supportive				Bronze << WB
+
+... missing cases
+
  * 
  */
+  
+
+  
+  
+  
   /** 
    *  Validated with Paula 14.11.2014
    */

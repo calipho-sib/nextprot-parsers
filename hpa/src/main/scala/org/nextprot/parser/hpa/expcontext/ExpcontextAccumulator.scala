@@ -52,12 +52,15 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
     println("--------------------")
     println("Problems in accu:")
     problems.foreach(println(_))
+    println("total problems:" + problems.size);
     println("--------------------")
   }
 
   def showUnmappedTeds() = {
+    println("--------------------")
     problems.foreach(println(_));
     println("total problems:" + problems.size);
+    println("--------------------")
   }
 
   def showState(fname: String) = {

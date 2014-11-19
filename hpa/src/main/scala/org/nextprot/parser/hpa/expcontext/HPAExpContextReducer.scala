@@ -24,7 +24,15 @@ class HPAExpContextReducer extends NXPrettyReducer {
   }
 
   def end = {
+        
+    println("----------------------")
+    println("Tissue mapping errors:")
+    accumulator.problems.foreach(println(_))
+    println("count:"+accumulator.problems.size)
+    println("----------------------")    
+    
     if (calohaMapper.errors.size>0) {
+    	println(calohaMapper)
         println("ERROR(S) in caloha mapping file:")
     	calohaMapper.errors.foreach(println(_))
     }

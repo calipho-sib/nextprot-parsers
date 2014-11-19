@@ -15,7 +15,6 @@ import java.io.FileWriter
 
 class AllExpcontextEntriesTest extends HPAExpcontextTestBase {
 
-  //override val directory = "/Users/pmichel/data/hpa/20140121";
   System.setProperty("hpa.tissue.mapping.file", "src/test/resources/NextProt_tissues.from-db.txt")
 
   "The HPAExpcontextNXParser " should " parse all HPA files and generate a XML output" in {

@@ -39,5 +39,8 @@ object CASE_IFTYPE_UNKNOWN extends ErrorCase("The IF analysis type is neither AP
  */
 object CASE_ASSAY_TYPE_NOT_TISSUE extends ErrorCase("The tissue expression assay type is discarded");
 
-
+/**
+ * occurs when no mapping was found in the calohaMapper object which is the dictionary of known cv-terms
+ */
+//object CASE_TISSUE_MAPPING_NOT_FOUND extends ErrorCase("No mapping found for tissue");
 
