@@ -9,7 +9,7 @@
     <tissueExpression assayType="tissue" technology="IH" type="selected">
       <summary type="tissue"><![CDATA[Cytoplasmic and often membranous expression in several cell types. 
 Caution: Based on antibodies targeting proteins from multiple genes.]]></summary>
-      <verification type="reliability">very low</verification>
+      <verification type="reliability">supportive</verification>
       <image imageType="selected">
         <tissue>liver</tissue>
         <imageUrl size="medium">http://www.proteinatlas.org/images/46346/122957_A_8_4_rna_selected.jpg</imageUrl>

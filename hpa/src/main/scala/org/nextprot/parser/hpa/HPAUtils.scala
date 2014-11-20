@@ -8,6 +8,7 @@ import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.subcell.cases.CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE
 
 object HPAUtils {
 
@@ -51,7 +52,9 @@ object HPAUtils {
       Stats ++ ("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
       HPAValidationValue.withName("supportive");
     } else {
-      return HPAValidationValue.withName((antibodyElem \ "proteinArray" \ "verification").text);
+      val res = HPAValidationValue.withName((antibodyElem \ "proteinArray" \ "verification").text);
+      if (res.equals(NotSupportive)) throw new NXException(CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE) // rule # N1
+      return res
 
     }
   }

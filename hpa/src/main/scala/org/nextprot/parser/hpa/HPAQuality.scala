@@ -62,7 +62,8 @@ object HPAQuality {
   
   def getReliabilityScore(entryElem: NodeSeq, section: String) : HPAReliabilityValue = {
      //Extract experiment reliability
-    return HPAReliabilityValue withName (entryElem \ section \ "verification").text
+     val res = HPAReliabilityValue withName (entryElem \ section \ "verification").text
+     return res
   }
 
   /**

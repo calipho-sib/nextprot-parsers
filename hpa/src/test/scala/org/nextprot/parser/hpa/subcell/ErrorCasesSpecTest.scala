@@ -13,7 +13,7 @@ import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.hpa.datamodel.HPAAnnotationsWrapper
 
-class ErrosCasesSpec extends HPASubcellTestBase {
+class ErrorCasesSpec extends HPASubcellTestBase {
 
   "The HPANXParser parser" should " be an instance of NXParser " in {
     val parser = new HPASubcellNXParser();

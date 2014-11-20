@@ -46,9 +46,6 @@
      <preComputedFeatures>false</preComputedFeatures>
      <wrappedBean><com.genebio.nextprot.dataloader.dto.RawAnnotation>
       
-  
-
-
 
       <isPropagableByDefault>false</isPropagableByDefault>
       
@@ -79,9 +76,6 @@
           </resourceAssocs>
     </com.genebio.nextprot.dataloader.dto.RawAnnotation><com.genebio.nextprot.dataloader.dto.RawAnnotation>
       
-  
-
-
 
       <isPropagableByDefault>false</isPropagableByDefault>
       

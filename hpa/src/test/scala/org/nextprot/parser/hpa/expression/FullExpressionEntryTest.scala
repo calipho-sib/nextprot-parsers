@@ -93,7 +93,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supOne.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAValidationIntegratedValue.SupportiveOne)
+    assert(result == HPAValidationIntegratedValue.BestIsSupportive)
   }
 
   "The HPAValidationIntegratedValue for western blot " should " equals uncertainAll for this file" in {
@@ -109,7 +109,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncOne.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAValidationIntegratedValue.UncertainOne)
+    assert(result == HPAValidationIntegratedValue.BestIsUncertain)
   }
 
   "The HPAValidationIntegratedValue for western blot " should " equals nonSupportive for this file" in {

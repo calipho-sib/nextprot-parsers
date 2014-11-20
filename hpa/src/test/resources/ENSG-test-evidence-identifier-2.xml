@@ -9,7 +9,7 @@
     </identifier>
     <tissueExpression assayType="tissue" technology="IH" type="APE">
       <summary type="tissue"><![CDATA[General cytoplasmic expression.]]></summary>
-      <verification type="reliability">medium</verification>
+      <verification type="reliability">supportive</verification>
       <image imageType="selected">
         <tissue>liver</tissue>
         <imageUrl size="medium">http://www.proteinatlas.org/images/41938/90119_A_7_4_rna_selected.jpg</imageUrl>

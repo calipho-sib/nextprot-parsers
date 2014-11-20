@@ -6,6 +6,7 @@ import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_UNIPROT_MAPPING
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
+import org.nextprot.parser.hpa.subcell.cases.CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE
 
 class HPAUtilsTest extends FlatSpec with Matchers {
 
@@ -22,6 +23,19 @@ class HPAUtilsTest extends FlatSpec with Matchers {
 
     assert(thrown.getNXExceptionType == CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL)
 
+  }
+  
+  it should "throws an error when protein array verification is not supportive" in {
+   
+    val thrown = intercept[NXException] {
+    val xml =  <antibody id="HPA123">
+    			<proteinArray technology="PA">
+    				<verification type="validation">non-supportive</verification>
+    			</proteinArray>
+              </antibody>;
+      HPAUtils.getProteinArray(xml)
+    }
+    assert(thrown.getNXExceptionType == CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE)
   }
 
   it should "return the antibody" in {

@@ -34,6 +34,12 @@ object CASE_MULTIPLE_UNIPROT_MAPPING extends DiscardCase("There is no Uniprot / 
 object CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE extends DiscardCase("The subcellular mapping for the given location is not applicable in the domain of NextProt (it appears a '-' in the mapping file) ");
 
 /**
- * Case when the antibody used for the experiment is not protein specific (mult-targeting)
+ * Case when the antibody used for the experiment is not protein specific (multi-targeting)
  */
 object CASE_MULTITARGETING_ANTIBODY extends DiscardCase("The antibodies used in the experiment is not specific (multi-targeting)");
+
+/**
+ * Value for protein array verification we don't expect to see in the data and for which no quality rule exists
+ */
+
+object CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE extends DiscardCase("Antibody with non supportive verification in protein array");
