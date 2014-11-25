@@ -82,7 +82,7 @@ object HPAQuality {
   }
 
   /**
-   * Returns the quality for the APE case - version 2014 - not used yet
+   * Returns the quality for the APE case - version 2014
    * section can be either subcellularLocation or tissueExpression
    */
   def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
