@@ -11,12 +11,12 @@ class HPAValidationIntegratedValueTest extends FlatSpec with Matchers {
 
   it should " get a SupportiveAll if all values are Supportive" in {
     val integratedValue = HPAValidationIntegratedValue.integrate(List(Supportive, Supportive));
-    assert(integratedValue == SupportiveAll)
+    assert(integratedValue == AllSupportive)
   }
 
   it should " get SupportiveAll if there is only one value and this value is Supportive " in {
     val integratedValue = HPAValidationIntegratedValue.integrate(List(Supportive));
-    assert(integratedValue == SupportiveAll)
+    assert(integratedValue == AllSupportive)
   }
 
   it should " get a SupportiveOne if there is only one Supportive among other values " in {
@@ -26,7 +26,7 @@ class HPAValidationIntegratedValueTest extends FlatSpec with Matchers {
 
   it should " get a UncertainAll if all values are uncertains " in {
     val integratedValue = HPAValidationIntegratedValue.integrate(List(Uncertain, Uncertain));
-    assert(integratedValue == UncertainAll)
+    assert(integratedValue == AllUncertain)
   }
 
   it should " get a UncertainOne if all one is uncertain among not supportive " in {
@@ -36,12 +36,12 @@ class HPAValidationIntegratedValueTest extends FlatSpec with Matchers {
 
   it should " get a NotSupportiveAll if there is only one value and this value is not supportive " in {
     val integratedValue = HPAValidationIntegratedValue.integrate(List(NotSupportive));
-    assert(integratedValue == NotSupportiveAll)
+    assert(integratedValue == AllNotSupportive)
   }
 
   it should " get a NotSupportiveAll if all are not supprotive " in {
     val integratedValue = HPAValidationIntegratedValue.integrate(List(NotSupportive));
-    assert(integratedValue == NotSupportiveAll)
+    assert(integratedValue == AllNotSupportive)
   }
 
 }

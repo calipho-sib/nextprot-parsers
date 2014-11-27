@@ -8,6 +8,11 @@ import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
 import org.nextprot.parser.core.stats.Stats
 
+/**
+ * Rules as specified in the first document.
+ * To see if they are ok
+ * 
+ */
 case class APEQualityRuleSpecs(reliability: HPAReliabilityValue, pas: List[HPAValidationValue], wbs: List[HPAValidationValue]) {
 
   def getQuality: NXQuality = {
