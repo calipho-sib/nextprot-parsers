@@ -31,7 +31,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
    *
    */
 
-  "The HPAExpressionNXParser " should " deal with HPA files with zero or multiple uniprot ids" in {
+  ignore should " deal with HPA files with zero or multiple uniprot ids" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
 
@@ -50,7 +50,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
   /**
    * No such cases were found
    */
-  "The HPAExpressionNXParser " should " or may deal with HPA files with zero or multiple tissueExpression elements" in {
+  ignore should " or may deal with HPA files with zero or multiple tissueExpression elements" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     getFilesForParsing(dir).foreach(f => {
@@ -67,7 +67,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
   /**
    * No such cases were found
    */
-  "The HPAExpressionNXParser " should " or may deal with HPA files with tissueExpression elements with technology not equals to IH" in {
+  ignore should " or may deal with HPA files with tissueExpression elements with technology not equals to IH" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     getFilesForParsing(dir).foreach(f => {
@@ -84,7 +84,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
   /**
    * No such cases were found
    */
-  "The HPAExpressionNXParser " should " or may deal with HPA files with tissueExpression elements with assayType not equals to tissue" in {
+  ignore should " or may deal with HPA files with tissueExpression elements with assayType not equals to tissue" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     getFilesForParsing(dir).foreach(f => {
@@ -101,7 +101,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
   /**
    * No such cases were found
    */
-  "The HPAExpressionNXParser " should " throw an exception on unexpected tissue expression attributes" in {
+  ignore should " throw an exception on unexpected tissue expression attributes" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     getFilesForParsing(dir).foreach(f => {
@@ -117,7 +117,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
    * All files which are not APE (selected / single) for the tissue expression
    * have one and only one antibody describing tissueExpression for assayType = tissue
    */
-  "The HPAExpressionNXParser " should " check that there is one and only one antibody having a tissueExpression with assayType equals to tissue if main tissue expression type is single or selected" in {
+  ignore should " check that there is one and only one antibody having a tissueExpression with assayType equals to tissue if main tissue expression type is single or selected" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     var count: Integer = 0
@@ -140,7 +140,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
 
   }
 
-  "The HPAExpressionNXParser " should " discard files where no antibody has a tissueExpression with assayType tissue" in {
+  ignore should " discard files where no antibody has a tissueExpression with assayType tissue" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     var count: Integer = 0
@@ -160,7 +160,7 @@ class ExpressionExplorationTest extends HPAExpressionTestBase {
 
   }
 
-  "The HPAExpressionNXParser " should " discard files with type selected where multiple antibodies have a tissueExpression with assayType tissue" in {
+  ignore should " discard files with type selected where multiple antibodies have a tissueExpression with assayType tissue" in {
 
     val dir = "nowhere/Users/pmichel/data/hpa/20140121";
     var count: Integer = 0

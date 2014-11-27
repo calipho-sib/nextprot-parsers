@@ -53,14 +53,15 @@ class AllExpcontextEntriesTest extends HPAExpcontextTestBase {
       i = i + 1
       if (lastSize != output.length || i % 1000 == 0) {
         lastSize = output.length
-        println("files processed: " + i + ", output length: " + lastSize)
+        //println("files processed: " + i + ", output length: " + lastSize)
       }
     })
-    println("files processed: " + i + ", output length: " + lastSize)
-    val fw = new FileWriter("ExpContexts.xml", false)
-    fw.write(output)
-    fw.close
-    println("end")
+    //Printing is not a test!
+    //println("files processed: " + i + ", output length: " + lastSize)
+    //val fw = new FileWriter("ExpContexts.xml", false)
+    //fw.write(output)
+    //fw.close
+    //println("end")
   }
 
 }

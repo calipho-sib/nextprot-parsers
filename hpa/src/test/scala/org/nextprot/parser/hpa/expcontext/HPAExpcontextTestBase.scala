@@ -75,14 +75,15 @@ abstract class HPAExpcontextTestBase extends FlatSpec with Matchers {
       i = i + 1
       if (lastSize != output.length || i % 1000 == 0) {
         lastSize = output.length
-        println("files processed: " + i + ", output length: " + lastSize)
+        //println("files processed: " + i + ", output length: " + lastSize)
       }
     })
-    if (saveOutput) {
+    //printing is not a test!!! 
+/*    if (saveOutput) {
       val fw = new FileWriter("ExpContexts.xml", false)
       fw.write(output)
       fw.close
-    }
+    }*/
     return true
   }
 
