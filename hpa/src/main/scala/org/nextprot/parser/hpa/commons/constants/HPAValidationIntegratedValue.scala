@@ -9,7 +9,7 @@ import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
  */
 object HPAValidationIntegratedValue extends Enumeration {
   type HPAValidationIntegratedValue = Value
-  val SupportiveAll, BestIsSupportive, UncertainAll , BestIsUncertain , NotSupportiveAll = Value
+  val AllSupportive, BestIsSupportive, AllUncertain , BestIsUncertain , AllNotSupportive = Value
 
   /**
    * Transforms values 
@@ -17,15 +17,15 @@ object HPAValidationIntegratedValue extends Enumeration {
   final def integrate(values: List[HPAValidationValue])(implicit dummy: DummyImplicit): HPAValidationIntegratedValue = {
     
     val sup = values.filter(_ == Supportive).size
-    if (sup == values.size) return SupportiveAll
+    if (sup == values.size) return AllSupportive
     
     if (sup >= 1) return BestIsSupportive
     val unc = values.filter(_  == Uncertain).size
     
-    if (unc == values.size) return UncertainAll
+    if (unc == values.size) return AllUncertain
     if (unc >= 1) return BestIsUncertain
     
-    return NotSupportiveAll
+    return AllNotSupportive
 
   }
 }

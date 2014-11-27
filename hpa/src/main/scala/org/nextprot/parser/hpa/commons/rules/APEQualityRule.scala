@@ -21,10 +21,10 @@ case class APEQualityRule(reliability: HPAReliabilityValue, hpaPA: HPAValidation
   def getQuality: NXQuality = {
     val res: NXQuality =
      APEQualityRule.this match {
-      case APEQualityRule(Supportive, SupportiveAll, SupportiveAll) => GOLD     // rule # G1
-      case APEQualityRule(Supportive, SupportiveAll, BestIsSupportive) => GOLD   // rule # G2
-      case APEQualityRule(Uncertain, UncertainAll,_) => BRONZE					// rule # B6
-      case APEQualityRule(Uncertain, NotSupportiveAll, _) => BRONZE             // rule # N1 (exception thrown before arriving here, see CASE_NO_RULE*)
+      case APEQualityRule(Supportive, AllSupportive, AllSupportive) => GOLD     // rule # G1
+      case APEQualityRule(Supportive, AllSupportive, BestIsSupportive) => GOLD   // rule # G2
+      case APEQualityRule(Uncertain, AllUncertain,_) => BRONZE					// rule # B6
+      case APEQualityRule(Uncertain, AllNotSupportive, _) => BRONZE             // rule # N1 (exception thrown before arriving here, see CASE_NO_RULE*)
       case APEQualityRule(NotSupportive, _, _) => BRONZE  						// rule # B5
       case _ => SILVER
     }

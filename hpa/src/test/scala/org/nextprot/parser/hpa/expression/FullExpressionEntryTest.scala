@@ -81,11 +81,11 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     }
   }
 
-  "The HPAValidationIntegratedValue for western blot " should " equals supportiveAll for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals AllSupportive for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supAll.xml"
     val root = scala.xml.XML.loadFile(fname)
-    assert(HPAQuality.getAPEWesternBlotQuality(root) == HPAValidationIntegratedValue.SupportiveAll)
+    assert(HPAQuality.getAPEWesternBlotQuality(root) == HPAValidationIntegratedValue.AllSupportive)
   }
 
   "The HPAValidationIntegratedValue for western blot " should " equals supportiveOne for this file" in {
@@ -96,12 +96,12 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     assert(result == HPAValidationIntegratedValue.BestIsSupportive)
   }
 
-  "The HPAValidationIntegratedValue for western blot " should " equals uncertainAll for this file" in {
+  "The HPAValidationIntegratedValue for western blot " should " equals AllUncertain for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncAll.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAValidationIntegratedValue.UncertainAll)
+    assert(result == HPAValidationIntegratedValue.AllUncertain)
   }
 
   "The HPAValidationIntegratedValue for western blot " should " equals uncertainOne for this file" in {
@@ -117,7 +117,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-nonsupp.xml"
     val root = scala.xml.XML.loadFile(fname)
     val result = HPAQuality.getAPEWesternBlotQuality(root)
-    assert(result == HPAValidationIntegratedValue.NotSupportiveAll)
+    assert(result == HPAValidationIntegratedValue.AllNotSupportive)
   }
 
   "The HPAExpressionNXParser " should " process successfully a file with single antibody" in {
