@@ -16,7 +16,6 @@ class ExperimentalContextWrapper(val _tissue: String, val _ecoName:String, val _
 				</tissue>
 				<detectionMethod>
 					<cvName>{ _ecoName }</cvName>
-					<cvAccession>{ _ecoAccession }</cvAccession>
 					<cvTermCategory>ECO</cvTermCategory>
 				</detectionMethod>
 		{
