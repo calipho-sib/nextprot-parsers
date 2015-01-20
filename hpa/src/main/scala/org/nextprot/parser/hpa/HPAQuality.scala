@@ -18,7 +18,7 @@ object HPAQuality {
    * Returns the global quality for sub cellular location or tissue expression
    * @section = tissuueExpression or subcellularLocation
    */
-  def getQuality(entryElem: NodeSeq, section: String): NXQuality = {
+  def getQuality(entryElem: NodeSeq, section: String): (NXQuality, String) = {
     val abtype = (entryElem \ section \ "@type").text.toLowerCase();
 
     abtype match {
@@ -69,15 +69,18 @@ object HPAQuality {
   /**
    * Returns the quality for the single and selected case
    */
-  def getQualityForOneAntibody(entryElem: NodeSeq, antibodyElem: NodeSeq, section: String): NXQuality = {
+  def getQualityForOneAntibody(entryElem: NodeSeq, antibodyElem: NodeSeq, section: String): (NXQuality, String)  = {
 
     val reliability = getReliabilityScore(entryElem, section)
     val pa = HPAUtils.getProteinArray(antibodyElem)
     val wb = HPAUtils.getWesternBlot(antibodyElem)
     
-    new APEQualityRule(reliability, 
+    val rule = new APEQualityRule(reliability, 
     				   HPAValidationIntegratedValue.integrate(List(pa)), 
-    				   HPAValidationIntegratedValue.integrate(List(wb))).getQuality;
+    				   HPAValidationIntegratedValue.integrate(List(wb)));
+    
+    return (rule.getQuality, rule.toString);
+
 
   }
 
@@ -85,14 +88,15 @@ object HPAQuality {
    * Returns the quality for the APE case - version 2014
    * section can be either subcellularLocation or tissueExpression
    */
-  def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
+  def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): (NXQuality, String) = {
 
     //Extract experiment reliability
     val pa = getAPEPtroteinArrayQuality(entryElem, section)
     val wb = getAPEWesternBlotQuality(entryElem, section)
     val reliability = getReliabilityScore(entryElem, section)
 
-    return new APEQualityRule(reliability, pa, wb).getQuality;
+    val rule = new APEQualityRule(reliability, pa, wb);
+    return (rule.getQuality, rule.toString);
 
   }
 

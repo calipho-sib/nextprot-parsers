@@ -31,6 +31,14 @@ object Caloha {
 
 class HPAExpressionNXParser extends NXParser {
 
+  
+  var pInfo : String = null;
+  
+  def parsingInfo: String = {
+    return pInfo;
+  }
+  
+
   def parse(fileName: String): TemplateModel = {
 
     val teSection = "tissueExpression"
@@ -43,7 +51,15 @@ class HPAExpressionNXParser extends NXParser {
     val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem)
     HPAValidation.checkPreconditionsForExpr(entryElem)
 
-    val quality = HPAQuality.getQuality(entryElem, teSection);
+    val qualityRule = HPAQuality.getQuality(entryElem, teSection);
+    val quality = qualityRule._1;
+    val ruleUsed = qualityRule._2;
+
+    //Stats should not appear here
+    Stats ++ ("RULES_FOR_" + quality, ruleUsed);
+
+    pInfo = quality.toString();  // + "\t" + ruleUsed;
+    	
     if (quality.equals(BRONZE)) {
             Stats ++ ("BRONZE", "bronze")
             throw new NXException(CASE_BRONZE_QUALITY);
