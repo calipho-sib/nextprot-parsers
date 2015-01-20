@@ -8,11 +8,13 @@ import scala.collection.mutable.ArrayBuffer
 import akka.routing.RoundRobinLike
 import akka.routing.RoundRobinRouter
 import java.util.Collection
+import java.io.File
 import org.nextprot.parser.core.actor.message.EndActorSystemMSG
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.NXProperties
 import org.nextprot.parser.core.stats.Stats
+import org.nextprot.parser.core.actor.message.NXProcessedFileMSG
 
 /**
  * Actor responsible responsible to print a final report and shutdown the actor system.
@@ -21,20 +23,26 @@ import org.nextprot.parser.core.stats.Stats
 
 class NXListener extends Actor {
 
+  private val detailedInfoMsgs = ArrayBuffer[NXProcessedFileMSG]();
+
   val time = System.nanoTime();
 
   def receive = {
     case m: EndActorSystemMSG => {
       Stats.printStats;
-      //printStats(m.success, m.goldCount, m.silverCount, m.errors, m.files);
-      //printDetails(m.errors)
+      writeDetails;
+      
       context.system.shutdown()
     }
+    case m: NXProcessedFileMSG => {
+      detailedInfoMsgs.append(m);
+    }
     case m: Any => {
-      println("Unexpected message received " + m )
+      println("Unexpected message received " + m)
     }
   }
 
+  /*
   def printStats(success: Int, goldCount: Int, silverCount: Int, errors: Traversable[NXException], files: List[File]) = {
     var existError = false;
     println
@@ -63,11 +71,27 @@ class NXListener extends Actor {
     } else {
       println("Parsing fully successful. Bravo!")
     }
+  }*/
+
+  def writeDetails() = {
+
+    val detailsFileName = "collect.tsv";
+    val fw = new FileWriter(detailsFileName, false)
+    
+    println("Writing details in " + detailsFileName);
+
+    detailedInfoMsgs.sortBy(m => m.file.getName()).foreach(
+      m => {
+        fw.write(m.file.getName() + "\t" + m.info + "\n")
+      });
+    
+    fw.close();
   }
 
-  def printDetails(errors: Traversable[NXException]) = {
+  /*
+  def printErrorDetails(errors: Traversable[NXException]) = {
 
-    val detailsFileName = "hpa-subcell-details.log";
+    val detailsFileName = "hpa-subcell-error-details.log";
     val fw = new FileWriter(detailsFileName, false)
 
     errors.groupBy(e => e.getNXExceptionType).toList.map(
@@ -80,7 +104,7 @@ class NXListener extends Actor {
     println("Detailed file: " + detailsFileName)
     //println("Errors found:" + errors.size)
 
-  }
+  }*/
 
 }
 
