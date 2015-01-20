@@ -75,10 +75,10 @@ class NXListener extends Actor {
 
   def writeDetails() = {
 
-    val detailsFileName = "collect.tsv";
+    val detailsFileName = "details.tsv";
     val fw = new FileWriter(detailsFileName, false)
     
-    println("Writing details in " + detailsFileName);
+    println("Writing details in " + detailsFileName + ". Remember to put this file in stats folder with its correct name.");
 
     detailedInfoMsgs.sortBy(m => m.file.getName()).foreach(
       m => {
