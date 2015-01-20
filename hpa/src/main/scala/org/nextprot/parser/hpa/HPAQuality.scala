@@ -88,8 +88,8 @@ object HPAQuality {
   def getQualityForIntegratedAntibody(entryElem: NodeSeq, section: String): NXQuality = {
 
     //Extract experiment reliability
-    val pa = getAPEPtroteinArrayQuality(entryElem)
-    val wb = getAPEWesternBlotQuality(entryElem)
+    val pa = getAPEPtroteinArrayQuality(entryElem, section)
+    val wb = getAPEWesternBlotQuality(entryElem, section)
     val reliability = getReliabilityScore(entryElem, section)
 
     return new APEQualityRule(reliability, pa, wb).getQuality;
@@ -99,16 +99,16 @@ object HPAQuality {
   /**
    * Returns one out of the five values enumerated in HPAValidationIntegratedValue
    */
-  def getAPEPtroteinArrayQuality(entryElem: NodeSeq): HPAValidationIntegratedValue = {
-       val values = (entryElem \ "antibody").toList.map(ab => HPAUtils.getProteinArray(ab)).toList;
+  def getAPEPtroteinArrayQuality(entryElem: NodeSeq, section: String): HPAValidationIntegratedValue = {
+       val values = (entryElem \ "antibody").filter(el => !(el \ section).isEmpty).toList.map(ab => HPAUtils.getProteinArray(ab)).toList;
        return HPAValidationIntegratedValue.integrate(values);
   }
 
   /**
    * Returns one out of the five values enumerated in HPAValidationIntegratedValue
    */
-  def getAPEWesternBlotQuality(entryElem: NodeSeq): HPAValidationIntegratedValue = {
-       val values = (entryElem \ "antibody").toList.map(ab => HPAUtils.getWesternBlot(ab)).toList;
+  def getAPEWesternBlotQuality(entryElem: NodeSeq, section: String): HPAValidationIntegratedValue = {
+       val values = (entryElem \ "antibody").filter(el => !(el \ section).isEmpty).toList.map(ab => HPAUtils.getWesternBlot(ab)).toList;
        return HPAValidationIntegratedValue.integrate(values);
   }
 

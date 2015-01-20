@@ -51,8 +51,9 @@ class HPASubcellNXParser extends NXParser {
       throw new NXException(CASE_BRONZE_QUALITY);
 
     val identifier = (entryElem \ "identifier" \ "@id").text;
-    val annotations = ((entryElem \ "subcellularLocation" \ "data" \ "location").map(extractSubcellularLocationAnnotation(identifier, quality, _))).toList;
-
+    val annotations = ((entryElem \ "subcellularLocation" \ "data" \ "location").
+        map(extractSubcellularLocationAnnotation(identifier, quality, _))).filter(_!=null).toList;
+    if (annotations.isEmpty) throw new NXException(CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE)
     new SubcellularHPAAnnotationsWrapper(
       _quality = quality,
       _ensgAc = ensgId,
@@ -72,8 +73,7 @@ class HPASubcellNXParser extends NXParser {
 
     val location = HPASubcellCvTerms.map(locationElem.text);
     if (location._1.equals("-")) // Known cases of skipped mapping, eg: aggresome
-      throw new NXException(CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE, locationElem.text)
-
+      return null
     val status = (locationElem \ "@status").text;
 
     val cvterm = HPASubcellCvTerms.map(locationElem.text)._1;

@@ -2,6 +2,8 @@ package org.nextprot.parser.hpa.commons.constants
 
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue.HPAValidationValue
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
+import org.nextprot.parser.hpa.subcell.cases.CASE_VALUES_EMPTY
+import org.nextprot.parser.core.exception.NXException
 
 
 /**
@@ -15,6 +17,8 @@ object HPAValidationIntegratedValue extends Enumeration {
    * Transforms values 
    */
   final def integrate(values: List[HPAValidationValue])(implicit dummy: DummyImplicit): HPAValidationIntegratedValue = {
+    
+    if (values.isEmpty) throw new NXException(CASE_VALUES_EMPTY);
     
     val sup = values.filter(_ == Supportive).size
     if (sup == values.size) return AllSupportive

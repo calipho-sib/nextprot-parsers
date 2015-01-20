@@ -1,0 +1,67 @@
+[info] Running org.nextprot.parser.hpa.expression.HPAExpressionNXParserApp 
+[info] Looking for files like: ^ENSG.*.xml$ in directory: hpa-data ...
+[info] Done
+[info] FYI - No pretty print is used,if you want to use pretty print use the system property "-pretty" but be aware it is much slower....
+[info] Found 16613 files! Dispatching files between parsers ...
+[info] Dispatching files through 8 workers
+[info] Loading tissue map file: src/test/resources/NextProt_tissues.from-db.txt
+[info] Number of tissues in data lines:1964
+[info] Number of elements in syn2tissues:1963
+[info] Printing statistics:
+[info] 
+[info] Metric = COMPLEMENT-SPECS (3900)
+[info] > CAB antibodies as Supportive: 3542
+[info] > western blot missing => uncertain: 358
+[info] 
+[info] Metric = ENTRIES-OUTPUT (16613)
+[info] > DISCARDED CASES OF TYPE CASE_BRONZE_QUALITY$: 1889
+[info] > success: 14724
+[info] 
+[info] Metric = RULES_FOR_BRONZE (1889)
+[info] > APEQualityRule(Uncertain,AllUncertain,AllNotSupportive): 419
+[info] > APEQualityRule(Uncertain,AllUncertain,AllSupportive): 909
+[info] > APEQualityRule(Uncertain,AllUncertain,AllUncertain): 526
+[info] > APEQualityRule(Uncertain,AllUncertain,BestIsSupportive): 25
+[info] > APEQualityRule(Uncertain,AllUncertain,BestIsUncertain): 10
+[info] 
+[info] Metric = RULES_FOR_GOLD (2761)
+[info] > APEQualityRule(Supportive,AllSupportive,AllSupportive): 1921
+[info] > APEQualityRule(Supportive,AllSupportive,BestIsSupportive): 840
+[info] 
+[info] Metric = RULES_FOR_SILVER (11963)
+[info] > APEQualityRule(Supportive,AllSupportive,AllNotSupportive): 464
+[info] > APEQualityRule(Supportive,AllSupportive,AllUncertain): 507
+[info] > APEQualityRule(Supportive,AllSupportive,BestIsUncertain): 177
+[info] > APEQualityRule(Supportive,AllUncertain,AllNotSupportive): 80
+[info] > APEQualityRule(Supportive,AllUncertain,AllSupportive): 262
+[info] > APEQualityRule(Supportive,AllUncertain,AllUncertain): 64
+[info] > APEQualityRule(Supportive,AllUncertain,BestIsSupportive): 14
+[info] > APEQualityRule(Supportive,AllUncertain,BestIsUncertain): 3
+[info] > APEQualityRule(Supportive,BestIsSupportive,AllNotSupportive): 40
+[info] > APEQualityRule(Supportive,BestIsSupportive,AllSupportive): 380
+[info] > APEQualityRule(Supportive,BestIsSupportive,AllUncertain): 35
+[info] > APEQualityRule(Supportive,BestIsSupportive,BestIsSupportive): 308
+[info] > APEQualityRule(Supportive,BestIsSupportive,BestIsUncertain): 79
+[info] > APEQualityRule(Uncertain,AllSupportive,AllNotSupportive): 1681
+[info] > APEQualityRule(Uncertain,AllSupportive,AllSupportive): 3815
+[info] > APEQualityRule(Uncertain,AllSupportive,AllUncertain): 2485
+[info] > APEQualityRule(Uncertain,AllSupportive,BestIsSupportive): 604
+[info] > APEQualityRule(Uncertain,AllSupportive,BestIsUncertain): 225
+[info] > APEQualityRule(Uncertain,BestIsSupportive,AllNotSupportive): 55
+[info] > APEQualityRule(Uncertain,BestIsSupportive,AllSupportive): 216
+[info] > APEQualityRule(Uncertain,BestIsSupportive,AllUncertain): 46
+[info] > APEQualityRule(Uncertain,BestIsSupportive,BestIsSupportive): 311
+[info] > APEQualityRule(Uncertain,BestIsSupportive,BestIsUncertain): 112
+[info] 
+[info] Metric = CHECKING_TISSUE (16613)
+[info] > assayType: 16613
+[info] 
+[info] Metric = ENTRIES-TYPE (16613)
+[info] > ape: 16613
+[info] 
+[info] Metric = ENTRIES-QUALITY (14724)
+[info] > GOLD: 2761
+[info] > SILVER: 11963
+[info] 
+[info] Metric = BRONZE (1889)
+[info] > bronze: 1889

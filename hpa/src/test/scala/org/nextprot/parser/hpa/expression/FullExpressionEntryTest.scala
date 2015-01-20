@@ -85,14 +85,14 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supAll.xml"
     val root = scala.xml.XML.loadFile(fname)
-    assert(HPAQuality.getAPEWesternBlotQuality(root) == HPAValidationIntegratedValue.AllSupportive)
+    assert(HPAQuality.getAPEWesternBlotQuality(root, "tissueExpression") == HPAValidationIntegratedValue.AllSupportive)
   }
 
   "The HPAValidationIntegratedValue for western blot " should " equals supportiveOne for this file" in {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supOne.xml"
     val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root)
+    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
     assert(result == HPAValidationIntegratedValue.BestIsSupportive)
   }
 
@@ -100,7 +100,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncAll.xml"
     val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root)
+    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
     assert(result == HPAValidationIntegratedValue.AllUncertain)
   }
 
@@ -108,7 +108,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncOne.xml"
     val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root)
+    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
     assert(result == HPAValidationIntegratedValue.BestIsUncertain)
   }
 
@@ -116,7 +116,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
 
     val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-nonsupp.xml"
     val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root)
+    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
     assert(result == HPAValidationIntegratedValue.AllNotSupportive)
   }
 

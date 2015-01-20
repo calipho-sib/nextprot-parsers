@@ -38,4 +38,5 @@ object CASE_IFTYPE_UNKNOWN extends ErrorCase("The IF analysis type is neither AP
  * Error case where the subcellular mapping for the location is not found in the current mapping file (does not exist in the mapping file)
  */
 object CASE_ASSAY_TYPE_NOT_TISSUE extends ErrorCase("The tissue expression assay type is discarded");
+object CASE_VALUES_EMPTY extends ErrorCase("No values in list");
 

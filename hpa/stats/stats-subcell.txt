@@ -1,0 +1,68 @@
+[info] Running org.nextprot.parser.hpa.subcell.HPASubcellNXParserApp 
+[info] Looking for files like: ^ENSG.*.xml$ in directory: hpa-data ...
+[info] Done
+[info] FYI - No pretty print is used,if you want to use pretty print use the system property "-pretty" but be aware it is much slower....
+[info] Found 16613 files! Dispatching files between parsers ...
+[info] Dispatching files through 8 workers
+[info] Loading HPA->Swissprot mapping file: src/test/resources/HPA_Subcell_Mapping.txt
+[info] 21 mappings found: Map(centrosome -> (SL-0048,null), aggresome -> (-,null), mitochondria -> (SL-0173,null), endoplasmic reticulum -> (SL-0095,null), focal adhesions -> (SL-0118,null), cytoplasm -> (SL-0086,null), microtubule organizing center -> (SL-0484,null), golgi apparatus -> (SL-0132,null), cytoskeleton (intermediate filaments) -> (SL-0090,Note=Associated with intermediate filaments), cytoskeleton -> (SL-0090,null), cytoskeleton (microtubule plus end) -> (SL-0090,Note= Associated with microtubules plus end), cell junctions -> (SL-0038,null), nucleoli -> (SL-0188,null), nucleus -> (SL-0191,null), cytoskeleton (cytokinetic bridge) -> (SL-0090,Note=Associated with cytokinetic bridge), plasma membrane -> (SL-0039,null), nucleus but not nucleoli -> (SL-0190,null), cytoskeleton (actin filaments) -> (SL-0090,Note=Associated with actin filaments), cytoskeleton (microtubules) -> (SL-0090,Note=Associated with microtubules), vesicles -> (SL-0088,null), nuclear membrane -> (SL-0182,null))
+[info] 
+[info] Printing statistics:
+[info] 
+[info] Metric = COMPLEMENT-SPECS (1144)
+[info] > CAB antibodies as Supportive: 988
+[info] > western blot missing => uncertain: 156
+[info] 
+[info] Metric = ENTRIES-OUTPUT (16613)
+[info] > DISCARDED CASES OF TYPE CASE_BRONZE_QUALITY$: 786
+[info] > DISCARDED CASES OF TYPE CASE_MULTIPLE_UNIPROT_MAPPING$: 39
+[info] > DISCARDED CASES OF TYPE CASE_NO_SUBCELLULAR_LOCATION_DATA$: 7782
+[info] > DISCARDED CASES OF TYPE CASE_NO_UNIPROT_MAPPING$: 421
+[info] > DISCARDED CASES OF TYPE CASE_RNA_NOT_DETECTED$: 413
+[info] > success: 7172
+[info] 
+[info] Metric = RULES_FOR_BRONZE (786)
+[info] > APEQualityRule(NotSupportive,BestIsSupportive,AllSupportive): 1
+[info] > APEQualityRule(NotSupportive,BestIsSupportive,BestIsSupportive): 1
+[info] > APEQualityRule(Uncertain,AllUncertain,AllNotSupportive): 169
+[info] > APEQualityRule(Uncertain,AllUncertain,AllSupportive): 427
+[info] > APEQualityRule(Uncertain,AllUncertain,AllUncertain): 184
+[info] > APEQualityRule(Uncertain,AllUncertain,BestIsSupportive): 4
+[info] 
+[info] Metric = RULES_FOR_GOLD (2216)
+[info] > APEQualityRule(Supportive,AllSupportive,AllSupportive): 1771
+[info] > APEQualityRule(Supportive,AllSupportive,BestIsSupportive): 445
+[info] 
+[info] Metric = RULES_FOR_SILVER (4956)
+[info] > APEQualityRule(Supportive,AllSupportive,AllNotSupportive): 339
+[info] > APEQualityRule(Supportive,AllSupportive,AllUncertain): 321
+[info] > APEQualityRule(Supportive,AllSupportive,BestIsUncertain): 109
+[info] > APEQualityRule(Supportive,AllUncertain,AllNotSupportive): 67
+[info] > APEQualityRule(Supportive,AllUncertain,AllSupportive): 349
+[info] > APEQualityRule(Supportive,AllUncertain,AllUncertain): 55
+[info] > APEQualityRule(Supportive,AllUncertain,BestIsSupportive): 20
+[info] > APEQualityRule(Supportive,AllUncertain,BestIsUncertain): 6
+[info] > APEQualityRule(Supportive,BestIsSupportive,AllNotSupportive): 33
+[info] > APEQualityRule(Supportive,BestIsSupportive,AllSupportive): 229
+[info] > APEQualityRule(Supportive,BestIsSupportive,AllUncertain): 20
+[info] > APEQualityRule(Supportive,BestIsSupportive,BestIsSupportive): 222
+[info] > APEQualityRule(Supportive,BestIsSupportive,BestIsUncertain): 54
+[info] > APEQualityRule(Uncertain,AllSupportive,AllNotSupportive): 583
+[info] > APEQualityRule(Uncertain,AllSupportive,AllSupportive): 1563
+[info] > APEQualityRule(Uncertain,AllSupportive,AllUncertain): 744
+[info] > APEQualityRule(Uncertain,AllSupportive,BestIsSupportive): 87
+[info] > APEQualityRule(Uncertain,AllSupportive,BestIsUncertain): 24
+[info] > APEQualityRule(Uncertain,BestIsSupportive,AllNotSupportive): 13
+[info] > APEQualityRule(Uncertain,BestIsSupportive,AllSupportive): 57
+[info] > APEQualityRule(Uncertain,BestIsSupportive,AllUncertain): 8
+[info] > APEQualityRule(Uncertain,BestIsSupportive,BestIsSupportive): 44
+[info] > APEQualityRule(Uncertain,BestIsSupportive,BestIsUncertain): 9
+[info] 
+[info] Metric = ENTRIES-TYPE (7958)
+[info] > ape: 7870
+[info] > selected but treated as ape: 14
+[info] > single: 74
+[info] 
+[info] Metric = ENTRIES-QUALITY (7172)
+[info] > GOLD: 2216
+[info] > SILVER: 4956
