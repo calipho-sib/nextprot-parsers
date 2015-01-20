@@ -21,7 +21,7 @@ To deploy on nexus (in you need credentials configured on ~/.sbt/x.x/sonatype.sb
 credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "$sonatype_username", "$sonatype_password")
 ```
 
-It will go to either snapshot or production repository depending on your version suffix. It it ends with -SNAPSHOT it goes to the snapshot repository otherwise it will go to the production repository. Note that when you publish to the production repository you need to specify a new version `set version := x.x.x` .
+It will go to either snapshot or production repository depending on your version suffix. It it ends with -SNAPSHOT it goes to the snapshot repository otherwise it will go to the production repository. Note that when you publish to the production repository you need to specify a new version `set version:="x.x.x"` .
 
 ```
 sbt publish
