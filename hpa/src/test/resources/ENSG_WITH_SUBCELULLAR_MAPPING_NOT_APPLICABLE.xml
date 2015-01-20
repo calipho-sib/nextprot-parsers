@@ -415,7 +415,6 @@
 		<summary><![CDATA[Staining of nucleus in all three cell lines with additional staining of aggresome in U-2 OS.]]></summary>
 		<verification type="validation">supportive</verification>
 		<data>
-			<location status="main">nucleus but not nucleoli</location>
 			<location status="additional">aggresome</location>
 		</data>
 	</subcellularLocation>
