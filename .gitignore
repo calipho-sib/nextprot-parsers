@@ -10,3 +10,4 @@ log
 output.xml
 failed-entries.log
 *output.xml
+output.xml.subcell
