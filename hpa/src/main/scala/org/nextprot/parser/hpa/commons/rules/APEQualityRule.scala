@@ -5,7 +5,6 @@ import org.nextprot.parser.hpa.commons.constants.HPAValidationIntegratedValue._
 import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 import org.nextprot.parser.core.exception.NXException
-import org.nextprot.parser.core.stats.Stats
 
 
 case class APEQualityRule(reliability: HPAReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
@@ -27,11 +26,6 @@ case class APEQualityRule(reliability: HPAReliabilityValue, hpaPA: HPAValidation
       case APEQualityRule(Uncertain, AllNotSupportive, _) => BRONZE             // rule # N1 (exception thrown before arriving here, see CASE_NO_RULE*)
       case APEQualityRule(NotSupportive, _, _) => BRONZE  						// rule # B5
       case _ => SILVER
-    }
-    res match {
-      case GOLD => Stats ++ ("RULES_FOR_GOLD", toString())
-      case SILVER => Stats ++ ("RULES_FOR_SILVER", toString())
-      case BRONZE => Stats ++ ("RULES_FOR_BRONZE", toString())
     }
     return res
   }

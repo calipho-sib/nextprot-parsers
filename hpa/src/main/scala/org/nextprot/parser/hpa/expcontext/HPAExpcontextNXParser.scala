@@ -10,6 +10,8 @@ import org.nextprot.parser.hpa.subcell.cases.CASE_ASSAY_TYPE_NOT_TISSUE
 
 class HPAExpcontextNXParser extends NXParser {
   
+	def parsingInfo(): String = return null;
+
     def parse(fileName: String): TissueExpressionDataSet = {
 
 	    //println("start parsing " + fileName);

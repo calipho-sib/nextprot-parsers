@@ -10,4 +10,7 @@ trait NXParser{
    * @param identifier can be a file name, url, ...
    */
   def parse(identifier: String): Any  
+  
+  def parsingInfo: String;
+  
 }

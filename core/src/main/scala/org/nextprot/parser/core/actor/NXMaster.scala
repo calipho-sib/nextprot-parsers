@@ -69,6 +69,7 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
       reducer.reduce(m.wrapper);
       filesCount += 1
       Stats ++ ("ENTRIES-OUTPUT", "success");
+      listener ! new NXProcessedFileMSG(m.file, m.parseInfo);
       checkEnd
     }
 
@@ -76,10 +77,12 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
       filesCount += 1
       discardedCases += m.exception;
       if (m.exception.getNXExceptionType.isError) {
+    	listener ! new NXProcessedFileMSG(m.file, "error" + "\t" + m.exception.getNXExceptionType().getClass().getSimpleName() + "\t" + m.exception.getMessage);
         Stats.++("ENTRIES-OUTPUT", "ERROR OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
         logFile.write(m.exception.getFile.getAbsolutePath() + "\n");
         println(m.exception.getFile.getName() + " - " + m.exception.getNXExceptionType.getClass().getSimpleName() + " " + m.exception.getMessage)
       } else {
+        listener ! new NXProcessedFileMSG(m.file, "discarded" + "\t" + m.exception.getNXExceptionType().getClass().getSimpleName());
         Stats ++ ("ENTRIES-OUTPUT", "DISCARDED CASES OF TYPE " + m.exception.getNXExceptionType().getClass().getSimpleName());
       }
       checkEnd

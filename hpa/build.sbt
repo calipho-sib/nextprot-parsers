@@ -13,7 +13,7 @@ name := "nextprot-parser-hpa"
 
 organization := "org.nextprot.parser.hpa"
 
-version := "0.31.0-SNAPSHOT"
+version := "0.35.0-SNAPSHOT"
 
 description := "HPA parser used for tissues subcellular locations and antibodies"
 
@@ -43,7 +43,7 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.31.0-SNAPSHOT"
+  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.31.0"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////

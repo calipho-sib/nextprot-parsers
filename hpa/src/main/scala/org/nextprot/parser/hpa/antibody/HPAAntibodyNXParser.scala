@@ -24,7 +24,7 @@ import org.nextprot.parser.hpa.HPAUtils
  * Implementation class for HPA files
  */
 class HPAAntibodyNXParser extends NXParser {
-
+    
   /**
    * Parse the file and produces the wrapper containing the list of antibodies
    */
@@ -58,6 +58,9 @@ class HPAAntibodyNXParser extends NXParser {
       
     new AntibodyEntryWrapperList(wrappers)
   }
+
+  	def parsingInfo(): String = return null;
+
   
   /**
    * Extract antibody annotation

@@ -19,6 +19,7 @@ import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.core.actor.NXWorker
 import org.nextprot.parser.hpa.datamodel.SubcellularHPAAnnotationsWrapper
 import org.nextprot.parser.core.constants.EvidenceCode
+import org.nextprot.parser.core.stats.Stats
 
 object HPASubcellCvTerms {
   val map = HPAConfig.readHPACVTermsMapFile;
@@ -28,6 +29,12 @@ object HPASubcellCvTerms {
  * Implementation class for HPA files
  */
 class HPASubcellNXParser extends NXParser {
+
+  var pInfo = "";
+  
+  def parsingInfo: String = {
+    return pInfo;
+  }
 
   /**
    * Parse the file and produces the wrapper containing the list of annotations
@@ -46,7 +53,16 @@ class HPASubcellNXParser extends NXParser {
     val ensgId = HPAUtils.getEnsgId(entryElem)
     val integrationLevel = HPAUtils.getSubcellIntegrationType(entryElem)
 
-    val quality = HPAQuality.getQuality(entryElem, "subcellularLocation");
+    val qualityRule = HPAQuality.getQuality(entryElem, "subcellularLocation");
+    val quality = qualityRule._1;
+    val ruleUsed = qualityRule._2;
+
+    pInfo = quality.toString(); // + "\t" + ruleUsed;
+    
+	    //Stats should not appear here
+	Stats ++ ("RULES_FOR_" + quality, ruleUsed);
+
+
     if (quality.equals(BRONZE))
       throw new NXException(CASE_BRONZE_QUALITY);
 
