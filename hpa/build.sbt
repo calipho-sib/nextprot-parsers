@@ -23,12 +23,16 @@ scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature" )
 
 fork := true
 
+// 
+// all of them => "-Dfiles.expression=^ENSG.*.xml$",
+// 225 samples => "-Dfiles.expression=^ENSG0000000.*.xml$",
+
 // this is read only by sbt tool
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
 javaOptions ++= Seq(
 "-Xmx2000m",
 "-Dfiles.directory=hpa-data",
-"-Dfiles.expression=^ENSG.*.xml$",
+"-Dfiles.expression=^ENSG0000000.*.xml$",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
 "-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt"
@@ -43,7 +47,7 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.31.0"
+  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.32.0-SNAPSHOT"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////

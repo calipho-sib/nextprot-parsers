@@ -15,15 +15,17 @@ import org.nextprot.parser.core.constants.EvidenceCode
 class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
 
   val problems: Set[String] = Set()
-  val accu: TreeMap[String, (String, TreeSet[String])] = new TreeMap()
+  //val accu: TreeMap[String, (String, TreeSet[String])] = new TreeMap()
+  val accu: TreeMap[String, (String, TreeSet[SynoRule])] = new TreeMap()
 
   calohaMapper.errors.foreach(problems += _)
   
   // accumulates synonyms for each tissue
-  def accumulate(ted: TissueExpressionData, cme: CalohaMapEntry) = {
-    if (!accu.containsKey(cme.ac)) accu.put(cme.ac, (cme.name, new TreeSet[String]()))
+  def accumulate(ted: TissueExpressionData, cme: CalohaMapEntry, rule:String) = {
+    if (!accu.containsKey(cme.ac)) accu.put(cme.ac, (cme.name, new TreeSet[SynoRule]()))
     val (_, s) = accu.get(cme.ac)
-    s.add(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization))
+    val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization), rule)
+    s.add(sr)
   }
 
   // for mapping caloha: try to match with ti + ct first and then with ct only 
@@ -31,16 +33,16 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
     val ti = HPAExpcontextUtil.getCleanTissue(ted.tissue);
     if (ted.cellType == null) {
       calohaMapper.map.get(ti) match {
-        case Some(cme) => { accumulate(ted, cme) }
+        case Some(cme) => { accumulate(ted, cme, "partial match: no cell type") }
         case None => { problems.add("Mapping not found for " + ted.toString) }
       }
     } else {
       val ct = HPAExpcontextUtil.getCleanCellType(ted.cellType);
       calohaMapper.map.get(ti + " " + ct) match {
-        case Some(cme) => { accumulate(ted, cme) }
+        case Some(cme) => { accumulate(ted, cme, "full match") }
         case None => {
           calohaMapper.map.get(ct) match {
-            case Some(cme) => { accumulate(ted, cme) }
+            case Some(cme) => { accumulate(ted, cme, "partial match: no tissue") }
             case None => { problems.add("Mapping not found for " + ted.toString) }
           }
         }
@@ -97,7 +99,10 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
       val (name, syns) = accu.get(ac)
       val synlist: MutableList[String] = MutableList()
       val it2 = syns.iterator()
-      while (it2.hasNext()) { synlist += it2.next() }
+      while (it2.hasNext()) { 
+        val sr: SynoRule = it2.next()
+        synlist += sr.syno
+      }
       val el = (ac, (name, synlist.toList))
       ecwlist1 += el
     }
