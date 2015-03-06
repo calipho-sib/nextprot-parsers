@@ -32,7 +32,7 @@ fork := true
 javaOptions ++= Seq(
 "-Xmx2000m",
 "-Dfiles.directory=hpa-data",
-"-Dfiles.expression=^ENSG0000000.*.xml$",
+"-Dfiles.expression=^ENSG.*.xml$",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
 "-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt"

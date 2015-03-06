@@ -34,3 +34,10 @@ Production
 -Dfiles.expression="""^ENSG.*.xml$"""
 -Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt
 ```
+
+Publication
+-----------
+
+See ../README.md
+
+

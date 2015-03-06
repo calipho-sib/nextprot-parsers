@@ -11,3 +11,8 @@ output.xml
 failed-entries.log
 *output.xml
 output.xml.subcell
+hpa-data
+hpa/details.tsv
+hpa/mapping.tsv
+hpa/tissue-mapping.tsv
+
