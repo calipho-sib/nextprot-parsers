@@ -27,7 +27,7 @@ Publish nextprot-parser-core
 ----------------------------
 cd core
 sbt
-> set version:=0.32.0
+> set version:="0.33.0"
 > publish
 
 
@@ -35,10 +35,11 @@ Publish nextprot-parser-hpa
 ---------------------------
 cd hpa
 sbt
-> set version:=0.36.0
-> publish
+> set version:="0.37.0"
+> publish 
+> # read note below:
 
-Important note 
+IMPORTANT NOTE 
 --------------
 'publish' will take into account the dependency to nextprot-parser-core as it is defined in the hpa/build.sbt
 So you may have to manually change the dependency in this file, example:

@@ -47,7 +47,7 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.32.0-SNAPSHOT"
+  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.33.0"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////

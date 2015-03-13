@@ -15,7 +15,7 @@ class ExperimentalContextWrapper(val _tissue: String, val _ecoName:String, val _
 					<cvTermCategory>NEXTPROT_TISSUE</cvTermCategory>
 				</tissue>
 				<detectionMethod>
-					<cvName>{ _ecoName }</cvName>
+					<cvName>{ _ecoName }[ACC]</cvName>
 					<cvTermCategory>ECO</cvTermCategory>
 				</detectionMethod>
 		{
