@@ -2,6 +2,10 @@
 .project
 .classpath
 .cache
+.idea/
+core/.idea/
+hpa/.idea/
+*.iml
 cache
 bin
 target
