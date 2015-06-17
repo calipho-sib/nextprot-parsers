@@ -11,6 +11,6 @@ trait NXParser{
    */
   def parse(identifier: String): Any  
   
-  def parsingInfo: String;
+  def parsingInfo: String
   
 }
