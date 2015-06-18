@@ -22,7 +22,7 @@ class UniprotENSGNXParser extends NXParser {
 
     val accession = file.getName.split('.')(0)
 
-    val ensemblIds = ENSGUtils.getGeneIds(uniprotEntry)
+    val ensemblIds = ENSGUtils.getGeneIds(uniprotEntry, ",")
 
     return accession+" "+ensemblIds;
   }

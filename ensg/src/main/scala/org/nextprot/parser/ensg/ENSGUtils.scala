@@ -15,7 +15,7 @@ object ENSGUtils {
     return (getEnsemblReferenceNodeSeq(entryElem) \ "property").filter(el => (el \ "@type").text == "gene ID")
   }
 
-  def getGeneIds(entryElem: NodeSeq): String = {
-    return (ENSGUtils.getEnsemblIdNodeSeq(entryElem) \\ "@value").map(_.text).mkString(" ")
+  def getGeneIds(entryElem: NodeSeq, sep: String): String = {
+    return (ENSGUtils.getEnsemblIdNodeSeq(entryElem) \\ "@value").map(_.text).mkString(sep)
   }
 }

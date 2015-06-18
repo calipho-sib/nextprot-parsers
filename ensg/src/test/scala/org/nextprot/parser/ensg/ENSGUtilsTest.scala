@@ -69,8 +69,8 @@ class ENSGUtilsTest extends FlatSpec with Matchers {
 
   it should "return the correct gene ids" in {
 
-    val geneIds = ENSGUtils.getGeneIds(xml)
+    val geneIds = ENSGUtils.getGeneIds(xml, ",")
 
-    assertResult("ENSG00000033178 ENSG00000033178")(geneIds)
+    assertResult("ENSG00000033178,ENSG00000033178")(geneIds)
   }
 }
