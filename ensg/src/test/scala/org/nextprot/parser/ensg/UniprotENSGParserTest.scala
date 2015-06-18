@@ -10,14 +10,12 @@ class UniprotENSGParserTest extends FlatSpec with Matchers {
 
   val prettyPrinter = new PrettyPrinter(1000, 4)
 
-  it should " extract all ENSG references successfully from a Uniprot file" in {
+  it should "extract all ENSG references successfully from a Uniprot file" in {
 
     val parser = new UniprotENSGNXParser()
 
-    val tm = parser.parse(getClass.getResource("A0AVT1.xml").getFile)
-    val output = tm.toXML
+    val output = parser.parse(getClass.getResource("A0AVT1.xml").getFile)
 
-    println(output)
     val expected = "A0AVT1 ENSG00000033178 ENSG00000033178"
 
     Assertions.equals(expected, output)

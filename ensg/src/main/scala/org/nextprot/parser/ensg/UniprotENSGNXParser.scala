@@ -3,8 +3,8 @@ package org.nextprot.parser.ensg
 import java.io.File
 
 import org.nextprot.parser.core.NXParser
-import org.nextprot.parser.core.constants.NXQuality._
-import org.nextprot.parser.core.datamodel.TemplateModel
+
+import scala.xml.NodeSeq
 
 class UniprotENSGNXParser extends NXParser {
 
@@ -13,20 +13,18 @@ class UniprotENSGNXParser extends NXParser {
   def parsingInfo: String = {
     return pInfo;
   }
-  
 
-  def parse(fileName: String): TemplateModel = {
+  def parse(filename: String): String = {
 
-    val entryElem = scala.xml.XML.loadFile(new File(fileName))
+    val file = new File(filename)
 
-    return  new DBReference("jell", "jeraw", null);
+    val uniprotEntry = scala.xml.XML.loadFile(file)
+
+    val accession = file.getName.split('.')(0)
+
+    val ensemblIds = ENSGUtils.getGeneIds(uniprotEntry)
+
+    return accession+" "+ensemblIds;
   }
 }
 
-sealed class DBReference(val _type: String, val _id: String, val _properties: List[String]) extends TemplateModel {
-
-  override def toXML =    <dbReference type={ _type }/>
-
-  override def getQuality: NXQuality = null;
-
-}
