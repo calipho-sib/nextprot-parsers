@@ -39,8 +39,9 @@ libraryDependencies ++= Seq(
 javaOptions ++= Seq(
   "-Xmx2000m",
   "-Dfiles.directory=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/input/uniprot/2015_05/",
+  //"-Dfiles.directory=/Users/fnikitin/Downloads/uniprot/2015_05/",
   "-Dfiles.expression=^*.xml$",
-  "-Doutput.file=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/output/output.txt"
+  "-Doutput.file=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/output/sp_ensg.txt"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
