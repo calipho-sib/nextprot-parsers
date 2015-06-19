@@ -5,6 +5,7 @@
 .idea/
 core/.idea/
 hpa/.idea/
+ensg/.idea/
 *.iml
 cache
 bin
