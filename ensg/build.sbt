@@ -34,6 +34,15 @@ libraryDependencies ++= Seq(
   "org.nextprot.parser.core" % "nextprot-parser-core" % "0.33.0"
 )
 
+// this is read only by sbt tool
+// subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
+javaOptions ++= Seq(
+  "-Xmx2000m",
+  "-Dfiles.directory=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/input/uniprot/2015_05/",
+  "-Dfiles.expression=^*.xml$",
+  "-Doutput.file=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/output/output.txt"
+)
+
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 publishTo := {
   val nexus = "http://miniwatt.isb-sib.ch:8800/"
