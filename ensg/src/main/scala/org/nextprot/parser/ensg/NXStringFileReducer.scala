@@ -11,7 +11,7 @@ class NXStringFileReducer extends NXPrettyReducer {
   def reduce(objects: Any) = {
     objects match {
       case (uniprotEntry: String, ensgs: String) => {
-        fw.write(uniprotEntry + ensgs + "\n")
+        fw.append(uniprotEntry).append(" ").append(ensgs).append("\n")
       }
       case _ => throw new ClassCastException
     }
@@ -23,5 +23,4 @@ class NXStringFileReducer extends NXPrettyReducer {
   def end = {
     fw.close;
   }
-
 }

@@ -8,23 +8,17 @@ import scala.xml.NodeSeq
 
 class UniprotENSGNXParser extends NXParser {
 
-  var pInfo : String = null;
-  
   def parsingInfo: String = {
-    return pInfo;
+    return null
   }
 
-  def parse(filename: String): String = {
+  def parse(filename: String): (String,String) = {
 
     val file = new File(filename)
 
     val uniprotEntry = scala.xml.XML.loadFile(file)
 
-    val accession = file.getName.split('.')(0)
-
-    val ensemblIds = ENSGUtils.getGeneIds(uniprotEntry, ",")
-
-    return accession+" "+ensemblIds;
+    return (file.getName.split('.')(0), ENSGUtils.getGeneIds(uniprotEntry, ","))
   }
 }
 
