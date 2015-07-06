@@ -31,7 +31,7 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.33.0"
+  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.34.+"
 )
 
 // this is read only by sbt tool
@@ -40,7 +40,8 @@ javaOptions ++= Seq(
   "-Xmx2000m",
   "-Dfiles.directory=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/input/uniprot/2015_05/",
   //"-Dfiles.directory=/Users/fnikitin/Downloads/uniprot/2015_05/",
-  "-Dfiles.expression=^*.xml$",
+  "-Dfiles.expression=^*.xml$", // replace with -Dfiles.filter.regex
+  "-Dfiles.listfile=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/input/entry-list.txt", // replace with -Dfiles.filter.accessions
   "-Doutput.file=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/output/sp_ensg.txt"
 )
 
