@@ -11,15 +11,15 @@ object NXProperties {
    /** Where to store the parsing error report */
   val failedFileProperty = "failed.file"
     /** what specific parser to run (eg: HPA-subcell, HPA-expression, Bgee...) */
-  val parserImplementationProperty = "parser.impl";
+  val parserImplementationProperty = "parser.impl"
     /** What specific reducer to run */
-  val reducerImplementationProperty = "reducer.impl";
+  val reducerImplementationProperty = "reducer.impl"
     /** Default folder where to find the input data */
-  val directoryFilesProperty = "files.directory";
+  val directoryFilesProperty = "files.directory"
     /** A regular expression to filter input files in the default folder */
   val regularExpressionProperty = "files.expression"
    /** A file explicitly containing the input files to operate on (one per line) */
-  val InputFilterFileProperty = "files.listfile";
+  val InputFilterFileProperty = "files.listfile"
   /** Defines whether the output must be pretty printed or not (pretty printing may take a long time) */   
   val prettyPrint = "pretty"
 

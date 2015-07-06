@@ -7,15 +7,12 @@ import scala.xml.NodeSeq
  */
 object ENSGUtils {
 
-  def getEnsemblReferenceNodeSeq(entryElem: NodeSeq): NodeSeq = {
-    return (entryElem \ "dbReference").filter(el => (el \ "@type").text == "Ensembl")
-  }
+  def getEnsemblReferenceNodeSeq(entryElem: NodeSeq): NodeSeq =
+    (entryElem \ "dbReference").filter(el => (el \ "@type").text == "Ensembl")
 
-  def getEnsemblIdNodeSeq(entryElem: NodeSeq): NodeSeq = {
-    return (getEnsemblReferenceNodeSeq(entryElem) \ "property").filter(el => (el \ "@type").text == "gene ID")
-  }
+  def getEnsemblIdNodeSeq(entryElem: NodeSeq): NodeSeq =
+    (getEnsemblReferenceNodeSeq(entryElem) \ "property").filter(el => (el \ "@type").text == "gene ID")
 
-  def getGeneIds(entryElem: NodeSeq, sep: String): String = {
-    return (ENSGUtils.getEnsemblIdNodeSeq(entryElem) \\ "@value").map(_.text).mkString(sep)
-  }
+  def getGeneIds(entryElem: NodeSeq, sep: String): String =
+    (ENSGUtils.getEnsemblIdNodeSeq(entryElem) \\ "@value").map(_.text).mkString(sep)
 }

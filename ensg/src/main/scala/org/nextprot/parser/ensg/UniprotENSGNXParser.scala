@@ -4,15 +4,11 @@ import java.io.File
 
 import org.nextprot.parser.core.NXParser
 
-import scala.xml.NodeSeq
-
 class UniprotENSGNXParser extends NXParser {
 
-  var pInfo = "";
+  var pInfo = ""
 
-  def parsingInfo: String = {
-    return pInfo;
-  }
+  def parsingInfo: String = pInfo
 
   def parse(filename: String): (String,String) = {
 
@@ -28,7 +24,6 @@ class UniprotENSGNXParser extends NXParser {
     else
       pInfo = "0"
 
-    return (file.getName.split('.')(0), ensgs)
+    (file.getName.split('.')(0), ensgs)
   }
 }
-
