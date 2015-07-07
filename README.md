@@ -25,19 +25,24 @@ It will go to either snapshot or production repository depending on your version
 
 Publish nextprot-parser-core
 ----------------------------
+
+```
 cd core
 sbt
 > set version:="0.33.0"
 > publish
-
+```
 
 Publish nextprot-parser-hpa
 ---------------------------
+
+```
 cd hpa
 sbt
 > set version:="0.37.0"
-> publish 
+> publish
 > # read note below:
+```
 
 IMPORTANT NOTE 
 --------------
