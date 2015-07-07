@@ -68,4 +68,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 data-sample/
+sp_ensg.txt
 details.tsv

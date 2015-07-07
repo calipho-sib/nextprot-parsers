@@ -38,10 +38,10 @@ libraryDependencies ++= Seq(
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
 javaOptions ++= Seq(
   "-Xmx2000m",
-  "-Dfiles.directory=data-sample/input/",
+  "-Dfiles.directory=data-sample/",
   "-Dfiles.expression=^*.xml$",
   "-Dfiles.entries=src/test/resources/org/nextprot/parser/ensg/entry-list.txt",
-  "-Doutput.file=data-sample/output/sp_ensg.txt"
+  "-Doutput.file=sp_ensg.txt"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
