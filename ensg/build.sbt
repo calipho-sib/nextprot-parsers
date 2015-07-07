@@ -38,11 +38,10 @@ libraryDependencies ++= Seq(
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
 javaOptions ++= Seq(
   "-Xmx2000m",
-  "-Dfiles.directory=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/input/uniprot/2015_05/",
-  //"-Dfiles.directory=/Users/fnikitin/Downloads/uniprot/2015_05/",
-  "-Dfiles.expression=^*.xml$", // replace with -Dfiles.filter.regex
-  "-Dfiles.listfile=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/input/entry-list.txt", // replace with -Dfiles.filter.accessions
-  "-Doutput.file=/Users/fnikitin/Projects/nextprot-parsers/ensg/data-sample/output/sp_ensg.txt"
+  "-Dfiles.directory=data-sample/input/",
+  "-Dfiles.expression=^*.xml$",
+  "-Dfiles.entries=src/test/resources/org/nextprot/parser/ensg/entry-list.txt",
+  "-Doutput.file=data-sample/output/sp_ensg.txt"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
