@@ -41,26 +41,29 @@ cd hpa
 sbt
 > set version:="0.37.0"
 > publish
-> # read note below:
+> read note below:
 ```
 
 IMPORTANT NOTE 
 --------------
+
 'publish' will take into account the dependency to nextprot-parser-core as it is defined in the hpa/build.sbt
 So you may have to manually change the dependency in this file, example:
+
+``
 libraryDependencies ++= Seq(
   ...
   "org.nextprot.parser.core" % "nextprot-parser-core" % "0.32.0"
+```
 
 A non SNAPSHOT publishing should depend on non SNAPSHOT jars !!!
 
-
-
-
 TEST
-----------
+----
+
 To test simply use ```sbt test```but you can also use ``` test-only org.nextprot.parser.hpa.subcell.FullFileEntrySubcellTest ``` if you want to specify only one test
 
 You can configure project dependencies in eclipse
 -------------------------------------------------
+
 On eclipse define project dependencies and remove library (the jar)
