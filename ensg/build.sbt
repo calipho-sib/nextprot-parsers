@@ -12,7 +12,7 @@ name := "nextprot-parser-ensg"
 
 organization := "org.nextprot.parser.ensg"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1-SNAPSHOT"
 
 description := "Nextprot Parser extract Uniprot to Ensg mapping"
 
