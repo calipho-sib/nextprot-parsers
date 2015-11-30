@@ -5,27 +5,23 @@ import AssemblyKeys._ // put this at the top of the file
 
 assemblySettings
 
-jarName in assembly := "nextprot-parser-hpa.jar"
+jarName in assembly := "nextprot-parser-peptide-atlas.jar"
 
-mainClass in assembly := Some("org.nextprot.parser.core.HPANXParserApp")
+mainClass in assembly := Some("org.nextprot.parser.core.PeptideAtlasNXParserApp")
 
-name := "nextprot-parser-hpa"
+name := "nextprot-parser-peptide-atlas"
 
-organization := "org.nextprot.parser.hpa"
+organization := "org.nextprot.parser.peptide.atlas"
 
-version := "0.39.0-SNAPSHOT"
+version := "0.0.1-SNAPSHOT"
 
-description := "HPA parser used for tissues subcellular locations and antibodies"
+description := "Peptide Atlas phosphoset"
 
 scalaVersion := "2.10.4"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature" )
 
 fork := true
-
-// 
-// all of them => "-Dfiles.expression=^ENSG.*.xml$",
-// 225 samples => "-Dfiles.expression=^ENSG0000000.*.xml$",
 
 // this is read only by sbt tool
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
