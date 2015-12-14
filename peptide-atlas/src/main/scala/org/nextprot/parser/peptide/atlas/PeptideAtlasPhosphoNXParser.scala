@@ -45,7 +45,7 @@ class PeptideAtlasPhosphoNXParser extends App {
      var featureList  = List[Feature]()
      var ftdbReflistSum = List[DbXref]()
      var pepdbReflist = List[DbXref]()
-     var featuresPos: List[Int] = PeptideAtlasUtils.getDistinctModPos(pep._2)
+     val featuresPos: List[Int] = PeptideAtlasUtils.getDistinctModPos(pep._2)
      featuresPos.foreach { pos =>
        val ftdbReflist = PeptideAtlasUtils.getDBRefForFeature(pep._2, pos, sampleIdMap)
        val modRes = PeptideAtlasUtils.getModresForFeature(pep._2, pos) // could be quicker if we build first a map (pos,modres) at peptide level
