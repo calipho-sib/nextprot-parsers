@@ -2,7 +2,7 @@ package org.nextprot.parser.peptide.atlas.datamodel
 
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
 
-class Feature(val _position: Integer, val _description: String, val _dbrefs: List[DbXref]) {
+class Feature(val _position: Integer, val _description: String, val _pepid: String, val _dbrefs: List[DbXref]) {
   
   def toXML = 
     <feature type="modified residue" description={_description} quality={getTopQuality}>
@@ -10,6 +10,7 @@ class Feature(val _position: Integer, val _description: String, val _dbrefs: Lis
 				<position position={_position.toString()} />
 			</location> 
 			<evidence type="mass spectrometry evidence" assigned_by="PeptideAtlas human phosphoproteome"/>
+      <dbReference type="PeptideAtlas" id={_pepid} quality={getTopQuality}></dbReference>
     {_dbrefs.map(_.toXML)}
 		</feature>
   
