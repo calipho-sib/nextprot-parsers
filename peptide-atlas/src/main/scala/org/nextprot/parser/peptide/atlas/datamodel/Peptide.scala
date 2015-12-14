@@ -2,7 +2,7 @@ package org.nextprot.parser.peptide.atlas.datamodel
 
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
 import org.nextprot.parser.core.datamodel.TemplateModel
-import scala.collection.mutable.ListBuffer
+
 class Peptide(val _sequence: String, val id: String, val _dbrefs: List[DbXref], val _features: List[Feature]) extends TemplateModel {
   
   override def toXML =
