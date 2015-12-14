@@ -29,23 +29,39 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
     assert(7 == parser.pep_count)
   }
 
-  /*it should "output proper DbXref XML" in {
+  it should "output proper DbXref XML" in {
 
     val dbref = new DbXref(_mData="MDATA_0066", _pmid="24400987", _quality=null)
-
-    println(dbref.toXML)
+    val xml = dbref.toXML
+    
+    assert("MDATA_0066" == (xml \ "document" \ "@id").text)
+    assert("24400987" == (xml \ "@id").text)
   }
   
   it should "output proper Feature XML" in {
 
-    println(feature1.toXML)
+    val xml = feature1.toXML
+    
+    assert("modified residue" == (xml \ "@type").text)
+    assert("phosphoserine" == (xml \ "@description").text)
+    assert("GOLD" == (xml \ "@quality").text)
+    assert("7" == (xml \ "location" \ "position" \ "@position").text)
+    assert(3 == ((xml \ "dbReference").map(dbrefelem => {})).size ) // number of dbReference elements
+    //println(feature1.toXML)
   }
   
 
   it should "output proper Peptide XML" in {
 
     val peptide = new Peptide(_sequence="RPGGEPSPEGTTGQSYNQYSQR", id="PAp00000083", _dbrefs=List(dbref1,dbref2), _features=List(feature1,feature2))
-
-    println(peptide.toXML)
-  } */
+    val xml = peptide.toXML
+    
+    assert("RPGGEPSPEGTTGQSYNQYSQR" == (xml \ "@sequence").text)
+    assert("PeptideAtlas human phosphoproteome" == (xml \ "evidence" \ "@assigned_by").text)
+    assert(2 == ((xml \ "feature").map(feature => {})).size ) // number of feature elements
+    val dbrefs = (xml \ "dbReference").map(dbrefelem => {dbrefelem}).toList// dbReference elements
+    assert(3 == dbrefs.size)  // number of dbReference elements
+    assert("PAp00000083" == (dbrefs.head \ "@id").text) // first dbReference element
+     //println(peptide.toXML)
+  } 
 }
