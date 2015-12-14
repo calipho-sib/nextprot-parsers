@@ -13,8 +13,8 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
     val dbref3 = new DbXref(_mData="MDATA_0066", _pmid="24400987", _quality="GOLD")
     val dbref4 = new DbXref(_mData="MDATA_0070", _pmid=null, _quality="SILVER")
     val dbref5 = new DbXref(_mData="MDATA_0101", _pmid="18272233", _quality="SILVER")
-    val feature1 = new Feature(_position=7, _description="phosphoserine", _dbrefs=List(dbref3,dbref4))
-    val feature2 = new Feature(_position=20, _description="phosphoserine", _dbrefs=List(dbref4))
+    val feature1 = new Feature(_position=7, _description="phosphoserine", _pepid="PAp00000083", _dbrefs=List(dbref3,dbref4))
+    val feature2 = new Feature(_position=20, _description="phosphoserine", _pepid="PAp00000083", _dbrefs=List(dbref4))
 
   
   
@@ -22,15 +22,14 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
 
     val parser = new PeptideAtlasPhosphoNXParser()
 
-    parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/peptide_ptm.tsv");
-    //parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/sample1.tsv");
+    //val xml = parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/sample.tsv")
+    //parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/peptide_ptm_noSNP.tsv");
+    parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/sample.tsv");
     
-
-    /*assert("A0AVT1" == accession)
-    assert("ENSG00000033178,ENSG00000033178" == ensgs)*/
+    assert(7 == parser.pep_count)
   }
 
-  it should "output proper DbXref XML" in {
+  /*it should "output proper DbXref XML" in {
 
     val dbref = new DbXref(_mData="MDATA_0066", _pmid="24400987", _quality=null)
 
@@ -48,5 +47,5 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
     val peptide = new Peptide(_sequence="RPGGEPSPEGTTGQSYNQYSQR", id="PAp00000083", _dbrefs=List(dbref1,dbref2), _features=List(feature1,feature2))
 
     println(peptide.toXML)
-  }
+  } */
 }
