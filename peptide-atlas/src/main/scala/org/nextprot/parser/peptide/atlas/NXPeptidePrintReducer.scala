@@ -11,7 +11,7 @@ class NXPeptidePrintReducer extends NXPrettyReducer {
 
   def reduce(objects: Any) = {
     val peptides = objects.asInstanceOf[List[Peptide]]
-    peptides.foreach { peptide => fw.append(getPrettyFormatIfNeeded(peptide.toXML)) }
+    peptides.foreach { peptide => fw.append(getPrettyFormatIfNeeded(peptide.toXML) + "\n") }
   }
 
   def start = {
