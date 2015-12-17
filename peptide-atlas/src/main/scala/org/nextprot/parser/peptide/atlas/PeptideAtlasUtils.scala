@@ -65,7 +65,7 @@ object PeptideAtlasUtils {
         if(pepLineTokens(3).toFloat >= 0.99) quality = "GOLD"
         var sampleId = pepLineTokens(4)
         if(sampleId.endsWith("-")) sampleId = sampleId.dropRight(1) // Remove trailing dash
-        if(!smap.contains(sampleId)) println(sampleId + " not mapped...")
+        if(!smap.contains(sampleId)) Console.err.println(sampleId + " not mapped...")
         else {
         mdata_pmid = smap(sampleId)
         val mdataList = mdata_pmid.split("-")
