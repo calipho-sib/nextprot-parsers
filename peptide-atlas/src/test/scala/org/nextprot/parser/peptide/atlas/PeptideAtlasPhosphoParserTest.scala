@@ -22,11 +22,11 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
 
     val parser = new PeptideAtlasPhosphoNXParser()
 
-    //val xml = parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/sample.tsv")
     //parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/peptide_ptm_noSNP.tsv");
-    parser.parse("src/test/resources/org/nextprot/parser/peptide/atlas/sample.tsv");
+    val peptides = parser.parse("src/test/resources/org/nextprot/parser/peptide/atlas/sample.tsv");
     
-    assert(7 == parser.pep_count)
+    assert(7 == parser.pep_count) // raw peptides as delivered in tsv by PeptideAtlas
+    assert(7 == peptides.size) // peptide objects generated through parsing
   }
 
   it should "output proper DbXref XML" in {
@@ -47,7 +47,6 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
     assert("GOLD" == (xml \ "@quality").text)
     assert("7" == (xml \ "location" \ "position" \ "@position").text)
     assert(3 == ((xml \ "dbReference").map(dbrefelem => {})).size ) // number of dbReference elements
-    //println(feature1.toXML)
   }
   
 
@@ -62,6 +61,5 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
     val dbrefs = (xml \ "dbReference").map(dbrefelem => {dbrefelem}).toList// dbReference elements
     assert(3 == dbrefs.size)  // number of dbReference elements
     assert("PAp00000083" == (dbrefs.head \ "@id").text) // first dbReference element
-     //println(peptide.toXML)
   } 
 }
