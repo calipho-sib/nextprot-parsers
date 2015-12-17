@@ -6,7 +6,9 @@ import org.nextprot.parser.core.impl.NXPrettyReducer
 import org.nextprot.parser.peptide.atlas.datamodel.Peptide
 
 class NXPeptidePrintReducer extends NXPrettyReducer {
-  val topHeader = "<entries version=\"201509\" datarelease=\"PeptideAtlas human phosphoproteome\" datasource=\"PeptideAtlas human phosphoproteome\">"
+  val dataversion = System.getProperty("version")
+  val topHeader = "<entries version=\"" + dataversion + "\" datarelease=\"PeptideAtlas human phosphoproteome\" datasource=\"PeptideAtlas human phosphoproteome\">"
+  //val topHeader = "<entries version=\"201509\" datarelease=\"PeptideAtlas human phosphoproteome\" datasource=\"PeptideAtlas human phosphoproteome\">"
   val fw = new FileWriter(System.getProperty("output.file"), false)
 
   def reduce(objects: Any) = {
