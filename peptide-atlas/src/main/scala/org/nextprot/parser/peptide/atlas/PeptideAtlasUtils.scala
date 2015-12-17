@@ -61,17 +61,15 @@ object PeptideAtlasUtils {
      pepLines.foreach { pepLine =>
       val pepLineTokens = pepLine.split("\\s+")
       if(pepLineTokens(2).toInt == pos) {
-        var quality = "SILVER"
-        if(pepLineTokens(3).toFloat >= 0.99) quality = "GOLD"
+        val quality = if(pepLineTokens(3).toFloat >= 0.99) "GOLD" else "SILVER"
         var sampleId = pepLineTokens(4)
         if(sampleId.endsWith("-")) sampleId = sampleId.dropRight(1) // Remove trailing dash
-        if(!smap.contains(sampleId)) Console.err.println(sampleId + " not mapped...")
+        if(!smap.contains(sampleId)) Console.err.println(sampleId + " not mapped...") 
         else {
         mdata_pmid = smap(sampleId)
         val mdataList = mdata_pmid.split("-")
         val mdata = mdataList(0)
-        var pmid :String = null
-        if(mdataList.length > 1) pmid = mdataList(1)
+        val pmid = if(mdataList.length > 1) mdataList(1) else null // Some datasets have no associated pmid
         dbref = new DbXref(_mData=mdata, _pmid=pmid, _quality=quality )
         dbrefList = dbref :: dbrefList }
         }
