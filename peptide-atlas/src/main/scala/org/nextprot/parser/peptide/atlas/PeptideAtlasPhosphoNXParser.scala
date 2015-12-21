@@ -63,8 +63,8 @@ class PeptideAtlasPhosphoNXParser extends NXParser{
      new Peptide(_sequence=sequence, id=pep._1, _dbrefs=pepdbReflist.distinct, _features=featureList) // Note the 'distinct'
     }).toList;
    
-   Console.err.println(maxFTRefs + " dbrefs in " + maxFTRefsId)
-   Console.err.println(maxPepRefs + " dbrefs in " + maxPepRefsId)
+   //Console.err.println(maxFTRefs + " dbrefs in " + maxFTRefsId)
+   //Console.err.println(maxPepRefs + " dbrefs in " + maxPepRefsId)
    this.pep_count = pepsMap.size
    return allPeps
   }
