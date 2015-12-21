@@ -4,6 +4,7 @@ import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 import scala.collection.mutable.ArrayBuffer
 
+
 class PeptideAtlasUtilsTest extends FlatSpec with Matchers {
 
     val peplines = ArrayBuffer("RPGGEPSPEGTTGQSYNQYSQR  RPGGEPSPEGTTGQSYNQYS[167]QR 20  1.000 5304- P02751",
@@ -28,9 +29,16 @@ class PeptideAtlasUtilsTest extends FlatSpec with Matchers {
     assert("phosphoserine" == mod)
   }
   
-  it should "return proper map for sample ids" in {
+  it should "return proper map for sample ids with maping file 1" in {
 
     val sampleIdMap = PeptideAtlasUtils.getMetadataMap1("src/test/resources/org/nextprot/parser/peptide/atlas/Metadata_phosphosetPA.tsv") 
+    assert(177 == sampleIdMap.size)
+    assert("MDATA_0079-22496350" == sampleIdMap("5333"))
+  }
+  
+  it should "return proper map for sample ids with maping file 2" in {
+
+    val sampleIdMap = PeptideAtlasUtils.getMetadataMap("src/test/resources/org/nextprot/parser/peptide/atlas/metadata.txt") 
     assert(177 == sampleIdMap.size)
     assert("MDATA_0079-22496350" == sampleIdMap("5333"))
   }
