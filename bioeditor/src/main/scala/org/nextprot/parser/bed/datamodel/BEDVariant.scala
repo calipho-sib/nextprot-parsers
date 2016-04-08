@@ -1,5 +1,5 @@
 package org.nextprot.parser.bed.datamodel
 
-class BEDVariant(val name: String) {
+case class BEDVariant(val name: String) {
 
 }
