@@ -32,7 +32,7 @@ class BedTableNXParser extends NXParser {
 
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
       
-    val entryName = BEDUtils.getBedAnnotations(entryElem);
+    val entryName = BEDUtils.getEntryAccession(entryElem);
     
     println("Entry name" + entryName);
    
