@@ -1,7 +1,6 @@
 package org.nextprot.parser.bed
 
 import java.io.File
-
 import org.nextprot.parser.bed.utils.BEDUtils
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
@@ -30,6 +29,20 @@ class BedUtilsTest extends FlatSpec with Matchers {
     val entryName = (entryElem \ "@accession").text;
     val bedAnnotations = BEDUtils.getBEDAnnotations(entryElem);
     println(bedAnnotations.size);
+    
+
+  }
+  
+  
+   it should "validate all annotations" in {
+
+    val entryName = (entryElem \ "@accession").text;
+    val bedAnnotations = BEDUtils.getBEDAnnotations(entryElem);
+    bedAnnotations.foreach(a => {
+     val valid = a.isValid;
+     if (!valid) println(a)
+     assert(valid);
+    });
 
   }
 
