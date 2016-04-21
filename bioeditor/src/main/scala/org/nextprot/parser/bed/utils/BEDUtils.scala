@@ -44,8 +44,13 @@ object BEDUtils {
 
   def getBEDEvidence(_subject : String, _relation : String, _object : String, xmlA: scala.xml.Node): List[BEDEvidence] = {
     return (xmlA \\ "evidence").map(e => {
-      val allels = e \\ "allelicCompositionVariantRef";
-      new BEDEvidence(_subject, _relation, _object, false, allels.map(n => n.text).toList);
+      val allelsXml = e \\ "allelicCompositionVariantRef";
+      val referencesXml = e \\ "reference";
+      val references = referencesXml.map(r => {
+        ((r \ "@database").text, (r \ "@accession").text)
+      }).toList
+
+      new BEDEvidence(_subject, _relation, _object, false, allelsXml.map(n => n.text).toList, references);
     }).toList;
   }
   
