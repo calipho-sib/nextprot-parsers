@@ -9,10 +9,4 @@ case class BEDAnnotation(val accession : String, val _subject: String, val _rela
    }
  
   
-  def isValid () : Boolean = {
-    if(_subject.startsWith("BRCA2")){
-      return true;
-    }else return false;
-  }
-  
 }

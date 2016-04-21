@@ -54,8 +54,6 @@ object BEDUtils {
     }).toList;
   }
   
-  
-  
    def getTermAndAttribute (relation : String, isNegative : Boolean): (String, String) = {
     
     (relation, isNegative) match {
@@ -72,6 +70,16 @@ object BEDUtils {
 		  case ("increases localization to", true) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, NOT_CHANGED);
 		  case ("localizes to a new compartment", true) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, CHANGED); // check how this case is modelled
 
+  		  // Effect on catalytic activity and cellular processes (isNegative = true)
+		  case ("has normal", true) => return (EFFECT_ON_PROTEIN_ACTIVITY, CHANGED); // Loosing info here
+  		  case ("impairs", true) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
+		  case ("increases", true) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
+  		  case ("decreases", true) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
+  		  case ("gains", true) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
+
+		  
+		  
+		  
   		  // Effect on catalytic activity and cellular processes
 		  case ("has normal", false) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
   		  case ("impairs", false) => return (EFFECT_ON_PROTEIN_ACTIVITY, CHANGED);
@@ -99,13 +107,19 @@ object BEDUtils {
 		  case ("gains binding to", true) => return (EFFECT_ON_PROTEIN_INTERACTION, NOT_CHANGED);
   		  
   		  // Effect on stability
+		  
+  		  case ("removes PTM", false) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
+  		  case ("gains PTM site", false) => return (EFFECT_ON_PROTEIN_ACTIVITY, CHANGED);
+		  case ("is a labile form of", false) => return (EFFECT_ON_PROTEIN_ACTIVITY, INCREASE);
 		  case ("is a more stable form of", false) => return (EFFECT_ON_PROTEIN_STABILITY, INCREASE);
   		  case ("has no effect on stability of", false) => return (EFFECT_ON_PROTEIN_STABILITY, NOT_CHANGED);
 		  
   		  case ("is a more stable form of", true) => return (EFFECT_ON_PROTEIN_STABILITY, CHANGED);
   		  case ("has no effect on stability of", true) => return (EFFECT_ON_PROTEIN_STABILITY, NOT_CHANGED);
 		  
-		  
+  		  //causes phenotype	
+  		  //does not cause phenotype	
+  		  
   		  case _ => return ("not-defined", "not-defined");
 
     }

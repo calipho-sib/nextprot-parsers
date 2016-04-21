@@ -33,19 +33,6 @@ class BedUtilsTest extends FlatSpec with Matchers {
 
   }
   
-  
-   it should "validate all annotations" in {
-
-    val entryName = (entryElem \ "@accession").text;
-    val bedAnnotations = BEDUtils.getBEDAnnotations(entryElem);
-    bedAnnotations.foreach(a => {
-     val valid = a.isValid;
-     if (!valid) println(a)
-     assert(valid);
-    });
-
-  }
-
    it should "group annotations together by subject and relation" in {
      val annotations = BEDUtils.getBEDAnnotations(entryElem);
      println(annotations.groupBy(a => (a._subject, a._object)));

@@ -26,10 +26,52 @@ class BedExploreTest extends FlatSpec with Matchers {
      //println(res);
      
      val pw = new PrintWriter(new File("brca.tsv" ))
-     res.foreach(k => {
-       pw.write(k._1._1 + "\t" + k._1._2._1 + "\t" + k._1._2._2 + "\t" + k._1._3 + "\t" + k._2.size + "\n");
+     res.take(10).foreach(k => {
+       
+       val entityKey = k._1._1;
+       val term = k._1._2._1;
+       val termImpact = k._1._2._2;
+       val goTerm = k._1._3;
+       
+       val evidences = k._2
+       
+       pw.write(List(entityKey, term, termImpact, goTerm, evidences.size).mkString("\t"));
+       pw.write("\n");
+       
+       //CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})
+//CREATE (Keanu:Person {name:'Keanu Reeves', born:1964})
+       println("CREATE (V" + entityKey.hashCode().toHexString + ":Variant {title:'" + entityKey + "'})")
+       println("CREATE (O" + goTerm.hashCode().toHexString + ":Object {title:'" + goTerm + "'})")
+       
      })
      pw.close();
+     
+     /**
+      * 
+      * 
+      * 
+     
+     CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})
+CREATE (Keanu:Person {name:'Keanu Reeves', born:1964})
+CREATE (Carrie:Person {name:'Carrie-Anne Moss', born:1967})
+CREATE (Laurence:Person {name:'Laurence Fishburne', born:1961})
+CREATE (Hugo:Person {name:'Hugo Weaving', born:1960})
+CREATE (AndyW:Person {name:'Andy Wachowski', born:1967})
+CREATE (LanaW:Person {name:'Lana Wachowski', born:1965})
+CREATE (JoelS:Person {name:'Joel Silver', born:1952})
+CREATE
+  (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix),
+  (Carrie)-[:ACTED_IN {roles:['Trinity']}]->(TheMatrix),
+  (Laurence)-[:ACTED_IN {roles:['Morpheus']}]->(TheMatrix),
+  (Hugo)-[:ACTED_IN {roles:['Agent Smith']}]->(TheMatrix),
+  (AndyW)-[:DIRECTED]->(TheMatrix),
+  (LanaW)-[:DIRECTED]->(TheMatrix),
+  (JoelS)-[:PRODUCED]->(TheMatrix)
+  ;
+     
+     
+      * 
+      */
      
      /*(a => (a._subject + "---" + a._object));
 
