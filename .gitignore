@@ -20,4 +20,5 @@ hpa-data
 hpa/details.tsv
 hpa/mapping.tsv
 hpa/tissue-mapping.tsv
-
+ln-s-data.xml
+brca.tsv
