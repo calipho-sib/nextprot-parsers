@@ -26,6 +26,7 @@ fork := true
 // 
 // all of them => "-Dfiles.expression=^ENSG.*.xml$",
 // 225 samples => "-Dfiles.expression=^ENSG0000000.*.xml$",
+//  10 samples => "-Dfiles.expression=ENSG00000100417.xml|ENSG00000113391.xml|ENSG00000116127.xml|ENSG00000124782.xml|ENSG00000156463.xml|ENSG00000160799.xml|ENSG00000166908.xml|ENSG00000168876.xml|ENSG00000172660.xml|ENSG00000176946.xml",
 
 // this is read only by sbt tool
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
