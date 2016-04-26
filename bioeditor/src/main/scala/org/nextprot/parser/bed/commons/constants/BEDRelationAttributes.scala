@@ -6,7 +6,7 @@ object BEDRelationAttributes {
   val DECREASE = "decrease";
   val MISSING = "missing";
   val NOT_CHANGED = "not_changed";
-  val CHANGED = "increases";
+  val CHANGED = "changed";
   val GAIN = "gains";
 
 }

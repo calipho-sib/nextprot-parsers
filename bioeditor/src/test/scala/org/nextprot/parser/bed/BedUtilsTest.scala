@@ -35,7 +35,7 @@ class BedUtilsTest extends FlatSpec with Matchers {
   
    it should "group annotations together by subject and relation" in {
      val annotations = BEDUtils.getBEDAnnotations(entryElem);
-     println(annotations.groupBy(a => (a._subject, a._object)));
+     println(annotations.groupBy(a => (a._subject, a.getAbsoluteObject)));
   }
 
 }

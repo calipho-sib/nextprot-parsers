@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/joint.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/joint.js"></script>
+</head>
+<body>
+  <div id="myholder"></div>
+  <script type="text/javascript">
+	
+	var rectSize = { width: 200, height: 100 };
+	var marginHeight = 100;
+    var graph = new joint.dia.Graph;
+    var paper = new joint.dia.Paper({el: $('#myholder'), width: 1280, height: 1000000,model: graph, gridSize: 1 });
+
+    var createVariant = function (title) {
+    	return new joint.shapes.basic.Rect({        
+    		position: { x: 100, y: marginHeight },
+            size: rectSize,
+            attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
+        });
+    }
+    
+    var createEffect = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 220, y: marginHeight + 150 },
+            size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+        });
+   	}
+
+    var createImpact = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 600, y: marginHeight + 150},
+            size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+        });
+   	}
+
+    var createBioObject = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 400, y: marginHeight + 250},
+            size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
+        });
+   	}
+
+
+    var createAnnotation = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 400, y: marginHeight },
+            size: rectSize,
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+        });
+   	}
+
+    var createEvidence = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 700, y: marginHeight },
+            size: rectSize,
+            attrs: { rect: { fill: '#c9daf8' }, text: { text: title } }
+        });
+   	}
+
+    var createDescription = function (title) {
+    	return new joint.shapes.basic.Rect({        
+    		position: { x: 100, y: marginHeight -60},
+            size: { width: 800, height: 40 },
+            attrs: { text: { text: title } }
+        });
+   	}
+    
+    var createLink = function (b1, b2, label) {
+        return new joint.dia.Link({  source: { id: b1.id },  target: { id: b2.id } , labels: [{ position: 0.5, attrs: { text: { text: label } } }]});
+    }
+    
+    MACRO
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/joint.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/joint.js"></script>
+</head>
+<body>
+  <div id="myholder"></div>
+  <script type="text/javascript">
+	
+	var rectSize = { width: 200, height: 100 };
+	var marginHeight = 100;
+    var graph = new joint.dia.Graph;
+    var paper = new joint.dia.Paper({el: $('#myholder'), width: 1280, height: 1000000,model: graph, gridSize: 1 });
+
+    var createVariant = function (title) {
+    	return new joint.shapes.basic.Rect({        
+    		position: { x: 100, y: marginHeight },
+            size: rectSize,
+            attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
+        });
+    }
+    
+    var createEffect = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 220, y: marginHeight + 150 },
+            size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+        });
+   	}
+
+    var createImpact = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 600, y: marginHeight + 150},
+            size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+        });
+   	}
+
+    var createBioObject = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 400, y: marginHeight + 250},
+            size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
+        });
+   	}
+
+
+    var createAnnotation = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 400, y: marginHeight },
+            size: rectSize,
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+        });
+   	}
+
+    var createEvidence = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 700, y: marginHeight },
+            size: rectSize,
+            attrs: { rect: { fill: '#c9daf8' }, text: { text: title } }
+        });
+   	}
+
+    var createDescription = function (title) {
+    	return new joint.shapes.basic.Rect({        
+    		position: { x: 100, y: marginHeight -60},
+            size: { width: 800, height: 40 },
+            attrs: { text: { text: title } }
+        });
+   	}
+    
+    var createLink = function (b1, b2, label) {
+        return new joint.dia.Link({  source: { id: b1.id },  target: { id: b2.id } , labels: [{ position: 0.5, attrs: { text: { text: label } } }]});
+    }
+    
+    var d1366082296 = createDescription('1) BRCA1-p.Gly1706Ala has normal localization to cytoplasm() CAVA-VP010809');var n11937118914 = createVariant('BRCA1-p.Gly1706Ala');var n11158219916 = createAnnotation('\ncategory:Gene Ontology\ncvName:cytoplasm');var b10 = createBioObject('');var e1898740318 = createEffect('effect on protein subcellular localization');var i1843435704 = createImpact('not_changed');var l1n11937118914n11158219916 = createLink(n11937118914, n11158219916,'');var l1n11158219916i1843435704 = createLink(n11158219916, i1843435704,'impact');var l1n11158219916e1898740318 = createLink(n11158219916, e1898740318,'effect');var l1n11158219916b10 = createLink(n11158219916, b10,'biological-object');graph.addCells([d1366082296,n11937118914,n11158219916,b10,e1898740318,i1843435704,l1n11937118914n11158219916,l1n11158219916i1843435704,l1n11158219916e1898740318,l1n11158219916b10]);
+marginHeight+=495;
+var d21886759794 = createDescription('2) BRCA1-p.Ala1708Glu increases localization to cytoplasm() CAVA-VP010808');var n2364252404 = createVariant('BRCA1-p.Ala1708Glu');var n21158219916 = createAnnotation('\ncategory:Gene Ontology\ncvName:cytoplasm');var b20 = createBioObject('');var e2898740318 = createEffect('effect on protein subcellular localization');var i295321666 = createImpact('increase');var l2n2364252404n21158219916 = createLink(n2364252404, n21158219916,'');var l2n21158219916i295321666 = createLink(n21158219916, i295321666,'impact');var l2n21158219916e2898740318 = createLink(n21158219916, e2898740318,'effect');var l2n21158219916b20 = createLink(n21158219916, b20,'biological-object');graph.addCells([d21886759794,n2364252404,n21158219916,b20,e2898740318,i295321666,l2n2364252404n21158219916,l2n21158219916i295321666,l2n21158219916e2898740318,l2n21158219916b20]);
+marginHeight+=495;
+var d341786696 = createDescription('3) BRCA1-p.Ala1708Glu decreases localization to nucleus() CAVA-VP011199');var n3364252404 = createVariant('BRCA1-p.Ala1708Glu');var n31408074727 = createAnnotation('\ncategory:Gene Ontology\ncvName:nucleus');var b30 = createBioObject('');var e3898740318 = createEffect('effect on protein subcellular localization');var i3573606046 = createImpact('decrease');var l3n3364252404n31408074727 = createLink(n3364252404, n31408074727,'');var l3n31408074727i3573606046 = createLink(n31408074727, i3573606046,'impact');var l3n31408074727e3898740318 = createLink(n31408074727, e3898740318,'effect');var l3n31408074727b30 = createLink(n31408074727, b30,'biological-object');graph.addCells([d341786696,n3364252404,n31408074727,b30,e3898740318,i3573606046,l3n3364252404n31408074727,l3n31408074727i3573606046,l3n31408074727e3898740318,l3n31408074727b30]);
+marginHeight+=495;
+var d42028236403 = createDescription('4) BRCA1-p.Met1775Arg impairs acinar cell differentiation() CAVA-VP011584');var n4828364670 = createVariant('BRCA1-p.Met1775Arg');var n42057152363 = createAnnotation('\ncategory:Gene Ontology\ncvName:acinar cell differentiation');var b40 = createBioObject('');var e41788157470 = createEffect('effect on protein activity');var i4738943668 = createImpact('changed');var l4n4828364670n42057152363 = createLink(n4828364670, n42057152363,'');var l4n42057152363i4738943668 = createLink(n42057152363, i4738943668,'impact');var l4n42057152363e41788157470 = createLink(n42057152363, e41788157470,'effect');var l4n42057152363b40 = createLink(n42057152363, b40,'biological-object');graph.addCells([d42028236403,n4828364670,n42057152363,b40,e41788157470,i4738943668,l4n4828364670n42057152363,l4n42057152363i4738943668,l4n42057152363e41788157470,l4n42057152363b40]);
+marginHeight+=495;
+var d51205353214 = createDescription('5) BRCA1-p.Ala1708Glu is a labile form of BRCA1() CAVA-VP010101');var n5364252404 = createVariant('BRCA1-p.Ala1708Glu');var n52062195232 = createAnnotation('\ncategory:\ncvName:');var b563461699 = createBioObject('BRCA1');var e51788157470 = createEffect('effect on protein activity');var i595321666 = createImpact('increase');var l5n5364252404n52062195232 = createLink(n5364252404, n52062195232,'');var l5n52062195232i595321666 = createLink(n52062195232, i595321666,'impact');var l5n52062195232e51788157470 = createLink(n52062195232, e51788157470,'effect');var l5n52062195232b563461699 = createLink(n52062195232, b563461699,'biological-object');graph.addCells([d51205353214,n5364252404,n52062195232,b563461699,e51788157470,i595321666,l5n5364252404n52062195232,l5n52062195232i595321666,l5n52062195232e51788157470,l5n52062195232b563461699]);
+marginHeight+=495;
+var d6959455425 = createDescription('6) BRCA1-p.Lys898Glu decreases DNA repair() CAVA-VP014729');var n6952703415 = createVariant('BRCA1-p.Lys898Glu');var n6631898192 = createAnnotation('\ncategory:Gene Ontology\ncvName:DNA repair');var b60 = createBioObject('');var e61788157470 = createEffect('effect on protein activity');var i6573606046 = createImpact('decrease');var l6n6952703415n6631898192 = createLink(n6952703415, n6631898192,'');var l6n6631898192i6573606046 = createLink(n6631898192, i6573606046,'impact');var l6n6631898192e61788157470 = createLink(n6631898192, e61788157470,'effect');var l6n6631898192b60 = createLink(n6631898192, b60,'biological-object');graph.addCells([d6959455425,n6952703415,n6631898192,b60,e61788157470,i6573606046,l6n6952703415n6631898192,l6n6631898192i6573606046,l6n6631898192e61788157470,l6n6631898192b60]);
+marginHeight+=495;
+var d71770148833 = createDescription('7) BRCA1-p.Ala1708Glu has normal DNA recombination() CAVA-VP011178');var n7364252404 = createVariant('BRCA1-p.Ala1708Glu');var n71869960039 = createAnnotation('\ncategory:Gene Ontology\ncvName:DNA recombination');var b70 = createBioObject('');var e71788157470 = createEffect('effect on protein activity');var i7843435704 = createImpact('not_changed');var l7n7364252404n71869960039 = createLink(n7364252404, n71869960039,'');var l7n71869960039i7843435704 = createLink(n71869960039, i7843435704,'impact');var l7n71869960039e71788157470 = createLink(n71869960039, e71788157470,'effect');var l7n71869960039b70 = createLink(n71869960039, b70,'biological-object');graph.addCells([d71770148833,n7364252404,n71869960039,b70,e71788157470,i7843435704,l7n7364252404n71869960039,l7n71869960039i7843435704,l7n71869960039e71788157470,l7n71869960039b70]);
+marginHeight+=495;
+var d81457298040 = createDescription('8) BRCA1-p.Ala1708Glu gains binding to NELFB() CAVA-VP012901');var n8364252404 = createVariant('BRCA1-p.Ala1708Glu');var n82062195232 = createAnnotation('\ncategory:\ncvName:');var b874165489 = createBioObject('NELFB');var e81013672797 = createEffect('effect on protein interaction');var i898116820 = createImpact('gains');var l8n8364252404n82062195232 = createLink(n8364252404, n82062195232,'');var l8n82062195232i898116820 = createLink(n82062195232, i898116820,'impact');var l8n82062195232e81013672797 = createLink(n82062195232, e81013672797,'effect');var l8n82062195232b874165489 = createLink(n82062195232, b874165489,'biological-object');graph.addCells([d81457298040,n8364252404,n82062195232,b874165489,e81013672797,i898116820,l8n8364252404n82062195232,l8n82062195232i898116820,l8n82062195232e81013672797,l8n82062195232b874165489]);
+marginHeight+=495;
+var d91583417984 = createDescription('9) BRCA1-p.Ala1708Glu decreases binding to ACACA() CAVA-VP011436');var n9364252404 = createVariant('BRCA1-p.Ala1708Glu');var n92062195232 = createAnnotation('\ncategory:\ncvName:');var b962089469 = createBioObject('ACACA');var e91013672797 = createEffect('effect on protein interaction');var i9573606046 = createImpact('decrease');var l9n9364252404n92062195232 = createLink(n9364252404, n92062195232,'');var l9n92062195232i9573606046 = createLink(n92062195232, i9573606046,'impact');var l9n92062195232e91013672797 = createLink(n92062195232, e91013672797,'effect');var l9n92062195232b962089469 = createLink(n92062195232, b962089469,'biological-object');graph.addCells([d91583417984,n9364252404,n92062195232,b962089469,e91013672797,i9573606046,l9n9364252404n92062195232,l9n92062195232i9573606046,l9n92062195232e91013672797,l9n92062195232b962089469]);
+marginHeight+=495;
+var d101990842933 = createDescription('10) BRCA1-p.Ser988Ala increases binding to CHEK2() CAVA-VP011483');var n10170848107 = createVariant('BRCA1-p.Ser988Ala');var n102062195232 = createAnnotation('\ncategory:\ncvName:');var b1064089543 = createBioObject('CHEK2');var e101013672797 = createEffect('effect on protein interaction');var i1095321666 = createImpact('increase');var l10n10170848107n102062195232 = createLink(n10170848107, n102062195232,'');var l10n102062195232i1095321666 = createLink(n102062195232, i1095321666,'impact');var l10n102062195232e101013672797 = createLink(n102062195232, e101013672797,'effect');var l10n102062195232b1064089543 = createLink(n102062195232, b1064089543,'biological-object');graph.addCells([d101990842933,n10170848107,n102062195232,b1064089543,e101013672797,i1095321666,l10n10170848107n102062195232,l10n102062195232i1095321666,l10n102062195232e101013672797,l10n102062195232b1064089543]);
+marginHeight+=495;
+var d11359873896 = createDescription('11) BRCA1-p.Arg71Gly has normal binding to BAP1() CAVA-VP011423');var n111734968588 = createVariant('BRCA1-p.Arg71Gly');var n112062195232 = createAnnotation('\ncategory:\ncvName:');var b112031200 = createBioObject('BAP1');var e111013672797 = createEffect('effect on protein interaction');var i11843435704 = createImpact('not_changed');var l11n111734968588n112062195232 = createLink(n111734968588, n112062195232,'');var l11n112062195232i11843435704 = createLink(n112062195232, i11843435704,'impact');var l11n112062195232e111013672797 = createLink(n112062195232, e111013672797,'effect');var l11n112062195232b112031200 = createLink(n112062195232, b112031200,'biological-object');graph.addCells([d11359873896,n111734968588,n112062195232,b112031200,e111013672797,i11843435704,l11n111734968588n112062195232,l11n112062195232i11843435704,l11n112062195232e111013672797,l11n112062195232b112031200]);
+marginHeight+=495;
+var d122011047335 = createDescription('12) BRCA1-p.Ala1669Ser has no effect on stability of BRCA1() CAVA-VP010515');var n12341205482 = createVariant('BRCA1-p.Ala1669Ser');var n122062195232 = createAnnotation('\ncategory:\ncvName:');var b1263461699 = createBioObject('BRCA1');var e121091837562 = createEffect('effect on protein stability');var i12843435704 = createImpact('not_changed');var l12n12341205482n122062195232 = createLink(n12341205482, n122062195232,'');var l12n122062195232i12843435704 = createLink(n122062195232, i12843435704,'impact');var l12n122062195232e121091837562 = createLink(n122062195232, e121091837562,'effect');var l12n122062195232b1263461699 = createLink(n122062195232, b1263461699,'biological-object');graph.addCells([d122011047335,n12341205482,n122062195232,b1263461699,e121091837562,i12843435704,l12n12341205482n122062195232,l12n122062195232i12843435704,l12n122062195232e121091837562,l12n122062195232b1263461699]);
+marginHeight+=495;
+var d131289769810 = createDescription('13) BRCA1-p.Ser1387Ala removes PTM site BRCA1-P-Ser1387() CAVA-VP011671');var n13345096573 = createVariant('BRCA1-p.Ser1387Ala');var n132062195232 = createAnnotation('\ncategory:\ncvName:');var b13972781478 = createBioObject('BRCA1-P-Ser1387');var e131860210119 = createEffect('effect on phosphorylation Vario???');var i13843435704 = createImpact('not_changed');var l13n13345096573n132062195232 = createLink(n13345096573, n132062195232,'');var l13n132062195232i13843435704 = createLink(n132062195232, i13843435704,'impact');var l13n132062195232e131860210119 = createLink(n132062195232, e131860210119,'effect');var l13n132062195232b13972781478 = createLink(n132062195232, b13972781478,'biological-object');graph.addCells([d131289769810,n13345096573,n132062195232,b13972781478,e131860210119,i13843435704,l13n13345096573n132062195232,l13n132062195232i13843435704,l13n132062195232e131860210119,l13n132062195232b13972781478]);
+marginHeight+=495;
+var d141868144205 = createDescription('14) BRCA1-p.Ser1189Ala causes phenotype increased tumor incidence() CAVA-VP011620');var n14287897853 = createVariant('BRCA1-p.Ser1189Ala');var n14346081120 = createAnnotation('\ncategory:Mammalian phenotype\ncvName:increased tumor incidence');var b140 = createBioObject('');var e14832579150 = createEffect('effect on mammalian phenotype???');var i1498116820 = createImpact('gains');var l14n14287897853n14346081120 = createLink(n14287897853, n14346081120,'');var l14n14346081120i1498116820 = createLink(n14346081120, i1498116820,'impact');var l14n14346081120e14832579150 = createLink(n14346081120, e14832579150,'effect');var l14n14346081120b140 = createLink(n14346081120, b140,'biological-object');graph.addCells([d141868144205,n14287897853,n14346081120,b140,e14832579150,i1498116820,l14n14287897853n14346081120,l14n14346081120i1498116820,l14n14346081120e14832579150,l14n14346081120b140]);
+marginHeight+=495;
+var d151104820022 = createDescription('15) BRCA1-p.Ser1524Ala has normal cell death NEGATIVE EVIDENCE CAVA-VP013709');var n15236050395 = createVariant('BRCA1-p.Ser1524Ala + BRCA1-p.Ser1423Ala + BRCA1-p.Ser1387Ala');var n151478470736 = createAnnotation('\ncategory:Gene Ontology\ncvName:cell death');var b150 = createBioObject('');var e151788157470 = createEffect('effect on protein activity');var i15738943668 = createImpact('changed');var l15n15236050395n151478470736 = createLink(n15236050395, n151478470736,'');var l15n151478470736i15738943668 = createLink(n151478470736, i15738943668,'impact');var l15n151478470736e151788157470 = createLink(n151478470736, e151788157470,'effect');var l15n151478470736b150 = createLink(n151478470736, b150,'biological-object');graph.addCells([d151104820022,n15236050395,n151478470736,b150,e151788157470,i15738943668,l15n15236050395n151478470736,l15n151478470736i15738943668,l15n151478470736e151788157470,l15n151478470736b150]);
+marginHeight+=495;
+var d161492037527 = createDescription('16) BRCA1-p.Arg1699Trp is a labile form of BRCA1 NEGATIVE EVIDENCE CAVA-VP010094');var n1643887361 = createVariant('BRCA1-p.Arg1699Trp');var n162062195232 = createAnnotation('\ncategory:\ncvName:');var b1663461699 = createBioObject('BRCA1');var e161788157470 = createEffect('effect on protein activity');var i1695321666 = createImpact('increase');var l16n1643887361n162062195232 = createLink(n1643887361, n162062195232,'');var l16n162062195232i1695321666 = createLink(n162062195232, i1695321666,'impact');var l16n162062195232e161788157470 = createLink(n162062195232, e161788157470,'effect');var l16n162062195232b1663461699 = createLink(n162062195232, b1663461699,'biological-object');graph.addCells([d161492037527,n1643887361,n162062195232,b1663461699,e161788157470,i1695321666,l16n1643887361n162062195232,l16n162062195232i1695321666,l16n162062195232e161788157470,l16n162062195232b1663461699]);
+marginHeight+=495;
+var d17349975480 = createDescription('17) BRCA1-p.Ser1423Ala increases cell death NEGATIVE EVIDENCE CAVA-VP013705');var n17236050395 = createVariant('BRCA1-p.Ser1524Ala + BRCA1-p.Ser1423Ala + BRCA1-p.Ser1387Ala');var n171478470736 = createAnnotation('\ncategory:Gene Ontology\ncvName:cell death');var b170 = createBioObject('');var e171788157470 = createEffect('effect on protein activity');var i17843435704 = createImpact('not_changed');var l17n17236050395n171478470736 = createLink(n17236050395, n171478470736,'');var l17n171478470736i17843435704 = createLink(n171478470736, i17843435704,'impact');var l17n171478470736e171788157470 = createLink(n171478470736, e171788157470,'effect');var l17n171478470736b170 = createLink(n171478470736, b170,'biological-object');graph.addCells([d17349975480,n17236050395,n171478470736,b170,e171788157470,i17843435704,l17n17236050395n171478470736,l17n171478470736i17843435704,l17n171478470736e171788157470,l17n171478470736b170]);
+marginHeight+=495;
+var d181802979714 = createDescription('18) BRCA1-p.Asp67Glu decreases binding to BARD1 NEGATIVE EVIDENCE CAVA-VP019341');var n181415577447 = createVariant('BRCA1-p.Asp67Glu');var n182062195232 = createAnnotation('\ncategory:\ncvName:');var b1862969760 = createBioObject('BARD1');var e181013672797 = createEffect('effect on protein interaction');var i18843435704 = createImpact('not_changed');var l18n181415577447n182062195232 = createLink(n181415577447, n182062195232,'');var l18n182062195232i18843435704 = createLink(n182062195232, i18843435704,'impact');var l18n182062195232e181013672797 = createLink(n182062195232, e181013672797,'effect');var l18n182062195232b1862969760 = createLink(n182062195232, b1862969760,'biological-object');graph.addCells([d181802979714,n181415577447,n182062195232,b1862969760,e181013672797,i18843435704,l18n181415577447n182062195232,l18n182062195232i18843435704,l18n182062195232e181013672797,l18n182062195232b1862969760]);
+marginHeight+=495;
+var d191275263515 = createDescription('19) BRCA1-p.Asp1778Asn has no effect on stability of BRCA1 NEGATIVE EVIDENCE CAVA-VP010473');var n19975783391 = createVariant('BRCA1-p.Asp1778Asn');var n192062195232 = createAnnotation('\ncategory:\ncvName:');var b1963461699 = createBioObject('BRCA1');var e191091837562 = createEffect('effect on protein stability');var i19738943668 = createImpact('changed');var l19n19975783391n192062195232 = createLink(n19975783391, n192062195232,'');var l19n192062195232i19738943668 = createLink(n192062195232, i19738943668,'impact');var l19n192062195232e191091837562 = createLink(n192062195232, e191091837562,'effect');var l19n192062195232b1963461699 = createLink(n192062195232, b1963461699,'biological-object');graph.addCells([d191275263515,n19975783391,n192062195232,b1963461699,e191091837562,i19738943668,l19n19975783391n192062195232,l19n192062195232i19738943668,l19n192062195232e191091837562,l19n192062195232b1963461699]);
+marginHeight+=495;
+
+
+  </script>
+</body>
+</html>
