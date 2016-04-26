@@ -5,7 +5,6 @@ import org.nextprot.parser.bed.utils.BEDUtils
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 import java.io.PrintWriter
-import spray.json.JsObject
 import org.nextprot.parser.bed.utils.JSVariantObject
 import org.nextprot.parser.bed.utils.JSAnnotationObject
 import org.nextprot.parser.bed.utils.JSLinkObject
