@@ -64,6 +64,8 @@ object BEDUtils {
 
     (relation, isNegative) match {
 
+		  // Sub-cellular location ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   		  // Sub-cellular location
 		  case ("increases localization to", IS_POSITIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, INCREASE);
   		  case ("decreases localization to", IS_POSITIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, DECREASE);
@@ -71,66 +73,74 @@ object BEDUtils {
   		  case ("localizes to a new compartment", IS_POSITIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, GAIN);
 
   		  // Sub-cellular location (isNegative = IS_NEGATIVE)
-  		  case ("decreases localization to", IS_NEGATIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, NOT_CHANGED);
-		  case ("has normal localization to", IS_NEGATIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, CHANGED); // Loosing info here, decreases may be on a note
-		  case ("increases localization to", IS_NEGATIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, NOT_CHANGED);
-		  case ("localizes to a new compartment", IS_NEGATIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, CHANGED); // check how this case is modelled
-
-  		  // Effect on catalytic activity and cellular processes (isNegative = IS_NEGATIVE)
-		  case ("has normal", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, CHANGED); // Loosing info here
-  		  case ("impairs", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-		  case ("increases", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-  		  case ("decreases", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-  		  case ("gains", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-
+  		  case ("decreases localization to", IS_NEGATIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, AMBIGUOUS + List(NOT_CHANGED, INCREASE, GAIN).mkString(" or "));
+		  case ("has normal localization to", IS_NEGATIVE) => return (EFFECT_ON_SUBCELLULAR_LOCALIZATION, AMBIGUOUS + List(NOT_CHANGED, DECREASE, GAIN).mkString(" or ")); 
+		  case ("increases localization to", IS_NEGATIVE) => throw new Exception("NOT SUPPORTED");
+		  case ("localizes to a new compartment", IS_NEGATIVE) => throw new Exception("NOT SUPPORTED");
 		  
-		  
-		  
+  		  // Effect on catalytic activity and cellular processes //////////////////////////////////////////////////////////////////////////////////////////////////
+	  
   		  // Effect on catalytic activity and cellular processes
 		  case ("has normal", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
   		  case ("impairs", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, CHANGED);
 		  case ("increases", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, INCREASE);
   		  case ("decreases", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, DECREASE);
-  		  case ("gains", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, GAIN);
+  		  case ("gains function", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, GAIN);
+
 
   		  // Effect on catalytic activity and cellular processes (isNegative = IS_NEGATIVE)
-		  case ("has normal", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, CHANGED); // Loosing info here
-  		  case ("impairs", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-		  case ("increases", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-  		  case ("decreases", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-  		  case ("gains", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, NOT_CHANGED);
-  		  
-
-  		  // Effect on binding
+		  case ("has normal", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, AMBIGUOUS + List(CHANGED, INCREASE, DECREASE, GAIN).mkString(" or "));
+		  case ("impairs", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, AMBIGUOUS + List(NOT_CHANGED, INCREASE, DECREASE, GAIN).mkString(" or "));
+		  case ("increases", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, AMBIGUOUS + List(NOT_CHANGED, CHANGED, DECREASE, GAIN).mkString(" or "));
+  		  case ("decreases", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, AMBIGUOUS + List(NOT_CHANGED, CHANGED, INCREASE, GAIN).mkString(" or "));
+  		  case ("gains function", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY,  AMBIGUOUS + List(NOT_CHANGED, CHANGED, INCREASE, DECREASE).mkString(" or "));
+		  
+		  // Effect on protein interaction //////////////////////////////////////////////////////////////////////////////////////
   		  case ("has normal binding to", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, NOT_CHANGED);
   		  case ("increases binding to", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, INCREASE);
 		  case ("decreases binding to", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, DECREASE);
 		  case ("gains binding to", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, GAIN);
+
+		  // Effect on protein interaction (NEGATIVE)
+  		  case ("has normal binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, AMBIGUOUS + List(GAIN, INCREASE, DECREASE).mkString(" or "));
+  		  case ("increases binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, AMBIGUOUS + List(GAIN, NOT_CHANGED, DECREASE).mkString(" or "));
+		  case ("decreases binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, AMBIGUOUS + List(GAIN, INCREASE, NOT_CHANGED).mkString(" or "));
+		  case ("gains binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, AMBIGUOUS + List(NOT_CHANGED, INCREASE, DECREASE).mkString(" or "));
   		  
-  		  case ("has normal binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, CHANGED); //Loose information in note
-  		  case ("increases binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, NOT_CHANGED);
-		  case ("decreases binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, NOT_CHANGED);
-		  case ("gains binding to", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_INTERACTION, NOT_CHANGED);
-  		  
-  		  // Effect on stability
- 		  case ("removes PTM site", IS_POSITIVE) => return (EFFECT_ON_PHOSPHORYLATION, NOT_CHANGED);
-  		  case ("gains PTM site", IS_POSITIVE) => return (EFFECT_ON_PHOSPHORYLATION, CHANGED);
-  		  
-		  case ("is a labile form of", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, INCREASE);
+
+  		  // Effect on stability ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 		  case ("is a labile form of", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_STABILITY, DECREASE);
 		  case ("is a more stable form of", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_STABILITY, INCREASE);
   		  case ("has no effect on stability of", IS_POSITIVE) => return (EFFECT_ON_PROTEIN_STABILITY, NOT_CHANGED);
+
+  		  // Effect on stability (NEGATIVE)
+  		  case ("is a labile form of", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_STABILITY, AMBIGUOUS + List(NOT_CHANGED, INCREASE).mkString(" or "));
+		  case ("is a more stable form of", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_STABILITY, AMBIGUOUS + List(NOT_CHANGED, DECREASE).mkString(" or "));
+  		  case ("has no effect on stability of", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_STABILITY, AMBIGUOUS + List(INCREASE, DECREASE).mkString(" or "));
+
+    	  // Effect on phosphorylation ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  		  case ("removes PTM site", IS_POSITIVE) => return (EFFECT_ON_PHOSPHORYLATION, LOSS);
+  		  case ("gains PTM site", IS_POSITIVE) => return (EFFECT_ON_PHOSPHORYLATION, GAIN);
   		  
-  		  case ("is a labile form of", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_ACTIVITY, INCREASE);
-		  case ("is a more stable form of", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_STABILITY, CHANGED);
-  		  case ("has no effect on stability of", IS_NEGATIVE) => return (EFFECT_ON_PROTEIN_STABILITY, CHANGED);
+  		  // Effect on phosphorylation (Negative)
+  		  case ("removes PTM site", IS_NEGATIVE) => return (EFFECT_ON_PHOSPHORYLATION, NOT_CHANGED);
+  		  case ("gains PTM site", IS_NEGATIVE) => return (EFFECT_ON_PHOSPHORYLATION, NOT_CHANGED);
+  		  
+  		  // Effect on Mammalian Phenotype
+  		  case ("causes phenotype", IS_POSITIVE) => return (EFFECT_ON_MAMMALIAN_PHENOTYPE, GAIN + "MammalianPhenotype???");
+  		  case ("does not cause phenotype", IS_POSITIVE) => return (EFFECT_ON_MAMMALIAN_PHENOTYPE, NOT_CHANGED + "MammalianPhenotype???");
+		  case ("causes phenotype", IS_NEGATIVE) => throw new Exception("NOT SUPPORTED");
+		  case ("does not cause phenotype", IS_NEGATIVE) => throw new Exception("NOT SUPPORTED");
 
-		  case ("causes phenotype", IS_POSITIVE) => return (EFFECT_ON_MAMMALIAN_PHENOTYPE, GAIN);
-  		  case ("does not cause phenotype", IS_POSITIVE) => return (EFFECT_ON_MAMMALIAN_PHENOTYPE, NOT_CHANGED + "???");
-		  case ("causes phenotype", IS_NEGATIVE) => return (EFFECT_ON_MAMMALIAN_PHENOTYPE, NOT_CHANGED + "???");
-  		  case ("does not cause phenotype", IS_NEGATIVE) => return (EFFECT_ON_MAMMALIAN_PHENOTYPE, GAIN);
-
-  		  case _ => return ("not-defined", "not-defined");
-
+		  /*
+		   * is a poorer substrate for	NEDD4L	protein
+			 is a poorer substrate for	PG:ERK1/2	proteinGroup
+			 is a dominant negative form of	SCN2A	protein
+			 is a dominant negative form of	MSH2	protein
+		   */
+  		  case _ => return throw new Exception("Relation " + relation + " is not supported");
+  		  
     }
     
     
