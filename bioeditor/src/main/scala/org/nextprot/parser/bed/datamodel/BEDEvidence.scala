@@ -1,6 +1,7 @@
 package org.nextprot.parser.bed.datamodel
 
 import org.nextprot.parser.bed.utils.BEDUtils
+import org.nextprot.parser.bed.utils.BEDUtils.RelationInfo
 
 case class BEDEvidence(val _annotationAccesion : String, val _subject : String, val _relation : String, val _objectTerm : BEDCV, val _bioObject : String, val isNegative: Boolean, val vdAlleles : List[String], val references: List[(String, String)]) {
 
@@ -12,9 +13,8 @@ case class BEDEvidence(val _annotationAccesion : String, val _subject : String, 
     return _objectTerm.name + _bioObject;
   }
   
-    
-  def getTermAttributeRelation() : (String, String) = {
-    return BEDUtils.getTermAndAttribute(_relation, isNegative);
+  def getTermAttributeRelation() : RelationInfo = {
+    return BEDUtils.getRelationInformation(_relation, isNegative);
   }
   
   def getRealSubject() : String = {

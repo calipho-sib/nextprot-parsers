@@ -4,6 +4,7 @@ import java.io.File
 import org.nextprot.parser.bed.utils.BEDUtils
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
+import org.nextprot.parser.bed.service.BEDAnnotationService
 
 class BedUtilsTest extends FlatSpec with Matchers {
 
@@ -27,14 +28,14 @@ class BedUtilsTest extends FlatSpec with Matchers {
   it should "return a list of annotations" in {
 
     val entryName = (entryElem \ "@accession").text;
-    val bedAnnotations = BEDUtils.getBEDAnnotations(entryElem);
+    val bedAnnotations = BEDAnnotationService.getBEDAnnotations(entryElem);
     println(bedAnnotations.size);
     
 
   }
   
    it should "group annotations together by subject and relation" in {
-     val annotations = BEDUtils.getBEDAnnotations(entryElem);
+     val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
      println(annotations.groupBy(a => (a._subject, a.getAbsoluteObject)));
   }
 

@@ -5,6 +5,7 @@ import org.nextprot.parser.bed.utils.BEDUtils
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 import java.io.PrintWriter
+import org.nextprot.parser.bed.service.BEDAnnotationService
 
 class BedPublicationListTest extends FlatSpec with Matchers {
 
@@ -12,7 +13,7 @@ class BedPublicationListTest extends FlatSpec with Matchers {
 
    it should "get a list of all publications" in {
      
-      val annotations = BEDUtils.getBEDAnnotations(entryElem);
+      val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
       val publications = annotations.flatMap(a => a._evidences).flatMap(e => e.getReferences).toSeq;
       println(publications.size)
       publications.groupBy(p => p._1).foreach(g => println (g._1 + " : " + g._2.size))

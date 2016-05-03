@@ -14,14 +14,15 @@ import org.nextprot.parser.bed.utils.JSDescriptionObject
 import org.nextprot.parser.bed.utils.JSImpactObject
 import org.nextprot.parser.bed.utils.JSEffectObject
 import org.nextprot.parser.bed.utils.JSBioObject
-import org.nextprot.parser.bed.commons.constants.BEDRelationTerms
+import org.nextprot.parser.bed.commons.constants.BEDEffects
+import org.nextprot.parser.bed.service.BEDAnnotationService
 
 class BEDGenerateDoc extends FlatSpec with Matchers {
 
   val entryElem = scala.xml.XML.loadFile(new File("ln-s-data.xml"))
 
   it should "group annotations together by subject and object" in {
-    val annotations = BEDUtils.getBEDAnnotations(entryElem);
+    val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
     //annotations.foreach(println);
 
     val vpAnnotations = annotations.filter(a => a.isVP);
@@ -29,21 +30,24 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
     val vpEvidences = vpAnnotations.flatMap(a => a._evidences);
     println("Total of evidences: " + vpEvidences.length);
-    println("Total of evidences not matched: " + vpEvidences.filter(e => e.getTermAttributeRelation._1 == "not-defined").size);
+    println("Total of evidences not matched: " + vpEvidences.size);
 
     var diagramCode = "";
     var iteration = 1;
 
     List(false, true).foreach(negative => { //For positive and negative evidences
 
-      BEDRelationTerms.ALL_EFFECTS.foreach(effect => { // For all effects
+      BEDEffects.values.foreach(effect => { // For all effects
 
-        vpEvidences.filter(e => (e.isNegative.equals(negative)) && (e.getTermAttributeRelation._1.equals(effect))).groupBy(e => e.getTermAttributeRelation).foreach(k => {
+        vpEvidences.filter(
+            e => (e.isNegative.equals(negative)) &&
+            (e.getTermAttributeRelation.effect.equals(effect))).
+        groupBy(e => e.getTermAttributeRelation).foreach(k => {
 
           //val entityKey = k._1._1;
           println(k._1);
-          val term = k._1._1;
-          val termImpact = k._1._2;
+          val term = k._1.effect
+          val termImpact = k._1.getImpactString
           //val goTerm = k._1._3;
 
           val evidences = k._2
@@ -61,8 +65,8 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
           val a1 = new JSAnnotationObject(iteration, annotationString);
           val b1 = new JSBioObject(iteration, firstEvidence._bioObject);
 
-          val i1 = new JSImpactObject(iteration, termImpact);
-          val e1 = new JSEffectObject(iteration, term);
+          val i1 = new JSImpactObject(iteration, termImpact.toString);
+          val e1 = new JSEffectObject(iteration, term.toString);
 
           val l1 = new JSLinkObject(iteration, v1, a1, "");
           val l2 = new JSLinkObject(iteration, a1, i1, "impact");

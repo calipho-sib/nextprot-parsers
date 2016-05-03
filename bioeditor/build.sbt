@@ -47,8 +47,9 @@ libraryDependencies ++= Seq(
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
   "org.nextprot.parser.core" % "nextprot-parser-core" % "0.34.+",
-  "com.google.code.gson" % "gson" % "1.7.1"
-)
+  "com.google.code.gson" % "gson" % "1.7.1",
+ "org.apache.jena" % "apache-jena-libs" % "3.0.1"
+ )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 publishTo := {

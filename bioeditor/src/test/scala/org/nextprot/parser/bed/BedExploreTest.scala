@@ -5,13 +5,14 @@ import org.nextprot.parser.bed.utils.BEDUtils
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 import java.io.PrintWriter
+import org.nextprot.parser.bed.service.BEDAnnotationService
 
 class BedExploreTest extends FlatSpec with Matchers {
 
   val entryElem = scala.xml.XML.loadFile(new File("ln-s-data.xml"))
 
    it should "group annotations together by subject and object" in {
-     val annotations = BEDUtils.getBEDAnnotations(entryElem);
+     val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
      //annotations.foreach(println);
      
      val vpAnnotations = annotations.filter(a => a.isVP);
@@ -19,9 +20,9 @@ class BedExploreTest extends FlatSpec with Matchers {
      
      val vpEvidences = vpAnnotations.flatMap(a => a._evidences);
      println("Total of evidences: " + vpEvidences.length);
-     println("Total of evidences not matched: " + vpEvidences.filter(e=> e.getTermAttributeRelation._1 == "not-defined").size);
+     println("Total of evidences not matched: " + vpEvidences.size);
      
-     val res = vpEvidences.filter(e=> e.getTermAttributeRelation._1 != "not-defined").groupBy(e => (e.getRealSubject, e.getTermAttributeRelation(), e.getRealObject));
+     val res = vpEvidences.groupBy(e => (e.getRealSubject, e.getTermAttributeRelation(), e.getRealObject));
      
      //println(res);
      
@@ -29,13 +30,13 @@ class BedExploreTest extends FlatSpec with Matchers {
      res.take(10).foreach(k => {
        
        val entityKey = k._1._1;
-       val term = k._1._2._1;
-       val termImpact = k._1._2._2;
+       val term = k._1._2.effect;
+       val impact = k._1._2.getImpactString;
        val goTerm = k._1._3;
        
        val evidences = k._2
        
-       pw.write(List(entityKey, term, termImpact, goTerm, evidences.size).mkString("\t"));
+       pw.write(List(entityKey, term, impact, goTerm, evidences.size).mkString("\t"));
        pw.write("\n");
        
        //CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})

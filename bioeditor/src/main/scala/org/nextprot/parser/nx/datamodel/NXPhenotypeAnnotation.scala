@@ -1,5 +1,8 @@
 package org.nextprot.parser.nx.datamodel
 
-case class NXPhenotypeAnnotation(subject: String, effect: String, impact: String, category: String, cvName: String, bioObject : String ) {
+import org.nextprot.parser.bed.commons.constants.BEDEffects
+import org.nextprot.parser.bed.commons.constants.BEDModifiers
+
+case class NXPhenotypeAnnotation(subject: String, effect: BEDEffects.Value, impact: String, category: String, cvName: String, bioObject : String ) {
 
 }
