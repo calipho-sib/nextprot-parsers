@@ -31,8 +31,6 @@ object BEDUtils {
   def getBEDVariants(entry: NodeSeq): List[BEDVariant] = {
     return (entry \ "variants" \\ "variant").map(xmlV => {
 
-      //println(xmlV \ "@uniqueName");
-
       new BEDVariant((xmlV \ "@uniqueName").text)
 
     }).toList;

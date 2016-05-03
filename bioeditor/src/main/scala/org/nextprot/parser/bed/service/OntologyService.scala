@@ -22,10 +22,12 @@ object OntologyService {
     """
     PREFIX cv: <http://nextprot.org/rdf/terminology/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-	SELECT ?t
-	WHERE {
-	  cv:GO_ACCESSION rdf:type ?t .
-	}
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT *
+	   WHERE {
+	    cv:GO_ACCESSION rdf:type ?type ;
+	  	 	          rdfs:label ?label .
+		  }
     """;
 
   val endpoint = "http://kant:8890/sparql";
@@ -45,9 +47,12 @@ object OntologyService {
     val results = httpQuery.execSelect();
     while (results.hasNext()) {
       val solution = results.next();
-      val value = solution.get("t").asResource().toString();
-      val v = value.replaceAll("http://nextprot.org/rdf#", "").replaceAll("Cv", "");
-      return BEDUtils.camelToDashes(v).substring(1);
+      val term = solution.get("type").asResource().toString();
+      val label = solution.get("label").asLiteral().toString();
+      val v = term.replaceAll("http://nextprot.org/rdf#", "");
+      val result = BEDUtils.camelToDashes(v).substring(1);
+      println(accession + " " + result + " " + v + label);
+      return result;
     }
     return null;
   }

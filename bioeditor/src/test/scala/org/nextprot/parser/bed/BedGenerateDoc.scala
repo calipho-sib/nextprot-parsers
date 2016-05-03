@@ -57,7 +57,10 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
           val description = iteration + ") " + firstEvidence._subject + " " + firstEvidence._relation + " " + firstEvidence.getRealObject + { if (firstEvidence.isNegative) " NEGATIVE EVIDENCE" } + " " + firstEvidence._annotationAccesion;
 
           val variantString = firstEvidence.getRealSubject;
-          val annotationString = "\\ncategory:" + firstEvidence._objectTerm.category + "\\ncvName:" + firstEvidence._objectTerm.name;
+          val annotationString =  "\\ncategory:" + firstEvidence._objectTerm.category +
+        		  				  "\\nterminology:" + firstEvidence._objectTerm.terminology +
+        		  				  "\\naccession:" + firstEvidence._objectTerm.accession +
+        		  				  "\\ncvTerm:" + firstEvidence._objectTerm.name;
 
           val d1 = new JSDescriptionObject(iteration, description);
 

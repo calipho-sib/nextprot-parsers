@@ -28,7 +28,13 @@ object BEDAnnotationService {
       val _subject = (xmlA \ "subject" \ "molecularEntityRef").text
       val _relation = (xmlA \ "relationship" \ "cvName").text
       val _termXML = (xmlA \ "object" \ "term");
-      val _objectTerm = new BEDCV((_termXML\ "@accession").text, (_termXML \ "@category").text, (_termXML \ "cvName").text);
+      val accession  = (_termXML\ "@accession").text;
+      
+      val terminology =  if(accession.startsWith("GO")){
+        OntologyService.getGoSubCategoryFromAccession(accession);
+      } else ""
+      
+      val _objectTerm = new BEDCV(accession, (_termXML \ "@category").text, (_termXML \ "cvName").text, terminology);
       val _bioObject = (xmlA \ "object" \ "molecularEntityRef").text
 
       val _accession = (xmlA \ "@accession").text
