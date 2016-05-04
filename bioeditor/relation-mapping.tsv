@@ -1,4 +1,4 @@
-increases localization to	false	go-cellular-component	INCREASE	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+BioEditor relation	BioEditor IsNegative	Annotation Category	Modifier?	Terminology	Effect (vario?) ambiguous?	descriptionincreases localization to	false	go-cellular-component	INCREASE	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
 decreases localization to	false	go-cellular-component	DECREASE	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
 has normal localization to	false	go-cellular-component	NOT_CHANGED	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
 localizes to a new compartment	false	go-cellular-component	GAIN	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
