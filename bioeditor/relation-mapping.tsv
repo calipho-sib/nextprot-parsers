@@ -1,0 +1,44 @@
+increases localization to	false	go-cellular-component	INCREASE	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+decreases localization to	false	go-cellular-component	DECREASE	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+has normal localization to	false	go-cellular-component	NOT_CHANGED	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+localizes to a new compartment	false	go-cellular-component	GAIN	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+has normal	false	go-biological-process or go-molecular-function	NOT_CHANGED	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+impairs	false	go-biological-process or go-molecular-function	CHANGED	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+increases	false	go-biological-process or go-molecular-function	INCREASE	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+decreases	false	go-biological-process or go-molecular-function	DECREASE	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+gains function	false	go-biological-process or go-molecular-function	GAIN	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+has normal binding to	false	binary-interaction	NOT_CHANGED		EFFECT_ON_PROTEIN_INTERACTION	NO CV TERM FOR THIS
+increases binding to	false	binary-interaction	INCREASE		EFFECT_ON_PROTEIN_INTERACTION	NO CV TERM FOR THIS BUT COULD BE
+decreases binding to	false	binary-interaction	DECREASE		EFFECT_ON_PROTEIN_INTERACTION	NO CV T...
+gains binding to	false	binary-interaction	GAIN		EFFECT_ON_PROTEIN_INTERACTION	NO CV TERM BUT COULD BE
+is a labile form of	false	TO-BE-DEFINED	DECREASE		EFFECT_ON_PROTEIN_STABILITY	Note that on these cases the BioEditor object does NOT correspond to the BioObjectWe need a CV term for this either a cvTerm or Effect like Vario
+is a more stable form of	false	TO-BE-DEFINED	INCREASE		EFFECT_ON_PROTEIN_STABILITY	Note that on these cases the BioEditor object does NOT correspond to the BioObjectWe need a CV term for this either a cvTerm or Effect like Vario
+has no effect on stability of	false	TO-BE-DEFINED	NOT_CHANGED		EFFECT_ON_PROTEIN_STABILITY	Note that on these cases the BioEditor object does NOT correspond to the BioObjectWe need a CV term for this either a cvTerm or Effect like Vario
+removes PTM site	false	generic-ptm	LOSS		EFFECT_ON_PHOSPHORYLATION	May not be a VPshould be moved to MPthere might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv
+gains PTM site	false	generic-ptm	GAIN		EFFECT_ON_PHOSPHORYLATION	there might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv
+causes phenotype	false	TO-BE-DEFINED	GAIN	mammalian-phenotype-cv	EFFECT_ON_MAMMALIAN_PHENOTYPE	We need a CV term for this either a cvTerm or Effect like Vario
+does not cause phenotype	false	TO-BE-DEFINED	NOT_CHANGED	mammalian-phenotype-cv	EFFECT_ON_MAMMALIAN_PHENOTYPE	We need a CV term for this either a cvTerm or Effect like Vario
+is a poorer substrate for	false	TO-BE-DEFINED	DECREASE		EFFECT_ON_SUBSTRACT	We need a CV term for this either a cvTerm or Effect like Vario
+is a dominant negative form	false	TO-BE-DEFINED	INCREASE		EFFECT_ON_NEGATIVE_FORM	We need a CV term for this either a cvTerm or Effect like VarioNeeds a flag because it is orthognal
+increases localization to	true					NOT SUPPORTED
+decreases localization to	true	go-cellular-component	AMBIGOUS: NOT_CHANGED or INCREASE or GAIN	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+has normal localization to	true	go-cellular-component	AMBIGOUS: NOT_CHANGED or DECREASE or GAIN	go-cellular-component-cv	EFFECT_ON_SUBCELLULAR_LOCALIZATION	
+localizes to a new compartment	true					NOT SUPPORTED
+has normal	true	go-biological-process or go-molecular-function	AMBIGOUS: CHANGED or INCREASE or DECREASE or GAIN	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+impairs	true	go-biological-process or go-molecular-function	AMBIGOUS: NOT_CHANGED or INCREASE or DECREASE or GAIN	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+increases	true	go-biological-process or go-molecular-function	AMBIGOUS: NOT_CHANGED or CHANGED or DECREASE or GAIN	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+decreases	true	go-biological-process or go-molecular-function	AMBIGOUS: NOT_CHANGED or CHANGED or INCREASE or GAIN	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+gains function	true	go-biological-process or go-molecular-function	AMBIGOUS: NOT_CHANGED or CHANGED or INCREASE or DECREASE	go-biological-process-cv or go-molecular-function-cv	EFFECT_ON_PROTEIN_ACTIVITY	
+has normal binding to	true	binary-interaction	AMBIGOUS: GAIN or INCREASE or DECREASE		EFFECT_ON_PROTEIN_INTERACTION	
+increases binding to	true	binary-interaction	AMBIGOUS: GAIN or NOT_CHANGED or DECREASE		EFFECT_ON_PROTEIN_INTERACTION	
+decreases binding to	true	binary-interaction	AMBIGOUS: GAIN or INCREASE or NOT_CHANGED		EFFECT_ON_PROTEIN_INTERACTION	
+gains binding to	true	binary-interaction	AMBIGOUS: NOT_CHANGED or INCREASE or DECREASE		EFFECT_ON_PROTEIN_INTERACTION	
+is a labile form of	true	TO-BE-DEFINED	AMBIGOUS: NOT_CHANGED or INCREASE		EFFECT_ON_PROTEIN_STABILITY	Note that on these cases the BioEditor object does NOT correspond to the BioObjectWe need a CV term for this either a cvTerm or Effect like Vario
+is a more stable form of	true	TO-BE-DEFINED	AMBIGOUS: NOT_CHANGED or DECREASE		EFFECT_ON_PROTEIN_STABILITY	Note that on these cases the BioEditor object does NOT correspond to the BioObjectWe need a CV term for this either a cvTerm or Effect like Vario
+has no effect on stability of	true	TO-BE-DEFINED	AMBIGOUS: INCREASE or DECREASE		EFFECT_ON_PROTEIN_STABILITY	Note that on these cases the BioEditor object does NOT correspond to the BioObjectWe need a CV term for this either a cvTerm or Effect like Vario
+removes PTM site	true	generic-ptm	NOT_CHANGED		EFFECT_ON_PHOSPHORYLATION	
+gains PTM site	true	generic-ptm	NOT_CHANGED		EFFECT_ON_PHOSPHORYLATION	
+causes phenotype	true					NOT SUPPORTED
+does not cause phenotype	true					NOT SUPPORTED
+is a poorer substrate for	true	TO-BE-DEFINED	AMBIGOUS: NOT_CHANGED or INCREASE		EFFECT_ON_SUBSTRACT	We need a CV term for this either a cvTerm or Effect like Vario
+is a dominant negative form	true					NOT SUPPORTED
