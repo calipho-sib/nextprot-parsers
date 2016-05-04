@@ -17,7 +17,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
   it should "generate the combination of all possible (even not real) combinations" in {
 
-    println(List("Relation", "IsNegative", "Effect?", "Impact?").mkString("\t"));
+    println(List("Relation", "IsNegative", "Comment", "Effect?", "Impact?").mkString("\t"));
 
     List(false, true).foreach(negative => { //For positive and negative evidences
 
@@ -33,7 +33,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
           }
         }
 
-        println(List(r.name, negative, effect, impact).mkString("\t"));
+        println(List(r.name, negative, description, effect, impact).mkString("\t"));
       })
     })
 
