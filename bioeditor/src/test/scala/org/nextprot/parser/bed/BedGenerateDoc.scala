@@ -12,10 +12,12 @@ import org.nextprot.parser.bed.utils.JSNode
 import scala.io.Source
 import org.nextprot.parser.bed.utils.JSDescriptionObject
 import org.nextprot.parser.bed.utils.JSImpactObject
-import org.nextprot.parser.bed.utils.JSEffectObject
 import org.nextprot.parser.bed.utils.JSBioObject
 import org.nextprot.parser.bed.commons.constants.BEDEffects
 import org.nextprot.parser.bed.service.BEDAnnotationService
+import org.nextprot.parser.bed.utils.JSTermObject
+import org.nextprot.parser.bed.utils.JSSubjectComparedObject
+import org.nextprot.parser.bed.utils.JSNoteObject
 
 class BEDGenerateDoc extends FlatSpec with Matchers {
 
@@ -23,12 +25,10 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
   it should "group annotations together by subject and object" in {
     val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
-    //annotations.foreach(println);
-
     val vpAnnotations = annotations.filter(a => a.isVP);
     println("Total of annotations: " + vpAnnotations.length);
 
-    val vpEvidences = vpAnnotations.flatMap(a => a._evidences);
+    val vpEvidences = vpAnnotations.flatMap(a => a._evidences).filter(e => e.isVP);
     println("Total of evidences: " + vpEvidences.length);
     println("Total of evidences not matched: " + vpEvidences.size);
 
@@ -40,51 +40,71 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
       BEDEffects.values.foreach(effect => { // For all effects
 
         vpEvidences.filter(
-            e => (e.isNegative.equals(negative)) &&
+          e => (e.isNegative.equals(negative)) &&
             (e.getTermAttributeRelation.getEffect.equals(effect))).
-        groupBy(e => e.getTermAttributeRelation).foreach(k => {
+          groupBy(e => {
 
-          //val entityKey = k._1._1;
-          println(k._1);
-          val term = k._1.getEffect
-          val termImpact = k._1.getImpactString
-          //val goTerm = k._1._3;
+            val ri = e.getTermAttributeRelation;
+            val cat = e.getNXCategory;
+            val term = ri.getAllowedTerminologies();
+            val ef = ri.getEffect
+            val impact = ri.getImpactString
+            val bioObject = ri.getBioObject
 
-          val evidences = k._2
-          val firstEvidence = evidences(0);
+            (cat, term, ef, impact, bioObject)
 
-          //This only takes 1st evidence
-          val description = iteration + ") " + firstEvidence._subject + " " + firstEvidence._relation + " " + firstEvidence.getRealObject + { if (firstEvidence.isNegative) " NEGATIVE EVIDENCE" } + " " + firstEvidence._annotationAccesion;
+          }).foreach(k => {
 
-          val variantString = firstEvidence.getRealSubject;
-          val annotationString =  "\\ncategory:" + firstEvidence._objectTerm.category +
-        		  				  "\\nterminology:" + firstEvidence._objectTerm.terminology +
-        		  				  "\\naccession:" + firstEvidence._objectTerm.accession +
-        		  				  "\\ncvTerm:" + firstEvidence._objectTerm.name;
+            val evidences = k._2
+            val firstEvidence = evidences(0);
+            val ri = firstEvidence.getTermAttributeRelation;
 
-          val d1 = new JSDescriptionObject(iteration, description);
+            //This only takes 1st evidence
+            val description = iteration + ") " + firstEvidence._subject + " <" + firstEvidence._relation + "> " + firstEvidence.getRealObject + { if (firstEvidence.isNegative) " NEGATIVE EVIDENCE" else "" } + " :" + firstEvidence._annotationAccession;
 
-          val v1 = new JSVariantObject(iteration, variantString);
-          val a1 = new JSAnnotationObject(iteration, annotationString);
-          val b1 = new JSBioObject(iteration, firstEvidence._bioObject);
+            val variantString = firstEvidence.getRealSubject;
+            val annotationString = "\\nannotationCategory:" + firstEvidence.getNXCategory;
 
-          val i1 = new JSImpactObject(iteration, termImpact.toString);
-          val e1 = new JSEffectObject(iteration, term.toString);
+            //BOX For Terminology 
+            val termString = if (firstEvidence.getNXTerminology != null) {
+              "\\nterminology:" + firstEvidence.getNXTerminology.name +
+                "\\naccession:" + firstEvidence._bedObjectCvTerm.accession +
+                "\\ncvTerm:" + firstEvidence._bedObjectCvTerm.cvName;
+            } else "";
 
-          val l1 = new JSLinkObject(iteration, v1, a1, "");
-          val l2 = new JSLinkObject(iteration, a1, i1, "impact");
-          val l3 = new JSLinkObject(iteration, a1, e1, "effect");
-          val l4 = new JSLinkObject(iteration, a1, b1, "biological-object");
+            val impactString = firstEvidence.getTermAttributeRelation.getImpactString;
+            val effectString = firstEvidence.getTermAttributeRelation.getEffect.name;
 
-          val elements: List[JSNode] = List(d1, v1, a1, b1, e1, i1, l1, l2, l3, l4);
+            val d1 = new JSDescriptionObject(iteration, description);
 
-          elements.foreach(o => diagramCode ++= o.getTemplate)
-          diagramCode ++= ("graph.addCells([" + elements.map(e => e.getId).mkString(",") + "]);");
+            val n1 = if (!ri.getDescription.isEmpty()) {
+              new JSNoteObject(iteration, ri.getDescription);
+            } else null;
 
-          diagramCode ++= ("\nmarginHeight+=495;\n");
-          iteration += 1;
+            val v1 = new JSVariantObject(iteration, variantString);
+            val a1 = new JSAnnotationObject(iteration, annotationString);
+            val b1 = new JSBioObject(iteration, firstEvidence.getNXBioObject);
+            val sc1 = new JSSubjectComparedObject(iteration, "BRCA1");
 
-        })
+            val t1 = new JSTermObject(iteration, termString);
+
+            val i1 = new JSImpactObject(iteration, "Modifier: " + impactString + "\\nEffect:" + effectString);
+
+            val l1 = new JSLinkObject(iteration, v1, a1, ":hasAnnotation");
+            val l2 = new JSLinkObject(iteration, a1, i1, ":modificationType");
+            val l3 = new JSLinkObject(iteration, a1, t1, ":term");
+            val l4 = new JSLinkObject(iteration, sc1, a1, ":subjectCompared");
+            val l5 = new JSLinkObject(iteration, a1, b1, ":biologicalObject");
+
+            val elements: List[JSNode] = List(d1, sc1, v1, a1, t1, b1, i1, l1, l2, l3, l4, l5, n1).filter(_ != null);
+
+            elements.foreach(o => diagramCode ++= o.getTemplate)
+            diagramCode ++= ("graph.addCells([" + elements.map(e => e.getId).mkString(",") + "]);");
+
+            diagramCode ++= ("\nmarginHeight+=495;\n");
+            iteration += 1;
+
+          })
 
       })
     })

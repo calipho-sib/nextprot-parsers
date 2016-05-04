@@ -25,25 +25,33 @@
         });
     }
     
-    var createEffect = function (title) {
+    var createSubjectCompared = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 220, y: marginHeight + 150 },
+            position: { x: 100, y: marginHeight + 150 },
             size: { width: 200, height: 30 },
+            attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
+        });
+   	}
+
+    var createModificationType = function (title) {
+    	return new joint.shapes.basic.Rect({
+            position: { x: 800, y: marginHeight + 150},
+            size: { width: 400, height: 100 },
             attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
         });
    	}
 
-    var createImpact = function (title) {
+    var createTerm = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 600, y: marginHeight + 150},
-            size: { width: 200, height: 30 },
+            position: { x: 800, y: marginHeight},
+            size: { width: 300, height: 100 },
             attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
         });
    	}
-
+    
     var createBioObject = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 400, y: marginHeight + 250},
+            position: { x: 450, y: marginHeight + 150},
             size: { width: 200, height: 30 },
             attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
         });
@@ -53,7 +61,7 @@
     var createAnnotation = function (title) {
     	return new joint.shapes.basic.Rect({
             position: { x: 400, y: marginHeight },
-            size: rectSize,
+            size: { width: 300, height: 100 } ,
             attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
         });
    	}
@@ -73,6 +81,15 @@
             attrs: { text: { text: title } }
         });
    	}
+    
+    var createNote = function (title) {
+    	return new joint.shapes.basic.Rect({        
+    		position: { x: 100, y: marginHeight + 300},
+            size: { width: 800, height: 40 },
+            attrs: { rect: { fill: '#d9d2e9' }, text: { text: title } }
+        });
+   	}
+    
     
     var createLink = function (b1, b2, label) {
         return new joint.dia.Link({  source: { id: b1.id },  target: { id: b2.id } , labels: [{ position: 0.5, attrs: { text: { text: label } } }]});

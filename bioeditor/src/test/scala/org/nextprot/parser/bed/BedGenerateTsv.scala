@@ -5,7 +5,6 @@ import org.nextprot.parser.bed.utils.BEDUtils
 import org.nextprot.parser.bed.utils.JSAnnotationObject
 import org.nextprot.parser.bed.utils.JSBioObject
 import org.nextprot.parser.bed.utils.JSDescriptionObject
-import org.nextprot.parser.bed.utils.JSEffectObject
 import org.nextprot.parser.bed.utils.JSImpactObject
 import org.nextprot.parser.bed.utils.JSLinkObject
 import org.nextprot.parser.bed.utils.JSNode
@@ -31,7 +30,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
         val (category, impact, terminology, effect,  bioObject, description) = try {
           val ri = BEDUtils.getRelationInformation(r.name, negative);
-          (ri.getCategory.mkString(" or "), ri.getImpactString, ri.getTerminology.mkString(" or "), ri.getEffect, ri.getBioObject, ri.getDescription);
+          (ri.getAllowedCategories().mkString(" or "), ri.getImpactString, ri.getAllowedTerminologies.mkString(" or "), ri.getEffect, ri.getBioObject, ri.getDescription);
 
         } catch {
           case e: Exception => {

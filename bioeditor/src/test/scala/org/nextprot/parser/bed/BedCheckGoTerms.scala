@@ -6,6 +6,7 @@ import org.scalatest.Matchers
 import java.io.PrintWriter
 import org.nextprot.parser.bed.commons.constants.BEDEffects._
 import org.nextprot.parser.bed.service.BEDAnnotationService
+import org.nextprot.parser.bed.commons.constants.NXCategory
 
 class BEDCheckGoTerms extends FlatSpec with Matchers {
 
@@ -18,7 +19,7 @@ class BEDCheckGoTerms extends FlatSpec with Matchers {
 
     vpEvidences.filter(e => e.getTermAttributeRelation.getEffect.equals(EFFECT_ON_SUBCELLULAR_LOCALIZATION))
       .foreach(e => {
-        if (!e._objectTerm.terminology.equals("go-cellular-component-cv")) {
+        if (!e.getNXCategory.equals(NXCategory.GoCellularComponent)) {
           fail(e.toString());
         }
       })
@@ -28,8 +29,8 @@ class BEDCheckGoTerms extends FlatSpec with Matchers {
 
     vpEvidences.filter(e => e.getTermAttributeRelation.getEffect.equals(EFFECT_ON_PROTEIN_ACTIVITY))
       .foreach(e => {
-        if (!(e._objectTerm.terminology.equals("go-biological-process-cv") ||
-          e._objectTerm.terminology.equals("go-molecular-function-cv"))) {
+        if (!(e.getNXCategory.equals(NXCategory.GoBiologicalProcess) ||
+          e.getNXCategory.equals(NXCategory.GoMolecularFunction))) {
           fail(e.toString());
         }
       })

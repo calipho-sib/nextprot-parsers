@@ -17,6 +17,17 @@ class JSBioObject(iteration: Integer, title: String) extends JSNode {
   }
 }
 
+class JSTermObject(iteration: Integer, title: String) extends JSNode {
+
+	def getId : String = {
+	  "t" + iteration + title.hashCode().abs
+	}
+
+  def getTemplate()  : String = {
+    return ("var " + getId + " = createTerm('" + title + "');");
+  }
+}
+
 class JSDescriptionObject(iteration: Integer, title: String) extends JSNode {
 
 	def getId : String = {
@@ -35,18 +46,18 @@ class JSImpactObject(iteration: Integer, title: String) extends JSNode {
 	}
 
   def getTemplate()  : String = {
-    return ("var " + getId + " = createImpact('" + title + "');");
+    return ("var " + getId + " = createModificationType('" + title + "');");
   }
 }
 
-class JSEffectObject(iteration: Integer, title: String) extends JSNode {
+class JSSubjectComparedObject(iteration: Integer, title: String) extends JSNode {
 
 	def getId : String = {
 	  "e" + iteration + title.hashCode().abs
 	}
 
   def getTemplate()  : String = {
-    return ("var " + getId + " = createEffect('" + title + "');");
+    return ("var " + getId + " = createSubjectCompared('" + title + "');");
   }
 }
 
@@ -58,6 +69,17 @@ class JSVariantObject(iteration: Integer, title: String) extends JSNode {
 
   def getTemplate()  : String = {
     return ("var " + getId + " = createVariant('" + title + "');");
+  }
+}
+
+class JSNoteObject(iteration: Integer, title: String) extends JSNode {
+
+	def getId : String = {
+	  "n" + iteration + title.hashCode().abs
+	}
+
+  def getTemplate()  : String = {
+    return ("var " + getId + " = createNote('" + title + "');");
   }
 }
 

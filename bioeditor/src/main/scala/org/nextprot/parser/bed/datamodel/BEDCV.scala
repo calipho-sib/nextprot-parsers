@@ -1,5 +1,5 @@
 package org.nextprot.parser.bed.datamodel
 
-case class BEDCV(val accession: String, val category: String, val name: String, val terminology: String) {
+case class BEDCV(val accession: String, val category: String, val cvName: String) {
 
 }
