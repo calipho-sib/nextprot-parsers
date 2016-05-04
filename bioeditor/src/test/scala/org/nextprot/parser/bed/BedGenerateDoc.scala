@@ -41,12 +41,12 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
         vpEvidences.filter(
             e => (e.isNegative.equals(negative)) &&
-            (e.getTermAttributeRelation.effect.equals(effect))).
+            (e.getTermAttributeRelation.getEffect.equals(effect))).
         groupBy(e => e.getTermAttributeRelation).foreach(k => {
 
           //val entityKey = k._1._1;
           println(k._1);
-          val term = k._1.effect
+          val term = k._1.getEffect
           val termImpact = k._1.getImpactString
           //val goTerm = k._1._3;
 

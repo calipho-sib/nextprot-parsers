@@ -30,7 +30,7 @@ class BedExploreTest extends FlatSpec with Matchers {
      res.take(10).foreach(k => {
        
        val entityKey = k._1._1;
-       val term = k._1._2.effect;
+       val term = k._1._2.getEffect;
        val impact = k._1._2.getImpactString;
        val goTerm = k._1._3;
        

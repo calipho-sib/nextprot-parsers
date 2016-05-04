@@ -7,7 +7,7 @@ import org.nextprot.parser.bed.utils.Memoize.memoize
 
 object OntologyService {
 
-  /*Try with this
+  /*Try with OntoBee 
   val sparqlQuery =
     """
     PREFIX ot: <http://purl.obolibrary.org/obo/> 
