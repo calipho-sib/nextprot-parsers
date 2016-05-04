@@ -21,7 +21,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
 	 val pw = new PrintWriter(new File("relation-mapping.tsv"));
 
-    val header = (List("BioEditor relation", "BioEditor isNegative evidence", "Annotation category", "Modifier_changename?", "Terminology", "?_Effect_?Vario?", "description").mkString("\t"));
+    val header = (List("BioEditor relation", "BioEditor isNegative evidence", "Annotation category", "Modifier_changename?", "Terminology", "?_Effect_?Vario?", "bioObject", "description").mkString("\t"));
     println(header);
     pw.write(header + "\n");
 
@@ -29,17 +29,17 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
       BEDRelationsString.values.foreach(r => {
 
-        val (category, impact, terminology, effect,  description) = try {
+        val (category, impact, terminology, effect,  bioObject, description) = try {
           val ri = BEDUtils.getRelationInformation(r.name, negative);
-          (ri.getCategory.mkString(" or "), ri.getImpactString, ri.getTerminology.mkString(" or "), ri.getEffect, ri.getDescription);
+          (ri.getCategory.mkString(" or "), ri.getImpactString, ri.getTerminology.mkString(" or "), ri.getEffect, ri.getBioObject, ri.getDescription);
 
         } catch {
           case e: Exception => {
-            ("", "", "", "", e.getMessage());
+            ("", "", "", "", "", e.getMessage());
           }
         }
 
-        val line = List(r.name, negative, category, impact, terminology, effect, description).mkString("\t");
+        val line = List(r.name, negative, category, impact, terminology, effect, bioObject, description).mkString("\t");
         println(line);
         pw.write(line + "\n");
 
