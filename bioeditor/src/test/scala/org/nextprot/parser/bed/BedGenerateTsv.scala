@@ -21,7 +21,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
 	 val pw = new PrintWriter(new File("relation-mapping.tsv"));
 
-    val header = (List("BioEditor relation", "BioEditor IsNegative", "Annotation Category", "Modifier?", "Terminology", "Effect (vario?) ambiguous?", "description").mkString("\t"));
+    val header = (List("BioEditorRelation", "BioEditor_IsNegative_Evidence", "Annotation_Category", "?_Modifier_?", "Terminology", "?_Effect_?Vario?", "description").mkString("\t"));
     println(header);
     pw.write(header);
 
