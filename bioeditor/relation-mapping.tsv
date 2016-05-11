@@ -1,4 +1,4 @@
-BioEditor relation	BioEditor isNegative evidence	Annotation category	Modifier_changename?	Terminology	bioObject	description
+BioEditor relation	BioEditor isNegative evidence	Annotation category	Impact?	Terminology	bioObject	notes
 increases localization to	false	go-cellular-component	increases	go-cellular-component-cv	false	
 decreases localization to	false	go-cellular-component	decreases	go-cellular-component-cv	false	
 has normal localization to	false	go-cellular-component	not-changed	go-cellular-component-cv	false	
