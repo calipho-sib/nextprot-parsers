@@ -63,7 +63,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
             val description = iteration + ") " + firstEvidence._subject + " <" + firstEvidence._relation + "> " + firstEvidence.getRealObject + { if (firstEvidence.isNegative) " NEGATIVE EVIDENCE" else "" } + " :" + firstEvidence._annotationAccession;
 
             val variantString = firstEvidence.getRealSubject;
-            val annotationString = "\\nannotationCategory:" + firstEvidence.getNXCategory;
+            val annotationString = "\\nannotationCategory:\\n" + firstEvidence.getNXCategory;
 
             //BOX For Terminology 
             val termString = if (firstEvidence.getNXTerminology != null) {
@@ -88,10 +88,10 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
             val t1 = new JSTermObject(iteration, termString);
 
-            val i1 = new JSImpactObject(iteration, "Modifier: " + impactString + "\\nEffect:" + effectString);
+            val i1 = new JSImpactObject(iteration, /*"Impact: " +*/ impactString /*+ "\\n(Effect:" + effectString + " )"*/);
 
-            val l1 = new JSLinkObject(iteration, v1, a1, ":hasAnnotation");
-            val l2 = new JSLinkObject(iteration, a1, i1, ":modificationType");
+            val l1 = new JSLinkObject(iteration, v1, a1, "");
+            val l2 = new JSLinkObject(iteration, a1, i1, ":impact");
             val l3 = new JSLinkObject(iteration, a1, t1, ":term");
             val l4 = new JSLinkObject(iteration, sc1, a1, ":subjectCompared");
             val l5 = new JSLinkObject(iteration, a1, b1, ":biologicalObject");
@@ -101,7 +101,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
             elements.foreach(o => diagramCode ++= o.getTemplate)
             diagramCode ++= ("graph.addCells([" + elements.map(e => e.getId).mkString(",") + "]);");
 
-            diagramCode ++= ("\nmarginHeight+=495;\n");
+            diagramCode ++= ("\nmarginHeight+=522;\n");
             iteration += 1;
 
           })
@@ -111,7 +111,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
     val fileContent = Source.fromFile("doc/index-template.html").getLines.mkString("\n");
     val newContent = fileContent.replace("MACRO", diagramCode);
-    new PrintWriter("doc/index.html") { write(newContent); close }
+    new PrintWriter("doc/index2.html") { write(newContent); close }
 
   }
 

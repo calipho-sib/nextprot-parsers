@@ -35,15 +35,15 @@
 
     var createModificationType = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 800, y: marginHeight + 150},
-            size: { width: 400, height: 100 },
-            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
+            position: { x: 675, y: marginHeight + 150},
+            size: { width: 200, height: 40 },
+            attrs: { rect: { fill: '#fce5cd' }, text: { text: title } }
         });
    	}
 
     var createTerm = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 800, y: marginHeight},
+            position: { x: 675, y: marginHeight},
             size: { width: 300, height: 100 },
             attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
         });
@@ -51,17 +51,17 @@
     
     var createBioObject = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 450, y: marginHeight + 150},
+            position: { x: 375, y: marginHeight + 150},
             size: { width: 200, height: 30 },
-            attrs: { rect: { fill: '#f4cccc' }, text: { text: title } }
+            attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
         });
    	}
 
 
     var createAnnotation = function (title) {
     	return new joint.shapes.basic.Rect({
-            position: { x: 400, y: marginHeight },
-            size: { width: 300, height: 100 } ,
+            position: { x: 375, y: marginHeight },
+            size: { width: 200, height: 100 } ,
             attrs: { rect: { fill: '#fff2cc' }, text: { text: title } }
         });
    	}
