@@ -79,7 +79,7 @@ class JSNoteObject(iteration: Integer, title: String) extends JSNode {
 	}
 
   def getTemplate()  : String = {
-    return ("var " + getId + " = createNote('" + title + "');");
+    return ("var " + getId + " = createNote('" + title + "', " + (title.split("\\\\n").length - 1) + ");");
   }
 }
 

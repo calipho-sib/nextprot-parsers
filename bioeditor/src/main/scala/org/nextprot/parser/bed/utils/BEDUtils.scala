@@ -53,14 +53,14 @@ object BEDUtils {
 
   class RelationInfoSimple(category: List[NXCategory.Value], terminoloy: List[NXTerminology.Value], effect: BEDEffects.Value, impacts: List[BEDModifiers.Value], bioObject: Boolean) extends RelationInfo(category, terminoloy, effect, impacts, "", bioObject);
 
-  val NOT_A_VP = "May not be a VP";
   val WRONG_BIOOBJECT = "BioEditor object does NOT correspond to the BioObject in neXtProt.";
-  val NEED_CV_TERM = "We need a new annotation category for this either and a CV Term or Effect like Vario. ";
+  val NEED_CV_TERM = "Need to agree on annotation category and cv term";
 
-  val noteForInteractions = "Interactions do NOT have cv terms as for Wild Type but we could imagine to model this with GO CV Terms as well and precision target ...";
+  val noteForInteractions = "In neXtProt interactions do NOT have cv terms, right?";
 
   def getRelationInformation(relation: String, isNegative: Boolean): RelationInfo = {
 
+    val NL = "\\n"; // new line
     val IS_NEGATIVE = true;
     val IS_POSITIVE = false;
     val l_BP_MF_Cv = List(GoBiologicalProcessCv, GoMolecularFunctionCv);
@@ -112,7 +112,7 @@ object BEDUtils {
 
       // Effect on phosphorylation ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      case (RemovesPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), EFFECT_ON_PHOSPHORYLATION, List(LOSS), NOT_A_VP + "Note 2: should be moved to MP", false);
+      case (RemovesPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), EFFECT_ON_PHOSPHORYLATION, List(LOSS), "Removes PTM should be moved to MP - not a VP", false);
       case (GainsPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), EFFECT_ON_PHOSPHORYLATION, List(GAIN), "there might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv", false);
 
       // Effect on phosphorylation (Negative)
@@ -126,20 +126,20 @@ object BEDUtils {
       case (DoesNotCausePhenotype.name, IS_NEGATIVE) => throw new Exception("NOT SUPPORTED");
 
       // Effect on stability ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      case (IsALabileFormOf.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(DECREASE), WRONG_BIOOBJECT + "Sometimes it means protein stability or abundance or degradation, therefore we could use the more specific term.", false);
-      case (IsAMoreStableFormOF.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(INCREASE), WRONG_BIOOBJECT + NEED_CV_TERM, false);
-      case (HasNoEffectOnStability.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(NOT_CHANGED), WRONG_BIOOBJECT + NEED_CV_TERM, false);
+      case (IsALabileFormOf.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(DECREASE), WRONG_BIOOBJECT + NL + NEED_CV_TERM + NL + "Term could be: effect on proteinty stability or abundance or degradation.", false);
+      case (IsAMoreStableFormOF.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(INCREASE), WRONG_BIOOBJECT + NL + NEED_CV_TERM, false);
+      case (HasNoEffectOnStability.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(NOT_CHANGED), WRONG_BIOOBJECT + NL + NEED_CV_TERM, false);
 
       // Effect on stability (NEGATIVE)
-      case (IsALabileFormOf.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(NOT_CHANGED, INCREASE), WRONG_BIOOBJECT + NEED_CV_TERM, false);
-      case (IsAMoreStableFormOF.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(NOT_CHANGED, DECREASE), WRONG_BIOOBJECT + NEED_CV_TERM, false);
-      case (HasNoEffectOnStability.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(INCREASE, DECREASE), WRONG_BIOOBJECT + NEED_CV_TERM, false);
+      case (IsALabileFormOf.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(NOT_CHANGED, INCREASE), WRONG_BIOOBJECT + NL +  NEED_CV_TERM, false);
+      case (IsAMoreStableFormOF.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(NOT_CHANGED, DECREASE), WRONG_BIOOBJECT + NL + NEED_CV_TERM, false);
+      case (HasNoEffectOnStability.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_PROTEIN_STABILITY, List(INCREASE, DECREASE), WRONG_BIOOBJECT + NL + NEED_CV_TERM, false);
 
       // Effect on substract
       case (IsAPoorerSubstrateFor.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_SUBSTRACT, List(DECREASE), NEED_CV_TERM, false);
       case (IsAPoorerSubstrateFor.name, IS_NEGATIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_SUBSTRACT, List(NOT_CHANGED, INCREASE), NEED_CV_TERM, false);
 
-      case (IsADominantNegativeForm.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_NEGATIVE_FORM, List(INCREASE), NEED_CV_TERM + "Needs a flag because it is orthognal", false);
+      case (IsADominantNegativeForm.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), EFFECT_ON_NEGATIVE_FORM, List(INCREASE), NEED_CV_TERM + NL + "Needs a flag because it is orthognal", false);
       case (IsADominantNegativeForm.name, IS_NEGATIVE) => throw new Exception("NOT SUPPORTED");
 
       case _ => return throw new Exception("Relation " + relation + " is not supported");

@@ -82,10 +82,10 @@
         });
    	}
     
-    var createNote = function (title) {
+    var createNote = function (title, length) {
     	return new joint.shapes.basic.Rect({        
     		position: { x: 100, y: marginHeight + 300},
-            size: { width: 800, height: 40 },
+            size: { width: 800, height: 40 + (length * 30) },
             attrs: { rect: { fill: '#d9d2e9' }, text: { text: title } }
         });
    	}
