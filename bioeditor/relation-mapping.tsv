@@ -1,45 +1,40 @@
-BioEditor relation	BioEditor isNegative evidence	Annotation category	Modifier_changename?	Terminology	?_Effect_?Vario?	bioObject	description
-increases localization to	false	go-cellular-component	increases	go-cellular-component-cv	effect on protein subcellular localization (VariO_0033) or more detailed	false	
-decreases localization to	false	go-cellular-component	decreases	go-cellular-component-cv	effect on protein subcellular localization (VariO_0033) or more detailed	false	
-has normal localization to	false	go-cellular-component	not-changed	go-cellular-component-cv	effect on protein subcellular localization (VariO_0033) or more detailed	false	
-localizes to a new compartment	false	go-cellular-component	gains	go-cellular-component-cv	effect on protein subcellular localization (VariO_0033) or more detailed	false	
-has normal	false	go-biological-process or go-molecular-function	not-changed	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-impairs	false	go-biological-process or go-molecular-function	changed	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-increases	false	go-biological-process or go-molecular-function	increases	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-decreases	false	go-biological-process or go-molecular-function	decreases	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-gains function	false	go-biological-process or go-molecular-function	gains	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-has normal binding to	false	binary-interaction	not-changed		effect on protein interaction (VariO_0058)	true	In neXtProt interactions do NOT have cv terms, right?
-increases binding to	false	binary-interaction	increases		effect on protein interaction (VariO_0058)	true	In neXtProt interactions do NOT have cv terms, right?
-decreases binding to	false	binary-interaction	decreases		effect on protein interaction (VariO_0058)	true	In neXtProt interactions do NOT have cv terms, right?
-gains binding to	false	binary-interaction	gains		effect on protein interaction (VariO_0058)	true	In neXtProt interactions do NOT have cv terms, right?
-is a labile form of	false	vario-protein-property	decreases		effect on protein stability (VariO_0034)	false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term\nTerm could be: effect on proteinty stability or abundance or degradation.
-is a more stable form of	false	vario-protein-property	increases		effect on protein stability (VariO_0034)	false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
-has no effect on stability of	false	vario-protein-property	not-changed		effect on protein stability (VariO_0034)	false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
-removes PTM site	false	generic-ptm	loss		effect on protein post translational modification (VariO_0107)	false	Removes PTM should be moved to MP - not a VP
-gains PTM site	false	generic-ptm	gains		effect on protein post translational modification (VariO_0107)	false	there might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv
-causes phenotype	false	mammalian-phenotype	gains	mammalian-phenotype-cv	EFFECT-TO-BE-DEFINED	false	Note that for phenotypes we have always gains or not changed
-does not cause phenotype	false	mammalian-phenotype	not-changed	mammalian-phenotype-cv	EFFECT-TO-BE-DEFINED	false	Note that for phenotypes we have always gains or not changed
-is a poorer substrate for	false	vario-protein-property	decreases		effect on protein specificity (VariO_0055) ????	false	Need to agree on annotation category and cv term
-is a dominant negative form	false	vario-protein-property	increases		EFFECT-TO-BE-DEFINED	false	Need to agree on annotation category and cv term\nNeeds a flag because it is orthognal
-increases localization to	true						NOT SUPPORTED
-decreases localization to	true	go-cellular-component	AMBIGOUS: not-changed or increases or gains	go-cellular-component-cv	effect on protein subcellular localization (VariO_0033) or more detailed	false	
-has normal localization to	true	go-cellular-component	AMBIGOUS: not-changed or decreases or gains	go-cellular-component-cv	effect on protein subcellular localization (VariO_0033) or more detailed	false	
-localizes to a new compartment	true						NOT SUPPORTED
-has normal	true	go-biological-process or go-molecular-function	AMBIGOUS: changed or increases or decreases or gains	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-impairs	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or increases or decreases or gains	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-increases	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or changed or decreases or gains	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-decreases	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or changed or increases or gains	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-gains function	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or changed or increases or decreases	go-biological-process-cv or go-molecular-function-cv	effect on protein activity (VariO:0053) or more detailed	false	
-has normal binding to	true	binary-interaction	AMBIGOUS: gains or increases or decreases		effect on protein interaction (VariO_0058)	true	
-increases binding to	true	binary-interaction	AMBIGOUS: gains or not-changed or decreases		effect on protein interaction (VariO_0058)	true	
-decreases binding to	true	binary-interaction	AMBIGOUS: gains or increases or not-changed		effect on protein interaction (VariO_0058)	true	
-gains binding to	true	binary-interaction	AMBIGOUS: not-changed or increases or decreases		effect on protein interaction (VariO_0058)	true	
-is a labile form of	true	vario-protein-property	AMBIGOUS: not-changed or increases		effect on protein stability (VariO_0034)	false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
-is a more stable form of	true	vario-protein-property	AMBIGOUS: not-changed or decreases		effect on protein stability (VariO_0034)	false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
-has no effect on stability of	true	vario-protein-property	AMBIGOUS: increases or decreases		effect on protein stability (VariO_0034)	false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
-removes PTM site	true	generic-ptm	not-changed		effect on protein post translational modification (VariO_0107)	false	
-gains PTM site	true	generic-ptm	not-changed		effect on protein post translational modification (VariO_0107)	false	
-causes phenotype	true						NOT SUPPORTED
-does not cause phenotype	true						NOT SUPPORTED
-is a poorer substrate for	true	vario-protein-property	AMBIGOUS: not-changed or increases		effect on protein specificity (VariO_0055) ????	false	Need to agree on annotation category and cv term
-is a dominant negative form	true						NOT SUPPORTED
+BioEditor relation	BioEditor isNegative evidence	Annotation category	Modifier_changename?	Terminology	bioObject	description
+increases localization to	false	go-cellular-component	increases	go-cellular-component-cv	false	
+decreases localization to	false	go-cellular-component	decreases	go-cellular-component-cv	false	
+has normal localization to	false	go-cellular-component	not-changed	go-cellular-component-cv	false	
+localizes to a new compartment	false	go-cellular-component	gains	go-cellular-component-cv	false	
+has normal	false	go-biological-process or go-molecular-function	not-changed	go-biological-process-cv or go-molecular-function-cv	false	
+impairs	false	go-biological-process or go-molecular-function	changed	go-biological-process-cv or go-molecular-function-cv	false	
+increases	false	go-biological-process or go-molecular-function	increases	go-biological-process-cv or go-molecular-function-cv	false	
+decreases	false	go-biological-process or go-molecular-function	decreases	go-biological-process-cv or go-molecular-function-cv	false	
+gains function	false	go-biological-process or go-molecular-function	gains	go-biological-process-cv or go-molecular-function-cv	false	
+has normal binding to	false	binary-interaction	not-changed		true	In neXtProt interactions do NOT have cv terms, right?
+increases binding to	false	binary-interaction	increases		true	In neXtProt interactions do NOT have cv terms, right?
+decreases binding to	false	binary-interaction	decreases		true	In neXtProt interactions do NOT have cv terms, right?
+gains binding to	false	binary-interaction	gains		true	In neXtProt interactions do NOT have cv terms, right?
+is a labile form of	false	vario-protein-property	decreases		false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term\nTerm could be: effect on proteinty stability or abundance or degradation.
+is a more stable form of	false	vario-protein-property	increases		false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
+has no effect on stability of	false	vario-protein-property	not-changed		false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
+removes PTM site	false	generic-ptm	loss		false	Removes PTM should be moved to MP - not a VP
+gains PTM site	false	generic-ptm	gains		false	there might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv
+causes phenotype	false	mammalian-phenotype	gains	mammalian-phenotype-cv	false	Note that for phenotypes we have always gains or not changed
+does not cause phenotype	false	mammalian-phenotype	not-changed	mammalian-phenotype-cv	false	Note that for phenotypes we have always gains or not changed
+is a poorer substrate for	false	vario-protein-property	decreases		false	Need to agree on annotation category and cv term
+is a dominant negative form	false	vario-protein-property	increases		false	Need to agree on annotation category and cv term\nNeeds a flag because it is orthognal
+decreases localization to	true	go-cellular-component	AMBIGOUS: not-changed or increases or gains	go-cellular-component-cv	false	
+has normal localization to	true	go-cellular-component	AMBIGOUS: not-changed or decreases or gains	go-cellular-component-cv	false	
+has normal	true	go-biological-process or go-molecular-function	AMBIGOUS: changed or increases or decreases or gains	go-biological-process-cv or go-molecular-function-cv	false	
+impairs	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or increases or decreases or gains	go-biological-process-cv or go-molecular-function-cv	false	
+increases	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or changed or decreases or gains	go-biological-process-cv or go-molecular-function-cv	false	
+decreases	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or changed or increases or gains	go-biological-process-cv or go-molecular-function-cv	false	
+gains function	true	go-biological-process or go-molecular-function	AMBIGOUS: not-changed or changed or increases or decreases	go-biological-process-cv or go-molecular-function-cv	false	
+has normal binding to	true	binary-interaction	AMBIGOUS: gains or increases or decreases		true	
+increases binding to	true	binary-interaction	AMBIGOUS: gains or not-changed or decreases		true	
+decreases binding to	true	binary-interaction	AMBIGOUS: gains or increases or not-changed		true	
+gains binding to	true	binary-interaction	AMBIGOUS: not-changed or increases or decreases		true	
+is a labile form of	true	vario-protein-property	AMBIGOUS: not-changed or increases		false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
+is a more stable form of	true	vario-protein-property	AMBIGOUS: not-changed or decreases		false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
+has no effect on stability of	true	vario-protein-property	AMBIGOUS: increases or decreases		false	BioEditor object does NOT correspond to the BioObject in neXtProt.\nNeed to agree on annotation category and cv term
+removes PTM site	true	generic-ptm	not-changed		false	
+gains PTM site	true	generic-ptm	not-changed		false	
+is a poorer substrate for	true	vario-protein-property	AMBIGOUS: not-changed or increases		false	Need to agree on annotation category and cv term

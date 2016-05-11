@@ -20,7 +20,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
 	 val pw = new PrintWriter(new File("relation-mapping.tsv"));
 
-    val header = (List("BioEditor relation", "BioEditor isNegative evidence", "Annotation category", "Modifier_changename?", "Terminology", "?_Effect_?Vario?", "bioObject", "description").mkString("\t"));
+    val header = (List("BioEditor relation", "BioEditor isNegative evidence", "Annotation category", "Modifier_changename?", "Terminology", /*"?_Effect_?Vario?",*/ "bioObject", "description").mkString("\t"));
     println(header);
     pw.write(header + "\n");
 
@@ -34,13 +34,15 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
         } catch {
           case e: Exception => {
-            ("", "", "", "", "", e.getMessage());
+            ;("", "", "", "", "", e.getMessage());
           }
         }
 
-        val line = List(r.name, negative, category, impact, terminology, effect, bioObject, description).mkString("\t");
-        println(line);
-        pw.write(line + "\n");
+        if(!description.equals("NOT SUPPORTED")){
+	        val line = List(r.name, negative, category, impact, terminology, /*effect,*/ bioObject, description).mkString("\t");
+	        println(line);
+	        pw.write(line + "\n");
+        }
 
       })
     })
