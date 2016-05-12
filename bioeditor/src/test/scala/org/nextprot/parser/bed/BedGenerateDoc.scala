@@ -93,7 +93,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
             val l1 = new JSLinkObject(iteration, v1, a1, "");
             val l2 = new JSLinkObject(iteration, a1, i1, ":impact");
             val l3 = new JSLinkObject(iteration, a1, t1, ":term");
-            val l4 = new JSLinkObject(iteration, sc1, a1, ":subjectCompared");
+            val l4 = new JSLinkObject(iteration, sc1, a1, ":relativeTo");
             val l5 = new JSLinkObject(iteration, a1, b1, ":biologicalObject");
 
             val elements: List[JSNode] = List(d1, sc1, v1, a1, t1, b1, i1, l1, l2, l3, l4, l5, n1).filter(_ != null);

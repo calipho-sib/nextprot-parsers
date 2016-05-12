@@ -6,11 +6,11 @@ object BEDModifiers extends Enumeration {
   
   implicit def valueofModifiers(x: Value) = x.asInstanceOf[Val]
 
-  val NOT_CHANGED = Val("not-changed")
-  val CHANGED = Val("changed")
-  val GAIN = Val("gains")
+  val NOT_CHANGED = Val("no-change")
+  val CHANGED = Val("change")
+  val GAIN = Val("gain")
   val LOSS = Val("loss")
-  val INCREASE = Val("increases")
-  val DECREASE = Val("decreases")
+  val INCREASE = Val("increase")
+  val DECREASE = Val("decrease")
 
 }
