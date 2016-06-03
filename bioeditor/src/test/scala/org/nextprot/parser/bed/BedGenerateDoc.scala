@@ -41,14 +41,14 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
         vpEvidences.filter(
           e => (e.isNegative.equals(negative)) &&
-            (e.getTermAttributeRelation.getEffect.equals(effect))).
+            (e.getRelationInfo.getEffect.equals(effect))).
           groupBy(e => {
 
-            val ri = e.getTermAttributeRelation;
+            val ri = e.getRelationInfo;
             val cat = e.getNXCategory;
             val term = ri.getAllowedTerminologies();
             val ef = ri.getEffect
-            val impact = ri.getImpactString
+            val impact = ri.getImpact
             val bioObject = ri.getBioObject
 
             (cat, term, ef, impact, bioObject)
@@ -57,7 +57,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
             val evidences = k._2
             val firstEvidence = evidences(0);
-            val ri = firstEvidence.getTermAttributeRelation;
+            val ri = firstEvidence.getRelationInfo;
 
             //This only takes 1st evidence
             val description = iteration + ") " + firstEvidence._subject + " <" + firstEvidence._relation + "> " + firstEvidence.getRealObject + { if (firstEvidence.isNegative) " NEGATIVE EVIDENCE" else "" } + " :" + firstEvidence._annotationAccession;
@@ -72,8 +72,8 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
                 "\\ncvTerm:" + firstEvidence._bedObjectCvTerm.cvName;
             } else "";
 
-            val impactString = firstEvidence.getTermAttributeRelation.getImpactString;
-            val effectString = firstEvidence.getTermAttributeRelation.getEffect.name;
+            val impact = firstEvidence.getRelationInfo.getImpact;
+            val effectString = firstEvidence.getRelationInfo.getEffect.name;
 
             val d1 = new JSDescriptionObject(iteration, description);
 
@@ -88,7 +88,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
             val t1 = new JSTermObject(iteration, termString);
 
-            val i1 = new JSImpactObject(iteration, /*"Impact: " +*/ impactString /*+ "\\n(Effect:" + effectString + " )"*/);
+            val i1 = new JSImpactObject(iteration, /*"Impact: " +*/ impact.name /*+ "\\n(Effect:" + effectString + " )"*/);
 
             val l1 = new JSLinkObject(iteration, v1, a1, "");
             val l2 = new JSLinkObject(iteration, a1, i1, ":impact");

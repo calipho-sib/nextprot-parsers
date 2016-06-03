@@ -1,5 +1,5 @@
 package org.nextprot.parser.bed.commons.constants
-object BEDModifiers extends Enumeration {
+object BEDImpact extends Enumeration {
 
   protected case class Val(name: String) extends super.Val(nextId, name) {
   }
@@ -8,9 +8,11 @@ object BEDModifiers extends Enumeration {
 
   val NOT_CHANGED = Val("no-change")
   val CHANGED = Val("change")
-  val GAIN = Val("gain")
-  val LOSS = Val("loss")
   val INCREASE = Val("increase")
   val DECREASE = Val("decrease")
+  val GAIN = Val("gain")
+  val LOSS = Val("loss")
 
+  val AMBIGUOUS = Val("ambiguous")
+    
 }

@@ -1,0 +1,21 @@
+
+
+    {{#each children}}
+    <li>
+        <div class="heatmap-row">
+            <p class="heatmap-rowLabel tree-toggler"><span class="glyphicon glyphicon-plus"></span><span>{{rowLabel}}</span><span><a href="{{linkURL}}" target="_blank">{{linkLabel}}</a></span></p>
+            <div class="pull-right">
+                {{#forCreateCircle values}}
+                    <div class="heatmap-column {{columnClass}}", style="width:{{columnWidth}}">
+                        <i class="heatmap-circle {{circleColor}}"></i>
+                    </div>
+                {{/forCreateCircle}}
+            </div>
+        </div>
+        <ul class="tree heatmap-closed">
+            {{#if children}}
+                {{> create-children}}
+            {{/if}}
+        </ul>
+    </li>
+    {{/each}}

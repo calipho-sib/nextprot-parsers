@@ -18,10 +18,18 @@ case class BEDEvidence(
   val isNegative: Boolean,
   val vdAlleles: List[String],
   val references: List[(String, String)]) {
-  
-  val relationInfo = if(_annotationAccession.startsWith("CAVA-VP")) {
+
+  val relationInfo = if (_annotationAccession.startsWith("CAVA-VP")) {
     BEDUtils.getRelationInformation(_relation, isNegative);
-  }else null;
+  } else null;
+
+  def getNXCvTermAccession(): String = {
+    return _bedObjectCvTerm.accession;
+  }
+
+  def getNXCvTermCvName(): String = {
+    return _bedObjectCvTerm.cvName;
+  }
 
   def getNXCategory(): NXCategory.Value = {
 
@@ -42,11 +50,11 @@ case class BEDEvidence(
   }
 
   def getNXBioObject(): String = {
-    if(relationInfo.getBioObject){
+    if (relationInfo.getBioObject) {
       return _bioObject;
-    }else return "";
+    } else return "";
   }
-  
+
   def getNXTerminology(): NXTerminology.Value = {
 
     if (_bedObjectCvTerm.category.equals("Gene Ontology")) {
@@ -73,15 +81,20 @@ case class BEDEvidence(
     return _annotationAccession.contains("CAVA-VP");
   }
 
+  def isGO(): Boolean = {
+    return _bedObjectCvTerm.category.equals("Gene Ontology");
+  }
+
+    
   def getReferences: List[(String, String)] = {
     return references;
   }
 
   def getRealObject(): String = {
-    return (if(_bedObjectCvTerm != null) {_bedObjectCvTerm.cvName}else "") + _bioObject;
+    return (if (_bedObjectCvTerm != null) { _bedObjectCvTerm.cvName } else "") + _bioObject;
   }
 
-  def getTermAttributeRelation(): RelationInfo = {
+  def getRelationInfo(): RelationInfo = {
     return BEDUtils.getRelationInformation(_relation, isNegative);
   }
 

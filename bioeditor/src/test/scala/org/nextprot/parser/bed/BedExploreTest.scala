@@ -12,9 +12,8 @@ class BedExploreTest extends FlatSpec with Matchers {
   val entryElem = scala.xml.XML.loadFile(new File("ln-s-data.xml"))
 
    it should "group annotations together by subject and object" in {
-     val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
-     //annotations.foreach(println);
-     
+
+    val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
      val vpAnnotations = annotations.filter(a => a.isVP);
      println("Total of annotations: " + vpAnnotations.length);
      
@@ -22,7 +21,7 @@ class BedExploreTest extends FlatSpec with Matchers {
      println("Total of evidences: " + vpEvidences.length);
      println("Total of evidences not matched: " + vpEvidences.size);
      
-     val res = vpEvidences.groupBy(e => (e.getRealSubject, e.getTermAttributeRelation(), e.getRealObject));
+     val res = vpEvidences.groupBy(e => (e.getRealSubject, e.getRelationInfo(), e.getRealObject));
      
      //println(res);
      
@@ -31,7 +30,7 @@ class BedExploreTest extends FlatSpec with Matchers {
        
        val entityKey = k._1._1;
        val term = k._1._2.getEffect;
-       val impact = k._1._2.getImpactString;
+       val impact = k._1._2.getImpact;
        val goTerm = k._1._3;
        
        val evidences = k._2

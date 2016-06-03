@@ -30,7 +30,7 @@ class BEDGenerateTsv extends FlatSpec with Matchers {
 
         val (category, impact, terminology, effect,  bioObject, description) = try {
           val ri = BEDUtils.getRelationInformation(r.name, negative);
-          (ri.getAllowedCategories().mkString(" or "), ri.getImpactString, ri.getAllowedTerminologies.mkString(" or "), ri.getEffect, ri.getBioObject, ri.getDescription);
+          (ri.getAllowedCategories().mkString(" or "), ri.getImpact, ri.getAllowedTerminologies.mkString(" or "), ri.getEffect, ri.getBioObject, ri.getDescription);
 
         } catch {
           case e: Exception => {

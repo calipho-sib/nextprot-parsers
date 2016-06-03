@@ -27,12 +27,12 @@ class BedGenerateJson extends FlatSpec with Matchers {
      println("Total of evidences: " + vpEvidences.length);
      println("Total of evidences not matched: " + vpEvidences.size);
      
-     val res = vpEvidences.groupBy(e => (e.getRealSubject, e.getTermAttributeRelation(), e.getRealObject));
+     val res = vpEvidences.groupBy(e => (e.getRealSubject, e.getRelationInfo(), e.getRealObject));
      	
      val gson = (new GsonBuilder()).setPrettyPrinting.create
      val annots = vpEvidences.map(e => NXPhenotypeAnnotation(e._subject, 
-         e.getTermAttributeRelation.getEffect, e.getTermAttributeRelation.getImpactString, 
-         e.getNXTerminology.name, e._bedObjectCvTerm.cvName, e._bioObject));
+         e.getRelationInfo.getEffect, e.getRelationInfo.getImpact.name, 
+         e.getNXTerminology.name, e._bedObjectCvTerm.cvName, e._bioObject)).toList;
 
      val pw = new PrintWriter(new File("/Users/dteixeira/Documents/workspace/workspace-java/nextprot-api/web/src/main/resources/brca1-phenotypes.json" ))
      pw.write(gson.toJson(annots.asJavaCollection));

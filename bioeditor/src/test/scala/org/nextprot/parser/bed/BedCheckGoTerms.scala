@@ -17,7 +17,7 @@ class BEDCheckGoTerms extends FlatSpec with Matchers {
 
   it should "check that all localisation are from go-cellular-component-cv " in {
 
-    vpEvidences.filter(e => e.getTermAttributeRelation.getEffect.equals(EFFECT_ON_SUBCELLULAR_LOCALIZATION))
+    vpEvidences.filter(e => e.getRelationInfo.getEffect.equals(EFFECT_ON_SUBCELLULAR_LOCALIZATION))
       .foreach(e => {
         if (!e.getNXCategory.equals(NXCategory.GoCellularComponent)) {
           fail(e.toString());
@@ -27,7 +27,7 @@ class BEDCheckGoTerms extends FlatSpec with Matchers {
 
   it should "check that all localisation are from go-biological-process or go-mollecular-function " in {
 
-    vpEvidences.filter(e => e.getTermAttributeRelation.getEffect.equals(EFFECT_ON_PROTEIN_ACTIVITY))
+    vpEvidences.filter(e => e.getRelationInfo.getEffect.equals(EFFECT_ON_PROTEIN_ACTIVITY))
       .foreach(e => {
         if (!(e.getNXCategory.equals(NXCategory.GoBiologicalProcess) ||
           e.getNXCategory.equals(NXCategory.GoMolecularFunction))) {
