@@ -22,14 +22,6 @@ object BEDUtils {
     return (entry \ "nxprotein" \ "@accession").text;
   }
 
-  def getBEDVariants(entry: NodeSeq): List[BEDVariant] = {
-    return (entry \ "variants" \\ "variant").map(xmlV => {
-
-      new BEDVariant((xmlV \ "@uniqueName").text)
-
-    }).toList;
-  }
-
   class RelationInfo(categories: List[NXCategory.Value], terminology: List[NXTerminology.Value], effect: BEDEffects.Value, impact: BEDImpact.Value, description: String, bioObject: Boolean) {
 
     def getAllowedTerminologies(): List[NXTerminology.Value] = { return terminology }

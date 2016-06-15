@@ -10,6 +10,7 @@ import org.apache.jena.ontology.Ontology
 import org.nextprot.parser.bed.service.OntologyService
 
 case class BEDEvidence(
+  val variant: BEDVariant,
   val _annotationAccession: String,
   val _subject: String,
   val _relation: String,
@@ -85,6 +86,9 @@ case class BEDEvidence(
     return _bedObjectCvTerm.category.equals("Gene Ontology");
   }
 
+  def isSimple(): Boolean = {
+    return (!_subject.contains("+") && !_subject.toLowerCase().contains("iso")); //TODO need to remove multiple TXT alleles and MGI allels
+  }
     
   def getReferences: List[(String, String)] = {
     return references;

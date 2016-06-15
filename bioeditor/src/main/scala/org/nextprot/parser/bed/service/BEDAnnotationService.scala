@@ -9,10 +9,12 @@ import org.nextprot.parser.bed.commons.constants.NXCategory._
 import org.nextprot.parser.bed.commons.constants.NXTerminology
 import org.nextprot.parser.bed.commons.constants.NXTerminology._
 import org.nextprot.parser.bed.utils.BEDUtils
+import org.nextprot.parser.bed.datamodel.BEDVariant
+import org.nextprot.parser.bed.datamodel.BEDVariant
 
 object BEDAnnotationService {
 
-  def getBEDEvidence(_annotationAccession: String, _subject: String, _relation: String, _objectTerm: BEDCV, _bioObject: String, xmlA: scala.xml.Node): List[BEDEvidence] = {
+  def getBEDEvidence(subjectVariant: BEDVariant, _annotationAccession: String, _subject: String, _relation: String, _objectTerm: BEDCV, _bioObject: String, xmlA: scala.xml.Node): List[BEDEvidence] = {
     return (xmlA \\ "evidence").map(e => {
       val allelsXml = e \\ "allelicCompositionVariantRef";
       val referencesXml = e \\ "reference";
@@ -22,7 +24,7 @@ object BEDAnnotationService {
         ((r \ "@database").text, (r \ "@accession").text)
       }).toList
 
-      new BEDEvidence(_annotationAccession, _subject, _relation, _objectTerm, _bioObject, isNegative, allelsXml.map(n => n.text).toList, references);
+      new BEDEvidence(subjectVariant, _annotationAccession, _subject, _relation, _objectTerm, _bioObject, isNegative, allelsXml.map(n => n.text).toList, references);
     }).toList;
   }
 
@@ -41,10 +43,17 @@ object BEDAnnotationService {
 
       val _accession = (xmlA \ "@accession").text
 
-      val evidences = getBEDEvidence(_accession, _subject, _relation, _objectTerm, _bioObject, xmlA);
-      new BEDAnnotation(_accession, _subject, _relation, _objectTerm, _bioObject, evidences);
+      if(!_subject.contains("+")){
+    	  val variant = BEDVariantService.getBEDVariantByUniqueName(entry, _subject);
+    	  val evidences = getBEDEvidence(variant,  _accession, _subject, _relation, _objectTerm, _bioObject, xmlA);
+    	  new BEDAnnotation(variant, _accession, _subject, _relation, _objectTerm, _bioObject, evidences);
+      }else {
+        println("skipping multiple mutant")
+        null;
+      }
+      
 
-    }).toList;
+    }).filter(_!=null).toList
   }
 
 }

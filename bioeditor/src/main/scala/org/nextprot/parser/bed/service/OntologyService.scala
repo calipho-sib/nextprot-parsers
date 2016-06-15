@@ -51,7 +51,7 @@ object OntologyService {
       val label = solution.get("label").asLiteral().toString();
       val v = term.replaceAll("http://nextprot.org/rdf#", "");
       val result = BEDUtils.camelToDashes(v).substring(1);
-      println(accession + " " + result + " " + v + label);
+      //println(accession + " " + result + " " + v + label);
       return result;
     }
     return null;

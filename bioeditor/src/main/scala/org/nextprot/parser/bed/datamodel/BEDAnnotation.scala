@@ -1,6 +1,6 @@
 package org.nextprot.parser.bed.datamodel
 
-case class BEDAnnotation(val accession: String, val _subject: String, val _relation: String, val _objectTerm: BEDCV, val _bioObject: String, val _evidences: List[BEDEvidence]) {
+case class BEDAnnotation(val variant: BEDVariant, val accession: String, val _subject: String, val _relation: String, val _objectTerm: BEDCV, val _bioObject: String, val _evidences: List[BEDEvidence]) {
 
   def isVP(): Boolean = {
     return accession.contains("CAVA-VP");
@@ -8,4 +8,5 @@ case class BEDAnnotation(val accession: String, val _subject: String, val _relat
   def getAbsoluteObject(): String = {
     return _objectTerm + _bioObject;
   }
+  
 }

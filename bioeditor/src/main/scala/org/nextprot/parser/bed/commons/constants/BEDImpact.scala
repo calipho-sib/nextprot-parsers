@@ -6,8 +6,8 @@ object BEDImpact extends Enumeration {
   
   implicit def valueofModifiers(x: Value) = x.asInstanceOf[Val]
 
-  val NOT_CHANGED = Val("no-change")
-  val CHANGED = Val("change")
+  val NOT_CHANGED = Val("no-impact")
+  val CHANGED = Val("impact")
   val INCREASE = Val("increase")
   val DECREASE = Val("decrease")
   val GAIN = Val("gain")

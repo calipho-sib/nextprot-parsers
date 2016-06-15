@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://rawgit.com/calipho-sib/protein-expression/master/dist/heatmap-table-bundle.js"></script>
+
+<style>
+#table-2-columns {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin: 20px 20px;
+}
+
+#table-2-columns>div>div {
+	
+}
+
+.col-header {
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	border-color: #ddd;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center
+}
+
+#table-2-columns p {
+	background-color: #ddd;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	/*text-align: center*/
+}
+
+#table-2-columns>div {
+	padding: 0px;
+}
+</style>
+
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<div id="table-2-columns" class="row">
+			<div class="col-md-6 col-xs-6">
+				<div class="col-header">Impacts on normal annotations</div>
+				<div>
+					<a href="#impact-go-cellular-component"><p>Go Cellular Component</p></a>
+				</div>
+				<div>
+					<a href="#impact-go-biological-process"><p>Go Biological Process</p></a>
+				</div>
+				<div>
+					<a href="#impact-go-biological-process"><p>Go Molecular Function</p></a>
+				</div>
+				<div>
+					<a href="#impact-binary-interaction"><p>Binary Interaction</p></a>
+				</div>
+				<div>
+					<a href="#impact-generic-ptm"><p>Generic PTM</p></a>
+				</div>
+				<div>
+					<a href="#effect-protein-properties"><p>Protein Properties?</p></a>
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-6 ">
+				<div class="col-header">New phenotype annotations</div>
+				<div>
+					<a href="fas"><p>Mammalian Phenotypes</p></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h1 style="text-align:center;margin:30px;">Yoooo</h1>
+
+<div class="container">
+    <div class="col-md-9 col-md-offset-1">
+    <div id="heatmap-table"/>
+</div>
+
+
+<script type="javascript">
+
+$( document ).ready(function() {
+
+
+            var data = {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [ 
+                        {
+                          "linkLabel": "[TS-0079]", 
+                          "linkURL": "http://www.nextprot.org/db/term/TS-0079", 
+                          "rowLabel": "Blood", 
+                          "values": [
+                            {
+                              "columnLabel": "Microarray", 
+                              "value": "Low"
+                            }, 
+                            {
+                              "columnLabel": "IHC", 
+                              "value": "High"
+                            }, 
+                            {
+                              "columnLabel": "EST", 
+                              "value": "Low"
+                            }
+                          ]
+                        },   
+                      ], 
+                      "linkLabel": "[TS-2101]", 
+                      "linkURL": "http://www.nextprot.org/db/term/TS-2101", 
+                      "rowLabel": "Fluid and secretion", 
+                      "values": [
+                        {
+                          "columnLabel": "Microarray", 
+                          "value": "High"
+                        }, 
+                        {
+                          "columnLabel": "IHC", 
+                          "value": "Low"
+                        }, 
+                        {
+                          "columnLabel": "EST", 
+                          "value": "Negative"
+                        }
+                      ]
+                    }
+                  ], 
+                  "linkLabel": "[TS-2178]", 
+                  "linkURL": "http://www.nextprot.org/db/term/TS-2178", 
+                  "rowLabel": "Human anatomical entity", 
+                  "values": [
+                    {
+                      "columnLabel": "Microarray", 
+                      "value": "High"
+                    }, 
+                    {
+                      "columnLabel": "IHC", 
+                      "value": "High"
+                    }, 
+                    {
+                      "columnLabel": "EST", 
+                      "value": "High"
+                    }
+                  ]
+                }
+              ]
+            }
+
+var heatMapTable = new HeatMapTable({
+                header:['Microarray', 'EST', 'IHC'],
+                tableID: "heatmap-table"
+            });
+            
+            
+heatMapTable.loadJSONData(data);
+heatMapTable.show(); 
+});
+
+
+</script>
