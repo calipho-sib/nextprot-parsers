@@ -33,7 +33,11 @@ object OntologyService {
   val endpoint = "http://kant:8890/sparql";
 
   def getGoSubCategoryFromAccession(accession: String): String = {
-    return getSPARQLResultMemoized(accession);
+
+    accession match {
+      case "GO:0099608" | "GO:0099611" | "GO:0098874" | "GO:0101013" => "go-biological-process-cv" //TODO new terms to load
+      case _ => getSPARQLResultMemoized(accession);
+    }
   }
 
   val getSPARQLResultMemoized = memoize(getSPARQLResult _)

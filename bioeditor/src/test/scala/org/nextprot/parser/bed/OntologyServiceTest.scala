@@ -14,4 +14,9 @@ class OntologyServiceTest extends FlatSpec with Matchers {
      println(OntologyService.getGoSubCategoryFromAccession("GO:0008219"));
   }
 
+  it should " on new go terms" in {
+     println(OntologyService.getGoSubCategoryFromAccession("GO:0099608"));
+  }
+  
+
 }

@@ -16,13 +16,11 @@ case class BEDEvidence(
   val _relation: String,
   val _bedObjectCvTerm: BEDCV,
   val _bioObject: String,
+  val _bioObjectType: String,
+  val intensity: String,
   val isNegative: Boolean,
   val vdAlleles: List[String],
   val references: List[(String, String)]) {
-
-  val relationInfo = if (_annotationAccession.startsWith("CAVA-VP")) {
-    BEDUtils.getRelationInformation(_relation, isNegative);
-  } else null;
 
   def getNXCvTermAccession(): String = {
     return _bedObjectCvTerm.accession;
@@ -40,18 +38,26 @@ case class BEDEvidence(
         case GoMolecularFunctionCv.name => GoMolecularFunction;
         case GoBiologicalProcessCv.name => GoBiologicalProcess;
         case GoCellularComponentCv.name => GoCellularComponent;
-        case _ => throw new Exception("not expecting category " + subcategory);
+        case _ => throw new Exception("not expecting category " + subcategory + _bedObjectCvTerm);
       }
     } else {
       val categories = BEDUtils.getRelationInformation(_relation, isNegative).getAllowedCategories();
       if (categories.size != 1) {
         throw new Exception("Expected one possible category for " + _relation + " " + isNegative + " found: " + categories + " term :" + _bedObjectCvTerm.category)
-      } else categories(0);
+      } else {
+        val category =  categories(0);
+        if(category.equals(NXCategory.BinaryInteraction)){
+          if(_bioObjectType.equals("chemical")){
+            return NXCategory.SmallMoleculeInteraction;
+          }
+        }
+        category;
+      }
     }
   }
 
   def getNXBioObject(): String = {
-    if (relationInfo.getBioObject) {
+    if (getRelationInfo.getBioObject) {
       return _bioObject;
     } else return "";
   }
@@ -82,6 +88,10 @@ case class BEDEvidence(
     return _annotationAccession.contains("CAVA-VP");
   }
 
+  def isInteraction(): Boolean = {
+    return _relation.toLowerCase().contains("binding");
+  }
+    
   def isGO(): Boolean = {
     return _bedObjectCvTerm.category.equals("Gene Ontology");
   }
