@@ -15,17 +15,20 @@ import java.sql.DriverManager
 import java.sql.PreparedStatement
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION
 import java.sql.Statement
+import oracle.jdbc.internal.OraclePreparedStatement
+import oracle.jdbc.OracleStatement
+import org.nextprot.parser.bed.service.StatementLoader
 
 class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
   val location = "/Users/dteixeira/Documents/caviar/";
 
   val genes = Map(
-    /*"apc" -> "NX_P25054",
+    "apc" -> "NX_P25054",
     "brca1" -> "NX_P38398",
-    "brca2" -> "NX_P51587",*/
-    "brip1" -> "NX_Q9BX63"
-    /*"epcam" -> "NX_P16422",
+    "brca2" -> "NX_P51587",
+    "brip1" -> "NX_Q9BX63",
+    "epcam" -> "NX_P16422",
     "idh1" -> "NX_O75874",
     "mlh1" -> "NX_P40692",
     "mlh3" -> "NX_Q9UHC1",
@@ -42,14 +45,11 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
     "scn8a" -> "NX_Q9UQD0",
     "scn9a" -> "NX_Q15858",
     "scn10a" -> "NX_Q9Y5Y9",
-    "scn11a" -> "NX_Q9UI33" */);
+    "scn11a" -> "NX_Q9UI33" );
 
   it should "group annotations together by subject and object" in {
-
+        
     val statements = scala.collection.mutable.Set[RawStatement]();
-    val conn = DriverManager.getConnection("jdbc:oracle:thin:nxbed/juventus@//fou.isb-sib.ch:1526/SIBTEST3");
-    val statement = conn.createStatement();
-     statement.addBatch("delete from mapped_statements");
 
     genes.keySet.foreach(geneName => {
       
@@ -79,33 +79,28 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
         statements += getVPStatement(vpgoe, variantStatement.getAnnot_hash(), normalStatement, geneName, entryAccession);
       });
 
-      println("Loading " + statements.size + " statements for " + geneName + " timeElapsedSoFar: " + (System.currentTimeMillis() - startTime));
-      loadStatements(statement, statements.toList);
-      println("Finished to load " + geneName + " statements for " + geneName + " timeElapsedSoFar: " + (System.currentTimeMillis() - startTime));
-      
     })
-
     
-    conn.close();
+    println("Total of " + statements.size + " statements")
+
+    StatementLoader.init;
+    
+    val startTime = System.currentTimeMillis();
+
+    statements.grouped(1000).toList.par.foreach(batchStatements => {
+
+          //println("Loading " + batchStatements.size + " statements for  timeElapsedSoFar: " + (System.currentTimeMillis() - startTime));
+	      StatementLoader.loadStatements(batchStatements.toList);
+	      //println("Finished to load " + geneName + " statements for " + geneName + " timeElapsedSoFar: " + (System.currentTimeMillis() - startTime));
+
+    })
+	println("Finished to load  timeElapsedSoFar: " + (System.currentTimeMillis() - startTime));
+          
+    StatementLoader.close;
 
   }
 
-  def loadStatements(statement: Statement, statements: List[RawStatement]) = {
 
-    val columnNames = RawStatement.getFieldNames(null).map(f => { "" + f + "" }).mkString(",");
-    val bindVariableNames = RawStatement.getFieldNames(null).map(f => { ":" + f + "" }).mkString(",");
-
-    statements.foreach(s => {
-      val fieldValues = RawStatement.getFieldValues(s).map(v => {
-        if(v!=null) {
-          "'" + v.replaceAll("'", "''") + "'" //This done because of single quotes in the text
-          } else null
-      }).mkString(",");
-      val sqlStatement = "INSERT INTO mapped_statements (" + columnNames + ") VALUES ( " + fieldValues + ")";
-      statement.addBatch(sqlStatement);
-    });
-    statement.executeBatch();
-  }
 
   def getVariantDefinitionStatement(evidence: BEDEvidence, geneName: String, entryAccession: String): RawStatement = {
     val vdStatement = new RawStatement();
