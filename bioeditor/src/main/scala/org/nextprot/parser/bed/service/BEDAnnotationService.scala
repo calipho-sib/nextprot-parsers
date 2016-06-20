@@ -38,6 +38,10 @@ object BEDAnnotationService {
   }
 
   def getBEDAnnotations(entry: NodeSeq): List[BEDAnnotation] = {
+
+  val currentNextprotAccession : String = (entry \ "@accession").text;
+  val currentNextprotGene : String =  ((entry \ "molecularEntities" \\ "protein").filter(p => (p \ "@accession").text.equals(currentNextprotAccession)).head \ "@geneName").text;
+
     return (entry \\ "annotations" \\ "annotation").map(xmlA => {
 
       val _subject = (xmlA \ "subject" \ "molecularEntityRef").text
@@ -65,6 +69,9 @@ object BEDAnnotationService {
         null;
       }else if(break){
         println("skipping protein groups and complexes")
+        null;
+      }else if(!_subject.toLowerCase().startsWith(currentNextprotGene.toLowerCase())){
+        println("skipping subjects with which are not directly related to the current entry" + _subject + " for entry " + currentNextprotGene)
         null;
       }else {
 

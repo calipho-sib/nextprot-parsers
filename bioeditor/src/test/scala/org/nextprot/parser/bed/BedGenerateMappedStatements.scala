@@ -23,35 +23,16 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
   val location = "/Users/dteixeira/Documents/caviar/";
 
-  val genes = Map(
-    "apc" -> "NX_P25054",
-    "brca1" -> "NX_P38398",
-    "brca2" -> "NX_P51587",
-    "brip1" -> "NX_Q9BX63",
-    "epcam" -> "NX_P16422",
-    "idh1" -> "NX_O75874",
-    "mlh1" -> "NX_P40692",
-    "mlh3" -> "NX_Q9UHC1",
-    "msh2" -> "NX_P43246",
-    "msh6" -> "NX_P52701", 
-    "mutyh" -> "NX_Q9UIF7",
-    "pms2" -> "NX_P54278", 
-    "palb2" -> "NX_Q86YC2",
-    "scn1a" -> "NX_P35498",
-    "scn2a" -> "NX_Q99250",
-    "scn3a" -> "NX_Q9NY46",
-    "scn4a" -> "NX_P35499",
-    "scn5a" -> "NX_Q14524",
-    "scn8a" -> "NX_Q9UQD0",
-    "scn9a" -> "NX_Q15858",
-    "scn10a" -> "NX_Q9Y5Y9",
-    "scn11a" -> "NX_Q9UI33" );
+  val genes = List( 
+    "apc", "brca1" ,"brca2","brip1", "epcam","idh1", "mlh1", "mlh3", 
+    "msh2", "msh6", "mutyh", "pms2", "palb2", "scn1a", "scn2a", "scn3a", 
+    "scn4a", "scn5a", "scn8a", "scn9a", "scn10a", "scn11a");
 
   it should "group annotations together by subject and object" in {
         
     val statements = scala.collection.mutable.Set[RawStatement]();
 
-    genes.keySet.foreach(geneName => {
+    genes.foreach(geneName => {
       
       val startTime = System.currentTimeMillis();
 
@@ -60,6 +41,8 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
       BEDVariantService.reinitialize();
 
       val entryElem = scala.xml.XML.loadFile(new File("/Users/dteixeira/Documents/caviar/" + geneName + ".xml"))
+      
+      val nextprotAccession : String = (entryElem \ "nxprotein" \ "@accession").text;
 
       val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
       val vpAnnotations = annotations.filter(a => a.isVP);
@@ -67,16 +50,14 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
       //println(vpGoEvidences.size + "evidences");
 
-      val entryAccession = genes.getOrElse(geneName, "");
-
       vpGoEvidences.foreach(vpgoe => {
 
-        val variantStatement = getVariantDefinitionStatement(vpgoe, geneName, entryAccession);
-        val normalStatement = getNormalStatement(vpgoe, geneName, entryAccession);
+        val variantStatement = getVariantDefinitionStatement(vpgoe, geneName, nextprotAccession);
+        val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
 
         statements += variantStatement;
         statements += normalStatement;
-        statements += getVPStatement(vpgoe, variantStatement.getAnnot_hash(), normalStatement, geneName, entryAccession);
+        statements += getVPStatement(vpgoe, variantStatement.getAnnot_hash(), normalStatement, geneName, nextprotAccession);
       });
 
     })
