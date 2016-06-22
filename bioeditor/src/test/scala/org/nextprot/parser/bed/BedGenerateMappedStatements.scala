@@ -42,7 +42,7 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
       val entryElem = scala.xml.XML.loadFile(new File("/Users/dteixeira/Documents/caviar/" + geneName + ".xml"))
       
-      val nextprotAccession : String = (entryElem \ "nxprotein" \ "@accession").text;
+      val nextprotAccession : String = (entryElem \ "@accession").text;
 
       val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
       val vpAnnotations = annotations.filter(a => a.isVP);
