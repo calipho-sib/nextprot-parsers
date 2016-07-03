@@ -18,7 +18,7 @@ import org.nextprot.parser.bed.service.BEDAnnotationService
 import org.nextprot.parser.bed.utils.JSTermObject
 import org.nextprot.parser.bed.utils.JSSubjectComparedObject
 import org.nextprot.parser.bed.utils.JSNoteObject
-
+/*
 class BEDGenerateDoc extends FlatSpec with Matchers {
 
   val entryElem = scala.xml.XML.loadFile(new File("ln-s-data.xml"))
@@ -62,7 +62,7 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
             //This only takes 1st evidence
             val description = iteration + ") " + firstEvidence._subject + " <" + firstEvidence._relation + "> " + firstEvidence.getRealObject + { if (firstEvidence.isNegative) " NEGATIVE EVIDENCE" else "" } + " :" + firstEvidence._annotationAccession;
 
-            val variantString = firstEvidence.getRealSubject;
+            val variantString = firstEvidence.getSubjectAllelsWithNote._1;
             val annotationString = "\\nannotationCategory:\\n" + firstEvidence.getNXCategory;
 
             //BOX For Terminology 
@@ -115,4 +115,4 @@ class BEDGenerateDoc extends FlatSpec with Matchers {
 
   }
 
-}
+}*/

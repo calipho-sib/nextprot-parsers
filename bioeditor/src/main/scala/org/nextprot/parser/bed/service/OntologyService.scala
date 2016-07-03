@@ -1,5 +1,7 @@
 package org.nextprot.parser.bed.service
 
+import scala.io.Source
+
 import org.apache.jena.query.QueryFactory
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP
 import org.nextprot.parser.bed.utils.BEDUtils
@@ -40,25 +42,41 @@ object OntologyService {
     }
   }
 
+  val goCategoryMapping: Map[String, String] = Source.fromInputStream(
+    getClass.getResourceAsStream("/go-category-mapping.csv")).
+    getLines.map(l => {
+      val vk = l.split(",");
+      val key: String = vk(0);
+      val value: String = vk(1);
+      (key, value);
+    }).toMap;
+
   val getSPARQLResultMemoized = memoize(getSPARQLResult _)
 
   def getSPARQLResult(accession: String): String = {
 
-    val sparqlNewQuery = sparqlNxQuery.replaceAll("GO_ACCESSION", accession.replaceAll(":", "_"));
-    val query = QueryFactory.create(sparqlNewQuery);
+    val r = goCategoryMapping.getOrElse(accession, null);
 
-    val httpQuery = new QueryEngineHTTP(endpoint, query);
-    val results = httpQuery.execSelect();
-    while (results.hasNext()) {
-      val solution = results.next();
-      val term = solution.get("type").asResource().toString();
-      val label = solution.get("label").asLiteral().toString();
-      val v = term.replaceAll("http://nextprot.org/rdf#", "");
-      val result = BEDUtils.camelToDashes(v).substring(1);
-      //println(accession + " " + result + " " + v + label);
-      return result;
-    }
-    return null;
+    if (r == null) {
+
+      val sparqlNewQuery = sparqlNxQuery.replaceAll("GO_ACCESSION", accession.replaceAll(":", "_"));
+      val query = QueryFactory.create(sparqlNewQuery);
+
+      val httpQuery = new QueryEngineHTTP(endpoint, query);
+      val results = httpQuery.execSelect();
+      while (results.hasNext()) {
+        val solution = results.next();
+        val term = solution.get("type").asResource().toString();
+        val label = solution.get("label").asLiteral().toString();
+        val v = term.replaceAll("http://nextprot.org/rdf#", "");
+        val result = BEDUtils.camelToDashes(v).substring(1);
+        println(accession + "\t" + result);
+        return result;
+      }
+      return null;
+
+    } else r;
+
   }
 
 }

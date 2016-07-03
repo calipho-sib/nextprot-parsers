@@ -11,9 +11,8 @@ import org.nextprot.parser.bed.commons.constants.NXCategory
 class BEDCheckGoTerms extends FlatSpec with Matchers {
 
   val entryElem = scala.xml.XML.loadFile(new File("ln-s-data.xml"))
-  val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
-  val vpAnnotations = annotations.filter(a => a.isVP);
-  val vpEvidences = vpAnnotations.flatMap(a => a._evidences);
+  val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
+  val vpEvidences = annotations.flatMap(a => a._evidences);
 
   it should "check that all localisation are from go-cellular-component-cv " in {
 

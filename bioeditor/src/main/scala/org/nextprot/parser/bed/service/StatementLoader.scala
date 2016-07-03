@@ -5,6 +5,7 @@ import scala.Array.canBuildFrom
 import org.nextprot.commons.statements.RawStatement
 import oracle.jdbc.pool.OracleConnectionPoolDataSource
 import oracle.jdbc.driver.OraclePreparedStatement
+import org.nextprot.commons.statements.StatementField
 
 object StatementLoader {
 
@@ -36,13 +37,14 @@ object StatementLoader {
     val conn = ocpds.getPooledConnection().getConnection();
     val statement = conn.createStatement();
     
-    val columnNames = RawStatement.getFieldNames(null).map(f => { "" + f + "" }).mkString(",");
-    val bindVariableNames = RawStatement.getFieldNames(null).map(f => { ":" + f + "" }).mkString(",");
+    val columnNames = StatementField.values().map(f => { "" + f + "" }).mkString(",");
+    val bindVariableNames = StatementField.values().map(f => { ":" + f + "" }).mkString(",");
 
     statements.foreach(s => {
-      val fieldValues = RawStatement.getFieldValues(s).map(v => {
-        if (v != null) {
-          "'" + v.replaceAll("'", "''") + "'" //This done because of single quotes in the text
+      val fieldValues = StatementField.values().map(v => {
+        val value : String = s.getValue(v);
+        if (value != null) {
+          "'" + value.replaceAll("'", "''") + "'" //This done because of single quotes in the text
         } else null
       }).mkString(",");
       val sqlStatement = "INSERT INTO mapped_statements (" + columnNames + ") VALUES ( " + fieldValues + ")";

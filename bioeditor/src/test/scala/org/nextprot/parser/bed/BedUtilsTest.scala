@@ -14,14 +14,14 @@ class BedUtilsTest extends FlatSpec with Matchers {
   it should "return a list of annotations" in {
 
     val entryName = (entryElem \ "@accession").text;
-    val bedAnnotations = BEDAnnotationService.getBEDAnnotations(entryElem);
+    val bedAnnotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
     println(bedAnnotations.size);
     
 
   }
   
    it should "group annotations together by subject and relation" in {
-     val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
+     val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
      println(annotations.groupBy(a => (a._subject, a.getAbsoluteObject)));
   }
 

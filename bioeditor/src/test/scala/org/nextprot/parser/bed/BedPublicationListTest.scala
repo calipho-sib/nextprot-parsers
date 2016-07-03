@@ -13,7 +13,7 @@ class BedPublicationListTest extends FlatSpec with Matchers {
 
    it should "get a list of all publications" in {
      
-      val annotations = BEDAnnotationService.getBEDAnnotations(entryElem);
+      val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
       val publications = annotations.flatMap(a => a._evidences).flatMap(e => e.getReferences).toSeq;
       println(publications.size)
       publications.groupBy(p => p._1).foreach(g => println (g._1 + " : " + g._2.size))

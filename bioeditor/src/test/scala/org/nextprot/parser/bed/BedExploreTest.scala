@@ -1,11 +1,12 @@
 package org.nextprot.parser.bed
-
+/*
 import java.io.File
 import org.nextprot.parser.bed.utils.BEDUtils
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 import java.io.PrintWriter
 import org.nextprot.parser.bed.service.BEDAnnotationService
+
 
 class BedExploreTest extends FlatSpec with Matchers {
 
@@ -88,4 +89,4 @@ CREATE
      
   }
 
-}
+}*/

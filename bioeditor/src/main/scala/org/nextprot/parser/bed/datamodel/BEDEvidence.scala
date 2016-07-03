@@ -1,16 +1,20 @@
 package org.nextprot.parser.bed.datamodel
 
+import scala.collection.mutable.TreeSet
+
+import org.nextprot.parser.bed.commons.constants.NXCategory
+import org.nextprot.parser.bed.commons.constants.NXCategory.GoBiologicalProcess
+import org.nextprot.parser.bed.commons.constants.NXCategory.GoCellularComponent
+import org.nextprot.parser.bed.commons.constants.NXCategory.GoMolecularFunction
+import org.nextprot.parser.bed.commons.constants.NXTerminology
+import org.nextprot.parser.bed.commons.constants.NXTerminology.GoBiologicalProcessCv
+import org.nextprot.parser.bed.commons.constants.NXTerminology.GoCellularComponentCv
+import org.nextprot.parser.bed.commons.constants.NXTerminology.GoMolecularFunctionCv
+import org.nextprot.parser.bed.service.OntologyService
 import org.nextprot.parser.bed.utils.BEDUtils
 import org.nextprot.parser.bed.utils.BEDUtils.RelationInfo
-import org.nextprot.parser.bed.commons.constants.NXCategory
-import org.nextprot.parser.bed.commons.constants.NXCategory._
-import org.nextprot.parser.bed.commons.constants.NXTerminology
-import org.nextprot.parser.bed.commons.constants.NXTerminology._
-import org.apache.jena.ontology.Ontology
-import org.nextprot.parser.bed.service.OntologyService
 
 case class BEDEvidence(
-  val variant: BEDVariant,
   val _annotationAccession: String,
   val _subject: String,
   val _relation: String,
@@ -19,8 +23,50 @@ case class BEDEvidence(
   val _bioObjectType: String,
   val intensity: String,
   val isNegative: Boolean,
-  val vdAlleles: List[String],
+  val vdAllels: List[String],
+  val mgiAllels: List[String],
+  val txtAllels: List[String],
   val references: List[(String, String)]) {
+
+  def extractVDFromTxtAllel(text: String): String = {
+    val i = text.indexOf("VDSubject:");
+    if (i != -1) {
+      return text.substring(i + 10).trim();
+    } else null
+  }
+
+  def getSubjectAllelsWithNote: (Set[String], String) = {
+
+    val subjectAllels = new TreeSet[String]();
+    var note: String = null;
+
+    if (mgiAllels.filter(m => !m.toLowerCase().startsWith("tg(")).size > 1) {
+      note = "Taking single allele for MGI multiple mutants, should fix this by adding VDSubject in TXT"
+      throw new RuntimeException("This case should not happen");
+      //subjectAllels.add(vdAllels(0));
+    } else if (vdAllels.size > 1) { // Multiple mutants VD
+      vdAllels.foreach(v => {
+        subjectAllels.add(v);
+      });
+    } else if (txtAllels.size > 1) { // Multiple mutants TXT
+      txtAllels.foreach(t => {
+        val vdAllel = extractVDFromTxtAllel(t);
+        if (vdAllel != null) {
+          subjectAllels.add(vdAllel);
+        }
+      });
+    } else {
+      subjectAllels.add(_subject);
+    }
+
+    if (subjectAllels.isEmpty) {
+      note = "Adding single subject for  " + _annotationAccession + " please fix";
+      subjectAllels.add(_subject);
+    }
+
+    return (subjectAllels.toSet, note);
+
+  }
 
   def getNXCvTermAccession(): String = {
     return _bedObjectCvTerm.accession;
@@ -45,9 +91,9 @@ case class BEDEvidence(
       if (categories.size != 1) {
         throw new Exception("Expected one possible category for " + _relation + " " + isNegative + " found: " + categories + " term :" + _bedObjectCvTerm.category)
       } else {
-        val category =  categories(0);
-        if(category.equals(NXCategory.BinaryInteraction)){
-          if(_bioObjectType.equals("chemical")){
+        val category = categories(0);
+        if (category.equals(NXCategory.BinaryInteraction)) {
+          if (_bioObjectType.equals("chemical")) {
             return NXCategory.SmallMoleculeInteraction;
           }
         }
@@ -91,15 +137,15 @@ case class BEDEvidence(
   def isInteraction(): Boolean = {
     return _relation.toLowerCase().contains("binding");
   }
-    
+
   def isGO(): Boolean = {
     return _bedObjectCvTerm.category.equals("Gene Ontology");
   }
 
   def isSimple(): Boolean = {
-    return (!_subject.contains("+") && !_subject.toLowerCase().contains("iso")); //TODO need to remove multiple TXT alleles and MGI allels
+    return !_subject.toLowerCase().contains("iso");
   }
-    
+  
   def getReferences: List[(String, String)] = {
     return references;
   }
@@ -110,14 +156,6 @@ case class BEDEvidence(
 
   def getRelationInfo(): RelationInfo = {
     return BEDUtils.getRelationInformation(_relation, isNegative);
-  }
-
-  def getRealSubject(): String = {
-    if (vdAlleles.size > 1) {
-      return vdAlleles.sortWith(_ > _).mkString(" + "); //TODO add allels
-    } else {
-      return _subject;
-    }
   }
 
 }
