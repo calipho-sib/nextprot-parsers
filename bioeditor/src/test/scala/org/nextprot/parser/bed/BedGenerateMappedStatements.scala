@@ -18,6 +18,9 @@ import org.nextprot.commons.statements._
 
 class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
+  // cp /Volumes/common/Calipho/caviar/xml/*.xml ~/Documents/bed/
+  // cp /Volumes/common/Calipho/navmutpredict/xml/*.xml ~/Documents/bed/
+  
   val location = "/Users/dteixeira/Documents/caviar/";
   val load = true;
 
@@ -112,7 +115,7 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
         val variantEntryAccession = if(variantIsoAccession != null && variantIsoAccession.length() > 3){
         	 variantIsoAccession.substring(0, variantIsoAccession.indexOf("-"));
         }else {
-          println("Some problems occured with " + variant.variantAccession);
+          println("Some problems occured with " + variant.variantAccession + " when looking for evidence " + evidence._annotationAccession);
           null;
         };
 
@@ -163,7 +166,9 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
     vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype") //TODO how should this be named?
     	.addField(ANNOT_CV_TERM_TERMINOLOGY, "impact-cv") //TODO how should this be named?
     	.addField(ANNOT_CV_TERM_NAME, evidence.getRelationInfo.getImpact().name)
+    	.addField(STATEMENT_QUALITY, evidence._quality)
     	.addField(EXP_CONTEXT_PROPERTY_INTENSITY, evidence.intensity)
+    	.addField(EXP_CTX_PRPTY_PROTEIN_ORIGIN, evidence.proteinOriginSpecie)
     	.addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
     	.addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
     	.addField(BIOLOGICAL_OBJECT_ANNOT_HASH, normalStatement.getAnnot_hash())

@@ -22,3 +22,5 @@ hpa/mapping.tsv
 hpa/tissue-mapping.tsv
 ln-s-data.xml
 brca.tsv
+bioeditor/.cache-main
+bioeditor/.cache-tests

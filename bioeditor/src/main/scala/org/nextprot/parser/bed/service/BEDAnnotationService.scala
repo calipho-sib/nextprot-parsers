@@ -23,6 +23,7 @@ object BEDAnnotationService {
       val allelsMGI = (biologicalModelXml \\ "allelicCompositionCv" \\ "cvName").map(n => n.text).toList;
       val allelsTXT = (biologicalModelXml \\ "allelicCompositionText").map(n => n.text).toList;
 
+
       val referencesXml = e \\ "reference";
       val experimentalPropertiesXml = e \\ "experimentalProperties" \\ "property";
 
@@ -34,13 +35,18 @@ object BEDAnnotationService {
       } else null
 
       val isNegative = (e \\ "@isNegative").text.toBoolean;
+      val quality = (e \\ "@confidence").text;
+      val proteinOriginSpecie = (e \ "proteinOrigin" \ "species" \\ "cvName").map(_.text).mkString(",");
 
       val references = referencesXml.map(r => {
         ((r \ "@database").text, (r \ "@accession").text)
       }).toList
 
       
-      new BEDEvidence(_annotationAccession, _subject, _relation, _objectTerm, _bioObject, _bioObjectType, intensity, isNegative, allelsVD, allelsMGI, allelsTXT, references);
+      new BEDEvidence(
+          _annotationAccession, _subject, _relation, _objectTerm,
+          _bioObject, _bioObjectType, intensity, isNegative, quality, proteinOriginSpecie,
+          allelsVD, allelsMGI, allelsTXT, references);
     }).toList;
   }
 

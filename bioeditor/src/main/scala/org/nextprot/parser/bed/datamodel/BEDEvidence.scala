@@ -23,6 +23,8 @@ case class BEDEvidence(
   val _bioObjectType: String,
   val intensity: String,
   val isNegative: Boolean,
+  val _quality: String,
+  val proteinOriginSpecie: String,
   val vdAllels: List[String],
   val mgiAllels: List[String],
   val txtAllels: List[String],
@@ -61,6 +63,7 @@ case class BEDEvidence(
 
     if (subjectAllels.isEmpty) {
       note = "Adding single subject for  " + _annotationAccession + " please fix";
+      println(note)
       subjectAllels.add(_subject);
     }
 
