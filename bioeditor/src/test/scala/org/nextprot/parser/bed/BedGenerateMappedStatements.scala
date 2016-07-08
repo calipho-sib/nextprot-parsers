@@ -120,7 +120,17 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
         };
 
         val vdStmtBuilder = StatementBuilder.createNew();
-        addEntryInfo(geneName, entryAccession, vdStmtBuilder);
+        
+        
+        val vGene = if(variant.variantUniqueName != null && variant.variantUniqueName.length() > 3){
+          variant.variantUniqueName.substring(0, variant.variantUniqueName.indexOf("-"))
+        }else {
+          println("Yooo problems occured with " + variant.identifierAccession + " when looking for evidence " + evidence._annotationAccession);
+          null;
+        };
+        
+        
+        addEntryInfo(vGene, variantEntryAccession, vdStmtBuilder);
 
         val nextprot_accession = variant.variantSequenceVariationPositionOnIsoform;
         if(subject.toLowerCase().contains("iso")){

@@ -54,7 +54,7 @@ case class BEDEvidence(
       txtAllels.foreach(t => {
         val vdAllel = extractVDFromTxtAllel(t);
         if (vdAllel != null) {
-          subjectAllels.add(vdAllel);
+          vdAllel.split("\\+").toList.map(_.trim()).foreach { v => subjectAllels.add(v) };
         }
       });
     } else {

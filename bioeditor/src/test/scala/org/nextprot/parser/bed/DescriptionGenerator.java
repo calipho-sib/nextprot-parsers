@@ -16,9 +16,9 @@ public class DescriptionGenerator {
         if(category.equals("go-cellular-component")) {
         	return impactString + " localisation in " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-biological-process")) {
-        	return impactString + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-molecular-function")) {
-        	return impactString + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         } else if(category.equals("binary-interaction")) {
         	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION);
         }else  if(category.equals("small-molecule-interaction")) {
