@@ -1,10 +1,10 @@
-package org.nextprot.parser.bed.service
+package org.nextprot.parsers.bed.service
 
 import scala.collection.mutable.HashMap
 import scala.collection.mutable.Map
 import scala.xml.NodeSeq
 
-import org.nextprot.parser.bed.datamodel.BEDVariant
+import org.nextprot.parsers.bed.model.BEDVariant
 
 object BEDVariantService {
 

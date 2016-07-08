@@ -1,18 +1,14 @@
-package org.nextprot.parser.bed.datamodel
+package org.nextprot.parsers.bed.model
 
 import scala.collection.mutable.TreeSet
 
-import org.nextprot.parser.bed.commons.constants.NXCategory
-import org.nextprot.parser.bed.commons.constants.NXCategory.GoBiologicalProcess
-import org.nextprot.parser.bed.commons.constants.NXCategory.GoCellularComponent
-import org.nextprot.parser.bed.commons.constants.NXCategory.GoMolecularFunction
-import org.nextprot.parser.bed.commons.constants.NXTerminology
-import org.nextprot.parser.bed.commons.constants.NXTerminology.GoBiologicalProcessCv
-import org.nextprot.parser.bed.commons.constants.NXTerminology.GoCellularComponentCv
-import org.nextprot.parser.bed.commons.constants.NXTerminology.GoMolecularFunctionCv
-import org.nextprot.parser.bed.service.OntologyService
-import org.nextprot.parser.bed.utils.BEDUtils
-import org.nextprot.parser.bed.utils.BEDUtils.RelationInfo
+import org.nextprot.parsers.bed.commons.NXCategory
+import org.nextprot.parsers.bed.commons.NXCategory._
+import org.nextprot.parsers.bed.commons.NXTerminology
+import org.nextprot.parsers.bed.commons.NXTerminology._
+import org.nextprot.parsers.bed.service.OntologyService
+import org.nextprot.parsers.bed.commons.BEDUtils
+import org.nextprot.parsers.bed.commons.BEDUtils.RelationInfo
 
 case class BEDEvidence(
   val _annotationAccession: String,

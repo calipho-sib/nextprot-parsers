@@ -1,16 +1,15 @@
-package org.nextprot.parser.bed.service
+package org.nextprot.parsers.bed.service
 
-import org.nextprot.parser.bed.datamodel.BEDAnnotation
+import org.nextprot.parsers.bed.model.BEDAnnotation
 import scala.xml.NodeSeq
-import org.nextprot.parser.bed.datamodel.BEDCV
-import org.nextprot.parser.bed.datamodel.BEDEvidence
-import org.nextprot.parser.bed.commons.constants.NXCategory
-import org.nextprot.parser.bed.commons.constants.NXCategory._
-import org.nextprot.parser.bed.commons.constants.NXTerminology
-import org.nextprot.parser.bed.commons.constants.NXTerminology._
-import org.nextprot.parser.bed.utils.BEDUtils
-import org.nextprot.parser.bed.datamodel.BEDVariant
-import org.nextprot.parser.bed.datamodel.BEDVariant
+import org.nextprot.parsers.bed.model.BEDCV
+import org.nextprot.parsers.bed.model.BEDEvidence
+import org.nextprot.parsers.bed.commons.NXCategory
+import org.nextprot.parsers.bed.commons.NXCategory._
+import org.nextprot.parsers.bed.commons.NXTerminology
+import org.nextprot.parsers.bed.commons.NXTerminology._
+import org.nextprot.parsers.bed.commons.BEDUtils
+import org.nextprot.parsers.bed.model.BEDVariant
 
 object BEDAnnotationService {
 

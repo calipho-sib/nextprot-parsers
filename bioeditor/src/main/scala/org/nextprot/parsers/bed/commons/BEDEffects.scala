@@ -1,4 +1,4 @@
-package org.nextprot.parser.bed.commons.constants
+package org.nextprot.parsers.bed.commons
 
 object BEDEffects extends Enumeration {
 

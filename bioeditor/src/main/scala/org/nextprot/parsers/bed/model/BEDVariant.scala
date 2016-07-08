@@ -1,4 +1,4 @@
-package org.nextprot.parser.bed.datamodel
+package org.nextprot.parsers.bed.model
 
 case class BEDVariant(
   val variantUniqueName: String,

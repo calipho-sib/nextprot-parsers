@@ -1,4 +1,4 @@
-package org.nextprot.parser.bed.commons.constants
+package org.nextprot.parsers.bed.commons
 object BEDImpact extends Enumeration {
 
   protected case class Val(name: String) extends super.Val(nextId, name) {

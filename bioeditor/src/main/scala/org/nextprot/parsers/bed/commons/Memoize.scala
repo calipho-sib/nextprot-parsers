@@ -1,4 +1,4 @@
-package org.nextprot.parser.bed.utils
+package org.nextprot.parsers.bed.commons
 
 class Memoize1[-T, +R](f: T => R) extends (T => R) {
    import scala.collection.mutable

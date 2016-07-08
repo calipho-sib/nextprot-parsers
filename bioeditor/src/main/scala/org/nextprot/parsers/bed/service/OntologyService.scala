@@ -1,11 +1,11 @@
-package org.nextprot.parser.bed.service
+package org.nextprot.parsers.bed.service
 
 import scala.io.Source
 
 import org.apache.jena.query.QueryFactory
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP
-import org.nextprot.parser.bed.utils.BEDUtils
-import org.nextprot.parser.bed.utils.Memoize.memoize
+import org.nextprot.parsers.bed.commons.BEDUtils
+import org.nextprot.parsers.bed.commons.Memoize.memoize
 
 object OntologyService {
 
@@ -43,7 +43,7 @@ object OntologyService {
   }
 
   val goCategoryMapping: Map[String, String] = Source.fromInputStream(
-    getClass.getResourceAsStream("/go-category-mapping.csv")).
+    getClass.getResourceAsStream("go-category-mapping.csv")).
     getLines.map(l => {
       val vk = l.split(",");
       val key: String = vk(0);

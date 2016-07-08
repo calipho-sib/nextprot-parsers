@@ -1,5 +1,4 @@
-package org.nextprot.parser.bed.commons.constants
-
+package org.nextprot.parsers.bed.commons
 /*
  * Enum based on this Sean's example: http://www.scala-lang.org/old/node/10031?page=1#comment-43299
  */

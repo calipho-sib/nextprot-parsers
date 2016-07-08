@@ -1,4 +1,4 @@
-package org.nextprot.parser.bed.datamodel
+package org.nextprot.parsers.bed.model
 
 case class BEDAnnotation(val accession: String, val _subject: String, val _relation: String, val _objectTerm: BEDCV, val _bioObject: String, val _evidences: List[BEDEvidence]) {
 

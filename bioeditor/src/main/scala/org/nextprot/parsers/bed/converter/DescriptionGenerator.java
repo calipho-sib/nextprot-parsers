@@ -1,4 +1,4 @@
-package org.nextprot.parser.bed;
+package org.nextprot.parsers.bed.converter;
 
 import org.nextprot.commons.statements.RawStatement;
 import org.nextprot.commons.statements.StatementField;
