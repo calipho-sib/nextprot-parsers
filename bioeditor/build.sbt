@@ -1,8 +1,8 @@
 name := "nextprot-parser-bed"
 
-organization := "org.nextprot.parser.bed"
+organization := "org.nextprot.parsers"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.0.1-SNAPSHOT"
 
 description := "BioEditor parser used for BioEditor data"
 

@@ -33,8 +33,13 @@ object BedServiceStatementConverter {
     println("Parsing " + geneName);
 
     BEDVariantService.reinitialize();
-
-    val entryElem = scala.xml.XML.loadFile(new File("/Users/dteixeira/Documents/bed/" + geneName + ".xml"))
+    
+    val f1 = new File("/share/sib/common/Calipho/caviar/xml/" + geneName + ".xml");
+    val f2 = new File("/share/sib/common/Calipho/navmutpredict/xml/" + geneName + ".xml");
+    
+    val f = if(f1.exists()){ f1; }else { f2; }
+    
+    val entryElem = scala.xml.XML.loadFile(f);
 
     val nextprotAccession: String = (entryElem \ "@accession").text;
 
