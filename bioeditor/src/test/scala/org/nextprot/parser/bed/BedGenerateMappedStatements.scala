@@ -14,6 +14,8 @@ import org.scalatest.Matchers
 import org.nextprot.commons.statements.StatementBuilder
 import org.nextprot.commons.statements.StatementField._
 import org.nextprot.commons.statements._
+import org.nextprot.parsers.bed.converter.BedServiceStatementConverter
+import scala.collection.JavaConverters._
 
 class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
@@ -28,6 +30,10 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
     "scn4a", "scn5a", "scn8a", "scn9a", "scn10a", "scn11a");
 
   it should "do something" in {
+
+    BedServiceStatementConverter.setProxyDir("/Users/dteixeira/Documents/caviar/");
+    val statements = BedServiceStatementConverter.convert("brca1");
+    println(statements.length)
 
   }
 }

@@ -39,8 +39,8 @@ case class BEDEvidence(
     var note: String = null;
 
     if (mgiAllels.filter(m => !m.toLowerCase().startsWith("tg(")).size > 1) {
-      note = "Taking single allele for MGI multiple mutants, should fix this by adding VDSubject in TXT"
-      throw new RuntimeException("This case should not happen");
+      note = "Taking single allele for MGI multiple mutants, should fix this by adding VDSubject in TXT" + mgiAllels.filter(m => !m.toLowerCase().startsWith("tg("))
+      //throw new RuntimeException("This case should not happen");
       //subjectAllels.add(vdAllels(0));
     } else if (vdAllels.size > 1) { // Multiple mutants VD
       vdAllels.foreach(v => {
@@ -58,8 +58,7 @@ case class BEDEvidence(
     }
 
     if (subjectAllels.isEmpty) {
-      note = "Adding single subject for  " + _annotationAccession + " please fix";
-      println(note)
+      note += "Adding single subject for  " + _annotationAccession + " please fix";
       subjectAllels.add(_subject);
     }
 

@@ -1,4 +1,4 @@
-name := "nextprot-parser-bed"
+name := "nextprot-parsers-bed"
 
 organization := "org.nextprot.parsers"
 
