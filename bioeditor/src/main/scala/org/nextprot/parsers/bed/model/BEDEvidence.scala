@@ -140,10 +140,6 @@ case class BEDEvidence(
     return _bedObjectCvTerm.category.equals("Gene Ontology");
   }
 
-  def isSimple(): Boolean = {
-    return !_subject.toLowerCase().contains("iso");
-  }
-  
   def getReferences: List[(String, String)] = {
     return references;
   }

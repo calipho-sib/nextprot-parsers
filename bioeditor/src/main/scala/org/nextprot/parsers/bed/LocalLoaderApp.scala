@@ -1,6 +1,7 @@
 package org.nextprot.parsers.bed
 
 import java.lang.System.currentTimeMillis
+import java.util.HashSet;
 
 import scala.collection.JavaConversions.seqAsJavaList
 
@@ -29,7 +30,7 @@ object LocalLoaderApp extends App {
   statementLoaderService.deleteAll();
   val beforeLoad = currentTimeMillis();
 
-  statementLoaderService.load(statements.toList);
+  statementLoaderService.load(new HashSet(statements.toList));
 
   println("Done in " + (currentTimeMillis() - beforeLoad) + " ms for " + statements.size);
 
