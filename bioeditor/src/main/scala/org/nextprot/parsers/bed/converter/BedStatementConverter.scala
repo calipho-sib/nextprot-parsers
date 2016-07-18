@@ -142,7 +142,7 @@ object BedServiceStatementConverter {
     addEntryInfo(geneName, entryAccession, vpStmtBuilder);
 
     //Add subject and object
-    vpStmtBuilder.addAnnotationSubject(subjectVDS).addAnnotationObject(normalStatement)
+    vpStmtBuilder.addSubjects(subjectVDS).addObject(normalStatement)
 
     vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype") //TODO how should this be named?
       .addField(ANNOT_CV_TERM_TERMINOLOGY, "impact-cv") //TODO how should this be named?
