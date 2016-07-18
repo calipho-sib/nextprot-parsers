@@ -71,6 +71,12 @@ object BEDUtils {
       case (DecreasesBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), DECREASE, noteForInteractions, true);
       case (GainsBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), GAIN, noteForInteractions, true);
 
+      // Effect on protein property //////////////////////////////////////////////////////////////////////////////////////
+      case (HasNormalProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), NOT_CHANGED, false);
+      case (IncreasesProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), INCREASE, false);
+      case (DecreasesProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), DECREASE, false);
+
+      
       // Effect on phosphorylation ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
       case (RemovesPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), LOSS, "Removes PTM should be moved to MP - not a VP", false);

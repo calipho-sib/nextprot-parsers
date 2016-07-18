@@ -17,6 +17,8 @@ public class DescriptionGenerator {
         	return impactString + " localisation in " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-biological-process")) {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        }else  if(category.equals("protein-property")) {
+        	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-molecular-function")) {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         } else if(category.equals("binary-interaction")) {

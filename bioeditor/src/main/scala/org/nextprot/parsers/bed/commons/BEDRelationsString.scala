@@ -10,6 +10,10 @@ object BEDRelationsString extends Enumeration {
 
   implicit def valueToRelationsVal(x: Value) = x.asInstanceOf[Val]
 
+  val DecreasesProteinProperty = Val("decreases protein property")
+  val HasNormalProteinProperty = Val("has normal protein property")
+  val IncreasesProteinProperty = Val("increases protein property")
+  
   val IncreasesLocalization = Val("increases localization to")
   val DecreasesLocalization = Val("decreases localization to")
   val HasNormalLocalization = Val("has normal localization to")

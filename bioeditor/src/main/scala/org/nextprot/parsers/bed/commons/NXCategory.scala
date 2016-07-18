@@ -14,6 +14,7 @@ object NXCategory extends Enumeration {
   val GoBiologicalProcess = Val("go-biological-process")
   val GoMolecularFunction = Val("go-molecular-function")
   val BinaryInteraction = Val("binary-interaction")
+  val ProteinProperty = Val("protein-property")
   val SmallMoleculeInteraction = Val("small-molecule-interaction")
   val GenericPtm = Val("generic-ptm")
   val VarioProteinProperty = Val("vario-protein-property")

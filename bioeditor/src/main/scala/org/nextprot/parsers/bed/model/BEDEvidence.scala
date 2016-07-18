@@ -132,6 +132,10 @@ case class BEDEvidence(
     return _annotationAccession.contains("CAVA-VP");
   }
 
+  def isProteinProperty(): Boolean = {
+    return _relation.toLowerCase().contains("protein property");
+  }
+    
   def isInteraction(): Boolean = {
     return _relation.toLowerCase().contains("binding");
   }

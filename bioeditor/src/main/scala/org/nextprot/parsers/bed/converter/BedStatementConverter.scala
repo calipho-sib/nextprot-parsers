@@ -53,7 +53,7 @@ object BedServiceStatementConverter {
     val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
-      filter(e => ((e.isGO || e.isInteraction) && !e.isNegative));
+      filter(e => ((e.isGO || e.isInteraction || e.isProteinProperty) && !e.isNegative));
 
     vpGoEvidences.foreach(vpgoe => {
 
