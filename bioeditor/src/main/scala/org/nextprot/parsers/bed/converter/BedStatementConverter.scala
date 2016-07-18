@@ -141,6 +141,9 @@ object BedServiceStatementConverter {
     val vpStmtBuilder = StatementBuilder.createNew();
     addEntryInfo(geneName, entryAccession, vpStmtBuilder);
 
+    //Add subject and object
+    vpStmtBuilder.addAnnotationSubject(subjectVDS).addAnnotationObject(normalStatement)
+
     vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype") //TODO how should this be named?
       .addField(ANNOT_CV_TERM_TERMINOLOGY, "impact-cv") //TODO how should this be named?
       .addField(ANNOT_CV_TERM_NAME, evidence.getRelationInfo.getImpact().name)
@@ -148,9 +151,10 @@ object BedServiceStatementConverter {
       .addField(EXP_CONTEXT_PROPERTY_INTENSITY, evidence.intensity)
       .addField(EXP_CTX_PRPTY_PROTEIN_ORIGIN, evidence.proteinOriginSpecie)
       .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
-      .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
-      .addAnnotationObject(normalStatement)
-      .addAnnotationSubject(subjectVDS)
+      .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement));
+    
+    
+
 
     return vpStmtBuilder.build();
 
