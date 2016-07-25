@@ -62,7 +62,17 @@ case class BEDEvidence(
       subjectAllels.add(_subject);
     }
 
-    return (subjectAllels.toSet, note);
+    val subjectGene = _subject.substring(0, _subject.indexOf("-")).toLowerCase();
+    
+    val subjectAllelsSet = subjectAllels.toSet;
+    val response = subjectAllelsSet.filter { a => a.toLowerCase().startsWith(subjectGene)}.toSet;
+    
+    if(subjectAllelsSet.size != response.size){
+      note += "removing one allele for multiple genes " + _annotationAccession + " set: " + subjectAllelsSet + " filtered set " + response + " subject: " + _subject + " gene name " + subjectGene;
+      println(note);
+    }
+    
+    return (response, note);
 
   }
 
