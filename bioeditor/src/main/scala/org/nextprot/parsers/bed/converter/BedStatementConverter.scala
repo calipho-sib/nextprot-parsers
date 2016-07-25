@@ -59,15 +59,17 @@ object BedServiceStatementConverter {
     vpGoEvidences.foreach(vpgoe => {
 
       val subjectVariants = getVariantDefinitionStatement(entryElem, vpgoe, geneName, nextprotAccession);
-      val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
 
       statements ++= subjectVariants;
       
       if(!vpgoe.isPhenotype){// In case it is not a mammalian phenotype we need to add the "normal annotation"
+        val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
         statements += normalStatement;
+        statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
+      }else {
+        statements += getVPStatement(vpgoe, subjectVariants.toSet, null, geneName, nextprotAccession);
       }
       
-      statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
     });
 
     return statements.toList;
@@ -144,13 +146,15 @@ object BedServiceStatementConverter {
     addEntryInfo(geneName, entryAccession, vpStmtBuilder);
 
     //Add subject and object
-    vpStmtBuilder.addSubjects(subjectVDS).addObject(normalStatement)
-
+    vpStmtBuilder.addSubjects(subjectVDS)
+    
     if(!evidence.isPhenotype()){
+
       vpStmtBuilder.addField(ANNOTATION_CATEGORY, "functional-impact")
       .addField(ANNOT_CV_TERM_TERMINOLOGY, "functional-impact-cv") 
       .addField(ANNOT_CV_TERM_NAME, evidence.getRelationInfo.getImpact().name)
-      .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement));
+      .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
+      .addObject(normalStatement)
 
     }else {
       
