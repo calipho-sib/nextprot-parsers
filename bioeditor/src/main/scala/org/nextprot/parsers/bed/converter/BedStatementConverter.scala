@@ -5,7 +5,7 @@ import java.io.File
 import scala.collection.JavaConversions.setAsJavaSet
 import scala.xml.NodeSeq
 
-import org.nextprot.commons.statements.RawStatement
+import org.nextprot.commons.statements.Statement
 import org.nextprot.commons.statements.StatementBuilder
 import org.nextprot.commons.statements.StatementField._
 import org.nextprot.parsers.bed.BEDConstants
@@ -14,6 +14,7 @@ import org.nextprot.parsers.bed.commons.NXCategory.valueToCategry
 import org.nextprot.parsers.bed.model.BEDEvidence
 import org.nextprot.parsers.bed.service.BEDAnnotationService
 import org.nextprot.parsers.bed.service.BEDVariantService
+import org.nextprot.parsers.bed.commons.BEDImpact
 
 object BedServiceStatementConverter {
 
@@ -27,13 +28,13 @@ object BedServiceStatementConverter {
     location = directory;
   }
 
-  def convertAll(): List[RawStatement] = {
+  def convertAll(): List[Statement] = {
     BEDConstants.GENE_LIST.flatMap { convert(_) }.toSet.toList;
   }
 
-  def convert(geneName: String): List[RawStatement] = {
+  def convert(geneName: String): List[Statement] = {
 
-    val statements = scala.collection.mutable.Set[RawStatement]();
+    val statements = scala.collection.mutable.Set[Statement]();
 
     val startTime = System.currentTimeMillis();
 
@@ -53,7 +54,7 @@ object BedServiceStatementConverter {
     val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
-      filter(e => ((e.isGO || e.isInteraction || e.isProteinProperty) && !e.isNegative));
+      filter(e => ((e.isGO || e.isInteraction || e.isProteinProperty || e.isPhenotype) && !e.isNegative));
 
     vpGoEvidences.foreach(vpgoe => {
 
@@ -61,7 +62,11 @@ object BedServiceStatementConverter {
       val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
 
       statements ++= subjectVariants;
-      statements += normalStatement;
+      
+      if(!vpgoe.isPhenotype){// In case it is not a mammalian phenotype we need to add the "normal annotation"
+        statements += normalStatement;
+      }
+      
       statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
     });
 
@@ -69,7 +74,7 @@ object BedServiceStatementConverter {
 
   }
 
-  def getVariantDefinitionStatement(entryXML: NodeSeq, evidence: BEDEvidence, geneName: String, entryAccession: String): List[RawStatement] = {
+  def getVariantDefinitionStatement(entryXML: NodeSeq, evidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
 
     val subjectsWithNote = evidence.getSubjectAllelsWithNote;
 
@@ -109,12 +114,9 @@ object BedServiceStatementConverter {
         addEntryInfo(vGene, variantEntryAccession, vdStmtBuilder);
 
         val nextprot_accession = variant.variantSequenceVariationPositionOnIsoform;
-        if (subject.toLowerCase().contains("iso")) {
-          vdStmtBuilder.addDebugNote(subject);
-        }
 
         vdStmtBuilder.addField(NEXTPROT_ACCESSION, variantEntryAccession);
-        vdStmtBuilder.addField(ANNOT_ISO_UNAME, subject);
+        vdStmtBuilder.addField(ANNOTATION_NAME, subject);
 
         vdStmtBuilder.addVariantInfo(variant.variantSequenceVariationPositionFirst, variant.variantSequenceVariationPositionLast, variant.variantSequenceVariationOrigin, variant.variantSequenceVariationVariation);
         vdStmtBuilder.addSourceInfo(variant.identifierAccession, "BioEditor");
@@ -129,14 +131,14 @@ object BedServiceStatementConverter {
 
   }
 
-  def getDescription(impact: String, normalStatement: RawStatement): String = {
+  def getDescription(impact: String, normalStatement: Statement): String = {
     return DescriptionGenerator.getDescriptionForPhenotypeAnnotation(impact, normalStatement);
   }
 
   def getVPStatement(evidence: BEDEvidence,
-                     subjectVDS: Set[RawStatement],
-                     normalStatement: RawStatement,
-                     geneName: String, entryAccession: String): RawStatement = {
+                     subjectVDS: Set[Statement],
+                     normalStatement: Statement,
+                     geneName: String, entryAccession: String): Statement = {
 
     val vpStmtBuilder = StatementBuilder.createNew();
     addEntryInfo(geneName, entryAccession, vpStmtBuilder);
@@ -144,23 +146,37 @@ object BedServiceStatementConverter {
     //Add subject and object
     vpStmtBuilder.addSubjects(subjectVDS).addObject(normalStatement)
 
-    vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype") //TODO how should this be named?
-      .addField(ANNOT_CV_TERM_TERMINOLOGY, "impact-cv") //TODO how should this be named?
+    if(!evidence.isPhenotype()){
+      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "functional-impact")
+      .addField(ANNOT_CV_TERM_TERMINOLOGY, "functional-impact-cv") 
       .addField(ANNOT_CV_TERM_NAME, evidence.getRelationInfo.getImpact().name)
-      .addField(STATEMENT_QUALITY, evidence._quality)
-      .addField(EXP_CONTEXT_PROPERTY_INTENSITY, evidence.intensity)
-      .addField(EXP_CTX_PRPTY_PROTEIN_ORIGIN, evidence.proteinOriginSpecie)
-      .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
       .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement));
-    
-    
 
+    }else {
+      
+      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype") 
+      .addField(ANNOT_CV_TERM_TERMINOLOGY, "mammalian-phenotype-cv")
+      .addField(ANNOT_CV_TERM_NAME, evidence.getNXCvTermCvName())
+      
+      if(evidence._relation.toLowerCase().contains("does not cause")){
+        vpStmtBuilder.addField(IS_NEGATIVE, "true")
+      }
+      vpStmtBuilder.addField(ANNOT_DESCRIPTION, evidence._relation);
+
+    }
+      
+      vpStmtBuilder
+      .addField(EVIDENCE_QUALITY, evidence._quality)
+      .addField(EVIDENCE_INTENSITY, evidence.intensity)
+      .addField(ANNOTATION_SUBJECT_SPECIES, evidence.proteinOriginSpecie) //TODO should find out which one is which
+      .addField(ANNOTATION_OBJECT_SPECIES, evidence.proteinOriginSpecie)//TODO should find out which one is which
+      .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
 
     return vpStmtBuilder.build();
 
   }
 
-  def getNormalStatement(evidence: BEDEvidence, geneName: String, entryAccession: String): RawStatement = {
+  def getNormalStatement(evidence: BEDEvidence, geneName: String, entryAccession: String): Statement = {
     val normalStmtBuilder = StatementBuilder.createNew();
     addEntryInfo(geneName, entryAccession, normalStmtBuilder);
 
@@ -173,6 +189,10 @@ object BedServiceStatementConverter {
       //TODO To be checked
       .addSourceInfo("N/A", "BioEditor")
 
+    if(BEDImpact.GAIN.equals(evidence.getRelationInfo().getImpact())){
+      normalStmtBuilder.addField(IS_NEGATIVE, "true");
+    }
+  
     return normalStmtBuilder.build();
 
   }

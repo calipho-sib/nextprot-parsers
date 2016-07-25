@@ -13,6 +13,5 @@ object BEDImpact extends Enumeration {
   val GAIN = Val("gain")
   val LOSS = Val("loss")
 
-  val AMBIGUOUS = Val("ambiguous")
     
 }

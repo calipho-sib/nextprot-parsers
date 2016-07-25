@@ -3,7 +3,7 @@ package org.nextprot.parser.bed
 import java.io.File
 import java.io.PrintWriter
 import scala.xml.NodeSeq
-import org.nextprot.commons.statements.RawStatement
+import org.nextprot.commons.statements.Statement
 import org.nextprot.parsers.bed.commons.BEDImpact.valueofModifiers
 import org.nextprot.parsers.bed.commons.NXCategory.valueToCategry
 import org.nextprot.parsers.bed.model.BEDEvidence

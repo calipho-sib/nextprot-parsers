@@ -30,10 +30,6 @@ object BEDRelationsString extends Enumeration {
   val DecreasesBindingTo = Val("decreases binding to")
   val GainsBindingTo = Val("gains binding to")
 
-  val IsALabileFormOf = Val("is a labile form of")
-  val IsAMoreStableFormOF = Val("is a more stable form of")
-  val HasNoEffectOnStability = Val("has no effect on stability of")
-
   val RemovesPTMSite = Val("removes PTM site")
   val GainsPTMSite = Val("gains PTM site")
 

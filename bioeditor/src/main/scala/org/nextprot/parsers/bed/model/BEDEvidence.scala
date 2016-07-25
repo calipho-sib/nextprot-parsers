@@ -135,6 +135,10 @@ case class BEDEvidence(
   def isProteinProperty(): Boolean = {
     return _relation.toLowerCase().contains("protein property");
   }
+
+  def isPhenotype(): Boolean = {
+    return _relation.toLowerCase().contains("phenotype");
+  }
     
   def isInteraction(): Boolean = {
     return _relation.toLowerCase().contains("binding");

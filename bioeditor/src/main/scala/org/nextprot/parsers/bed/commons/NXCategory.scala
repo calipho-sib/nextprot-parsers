@@ -18,7 +18,7 @@ object NXCategory extends Enumeration {
   val SmallMoleculeInteraction = Val("small-molecule-interaction")
   val GenericPtm = Val("generic-ptm")
   val VarioProteinProperty = Val("vario-protein-property")
-  val MammalianPhenotype = Val("mammalian-phenotype")
+  val MammalianPhenotype = Val("phenotype")
   val ToBeDefinedAnnotation = Val("TO-BE-DEFINED")
 
 }

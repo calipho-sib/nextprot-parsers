@@ -1,15 +1,15 @@
 package org.nextprot.parsers.bed.converter;
 
-import org.nextprot.commons.statements.RawStatement;
+import org.nextprot.commons.statements.Statement;
 import org.nextprot.commons.statements.StatementField;
 
 public class DescriptionGenerator {
 
-	public static String getDescriptionForPhenotypeAnnotation(String impact, RawStatement statement){
+	public static String getDescriptionForPhenotypeAnnotation(String impact, Statement statement){
 		
 		String impactString = impact + "s";
 		String category = statement.getValue(StatementField.ANNOTATION_CATEGORY).toLowerCase();
-		
+
 		if(impactString.equals("no-impacts")){
 			impactString = "has no impact on";
 		}
@@ -25,9 +25,7 @@ public class DescriptionGenerator {
         	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION);
         }else  if(category.equals("small-molecule-interaction")) {
         	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION);
-        }
-        
-        else throw new RuntimeException("Category " + category + " not defined");
+        }else throw new RuntimeException("Category " + category + " not defined");
 		
 	}
 }
