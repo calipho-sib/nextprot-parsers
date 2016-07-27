@@ -15,6 +15,7 @@ import org.nextprot.parsers.bed.model.BEDEvidence
 import org.nextprot.parsers.bed.service.BEDAnnotationService
 import org.nextprot.parsers.bed.service.BEDVariantService
 import org.nextprot.parsers.bed.commons.BEDImpact
+import org.nextprot.commons.constants.QualityQualifier
 
 object BedServiceStatementConverter {
 
@@ -117,6 +118,9 @@ object BedServiceStatementConverter {
         vdStmtBuilder.addVariantInfo(variant.getNextprotAnnotationCategory, variant.variantSequenceVariationPositionFirst, variant.variantSequenceVariationPositionLast, variant.variantSequenceVariationOrigin, variant.variantSequenceVariationVariation);
         vdStmtBuilder.addSourceInfo(variant.identifierAccession, "BioEditor");
 
+        //According to specs qualtiy of the variant must always be GOLD https://issues.isb-sib.ch/browse/BIOEDITOR-399?jql=text%20~%20%22quality%20bed%22
+        vdStmtBuilder.addQuality(QualityQualifier.GOLD);
+        
         vdStmtBuilder.addDebugNote(note);
 
         vdStmtBuilder.build();
@@ -149,7 +153,7 @@ object BedServiceStatementConverter {
       .addObject(normalStatement)
       
       vpStmtBuilder
-      .addField(EVIDENCE_QUALITY, evidence._quality)
+      .addQuality(QualityQualifier.valueOf(evidence._quality))
       .addField(EVIDENCE_INTENSITY, evidence.intensity)
       .addField(ANNOTATION_SUBJECT_SPECIES, evidence.proteinOriginSpecie) //TODO should find out which one is which
       .addField(ANNOTATION_OBJECT_SPECIES, evidence.proteinOriginSpecie)//TODO should find out which one is which
@@ -159,23 +163,24 @@ object BedServiceStatementConverter {
 
   }
 
-  def getNormalStatement(evidence: BEDEvidence, geneName: String, entryAccession: String): Statement = {
+  def getNormalStatement(vpEvidence: BEDEvidence, geneName: String, entryAccession: String): Statement = {
     val normalStmtBuilder = StatementBuilder.createNew();
     addEntryInfo(geneName, entryAccession, normalStmtBuilder);
 
-    normalStmtBuilder.addField(ANNOTATION_CATEGORY, evidence.getNXCategory().name)
-      .addCvTerm(evidence._bedObjectCvTerm.accession, evidence._bedObjectCvTerm.cvName, evidence._bedObjectCvTerm.category) //TODO rename category to terminology...
-      .addField(BIOLOGICAL_OBJECT_ACCESSION, evidence._bioObject)
-      .addField(BIOLOGICAL_OBJECT_TYPE, evidence._bioObjectType)
+    normalStmtBuilder.addField(ANNOTATION_CATEGORY, vpEvidence.getNXCategory().name)
+      .addCvTerm(vpEvidence._bedObjectCvTerm.accession, vpEvidence._bedObjectCvTerm.cvName, vpEvidence._bedObjectCvTerm.category) //TODO rename category to terminology...
+      .addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence._bioObject)
+      .addField(BIOLOGICAL_OBJECT_TYPE, vpEvidence._bioObjectType)
 
       //DO NOT ADD accession because otherwise it creates N normal annotations  normalStatement.setAnnot_source_accession(evidence._annotationAccession);
       //TODO To be checked
       .addSourceInfo("N/A", "BioEditor")
 
-    if(BEDImpact.GAIN.equals(evidence.getRelationInfo().getImpact())){
+    if(BEDImpact.GAIN.equals(vpEvidence.getRelationInfo().getImpact())){
       normalStmtBuilder.addField(IS_NEGATIVE, "true");
     }
   
+    normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();
 
   }
