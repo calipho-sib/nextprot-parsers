@@ -146,7 +146,7 @@ case class BEDEvidence(
     return _relation.toLowerCase().contains("protein property");
   }
 
-  def isPhenotype(): Boolean = {
+  def isMammalianPhenotype(): Boolean = {
     return _relation.toLowerCase().contains("phenotype");
   }
     

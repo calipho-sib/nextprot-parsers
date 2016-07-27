@@ -38,8 +38,6 @@ object BedServiceStatementConverter {
 
     val startTime = System.currentTimeMillis();
 
-    println("Parsiiiing " + geneName);
-
     BEDVariantService.reinitialize();
 
     val f1 = new File(location + geneName + ".xml");
@@ -54,7 +52,7 @@ object BedServiceStatementConverter {
     val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
-      filter(e => ((e.isGO || e.isInteraction || e.isProteinProperty || e.isPhenotype) && !e.isNegative));
+      filter(e => ((e.isGO || e.isInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative));
 
     vpGoEvidences.foreach(vpgoe => {
 
@@ -62,13 +60,9 @@ object BedServiceStatementConverter {
 
       statements ++= subjectVariants;
       
-      if(!vpgoe.isPhenotype){// In case it is not a mammalian phenotype we need to add the "normal annotation"
-        val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
-        statements += normalStatement;
-        statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
-      }else {
-        statements += getVPStatement(vpgoe, subjectVariants.toSet, null, geneName, nextprotAccession);
-      }
+      val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
+      statements += normalStatement;
+      statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
       
     });
 
@@ -120,7 +114,7 @@ object BedServiceStatementConverter {
         vdStmtBuilder.addField(NEXTPROT_ACCESSION, variantEntryAccession);
         vdStmtBuilder.addField(ANNOTATION_NAME, subject);
 
-        vdStmtBuilder.addVariantInfo(variant.variantSequenceVariationPositionFirst, variant.variantSequenceVariationPositionLast, variant.variantSequenceVariationOrigin, variant.variantSequenceVariationVariation);
+        vdStmtBuilder.addVariantInfo(variant.getNextprotAnnotationCategory, variant.variantSequenceVariationPositionFirst, variant.variantSequenceVariationPositionLast, variant.variantSequenceVariationOrigin, variant.variantSequenceVariationVariation);
         vdStmtBuilder.addSourceInfo(variant.identifierAccession, "BioEditor");
 
         vdStmtBuilder.addDebugNote(note);
@@ -148,26 +142,11 @@ object BedServiceStatementConverter {
     //Add subject and object
     vpStmtBuilder.addSubjects(subjectVDS)
     
-    if(!evidence.isPhenotype()){
-
-      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "functional-impact")
-      .addField(ANNOT_CV_TERM_TERMINOLOGY, "functional-impact-cv") 
+      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "modification-effect")
+      .addField(ANNOT_CV_TERM_TERMINOLOGY, "modification-effect-cv") 
       .addField(ANNOT_CV_TERM_NAME, evidence.getRelationInfo.getImpact().name)
       .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
       .addObject(normalStatement)
-
-    }else {
-      
-      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype") 
-      .addField(ANNOT_CV_TERM_TERMINOLOGY, "mammalian-phenotype-cv")
-      .addField(ANNOT_CV_TERM_NAME, evidence.getNXCvTermCvName())
-      
-      if(evidence._relation.toLowerCase().contains("does not cause")){
-        vpStmtBuilder.addField(IS_NEGATIVE, "true")
-      }
-      vpStmtBuilder.addField(ANNOT_DESCRIPTION, evidence._relation);
-
-    }
       
       vpStmtBuilder
       .addField(EVIDENCE_QUALITY, evidence._quality)

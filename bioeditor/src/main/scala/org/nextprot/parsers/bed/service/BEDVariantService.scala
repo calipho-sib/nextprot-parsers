@@ -53,9 +53,9 @@ object BEDVariantService {
       val identifierURL = (xmlV \ "identifier" \ "url").text;
 
       val originAccession = (xmlV \ "origin" \ "@accession").text;
-      val originCategory = (xmlV \ "origin" \ "@category").text;
-      val originCvName = (xmlV \ "origin" \ "cvName").text;
-
+      val originCategory = (xmlV \\ "origin" \ "@category").text;
+      val originCvName = (xmlV \\ "origin" \ "cvName").text;
+      
       val predictedConsequenceAccession = (xmlV \ "predictedConsequence" \ "@accession").text;
       val predictedConsequenceCategory = (xmlV \ "predictedConsequence" \ "@category").text;
       val predictedConsequenceCvName = (xmlV \ "predictedConsequence" \ "cvName").text;

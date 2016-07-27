@@ -21,6 +21,8 @@ public class DescriptionGenerator {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-molecular-function")) {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        }else  if(category.equals("mammalian-phenotype")) {
+        	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         } else if(category.equals("binary-interaction")) {
         	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION);
         }else  if(category.equals("small-molecule-interaction")) {

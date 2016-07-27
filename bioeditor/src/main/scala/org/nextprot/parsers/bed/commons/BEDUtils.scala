@@ -75,21 +75,14 @@ object BEDUtils {
       case (HasNormalProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), NOT_CHANGED, false);
       case (IncreasesProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), INCREASE, false);
       case (DecreasesProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), DECREASE, false);
-
       
       // Effect on phosphorylation ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-      case (RemovesPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), LOSS, "Removes PTM should be moved to MP - not a VP", false);
+      case (RemovesPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), DECREASE, "Removes PTM should be moved to MP - not a VP", false);
       case (GainsPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), GAIN, "there might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv", false);
 
       // Effect on Mammalian Phenotype
-      case (CausesPhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), null, "", false);
-      case (DoesNotCausePhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), null, "", false);
-
-      // Effect on substract
-      case (IsAPoorerSubstrateFor.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), DECREASE, NEED_CV_TERM, false);
-
-      case (IsADominantNegativeForm.name, IS_POSITIVE) => return new RelationInfo(List(VarioProteinProperty), List(), INCREASE, NEED_CV_TERM + NL + "Needs a flag because it is orthognal", false);
+      case (CausesPhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), CHANGED, "", false);
+      case (DoesNotCausePhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), NOT_CHANGED, "", false);
 
       case _ => return throw new Exception("Relation " + relation + " is not supported");
 

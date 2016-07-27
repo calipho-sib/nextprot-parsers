@@ -17,5 +17,15 @@ case class BEDVariant(
   val predictedConsequenceAccession: String,
   val predictedConsequenceCategory: String,
   val predictedConsequenceCvName: String) {
+  
+  
+  def getNextprotAnnotationCategory : String = {
+    
+      if(originCvName.contains("germline") || originCvName.contains("somatic")){
+        return "variant";
+      }else if (originCvName.contains("mutated")){
+        return "mutagenesis";
+      }else return null;
+  }
 
 }

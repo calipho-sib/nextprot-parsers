@@ -11,7 +11,5 @@ object BEDImpact extends Enumeration {
   val INCREASE = Val("increase")
   val DECREASE = Val("decrease")
   val GAIN = Val("gain")
-  val LOSS = Val("loss")
-
     
 }
