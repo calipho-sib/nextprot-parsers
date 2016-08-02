@@ -53,26 +53,26 @@ object BEDUtils {
       // Sub-cellular location
       case (IncreasesLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), INCREASE, false);
       case (DecreasesLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), DECREASE, false);
-      case (HasNormalLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), NOT_CHANGED, false);
+      case (HasNormalLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), NO_IMPACT, false);
       case (LocalisesToANewCompartment.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), GAIN, false);
 
       // Effect on catalytic activity and cellular processes //////////////////////////////////////////////////////////////////////////////////////////////////
 
       // Effect on catalytic activity and cellular processes
-      case (HasNormal.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, NOT_CHANGED, false);
-      case (Impairs.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, CHANGED, false);
+      case (HasNormal.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, NO_IMPACT, false);
+      case (Impairs.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, IMPACT, false);
       case (Increases.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, INCREASE, false);
       case (Decreases.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, DECREASE, false);
       case (Gains.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, GAIN, false);
 
       // Effect on protein interaction //////////////////////////////////////////////////////////////////////////////////////
-      case (HasNormalBinding.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), NOT_CHANGED, noteForInteractions, true);
+      case (HasNormalBinding.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), NO_IMPACT, noteForInteractions, true);
       case (IncreasesBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), INCREASE, noteForInteractions, true);
       case (DecreasesBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), DECREASE, noteForInteractions, true);
       case (GainsBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), GAIN, noteForInteractions, true);
 
       // Effect on protein property //////////////////////////////////////////////////////////////////////////////////////
-      case (HasNormalProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), NOT_CHANGED, false);
+      case (HasNormalProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), NO_IMPACT, false);
       case (IncreasesProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), INCREASE, false);
       case (DecreasesProteinProperty.name, IS_POSITIVE) => return new RelationInfoSimple(List(ProteinProperty), List(), DECREASE, false);
       
@@ -81,8 +81,8 @@ object BEDUtils {
       case (GainsPTMSite.name, IS_POSITIVE) => return new RelationInfo(List(GenericPtm), List(), GAIN, "there might be a terminology term accession=PTM-0135 terminology=uniprot-ptm-cv", false);
 
       // Effect on Mammalian Phenotype
-      case (CausesPhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), CHANGED, "", false);
-      case (DoesNotCausePhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), NOT_CHANGED, "", false);
+      case (CausesPhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), IMPACT, "", false);
+      case (DoesNotCausePhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), NO_IMPACT, "", false);
 
       case _ => return throw new Exception("Relation " + relation + " is not supported");
 

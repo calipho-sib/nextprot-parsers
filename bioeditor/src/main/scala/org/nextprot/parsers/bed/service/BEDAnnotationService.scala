@@ -13,7 +13,7 @@ import org.nextprot.parsers.bed.model.BEDVariant
 
 object BEDAnnotationService {
 
-  def getBEDEvidence(_annotationAccession: String, _subject: String, _relation: String, _objectTerm: BEDCV, _bioObject: String, _bioObjectType: String, xmlA: scala.xml.Node): List[BEDEvidence] = {
+  def getBEDEvidence(currentGene: String, _annotationAccession: String, _subject: String, _relation: String, _objectTerm: BEDCV, _bioObject: String, _bioObjectType: String, xmlA: scala.xml.Node): List[BEDEvidence] = {
     return (xmlA \\ "evidence").map(e => {
 
       val biologicalModelXml = e \ "biologicalModel";
@@ -35,8 +35,15 @@ object BEDAnnotationService {
 
       val isNegative = (e \\ "@isNegative").text.toBoolean;
       val quality = (e \\ "@confidence").text;
-      val proteinOriginSpecie = (e \ "proteinOrigin" \ "species" \\ "cvName").map(_.text).mkString(",");
+      
+      val subjectProteinOriginXml = (e \\ "proteinOrigin").filter { x => ((x \ "proteinRef").text).equalsIgnoreCase(currentGene) }
+      val subjectProteinOriginSpecie = (subjectProteinOriginXml \ "species" \ "cvName").text; 
 
+      val objectProteinOriginXml = (e \\ "proteinOrigin").filter { x => !((x \ "proteinRef").text).equalsIgnoreCase(currentGene) }
+      val objectProteinOriginSpecie = (objectProteinOriginXml \ "species" \ "cvName").text; 
+
+      val ecos = (e \\ "eco").map { e => ((e \ "@accession").text , (e \ "cvName").text)}.toList;
+      
       val references = referencesXml.map(r => {
         ((r \ "@database").text, (r \ "@accession").text)
       }).toList
@@ -44,7 +51,8 @@ object BEDAnnotationService {
       
       new BEDEvidence(
           _annotationAccession, _subject, _relation, _objectTerm,
-          _bioObject, _bioObjectType, intensity, isNegative, quality, proteinOriginSpecie,
+          _bioObject, _bioObjectType, intensity, isNegative, quality, 
+          subjectProteinOriginSpecie, objectProteinOriginSpecie, ecos,
           allelsVD, allelsMGI, allelsTXT, references);
     }).toList;
   }
@@ -87,7 +95,7 @@ object BEDAnnotationService {
         null;
       } else {
 
-        val evidences = getBEDEvidence(_accession, _subject, _relation, _objectTerm, _bioObject, _bioObjectType, xmlA);
+        val evidences = getBEDEvidence(currentNextprotGene, _accession, _subject, _relation, _objectTerm, _bioObject, _bioObjectType, xmlA);
         new BEDAnnotation(_accession, _subject, _relation, _objectTerm, _bioObject, evidences);
 
       }

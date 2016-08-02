@@ -20,7 +20,9 @@ case class BEDEvidence(
   val intensity: String,
   val isNegative: Boolean,
   val _quality: String,
-  val proteinOriginSpecie: String,
+  val subjectProteinOrigin: String,
+  val objectProteinOrigin: String,
+  val ecos: List[(String, String)],
   val vdAllels: List[String],
   val mgiAllels: List[String],
   val txtAllels: List[String],
@@ -168,6 +170,26 @@ case class BEDEvidence(
 
   def getRelationInfo(): RelationInfo = {
     return BEDUtils.getRelationInformation(_relation, isNegative);
+  }
+  
+  def getEvidenceCode(): String = {
+    if(!"Homo sapiens".equalsIgnoreCase(subjectProteinOrigin)){
+      return "ECO:0000250"; //When subject is not human, then add ECO ISS (sequence similarity)
+    }else {
+      return "ECO:0000006"; //Experimental evidence
+    }
+  }
+
+  def getEvidenceNote(): String = {
+    return "Other ECOS used in this experiment : " + ecos.mkString(",") + "\n"
+  }
+    
+  def getEvidenceProperties(): String = {
+    return ecos.mkString(",");
+  }
+
+  def getPubmedId(): String = {
+    return references.filter(_._1.equals("PubMed")).map(_._2).toList.mkString(",")
   }
 
 }

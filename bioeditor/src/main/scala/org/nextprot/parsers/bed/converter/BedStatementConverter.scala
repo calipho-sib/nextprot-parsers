@@ -147,18 +147,20 @@ object BedServiceStatementConverter {
     vpStmtBuilder.addSubjects(subjectVDS)
     
       vpStmtBuilder.addField(ANNOTATION_CATEGORY, "modification-effect")
-      .addField(ANNOT_CV_TERM_TERMINOLOGY, "modification-effect-cv") 
-      .addField(ANNOT_CV_TERM_NAME, evidence.getRelationInfo.getImpact().name)
+      .addCvTerm(evidence.getRelationInfo.getImpact().accession, evidence.getRelationInfo.getImpact().name, "modification-effect-cv")
       .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
       .addObject(normalStatement)
       
       vpStmtBuilder
       .addQuality(QualityQualifier.valueOf(evidence._quality))
       .addField(EVIDENCE_INTENSITY, evidence.intensity)
-      .addField(ANNOTATION_SUBJECT_SPECIES, evidence.proteinOriginSpecie) //TODO should find out which one is which
-      .addField(ANNOTATION_OBJECT_SPECIES, evidence.proteinOriginSpecie)//TODO should find out which one is which
+      .addField(ANNOTATION_SUBJECT_SPECIES, evidence.subjectProteinOrigin) //TODO should find out which one is which
+      .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin)//TODO should find out which one is which
       .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
-
+      .addField(REFERENCE_PUBMED, evidence.getPubmedId)
+      .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
+      .addField(EVIDENCE_NOTE, evidence.getEvidenceNote())
+      
     return vpStmtBuilder.build();
 
   }
@@ -187,8 +189,8 @@ object BedServiceStatementConverter {
 
   def addEntryInfo(geneName: String, entryAccession: String, statementBuilder: StatementBuilder) = {
     statementBuilder.addField(ENTRY_ACCESSION, entryAccession)
-      .addField(GENE_NAME, geneName)
-      .addField(ISOFORM_ACCESSION, entryAccession + "-1"); //TODO change this for all isoforms
-  }
+      .addField(GENE_NAME, geneName.toUpperCase())
+      .addField(ENTRY_ACCESSION, entryAccession.toUpperCase()); 
+   }
 
 }
