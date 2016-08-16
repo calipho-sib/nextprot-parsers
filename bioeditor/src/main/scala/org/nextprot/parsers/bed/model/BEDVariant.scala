@@ -31,7 +31,6 @@ case class BEDVariant(
   def getEcoCode : String = {
     
       //According to specs: https://issues.isb-sib.ch/browse/BIOEDITOR-464
-    
       if(originCvName.contains("germline") || originCvName.contains("somatic")){
         return "ECO:0000219"; //  nucleotide sequencing assay evidence
       }else if (originCvName.contains("mutated")){

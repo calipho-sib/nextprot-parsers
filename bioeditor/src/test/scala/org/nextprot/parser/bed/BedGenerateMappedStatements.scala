@@ -19,21 +19,9 @@ import scala.collection.JavaConverters._
 
 class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
-  // cp /Volumes/common/Calipho/caviar/xml/*.xml ~/Documents/bed/
-  // cp /Volumes/common/Calipho/navmutpredict/xml/*.xml ~/Documents/bed/
-  
-  val location = "/Users/dteixeira/Documents/caviar/";
-  val load = true;
+  it should "return more than 1000 statements for brca1" in {
 
-  val genes = List("apc", "brca1", "brca2", "brip1", "epcam", "idh1", "mlh1", "mlh3",
-    "msh2", "msh6", "mutyh", "pms2", "palb2", "scn1a", "scn2a", "scn3a",
-    "scn4a", "scn5a", "scn8a", "scn9a", "scn10a", "scn11a");
-
-  it should "do something" in {
-
-    BedServiceStatementConverter.setProxyDir("/Users/dteixeira/Documents/caviar/");
     val statements = BedServiceStatementConverter.convert("brca1");
-    println(statements.length)
-
+    assert(statements.length > 1000)
   }
 }
