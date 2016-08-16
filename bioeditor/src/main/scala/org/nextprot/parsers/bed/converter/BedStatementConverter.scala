@@ -120,7 +120,8 @@ object BedServiceStatementConverter {
 
         //According to specs qualtiy of the variant must always be GOLD https://issues.isb-sib.ch/browse/BIOEDITOR-399?jql=text%20~%20%22quality%20bed%22
         vdStmtBuilder.addQuality(QualityQualifier.GOLD);
-        
+        vdStmtBuilder.addField(EVIDENCE_CODE, variant.getEcoCode);
+
         vdStmtBuilder.addDebugNote(note);
 
         vdStmtBuilder.build();
