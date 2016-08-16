@@ -27,7 +27,6 @@ object LocalLoaderApp extends App {
   }
 
   val statementLoaderService = new OracleStatementLoaderServiceImpl();
-  statementLoaderService.deleteStatementsForSource(NextProtSource.BioEditor);
   val beforeLoad = currentTimeMillis();
 
   statementLoaderService.loadRawStatementsForSource(new HashSet(statements.toList), NextProtSource.BioEditor);
