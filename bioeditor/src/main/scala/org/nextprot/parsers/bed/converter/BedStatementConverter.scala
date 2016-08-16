@@ -48,7 +48,7 @@ object BedServiceStatementConverter {
     if (fileExistence.isEmpty)
       throw new RuntimeException("Can't find file " + geneName + ".xml in following locations: " + proxyLocations.mkString("\n"));
 
-    val f = fileExistence.toList(0);
+    val f = new File(fileExistence.toList(0) + geneName + ".xml");
 
     val entryElem = scala.xml.XML.loadFile(f);
 
