@@ -10,7 +10,7 @@ public class DescriptionGenerator {
 		String impactString = impact + "s";
 		String category = statement.getValue(StatementField.ANNOTATION_CATEGORY).toLowerCase();
 
-		if(impactString.equals("no impact")){
+		if(impactString.equals("no impacts")){
 			impactString = "has no impact on";
 		}
         if(category.equals("go-cellular-component")) {

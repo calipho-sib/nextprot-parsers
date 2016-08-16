@@ -22,11 +22,14 @@ object BedServiceStatementConverter {
   // cp /Volumes/common/Calipho/caviar/xml/*.xml ~/Documents/bed/
   // cp /Volumes/common/Calipho/navmutpredict/xml/*.xml ~/Documents/bed/
 
-  var location = "/share/sib/common/Calipho/caviar/xml/";
+  val proxyLocations = scala.collection.mutable.SortedSet[String]();
+  proxyLocations.add("/share/sib/common/Calipho/caviar/xml/");
+  proxyLocations.add("/share/sib/common/Calipho/navmutpredict/xml/");
+  
   val load = true;
 
-  def setProxyDir(directory: String) {
-    location = directory;
+  def addProxyDir(directory: String) {
+    proxyLocations.add(directory);
   }
 
   def convertAll(): List[Statement] = {
@@ -41,10 +44,11 @@ object BedServiceStatementConverter {
 
     BEDVariantService.reinitialize();
 
-    val f1 = new File(location + geneName + ".xml");
-    val f2 = new File("/share/sib/common/Calipho/navmutpredict/xml/" + geneName + ".xml");
+    val fileExistence = proxyLocations.filter { pl => new File(pl + geneName + ".xml").exists()};
+    if (fileExistence.isEmpty)
+      throw new RuntimeException("Can't find file " + geneName + ".xml in following locations: " + proxyLocations.mkString("\n"));
 
-    val f = if (f1.exists()) { f1; } else { f2; }
+    val f = fileExistence.toList(0);
 
     val entryElem = scala.xml.XML.loadFile(f);
 
@@ -182,6 +186,10 @@ object BedServiceStatementConverter {
     if(BEDImpact.GAIN.equals(vpEvidence.getRelationInfo().getImpact())){
       normalStmtBuilder.addField(IS_NEGATIVE, "true");
     }
+
+    //according to specs the normal statements should contain the same eco and references as the VP
+    normalStmtBuilder.addField(EVIDENCE_CODE, vpEvidence.getEvidenceCode());
+    normalStmtBuilder.addField(REFERENCE_PUBMED, vpEvidence.getReferences.mkString(","));
   
     normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();

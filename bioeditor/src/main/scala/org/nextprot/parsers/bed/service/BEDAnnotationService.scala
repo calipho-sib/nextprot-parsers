@@ -69,9 +69,10 @@ object BEDAnnotationService {
       val _termXML = (xmlA \ "object" \ "term");
       val accession = (_termXML \ "@accession").text;
       val category = (_termXML \ "@category").text;
+      val subCategory = (_termXML \ "@subCategory").text;
       val cvName = (_termXML \ "cvName").text;
 
-      val _objectTerm = new BEDCV(accession, category, cvName);
+      val _objectTerm = new BEDCV(accession, category, subCategory, cvName);
       val _bioObject = ((xmlA \ "object" \ "molecularEntityRef").text.split("-")).head //TODO Sprint (interactions) 2 just ignore variants and ignore phosphos https://calipho.isb-sib.ch/wiki/display/cal/Interactions+Specifications
 
       var break = false;

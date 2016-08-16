@@ -6,7 +6,6 @@ import org.nextprot.parsers.bed.commons.NXCategory
 import org.nextprot.parsers.bed.commons.NXCategory._
 import org.nextprot.parsers.bed.commons.NXTerminology
 import org.nextprot.parsers.bed.commons.NXTerminology._
-import org.nextprot.parsers.bed.service.OntologyService
 import org.nextprot.parsers.bed.commons.BEDUtils
 import org.nextprot.parsers.bed.commons.BEDUtils.RelationInfo
 
@@ -89,11 +88,11 @@ case class BEDEvidence(
   def getNXCategory(): NXCategory.Value = {
 
     if (_bedObjectCvTerm.category.equals("Gene Ontology")) {
-      val subcategory = OntologyService.getGoSubCategoryFromAccession(_bedObjectCvTerm.accession);
+      val subcategory = _bedObjectCvTerm.subCategory;
       subcategory match {
-        case GoMolecularFunctionCv.name => GoMolecularFunction;
-        case GoBiologicalProcessCv.name => GoBiologicalProcess;
-        case GoCellularComponentCv.name => GoCellularComponent;
+        case "Gene Ontology molecular function" => GoMolecularFunction;
+        case "Gene Ontology biological process" => GoBiologicalProcess;
+        case "Gene Ontology cellular component" => GoCellularComponent;
         case _ => throw new Exception("not expecting category " + subcategory + _bedObjectCvTerm);
       }
     } else {
@@ -121,11 +120,11 @@ case class BEDEvidence(
   def getNXTerminology(): NXTerminology.Value = {
 
     if (_bedObjectCvTerm.category.equals("Gene Ontology")) {
-      val subcategory = OntologyService.getGoSubCategoryFromAccession(_bedObjectCvTerm.accession);
+      val subcategory = _bedObjectCvTerm.subCategory;
       subcategory match {
-        case GoMolecularFunctionCv.name => GoMolecularFunctionCv;
-        case GoBiologicalProcessCv.name => GoBiologicalProcessCv;
-        case GoCellularComponentCv.name => GoCellularComponentCv;
+        case "Gene Ontology molecular function" => GoMolecularFunctionCv;
+        case "Gene Ontology biological process" => GoBiologicalProcessCv;
+        case "Gene Ontology cellular component" => GoCellularComponentCv;
         case _ => throw new Exception("not expecting terminology " + subcategory);
       }
     } else {

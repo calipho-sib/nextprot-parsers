@@ -17,7 +17,7 @@ object LocalLoaderApp extends App {
 
   val statements = scala.collection.mutable.Set[Statement]();
 
-  BedServiceStatementConverter.setProxyDir(location);
+  BedServiceStatementConverter.addProxyDir(location);
   BEDConstants.GENE_LIST.foreach { g =>
 
     val statementsForGene = BedServiceStatementConverter.convert(g);
