@@ -200,6 +200,7 @@ object BedServiceStatementConverter {
     statementBuilder.addField(ENTRY_ACCESSION, entryAccession)
       .addField(GENE_NAME, geneName.toUpperCase())
       .addField(ENTRY_ACCESSION, entryAccession.toUpperCase())
+      .addField(ASSIGMENT_METHOD, "curated")
       .addField(ASSIGNED_BY, "NextProt")
       .addField(RESOURCE_TYPE, "publication")
       
