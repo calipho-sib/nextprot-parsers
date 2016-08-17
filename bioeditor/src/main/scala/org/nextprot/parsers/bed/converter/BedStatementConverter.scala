@@ -199,7 +199,10 @@ object BedServiceStatementConverter {
   def addEntryInfo(geneName: String, entryAccession: String, statementBuilder: StatementBuilder) = {
     statementBuilder.addField(ENTRY_ACCESSION, entryAccession)
       .addField(GENE_NAME, geneName.toUpperCase())
-      .addField(ENTRY_ACCESSION, entryAccession.toUpperCase()); 
-   }
+      .addField(ENTRY_ACCESSION, entryAccession.toUpperCase())
+      .addField(ASSIGNED_BY, "NextProt")
+      .addField(RESOURCE_TYPE, "publication")
+      
+  }
 
 }
