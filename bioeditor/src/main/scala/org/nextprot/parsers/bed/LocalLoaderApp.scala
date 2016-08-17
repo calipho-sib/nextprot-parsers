@@ -5,10 +5,10 @@ import java.lang.System.currentTimeMillis
 import scala.collection.JavaConversions.seqAsJavaList
 
 import org.nextprot.commons.statements.Statement
-import org.nextprot.commons.statements.service.impl.OracleStatementLoaderServiceImpl
 import org.nextprot.parsers.bed.converter.BedServiceStatementConverter
 import java.util.HashSet
 import org.nextprot.commons.statements.constants.NextProtSource
+import org.nextprot.commons.statements.service.impl.JDBCStatementLoaderServiceImpl
 
 object LocalLoaderApp extends App {
 
@@ -26,7 +26,7 @@ object LocalLoaderApp extends App {
     
   }
 
-  val statementLoaderService = new OracleStatementLoaderServiceImpl();
+  val statementLoaderService = new JDBCStatementLoaderServiceImpl();
   val beforeLoad = currentTimeMillis();
 
   statementLoaderService.loadRawStatementsForSource(new HashSet(statements.toList), NextProtSource.BioEditor);
