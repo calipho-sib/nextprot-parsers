@@ -87,10 +87,6 @@ case class BEDEvidence(
     return _bedObjectCvTerm.cvName;
   }
 
-  def isBinaryInteraction(): Boolean = {
-    return NXCategory.BinaryInteraction.equals(getNXCategory());
-  }
-  
   def getNXCategory(): NXCategory.Value = {
 
     if (_bedObjectCvTerm.category.equals("Gene Ontology")) {
@@ -164,6 +160,11 @@ case class BEDEvidence(
     return _relation.toLowerCase().contains("binding");
   }
 
+  def isBinaryInteraction(): Boolean = {
+    return (_relation.toLowerCase().contains("binding") && "protein".equals(_bioObjectType));
+  }
+
+    
   def isGO(): Boolean = {
     return _bedObjectCvTerm.category.equals("Gene Ontology");
   }
