@@ -14,7 +14,6 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
 
   it should "return more than 1000 statements for brca1" in {
 
-    val statements = BedServiceStatementConverter.convert("brca1");
     assert(statements.length > 1000)
 
     val noImpactStatements = statements.filter { s => "no impact".equals(s.getValue(StatementField.ANNOT_CV_TERM_NAME)); }.toList
@@ -23,6 +22,19 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
     println(noImpactStatements(1).getValue(StatementField.ANNOT_DESCRIPTION));
     assert(noImpactStatements(1).getValue(StatementField.ANNOT_DESCRIPTION).startsWith("has no impact on"));
 
+  }
+  
+  
+   it should "return description with binding with the gene name" in {
+
+    assert(statements.length > 1000)
+
+    val impactsOnBinding = statements.filter (s => if(s.getValue(StatementField.ANNOT_DESCRIPTION) != null) s.getValue(StatementField.ANNOT_DESCRIPTION).contains("binding to") else false)
+    .map(_.getValue(StatementField.ANNOT_DESCRIPTION)).toList
+
+    //The description should not contain the accession, but the gene name instead
+    assert(impactsOnBinding.filter(_.contains("NX_")).size === 0)
+    
   }
 
   it should "generate correctly the description" in {
