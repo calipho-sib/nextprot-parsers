@@ -189,7 +189,7 @@ object BedServiceStatementConverter {
 
     //according to specs the normal statements should contain the same eco and references as the VP
     normalStmtBuilder.addField(EVIDENCE_CODE, vpEvidence.getEvidenceCode());
-    normalStmtBuilder.addField(REFERENCE_PUBMED, vpEvidence.getReferences.mkString(","));
+    normalStmtBuilder.addField(REFERENCE_PUBMED, vpEvidence.getPubmedId());
   
     normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();
