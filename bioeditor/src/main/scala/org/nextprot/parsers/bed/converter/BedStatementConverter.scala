@@ -57,7 +57,7 @@ object BedServiceStatementConverter {
     val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
-      filter(e => ((e.isGO || e.isInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative));
+      filter(e => ((e.isGO || e.isBinaryInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative));
 
     vpGoEvidences.foreach(vpgoe => {
 
@@ -151,7 +151,7 @@ object BedServiceStatementConverter {
     //Add subject and object
     vpStmtBuilder.addSubjects(subjectVDS)
     
-      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "modification-effect")
+      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype")
       .addCvTerm(evidence.getRelationInfo.getImpact().accession, evidence.getRelationInfo.getImpact().name, "modification-effect-cv")
       .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
       .addObject(normalStatement)

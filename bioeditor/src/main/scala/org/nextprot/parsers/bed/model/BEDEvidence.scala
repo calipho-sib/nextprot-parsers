@@ -8,6 +8,8 @@ import org.nextprot.parsers.bed.commons.NXTerminology
 import org.nextprot.parsers.bed.commons.NXTerminology._
 import org.nextprot.parsers.bed.commons.BEDUtils
 import org.nextprot.parsers.bed.commons.BEDUtils.RelationInfo
+import org.nextprot.parsers.bed.BEDConstants
+import org.nextprot.parsers.bed.service.GeneNameService
 
 case class BEDEvidence(
   val _annotationAccession: String,
@@ -85,6 +87,10 @@ case class BEDEvidence(
     return _bedObjectCvTerm.cvName;
   }
 
+  def isBinaryInteraction(): Boolean = {
+    return NXCategory.BinaryInteraction.equals(getNXCategory());
+  }
+  
   def getNXCategory(): NXCategory.Value = {
 
     if (_bedObjectCvTerm.category.equals("Gene Ontology")) {
@@ -113,6 +119,9 @@ case class BEDEvidence(
 
   def getNXBioObject(): String = {
     if (getRelationInfo.getBioObject) {
+      if(_bioObjectType.equals("protein")){
+          GeneNameService.getNXAccessionForGeneName(_bioObject);
+      }
       return _bioObject;
     } else return "";
   }
