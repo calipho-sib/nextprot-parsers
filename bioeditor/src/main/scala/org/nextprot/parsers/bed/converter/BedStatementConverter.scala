@@ -151,7 +151,7 @@ object BedServiceStatementConverter {
     //Add subject and object
     vpStmtBuilder.addSubjects(subjectVDS)
     
-      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotype")
+      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotypic-variation")
       .addCvTerm(evidence.getRelationInfo.getImpact().accession, evidence.getRelationInfo.getImpact().name, "modification-effect-cv")
       .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
       .addObject(normalStatement)

@@ -24,9 +24,9 @@ public class DescriptionGenerator {
         }else  if(category.equals("mammalian-phenotype")) {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         } else if(category.equals("binary-interaction")) {
-        	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION);
+        	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_NAME);
         }else  if(category.equals("small-molecule-interaction")) {
-        	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION);
+        	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_NAME);
         }else throw new RuntimeException("Category " + category + " not defined");
 		
 	}
