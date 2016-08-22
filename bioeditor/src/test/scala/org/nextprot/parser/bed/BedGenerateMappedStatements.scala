@@ -49,4 +49,13 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
     
   }
 
+    it should "retrieve binary interactions only with neXtProt entries" in {
+      val ss = statements.filter( _.getValue(StatementField.ANNOTATION_CATEGORY) == "binary-interaction").map(_.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION)).distinct;
+      assert(!ss.isEmpty);
+      ss.foreach { s => 
+        assert(s.startsWith("NX_"))
+      };
+  }
+  
+
 }

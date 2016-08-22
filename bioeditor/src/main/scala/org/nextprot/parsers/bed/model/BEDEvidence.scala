@@ -9,7 +9,7 @@ import org.nextprot.parsers.bed.commons.NXTerminology._
 import org.nextprot.parsers.bed.commons.BEDUtils
 import org.nextprot.parsers.bed.commons.BEDUtils.RelationInfo
 import org.nextprot.parsers.bed.BEDConstants
-import org.nextprot.parsers.bed.service.GeneNameService
+import org.nextprot.parsers.bed.service.GeneNameServiceCached
 
 case class BEDEvidence(
   val _annotationAccession: String,
@@ -120,7 +120,7 @@ case class BEDEvidence(
   def getNXBioObject(): String = {
     if (getRelationInfo.getBioObject) {
       if(_bioObjectType.equals("protein")){
-          GeneNameService.getNXAccessionForGeneName(_bioObject);
+          return GeneNameServiceCached.getNXAccessionForGeneName(_bioObject);
       }
       return _bioObject;
     } else return "";

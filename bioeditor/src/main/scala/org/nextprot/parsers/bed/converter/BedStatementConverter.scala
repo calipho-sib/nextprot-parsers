@@ -176,7 +176,8 @@ object BedServiceStatementConverter {
 
     normalStmtBuilder.addField(ANNOTATION_CATEGORY, vpEvidence.getNXCategory().name)
       .addCvTerm(vpEvidence._bedObjectCvTerm.accession, vpEvidence._bedObjectCvTerm.cvName, vpEvidence._bedObjectCvTerm.category) //TODO rename category to terminology...
-      .addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence._bioObject)
+      .addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence.getNXBioObject)
+      .addField(BIOLOGICAL_OBJECT_NAME, vpEvidence._bioObject)
       .addField(BIOLOGICAL_OBJECT_TYPE, vpEvidence._bioObjectType)
 
       //DO NOT ADD accession because otherwise it creates N normal annotations  normalStatement.setAnnot_source_accession(evidence._annotationAccession);
@@ -201,7 +202,7 @@ object BedServiceStatementConverter {
       .addField(GENE_NAME, geneName.toUpperCase())
       .addField(ENTRY_ACCESSION, entryAccession.toUpperCase())
       .addField(ASSIGMENT_METHOD, "curated")
-      .addField(ASSIGNED_BY, "NextProt")
+      .addField(ASSIGNED_BY, "neXtProt")
       .addField(RESOURCE_TYPE, "publication")
       
   }
