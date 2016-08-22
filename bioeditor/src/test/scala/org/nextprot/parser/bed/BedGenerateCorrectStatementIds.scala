@@ -6,7 +6,7 @@ import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 
 class BedGenerateCorrectStatementIds extends FlatSpec with Matchers {
-
+/*
   BedServiceStatementConverter.addProxyDir("/Users/dteixeira/Documents/bed/");
   val msh2Statements = BedServiceStatementConverter.convert("msh2");
   val msh6Statements = BedServiceStatementConverter.convert("msh6");
@@ -18,7 +18,7 @@ class BedGenerateCorrectStatementIds extends FlatSpec with Matchers {
     
     assert(st2.intersect(st6).isEmpty);
     
-  }
+  }*/
 
   
 
