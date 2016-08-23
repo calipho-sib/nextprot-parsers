@@ -164,7 +164,7 @@ object BedServiceStatementConverter {
       .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
       .addField(REFERENCE_PUBMED, evidence.getPubmedId)
       .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
-      .addField(EVIDENCE_NOTE, evidence.getEvidenceNote())
+      .addField(EVIDENCE_NOTE, evidence.getEvidenceNote)
       
     return vpStmtBuilder.build();
 

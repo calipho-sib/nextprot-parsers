@@ -42,7 +42,7 @@ object BEDAnnotationService {
       val objectProteinOriginXml = (e \\ "proteinOrigin").filter { x => !((x \ "proteinRef").text).equalsIgnoreCase(currentGene) }
       val objectProteinOriginSpecie = (objectProteinOriginXml \ "species" \ "cvName").text; 
 
-      val ecos = (e \\ "eco").map { e => ((e \ "@accession").text , (e \ "cvName").text)}.toList;
+      val ecoString = (e \\ "eco").map { e => (/*(e \ "@accession").text + "=" +*/ e \ "cvName").text}.mkString(", ");
       
       val references = referencesXml.map(r => {
         ((r \ "@database").text, (r \ "@accession").text)
@@ -52,7 +52,7 @@ object BEDAnnotationService {
       new BEDEvidence(
           _annotationAccession, _subject, _relation, _objectTerm,
           _bioObject, _bioObjectType, intensity, isNegative, quality, 
-          subjectProteinOriginSpecie, objectProteinOriginSpecie, ecos,
+          subjectProteinOriginSpecie, objectProteinOriginSpecie, ecoString,
           allelsVD, allelsMGI, allelsTXT, references);
     }).toList;
   }

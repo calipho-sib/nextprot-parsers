@@ -23,7 +23,7 @@ case class BEDEvidence(
   val _quality: String,
   val subjectProteinOrigin: String,
   val objectProteinOrigin: String,
-  val ecos: List[(String, String)],
+  val ecoString: String,
   val vdAllels: List[String],
   val mgiAllels: List[String],
   val txtAllels: List[String],
@@ -190,12 +190,9 @@ case class BEDEvidence(
   }
 
   def getEvidenceNote(): String = {
-    return "Other ECOS used in this experiment : " + ecos.mkString(",") + "\n"
+    return "Additional experimental evidence:" + ecoString + "\n"
   }
-    
-  def getEvidenceProperties(): String = {
-    return ecos.mkString(",");
-  }
+   
 
   def getPubmedId(): String = {
     return references.filter(_._1.equals("PubMed")).map(_._2).toList.mkString(",")
