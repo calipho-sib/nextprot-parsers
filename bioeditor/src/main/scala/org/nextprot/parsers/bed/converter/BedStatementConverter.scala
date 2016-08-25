@@ -23,8 +23,8 @@ object BedServiceStatementConverter {
   // cp /Volumes/common/Calipho/navmutpredict/xml/*.xml ~/Documents/bed/
 
   val proxyLocations = scala.collection.mutable.SortedSet[String]();
-  proxyLocations.add("/share/sib/common/Calipho/caviar/xml/");
-  proxyLocations.add("/share/sib/common/Calipho/navmutpredict/xml/");
+  proxyLocations.add("/share/sib/common/Calipho/bed-data/2016-08-22/");
+  //proxyLocations.add("/share/sib/common/Calipho/navmutpredict/xml/");
   
   val load = true;
 
@@ -126,6 +126,35 @@ object BedServiceStatementConverter {
         vdStmtBuilder.addQuality(QualityQualifier.GOLD);
         vdStmtBuilder.addField(EVIDENCE_CODE, variant.getEcoCode);
 
+        //https://issues.isb-sib.ch/browse/BIOEDITOR-471
+        if(variant.getNextprotAnnotationCategory.equals("mutagenesis")){
+
+          if(variant.identifierAccession != null || variant.identifierAccession.isEmpty()){
+
+            vdStmtBuilder.addField(REFERENCE_ACCESSION, variant.identifierAccession);
+            vdStmtBuilder.addField(REFERENCE_DATABASE, variant.identifierDatabase);
+
+          
+          }else {
+            
+            vdStmtBuilder.addField(REFERENCE_ACCESSION, evidence.getPubmedId());
+            vdStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
+
+          }
+          
+        }else if(variant.getNextprotAnnotationCategory.equals("variant")){
+          
+          
+          if(variant.identifierAccession == null || variant.identifierAccession.isEmpty()) {
+            vdStmtBuilder.addField(DEBUG_NOTE, "Publication not found for " + variant.variantAccession);
+          }else {
+            vdStmtBuilder.addField(REFERENCE_ACCESSION, variant.identifierAccession);
+            vdStmtBuilder.addField(REFERENCE_DATABASE, variant.identifierDatabase);
+          }
+          
+        }else throw new RuntimeException("Variant " + variant.getNextprotAnnotationCategory + " is not expected at this point");
+        
+
         vdStmtBuilder.addDebugNote(note);
 
         vdStmtBuilder.build();
@@ -162,7 +191,8 @@ object BedServiceStatementConverter {
       .addField(ANNOTATION_SUBJECT_SPECIES, evidence.subjectProteinOrigin) //TODO should find out which one is which
       .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin)//TODO should find out which one is which
       .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
-      .addField(REFERENCE_PUBMED, evidence.getPubmedId)
+      .addField(REFERENCE_ACCESSION, "PubMed")
+      .addField(REFERENCE_DATABASE, evidence.getPubmedId())
       .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
       .addField(EVIDENCE_NOTE, evidence.getEvidenceNote)
       
@@ -190,7 +220,9 @@ object BedServiceStatementConverter {
 
     //according to specs the normal statements should contain the same eco and references as the VP
     normalStmtBuilder.addField(EVIDENCE_CODE, vpEvidence.getEvidenceCode());
-    normalStmtBuilder.addField(REFERENCE_PUBMED, vpEvidence.getPubmedId());
+
+    normalStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
+    normalStmtBuilder.addField(REFERENCE_DATABASE, vpEvidence.getPubmedId());
   
     normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();
@@ -202,7 +234,7 @@ object BedServiceStatementConverter {
       .addField(GENE_NAME, geneName.toUpperCase())
       .addField(ENTRY_ACCESSION, entryAccession.toUpperCase())
       .addField(ASSIGMENT_METHOD, "curated")
-      .addField(ASSIGNED_BY, "neXtProt")
+      .addField(ASSIGNED_BY, "NextProt")
       .addField(RESOURCE_TYPE, "publication")
       
   }

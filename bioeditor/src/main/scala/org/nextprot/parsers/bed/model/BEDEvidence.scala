@@ -197,5 +197,9 @@ case class BEDEvidence(
   def getPubmedId(): String = {
     return references.filter(_._1.equals("PubMed")).map(_._2).toList.mkString(",")
   }
+  
+  def getCrossRef(): String = {
+    return references.filter(!_._1.equals("PubMed")).map(_._2).toList.mkString(",")
+  }
 
 }
