@@ -191,8 +191,8 @@ object BedServiceStatementConverter {
       .addField(ANNOTATION_SUBJECT_SPECIES, evidence.subjectProteinOrigin) //TODO should find out which one is which
       .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin)//TODO should find out which one is which
       .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
-      .addField(REFERENCE_ACCESSION, "PubMed")
-      .addField(REFERENCE_DATABASE, evidence.getPubmedId())
+      .addField(REFERENCE_ACCESSION, evidence.getPubmedId())
+      .addField(REFERENCE_DATABASE, "PubMed")
       .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
       .addField(EVIDENCE_NOTE, evidence.getEvidenceNote)
       
