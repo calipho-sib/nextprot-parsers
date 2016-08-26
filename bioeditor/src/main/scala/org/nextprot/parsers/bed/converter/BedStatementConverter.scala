@@ -32,11 +32,26 @@ object BedServiceStatementConverter {
     proxyLocations.add(directory);
   }
 
-  def convertAll(): List[Statement] = {
-    BEDConstants.GENE_LIST.flatMap { convert(_) }.toSet.toList;
+  def convertAll(): (List[Statement], String) = {
+
+    val debugNotes = new StringBuffer(); 
+
+    val statements = BEDConstants.GENE_LIST.flatMap { g => 
+
+      val result = convert(g);
+      val statements = result._1;
+      debugNotes.append(result._2);
+      
+      statements
+      
+    }.toSet.toList;
+    
+    (statements, debugNotes.toString());
   }
 
-  def convert(geneName: String): List[Statement] = {
+  def convert(geneName: String): (List[Statement], String) = {
+
+    val debugNotes = new StringBuffer(); 
 
     val statements = scala.collection.mutable.Set[Statement]();
 
@@ -61,7 +76,7 @@ object BedServiceStatementConverter {
 
     vpGoEvidences.foreach(vpgoe => {
 
-      val subjectVariants = getVariantDefinitionStatement(entryElem, vpgoe, geneName, nextprotAccession);
+      val subjectVariants = getVariantDefinitionStatement(debugNotes, entryElem, vpgoe, geneName, nextprotAccession);
 
       statements ++= subjectVariants;
       
@@ -71,11 +86,11 @@ object BedServiceStatementConverter {
       
     });
 
-    return statements.toList;
+    return (statements.toList, debugNotes.toString());
 
   }
 
-  def getVariantDefinitionStatement(entryXML: NodeSeq, evidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
+  def getVariantDefinitionStatement(debugNotes : StringBuffer, entryXML: NodeSeq, evidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
 
     val subjectsWithNote = evidence.getSubjectAllelsWithNote;
 
@@ -87,20 +102,21 @@ object BedServiceStatementConverter {
 
       //May be from a different genes in case of multiple mutants
       val vdStmtBuilder = StatementBuilder.createNew();
-      vdStmtBuilder.addDebugNote(note)
+      addDebugNote(debugNotes, note)
       if (variant == null) {
         val newNote = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + evidence._annotationAccession;
-        vdStmtBuilder.addDebugNote(newNote).build();
+        addDebugNote(debugNotes, newNote)
+        null;
       } else {
 
-        vdStmtBuilder.addDebugNote(note);
+        addDebugNote(debugNotes, note);
 
         val variantIsoAccession = variant.variantSequenceVariationPositionOnIsoform;
         val variantEntryAccession = if (variantIsoAccession != null && variantIsoAccession.length() > 3) {
           variantIsoAccession.substring(0, variantIsoAccession.indexOf("-"));
         } else {
           val note = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + evidence._annotationAccession;
-          vdStmtBuilder.addDebugNote(note);
+          addDebugNote(debugNotes, note);
           null;
         };
 
@@ -108,7 +124,7 @@ object BedServiceStatementConverter {
           variant.variantUniqueName.substring(0, variant.variantUniqueName.indexOf("-"))
         } else {
           val warning = "Yooo problems occured with " + variant.identifierAccession + " when looking for evidence " + evidence._annotationAccession;
-          vdStmtBuilder.addDebugNote(warning);
+          addDebugNote(debugNotes, warning);
           null;
         };
 
@@ -146,7 +162,7 @@ object BedServiceStatementConverter {
           
           
           if(variant.identifierAccession == null || variant.identifierAccession.isEmpty()) {
-            vdStmtBuilder.addField(DEBUG_NOTE, "Publication not found for " + variant.variantAccession);
+            addDebugNote(debugNotes, "Publication not found for " + variant.variantAccession);
           }else {
             vdStmtBuilder.addField(REFERENCE_ACCESSION, variant.identifierAccession);
             vdStmtBuilder.addField(REFERENCE_DATABASE, variant.identifierDatabase);
@@ -155,7 +171,7 @@ object BedServiceStatementConverter {
         }else throw new RuntimeException("Variant " + variant.getNextprotAnnotationCategory + " is not expected at this point");
         
 
-        vdStmtBuilder.addDebugNote(note);
+        addDebugNote(debugNotes, note);
 
         vdStmtBuilder.build();
 
@@ -238,5 +254,13 @@ object BedServiceStatementConverter {
       .addField(RESOURCE_TYPE, "publication")
       
   }
+
+   def addDebugNote(debugNotes : StringBuffer, note: String) = {
+		if (note != null && note.length() > 0) {
+		  println(note)
+		  debugNotes.append(note + "\n");
+		}
+	}
+
 
 }

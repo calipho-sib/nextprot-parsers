@@ -20,7 +20,7 @@ object LocalLoaderApp extends App {
   BedServiceStatementConverter.addProxyDir(location);
   BEDConstants.GENE_LIST.foreach { g =>
 
-    val statementsForGene = BedServiceStatementConverter.convert(g);
+    val statementsForGene = BedServiceStatementConverter.convert(g)._1;
     println("Found " + statementsForGene.size + " for gene " + "scn11a");
     statements ++= statementsForGene;
     

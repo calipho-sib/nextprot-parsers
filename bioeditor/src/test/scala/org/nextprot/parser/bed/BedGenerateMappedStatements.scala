@@ -10,7 +10,7 @@ class BedGenerateMappedStatements extends FlatSpec with Matchers {
   //cp /Volumes/common/Calipho/navmutpredict/xml/*.xml ~/Documents/bed/
   //cp /Volumes/common/Calipho/caviar/xml/*.xml ~/Documents/bed/
   BedServiceStatementConverter.addProxyDir("/Users/dteixeira/Documents/bed/");
-  val statements = BedServiceStatementConverter.convert("brca1");
+  val statements = BedServiceStatementConverter.convert("brca1")._1;
 
   it should "return more than 1000 statements for brca1" in {
 
