@@ -136,8 +136,8 @@ object BedServiceStatementConverter {
         vdStmtBuilder.addField(ANNOTATION_NAME, subject);
 
         vdStmtBuilder.addVariantInfo(variant.getNextprotAnnotationCategory, variant.variantSequenceVariationPositionFirst, variant.variantSequenceVariationPositionLast, variant.variantSequenceVariationOrigin, variant.variantSequenceVariationVariation);
-        vdStmtBuilder.addSourceInfo(variant.identifierAccession, "BioEditor");
-
+        vdStmtBuilder.addSourceInfo("N/A", "BioEditor");
+        
         //According to specs qualtiy of the variant must always be GOLD https://issues.isb-sib.ch/browse/BIOEDITOR-399?jql=text%20~%20%22quality%20bed%22
         vdStmtBuilder.addQuality(QualityQualifier.GOLD);
         vdStmtBuilder.addField(EVIDENCE_CODE, variant.getEcoCode);
@@ -206,11 +206,11 @@ object BedServiceStatementConverter {
       .addField(EVIDENCE_INTENSITY, evidence.intensity)
       .addField(ANNOTATION_SUBJECT_SPECIES, evidence.subjectProteinOrigin) //TODO should find out which one is which
       .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin)//TODO should find out which one is which
-      .addField(ANNOT_SOURCE_ACCESSION, evidence._annotationAccession)
       .addField(REFERENCE_ACCESSION, evidence.getPubmedId())
       .addField(REFERENCE_DATABASE, "PubMed")
       .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
       .addField(EVIDENCE_NOTE, evidence.getEvidenceNote)
+      .addSourceInfo("N/A", "BioEditor");
       
     return vpStmtBuilder.build();
 
@@ -221,14 +221,16 @@ object BedServiceStatementConverter {
     addEntryInfo(geneName, entryAccession, normalStmtBuilder);
 
     normalStmtBuilder.addField(ANNOTATION_CATEGORY, vpEvidence.getNXCategory().name)
-      .addCvTerm(vpEvidence._bedObjectCvTerm.accession, vpEvidence._bedObjectCvTerm.cvName, vpEvidence._bedObjectCvTerm.category) //TODO rename category to terminology...
       .addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence.getNXBioObject)
       .addField(BIOLOGICAL_OBJECT_NAME, vpEvidence._bioObject)
       .addField(BIOLOGICAL_OBJECT_TYPE, vpEvidence._bioObjectType)
 
-      //DO NOT ADD accession because otherwise it creates N normal annotations  normalStatement.setAnnot_source_accession(evidence._annotationAccession);
-      //TODO To be checked
-      .addSourceInfo("N/A", "BioEditor")
+    if(vpEvidence._bedObjectCvTerm.accession != null && (!vpEvidence._bedObjectCvTerm.accession.isEmpty())){
+      normalStmtBuilder.addCvTerm(vpEvidence._bedObjectCvTerm.accession, vpEvidence._bedObjectCvTerm.cvName, vpEvidence._bedObjectCvTerm.category) //TODO rename category to terminology...
+    }
+
+    //DO NOT ADD accession because otherwise it creates N normal annotations  normalStatement.setAnnot_source_accession(evidence._annotationAccession);
+    normalStmtBuilder.addSourceInfo("N/A", "BioEditor")
 
     if(BEDImpact.GAIN.equals(vpEvidence.getRelationInfo().getImpact())){
       normalStmtBuilder.addField(IS_NEGATIVE, "true");
@@ -252,7 +254,6 @@ object BedServiceStatementConverter {
       .addField(ASSIGMENT_METHOD, "curated")
       .addField(ASSIGNED_BY, "NextProt")
       .addField(RESOURCE_TYPE, "publication")
-      
   }
 
    def addDebugNote(debugNotes : StringBuffer, note: String) = {
