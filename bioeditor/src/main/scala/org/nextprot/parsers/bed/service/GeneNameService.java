@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class GeneNameService {
 
-	private static final String endpoint = "http://bed-api.nextprot.org/master-identifiers/gene/";
+	private static final String endpoint = "http://dev-api.nextprot.org/master-identifiers/gene/";
 
 	public static String getNXAccessionForGeneName(String geneName) throws Exception {
 
