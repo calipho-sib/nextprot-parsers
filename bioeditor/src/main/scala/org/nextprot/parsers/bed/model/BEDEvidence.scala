@@ -119,7 +119,7 @@ case class BEDEvidence(
           return GeneNameServiceCached.getNXAccessionForGeneName(_bioObject);
       }
       return _bioObject;
-    } else return "";
+    } else return null;
   }
 
   def getNXTerminology(): NXTerminology.Value = {

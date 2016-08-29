@@ -220,10 +220,13 @@ object BedServiceStatementConverter {
     val normalStmtBuilder = StatementBuilder.createNew();
     addEntryInfo(geneName, entryAccession, normalStmtBuilder);
 
-    normalStmtBuilder.addField(ANNOTATION_CATEGORY, vpEvidence.getNXCategory().name)
-      .addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence.getNXBioObject)
+    normalStmtBuilder.addField(ANNOTATION_CATEGORY, vpEvidence.getNXCategory().name);
+    
+    if(vpEvidence.getNXBioObject() != null){
+      normalStmtBuilder.addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence.getNXBioObject)
       .addField(BIOLOGICAL_OBJECT_NAME, vpEvidence._bioObject)
       .addField(BIOLOGICAL_OBJECT_TYPE, vpEvidence._bioObjectType)
+    }
 
     if(vpEvidence._bedObjectCvTerm.accession != null && (!vpEvidence._bedObjectCvTerm.accession.isEmpty())){
       normalStmtBuilder.addCvTerm(vpEvidence._bedObjectCvTerm.accession, vpEvidence._bedObjectCvTerm.cvName, vpEvidence._bedObjectCvTerm.category) //TODO rename category to terminology...
