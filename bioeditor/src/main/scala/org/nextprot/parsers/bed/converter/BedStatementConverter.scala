@@ -243,7 +243,7 @@ object BedServiceStatementConverter {
     normalStmtBuilder.addField(EVIDENCE_CODE, vpEvidence.getEvidenceCode());
 
     normalStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
-    normalStmtBuilder.addField(REFERENCE_DATABASE, vpEvidence.getPubmedId());
+    normalStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getPubmedId());
   
     normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();
