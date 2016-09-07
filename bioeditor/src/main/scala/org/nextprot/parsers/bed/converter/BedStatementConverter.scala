@@ -145,7 +145,7 @@ object BedServiceStatementConverter {
         //https://issues.isb-sib.ch/browse/BIOEDITOR-471
         if(variant.getNextprotAnnotationCategory.equals("mutagenesis")){
 
-          if(variant.identifierAccession != null || variant.identifierAccession.isEmpty()){
+          if(variant.identifierAccession != null && !variant.identifierAccession.isEmpty()){
 
             vdStmtBuilder.addField(REFERENCE_ACCESSION, variant.identifierAccession);
             vdStmtBuilder.addField(REFERENCE_DATABASE, variant.identifierDatabase);
@@ -157,7 +157,7 @@ object BedServiceStatementConverter {
             vdStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
 
           }
-          
+
         }else if(variant.getNextprotAnnotationCategory.equals("variant")){
           
           
