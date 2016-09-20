@@ -1,15 +1,15 @@
 package org.nextprot.parsers.bed.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 public class GeneNameService {
 
-	private static final String endpoint = "http://dev-api.nextprot.org/master-identifiers/gene/";
+	private static final String endpoint = "http://dev-api.nextprot.org/entry-accessions/gene/";
 
 	public static String getNXAccessionForGeneName(String geneName) throws Exception {
 

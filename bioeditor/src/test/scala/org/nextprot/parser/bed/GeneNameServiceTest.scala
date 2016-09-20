@@ -1,7 +1,5 @@
 package org.nextprot.parser.bed
 
-import org.nextprot.commons.statements.StatementField
-import org.nextprot.parsers.bed.converter.BedServiceStatementConverter
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 import org.nextprot.parsers.bed.service.GeneNameService
