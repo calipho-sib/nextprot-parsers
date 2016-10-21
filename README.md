@@ -1,13 +1,16 @@
-nextprot-parsers
-================
+# neXtProt - The knowledge resource on human proteins
 
-Installation
-------------
+This is a code repository for the SIB - Swiss Institute of Bioinformatics CALIPHO group neXtProt project
+
+See: http://www.nextprot.org/
+
+# neXtProt-parsers
+
+##Installation
 
 Configure your Scala Eclipse IDE by running `st eclipse` on the modules you want to add
 
-Deployment
-----------
+##Deployment
 
 To deploy locally:
 
