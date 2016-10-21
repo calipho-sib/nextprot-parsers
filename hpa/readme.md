@@ -25,7 +25,16 @@ Multiple main classes detected, select one to run:
 Enter number:
 ```
 
-Production
+Testing
+----------
+* sbt assembly will produce a jar in target folder
+to test the jar file, one can use it like this:
+
+```shell
+java -Dfiles.directory="/scratch/ENS/G00/000" -Dfiles.expression=^ENSG.*.xml$ -Dhpa.mapping.file=HPA_Subcell_Mapping.txt -cp target/nextprot-parser-hpa.jar org.nextprot.parser.hpa.subcell.HPASubcellNXParserApp
+```
+
+Production (old doc)
 ----------
 
 ```
@@ -39,5 +48,3 @@ Publication
 -----------
 
 See ../README.md
-
-
