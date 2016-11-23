@@ -32,7 +32,7 @@ fork := true
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
 javaOptions ++= Seq(
 "-Xmx2000m",
-"-Dfiles.directory=/tmp/ENS",
+//"-Dfiles.directory=/tmp/ENS",
 "-Dfiles.directory=hpa-data",
 //"-Dfiles.expression=^ENSG.*.xml$",
 //"-Doutput.file=/tmp/hpa/output.xml",
