@@ -1,6 +1,6 @@
 package org.nextprot.parser.hpa.antibody
 
-import org.scalatest._
+
 import scala.xml.PrettyPrinter
 import java.io.File
 import java.io.FileWriter
@@ -62,6 +62,22 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
 
   }
 
+  "The HPAAntibodyNXParser " should " find IH verification value in input-antibody-2016.xml" in {
+
+    val infile = "input-antibody-2016.xml"
+    val hpaParser = new HPAAntibodyNXParser();
+    val wrapper = hpaParser.parse(hpadir +infile);
+    val prop = (wrapper.antibodyList(0).toXML \ "wrappedBean" \"identifierProperties" \ "com.genebio.nextprot.datamodel.identifier.IdentifierProperty" );
+    
+    // this value was not extracted properly in previous versions
+    val name = (prop(0) \ "cvPropertyName" \ "cvName").text
+    val value = (prop(0) \ "propertyValue").text
+    //Console.err.println("value:" + value);
+    //Console.err.println("name :" + name);
+    assert(name == "immunohistochemistry validation")
+    assert(value == "uncertain")
+  } 
+  
   "The HPAAntibodyNXParser " should "produce exactly this output for ENSG00000081181.xml" in {
 
     val hpaParser = new HPAAntibodyNXParser();

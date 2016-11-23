@@ -1,5 +1,6 @@
 <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
       <wrappedBean>
+        <qualityQualifier>GOLD</qualityQualifier>
         <identifierType>ANTIBODY</identifierType>
         <dbXref>
           <resourceType>DATABASE</resourceType>
@@ -81,6 +82,36 @@
       
       <type>expression info</type>
       <description><![CDATA[cancer:Distinct granular cytoplasmic positivity was found in most prostate cancers and in few liver cancers. Remaining malignant tissues were in general negative. ]]></description>
+      
+      <qualifierType>EXP</qualifierType>
+      <resourceAssocs>
+            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+      <resource class="source.DbXref">
+        <resourceType>DATABASE</resourceType>
+        <accession>HPA000663</accession>
+        <cvDatabase>
+          <cvName>HPA</cvName>
+        </cvDatabase>
+      </resource>
+      <evidenceCode>
+      	<cvName>ECO:0000087</cvName>
+        <cvTermCategory>ECO</cvTermCategory>
+      </evidenceCode>
+      
+      
+      
+      <isNegativeEvidence>false</isNegativeEvidence>
+      <type>SOURCE</type>
+      
+    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+          </resourceAssocs>
+    </com.genebio.nextprot.dataloader.dto.RawAnnotation><com.genebio.nextprot.dataloader.dto.RawAnnotation>
+      
+
+      <isPropagableByDefault>false</isPropagableByDefault>
+      
+      <type>expression info</type>
+      <description><![CDATA[:]]></description>
       
       <qualifierType>EXP</qualifierType>
       <resourceAssocs>

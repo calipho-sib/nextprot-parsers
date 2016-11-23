@@ -17,6 +17,9 @@ import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssoc
 import org.nextprot.parser.core.datamodel.annotation.RawAnnotation
 import org.nextprot.parser.core.constants.NXQuality.NXQuality
 import org.nextprot.parser.core.constants.EvidenceCode
+import org.nextprot.parser.hpa.HPAQuality
+import org.nextprot.parser.core.constants.NXQuality._
+import org.nextprot.parser.hpa.subcell.HPAValidation
 
 import org.nextprot.parser.hpa.HPAUtils
 
@@ -34,6 +37,7 @@ class HPAAntibodyNXParser extends NXParser {
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val antibodyElems = (entryElem \ "antibody").toList
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
+    HPAValidation.checkPreconditionsForExpr(entryElem)
     val wrappers  = 
       antibodyElems.map(antibodyElem => {
         val proplist : MutableList[AntibodyIdentifierProperty] = MutableList()
@@ -42,18 +46,23 @@ class HPAAntibodyNXParser extends NXParser {
         val dbxref = (antibodyElem \ "@id").text
         val version = (antibodyElem \ "@releaseVersion").text
         val bioSequence = new BioSequence((antibodyElem \ "antigenSequence").text, "PREST")
-        propvalue = (HPAUtils.getTissueExpressionNodeSeq(antibodyElem) \ "verification").text
+        //propvalue = (HPAUtils.getTissueExpressionNodeSeq(antibodyElem) \ "verification").text // This section has no IH data...
+        propvalue = (HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "verification").text // The 'global' validation for IH (at entryElem level)
+        //Console.err.println("verif elt: " + propvalue)
         if(propvalue != "") {proplist += new AntibodyIdentifierProperty("immunohistochemistry validation",propvalue)}
-
+        // Actually it is not a AntibodyIdentifierProperty since it can have the same value for several antibodies !!
+        
         propvalue = (antibodyElem \ "westernBlot" \ "verification").text
         if(propvalue != "") {proplist +=  new AntibodyIdentifierProperty("western blot validation",propvalue)}
         
         propvalue = (antibodyElem \ "proteinArray" \ "verification").text
         if(propvalue != "") {proplist +=  new AntibodyIdentifierProperty("protein array validation",propvalue)}
 
+        val (quality,r)=HPAQuality.getQualityForOneAntibody(entryElem, antibodyElem, "tissueExpression")
+        
         val annotations = ((antibodyElem \ "tissueExpression").map(extractAntibodyAnnotation(dbxref, _))).toList;
         val annots = new HPAAntibodyAnnotationListWrapper(_HPAaccession = dbxref, _rowAnnotations = annotations)
-        new AntibodyEntryWrapper(dbxref, version, new BioSequenceList(List(bioSequence)), new AntibodyIdentifierPropertyList(proplist.toList), annots, uniprotIds)
+        new AntibodyEntryWrapper(quality.toString(), dbxref, version, new BioSequenceList(List(bioSequence)), new AntibodyIdentifierPropertyList(proplist.toList), annots, uniprotIds)
       })
       
     new AntibodyEntryWrapperList(wrappers)

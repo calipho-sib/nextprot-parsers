@@ -7,11 +7,12 @@ import org.nextprot.parser.core.constants.NXQuality
 
 case class AntibodyEntryWrapperList(val antibodyList: List[AntibodyEntryWrapper])
 
-class AntibodyEntryWrapper(val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _uniprotIds: List[String]) {
+class AntibodyEntryWrapper(val _quality: String, val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _uniprotIds: List[String]) {
 
   def toXML =
     <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
       <wrappedBean>
+        <qualityQualifier>{_quality}</qualityQualifier>
         <identifierType>ANTIBODY</identifierType>
         <dbXref>
           <resourceType>DATABASE</resourceType>
