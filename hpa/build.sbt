@@ -13,7 +13,7 @@ name := "nextprot-parser-hpa"
 
 organization := "org.nextprot.parser.hpa"
 
-version := "0.39.0-SNAPSHOT"
+version := "0.40.0-SNAPSHOT"
 
 description := "HPA parser used for tissues subcellular locations and antibodies"
 
@@ -32,9 +32,9 @@ fork := true
 // subset of data : -Dfiles.directory=/tmp/hpa-data/ENS/G00/000/001
 javaOptions ++= Seq(
 "-Xmx2000m",
-//"-Dfiles.directory=/tmp/ENS",
+"-Dfiles.directory=/tmp/ENS",
 "-Dfiles.directory=hpa-data",
-"-Dfiles.expression=^ENSG.*.xml$",
+//"-Dfiles.expression=^ENSG.*.xml$",
 //"-Doutput.file=/tmp/hpa/output.xml",
 //"-Dfailed.file=/tmp/hpa/failed.xml",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
