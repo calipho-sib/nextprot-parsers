@@ -1,0 +1,1566 @@
+
+  <entry url="http://www.proteinatlas.org/ENSG00000267561" version="11.0">
+    <name>RP5-1052I5.2</name>
+    <identifier db="Ensembl" id="ENSG00000267561" version="69.37">
+      <xref db="Uniprot/SWISSPROT" id="Q7LGA3"/>
+    </identifier>
+    <tissueExpression technology="IH" type="APE">
+      <summary type="normal"><![CDATA[Ubiquitous cytoplasmic expression in a granular pattern. 
+Caution: Based on antibodies targeting proteins from multiple genes.]]></summary>
+      <verification type="reliability">high</verification>
+      <data>
+        <tissue status="normal">adrenal gland</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">appendix</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">appendix</tissue>
+        <cellType>lymphoid tissue</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">bone marrow</tissue>
+        <cellType>hematopoietic cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">breast</tissue>
+        <cellType>adipocytes</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">breast</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">breast</tissue>
+        <cellType>myoepithelial cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">bronchus</tissue>
+        <cellType>respiratory epithelial cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebellum</tissue>
+        <cellType>cells in granular layer</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebellum</tissue>
+        <cellType>cells in molecular layer</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebellum</tissue>
+        <cellType>Purkinje cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebral cortex</tissue>
+        <cellType>endothelial cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebral cortex</tissue>
+        <cellType>glial cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebral cortex</tissue>
+        <cellType>neuronal cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">cerebral cortex</tissue>
+        <cellType>neuropil</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">cervix, uterine</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">cervix, uterine</tissue>
+        <cellType>squamous epithelial cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">colon</tissue>
+        <cellType>endothelial cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">colon</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">colon</tissue>
+        <cellType>peripheral nerve/ganglion</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">duodenum</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">epididymis</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">esophagus</tissue>
+        <cellType>squamous epithelial cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">fallopian tube</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">gallbladder</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">heart muscle</tissue>
+        <cellType>myocytes</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">hippocampus</tissue>
+        <cellType>glial cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">hippocampus</tissue>
+        <cellType>neuronal cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">kidney</tissue>
+        <cellType>cells in glomeruli</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">kidney</tissue>
+        <cellType>cells in tubules</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">lateral ventricle</tissue>
+        <cellType>glial cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">lateral ventricle</tissue>
+        <cellType>neuronal cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">liver</tissue>
+        <cellType>bile duct cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">liver</tissue>
+        <cellType>hepatocytes</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">lung</tissue>
+        <cellType>macrophages</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">lung</tissue>
+        <cellType>pneumocytes</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">lymph node</tissue>
+        <cellType>germinal center cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">lymph node</tissue>
+        <cellType>non-germinal center cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">nasopharynx</tissue>
+        <cellType>respiratory epithelial cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">oral mucosa</tissue>
+        <cellType>squamous epithelial cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">ovary</tissue>
+        <cellType>ovarian stroma cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">pancreas</tissue>
+        <cellType>exocrine glandular cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">pancreas</tissue>
+        <cellType>islets of Langerhans</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">parathyroid gland</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">placenta</tissue>
+        <cellType>trophoblastic cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">prostate</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">rectum</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">salivary gland</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">seminal vesicle</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">skeletal muscle</tissue>
+        <cellType>myocytes</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">skin</tissue>
+        <cellType>fibroblasts</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">skin</tissue>
+        <cellType>keratinocytes</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">skin</tissue>
+        <cellType>Langerhans</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">skin</tissue>
+        <cellType>melanocytes</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">small intestine</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">smooth muscle</tissue>
+        <cellType>smooth muscle cells</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 1</tissue>
+        <cellType>adipocytes</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 1</tissue>
+        <cellType>chondrocytes</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 1</tissue>
+        <cellType>fibroblasts</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 1</tissue>
+        <cellType>peripheral nerve</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 2</tissue>
+        <cellType>adipocytes</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 2</tissue>
+        <cellType>fibroblasts</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">soft tissue 2</tissue>
+        <cellType>peripheral nerve</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">spleen</tissue>
+        <cellType>cells in red pulp</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">spleen</tissue>
+        <cellType>cells in white pulp</cellType>
+        <level type="expression">none</level>
+      </data>
+      <data>
+        <tissue status="normal">stomach, lower</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">stomach, upper</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">testis</tissue>
+        <cellType>cells in seminiferus ducts</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">testis</tissue>
+        <cellType>Leydig cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">thyroid gland</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">tonsil</tissue>
+        <cellType>germinal center cells</cellType>
+        <level type="expression">high</level>
+      </data>
+      <data>
+        <tissue status="normal">tonsil</tissue>
+        <cellType>non-germinal center cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">tonsil</tissue>
+        <cellType>squamous epithelial cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">urinary bladder</tissue>
+        <cellType>urothelial cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">uterus, post-menopause</tissue>
+        <cellType>cells in endometrial stroma</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">uterus, post-menopause</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">uterus, pre-menopause</tissue>
+        <cellType>cells in endometrial stroma</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">uterus, pre-menopause</tissue>
+        <cellType>glandular cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+      <data>
+        <tissue status="normal">vagina</tissue>
+        <cellType>squamous epithelial cells</cellType>
+        <level type="expression">low</level>
+      </data>
+      <data>
+        <tissue status="normal">vulva/anal skin</tissue>
+        <cellType>epidermal cells</cellType>
+        <level type="expression">medium</level>
+      </data>
+    </tissueExpression>
+    <subcellularLocation technology="IF" type="selected">
+      <summary><![CDATA[Staining of cytoplasm in A-431 and U-2 OS.]]></summary>
+      <verification type="validation">uncertain</verification>
+      <data>
+        <location status="main">cytoplasm</location>
+      </data>
+    </subcellularLocation>
+    <rnaExpression technology="RNAseq">
+      <summary><![CDATA[Low]]></summary>
+      <data>
+        <cellLine>U-251 MG</cellLine>
+        <level fpkm="0.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>CACO-2</cellLine>
+        <level fpkm="0.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HeLa</cellLine>
+        <level fpkm="0.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>RT-4</cellLine>
+        <level fpkm="0.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-2 OS</cellLine>
+        <level fpkm="0.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HEK 293</cellLine>
+        <level fpkm="0.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>A-549</cellLine>
+        <level fpkm="0.0" type="abundance">Not detected</level>
+      </data>
+      <data>
+        <cellLine>Hep-G2</cellLine>
+        <level fpkm="0.0" type="abundance">Not detected</level>
+      </data>
+      <data>
+        <cellLine>MCF-7</cellLine>
+        <level fpkm="0.0" type="abundance">Not detected</level>
+      </data>
+      <data>
+        <cellLine>PC-3</cellLine>
+        <level fpkm="0.0" type="abundance">Not detected</level>
+      </data>
+      <data>
+        <cellLine>A-431</cellLine>
+        <level fpkm="0.0" type="abundance">Not detected</level>
+      </data>
+    </rnaExpression>
+    <antibody id="HPA043069" releaseDate="2011-11-11" releaseVersion="9.0">
+      <antigenSequence>NQIQKLEESRSKLERAIARHEVREIEQRHTMDGPRQDATLDEEEDMVIIYNRVPKTASTSFTNIAYDLCAKNKYHVLH</antigenSequence>
+      <tissueExpression technology="IH">
+        <summary type="normal"><![CDATA[Most of the normal tissues displayed moderate to strong cytoplasmic positivity with a dot-like or granular pattern. Pneumocytes, bile ducts, glial cells and muscle cells were weakly stained or negative.]]></summary>
+        <summary type="cancer"><![CDATA[Malignant cells displayed moderate to strong cytoplasmic positivity with a dot-like or granular pattern.]]></summary>
+        <verification type="validation">uncertain</verification>
+        <data>
+          <tissue status="normal">adrenal gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">appendix</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">appendix</tissue>
+          <cellType>lymphoid tissue</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">bone marrow</tissue>
+          <cellType>hematopoietic cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">breast</tissue>
+          <cellType>adipocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">breast</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">breast</tissue>
+          <cellType>myoepithelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">bronchus</tissue>
+          <cellType>respiratory epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebellum</tissue>
+          <cellType>cells in granular layer</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebellum</tissue>
+          <cellType>cells in molecular layer</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebellum</tissue>
+          <cellType>Purkinje cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>endothelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>glial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>neuronal cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>neuropil</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cervix, uterine</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cervix, uterine</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">colon</tissue>
+          <cellType>endothelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">colon</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">colon</tissue>
+          <cellType>peripheral nerve/ganglion</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">duodenum</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">epididymis</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">esophagus</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">fallopian tube</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">gallbladder</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">heart muscle</tissue>
+          <cellType>myocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">hippocampus</tissue>
+          <cellType>glial cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">hippocampus</tissue>
+          <cellType>neuronal cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">kidney</tissue>
+          <cellType>cells in glomeruli</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">kidney</tissue>
+          <cellType>cells in tubules</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">lateral ventricle</tissue>
+          <cellType>glial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">lateral ventricle</tissue>
+          <cellType>neuronal cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">liver</tissue>
+          <cellType>bile duct cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">liver</tissue>
+          <cellType>hepatocytes</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">lung</tissue>
+          <cellType>macrophages</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">lung</tissue>
+          <cellType>pneumocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">lymph node</tissue>
+          <cellType>germinal center cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">lymph node</tissue>
+          <cellType>non-germinal center cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">nasopharynx</tissue>
+          <cellType>respiratory epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">oral mucosa</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">ovary</tissue>
+          <cellType>ovarian stroma cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">pancreas</tissue>
+          <cellType>exocrine glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">parathyroid gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">placenta</tissue>
+          <cellType>trophoblastic cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">prostate</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">rectum</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">salivary gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">seminal vesicle</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">skeletal muscle</tissue>
+          <cellType>myocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>fibroblasts</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>keratinocytes</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>Langerhans</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>melanocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">small intestine</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">smooth muscle</tissue>
+          <cellType>smooth muscle cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>adipocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>fibroblasts</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>peripheral nerve</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 2</tissue>
+          <cellType>adipocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 2</tissue>
+          <cellType>fibroblasts</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 2</tissue>
+          <cellType>peripheral nerve</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">spleen</tissue>
+          <cellType>cells in red pulp</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">spleen</tissue>
+          <cellType>cells in white pulp</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">stomach, lower</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">stomach, upper</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">testis</tissue>
+          <cellType>cells in seminiferus ducts</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">testis</tissue>
+          <cellType>Leydig cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">thyroid gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">tonsil</tissue>
+          <cellType>germinal center cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">tonsil</tissue>
+          <cellType>non-germinal center cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">tonsil</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">urinary bladder</tissue>
+          <cellType>urothelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, post-menopause</tissue>
+          <cellType>cells in endometrial stroma</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, post-menopause</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, pre-menopause</tissue>
+          <cellType>cells in endometrial stroma</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, pre-menopause</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">vagina</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">vulva/anal skin</tissue>
+          <cellType>epidermal cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">breast cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="10" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">carcinoid</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="2" type="staining">strong</level>
+          <level count="2" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">cervical cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="4" type="staining">strong</level>
+          <level count="8" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">colorectal cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="9" type="staining">strong</level>
+          <level count="2" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">endometrial cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="10" type="staining">strong</level>
+          <level count="1" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">glioma</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="4" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+          <level count="1" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">head and neck cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="1" type="staining">moderate</level>
+          <level count="2" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">liver cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="11" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">lung cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="5" type="staining">strong</level>
+          <level count="7" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">lymphoma</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="7" type="staining">moderate</level>
+          <level count="2" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">melanoma</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="5" type="staining">strong</level>
+          <level count="6" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">ovarian cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="5" type="staining">strong</level>
+          <level count="5" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">pancreatic cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="4" type="staining">strong</level>
+          <level count="5" type="staining">moderate</level>
+          <level count="1" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">prostate cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="9" type="staining">strong</level>
+          <level count="3" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">renal cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="8" type="staining">moderate</level>
+          <level count="3" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">skin cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="6" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">stomach cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="9" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">testis cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="2" type="staining">strong</level>
+          <level count="10" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">thyroid cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="1" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">urothelial cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="4" type="staining">strong</level>
+          <level count="5" type="staining">moderate</level>
+          <level count="2" type="staining">weak</level>
+        </data>
+      </tissueExpression>
+      <subcellularLocation technology="IF">
+        <verification type="validation">uncertain</verification>
+        <data>
+          <cellLine>U-251 MG</cellLine>
+          <verification type="validation">uncertain</verification>
+          <level type="intensity">negative</level>
+        </data>
+        <data>
+          <cellLine>A-431</cellLine>
+          <verification type="validation">uncertain</verification>
+          <level type="intensity">weak</level>
+          <location>cytoplasm</location>
+        </data>
+        <data>
+          <cellLine>U-2 OS</cellLine>
+          <verification type="validation">uncertain</verification>
+          <level type="intensity">weak</level>
+          <location>cytoplasm</location>
+        </data>
+      </subcellularLocation>
+      <westernBlot technology="WB">
+        <verification type="validation">supportive</verification>
+      </westernBlot>
+      <proteinArray technology="PA">
+        <verification type="validation">supportive</verification>
+      </proteinArray>
+    </antibody>
+    <antibody id="HPA043603" releaseDate="2011-11-11" releaseVersion="9.0">
+      <antigenSequence>LRRRKQGDKKTFDECVAEGGSDCAPEKLWLQIPFFCGHSSECWNVGSRWAMDQAKYNLINEYFLVGVTEELEDFIMLLE</antigenSequence>
+      <tissueExpression technology="IH">
+        <summary type="normal"><![CDATA[Most normal tissues displayed moderate to strong cytoplasmic positivity, often with a granular pattern. Renal glomeruli, oral mucosa, bile ducts, pneumocytes, glial cells, smooth muscle cells and cells in white pulp of spleen were weakly stained or negative. ]]></summary>
+        <summary type="cancer"><![CDATA[Moderate granular or dot like cytoplasmic positivity was observed in most malignant cells. A few cases of non-Hodgkin's lymphomas, prostate and endometrial cancers were strongly stained. Several cases of squamous and basal cell carcinomas were weakly stained or negative.]]></summary>
+        <verification type="validation">uncertain</verification>
+        <data>
+          <tissue status="normal">adrenal gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">appendix</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">appendix</tissue>
+          <cellType>lymphoid tissue</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">bone marrow</tissue>
+          <cellType>hematopoietic cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">breast</tissue>
+          <cellType>adipocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">breast</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">breast</tissue>
+          <cellType>myoepithelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">bronchus</tissue>
+          <cellType>respiratory epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebellum</tissue>
+          <cellType>cells in granular layer</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebellum</tissue>
+          <cellType>cells in molecular layer</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebellum</tissue>
+          <cellType>Purkinje cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>endothelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>glial cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>neuronal cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cerebral cortex</tissue>
+          <cellType>neuropil</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">cervix, uterine</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">cervix, uterine</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">colon</tissue>
+          <cellType>endothelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">colon</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">colon</tissue>
+          <cellType>peripheral nerve/ganglion</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">duodenum</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">epididymis</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">esophagus</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">fallopian tube</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">gallbladder</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">heart muscle</tissue>
+          <cellType>myocytes</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">hippocampus</tissue>
+          <cellType>glial cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">hippocampus</tissue>
+          <cellType>neuronal cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">kidney</tissue>
+          <cellType>cells in glomeruli</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">kidney</tissue>
+          <cellType>cells in tubules</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">lateral ventricle</tissue>
+          <cellType>glial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">lateral ventricle</tissue>
+          <cellType>neuronal cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">liver</tissue>
+          <cellType>bile duct cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">liver</tissue>
+          <cellType>hepatocytes</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">lung</tissue>
+          <cellType>macrophages</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">lung</tissue>
+          <cellType>pneumocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">lymph node</tissue>
+          <cellType>germinal center cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">lymph node</tissue>
+          <cellType>non-germinal center cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">nasopharynx</tissue>
+          <cellType>respiratory epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">oral mucosa</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">ovary</tissue>
+          <cellType>ovarian stroma cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">pancreas</tissue>
+          <cellType>exocrine glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">pancreas</tissue>
+          <cellType>islets of Langerhans</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">parathyroid gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">placenta</tissue>
+          <cellType>trophoblastic cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">prostate</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">rectum</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">salivary gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">seminal vesicle</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">skeletal muscle</tissue>
+          <cellType>myocytes</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>fibroblasts</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>keratinocytes</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>Langerhans</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">skin</tissue>
+          <cellType>melanocytes</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">small intestine</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">smooth muscle</tissue>
+          <cellType>smooth muscle cells</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>adipocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>chondrocytes</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>fibroblasts</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 1</tissue>
+          <cellType>peripheral nerve</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 2</tissue>
+          <cellType>adipocytes</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 2</tissue>
+          <cellType>fibroblasts</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">soft tissue 2</tissue>
+          <cellType>peripheral nerve</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">spleen</tissue>
+          <cellType>cells in red pulp</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">spleen</tissue>
+          <cellType>cells in white pulp</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">stomach, lower</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">stomach, upper</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">testis</tissue>
+          <cellType>cells in seminiferus ducts</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">testis</tissue>
+          <cellType>Leydig cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">thyroid gland</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">tonsil</tissue>
+          <cellType>germinal center cells</cellType>
+          <level type="staining">strong</level>
+        </data>
+        <data>
+          <tissue status="normal">tonsil</tissue>
+          <cellType>non-germinal center cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">tonsil</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">urinary bladder</tissue>
+          <cellType>urothelial cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, post-menopause</tissue>
+          <cellType>cells in endometrial stroma</cellType>
+          <level type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, post-menopause</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, pre-menopause</tissue>
+          <cellType>cells in endometrial stroma</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">uterus, pre-menopause</tissue>
+          <cellType>glandular cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="normal">vagina</tissue>
+          <cellType>squamous epithelial cells</cellType>
+          <level type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="normal">vulva/anal skin</tissue>
+          <cellType>epidermal cells</cellType>
+          <level type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">breast cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="6" type="staining">moderate</level>
+          <level count="5" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">carcinoid</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="2" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">cervical cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="5" type="staining">moderate</level>
+          <level count="5" type="staining">weak</level>
+          <level count="2" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">colorectal cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="10" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">endometrial cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="8" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">glioma</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="9" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">head and neck cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="2" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">liver cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="7" type="staining">moderate</level>
+          <level count="5" type="staining">weak</level>
+        </data>
+        <data>
+          <tissue status="cancer">lung cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="6" type="staining">moderate</level>
+          <level count="4" type="staining">weak</level>
+          <level count="1" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">lymphoma</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="3" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+          <level count="5" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">melanoma</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="2" type="staining">strong</level>
+          <level count="8" type="staining">moderate</level>
+          <level count="1" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">ovarian cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="7" type="staining">moderate</level>
+          <level count="2" type="staining">weak</level>
+          <level count="3" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">pancreatic cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="7" type="staining">moderate</level>
+          <level count="1" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">prostate cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="3" type="staining">strong</level>
+          <level count="9" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">renal cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="7" type="staining">moderate</level>
+          <level count="2" type="staining">weak</level>
+          <level count="1" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">skin cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="4" type="staining">moderate</level>
+          <level count="3" type="staining">weak</level>
+          <level count="3" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">stomach cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="5" type="staining">moderate</level>
+          <level count="4" type="staining">weak</level>
+          <level count="3" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">testis cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="6" type="staining">moderate</level>
+          <level count="4" type="staining">weak</level>
+          <level count="2" type="staining">negative</level>
+        </data>
+        <data>
+          <tissue status="cancer">thyroid cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="1" type="staining">strong</level>
+          <level count="3" type="staining">moderate</level>
+        </data>
+        <data>
+          <tissue status="cancer">urothelial cancer</tissue>
+          <cellType>tumor cells</cellType>
+          <level count="10" type="staining">moderate</level>
+          <level count="1" type="staining">weak</level>
+        </data>
+      </tissueExpression>
+      <westernBlot technology="WB">
+        <verification type="validation">supportive</verification>
+      </westernBlot>
+      <proteinArray technology="PA">
+        <verification type="validation">supportive</verification>
+      </proteinArray>
+    </antibody>
+  </entry>

@@ -1,0 +1,1098 @@
+
+  <entry created="2007-02-20" dataset="Swiss-Prot" modified="2015-04-29" version="91">
+    <accession>A0AVT1</accession>
+    <accession>A6N8M7</accession>
+    <accession>B2RAV3</accession>
+    <accession>Q4W5K0</accession>
+    <accession>Q6UV21</accession>
+    <accession>Q86T78</accession>
+    <accession>Q86TC7</accession>
+    <accession>Q8N5T3</accession>
+    <accession>Q8N9E4</accession>
+    <accession>Q9H3T7</accession>
+    <accession>Q9NVC9</accession>
+    <name>UBA6_HUMAN</name>
+    <protein>
+      <recommendedName>
+        <fullName>Ubiquitin-like modifier-activating enzyme 6</fullName>
+        <shortName>Ubiquitin-activating enzyme 6</shortName>
+      </recommendedName>
+      <alternativeName>
+        <fullName>Monocyte protein 4</fullName>
+        <shortName>MOP-4</shortName>
+      </alternativeName>
+      <alternativeName>
+        <fullName>Ubiquitin-activating enzyme E1-like protein 2</fullName>
+        <shortName>E1-L2</shortName>
+      </alternativeName>
+    </protein>
+    <gene>
+      <name type="primary">UBA6</name>
+      <name type="synonym">MOP4</name>
+      <name type="synonym">UBE1L2</name>
+    </gene>
+    <organism>
+      <name type="scientific">Homo sapiens</name>
+      <name type="common">Human</name>
+      <dbReference id="9606" type="NCBI Taxonomy"/>
+      <lineage>
+        <taxon>Eukaryota</taxon>
+        <taxon>Metazoa</taxon>
+        <taxon>Chordata</taxon>
+        <taxon>Craniata</taxon>
+        <taxon>Vertebrata</taxon>
+        <taxon>Euteleostomi</taxon>
+        <taxon>Mammalia</taxon>
+        <taxon>Eutheria</taxon>
+        <taxon>Euarchontoglires</taxon>
+        <taxon>Primates</taxon>
+        <taxon>Haplorrhini</taxon>
+        <taxon>Catarrhini</taxon>
+        <taxon>Hominidae</taxon>
+        <taxon>Homo</taxon>
+      </lineage>
+    </organism>
+    <reference key="1">
+      <citation date="2004" first="227" last="234" name="Acta Biochim. Biophys. Sin." type="journal article" volume="36">
+        <title>Identification and characteristics of a novel E1 like gene nUBE1L in human testis.</title>
+        <authorList>
+          <person name="Zhu H."/>
+          <person name="Zhou Z.-M."/>
+          <person name="Huo R."/>
+          <person name="Huang X.-Y."/>
+          <person name="Lu L."/>
+          <person name="Lin M."/>
+          <person name="Wang L.-R."/>
+          <person name="Zhou Y.-D."/>
+          <person name="Li J.-M."/>
+          <person name="Sha J.-H."/>
+        </authorList>
+        <dbReference id="15202508" type="PubMed"/>
+        <dbReference id="10.1093/abbs/36.3.227" type="DOI"/>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 2)</scope>
+      <scope>TISSUE SPECIFICITY</scope>
+      <scope>FUNCTION</scope>
+    </reference>
+    <reference key="2">
+      <citation date="2007" first="1135" last="1138" name="Nature" type="journal article" volume="447">
+        <title>Dual E1 activation systems for ubiquitin differentially regulate E2 enzyme charging.</title>
+        <authorList>
+          <person name="Jin J."/>
+          <person name="Li X."/>
+          <person name="Gygi S.P."/>
+          <person name="Harper J.W."/>
+        </authorList>
+        <dbReference id="17597759" type="PubMed"/>
+        <dbReference id="10.1038/nature05902" type="DOI"/>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1)</scope>
+      <scope>VARIANT THR-224</scope>
+      <scope>FUNCTION</scope>
+      <scope>TISSUE SPECIFICITY</scope>
+      <scope>MUTAGENESIS OF CYS-625</scope>
+    </reference>
+    <reference key="3">
+      <citation date="1998-05" db="EMBL/GenBank/DDBJ databases" type="submission">
+        <title>Molecular and biological characterization of a new ubiquitin-activating enzyme E1 like protein, MOP-4 which is highly expressed in human monocytes.</title>
+        <authorList>
+          <person name="Takayama K."/>
+          <person name="Fujii Y."/>
+          <person name="Ukai Y."/>
+          <person name="Yoshimoto M."/>
+        </authorList>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1)</scope>
+      <source>
+        <tissue>Blood</tissue>
+      </source>
+    </reference>
+    <reference key="4">
+      <citation date="2004" first="40" last="45" name="Nat. Genet." type="journal article" volume="36">
+        <title>Complete sequencing and characterization of 21,243 full-length human cDNAs.</title>
+        <authorList>
+          <person name="Ota T."/>
+          <person name="Suzuki Y."/>
+          <person name="Nishikawa T."/>
+          <person name="Otsuki T."/>
+          <person name="Sugiyama T."/>
+          <person name="Irie R."/>
+          <person name="Wakamatsu A."/>
+          <person name="Hayashi K."/>
+          <person name="Sato H."/>
+          <person name="Nagai K."/>
+          <person name="Kimura K."/>
+          <person name="Makita H."/>
+          <person name="Sekine M."/>
+          <person name="Obayashi M."/>
+          <person name="Nishi T."/>
+          <person name="Shibahara T."/>
+          <person name="Tanaka T."/>
+          <person name="Ishii S."/>
+          <person name="Yamamoto J."/>
+          <person name="Saito K."/>
+          <person name="Kawai Y."/>
+          <person name="Isono Y."/>
+          <person name="Nakamura Y."/>
+          <person name="Nagahari K."/>
+          <person name="Murakami K."/>
+          <person name="Yasuda T."/>
+          <person name="Iwayanagi T."/>
+          <person name="Wagatsuma M."/>
+          <person name="Shiratori A."/>
+          <person name="Sudo H."/>
+          <person name="Hosoiri T."/>
+          <person name="Kaku Y."/>
+          <person name="Kodaira H."/>
+          <person name="Kondo H."/>
+          <person name="Sugawara M."/>
+          <person name="Takahashi M."/>
+          <person name="Kanda K."/>
+          <person name="Yokoi T."/>
+          <person name="Furuya T."/>
+          <person name="Kikkawa E."/>
+          <person name="Omura Y."/>
+          <person name="Abe K."/>
+          <person name="Kamihara K."/>
+          <person name="Katsuta N."/>
+          <person name="Sato K."/>
+          <person name="Tanikawa M."/>
+          <person name="Yamazaki M."/>
+          <person name="Ninomiya K."/>
+          <person name="Ishibashi T."/>
+          <person name="Yamashita H."/>
+          <person name="Murakawa K."/>
+          <person name="Fujimori K."/>
+          <person name="Tanai H."/>
+          <person name="Kimata M."/>
+          <person name="Watanabe M."/>
+          <person name="Hiraoka S."/>
+          <person name="Chiba Y."/>
+          <person name="Ishida S."/>
+          <person name="Ono Y."/>
+          <person name="Takiguchi S."/>
+          <person name="Watanabe S."/>
+          <person name="Yosida M."/>
+          <person name="Hotuta T."/>
+          <person name="Kusano J."/>
+          <person name="Kanehori K."/>
+          <person name="Takahashi-Fujii A."/>
+          <person name="Hara H."/>
+          <person name="Tanase T.-O."/>
+          <person name="Nomura Y."/>
+          <person name="Togiya S."/>
+          <person name="Komai F."/>
+          <person name="Hara R."/>
+          <person name="Takeuchi K."/>
+          <person name="Arita M."/>
+          <person name="Imose N."/>
+          <person name="Musashino K."/>
+          <person name="Yuuki H."/>
+          <person name="Oshima A."/>
+          <person name="Sasaki N."/>
+          <person name="Aotsuka S."/>
+          <person name="Yoshikawa Y."/>
+          <person name="Matsunawa H."/>
+          <person name="Ichihara T."/>
+          <person name="Shiohata N."/>
+          <person name="Sano S."/>
+          <person name="Moriya S."/>
+          <person name="Momiyama H."/>
+          <person name="Satoh N."/>
+          <person name="Takami S."/>
+          <person name="Terashima Y."/>
+          <person name="Suzuki O."/>
+          <person name="Nakagawa S."/>
+          <person name="Senoh A."/>
+          <person name="Mizoguchi H."/>
+          <person name="Goto Y."/>
+          <person name="Shimizu F."/>
+          <person name="Wakebe H."/>
+          <person name="Hishigaki H."/>
+          <person name="Watanabe T."/>
+          <person name="Sugiyama A."/>
+          <person name="Takemoto M."/>
+          <person name="Kawakami B."/>
+          <person name="Yamazaki M."/>
+          <person name="Watanabe K."/>
+          <person name="Kumagai A."/>
+          <person name="Itakura S."/>
+          <person name="Fukuzumi Y."/>
+          <person name="Fujimori Y."/>
+          <person name="Komiyama M."/>
+          <person name="Tashiro H."/>
+          <person name="Tanigami A."/>
+          <person name="Fujiwara T."/>
+          <person name="Ono T."/>
+          <person name="Yamada K."/>
+          <person name="Fujii Y."/>
+          <person name="Ozaki K."/>
+          <person name="Hirao M."/>
+          <person name="Ohmori Y."/>
+          <person name="Kawabata A."/>
+          <person name="Hikiji T."/>
+          <person name="Kobatake N."/>
+          <person name="Inagaki H."/>
+          <person name="Ikema Y."/>
+          <person name="Okamoto S."/>
+          <person name="Okitani R."/>
+          <person name="Kawakami T."/>
+          <person name="Noguchi S."/>
+          <person name="Itoh T."/>
+          <person name="Shigeta K."/>
+          <person name="Senba T."/>
+          <person name="Matsumura K."/>
+          <person name="Nakajima Y."/>
+          <person name="Mizuno T."/>
+          <person name="Morinaga M."/>
+          <person name="Sasaki M."/>
+          <person name="Togashi T."/>
+          <person name="Oyama M."/>
+          <person name="Hata H."/>
+          <person name="Watanabe M."/>
+          <person name="Komatsu T."/>
+          <person name="Mizushima-Sugano J."/>
+          <person name="Satoh T."/>
+          <person name="Shirai Y."/>
+          <person name="Takahashi Y."/>
+          <person name="Nakagawa K."/>
+          <person name="Okumura K."/>
+          <person name="Nagase T."/>
+          <person name="Nomura N."/>
+          <person name="Kikuchi H."/>
+          <person name="Masuho Y."/>
+          <person name="Yamashita R."/>
+          <person name="Nakai K."/>
+          <person name="Yada T."/>
+          <person name="Nakamura Y."/>
+          <person name="Ohara O."/>
+          <person name="Isogai T."/>
+          <person name="Sugano S."/>
+        </authorList>
+        <dbReference id="14702039" type="PubMed"/>
+        <dbReference id="10.1038/ng1285" type="DOI"/>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 4)</scope>
+      <scope>VARIANT THR-224</scope>
+      <source>
+        <tissue>Hippocampus</tissue>
+      </source>
+    </reference>
+    <reference key="5">
+      <citation date="2007" first="399" last="399" name="BMC Genomics" type="journal article" volume="8">
+        <title>The full-ORF clone resource of the German cDNA consortium.</title>
+        <authorList>
+          <person name="Bechtel S."/>
+          <person name="Rosenfelder H."/>
+          <person name="Duda A."/>
+          <person name="Schmidt C.P."/>
+          <person name="Ernst U."/>
+          <person name="Wellenreuther R."/>
+          <person name="Mehrle A."/>
+          <person name="Schuster C."/>
+          <person name="Bahr A."/>
+          <person name="Bloecker H."/>
+          <person name="Heubner D."/>
+          <person name="Hoerlein A."/>
+          <person name="Michel G."/>
+          <person name="Wedler H."/>
+          <person name="Koehrer K."/>
+          <person name="Ottenwaelder B."/>
+          <person name="Poustka A."/>
+          <person name="Wiemann S."/>
+          <person name="Schupp I."/>
+        </authorList>
+        <dbReference id="17974005" type="PubMed"/>
+        <dbReference id="10.1186/1471-2164-8-399" type="DOI"/>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 1)</scope>
+      <scope>VARIANT THR-224</scope>
+      <source>
+        <tissue>Skeletal muscle</tissue>
+      </source>
+    </reference>
+    <reference key="6">
+      <citation date="2005" first="724" last="731" name="Nature" type="journal article" volume="434">
+        <title>Generation and annotation of the DNA sequences of human chromosomes 2 and 4.</title>
+        <authorList>
+          <person name="Hillier L.W."/>
+          <person name="Graves T.A."/>
+          <person name="Fulton R.S."/>
+          <person name="Fulton L.A."/>
+          <person name="Pepin K.H."/>
+          <person name="Minx P."/>
+          <person name="Wagner-McPherson C."/>
+          <person name="Layman D."/>
+          <person name="Wylie K."/>
+          <person name="Sekhon M."/>
+          <person name="Becker M.C."/>
+          <person name="Fewell G.A."/>
+          <person name="Delehaunty K.D."/>
+          <person name="Miner T.L."/>
+          <person name="Nash W.E."/>
+          <person name="Kremitzki C."/>
+          <person name="Oddy L."/>
+          <person name="Du H."/>
+          <person name="Sun H."/>
+          <person name="Bradshaw-Cordum H."/>
+          <person name="Ali J."/>
+          <person name="Carter J."/>
+          <person name="Cordes M."/>
+          <person name="Harris A."/>
+          <person name="Isak A."/>
+          <person name="van Brunt A."/>
+          <person name="Nguyen C."/>
+          <person name="Du F."/>
+          <person name="Courtney L."/>
+          <person name="Kalicki J."/>
+          <person name="Ozersky P."/>
+          <person name="Abbott S."/>
+          <person name="Armstrong J."/>
+          <person name="Belter E.A."/>
+          <person name="Caruso L."/>
+          <person name="Cedroni M."/>
+          <person name="Cotton M."/>
+          <person name="Davidson T."/>
+          <person name="Desai A."/>
+          <person name="Elliott G."/>
+          <person name="Erb T."/>
+          <person name="Fronick C."/>
+          <person name="Gaige T."/>
+          <person name="Haakenson W."/>
+          <person name="Haglund K."/>
+          <person name="Holmes A."/>
+          <person name="Harkins R."/>
+          <person name="Kim K."/>
+          <person name="Kruchowski S.S."/>
+          <person name="Strong C.M."/>
+          <person name="Grewal N."/>
+          <person name="Goyea E."/>
+          <person name="Hou S."/>
+          <person name="Levy A."/>
+          <person name="Martinka S."/>
+          <person name="Mead K."/>
+          <person name="McLellan M.D."/>
+          <person name="Meyer R."/>
+          <person name="Randall-Maher J."/>
+          <person name="Tomlinson C."/>
+          <person name="Dauphin-Kohlberg S."/>
+          <person name="Kozlowicz-Reilly A."/>
+          <person name="Shah N."/>
+          <person name="Swearengen-Shahid S."/>
+          <person name="Snider J."/>
+          <person name="Strong J.T."/>
+          <person name="Thompson J."/>
+          <person name="Yoakum M."/>
+          <person name="Leonard S."/>
+          <person name="Pearman C."/>
+          <person name="Trani L."/>
+          <person name="Radionenko M."/>
+          <person name="Waligorski J.E."/>
+          <person name="Wang C."/>
+          <person name="Rock S.M."/>
+          <person name="Tin-Wollam A.-M."/>
+          <person name="Maupin R."/>
+          <person name="Latreille P."/>
+          <person name="Wendl M.C."/>
+          <person name="Yang S.-P."/>
+          <person name="Pohl C."/>
+          <person name="Wallis J.W."/>
+          <person name="Spieth J."/>
+          <person name="Bieri T.A."/>
+          <person name="Berkowicz N."/>
+          <person name="Nelson J.O."/>
+          <person name="Osborne J."/>
+          <person name="Ding L."/>
+          <person name="Meyer R."/>
+          <person name="Sabo A."/>
+          <person name="Shotland Y."/>
+          <person name="Sinha P."/>
+          <person name="Wohldmann P.E."/>
+          <person name="Cook L.L."/>
+          <person name="Hickenbotham M.T."/>
+          <person name="Eldred J."/>
+          <person name="Williams D."/>
+          <person name="Jones T.A."/>
+          <person name="She X."/>
+          <person name="Ciccarelli F.D."/>
+          <person name="Izaurralde E."/>
+          <person name="Taylor J."/>
+          <person name="Schmutz J."/>
+          <person name="Myers R.M."/>
+          <person name="Cox D.R."/>
+          <person name="Huang X."/>
+          <person name="McPherson J.D."/>
+          <person name="Mardis E.R."/>
+          <person name="Clifton S.W."/>
+          <person name="Warren W.C."/>
+          <person name="Chinwalla A.T."/>
+          <person name="Eddy S.R."/>
+          <person name="Marra M.A."/>
+          <person name="Ovcharenko I."/>
+          <person name="Furey T.S."/>
+          <person name="Miller W."/>
+          <person name="Eichler E.E."/>
+          <person name="Bork P."/>
+          <person name="Suyama M."/>
+          <person name="Torrents D."/>
+          <person name="Waterston R.H."/>
+          <person name="Wilson R.K."/>
+        </authorList>
+        <dbReference id="15815621" type="PubMed"/>
+        <dbReference id="10.1038/nature03466" type="DOI"/>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]</scope>
+    </reference>
+    <reference key="7">
+      <citation date="2004" first="2121" last="2127" name="Genome Res." type="journal article" volume="14">
+        <title>The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).</title>
+        <authorList>
+          <consortium name="The MGC Project Team"/>
+        </authorList>
+        <dbReference id="15489334" type="PubMed"/>
+        <dbReference id="10.1101/gr.2596504" type="DOI"/>
+      </citation>
+      <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORMS 1 AND 3)</scope>
+      <source>
+        <tissue>Brain</tissue>
+      </source>
+    </reference>
+    <reference key="8">
+      <citation date="2007" first="1014" last="1023" name="Mol. Cell" type="journal article" volume="27">
+        <title>E1-L2 activates both ubiquitin and FAT10.</title>
+        <authorList>
+          <person name="Chiu Y.-H."/>
+          <person name="Sun Q."/>
+          <person name="Chen Z.J."/>
+        </authorList>
+        <dbReference id="17889673" type="PubMed"/>
+        <dbReference id="10.1016/j.molcel.2007.08.020" type="DOI"/>
+      </citation>
+      <scope>FUNCTION</scope>
+      <scope>INTERACTION WITH UBD</scope>
+      <scope>THIOESTER FORMATION</scope>
+      <scope>MUTAGENESIS OF CYS-625</scope>
+    </reference>
+    <reference key="9">
+      <citation date="2009" first="4493" last="4501" name="Anal. Chem." type="journal article" volume="81">
+        <title>Lys-N and trypsin cover complementary parts of the phosphoproteome in a refined SCX-based approach.</title>
+        <authorList>
+          <person name="Gauci S."/>
+          <person name="Helbig A.O."/>
+          <person name="Slijper M."/>
+          <person name="Krijgsveld J."/>
+          <person name="Heck A.J."/>
+          <person name="Mohammed S."/>
+        </authorList>
+        <dbReference id="19413330" type="PubMed"/>
+        <dbReference id="10.1021/ac9004309" type="DOI"/>
+      </citation>
+      <scope>ACETYLATION [LARGE SCALE ANALYSIS] AT MET-1</scope>
+      <scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+    </reference>
+    <reference key="10">
+      <citation date="2009" first="834" last="840" name="Science" type="journal article" volume="325">
+        <title>Lysine acetylation targets protein complexes and co-regulates major cellular functions.</title>
+        <authorList>
+          <person name="Choudhary C."/>
+          <person name="Kumar C."/>
+          <person name="Gnad F."/>
+          <person name="Nielsen M.L."/>
+          <person name="Rehman M."/>
+          <person name="Walther T.C."/>
+          <person name="Olsen J.V."/>
+          <person name="Mann M."/>
+        </authorList>
+        <dbReference id="19608861" type="PubMed"/>
+        <dbReference id="10.1126/science.1175371" type="DOI"/>
+      </citation>
+      <scope>ACETYLATION [LARGE SCALE ANALYSIS] AT LYS-544</scope>
+      <scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+    </reference>
+    <reference key="11">
+      <citation date="2011" first="17" last="17" name="BMC Syst. Biol." type="journal article" volume="5">
+        <title>Initial characterization of the human central proteome.</title>
+        <authorList>
+          <person name="Burkard T.R."/>
+          <person name="Planyavsky M."/>
+          <person name="Kaupe I."/>
+          <person name="Breitwieser F.P."/>
+          <person name="Buerckstuemmer T."/>
+          <person name="Bennett K.L."/>
+          <person name="Superti-Furga G."/>
+          <person name="Colinge J."/>
+        </authorList>
+        <dbReference id="21269460" type="PubMed"/>
+        <dbReference id="10.1186/1752-0509-5-17" type="DOI"/>
+      </citation>
+      <scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+    </reference>
+    <reference key="12">
+      <citation date="2014" first="253" last="262" name="J. Proteomics" type="journal article" volume="96">
+        <title>An enzyme assisted RP-RPLC approach for in-depth analysis of human liver phosphoproteome.</title>
+        <authorList>
+          <person name="Bian Y."/>
+          <person name="Song C."/>
+          <person name="Cheng K."/>
+          <person name="Dong M."/>
+          <person name="Wang F."/>
+          <person name="Huang J."/>
+          <person name="Sun D."/>
+          <person name="Wang L."/>
+          <person name="Ye M."/>
+          <person name="Zou H."/>
+        </authorList>
+        <dbReference id="24275569" type="PubMed"/>
+        <dbReference id="10.1016/j.jprot.2013.11.014" type="DOI"/>
+      </citation>
+      <scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+      <source>
+        <tissue>Liver</tissue>
+      </source>
+    </reference>
+    <comment type="function">
+      <text evidence="4 5 6">Activates ubiquitin by first adenylating its C-terminal glycine residue with ATP, and thereafter linking this residue to the side chain of a cysteine residue in E1, yielding a ubiquitin-E1 thioester and free AMP. Specific for ubiquitin, does not activate ubiquitin-like peptides. Differs from UBE1 in its specificity for substrate E2 charging. Does not charge cell cycle E2s, such as CDC34. Essential for embryonic development. Required for UBD/FAT10 conjugation. Isoform 2 may play a key role in ubiquitin system and may influence spermatogenesis and male fertility.</text>
+    </comment>
+    <comment type="pathway">
+      <text>Protein modification; protein ubiquitination.</text>
+    </comment>
+    <comment type="subunit">
+      <text>Forms a thioester with UBD in cells stimulated with tumor necrosis factor-alpha (TNFa) and interferon-gamma (IFNg).</text>
+    </comment>
+    <comment type="interaction">
+      <interactant intactId="EBI-5282516"/>
+      <interactant intactId="EBI-2549423">
+        <id>Q6NT76</id>
+        <label>HMBOX1</label>
+      </interactant>
+      <organismsDiffer>false</organismsDiffer>
+      <experiments>3</experiments>
+    </comment>
+    <comment type="alternative products">
+      <event type="alternative splicing"/>
+      <isoform>
+        <id>A0AVT1-1</id>
+        <name>1</name>
+        <sequence type="displayed"/>
+      </isoform>
+      <isoform>
+        <id>A0AVT1-2</id>
+        <name>2</name>
+        <name>nUBE1L</name>
+        <sequence ref="VSP_023083" type="described"/>
+      </isoform>
+      <isoform>
+        <id>A0AVT1-3</id>
+        <name>3</name>
+        <sequence ref="VSP_023086 VSP_023087" type="described"/>
+      </isoform>
+      <isoform>
+        <id>A0AVT1-4</id>
+        <name>4</name>
+        <sequence ref="VSP_023084 VSP_023085" type="described"/>
+      </isoform>
+      <text>Named isoforms=3.</text>
+    </comment>
+    <comment type="tissue specificity">
+      <text evidence="4 5">Widely expressed. Isoform 2 is predominantly expressed in testis with higher expression in adult testis than in fetal testis.</text>
+    </comment>
+    <comment type="similarity">
+      <text evidence="13">Belongs to the ubiquitin-activating E1 family.</text>
+    </comment>
+    <comment evidence="13" type="sequence caution">
+      <conflict type="erroneous initiation">
+        <sequence id="BAA91824" resource="EMBL-CDS" version="1"/>
+      </conflict>
+      <text>Translation N-terminally extended.</text>
+    </comment>
+    <dbReference id="AY359880" type="EMBL">
+      <property type="protein sequence ID" value="AAQ63403.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="EF623993" type="EMBL">
+      <property type="protein sequence ID" value="ABR25253.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AB014773" type="EMBL">
+      <property type="protein sequence ID" value="BAB19785.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AK001670" type="EMBL">
+      <property type="protein sequence ID" value="BAA91824.1"/>
+      <property type="status" value="ALT_INIT"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AK094969" type="EMBL">
+      <property type="protein sequence ID" value="BAC04463.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AK314371" type="EMBL">
+      <property type="protein sequence ID" value="BAG37000.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AL832015" type="EMBL">
+      <property type="protein sequence ID" value="CAD89908.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AL832458" type="EMBL">
+      <property type="protein sequence ID" value="CAD89959.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="AC079880" type="EMBL">
+      <property type="status" value="NOT_ANNOTATED_CDS"/>
+      <property type="molecule type" value="Genomic_DNA"/>
+    </dbReference>
+    <dbReference id="AC096720" type="EMBL">
+      <property type="protein sequence ID" value="AAY40999.1"/>
+      <property type="molecule type" value="Genomic_DNA"/>
+    </dbReference>
+    <dbReference id="BC031637" type="EMBL">
+      <property type="protein sequence ID" value="AAH31637.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="BC126484" type="EMBL">
+      <property type="protein sequence ID" value="AAI26485.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="BC126486" type="EMBL">
+      <property type="protein sequence ID" value="AAI26487.1"/>
+      <property type="molecule type" value="mRNA"/>
+    </dbReference>
+    <dbReference id="CCDS3516.1" type="CCDS">
+      <molecule id="A0AVT1-1"/>
+    </dbReference>
+    <dbReference id="NP_060697.4" type="RefSeq">
+      <molecule id="A0AVT1-1"/>
+      <property type="nucleotide sequence ID" value="NM_018227.5"/>
+    </dbReference>
+    <dbReference id="Hs.212774" type="UniGene"/>
+    <dbReference id="A0AVT1" type="ProteinModelPortal"/>
+    <dbReference id="A0AVT1" type="SMR">
+      <property type="residue range" value="38-1019"/>
+    </dbReference>
+    <dbReference id="120529" type="BioGrid">
+      <property type="interactions" value="51"/>
+    </dbReference>
+    <dbReference id="DIP-57633N" type="DIP"/>
+    <dbReference id="A0AVT1" type="IntAct">
+      <property type="interactions" value="2"/>
+    </dbReference>
+    <dbReference id="MINT-1195700" type="MINT"/>
+    <dbReference id="A0AVT1" type="BindingDB"/>
+    <dbReference id="CHEMBL2321622" type="ChEMBL"/>
+    <dbReference id="A0AVT1" type="PhosphoSite"/>
+    <dbReference id="UPA00143" type="UniPathway"/>
+    <dbReference id="UBA6" type="BioMuta"/>
+    <dbReference id="A0AVT1" type="MaxQB"/>
+    <dbReference id="A0AVT1" type="PaxDb"/>
+    <dbReference id="A0AVT1" type="PRIDE"/>
+    <dbReference id="55236" type="DNASU"/>
+    <dbReference id="ENST00000322244" type="Ensembl">
+      <molecule id="A0AVT1-1"/>
+      <property type="protein sequence ID" value="ENSP00000313454"/>
+      <property type="gene ID" value="ENSG00000033178"/>
+    </dbReference>
+    <dbReference id="ENST00000420827" type="Ensembl">
+      <molecule id="A0AVT1-3"/>
+      <property type="protein sequence ID" value="ENSP00000399234"/>
+      <property type="gene ID" value="ENSG00000033178"/>
+    </dbReference>
+    <dbReference id="55236" type="GeneID"/>
+    <dbReference id="hsa:55236" type="KEGG"/>
+    <dbReference id="uc003hdg.4" type="UCSC">
+      <molecule id="A0AVT1-1"/>
+      <property type="organism name" value="human"/>
+    </dbReference>
+    <dbReference id="uc003hdi.3" type="UCSC">
+      <molecule id="A0AVT1-3"/>
+      <property type="organism name" value="human"/>
+    </dbReference>
+    <dbReference id="uc003hdj.2" type="UCSC">
+      <molecule id="A0AVT1-4"/>
+      <property type="organism name" value="human"/>
+    </dbReference>
+    <dbReference id="55236" type="CTD"/>
+    <dbReference id="GC04M068481" type="GeneCards"/>
+    <dbReference id="HIX0031574" type="H-InvDB"/>
+    <dbReference id="HIX0120163" type="H-InvDB"/>
+    <dbReference id="HGNC:25581" type="HGNC">
+      <property type="gene designation" value="UBA6"/>
+    </dbReference>
+    <dbReference id="HPA037001" type="HPA"/>
+    <dbReference id="HPA044870" type="HPA"/>
+    <dbReference id="611361" type="MIM">
+      <property type="type" value="gene"/>
+    </dbReference>
+    <dbReference id="NX_A0AVT1" type="neXtProt"/>
+    <dbReference id="PA162407690" type="PharmGKB"/>
+    <dbReference id="COG0476" type="eggNOG"/>
+    <dbReference id="ENSGT00390000016689" type="GeneTree"/>
+    <dbReference id="HBG054199" type="HOVERGEN"/>
+    <dbReference id="A0AVT1" type="InParanoid"/>
+    <dbReference id="K10699" type="KO"/>
+    <dbReference id="WLSWTAQ" type="OMA"/>
+    <dbReference id="EOG74R1PV" type="OrthoDB"/>
+    <dbReference id="A0AVT1" type="PhylomeDB"/>
+    <dbReference id="TF300586" type="TreeFam"/>
+    <dbReference id="6.2.1.B9" type="BRENDA">
+      <property type="organism ID" value="2681"/>
+    </dbReference>
+    <dbReference id="REACT_75842" type="Reactome">
+      <property type="pathway name" value="Antigen processing: Ubiquitination &amp; Proteasome degradation"/>
+    </dbReference>
+    <dbReference id="UBA6" type="ChiTaRS">
+      <property type="organism name" value="human"/>
+    </dbReference>
+    <dbReference id="UBE1L2" type="GeneWiki"/>
+    <dbReference id="55236" type="GenomeRNAi"/>
+    <dbReference id="59255" type="NextBio"/>
+    <dbReference id="PR:A0AVT1" type="PRO"/>
+    <dbReference id="UP000005640" type="Proteomes">
+      <property type="component" value="Chromosome 4"/>
+    </dbReference>
+    <dbReference id="A0AVT1" type="Bgee"/>
+    <dbReference id="A0AVT1" type="ExpressionAtlas">
+      <property type="expression patterns" value="baseline and differential"/>
+    </dbReference>
+    <dbReference id="A0AVT1" type="Genevestigator"/>
+    <dbReference id="GO:0005737" type="GO">
+      <property type="term" value="C:cytoplasm"/>
+      <property type="evidence" value="IDA:LIFEdb"/>
+    </dbReference>
+    <dbReference id="GO:0005829" type="GO">
+      <property type="term" value="C:cytosol"/>
+      <property type="evidence" value="IBA:GO_Central"/>
+    </dbReference>
+    <dbReference id="GO:0005524" type="GO">
+      <property type="term" value="F:ATP binding"/>
+      <property type="evidence" value="IEA:UniProtKB-KW"/>
+    </dbReference>
+    <dbReference id="GO:0019780" type="GO">
+      <property type="term" value="F:FAT10 activating enzyme activity"/>
+      <property type="evidence" value="IMP:UniProtKB"/>
+    </dbReference>
+    <dbReference id="GO:0016567" type="GO">
+      <property type="term" value="P:protein ubiquitination"/>
+      <property type="evidence" value="IMP:UniProtKB"/>
+    </dbReference>
+    <dbReference id="GO:0006511" type="GO">
+      <property type="term" value="P:ubiquitin-dependent protein catabolic process"/>
+      <property type="evidence" value="IMP:UniProtKB"/>
+    </dbReference>
+    <dbReference id="1.10.3240.10" type="Gene3D">
+      <property type="match status" value="2"/>
+    </dbReference>
+    <dbReference id="3.40.50.720" type="Gene3D">
+      <property type="match status" value="4"/>
+    </dbReference>
+    <dbReference id="IPR009036" type="InterPro">
+      <property type="entry name" value="Molybdenum_cofac_synth_MoeB"/>
+    </dbReference>
+    <dbReference id="IPR016040" type="InterPro">
+      <property type="entry name" value="NAD(P)-bd_dom"/>
+    </dbReference>
+    <dbReference id="IPR000594" type="InterPro">
+      <property type="entry name" value="ThiF_NAD_FAD-bd"/>
+    </dbReference>
+    <dbReference id="IPR018965" type="InterPro">
+      <property type="entry name" value="Ub-activating_enz_e1_C"/>
+    </dbReference>
+    <dbReference id="IPR023280" type="InterPro">
+      <property type="entry name" value="Ub-like_act_enz_cat_cys_dom"/>
+    </dbReference>
+    <dbReference id="IPR000127" type="InterPro">
+      <property type="entry name" value="UBact_repeat"/>
+    </dbReference>
+    <dbReference id="IPR019572" type="InterPro">
+      <property type="entry name" value="Ubiquitin-activating_enzyme"/>
+    </dbReference>
+    <dbReference id="IPR018075" type="InterPro">
+      <property type="entry name" value="UBQ-activ_enz_E1"/>
+    </dbReference>
+    <dbReference id="IPR000011" type="InterPro">
+      <property type="entry name" value="UBQ/SUMO-activ_enz_E1-like"/>
+    </dbReference>
+    <dbReference id="PF00899" type="Pfam">
+      <property type="entry name" value="ThiF"/>
+      <property type="match status" value="2"/>
+    </dbReference>
+    <dbReference id="PF09358" type="Pfam">
+      <property type="entry name" value="UBA_e1_C"/>
+      <property type="match status" value="1"/>
+    </dbReference>
+    <dbReference id="PF10585" type="Pfam">
+      <property type="entry name" value="UBA_e1_thiolCys"/>
+      <property type="match status" value="1"/>
+    </dbReference>
+    <dbReference id="PF02134" type="Pfam">
+      <property type="entry name" value="UBACT"/>
+      <property type="match status" value="1"/>
+    </dbReference>
+    <dbReference id="PR01849" type="PRINTS">
+      <property type="entry name" value="UBIQUITINACT"/>
+    </dbReference>
+    <dbReference id="SM00985" type="SMART">
+      <property type="entry name" value="UBA_e1_C"/>
+      <property type="match status" value="1"/>
+    </dbReference>
+    <dbReference id="SSF69572" type="SUPFAM">
+      <property type="entry name" value="SSF69572"/>
+      <property type="match status" value="2"/>
+    </dbReference>
+    <dbReference id="TIGR01408" type="TIGRFAMs">
+      <property type="entry name" value="Ube1"/>
+      <property type="match status" value="1"/>
+    </dbReference>
+    <proteinExistence type="evidence at protein level"/>
+    <keyword id="KW-0007">Acetylation</keyword>
+    <keyword id="KW-0025">Alternative splicing</keyword>
+    <keyword id="KW-0067">ATP-binding</keyword>
+    <keyword id="KW-0181">Complete proteome</keyword>
+    <keyword id="KW-0436">Ligase</keyword>
+    <keyword id="KW-0547">Nucleotide-binding</keyword>
+    <keyword id="KW-0621">Polymorphism</keyword>
+    <keyword id="KW-1185">Reference proteome</keyword>
+    <keyword id="KW-0833">Ubl conjugation pathway</keyword>
+    <feature description="Ubiquitin-like modifier-activating enzyme 6" id="PRO_0000277797" type="chain">
+      <location>
+        <begin position="1"/>
+        <end position="1052"/>
+      </location>
+    </feature>
+    <feature description="ATP" evidence="1" type="nucleotide phosphate-binding region">
+      <location>
+        <begin position="470"/>
+        <end position="500"/>
+      </location>
+    </feature>
+    <feature description="Glycyl thioester intermediate" evidence="1" type="active site">
+      <location>
+        <position position="625"/>
+      </location>
+    </feature>
+    <feature description="N-acetylmethionine" evidence="8" type="modified residue">
+      <location>
+        <position position="1"/>
+      </location>
+    </feature>
+    <feature description="N6-acetyllysine" evidence="9" type="modified residue">
+      <location>
+        <position position="544"/>
+      </location>
+    </feature>
+    <feature description="N6-acetyllysine" evidence="2" type="modified residue">
+      <location>
+        <position position="729"/>
+      </location>
+    </feature>
+    <feature description="In isoform 2." evidence="11" id="VSP_023083" type="splice variant">
+      <location>
+        <begin position="1"/>
+        <end position="474"/>
+      </location>
+    </feature>
+    <feature description="In isoform 4." evidence="10" id="VSP_023084" type="splice variant">
+      <original>APLEIHTAMLALDQFQEKYS</original>
+      <variation>VNKHFAGLREAAESEMRISE</variation>
+      <location>
+        <begin position="321"/>
+        <end position="340"/>
+      </location>
+    </feature>
+    <feature description="In isoform 4." evidence="10" id="VSP_023085" type="splice variant">
+      <location>
+        <begin position="341"/>
+        <end position="1052"/>
+      </location>
+    </feature>
+    <feature description="In isoform 3." evidence="12" id="VSP_023086" type="splice variant">
+      <original>PDVNADIVHWLSWTAQGFLSP</original>
+      <variation>VTIEIYGCPNICLLIHKCSVY</variation>
+      <location>
+        <begin position="369"/>
+        <end position="389"/>
+      </location>
+    </feature>
+    <feature description="In isoform 3." evidence="12" id="VSP_023087" type="splice variant">
+      <location>
+        <begin position="390"/>
+        <end position="1052"/>
+      </location>
+    </feature>
+    <feature description="In dbSNP:rs10010188." evidence="3 5 7" id="VAR_030594" type="sequence variant">
+      <original>A</original>
+      <variation>T</variation>
+      <location>
+        <position position="224"/>
+      </location>
+    </feature>
+    <feature description="Impairs ubiquitin activation." evidence="5 6" type="mutagenesis site">
+      <original>C</original>
+      <variation>A</variation>
+      <variation>S</variation>
+      <location>
+        <position position="625"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 5; CAD89908." evidence="13" ref="5" type="sequence conflict">
+      <original>E</original>
+      <variation>K</variation>
+      <location>
+        <position position="14"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 5; CAD89908." evidence="13" ref="5" type="sequence conflict">
+      <original>V</original>
+      <variation>A</variation>
+      <location>
+        <position position="140"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 4; BAC04463." evidence="13" ref="4" type="sequence conflict">
+      <original>C</original>
+      <variation>Y</variation>
+      <location>
+        <position position="197"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 5; CAD89959." evidence="13" ref="5" type="sequence conflict">
+      <original>N</original>
+      <variation>D</variation>
+      <location>
+        <position position="234"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 4; BAC04463." evidence="13" ref="4" type="sequence conflict">
+      <original>V</original>
+      <variation>A</variation>
+      <location>
+        <position position="297"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 1; AAQ63403." evidence="13" ref="1" type="sequence conflict">
+      <original>F</original>
+      <variation>V</variation>
+      <location>
+        <position position="645"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 4; BAA91824." evidence="13" ref="4" type="sequence conflict">
+      <original>Q</original>
+      <variation>H</variation>
+      <location>
+        <position position="803"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 5; CAD89959." evidence="13" ref="5" type="sequence conflict">
+      <original>E</original>
+      <variation>G</variation>
+      <location>
+        <position position="821"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 5; CAD89908." evidence="13" ref="5" type="sequence conflict">
+      <original>L</original>
+      <variation>P</variation>
+      <location>
+        <position position="868"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 1; AAQ63403." evidence="13" ref="1" type="sequence conflict">
+      <original>V</original>
+      <variation>G</variation>
+      <location>
+        <position position="905"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 5; CAD89959." evidence="13" ref="5" type="sequence conflict">
+      <original>M</original>
+      <variation>K</variation>
+      <location>
+        <position position="909"/>
+      </location>
+    </feature>
+    <feature description="In Ref. 3; BAB19785." evidence="13" ref="3" type="sequence conflict">
+      <original>A</original>
+      <variation>V</variation>
+      <location>
+        <position position="920"/>
+      </location>
+    </feature>
+    <evidence key="1" type="ECO:0000250"/>
+    <evidence key="2" type="ECO:0000250">
+      <source>
+        <dbReference id="Q8C7R4" type="UniProtKB"/>
+      </source>
+    </evidence>
+    <evidence key="3" type="ECO:0000269">
+      <source>
+        <dbReference id="14702039" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="4" type="ECO:0000269">
+      <source>
+        <dbReference id="15202508" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="5" type="ECO:0000269">
+      <source>
+        <dbReference id="17597759" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="6" type="ECO:0000269">
+      <source>
+        <dbReference id="17889673" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="7" type="ECO:0000269">
+      <source>
+        <dbReference id="17974005" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="8" type="ECO:0000269">
+      <source>
+        <dbReference id="19413330" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="9" type="ECO:0000269">
+      <source>
+        <dbReference id="19608861" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="10" type="ECO:0000303">
+      <source>
+        <dbReference id="14702039" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="11" type="ECO:0000303">
+      <source>
+        <dbReference id="15202508" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="12" type="ECO:0000303">
+      <source>
+        <dbReference id="15489334" type="PubMed"/>
+      </source>
+    </evidence>
+    <evidence key="13" type="ECO:0000305"/>
+    <sequence checksum="9F9C70EABA750A71" length="1052" mass="117970" modified="2006-11-28" version="1">
+MEGSEPVAAHQGEEASCSSWGTGSTNKNLPIMSTASVEIDDALYSRQRYVLGDTAMQKMA
+KSHVFLSGMGGLGLEIAKNLVLAGIKAVTIHDTEKCQAWDLGTNFFLSEDDVVNKRNRAE
+AVLKHIAELNPYVHVTSSSVPFNETTDLSFLDKYQCVVLTEMKLPLQKKINDFCRSQCPP
+IKFISADVHGIWSRLFCDFGDEFEVLDTTGEEPKEIFISNITQANPGIVTCLENHPHKLE
+TGQFLTFREINGMTGLNGSIQQITVISPFSFSIGDTTELEPYLHGGIAVQVKTPKTVFFE
+SLERQLKHPKCLIVDFSNPEAPLEIHTAMLALDQFQEKYSRKPNVGCQQDSEELLKLATS
+ISETLEEKPDVNADIVHWLSWTAQGFLSPLAAAVGGVASQEVLKAVTGKFSPLCQWLYLE
+AADIVESLGKPECEEFLPRGDRYDALRACIGDTLCQKLQNLNIFLVGCGAIGCEMLKNFA
+LLGVGTSKEKGMITVTDPDLIEKSNLNRQFLFRPHHIQKPKSYTAADATLKINSQIKIDA
+HLNKVCPTTETIYNDEFYTKQDVIITALDNVEARRYVDSRCLANLRPLLDSGTMGTKGHT
+EVIVPHLTESYNSHRDPPEEEIPFCTLKSFPAAIEHTIQWARDKFESSFSHKPSLFNKFW
+QTYSSAEEVLQKIQSGHSLEGCFQVIKLLSRRPRNWSQCVELARLKFEKYFNHKALQLLH
+CFPLDIRLKDGSLFWQSPKRPPSPIKFDLNEPLHLSFLQNAAKLYATVYCIPFAEEDLSA
+DALLNILSEVKIQEFKPSNKVVQTDETARKPDHVPISSEDERNAIFQLEKAILSNEATKS
+DLQMAVLSFEKDDDHNGHIDFITAASNLRAKMYSIEPADRFKTKRIAGKIIPAIATTTAT
+VSGLVALEMIKVTGGYPFEAYKNCFLNLAIPIVVFTETTEVRKTKIRNGISFTIWDRWTV
+HGKEDFTLLDFINAVKEKYGIEPTMVVQGVKMLYVPVMPGHAKRLKLTMHKLVKPTTEKK
+YVDLTVSFAPDIDGDEDLPGPPVRYYFSHDTD
+</sequence>
+  </entry>

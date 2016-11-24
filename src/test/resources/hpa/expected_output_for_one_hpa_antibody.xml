@@ -1,0 +1,93 @@
+  <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
+    <wrappedBean>
+      <identifierType>ANTIBODY</identifierType>
+      <dbXref>
+        <resourceType>DATABASE</resourceType>
+        <accession><![CDATA[HPA000663]]></accession>
+        <version>1</version>
+        <cvDatabase>
+          <cvName>HPA</cvName>
+        </cvDatabase>
+      </dbXref>
+      <bioSequences>
+        <com.genebio.nextprot.datamodel.identifier.BioSequence>
+          <bioSequence>MSLRGSLSRLLQTRVHSILKKSVHSVAVIGAPFSQGQKRKGVEHGPAAIREAGLMKRLSSLGCHLKDFGDLSFTPVPKDDLYNNLIVNPRSVGLANQELAEVVSRAVSDGYSCVTLGGDHSLAIGTISGHARHCPDLCVVWVDAHAD</bioSequence>
+          <bioSequenceType>PREST</bioSequenceType>
+          <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+        </com.genebio.nextprot.datamodel.identifier.BioSequence>
+      </bioSequences>
+      <identifierProperties>
+        <com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+          <cvPropertyName>
+            <cvName>immunohistochemistry validation</cvName>
+          </cvPropertyName>
+          <propertyValue><![CDATA[supportive]]></propertyValue>
+          <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+        </com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+        <com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+          <cvPropertyName>
+            <cvName>western blot validation</cvName>
+          </cvPropertyName>
+          <propertyValue><![CDATA[supportive]]></propertyValue>
+          <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+        </com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+        <com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+          <cvPropertyName>
+            <cvName>protein array validation</cvName>
+          </cvPropertyName>
+          <propertyValue><![CDATA[supportive]]></propertyValue>
+          <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+        </com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+      </identifierProperties>
+    </wrappedBean>
+    <uniprotIds>
+      <string>P78540</string>
+    </uniprotIds>
+    <summaryAnnotations>
+      <ac>HPA000663</ac>
+      <preComputedFeatures>false</preComputedFeatures>
+      <wrappedBean>
+          <com.genebio.nextprot.dataloader.dto.RawAnnotation>
+            <qualifierType>EXP</qualifierType>
+            <type>expression info</type>
+            <isPropagableByDefault>false</isPropagableByDefault>
+            <description><![CDATA[tissue: strong granular cytoplasmic positivity was observed in kidney and prostate. Other glandular cells displayed weak cytoplasmic staining. Remaining normal tissues were in general negative. 
+]]></description>
+            <resourceAssocs>
+              <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                <resource class="source.DbXref">
+                  <resourceType>DATABASE</resourceType>
+                  <accession>HPA000663</accession>
+                  <cvDatabase>
+                    <cvName>HPA</cvName>
+                  </cvDatabase>
+                </resource>
+                <qualifierType>EXP</qualifierType>
+                <type>SOURCE</type>
+                <isNegativeEvidence>false</isNegativeEvidence>
+              </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+            </resourceAssocs>
+          </com.genebio.nextprot.dataloader.dto.RawAnnotation>
+          <com.genebio.nextprot.dataloader.dto.RawAnnotation>
+            <qualifierType>EXP</qualifierType>
+            <type>expression info</type>
+            <isPropagableByDefault>false</isPropagableByDefault>
+            <description><![CDATA[cancer: distinct granular cytoplasmic positivity was found in most prostate cancers and in few liver cancers. Remaining malignant tissues were in general negative. ]]></description>
+            <resourceAssocs>
+              <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                <resource class="source.DbXref">
+                  <resourceType>DATABASE</resourceType>
+                  <accession>HPA000663</accession>
+                  <cvDatabase>
+                    <cvName>HPA</cvName>
+                  </cvDatabase>
+                </resource>
+                <qualifierType>EXP</qualifierType>
+                <type>SOURCE</type>
+                <isNegativeEvidence>false</isNegativeEvidence>
+              </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+            </resourceAssocs>
+          </com.genebio.nextprot.dataloader.dto.RawAnnotation>
+      </wrappedBean>
+    </summaryAnnotations>
+  </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
