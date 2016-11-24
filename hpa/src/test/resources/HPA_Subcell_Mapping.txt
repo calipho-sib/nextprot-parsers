@@ -11,7 +11,8 @@ golgi apparatus	SL-0132	-
 centrosome	SL-0048	-
 focal adhesions	SL-0118	-
 cell junctions	SL-0038	-
-cytoskeleton (microtubule plus end)	SL-0090	Note= Associated with microtubules plus end
+cytoskeleton (microtubule end)	SL-0090	Note=Associated with microtubules end
+cytoskeleton (microtubule plus end)	SL-0090	Note=Associated with microtubules plus end
 cytoskeleton (actin filaments)	SL-0090	Note=Associated with actin filaments
 cytoskeleton (intermediate filaments)	SL-0090	Note=Associated with intermediate filaments
 cytoskeleton (microtubules)	SL-0090	Note=Associated with microtubules
