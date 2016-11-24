@@ -62,6 +62,18 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
 
   }
 
+ "The HPAAntibodyNXParser " should " parse successfully input-antibody-2016.xml" in {
+
+     val infile = "input-antibody-2016.xml"
+     val hpaParser = new HPAAntibodyNXParser();
+    val wrapper = hpaParser.parse(hpadir +infile);
+    val writer = new FileWriter(new File(hpadir + "output-of" + infile))
+    writer.write(wrapper.antibodyList(0).toXML.toString)
+    writer.close()
+    assert(wrapper != null)
+  }
+ 
+  
   "The HPAAntibodyNXParser " should " find IH verification value in input-antibody-2016.xml" in {
 
     val infile = "input-antibody-2016.xml"

@@ -13,7 +13,7 @@ name := "nextprot-parser-core"
 
 organization := "org.nextprot.parser.core"
 
-version := "0.45.0"
+version := "0.46.0"
 
 description := "Nextprot Parser Core"
 
