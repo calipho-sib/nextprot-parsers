@@ -18,7 +18,7 @@ To deploy locally:
 sbt publish-local
 ```
 
-To deploy on nexus (in you need credentials configured on ~/.sbt/x.x/sonatype.sbt):
+To deploy on nexus (if you need credentials configured on ~/.sbt/x.x/sonatype.sbt):
 
 ```
 credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "$sonatype_username", "$sonatype_password")
@@ -44,7 +44,14 @@ cd hpa
 sbt
 > set version:="0.37.0"
 > publish
-> read note below:
+> exit 
+
+WARNING 1: don't forget to update verion of this dependency 
+in npteam@cactus:/work/projects/integration/nextprot-loaders/tools.integration/pom.xml 
+
+WARNING 2: 
+read note below
+
 ```
 
 IMPORTANT NOTE 
