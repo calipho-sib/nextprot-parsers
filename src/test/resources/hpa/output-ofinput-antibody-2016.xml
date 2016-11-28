@@ -1,0 +1,111 @@
+<com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
+      <wrappedBean>
+        <qualityQualifier>SILVER</qualityQualifier>
+        <identifierType>ANTIBODY</identifierType>
+        <dbXref>
+          <resourceType>DATABASE</resourceType>
+          <accession><![CDATA[HPA005624]]></accession>
+          <version>4</version>
+          <cvDatabase>
+            <cvName>HPA</cvName>
+          </cvDatabase>
+        </dbXref>
+        <bioSequences>
+  		<com.genebio.nextprot.datamodel.identifier.BioSequence>
+          <bioSequence>PDWSEPEEPENQTVNIQIWPREPCDDVKSQCTTLDVEESSWDDCEPSSLDTKVNPGGGITATKPVTSAEQKPIPALLSLTEESMPWKSSLPQKISLVQRGDDADQIEPPKVSSQERPLKVPSELGLGEE</bioSequence>
+          <bioSequenceType>PREST</bioSequenceType>
+          <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+     </com.genebio.nextprot.datamodel.identifier.BioSequence>
+      </bioSequences>
+        <identifierProperties>
+                <com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+      <cvPropertyName>
+        <cvName>immunohistochemistry validation</cvName>
+      </cvPropertyName>
+      <propertyValue><![CDATA[uncertain]]></propertyValue>
+      <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+    </com.genebio.nextprot.datamodel.identifier.IdentifierProperty><com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+      <cvPropertyName>
+        <cvName>western blot validation</cvName>
+      </cvPropertyName>
+      <propertyValue><![CDATA[supportive]]></propertyValue>
+      <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+    </com.genebio.nextprot.datamodel.identifier.IdentifierProperty><com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+      <cvPropertyName>
+        <cvName>protein array validation</cvName>
+      </cvPropertyName>
+      <propertyValue><![CDATA[supportive]]></propertyValue>
+      <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
+    </com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
+              </identifierProperties>
+      </wrappedBean>
+     <uniprotIds>
+  		<string>Q8IZE3</string>
+  	 </uniprotIds>
+     <summaryAnnotations>
+     <ac>HPA005624</ac>
+     <preComputedFeatures>false</preComputedFeatures>
+     <wrappedBean><com.genebio.nextprot.dataloader.dto.RawAnnotation>
+      
+
+      <isPropagableByDefault>false</isPropagableByDefault>
+      
+      <type>expression info</type>
+      <description><![CDATA[tissue:Weak to moderate cytoplasmic immunoreactivity was observed in most normal tissues, in some cases accentuated to the nuclear membrane.  Pancreatic islets, urothelial cells and trophoblastic cells were strongly stained.]]></description>
+      
+      <qualifierType>EXP</qualifierType>
+      <resourceAssocs>
+            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+      <resource class="source.DbXref">
+        <resourceType>DATABASE</resourceType>
+        <accession>HPA005624</accession>
+        <cvDatabase>
+          <cvName>HPA</cvName>
+        </cvDatabase>
+      </resource>
+      <evidenceCode>
+      	<cvName>ECO:0000087</cvName>
+        <cvTermCategory>ECO</cvTermCategory>
+      </evidenceCode>
+      
+      
+      
+      <isNegativeEvidence>false</isNegativeEvidence>
+      <type>SOURCE</type>
+      
+    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+          </resourceAssocs>
+    </com.genebio.nextprot.dataloader.dto.RawAnnotation><com.genebio.nextprot.dataloader.dto.RawAnnotation>
+      
+
+      <isPropagableByDefault>false</isPropagableByDefault>
+      
+      <type>expression info</type>
+      <description><![CDATA[cancer:Most tumour cells were negative. Testicular cancers and a few cases of endometrial, ovarian and breast cancers displayed moderate to strong cytoplasmic immunoreactivity.]]></description>
+      
+      <qualifierType>EXP</qualifierType>
+      <resourceAssocs>
+            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+      <resource class="source.DbXref">
+        <resourceType>DATABASE</resourceType>
+        <accession>HPA005624</accession>
+        <cvDatabase>
+          <cvName>HPA</cvName>
+        </cvDatabase>
+      </resource>
+      <evidenceCode>
+      	<cvName>ECO:0000087</cvName>
+        <cvTermCategory>ECO</cvTermCategory>
+      </evidenceCode>
+      
+      
+      
+      <isNegativeEvidence>false</isNegativeEvidence>
+      <type>SOURCE</type>
+      
+    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+          </resourceAssocs>
+    </com.genebio.nextprot.dataloader.dto.RawAnnotation>
+     </wrappedBean>
+   </summaryAnnotations>
+    </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>

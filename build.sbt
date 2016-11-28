@@ -31,10 +31,10 @@ fork := true
 
 
 // old core module options to be deleted if not useful
-javaOptions ++= Seq("-Dparser.impl=org.nextprot.parser.core.ParserTest",
-"-Dfiles.directory=/tmp/hpa-data",
-"-Dfiles.expression=^ENSG.*.xml$"
-)
+//javaOptions ++= Seq("-Dparser.impl=org.nextprot.parser.core.ParserTest",
+//"-Dfiles.directory=/tmp/hpa-data",
+//"-Dfiles.expression=^ENSG.*.xml$"
+//)
 
 // hpa module options
 javaOptions ++= Seq(
@@ -42,25 +42,36 @@ javaOptions ++= Seq(
 //"-Dfiles.directory=/tmp/ENS",
 "-Dfiles.directory=hpa-data",
 "-Dfiles.expression=^ENSG.*.xml$",
-//"-Doutput.file=/tmp/hpa/output.xml",
-//"-Dfailed.file=/tmp/hpa/failed.xml",
+"-Doutput.file=/tmp/hpa/output.xml",
+"-Dfailed.file=/tmp/hpa/failed.xml",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
-"-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt",
-"-Dfiles.entries=src/test/resources/org/nextprot/parser/ensg/entry-list.txt",
-"-Doutput.file=sp_ensg.txt"
+"-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt"
+//"-Dfiles.entries=src/test/resources/org/nextprot/parser/ensg/entry-list.txt"
+//"-Doutput.file=sp_ensg.txt"
 )
 
 resolvers += "nexus" at "http://miniwatt:8800/nexus/content/groups/public/"
 
+
+// pour scala 2.11 
+//libraryDependencies ++= Seq(
+//  "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
+//  "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
+//  "com.typesafe.akka" %% "akka-actor" % "2.3.2",
+//  "com.typesafe.akka" %% "akka-testkit" % "2.3.2",
+//  "junit" % "junit" % "4.11" % "test",
+//  "com.novocode" % "junit-interface" % "0.7" % "test->default",
+//  "code.google.com" % "xml-test" % "0.3.0" % "test"
+//)
+
 libraryDependencies ++= Seq(
+  "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
   "com.typesafe.akka" %% "akka-actor" % "2.2.0",
   "com.typesafe.akka" %% "akka-testkit" % "2.2.0",
-  "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
-  "code.google.com" % "xml-test" % "0.3.0" % "test",
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.46.0"
+  "code.google.com" % "xml-test" % "0.3.0" % "test"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
