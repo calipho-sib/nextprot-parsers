@@ -12,7 +12,7 @@ class PeptideAtlasPhosphoNXParser extends NXParser{
 
   var pInfo = ""
   var pep_count :Int = 0
-  val metadataMapfile = System.getProperty("metadatafile")
+  val metadataMapfile = System.getProperty("xmetadatafile")
 
   def parsingInfo: String = pInfo
   
@@ -24,7 +24,7 @@ class PeptideAtlasPhosphoNXParser extends NXParser{
   else PeptideAtlasUtils.getMetadataMap(this.metadataMapfile)
   }
 
-  // Now parse the csv data file and build a map with PaPids as key
+  // Now parse the tsv data file and build a map with PaPids as key
    val pepsMap: HashMap[String, ArrayBuffer[String]] = new HashMap();    
    val src = Source.fromFile(filename)  
 
