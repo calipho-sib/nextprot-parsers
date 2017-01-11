@@ -22,8 +22,8 @@ class PeptideAtlasPhosphoParserTest extends FlatSpec with Matchers {
 
     val parser = new PeptideAtlasPhosphoNXParser()
 
-    //parser.parse("/home/agateau/workspace/nextprot-parsers/peptide-atlas/src/test/resources/org/nextprot/parser/peptide/atlas/peptide_ptm_noSNP.tsv");
     val peptides = parser.parse("src/test/resources/org/nextprot/parser/peptide/atlas/sample.tsv");
+    //val peptides = parser.parse("/Users/agateau/Workspace-scala/nextprot-parsers/peptide-atlas/peptide_ptm_noSNP.tsv");
     
     assert(7 == parser.pep_count) // raw peptides as delivered in tsv by PeptideAtlas
     assert(7 == peptides.size) // peptide objects generated through parsing
