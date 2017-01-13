@@ -27,6 +27,7 @@ fork := true
 javaOptions ++= Seq(
 "-Xmx2000m",
 "-Dfiles.directory=/Users/agateau/Workspace-scala/nextprot-parsers/peptide-atlas",
+"-Dpretty",
 "-Dfiles.expression=peptide_ptm_noSNP.tsv"
 )
 
