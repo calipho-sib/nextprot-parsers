@@ -16,7 +16,6 @@ class NXWorker extends Actor {
 
   def receive = {
     case m: ProcessMSG => {
-      try {
         val parser = Class.forName(m.parserImpl).newInstance().asInstanceOf[org.nextprot.parser.core.NXParser];
         try {
     		val wrappedBean = parser.parse(m.file.getAbsolutePath())
@@ -32,7 +31,6 @@ class NXWorker extends Actor {
             sender ! NXExceptionFoundMSG(new NXException(m.file, UNEXPECTED_EXCEPTION, m.file.getName() + " - " + e.getMessage()), m.file)
           }
         }
-      }
     }
   }
 }

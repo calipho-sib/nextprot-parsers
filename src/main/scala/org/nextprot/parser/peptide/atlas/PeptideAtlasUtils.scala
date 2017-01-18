@@ -63,13 +63,13 @@ object PeptideAtlasUtils {
       if(pepLineTokens(2).toInt == pos) {
         val quality = if(pepLineTokens(3).toFloat >= 0.99) "GOLD" else "SILVER"
         var sampleId = pepLineTokens(4)
-        if(sampleId.endsWith("-")) sampleId = sampleId.dropRight(1) // Remove trailing dash
+        if(sampleId.contains("-")) sampleId = sampleId.split("-")(0) // Remove trailing dash or specifier (eg: 6525-heavy, 6900-medium)
         if(!smap.contains(sampleId)) Console.err.println(sampleId + " not mapped...") 
         else {
         mdata_pmid = smap(sampleId)
         val mdataList = mdata_pmid.split("-")
         val mdata = mdataList(0)
-        val pmid = if(mdataList.length > 1) mdataList(1) else null // Some datasets have no associated pmid
+        val pmid = if(mdataList.length > 1) mdataList(1) else "MDATA_0071_2010" // One datasets have no associated pmid: MDATA_071
         dbref = new DbXref(_mData=mdata, _pmid=pmid, _quality=quality )
         dbrefList = dbref :: dbrefList }
         }
@@ -78,6 +78,7 @@ object PeptideAtlasUtils {
    }
    
    def getMetadataMap1(filename: String): HashMap[String, String] = {
+     // Since the generation/maintenance of this format requires unnecessary manpower it will probably becomes obsolete
      /* Sample input: col1=mdata_acc, col2=sampleId col3=pubmedId (Paula's file)
       * 
 MDATA_0056  6526  26055452

@@ -1,11 +1,11 @@
 package org.nextprot.parser.core.actor
 import akka.actor.{ ActorRef, ActorSystem, Props, Actor, Inbox }
+import akka.routing.RoundRobinPool
 import java.io.File
 import java.io.OutputStream
 import scala.Array.canBuildFrom
 import java.io.FileWriter
 import scala.collection.mutable.ArrayBuffer
-import akka.routing.RoundRobinRouter
 import org.nextprot.parser.core.actor.message._
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.core.NXProperties._
@@ -37,7 +37,8 @@ class NXMaster(nxParserImpl: String, nxReducerImpl: String, files: List[File], l
 
   private val workers = Runtime.getRuntime().availableProcessors(); //* 16;
   println("Dispatching files through " + workers + " workers");
-  private val workerRouter = context.actorOf(Props[NXWorker].withRouter(RoundRobinRouter(workers)), name = "workerRouter");
+  
+  private val workerRouter = context.actorOf(RoundRobinPool(workers).props(Props[NXWorker]), "workerRouter");
   val logFileName = System.getProperty(failedFileProperty)
   private lazy val logFile: FileWriter = new FileWriter(logFileName, false)
 

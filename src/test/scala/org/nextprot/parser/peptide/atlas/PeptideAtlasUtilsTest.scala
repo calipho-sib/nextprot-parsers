@@ -39,7 +39,7 @@ class PeptideAtlasUtilsTest extends FlatSpec with Matchers {
   it should "return proper map for sample ids with maping file 2" in {
 
     val sampleIdMap = PeptideAtlasUtils.getMetadataMap("src/test/resources/org/nextprot/parser/peptide/atlas/metadata.txt") 
-    assert(177 == sampleIdMap.size)
+    assert(189 == sampleIdMap.size)
     assert("MDATA_0079-22496350" == sampleIdMap("5333"))
   }
   

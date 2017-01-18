@@ -24,3 +24,5 @@ ln-s-data.xml
 brca.tsv
 bioeditor/.cache-main
 bioeditor/.cache-tests
+.cache-tests
+.cache-main

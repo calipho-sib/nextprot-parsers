@@ -5,8 +5,6 @@ import java.io.OutputStream
 import scala.Array.canBuildFrom
 import java.io.FileWriter
 import scala.collection.mutable.ArrayBuffer
-import akka.routing.RoundRobinLike
-import akka.routing.RoundRobinRouter
 import java.util.Collection
 import java.io.File
 import org.nextprot.parser.core.actor.message.EndActorSystemMSG
@@ -32,7 +30,7 @@ class NXListener extends Actor {
       Stats.printStats;
       writeDetails;
       
-      context.system.shutdown()
+      context.system.terminate()
     }
     case m: NXProcessedFileMSG => {
       detailedInfoMsgs.append(m);

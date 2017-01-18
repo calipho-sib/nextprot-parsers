@@ -13,12 +13,11 @@ name := "nextprot-scala-parsers"
 
 organization := "org.nextprot.parser"
 
-version := "1.0.0"
+version := "1.1.0-SNAPSHOT"
 
 description := "Nextprot Scala Parsers"
 
-//scalaVersion := "2.11.8"
-scalaVersion := "2.10.4"
+scalaVersion := "2.11.8"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature" )
 
@@ -54,24 +53,16 @@ javaOptions ++= Seq(
 resolvers += "nexus" at "http://miniwatt:8800/nexus/content/groups/public/"
 
 
-// pour scala 2.11 
-//libraryDependencies ++= Seq(
-//  "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
-//  "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
-//  "com.typesafe.akka" %% "akka-actor" % "2.3.2",
-//  "com.typesafe.akka" %% "akka-testkit" % "2.3.2",
-//  "junit" % "junit" % "4.11" % "test",
-//  "com.novocode" % "junit-interface" % "0.7" % "test->default",
-//  "code.google.com" % "xml-test" % "0.3.0" % "test"
-//)
-
 libraryDependencies ++= Seq(
-  "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
-  "com.typesafe.akka" %% "akka-actor" % "2.2.0",
-  "com.typesafe.akka" %% "akka-testkit" % "2.2.0",
+  "org.scalatest" % "scalatest_2.11" % "3.0.1" % "test",
+  "com.typesafe.akka" %% "akka-actor" % "2.4.16",
+  "com.typesafe.akka" %% "akka-testkit" % "2.4.16",
   "junit" % "junit" % "4.11" % "test",
+  "org.apache.jena" % "apache-jena-libs" % "3.0.1",
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
-  "code.google.com" % "xml-test" % "0.3.0" % "test"
+  "org.scala-lang.modules" % "scala-xml_2.11" % "1.0.5",
+  "code.google.com" % "xml-test" % "0.3.0" % "test",
+  "org.nextprot" % "nextprot-commons" % "2.1.0-SNAPSHOT"
 )
 
 // Publish section ////////////////////////////////////////////////////////////////////////////////////////////////////////////
