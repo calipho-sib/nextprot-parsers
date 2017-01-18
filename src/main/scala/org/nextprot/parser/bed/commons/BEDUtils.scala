@@ -40,6 +40,7 @@ object BEDUtils {
 
   def getRelationInformation(relation: String, isNegative: Boolean): RelationInfo = {
 
+    
     val NL = "\\n"; // new line
     val IS_NEGATIVE = true; //Constants to make pattern matching easier to understand (do not change it)
     val IS_POSITIVE = false;  //Constants to make pattern matching easier to understand (do not change it)
@@ -53,8 +54,8 @@ object BEDUtils {
       // Sub-cellular location
       case (IncreasesLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), INCREASE, false);
       case (DecreasesLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), DECREASE, false);
-      case (HasNormalLocalization.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), NO_IMPACT, false);
-      case (LocalisesToANewCompartment.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), GAIN, false);
+      case (HasNoImpactOnLocalizationTo.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), NO_IMPACT, false);
+      case (GainsLocalisationTo.name, IS_POSITIVE) => return new RelationInfoSimple(List(GoCellularComponent), List(GoCellularComponentCv), GAIN, false);
 
       // Effect on catalytic activity and cellular processes //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -63,10 +64,10 @@ object BEDUtils {
       case (Impairs.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, IMPACT, false);
       case (Increases.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, INCREASE, false);
       case (Decreases.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, DECREASE, false);
-      case (Gains.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, GAIN, false);
+      case (GainsFunction.name, IS_POSITIVE) => return new RelationInfoSimple(l_BP_MF, l_BP_MF_Cv, GAIN, false);
 
       // Effect on protein interaction //////////////////////////////////////////////////////////////////////////////////////
-      case (HasNormalBinding.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), NO_IMPACT, noteForInteractions, true);
+      case (HasNoImpactOnBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), NO_IMPACT, noteForInteractions, true);
       case (IncreasesBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), INCREASE, noteForInteractions, true);
       case (DecreasesBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), DECREASE, noteForInteractions, true);
       case (GainsBindingTo.name, IS_POSITIVE) => return new RelationInfo(List(BinaryInteraction), List(), GAIN, noteForInteractions, true);
@@ -83,7 +84,7 @@ object BEDUtils {
       // Effect on Mammalian Phenotype
       case (CausesPhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), IMPACT, "", false);
       case (DoesNotCausePhenotype.name, IS_POSITIVE) => return new RelationInfo(List(MammalianPhenotype), List(MammalianPhenotypeCv), NO_IMPACT, "", false);
-
+      
       case _ => return throw new Exception("Relation " + relation + " is not supported");
 
     }

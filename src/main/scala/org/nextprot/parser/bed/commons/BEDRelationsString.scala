@@ -14,21 +14,21 @@ object BEDRelationsString extends Enumeration {
   implicit def valueToRelationsVal(x: Value) = x.asInstanceOf[Val]
 
   val DecreasesProteinProperty = Val("decreases protein property")
-  val HasNormalProteinProperty = Val("has normal protein property")
+  val HasNormalProteinProperty = Val("has no impact on protein property")
   val IncreasesProteinProperty = Val("increases protein property")
   
   val IncreasesLocalization = Val("increases localization to")
   val DecreasesLocalization = Val("decreases localization to")
-  val HasNormalLocalization = Val("has normal localization to")
-  val LocalisesToANewCompartment = Val("localizes to a new compartment")
+  val HasNoImpactOnLocalizationTo = Val("has no impact on localization to")
+  val GainsLocalisationTo = Val("gains localization to")
 
-  val HasNormal = Val("has normal")
-  val Impairs = Val("impairs")
+  val HasNormal = Val("has no impact on")
+  val Impairs = Val("impacts")
   val Increases = Val("increases")
   val Decreases = Val("decreases")
-  val Gains = Val("gains function")
+  val GainsFunction = Val("gains function")
 
-  val HasNormalBinding = Val("has normal binding to")
+  val HasNoImpactOnBindingTo = Val("has no impact on binding to")
   val IncreasesBindingTo = Val("increases binding to")
   val DecreasesBindingTo = Val("decreases binding to")
   val GainsBindingTo = Val("gains binding to")
@@ -41,5 +41,5 @@ object BEDRelationsString extends Enumeration {
 
   val IsAPoorerSubstrateFor = Val("is a poorer substrate for")
   val IsADominantNegativeForm = Val("is a dominant negative form")
-
+ 
 }

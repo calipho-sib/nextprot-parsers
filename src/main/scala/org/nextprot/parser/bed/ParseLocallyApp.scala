@@ -9,26 +9,34 @@ import org.nextprot.parser.bed.converter.BedStatementConverter
 import java.util.HashSet
 import org.nextprot.commons.statements.constants.NextProtSource
 
-object LocalLoaderApp extends App {
+/**
+ * This app is used to test the parsing of the statements and errors.
+ * Web statements should be use in production (on kant) instead
+ */
+object ParseLocallyApp extends App {
 
-  val location = "/Users/dteixeira/Documents/bed/";
+  val location = "/Users/dteixeira/Documents/nxflat-proxy/";
   val load = false;
 
   val statements = scala.collection.mutable.Set[Statement]();
 
+  val beforeParsing = currentTimeMillis();
+
   BedStatementConverter.addProxyDir(location);
   BEDConstants.GENE_LIST.foreach { g =>
 
-    val statementsForGene = BedStatementConverter.convert(g)._1;
+    //val date = "2016-08-22";
+    val date = "2017-01-13";
+    
+    val statementsForGene = BedStatementConverter.convert("bioeditor", date, g)._1;
     println("Found " + statementsForGene.size + " for gene " + "scn11a");
     statements ++= statementsForGene;
     
   }
 
-  val beforeLoad = currentTimeMillis();
 
   //statementLoaderService.loadRawStatementsForSource(new HashSet(statements.toList), NextProtSource.BioEditor);
 
-  println("Done in " + (currentTimeMillis() - beforeLoad) + " ms for " + statements.size);
+  println("Parsed in " + (currentTimeMillis() - beforeParsing) + " ms for " + statements.size + " statements");
 
 }

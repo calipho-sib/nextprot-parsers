@@ -19,12 +19,8 @@ import org.nextprot.commons.constants.QualityQualifier
 
 object BedStatementConverter {
 
-  // cp /Volumes/common/Calipho/caviar/xml/*.xml ~/Documents/bed/
-  // cp /Volumes/common/Calipho/navmutpredict/xml/*.xml ~/Documents/bed/
-
   val proxyLocations = scala.collection.mutable.SortedSet[String]();
-  proxyLocations.add("/share/sib/common/Calipho/bed-data/2016-08-22/");
-  //proxyLocations.add("/share/sib/common/Calipho/navmutpredict/xml/");
+  proxyLocations.add("/share/sib/common/Calipho/nxflat-proxy/");
   
   val load = true;
 
@@ -32,13 +28,13 @@ object BedStatementConverter {
     proxyLocations.add(directory);
   }
 
-  def convertAll(): (List[Statement], String) = {
+  def convertAll(database :String, releaseDate: String): (List[Statement], String) = {
 
     val debugNotes = new StringBuffer(); 
 
     val statements = BEDConstants.GENE_LIST.flatMap { g => 
 
-      val result = convert(g);
+      val result = convert(database :String, releaseDate: String, g);
       val statements = result._1;
       debugNotes.append(result._2);
       
@@ -49,7 +45,7 @@ object BedStatementConverter {
     (statements, debugNotes.toString());
   }
 
-  def convert(geneName: String): (List[Statement], String) = {
+  def convert(database :String, releaseDate: String, geneName: String): (List[Statement], String) = {
 
     val debugNotes = new StringBuffer(); 
 
@@ -59,11 +55,11 @@ object BedStatementConverter {
 
     BEDVariantService.reinitialize();
 
-    val fileExistence = proxyLocations.filter { pl => new File(pl + geneName + ".xml").exists()};
+    val fileExistence = proxyLocations.filter { pl => new File(pl + "/" + database + "/" + releaseDate + "/" + geneName + ".xml").exists()};
     if (fileExistence.isEmpty)
       throw new RuntimeException("Can't find file " + geneName + ".xml in following locations: " + proxyLocations.mkString("\n"));
 
-    val f = new File(fileExistence.toList(0) + geneName + ".xml");
+    val f = new File(fileExistence.toList(0) + "/" + database + "/" + releaseDate + "/" + geneName + ".xml");
 
     val entryElem = scala.xml.XML.loadFile(f);
 
@@ -72,7 +68,7 @@ object BedStatementConverter {
     val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
-      filter(e => ((e.isGO || e.isBinaryInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative));
+      filter(e => ((e.isGO || e.isBinaryInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative && !e.isRegulation));
 
     vpGoEvidences.foreach(vpgoe => {
 
