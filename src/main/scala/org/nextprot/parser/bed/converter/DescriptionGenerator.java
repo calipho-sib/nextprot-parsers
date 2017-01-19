@@ -22,7 +22,13 @@ public class DescriptionGenerator {
         }else  if(category.equals("go-molecular-function")) {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("mammalian-phenotype")) {
-        	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        	//According to https://issues.isb-sib.ch/browse/NEXTPROT-1195
+        	if(impactString.equals("impacts")) {
+            	return "causes phenotype " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        	}else if(impactString.equals("has no impact on")) {
+            	return "does not cause phenotype " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        	} else throw new RuntimeException("Not expecting any other relation at this stage" + impactString);
+        	
         } else if(category.equals("binary-interaction")) {
         	return impactString + " binding to " + statement.getValue(StatementField.BIOLOGICAL_OBJECT_NAME);
         }else  if(category.equals("small-molecule-interaction")) {
