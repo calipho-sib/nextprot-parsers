@@ -86,9 +86,9 @@ object BedStatementConverter {
 
   }
 
-  def getVariantDefinitionStatement(debugNotes : StringBuffer, entryXML: NodeSeq, evidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
+  def getVariantDefinitionStatement(debugNotes : StringBuffer, entryXML: NodeSeq, vpEvidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
 
-    val subjectsWithNote = evidence.getSubjectAllelsWithNote;
+    val subjectsWithNote = vpEvidence.getSubjectAllelsWithNote;
 
     val note = subjectsWithNote._2;
     val subjects = subjectsWithNote._1;
@@ -100,7 +100,7 @@ object BedStatementConverter {
       val vdStmtBuilder = StatementBuilder.createNew();
       addDebugNote(debugNotes, note)
       if (variant == null) {
-        val newNote = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + evidence._annotationAccession;
+        val newNote = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + vpEvidence._annotationAccession;
         addDebugNote(debugNotes, newNote)
         null;
       } else {
@@ -111,7 +111,7 @@ object BedStatementConverter {
         val variantEntryAccession = if (variantIsoAccession != null && variantIsoAccession.length() > 3) {
           variantIsoAccession.substring(0, variantIsoAccession.indexOf("-"));
         } else {
-          val note = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + evidence._annotationAccession;
+          val note = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + vpEvidence._annotationAccession;
           addDebugNote(debugNotes, note);
           null;
         };
@@ -119,7 +119,7 @@ object BedStatementConverter {
         val vGene = if (variant.variantUniqueName != null && variant.variantUniqueName.length() > 3) {
           variant.variantUniqueName.substring(0, variant.variantUniqueName.indexOf("-"))
         } else {
-          val warning = "Yooo problems occured with " + variant.identifierAccession + " when looking for evidence " + evidence._annotationAccession;
+          val warning = "Yooo problems occured with " + variant.identifierAccession + " when looking for evidence " + vpEvidence._annotationAccession;
           addDebugNote(debugNotes, warning);
           null;
         };
@@ -138,34 +138,9 @@ object BedStatementConverter {
         vdStmtBuilder.addQuality(QualityQualifier.GOLD);
         vdStmtBuilder.addField(EVIDENCE_CODE, variant.getEcoCode);
 
-        //https://issues.isb-sib.ch/browse/BIOEDITOR-471
-        if(variant.getNextprotAnnotationCategory.equals("mutagenesis")){
-
-          if(variant.identifierAccession != null && !variant.identifierAccession.isEmpty()){
-
-            vdStmtBuilder.addField(REFERENCE_ACCESSION, variant.identifierAccession);
-            vdStmtBuilder.addField(REFERENCE_DATABASE, variant.identifierDatabase);
-
-          
-          }else {
-            
-            vdStmtBuilder.addField(REFERENCE_ACCESSION, evidence.getPubmedId());
-            vdStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
-
-          }
-
-        }else if(variant.getNextprotAnnotationCategory.equals("variant")){
-          
-          
-          if(variant.identifierAccession == null || variant.identifierAccession.isEmpty()) {
-            addDebugNote(debugNotes, "Publication not found for " + variant.variantAccession);
-          }else {
-            vdStmtBuilder.addField(REFERENCE_ACCESSION, variant.identifierAccession);
-            vdStmtBuilder.addField(REFERENCE_DATABASE, variant.identifierDatabase);
-          }
-          
-        }else throw new RuntimeException("Variant " + variant.getNextprotAnnotationCategory + " is not expected at this point");
-        
+        //https://issues.isb-sib.ch/browse/NEXTPROT-1196 (we used to have a complicated rule BIOEDITOR-471)
+        vdStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getPubmedId());
+        vdStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
 
         addDebugNote(debugNotes, note);
 
