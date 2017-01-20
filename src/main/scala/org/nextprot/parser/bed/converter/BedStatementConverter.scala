@@ -47,6 +47,8 @@ object BedStatementConverter {
 
   def convert(database :String, releaseDate: String, geneName: String): (List[Statement], String) = {
 
+    println("Converting " + database  + "/" + releaseDate + "/" + geneName);
+
     val debugNotes = new StringBuffer(); 
 
     val statements = scala.collection.mutable.Set[Statement]();
