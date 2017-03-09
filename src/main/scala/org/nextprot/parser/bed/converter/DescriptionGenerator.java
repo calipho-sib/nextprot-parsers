@@ -21,6 +21,8 @@ public class DescriptionGenerator {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-molecular-function")) {
         	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
+        }else  if(category.equals("electrophysiological-parameter")) {
+        	return impactString + " " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("mammalian-phenotype")) {
         	//According to https://issues.isb-sib.ch/browse/NEXTPROT-1195
         	if(impactString.equals("impacts")) {

@@ -16,14 +16,14 @@ object BEDRelationsString extends Enumeration {
   val DecreasesProteinProperty = Val("decreases protein property")
   val HasNormalProteinProperty = Val("has no impact on protein property")
   val IncreasesProteinProperty = Val("increases protein property")
-  
+
   val IncreasesLocalization = Val("increases localization to")
   val DecreasesLocalization = Val("decreases localization to")
   val HasNoImpactOnLocalizationTo = Val("has no impact on localization to")
   val GainsLocalisationTo = Val("gains localization to")
 
-  val HasNormal = Val("has no impact on")
-  val Impairs = Val("impacts")
+  val HasNoImpactOn = Val("has no impact on")
+  val Impacts = Val("impacts")
   val Increases = Val("increases")
   val Decreases = Val("decreases")
   val GainsFunction = Val("gains function")
@@ -41,5 +41,12 @@ object BEDRelationsString extends Enumeration {
 
   val IsAPoorerSubstrateFor = Val("is a poorer substrate for")
   val IsADominantNegativeForm = Val("is a dominant negative form")
- 
+
+  val Depolarizes = Val("depolarizes")
+  val Hyperpolarizes = Val("hyperpolarizes")
+  val Hastens = Val("hastens")
+  val Slows = Val("slows")
+  val HasNoImpactOnTemperatureDependanceOf = Val("has no impact on temperature-dependence of")
+  val ImpactsOnTemperatureDependanceOf = Val("impacts temperature-dependence of")
+
 }

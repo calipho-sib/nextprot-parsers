@@ -57,7 +57,7 @@ object BEDAnnotationService {
     }).toList;
   }
 
-  def getBEDVPAnnotations(entry: NodeSeq): List[BEDAnnotation] = {
+  def getBEDVPAndVeAnnotations(entry: NodeSeq): List[BEDAnnotation] = {
 
     val currentNextprotAccession: String = (entry \ "@accession").text;
     val currentNextprotGene: String = ((entry \ "molecularEntities" \\ "protein").filter(p => (p \ "@accession").text.equals(currentNextprotAccession)).head \ "@geneName").text;
@@ -85,8 +85,7 @@ object BEDAnnotationService {
 
       val _accession = (xmlA \ "@accession").text
 
-      if(!_accession.startsWith("CAVA-VP")){
-        //println("skipping non vp" + _accession);
+      if(!(_accession.startsWith("CAVA-VP") || _accession.startsWith("CAVA-VE"))){
         null;
       } else if (break) {
         //println("skipping protein groups and complexes")
@@ -95,7 +94,7 @@ object BEDAnnotationService {
         //println("skipping subjects with which are not directly related to the current entry" + _subject + " for entry " + currentNextprotGene)
         null;
       } else {
-
+        
         val evidences = getBEDEvidence(currentNextprotGene, _accession, _subject, _relation, _objectTerm, _bioObject, _bioObjectType, xmlA);
         new BEDAnnotation(_accession, _subject, _relation, _objectTerm, _bioObject, evidences);
 

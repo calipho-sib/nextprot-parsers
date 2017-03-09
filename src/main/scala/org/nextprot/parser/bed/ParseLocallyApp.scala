@@ -26,10 +26,10 @@ object ParseLocallyApp extends App {
   BEDConstants.GENE_LIST.foreach { g =>
 
     //val date = "2016-08-22";
-    val date = "2017-01-13";
+    val date = "2017-03-09";
     
     val statementsForGene = BedStatementConverter.convert("bioeditor", date, g)._1;
-    println("Found " + statementsForGene.size + " for gene " + "scn11a");
+    println("Found " + statementsForGene.size + " for gene " + g);
     statements ++= statementsForGene;
     
   }

@@ -22,5 +22,6 @@ object NXTerminology extends Enumeration {
   val GoBiologicalProcessCv = Val("go-biological-process-cv")
   val GoMolecularFunctionCv = Val("go-molecular-function-cv")
   val MammalianPhenotypeCv = Val("mammalian-phenotype-cv")
+  val ElectrophysiologicalParameterCv = Val("electrophysiological-parameter-cv")
 
 }

@@ -10,6 +10,7 @@ import org.nextprot.parser.bed.commons.BEDUtils
 import org.nextprot.parser.bed.commons.BEDUtils.RelationInfo
 import org.nextprot.parser.bed.BEDConstants
 import org.nextprot.parser.bed.service.GeneNameServiceCached
+import org.nextprot.parser.bed.commons.BEDAnnotationType
 
 case class BEDEvidence(
   val _annotationAccession: String,
@@ -99,7 +100,7 @@ case class BEDEvidence(
         case _ => throw new Exception("not expecting category " + subcategory + _bedObjectCvTerm);
       }
     } else {
-      val categories = BEDUtils.getRelationInformation(_relation, isNegative).getAllowedCategories();
+      val categories = BEDUtils.getRelationInformation(_relation, isNegative, getAnnotationType()).getAllowedCategories();
       if (categories.size != 1) {
         throw new Exception("Expected one possible category for " + _relation + " " + isNegative + " found: " + categories + " term :" + _bedObjectCvTerm.category)
       } else {
@@ -134,7 +135,7 @@ case class BEDEvidence(
         case _ => throw new Exception("not expecting terminology " + subcategory);
       }
     } else {
-      val terminologies = BEDUtils.getRelationInformation(_relation, isNegative).getAllowedTerminologies();
+      val terminologies = BEDUtils.getRelationInformation(_relation, isNegative, getAnnotationType()).getAllowedTerminologies();
       if (terminologies.size == 1) {
         terminologies(0);
       } else if (terminologies.size > 1) {
@@ -149,6 +150,18 @@ case class BEDEvidence(
     return _annotationAccession.contains("CAVA-VP");
   }
 
+  def isVE(): Boolean = {
+    return _annotationAccession.contains("CAVA-VE");
+  }
+
+  def getAnnotationType(): BEDAnnotationType.Value = {
+
+    if(isVP()) {return BEDAnnotationType.VP}
+    if(isVE()) {return BEDAnnotationType.VE}
+    throw new RuntimeException("Can't find annotationy type for " + this._annotationAccession);
+    
+  }
+    
   def isProteinProperty(): Boolean = {
     return _relation.toLowerCase().contains("protein property");
   }
@@ -184,7 +197,7 @@ case class BEDEvidence(
   }
 
   def getRelationInfo(): RelationInfo = {
-    return BEDUtils.getRelationInformation(_relation, isNegative);
+    return BEDUtils.getRelationInformation(_relation, isNegative, getAnnotationType());
   }
   
   def getEvidenceCode(): String = {

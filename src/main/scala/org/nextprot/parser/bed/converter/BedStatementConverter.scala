@@ -67,10 +67,10 @@ object BedStatementConverter {
 
     val nextprotAccession: String = (entryElem \ "@accession").text;
 
-    val annotations = BEDAnnotationService.getBEDVPAnnotations(entryElem);
+    val annotations = BEDAnnotationService.getBEDVPAndVeAnnotations(entryElem);
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
-      filter(e => ((e.isGO || e.isBinaryInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative && !e.isRegulation));
+      filter(e => ((e.isVE || e.isGO || e.isBinaryInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative && !e.isRegulation));
 
     vpGoEvidences.foreach(vpgoe => {
 
@@ -102,7 +102,8 @@ object BedStatementConverter {
       val vdStmtBuilder = StatementBuilder.createNew();
       addDebugNote(debugNotes, note)
       if (variant == null) {
-        val newNote = "Some problems occured with " + variant.variantAccession + " when looking for evidence " + vpEvidence._annotationAccession;
+        val newNote = "Some problems occured with variant " + subject + " when looking for evidence " + vpEvidence._annotationAccession;
+        throw new RuntimeException(newNote)
         addDebugNote(debugNotes, newNote)
         null;
       } else {
