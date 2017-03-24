@@ -142,8 +142,8 @@ object BedStatementConverter {
         vdStmtBuilder.addField(EVIDENCE_CODE, variant.getEcoCode);
 
         //https://issues.isb-sib.ch/browse/NEXTPROT-1196 (we used to have a complicated rule BIOEDITOR-471)
-        vdStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getPubmedId());
-        vdStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
+        vdStmtBuilder.addField(REFERENCE_DATABASE, vpEvidence.getReferenceDatabase);
+        vdStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getReferenceAccession);
 
         addDebugNote(debugNotes, note);
 
@@ -180,8 +180,8 @@ object BedStatementConverter {
       .addField(EVIDENCE_INTENSITY, evidence.intensity)
       .addField(ANNOTATION_SUBJECT_SPECIES, evidence.subjectProteinOrigin) //TODO should find out which one is which
       .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin)//TODO should find out which one is which
-      .addField(REFERENCE_ACCESSION, evidence.getPubmedId())
-      .addField(REFERENCE_DATABASE, "PubMed")
+      .addField(REFERENCE_DATABASE, evidence.getReferenceDatabase)
+      .addField(REFERENCE_ACCESSION, evidence.getReferenceAccession)
       .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
       .addField(EVIDENCE_NOTE, evidence.getEvidenceNote)
       .addSourceInfo("N/A", "BioEditor");
@@ -216,8 +216,8 @@ object BedStatementConverter {
     //according to specs the normal statements should contain the same eco and references as the VP
     normalStmtBuilder.addField(EVIDENCE_CODE, vpEvidence.getEvidenceCode());
 
-    normalStmtBuilder.addField(REFERENCE_DATABASE, "PubMed");
-    normalStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getPubmedId());
+    normalStmtBuilder.addField(REFERENCE_DATABASE, vpEvidence.getReferenceDatabase);
+    normalStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getReferenceAccession);
   
     normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();

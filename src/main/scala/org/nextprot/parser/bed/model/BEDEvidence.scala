@@ -13,22 +13,22 @@ import org.nextprot.parser.bed.service.GeneNameServiceCached
 import org.nextprot.parser.bed.commons.BEDAnnotationType
 
 case class BEDEvidence(
-  val _annotationAccession: String,
-  val _subject: String,
-  val _relation: String,
-  val _bedObjectCvTerm: BEDCV,
-  val _bioObject: String,
-  val _bioObjectType: String,
-  val intensity: String,
-  val isNegative: Boolean,
-  val _quality: String,
-  val subjectProteinOrigin: String,
-  val objectProteinOrigin: String,
-  val ecoString: String,
-  val vdAllels: List[String],
-  val mgiAllels: List[String],
-  val txtAllels: List[String],
-  val references: List[(String, String)]) {
+    val _annotationAccession: String,
+    val _subject: String,
+    val _relation: String,
+    val _bedObjectCvTerm: BEDCV,
+    val _bioObject: String,
+    val _bioObjectType: String,
+    val intensity: String,
+    val isNegative: Boolean,
+    val _quality: String,
+    val subjectProteinOrigin: String,
+    val objectProteinOrigin: String,
+    val ecoString: String,
+    val vdAllels: List[String],
+    val mgiAllels: List[String],
+    val txtAllels: List[String],
+    val references: List[(String, String)]) {
 
   def extractVDFromTxtAllel(text: String): String = {
     val i = text.indexOf("VDSubject:");
@@ -67,16 +67,16 @@ case class BEDEvidence(
     }
 
     val subjectGene = _subject.substring(0, _subject.indexOf("-")).toLowerCase();
-    
+
     val subjectAllelsSet = subjectAllels.toSet;
-    val response = subjectAllelsSet.filter { a => a.toLowerCase().startsWith(subjectGene)}.toSet;
-    
-    if(subjectAllelsSet.size != response.size){
+    val response = subjectAllelsSet.filter { a => a.toLowerCase().startsWith(subjectGene) }.toSet;
+
+    if (subjectAllelsSet.size != response.size) {
       //We don't know how to deal wtih subjects on multiple genes, therefore we remove the subjects which don't belong to the gene
-      note += "removing one allele for multiple genes " + _annotationAccession + " set: " + subjectAllelsSet + " filtered set " + response + " subject: " + _subject + " gene name " + subjectGene;
-      println(note);
+      //note += "removing one allele for multiple genes " + _annotationAccession + " set: " + subjectAllelsSet + " filtered set " + response + " subject: " + _subject + " gene name " + subjectGene;
+      //println(note);
     }
-    
+
     return (response, note);
 
   }
@@ -97,7 +97,7 @@ case class BEDEvidence(
         case "Gene Ontology molecular function" => GoMolecularFunction;
         case "Gene Ontology biological process" => GoBiologicalProcess;
         case "Gene Ontology cellular component" => GoCellularComponent;
-        case _ => throw new Exception("not expecting category " + subcategory + _bedObjectCvTerm);
+        case _                                  => throw new Exception("not expecting category " + subcategory + _bedObjectCvTerm);
       }
     } else {
       val categories = BEDUtils.getRelationInformation(_relation, isNegative, getAnnotationType()).getAllowedCategories();
@@ -117,8 +117,8 @@ case class BEDEvidence(
 
   def getNXBioObject(): String = {
     if (getRelationInfo.getBioObject) {
-      if(_bioObjectType.equals("protein")){
-          return GeneNameServiceCached.getNXAccessionForGeneName(_bioObject);
+      if (_bioObjectType.equals("protein")) {
+        return GeneNameServiceCached.getNXAccessionForGeneName(_bioObject);
       }
       return _bioObject;
     } else return null;
@@ -132,7 +132,7 @@ case class BEDEvidence(
         case "Gene Ontology molecular function" => GoMolecularFunctionCv;
         case "Gene Ontology biological process" => GoBiologicalProcessCv;
         case "Gene Ontology cellular component" => GoCellularComponentCv;
-        case _ => throw new Exception("not expecting terminology " + subcategory);
+        case _                                  => throw new Exception("not expecting terminology " + subcategory);
       }
     } else {
       val terminologies = BEDUtils.getRelationInformation(_relation, isNegative, getAnnotationType()).getAllowedTerminologies();
@@ -156,12 +156,12 @@ case class BEDEvidence(
 
   def getAnnotationType(): BEDAnnotationType.Value = {
 
-    if(isVP()) {return BEDAnnotationType.VP}
-    if(isVE()) {return BEDAnnotationType.VE}
+    if (isVP()) { return BEDAnnotationType.VP }
+    if (isVE()) { return BEDAnnotationType.VE }
     throw new RuntimeException("Can't find annotationy type for " + this._annotationAccession);
-    
+
   }
-    
+
   def isProteinProperty(): Boolean = {
     return _relation.toLowerCase().contains("protein property");
   }
@@ -169,7 +169,7 @@ case class BEDEvidence(
   def isMammalianPhenotype(): Boolean = {
     return _relation.toLowerCase().contains("phenotype");
   }
-    
+
   def isInteraction(): Boolean = {
     return _relation.toLowerCase().contains("binding");
   }
@@ -178,12 +178,10 @@ case class BEDEvidence(
     return (_relation.toLowerCase().contains("binding") && "protein".equals(_bioObjectType));
   }
 
-  
   def isRegulation(): Boolean = {
     return (_relation.toLowerCase().contains("regulat"));
   }
 
-    
   def isGO(): Boolean = {
     return _bedObjectCvTerm.category.equals("Gene Ontology");
   }
@@ -199,11 +197,11 @@ case class BEDEvidence(
   def getRelationInfo(): RelationInfo = {
     return BEDUtils.getRelationInformation(_relation, isNegative, getAnnotationType());
   }
-  
+
   def getEvidenceCode(): String = {
-    if(!"Homo sapiens".equalsIgnoreCase(subjectProteinOrigin)){
+    if (!"Homo sapiens".equalsIgnoreCase(subjectProteinOrigin)) {
       return "ECO:0000250"; //When subject is not human, then add ECO ISS (sequence similarity)
-    }else {
+    } else {
       return "ECO:0000006"; //Experimental evidence
     }
   }
@@ -211,14 +209,19 @@ case class BEDEvidence(
   def getEvidenceNote(): String = {
     return "Additional experimental evidence:" + ecoString + "\n"
   }
-   
 
-  def getPubmedId(): String = {
-    return references.filter(_._1.equals("PubMed")).map(_._2).toList.mkString(",")
+  def getReferenceDatabase(): String = {
+    val refs = references.map(_._1).toList;
+    if(refs.size != 1)
+      throw new RuntimeException("Only one database is allowed for evidences" + _annotationAccession);
+    return refs(0)
   }
-  
-  def getCrossRef(): String = {
-    return references.filter(!_._1.equals("PubMed")).map(_._2).toList.mkString(",")
+
+  def getReferenceAccession(): String = {
+    val refs = references.map(_._2).toList;
+    if(refs.size != 1)
+      throw new RuntimeException("Only one accession is allowed for evidence " + _annotationAccession);
+    return refs(0)
   }
 
 }

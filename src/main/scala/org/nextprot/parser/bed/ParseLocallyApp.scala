@@ -8,6 +8,7 @@ import org.nextprot.commons.statements.Statement
 import org.nextprot.parser.bed.converter.BedStatementConverter
 import java.util.HashSet
 import org.nextprot.commons.statements.constants.NextProtSource
+import org.nextprot.commons.statements.StatementField
 
 /**
  * This app is used to test the parsing of the statements and errors.
@@ -23,10 +24,9 @@ object ParseLocallyApp extends App {
   val beforeParsing = currentTimeMillis();
 
   BedStatementConverter.addProxyDir(location);
-  BEDConstants.GENE_LIST.foreach { g =>
+  BEDConstants.GENE_LIST./*filter { g => g.equals("brca1") }.*/foreach { g =>
 
-    //val date = "2016-08-22";
-    val date = "2017-03-09";
+    val date = "2017-03-24";
     
     val statementsForGene = BedStatementConverter.convert("bioeditor", date, g)._1;
     println("Found " + statementsForGene.size + " for gene " + g);
