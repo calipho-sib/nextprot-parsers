@@ -42,23 +42,29 @@ case class BEDEvidence(
     val subjectAllels = new TreeSet[String]();
     var note: String = null;
 
-    if (mgiAllels.filter(m => !m.toLowerCase().startsWith("tg(")).size > 1) {
-      note = "Taking single allele for MGI multiple mutants, should fix this by adding VDSubject in TXT" + mgiAllels.filter(m => !m.toLowerCase().startsWith("tg("))
-      //throw new RuntimeException("This case should not happen");
-      //subjectAllels.add(vdAllels(0));
-    } else if (vdAllels.size > 1) { // Multiple mutants VD
-      vdAllels.foreach(v => {
-        subjectAllels.add(v);
-      });
-    } else if (txtAllels.size > 1) { // Multiple mutants TXT
+
+    //First check if VDSubject was defined on txt allels
+    if (txtAllels != null) {
       txtAllels.foreach(t => {
         val vdAllel = extractVDFromTxtAllel(t);
         if (vdAllel != null) {
           vdAllel.split("\\+").toList.map(_.trim()).foreach { v => subjectAllels.add(v) };
         }
       });
-    } else {
-      subjectAllels.add(_subject);
+    }
+
+    if (subjectAllels.isEmpty) {
+      if (mgiAllels.filter(m => !m.toLowerCase().startsWith("tg(")).size > 1) {
+        note = "Taking single allele for MGI multiple mutants, should fix this by adding VDSubject in TXT" + mgiAllels.filter(m => !m.toLowerCase().startsWith("tg("))
+        //throw new RuntimeException("This case should not happen");
+        //subjectAllels.add(vdAllels(0));
+      } else if (vdAllels.size > 1) { // Multiple mutants VD
+        vdAllels.foreach(v => {
+          subjectAllels.add(v);
+        });
+      } else {
+        subjectAllels.add(_subject);
+      }
     }
 
     if (subjectAllels.isEmpty) {
@@ -212,14 +218,14 @@ case class BEDEvidence(
 
   def getReferenceDatabase(): String = {
     val refs = references.map(_._1).toList;
-    if(refs.size != 1)
+    if (refs.size != 1)
       throw new RuntimeException("Only one database is allowed for evidences" + _annotationAccession);
     return refs(0)
   }
 
   def getReferenceAccession(): String = {
     val refs = references.map(_._2).toList;
-    if(refs.size != 1)
+    if (refs.size != 1)
       throw new RuntimeException("Only one accession is allowed for evidence " + _annotationAccession);
     return refs(0)
   }
