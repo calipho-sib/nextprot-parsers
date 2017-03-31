@@ -8,7 +8,6 @@ import org.nextprot.parser.bed.commons.NXTerminology
 import org.nextprot.parser.bed.commons.NXTerminology._
 import org.nextprot.parser.bed.commons.BEDUtils
 import org.nextprot.parser.bed.commons.BEDUtils.RelationInfo
-import org.nextprot.parser.bed.BEDConstants
 import org.nextprot.parser.bed.service.GeneNameServiceCached
 import org.nextprot.parser.bed.commons.BEDAnnotationType
 
