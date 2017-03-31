@@ -8,7 +8,6 @@ import scala.xml.NodeSeq
 import org.nextprot.commons.statements.Statement
 import org.nextprot.commons.statements.StatementBuilder
 import org.nextprot.commons.statements.StatementField._
-import org.nextprot.parser.bed.BEDConstants
 import org.nextprot.parser.bed.commons.BEDImpact.valueofModifiers
 import org.nextprot.parser.bed.commons.NXCategory.valueToCategry
 import org.nextprot.parser.bed.model.BEDEvidence
@@ -16,40 +15,59 @@ import org.nextprot.parser.bed.service.BEDAnnotationService
 import org.nextprot.parser.bed.service.BEDVariantService
 import org.nextprot.parser.bed.commons.BEDImpact
 import org.nextprot.commons.constants.QualityQualifier
+import org.nextprot.parser.bed.ProxyDir
 
 object BedStatementConverter {
 
   val proxyLocations = scala.collection.mutable.SortedSet[String]();
   proxyLocations.add("/share/sib/common/Calipho/nxflat-proxy/");
-  
+
   val load = true;
 
   def addProxyDir(directory: String) {
     proxyLocations.add(directory);
   }
 
-  def convertAll(database :String, releaseDate: String): (List[Statement], String) = {
-
-    val debugNotes = new StringBuffer(); 
-
-    val statements = BEDConstants.GENE_LIST.flatMap { g => 
-
-      val result = convert(database :String, releaseDate: String, g);
-      val statements = result._1;
-      debugNotes.append(result._2);
-      
-      statements
-      
-    }.toSet.toList;
-    
-    (statements, debugNotes.toString());
+  def recursiveListFiles(f: File): Array[File] = {
+    val these = f.listFiles
+    these ++ these.filter(_.isDirectory).flatMap(recursiveListFiles)
   }
 
-  def convert(database :String, releaseDate: String, geneName: String): (List[Statement], String) = {
+  def getProxyDir(database: String, release: String): ProxyDir = {
 
-    println("Converting " + database  + "/" + releaseDate + "/" + geneName);
+    val locations = proxyLocations.map { l => new File(List(l, database, release).mkString("/")) }.filter(_.exists()).toList;
+    if (locations.isEmpty) {
+      throw new RuntimeException("Could not find any proxy with valid entries")
+    }
 
-    val debugNotes = new StringBuffer(); 
+    return ProxyDir(locations(0), database, release)
+  }
+
+  def convertAll(proxyDir: ProxyDir): (List[Statement], String) = {
+
+    val debugNotes = new StringBuffer();
+
+    val geneNames = recursiveListFiles(proxyDir.directory)
+      .filter { f => f.getName().toLowerCase().endsWith(".xml") && !f.getName().startsWith(".") }
+      .map { f => f.getName().toLowerCase().replaceAll(".xml", "") }.toList;
+
+    val statements = geneNames.flatMap { geneName =>
+
+      val result = convert(proxyDir, geneName);
+      val statements = result._1;
+      debugNotes.append(result._2);
+
+      statements
+
+    }.toSet.toList;
+    (statements, debugNotes.toString());
+
+  }
+  
+
+  def convert(proxyDir: ProxyDir, geneName: String): (List[Statement], String) = {
+
+    val debugNotes = new StringBuffer();
 
     val statements = scala.collection.mutable.Set[Statement]();
 
@@ -57,13 +75,7 @@ object BedStatementConverter {
 
     BEDVariantService.reinitialize();
 
-    val fileExistence = proxyLocations.filter { pl => new File(pl + "/" + database + "/" + releaseDate + "/" + geneName + ".xml").exists()};
-    if (fileExistence.isEmpty)
-      throw new RuntimeException("Can't find file " + geneName + ".xml in following locations: " + proxyLocations.mkString("\n"));
-
-    val f = new File(fileExistence.toList(0) + "/" + database + "/" + releaseDate + "/" + geneName + ".xml");
-
-    val entryElem = scala.xml.XML.loadFile(f);
+    val entryElem = scala.xml.XML.loadFile(proxyDir.directory + "/" + geneName + ".xml");
 
     val nextprotAccession: String = (entryElem \ "@accession").text;
 
@@ -77,18 +89,20 @@ object BedStatementConverter {
       val subjectVariants = getVariantDefinitionStatement(debugNotes, entryElem, vpgoe, geneName, nextprotAccession);
 
       statements ++= subjectVariants;
-      
+
       val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
       statements += normalStatement;
       statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
-      
+
     });
 
+    println("Finished converting for " + geneName + " " + statements.size + " statements with " + debugNotes.length() + " bytes of warning notes")
+        
     return (statements.toList, debugNotes.toString());
 
   }
 
-  def getVariantDefinitionStatement(debugNotes : StringBuffer, entryXML: NodeSeq, vpEvidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
+  def getVariantDefinitionStatement(debugNotes: StringBuffer, entryXML: NodeSeq, vpEvidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
 
     val subjectsWithNote = vpEvidence.getSubjectAllelsWithNote;
 
@@ -136,7 +150,7 @@ object BedStatementConverter {
 
         vdStmtBuilder.addVariantInfo(variant.getNextprotAnnotationCategory, variant.variantSequenceVariationPositionFirst, variant.variantSequenceVariationPositionLast, variant.variantSequenceVariationOrigin, variant.variantSequenceVariationVariation);
         vdStmtBuilder.addSourceInfo("N/A", "BioEditor");
-        
+
         //According to specs qualtiy of the variant must always be GOLD https://issues.isb-sib.ch/browse/BIOEDITOR-399?jql=text%20~%20%22quality%20bed%22
         vdStmtBuilder.addQuality(QualityQualifier.GOLD);
         vdStmtBuilder.addField(EVIDENCE_CODE, variant.getEcoCode);
@@ -169,23 +183,23 @@ object BedStatementConverter {
 
     //Add subject and object
     vpStmtBuilder.addSubjects(subjectVDS)
-    
-      vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotypic-variation")
+
+    vpStmtBuilder.addField(ANNOTATION_CATEGORY, "phenotypic-variation")
       .addCvTerm(evidence.getRelationInfo.getImpact().accession, evidence.getRelationInfo.getImpact().name, "modification-effect-cv")
       .addField(ANNOT_DESCRIPTION, getDescription(evidence.getRelationInfo.getImpact().name, normalStatement))
       .addObject(normalStatement)
-      
-      vpStmtBuilder
+
+    vpStmtBuilder
       .addQuality(QualityQualifier.valueOf(evidence._quality))
       .addField(EVIDENCE_INTENSITY, evidence.intensity)
       .addField(ANNOTATION_SUBJECT_SPECIES, evidence.subjectProteinOrigin) //TODO should find out which one is which
-      .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin)//TODO should find out which one is which
+      .addField(ANNOTATION_OBJECT_SPECIES, evidence.objectProteinOrigin) //TODO should find out which one is which
       .addField(REFERENCE_DATABASE, evidence.getReferenceDatabase)
       .addField(REFERENCE_ACCESSION, evidence.getReferenceAccession)
       .addField(EVIDENCE_CODE, evidence.getEvidenceCode)
       .addField(EVIDENCE_NOTE, evidence.getEvidenceNote)
       .addSourceInfo("N/A", "BioEditor");
-      
+
     return vpStmtBuilder.build();
 
   }
@@ -195,21 +209,21 @@ object BedStatementConverter {
     addEntryInfo(geneName, entryAccession, normalStmtBuilder);
 
     normalStmtBuilder.addField(ANNOTATION_CATEGORY, vpEvidence.getNXCategory().name);
-    
-    if(vpEvidence.getNXBioObject() != null){
+
+    if (vpEvidence.getNXBioObject() != null) {
       normalStmtBuilder.addField(BIOLOGICAL_OBJECT_ACCESSION, vpEvidence.getNXBioObject)
-      .addField(BIOLOGICAL_OBJECT_NAME, vpEvidence._bioObject)
-      .addField(BIOLOGICAL_OBJECT_TYPE, vpEvidence._bioObjectType)
+        .addField(BIOLOGICAL_OBJECT_NAME, vpEvidence._bioObject)
+        .addField(BIOLOGICAL_OBJECT_TYPE, vpEvidence._bioObjectType)
     }
 
-    if(vpEvidence._bedObjectCvTerm.accession != null && (!vpEvidence._bedObjectCvTerm.accession.isEmpty())){
+    if (vpEvidence._bedObjectCvTerm.accession != null && (!vpEvidence._bedObjectCvTerm.accession.isEmpty())) {
       normalStmtBuilder.addCvTerm(vpEvidence._bedObjectCvTerm.accession, vpEvidence._bedObjectCvTerm.cvName, vpEvidence._bedObjectCvTerm.category) //TODO rename category to terminology...
     }
 
     //DO NOT ADD accession because otherwise it creates N normal annotations  normalStatement.setAnnot_source_accession(evidence._annotationAccession);
     normalStmtBuilder.addSourceInfo("N/A", "BioEditor")
 
-    if(BEDImpact.GAIN.equals(vpEvidence.getRelationInfo().getImpact())){
+    if (BEDImpact.GAIN.equals(vpEvidence.getRelationInfo().getImpact())) {
       normalStmtBuilder.addField(IS_NEGATIVE, "true");
     }
 
@@ -218,7 +232,7 @@ object BedStatementConverter {
 
     normalStmtBuilder.addField(REFERENCE_DATABASE, vpEvidence.getReferenceDatabase);
     normalStmtBuilder.addField(REFERENCE_ACCESSION, vpEvidence.getReferenceAccession);
-  
+
     normalStmtBuilder.addQuality(QualityQualifier.valueOf(vpEvidence._quality))
     return normalStmtBuilder.build();
 
@@ -233,12 +247,11 @@ object BedStatementConverter {
       .addField(RESOURCE_TYPE, "publication")
   }
 
-   def addDebugNote(debugNotes : StringBuffer, note: String) = {
-		if (note != null && note.length() > 0) {
-		  println(note)
-		  debugNotes.append(note + "\n");
-		}
-	}
-
+  def addDebugNote(debugNotes: StringBuffer, note: String) = {
+    if (note != null && note.length() > 0) {
+      println(note)
+      debugNotes.append(note + "\n");
+    }
+  }
 
 }

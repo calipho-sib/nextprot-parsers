@@ -19,22 +19,16 @@ object ParseLocallyApp extends App {
   val location = "/Users/dteixeira/Documents/nxflat-proxy/";
   val load = false;
 
-  val statements = scala.collection.mutable.Set[Statement]();
-
   val beforeParsing = currentTimeMillis();
 
   BedStatementConverter.addProxyDir(location);
-  BEDConstants.GENE_LIST./*filter { g => g.equals("brca1") }.*/foreach { g =>
-
-    val date = "2017-03-24";
-    
-    val statementsForGene = BedStatementConverter.convert("bioeditor", date, g)._1;
-    println("Found " + statementsForGene.size + " for gene " + g);
-    statements ++= statementsForGene;
-    
-  }
-
-
+  
+  val release = "2017-03-30";
+  val database = "bioeditor";
+  
+  val proxyDir = BedStatementConverter.getProxyDir(database, release)
+  val (statements, debugInfo) = BedStatementConverter.convertAll(proxyDir)
+  
   //statementLoaderService.loadRawStatementsForSource(new HashSet(statements.toList), NextProtSource.BioEditor);
 
   println("Parsed in " + (currentTimeMillis() - beforeParsing) + " ms for " + statements.size + " statements");
