@@ -16,6 +16,9 @@ import org.nextprot.parser.bed.service.BEDVariantService
 import org.nextprot.parser.bed.commons.BEDImpact
 import org.nextprot.commons.constants.QualityQualifier
 import org.nextprot.parser.bed.ProxyDir
+import org.nextprot.commons.statements.StatementField
+import org.nextprot.parser.bed.commons.NXCategory
+import org.apache.jena.ext.com.google.common.base.Optional
 
 object BedStatementConverter {
 
@@ -92,6 +95,12 @@ object BedStatementConverter {
 
       val normalStatement = getNormalStatement(vpgoe, geneName, nextprotAccession);
       statements += normalStatement;
+
+      //Used for example for binary interactions when A interacts with B, we can infer that B interacts with A
+      val optionalAdditionalNormalStatement = inferAdditionalNormalStatement(normalStatement)
+      if(optionalAdditionalNormalStatement.isDefined)
+        statements += optionalAdditionalNormalStatement.get
+        
       statements += getVPStatement(vpgoe, subjectVariants.toSet, normalStatement, geneName, nextprotAccession);
 
     });
@@ -101,6 +110,33 @@ object BedStatementConverter {
     return (statements.toList, debugNotes.toString());
 
   }
+  
+    def inferAdditionalNormalStatement(normalStatement: Statement): Option[Statement] = {
+      
+      //If we have a binary interaction A -> B, then we want to make B -> A, so we have a symetric relationship A <--> B
+      if(normalStatement.getValue(StatementField.ANNOTATION_CATEGORY).equals(NXCategory.BinaryInteraction.name)) {
+        val proteinBAccession = normalStatement.getValue(StatementField.BIOLOGICAL_OBJECT_ACCESSION)
+        val proteinBGeneName = normalStatement.getValue(StatementField.BIOLOGICAL_OBJECT_NAME)
+
+        val proteinAAccession = normalStatement.getValue(StatementField.ENTRY_ACCESSION)
+        val proteinAAGeneName= normalStatement.getValue(StatementField.GENE_NAME)
+      
+        val statementB = StatementBuilder.createNew()
+        .addMap(normalStatement)
+        .addField(StatementField.ENTRY_ACCESSION, proteinBAccession)
+        .addField(StatementField.GENE_NAME, proteinBGeneName)
+        .addField(StatementField.BIOLOGICAL_OBJECT_ACCESSION, proteinAAccession)
+        .addField(StatementField.BIOLOGICAL_OBJECT_NAME, proteinAAGeneName)
+        .build()
+        
+        println(statementB)
+        
+        return Some(statementB);
+        
+      }else None
+      
+    }
+
 
   def getVariantDefinitionStatement(debugNotes: StringBuffer, entryXML: NodeSeq, vpEvidence: BEDEvidence, geneName: String, entryAccession: String): List[Statement] = {
 
