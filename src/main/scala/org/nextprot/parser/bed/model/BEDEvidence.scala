@@ -77,9 +77,13 @@ case class BEDEvidence(
     val response = subjectAllelsSet.filter { a => a.toLowerCase().startsWith(subjectGene) }.toSet;
 
     if (subjectAllelsSet.size != response.size) {
-      //We don't know how to deal wtih subjects on multiple genes, therefore we remove the subjects which don't belong to the gene
-      //note += "removing one allele for multiple genes " + _annotationAccession + " set: " + subjectAllelsSet + " filtered set " + response + " subject: " + _subject + " gene name " + subjectGene;
-      //println(note);
+      //We don't know how to deal with subjects on multiple genes, therefore we remove the subjects which don't belong to the gene
+      note += "removing one allele for multiple genes " + _annotationAccession + " set: " + subjectAllelsSet + " filtered set " + response + " subject: " + _subject + " gene name " + subjectGene;
+      println(note);
+    }
+
+    if(response.isEmpty){
+      throw new RuntimeException("Not found any suitable subject for " + this);
     }
 
     return (response, note);

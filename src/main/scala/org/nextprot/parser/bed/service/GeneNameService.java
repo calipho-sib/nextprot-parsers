@@ -10,7 +10,7 @@ import java.net.URL;
 public class GeneNameService {
 
 	//private static final String endpoint = "https://api.nextprot.org/entry-accessions/gene/";
-        private static final String endpoint = "http://localhost:8080/nextprot-api-web/entry-accessions/gene/";
+        private static final String endpoint = "http://kant:8080/nextprot-api-web/entry-accessions/gene/";
        
 	public static String getNXAccessionForGeneName(String geneName) throws Exception {
 

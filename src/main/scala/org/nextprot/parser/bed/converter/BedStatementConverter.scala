@@ -129,8 +129,6 @@ object BedStatementConverter {
         .addField(StatementField.BIOLOGICAL_OBJECT_NAME, proteinAAGeneName)
         .build()
         
-        println(statementB)
-        
         return Some(statementB);
         
       }else None
@@ -172,7 +170,7 @@ object BedStatementConverter {
         val vGene = if (variant.variantUniqueName != null && variant.variantUniqueName.length() > 3) {
           variant.variantUniqueName.substring(0, variant.variantUniqueName.indexOf("-"))
         } else {
-          val warning = "Yooo problems occured with " + variant.identifierAccession + " when looking for evidence " + vpEvidence._annotationAccession;
+          val warning = "Problems occured with " + variant.identifierAccession + " when looking for evidence " + vpEvidence._annotationAccession;
           addDebugNote(debugNotes, warning);
           null;
         };

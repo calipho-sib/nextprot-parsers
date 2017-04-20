@@ -23,7 +23,7 @@ object ParseLocallyApp extends App {
 
   BedStatementConverter.addProxyDir(location);
   
-  val release = "2017-03-30";
+  val release = "2017-04-17";
   val database = "bioeditor";
   
   val proxyDir = BedStatementConverter.getProxyDir(database, release)
