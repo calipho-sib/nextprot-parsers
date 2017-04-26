@@ -16,7 +16,10 @@ public class DescriptionGenerator {
 		
 		if(impactString.equals("no impact on temperature-dependence of")){
 			impactString = "has no impact on temperature-dependence of";
+		}else if(impactString.equals("impact on temperature-dependence of")){
+			impactString = "impacts on temperature-dependence of";
 		}
+		
 		
         if(category.equals("go-cellular-component")) {
         	return impactString + " localisation in " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
