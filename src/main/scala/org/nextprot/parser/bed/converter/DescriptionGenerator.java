@@ -14,9 +14,9 @@ public class DescriptionGenerator {
 			impactString = "has no impact on";
 		}
 		
-		if(impactString.equals("no impact on temperature-dependence of")){
+		if(impactString.equals("no impact on temperature-dependence ofs")){
 			impactString = "has no impact on temperature-dependence of";
-		}else if(impactString.equals("impact on temperature-dependence of")){
+		}else if(impactString.equals("impact on temperature-dependence ofs")){
 			impactString = "impacts on temperature-dependence of";
 		}
 		
