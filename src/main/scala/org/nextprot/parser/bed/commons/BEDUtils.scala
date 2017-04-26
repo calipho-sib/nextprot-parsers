@@ -86,18 +86,19 @@ object BEDUtils {
 
       // Effect on VE (electro-physiology)
       case (HasNoImpactOn.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), NO_IMPACT, false);
-      case (HasNoImpactOnTemperatureDependanceOf.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), NO_IMPACT, false);
+      case (HasNoImpactOnTemperatureDependanceOf.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), NO_IMPACT_ON_TEMPERATURE_DEPENDENCE_OF, false);
 
       case (Decreases.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), DECREASE, false);
       case (Increases.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), INCREASE, false);
 
       //TODO Modification effect (find correct BEDImpact)
       case (Impacts.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT, false);
-      case (ImpactsOnTemperatureDependanceOf.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT, false);
-      case (Depolarizes.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT, false);
-      case (Hyperpolarizes.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT, false);
-      case (Hastens.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT, false);
-      case (Slows.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT, false);
+      
+      case (ImpactsOnTemperatureDependanceOf.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), IMPACT_ON_TEMPERATURE_DEPENDENCE_OF, false);
+      case (Depolarizes.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), DEPOLARIZE, false);
+      case (Hyperpolarizes.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), HYPERPOLARIZE, false);
+      case (Hastens.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), HASTEN, false);
+      case (Slows.name, IS_POSITIVE, BEDAnnotationType.VE) => return new RelationInfoSimple(List(ElectrophysiologicalParameter), List(ElectrophysiologicalParameterCv), SLOW, false);
       
       case _ => return throw new Exception("Relation " + relation + " is not supported");
 

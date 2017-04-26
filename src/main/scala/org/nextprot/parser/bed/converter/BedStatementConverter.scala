@@ -67,6 +67,9 @@ object BedStatementConverter {
 
   }
   
+  def convert(proxyDir: ProxyDir): (List[Statement], String) = {
+    convertAll(proxyDir);
+  }
 
   def convert(proxyDir: ProxyDir, geneName: String): (List[Statement], String) = {
 
@@ -83,6 +86,7 @@ object BedStatementConverter {
     val nextprotAccession: String = (entryElem \ "@accession").text;
 
     val annotations = BEDAnnotationService.getBEDVPAndVeAnnotations(entryElem);
+    
     //Take GO and interactions but ignore is negative
     val vpGoEvidences = annotations.flatMap(a => a._evidences).
       filter(e => ((e.isVE || e.isGO || e.isBinaryInteraction || e.isProteinProperty || e.isMammalianPhenotype) && !e.isNegative && !e.isRegulation));
@@ -105,7 +109,7 @@ object BedStatementConverter {
 
     });
 
-    println("Finished converting for " + geneName + " " + statements.size + " statements with " + debugNotes.length() + " bytes of warning notes")
+    println("Finished converting for " + geneName + " " + statements.size + " statements with " + debugNotes.length() + " chars of warning notes")
         
     return (statements.toList, debugNotes.toString());
 

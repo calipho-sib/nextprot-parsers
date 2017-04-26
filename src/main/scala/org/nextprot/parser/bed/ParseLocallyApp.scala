@@ -27,7 +27,10 @@ object ParseLocallyApp extends App {
   val database = "bioeditor";
   
   val proxyDir = BedStatementConverter.getProxyDir(database, release)
-  val (statements, debugInfo) = BedStatementConverter.convertAll(proxyDir)
+  val (statements, debugInfo) = BedStatementConverter.convert(proxyDir)
+  
+  //FOR DEBUG
+  //statements.foreach { s => println(s.getValue(StatementField.ANNOT_CV_TERM_NAME) + " - " + s.getValue(StatementField.ANNOT_DESCRIPTION)) };
   
   //statementLoaderService.loadRawStatementsForSource(new HashSet(statements.toList), NextProtSource.BioEditor);
 

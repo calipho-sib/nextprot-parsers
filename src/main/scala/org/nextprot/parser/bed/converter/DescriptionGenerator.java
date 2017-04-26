@@ -13,6 +13,11 @@ public class DescriptionGenerator {
 		if(impactString.equals("no impacts")){
 			impactString = "has no impact on";
 		}
+		
+		if(impactString.equals("no impact on temperature-dependence of")){
+			impactString = "has no impact on temperature-dependence of";
+		}
+		
         if(category.equals("go-cellular-component")) {
         	return impactString + " localisation in " + statement.getValue(StatementField.ANNOT_CV_TERM_NAME);
         }else  if(category.equals("go-biological-process")) {
