@@ -20,7 +20,7 @@
       <evidence evidence="Evidence at protein level" source="MS"/>
       <evidence evidence="Evidence at protein level" source="UniProt"/>
     </proteinEvidence>
-    <tissueExpression assayType="tissue" technology="IH" type="APE">
+    <tissueExpression assayType="tissue" technology="IHC" type="APE">
       <summary type="tissue"><![CDATA[General cytoplasmic expression, most abundant in endothelial cells and placental trophoblasts.]]></summary>
       <verification description="Antibody staining mainly consistent with RNA expression data. " type="reliability">uncertain</verification>
       <image imageType="selected">
@@ -870,7 +870,7 @@
         <weight unit="kDa" value="76.7"/>
         <weight unit="kDa" value="65.3"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Weak to moderate cytoplasmic immunoreactivity was observed in most normal tissues, in some cases accentuated to the nuclear membrane.  Pancreatic islets, urothelial cells and trophoblastic cells were strongly stained.]]></summary>
         <validation type="literatureConformity">Consistent with gene/protein characterization data</validation>
         <validation type="RNAConsistency">Mainly consistent with RNA expression data</validation>
@@ -3526,7 +3526,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Most tumour cells were negative. Testicular cancers and a few cases of endometrial, ovarian and breast cancers displayed moderate to strong cytoplasmic immunoreactivity.]]></summary>
         <data>
           <tissue>breast cancer</tissue>

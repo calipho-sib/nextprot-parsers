@@ -14,6 +14,7 @@ object HPAUtils {
 
   /**
    * Returns the 'enum' value for Western blot validation for a given antibody (Supportive, Uncertain, Not supportive)
+   *  Obsolete after HPA16 now that we follow HPA validation, TODO: remove method
    */
   def getWesternBlot(antibodyElem: NodeSeq): HPAValidationValue = {
     val HPAwbText = (antibodyElem \ "westernBlot" \ "verification").text;
@@ -43,15 +44,18 @@ object HPAUtils {
 
   /**
    * Returns the 'enum' value for Protein array validation for a given antibody (Supportive, Uncertain, Not supportive)
+   *  Obsolete after HPA16 now that we follow HPA validation, TODO: remove method
    */
   def getProteinArray(antibodyElem: NodeSeq): HPAValidationValue = {
     val antibodyName = (antibodyElem \ "@id").text;
     //In case of CAB it is always supportive
-
     if (antibodyName.startsWith("CAB")) {
       Stats ++ ("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
       HPAValidationValue.withName("supportive");
     } else {
+      if((antibodyElem \ "proteinArray" \ "verification").isEmpty) { //Console.err.println(antibodyName + ": No PA verif section");
+        throw new NXException(CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE); // Or use PA uncertain ? ask Paula
+      }
       val res = HPAValidationValue.withName((antibodyElem \ "proteinArray" \ "verification").text);
       if (res.equals(NotSupportive)) throw new NXException(CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE) // rule # N1
       return res
@@ -70,7 +74,7 @@ object HPAUtils {
     val accession = (entryElem \ "identifier" \ "xref" \ "@id").text;
     if (accession.isEmpty()) {
       // Try to retrieve mapping another way
-      return get_ENSG_To_NX_accession((entryElem \ "identifier" \ "@id").text)
+      return get_ENSG_To_NX_accession((entryElem \ "identifier" \ "@id").text) // should pass ensg ? anyway not implemented
     } else return accession;
   }
 
@@ -81,9 +85,11 @@ object HPAUtils {
   }
 
   def isSelectedTreatedAsAPEForSubcell(entryElem: NodeSeq): Boolean = {
-    val abtype = (entryElem \ "subcellularLocation" \ "@type").text.toLowerCase();
+    //val abtype = (entryElem \ "subcellularLocation" \ "@type").text.toLowerCase();
+    val abtype = (entryElem \ "cellExpression" \ "@type").text.toLowerCase();
     if (abtype == "selected") { //check that is selected
-      val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty) // check that has subcellar location information for more than one antibody
+      //val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty) // check that has subcellar location information for more than one antibody
+      val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ "cellExpression").isEmpty) // check that has subcellar location information for more than one antibody
       if (selectableAbs.length > 1) {
         return true
       }
@@ -93,7 +99,8 @@ object HPAUtils {
   }
 
   def getAntibodyIdListForSubcellular(entryElem: NodeSeq): List[String] = {
-    val abs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty);
+    //val abs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty);
+    val abs = (entryElem \ "antibody").filter(a => !(a \ "cellExpression").isEmpty);
     
     // we expect one or more antibodies matching the criteria above
     val list = abs.map(a => (a \ "@id").text).toList
@@ -118,7 +125,16 @@ object HPAUtils {
 
   }
 
-  // TODO: check with Anne / Paula
+   // new rnaseq data
+    def getTissueRnaExpression(entryElem: NodeSeq): Map[String, String] = {
+    var isValid: Boolean = false
+    val rnatissuemap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "tissue").text, (f \ "level").text)).toMap.drop(1); 
+    rnatissuemap foreach (x => isValid |= (x._2 != "Not detected") )
+    //if(!isValid) Console.err.println("all of them 'Not detected'")
+    return rnatissuemap
+  }
+
+    // TODO: check with Anne / Paula
   def getTissueExpressionType(entryElem: NodeSeq): String = {
     val hpaType = (getTissueExpressionNodeSeq(entryElem) \ "@type").text.toLowerCase()
     hpaType match {
@@ -131,7 +147,8 @@ object HPAUtils {
 
   // TODO: check with Anne / Paula
   def getSubcellIntegrationType(entryElem: NodeSeq): String = {
-    val hpaType = (entryElem \ "subcellularLocation" \ "@type").text.toLowerCase()
+    //val hpaType = (entryElem \ "subcellularLocation" \ "@type").text.toLowerCase()
+    val hpaType = (entryElem \ "cellExpression" \ "@type").text.toLowerCase()
     hpaType match {
       case "ape" => "integrated"
       case "single" => "single"

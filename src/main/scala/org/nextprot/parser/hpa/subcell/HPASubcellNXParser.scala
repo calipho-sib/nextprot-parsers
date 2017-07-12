@@ -53,7 +53,8 @@ class HPASubcellNXParser extends NXParser {
     val ensgId = HPAUtils.getEnsgId(entryElem)
     val integrationLevel = HPAUtils.getSubcellIntegrationType(entryElem)
 
-    val qualityRule = HPAQuality.getQuality(entryElem, "subcellularLocation");
+    //val qualityRule = HPAQuality.getQuality(entryElem, "subcellularLocation");
+    val qualityRule = HPAQuality.getQuality(entryElem, "cellExpression");
     val quality = qualityRule._1;
     val ruleUsed = qualityRule._2;
 
@@ -67,7 +68,8 @@ class HPASubcellNXParser extends NXParser {
       throw new NXException(CASE_BRONZE_QUALITY);
 
     val identifier = (entryElem \ "identifier" \ "@id").text;
-    val annotations = ((entryElem \ "subcellularLocation" \ "data" \ "location").
+    //val annotations = ((entryElem \ "subcellularLocation" \ "data" \ "location").
+    val annotations = ((entryElem \ "cellExpression" \ "data" \ "location").
         map(extractSubcellularLocationAnnotation(identifier, quality, _))).filter(_!=null).toList;
     if (annotations.isEmpty) throw new NXException(CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE)
     new SubcellularHPAAnnotationsWrapper(

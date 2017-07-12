@@ -97,3 +97,39 @@ sealed abstract class HPAAnnotationsWrapper(
   override def getQuality: NXQuality = _quality;
 
 }
+
+class ExpHPARNAAnnotationsWrapper(
+  val _quality: NXQuality,
+  val _ensgAc: String,
+  val _uniprotIds: List[String],
+  //val _summaryAnnotation: RawAnnotation),
+  val _rowAnnotations: List[RawAnnotation])
+  extends TemplateModel
+  {
+  def toXML =
+
+    <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+      <ensgAccessionCode>{ _ensgAc }</ensgAccessionCode>
+      <uniprotIds>
+        {
+          _uniprotIds.map(id => { <string>{ id }</string> })
+        }
+      </uniprotIds>
+      <quality>{ _quality.toString() }</quality>
+      <expressionAnnotations>
+      { wrappedBeanXML }
+      <preComputedFeatures>false</preComputedFeatures>
+      </expressionAnnotations>
+    </com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+
+  private def wrappedBeanXML = <wrappedBean>
+                                 {
+                                   if (_rowAnnotations != null && !_rowAnnotations.isEmpty) {
+                                     { _rowAnnotations.map(_.toXML) }
+                                   }
+                                 }
+                               </wrappedBean>
+
+  override def getQuality: NXQuality = _quality;    
+}
+

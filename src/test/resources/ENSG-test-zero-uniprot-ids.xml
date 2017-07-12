@@ -8,7 +8,7 @@
     <synonym>ZNF338</synonym>
     <identifier db="Ensembl" id="ENSG00000020256" version="73.37">
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="single">
+    <tissueExpression assayType="tissue" technology="IHC" type="single">
       <summary type="tissue"><![CDATA[Exocrine pancreas and subsets of cells in seminiferous ducts showed moderate cytoplasmic staining while squamous epithelia often was weakly stained in the basal layers. Weak nuclear immunoreactivity was observed in hepatocytes. Remaining normal tissues were generally negative.]]></summary>
       <verification type="validation">uncertain</verification>
       <image imageType="selected">

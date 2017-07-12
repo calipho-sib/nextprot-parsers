@@ -6,7 +6,7 @@
     <identifier db="Ensembl" id="ENSG00000180071" version="73.37">
       <xref db="Uniprot/SWISSPROT" id="Q8IVF6"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="APE">
+    <tissueExpression assayType="tissue" technology="IHC" type="APE">
       <summary type="tissue"><![CDATA[Cytoplasmic and often membranous expression in several cell types. 
 Caution: Based on antibodies targeting proteins from multiple genes.]]></summary>
       <verification type="reliability">supportive</verification>
@@ -64,7 +64,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
     </rnaExpression>
     <antibody id="HPA051288" releaseDate="2013-12-05" releaseVersion="12">
       <antigenSequence>ALKANNSMSKKLTKSNKKIAVISMKL</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Most normal tissues displayed moderate to strong cytoplasmic positivity with additional nuclear staining in a few cases. Lung, bile ducts, renal glomeruli, cells in seminiferus ducts of testis, Purkinje cells, glial cells, hematopoietic cells, soft tissues and muscle tissues were mostly negative.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>
@@ -240,7 +240,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Most cancer tissues exhibited moderate to strong cytoplasmic positivity with additional nuclear staining in a few cases. Lymphomas, gliomas, hepatocellular carcinomas along with several thyroid and testicular cancers were negative.]]></summary>
         <data>
           <tissue>testis cancer</tissue>
@@ -1095,7 +1095,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
     </antibody>
     <antibody id="HPA046346" releaseDate="2013-12-05" releaseVersion="12">
       <antigenSequence>KFDDLTAEKEALSSKCVNLAKDNQVL</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Most normal tissues displayed weak to moderate cytoplasmic staining. Purkinje cells displayed strong cytoplasmic staining. Hepatocytes, skin, lymphoid cells, hematopoietic cells and smooth muscle cells were negative.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>
@@ -1260,7 +1260,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Most cancer tissues showed weak to moderate cytoplasmic immunoreactivity. Lymphomas were negative.]]></summary>
         <data>
           <tissue>testis cancer</tissue>
@@ -1979,7 +1979,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
     </antibody>
     <antibody id="HPA046695" releaseDate="2013-12-05" releaseVersion="12">
       <antigenSequence>VFGNEDFDCHGDLKTDQLKMDILIK</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Normal tissues displayed moderate cytoplasmic and nuclear positivity. Strong staining was observed in oral mucosa, intestinal tract, gall bladder, exocrine pancreas, placental trophoblasts and Purkinje cells.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>
@@ -2155,7 +2155,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Cancer tissues displayed moderate cytoplasmic and nuclear positivity. Strong staining was observed in occasional cases of testicular and pancreatic cancers.]]></summary>
         <data>
           <tissue>testis cancer</tissue>
@@ -2996,7 +2996,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
     </antibody>
     <antibody id="HPA049923" releaseDate="2013-12-05" releaseVersion="12">
       <antigenSequence>KELTLKDVECKFSEMKTAYEEVTTELEEYKEAFAAA</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Most normal tissues displayed moderate to strong cytoplasmic positivity with additional membranous staining in several cases. Urothelial cells, myoepithelial cells of breast, cells of CNS, smooth muscle cells and adipocytes were generally negative.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>
@@ -3158,7 +3158,7 @@ Caution: Based on antibodies targeting proteins from multiple genes.]]></summary
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Most cancer tissues exhibited moderate to strong cytoplasmic immunoreactivity with additional membranous staining in several cases. Gliomas and lymphomas were mostly negative.]]></summary>
         <data>
           <tissue>testis cancer</tissue>

@@ -25,29 +25,16 @@ class HPAUtilsTest extends FlatSpec with Matchers {
 
   }
   
-  it should "throws an error when protein array verification is not supportive" in {
-   
-    val thrown = intercept[NXException] {
-    val xml =  <antibody id="HPA123">
-    			<proteinArray technology="PA">
-    				<verification type="validation">non-supportive</verification>
-    			</proteinArray>
-              </antibody>;
-      HPAUtils.getProteinArray(xml)
-    }
-    assert(thrown.getNXExceptionType == CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE)
-  }
-
   it should "return the antibody" in {
 
     val xml = <entry>
                 <antibody id="HPA123">
-                  <subcellularLocation>
-                  </subcellularLocation>
+                  <cellExpression>
+                  </cellExpression>
                 </antibody>
                 <antibody id="HPA456">
-                  <subcellularLocation>
-                  </subcellularLocation>
+                  <cellExpression>
+                  </cellExpression>
                 </antibody>
               </entry>;
 

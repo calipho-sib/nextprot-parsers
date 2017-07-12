@@ -21,7 +21,7 @@
       <evidence evidence="Evidence at protein level" source="MS"/>
       <evidence evidence="Evidence at protein level" source="UniProt"/>
     </proteinEvidence>
-    <tissueExpression assayType="tissue" technology="IH" type="APE">
+    <tissueExpression assayType="tissue" technology="IHC" type="APE">
       <summary type="tissue"><![CDATA[Granular cytoplasmic expression in selected tissues.]]></summary>
       <verification description="Antibody staining mainly consistent with RNA expression data. " type="reliability">supportive</verification>
       <image imageType="selected">
@@ -884,7 +884,7 @@
       <antibodyTargetWeights>
         <weight unit="kDa" value="38.6"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Strong granular cytoplasmic positivity was observed in kidney and prostate. Other glandular cells displayed weak cytoplasmic staining. Remaining normal tissues were in general negative. 
 ]]></summary>
         <validation type="literatureConformity">Consistent with extensive gene/protein characterization data</validation>
@@ -3586,7 +3586,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Distinct granular cytoplasmic positivity was found in most prostate cancers and in few liver cancers. Remaining malignant tissues were in general negative. ]]></summary>
         <data>
           <tissue>breast cancer</tissue>
@@ -9910,7 +9910,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cell" technology="IH">
+      <tissueExpression assayType="cell" technology="IHC">
         <verification type="validation">uncertain</verification>
         <data>
           <cellLine>HEL</cellLine>
@@ -12268,7 +12268,7 @@
       <antibodyTargetWeights>
         <weight unit="kDa" value="38.6"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Moderate to strong cytoplasmic staining was observed in prostate, parathyroid, endometrium, small intestine, placental trophoblasts, heart muscle and subsets of neuronal cells. The remaining normal tissues were weakly stained or negative.]]></summary>
         <validation type="literatureConformity">Consistent with extensive gene/protein characterization data</validation>
         <validation type="RNAConsistency">Mainly consistent with RNA expression data</validation>
@@ -15018,7 +15018,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Strong cytoplasmic immunoreactivity was observed in prostate cancers and several cases of cervical, renal, colorectal and lung cancers. Thyroid cancers along with cases of malignant gliomas, melanomas, endometrial, urothelial and testicular cancer displayed moderate to strong immunoreactivity. ]]></summary>
         <data>
           <tissue>breast cancer</tissue>

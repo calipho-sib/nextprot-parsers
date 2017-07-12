@@ -40,9 +40,12 @@ class HPAExpContextReducer extends NXPrettyReducer {
       val (name, syns) = accumulator.accu.get(ac)
       val it2 = syns.iterator()
       while (it2.hasNext()) { 
+        var ct = ""
         val sr: SynoRule = it2.next()
+        //Console.err.println("srsyno: " + sr.syno);
         val ti = sr.syno.split(";")(1).split("->")(1)
-        val ct = sr.syno.split(";")(2).split("->")(1)
+        if(sr.syno.split(";").size > 2) // RNAseq data have no cell type
+          ct = sr.syno.split(";")(2).split("->")(1)
         val lin = ac + sep + name + sep + ti + sep + ct + sep + sr.rule;
         fw.write(lin + "\n")
       }

@@ -13,7 +13,6 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
   "The HPAAntibodyNXParser " should " parse successfully a whole Antibody HPA file" in {
 
     val hpaParser = new HPAAntibodyNXParser();
-    //val wrapper = hpaParser.parse(hpadir + "ENSG00000087460.xml");
     val wrapper = hpaParser.parse(hpadir + "ENSG_FOR_ONE_HPA_ANTIBODY.xml");
 
     //println(wrapper.antibodyList(0).toXML) 

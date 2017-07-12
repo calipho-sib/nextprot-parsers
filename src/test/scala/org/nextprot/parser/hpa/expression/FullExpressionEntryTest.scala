@@ -14,7 +14,6 @@ import scala.xml.PrettyPrinter
 import java.io.FileWriter
 import org.nextprot.parser.hpa.subcell.HPAValidation
 import scala.xml.PrettyPrinter
-import org.nextprot.parser.hpa.commons.constants.HPAValidationIntegratedValue
 
 class FullExpressionEntryTest extends HPAExpressionTestBase {
 
@@ -80,46 +79,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
       }
     }
   }
-
-  "The HPAValidationIntegratedValue for western blot " should " equals AllSupportive for this file" in {
-
-    val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supAll.xml"
-    val root = scala.xml.XML.loadFile(fname)
-    assert(HPAQuality.getAPEWesternBlotQuality(root, "tissueExpression") == HPAValidationIntegratedValue.AllSupportive)
-  }
-
-  "The HPAValidationIntegratedValue for western blot " should " equals supportiveOne for this file" in {
-
-    val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-supOne.xml"
-    val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
-    assert(result == HPAValidationIntegratedValue.BestIsSupportive)
-  }
-
-  "The HPAValidationIntegratedValue for western blot " should " equals AllUncertain for this file" in {
-
-    val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncAll.xml"
-    val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
-    assert(result == HPAValidationIntegratedValue.AllUncertain)
-  }
-
-  "The HPAValidationIntegratedValue for western blot " should " equals uncertainOne for this file" in {
-
-    val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-uncOne.xml"
-    val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
-    assert(result == HPAValidationIntegratedValue.BestIsUncertain)
-  }
-
-  "The HPAValidationIntegratedValue for western blot " should " equals nonSupportive for this file" in {
-
-    val fname = "src/test/resources/ENSG-test-expr-ape-wb-quality-nonsupp.xml"
-    val root = scala.xml.XML.loadFile(fname)
-    val result = HPAQuality.getAPEWesternBlotQuality(root,"tissueExpression")
-    assert(result == HPAValidationIntegratedValue.AllNotSupportive)
-  }
-
+ 
   "The HPAExpressionNXParser " should " process successfully a file with single antibody" in {
 
     val fname = "src/test/resources/ENSG-test-expr-single.xml"

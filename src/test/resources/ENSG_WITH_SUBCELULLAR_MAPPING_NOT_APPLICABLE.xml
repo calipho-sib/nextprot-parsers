@@ -7,7 +7,7 @@
 	<identifier db="Ensembl" id="ENSG00000166436" version="69.37">
 		<xref db="Uniprot/SWISSPROT" id="O15016" />
 	</identifier>
-	<tissueExpression technology="IH" type="single">
+	<tissueExpression technology="IHC" type="single">
 		<summary type="normal"><![CDATA[Most normal tissues displayed weak to moderate nuclear staining. Stomach, adrenal gland, renal glomeruli and epididymis were strongly stained. ]]></summary>
 		<verification type="validation">uncertain</verification>
 		<data>
@@ -469,7 +469,7 @@
 		releaseVersion="5.0">
 		<antigenSequence>RLERLKICAASSGEMPVFKLKPQKNDQDGSFLLIIECGTESSSMSIKVSQDRLSEATQAPGLEGRKVTVTSLAGQRPPEVEGTSPEEHRLIPRTP
 		</antigenSequence>
-		<tissueExpression technology="IH">
+		<tissueExpression technology="IHC">
 			<summary type="normal"><![CDATA[Most normal tissues displayed weak to moderate nuclear staining. Stomach, adrenal gland, renal glomeruli and epididymis were strongly stained. ]]></summary>
 			<summary type="cancer"><![CDATA[A majority of malignancies showed moderate nuclear positivity. Liver, pancreatic, gastric, renal, urothelial and testicular cancers were weakly stained or negative. ]]></summary>
 			<verification type="validation">uncertain</verification>

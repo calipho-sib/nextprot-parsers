@@ -10,7 +10,7 @@ import org.nextprot.parser.core.stats.Stats
 
 /**
  * Rules as specified in the first document.
- * To see if they are ok
+ * Obsolete since HPA16 TODO: remove class and methods
  * 
  */
 case class APEQualityRuleSpecs(reliability: HPAReliabilityValue, pas: List[HPAValidationValue], wbs: List[HPAValidationValue]) {

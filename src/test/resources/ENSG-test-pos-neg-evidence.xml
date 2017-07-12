@@ -5,7 +5,7 @@
     <identifier db="Ensembl" id="ENSG00000180066" version="73.37">
       <xref db="Uniprot/SWISSPROT" id="Q5T1B1"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="single">
+    <tissueExpression assayType="tissue" technology="IHC" type="single">
       <summary type="tissue"><![CDATA[Spermatids in the seminiferous ducts of testis displayed distinct staining in potential acrocomes. Remaining normal tissues were generally negative.]]></summary>
       <verification type="validation">uncertain</verification>
       <image imageType="selected">
@@ -44,7 +44,7 @@
     </rnaExpression>
     <antibody id="HPA037369" releaseDate="2010-11-15" releaseVersion="7">
       <antigenSequence>MWSFLPGAESVSMGPVPGVSSLGACWTHDQDSGRAEDRPQAPRITQYTWVLSFLFTEKPQTRSTSPISHQGQ</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Spermatids in the seminiferous ducts of testis displayed distinct staining in potential acrocomes. Remaining normal tissues were generally negative.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>
@@ -206,7 +206,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Malignant cells were generally negative. A few cases of colorectal cancers and embryonal carcinoma of testis exhibited moderate luminal membranous staining.]]></summary>
         <data>
           <tissue>testis cancer</tissue>

@@ -36,7 +36,7 @@
       <evidence evidence="Evidence at protein level" source="MS"/>
       <evidence evidence="Evidence at protein level" source="UniProt"/>
     </proteinEvidence>
-    <tissueExpression assayType="tissue" technology="IH" type="APE">
+    <tissueExpression assayType="tissue" technology="IHC" type="APE">
       <summary type="tissue"><![CDATA[Selective cytoplasmic and extracellular expression in intestinal goblet cells and pancreatic islet cells. 
 The annotation is based on antibodies recognizing different splice variants.]]></summary>
       <verification description="Pending RNA-based expert annotation." type="reliability">uncertain</verification>
@@ -907,7 +907,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
         <weight unit="kDa" value="9.6"/>
         <weight unit="kDa" value="7.0"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Most normal tissues displayed weak to moderate cytoplasmic positivity. Glial cells in CNS, glandular cells in thyroid and myocytes showed strong cytoplasmic staining. ]]></summary>
         <validation type="literatureConformity">Partly consistent with extensive gene/protein characterization data</validation>
         <validation type="RNAConsistency">Not done</validation>
@@ -3724,7 +3724,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Most malignant cells showed weak cytoplasmic positivity. Malignant gliomas and renal cancers showed moderate to strong positivity. Malignant melanoma thyroid, breast, ovarian and urothelial cancers were moderately stained in several cases.]]></summary>
         <data>
           <tissue>breast cancer</tissue>
@@ -10354,7 +10354,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cell" technology="IH">
+      <tissueExpression assayType="cell" technology="IHC">
         <verification type="validation">supportive</verification>
         <data>
           <cellLine>HEL</cellLine>
@@ -12708,7 +12708,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
         <weight unit="kDa" value="19.0"/>
         <weight unit="kDa" value="12.7"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Goblet cells of gastrointestinal tract and islet cells of pancreas showed strong cytoplasmic immunoreactivity. Remaining normal tissues were negative.]]></summary>
         <validation type="literatureConformity">Partly consistent with extensive gene/protein characterization data</validation>
         <validation type="RNAConsistency">Not done</validation>
@@ -15508,7 +15508,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Malignant cells were generally negative. Several colorectal cancers and a few ovarian and renal cancers showed weak to moderate, often mucus related, cytoplasmic positivity.]]></summary>
         <data>
           <tissue>breast cancer</tissue>
@@ -21670,7 +21670,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
         <weight unit="kDa" value="109.6"/>
         <weight unit="kDa" value="74.3"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Weak to moderate cytoplasmic positivity, with cases of nuclear or membranous staining was seen in most normal tissues. Intestinal tract displayed strong membranous staining.]]></summary>
         <validation type="literatureConformity">Partly consistent with extensive gene/protein characterization data</validation>
         <validation type="RNAConsistency">Not done</validation>
@@ -24468,7 +24468,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Weak to moderate cytoplasmic positivity, with cases of nuclear or membranous staining was seen in most malignant tissues. Strong membranous and cytoplasmic immunoreactivity was seen in cases of cholangiocarcinomas, colorectal, stomach and pancreatic cancers.]]></summary>
         <data>
           <tissue>breast cancer</tissue>
@@ -30963,7 +30963,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cell" technology="IH">
+      <tissueExpression assayType="cell" technology="IHC">
         <verification type="validation">uncertain</verification>
         <data>
           <cellLine>HEL</cellLine>
@@ -33326,7 +33326,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
         <weight unit="kDa" value="109.6"/>
         <weight unit="kDa" value="74.3"/>
       </antibodyTargetWeights>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Cilia in for example fallopian tube and airway epithelia showed moderate staining. Subsets of neuronal cells also dispalyed moderate cytoplasmic staining. Intercalated discs in heart were distinctly stained. Most of the remaining normal tissues were negative or displayed weak cytoplasmic positivity.]]></summary>
         <validation type="literatureConformity">Partly consistent with extensive gene/protein characterization data</validation>
         <validation type="RNAConsistency">Not done</validation>
@@ -36067,7 +36067,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Malignant cells were mainly negative. A few malignant melanomas exhibited distinct cytoplasmic immunoreactivity.]]></summary>
         <data>
           <tissue>breast cancer</tissue>
@@ -42542,7 +42542,7 @@ The annotation is based on antibodies recognizing different splice variants.]]><
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cell" technology="IH">
+      <tissueExpression assayType="cell" technology="IHC">
         <verification type="validation">uncertain</verification>
         <data>
           <cellLine>HEL</cellLine>

@@ -9,18 +9,19 @@ object HPAExpcontextUtil {
   // creates a list of TissueExpressionData from the HPA XML file element tissueExpression data 
 	// TODO: we get several level type values: staining, expression (,...?), is it ok ? take data
 	// TODO: from antibody if selected / single ???
+  
 	def createTissueExpressionLists(el: Node) :List[TissueExpressionData] = {
 	    val tissue:String = (el \ "tissue").text
+	    if(tissue == "") Console.err.println("no tissue in: " + el);
 		val tcs = (el \ "tissueCell")
-		if (tcs.size==0) {
-			//throw new Exception("tissue expression data without tissueCell element")
-			// see where is stored the expression level in this case
-		    return List(new TissueExpressionData(tissue,null,null));
+		if (tcs.size==0) { //Console.err.println("no  cellType: " + tissue);
+			// It's the case for all rnaExpression, check if some celltypes are implicit...
+		  val lev = (el \ "level").text 
+		    return List(new TissueExpressionData(tissue,null,lev));
 		} else {
 			return tcs.map(x => {
 			  val ct = (x \ "cellType").text
 			  val lt = (x \ "level" \ "@type").text
-			  //if (lt != "staining") throw new Exception("unexpected tissue level type: " + lt)
 			  val lv = (x \ "level").text
 			  new TissueExpressionData(tissue, ct, lv)
 			}).toList;
@@ -73,7 +74,7 @@ object HPAExpcontextUtil {
     		val ct = getCleanCellType(ted.cellType);
     		syn2tissueMap.get(ti + " " + ct) match {
     			case Some(cme) => { return cme  }
-    			case None => {
+    			case None => { //Console.err.println("unmapped cell type: " + ct)
     			  syn2tissueMap.get(ct) match {
     			  	case Some(cme) => { return cme }
     			    case None => { return null }

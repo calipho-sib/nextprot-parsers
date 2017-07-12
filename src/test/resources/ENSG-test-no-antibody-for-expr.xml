@@ -10,7 +10,7 @@
       <xref db="Uniprot/SWISSPROT" id="Q9NPA5"/>
       <xref db="Uniprot/SWISSPROT" id="Q9NTW7"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="single">
+    <tissueExpression assayType="tissue" technology="IHC" type="single">
       <summary type="tissue"><![CDATA[Exocrine pancreas and subsets of cells in seminiferous ducts showed moderate cytoplasmic staining while squamous epithelia often was weakly stained in the basal layers. Weak nuclear immunoreactivity was observed in hepatocytes. Remaining normal tissues were generally negative.]]></summary>
       <verification type="validation">uncertain</verification>
       <image imageType="selected">

@@ -17,7 +17,7 @@
       <evidence evidence="Evidence at protein level" source="MS"/>
       <evidence evidence="Evidence at protein level" source="UniProt"/>
     </proteinEvidence>
-    <tissueExpression assayType="tissue" technology="IH" type="APE">
+    <tissueExpression assayType="tissue" technology="IHC" type="APE">
       <summary type="tissue"><![CDATA[Normal tissues showed weak to moderate cytoplasmic staining. Neuronal cells of hippocampus, exocrine pancreas, rectum and stomach displayed strong positivity. Subsets of cells in seminiferus ducts of testis exhibited strong cytoplasmic and nuclear staining. Fallopian tube exhibited moderate cytoplasmic and membranous positivity. Bile duct cells, cells in glomeruli, endocrine gland, Leydig cells, smooth muscle, cardiac myocytes, glial cells and mesenchymal cells were negative. Detected at High or Medium expression level in 33 of 80 analyzed normal tissue cell types.]]></summary>
       <verification type="reliability">uncertain</verification>
       <image imageType="selected">
@@ -509,17 +509,17 @@
         </tissueCell>
       </data>
     </tissueExpression>
-    <subcellularLocation technology="IF" type="APE">
+    <cellExpression technology="IF" type="APE">
       <summary><![CDATA[Localized to the nucleoli & cytoplasm in both human and mouse cells.]]></summary>
       <verification type="reliability">supportive</verification>
       <image imageType="selected">
         <imageUrl size="medium">http://www.proteinatlas.org/images/46572/if_selected.jpg</imageUrl>
       </image>
       <data>
-        <location GOId="GO:0005730" status="main">nucleoli</location>
-        <location GOId="GO:0005737" status="main">cytoplasm</location>
+        <location GOId="GO:0005730" status="additional">nucleoli</location>
+        <location GOId="GO:0005737" status="main">cytosol</location>
       </data>
-    </subcellularLocation>
+    </cellExpression>
     <rnaExpression technology="RNAseq">
       <data>
         <cellLine>A-431</cellLine>
@@ -828,7 +828,7 @@
     </rnaExpression>
     <antibody id="HPA046572" releaseDate="2012-09-12" releaseVersion="10">
       <antigenSequence>KLKVCALRVTSRARSRILRAGGKILTFDQLALDSPKGCGTVLLSGPRKGREVYRHFGKAPGTPHSHTKPYVRSKGRKFERAR</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Normal tissues showed weak to moderate cytoplasmic staining. Neuronal cells of hippocampus, exocrine pancreas, rectum and stomach displayed strong positivity. Subsets of cells in seminiferus ducts of testis exhibited strong cytoplasmic and nuclear staining. Fallopian tube exhibited moderate cytoplasmic and membranous positivity. Bile duct cells, cells in glomeruli, endocrine gland, Leydig cells, smooth muscle, cardiac myocytes, glial cells and mesenchymal cells were negative.]]></summary>
         <validation type="literatureConformity">Consistent with gene/protein characterization data</validation>
         <validation type="RNAConsistency">Not at all consistent with RNAseq data</validation>
@@ -3634,7 +3634,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <tissueExpression assayType="cancer" technology="IH">
+      <tissueExpression assayType="cancer" technology="IHC">
         <summary type="cancer"><![CDATA[Cancer tissues showed weak to moderate cytoplasmic staining. Occasional cases of malignant gliomas and ovarian cancers displayed strong positivity. Renal cancers were negative.]]></summary>
         <data>
           <tissue>breast cancer</tissue>
@@ -9381,7 +9381,7 @@
           </patient>
         </data>
       </tissueExpression>
-      <subcellularLocation technology="IF">
+      <cellExpression technology="IF">
         <subAssay type="human">
           <verification type="validation">supportive</verification>
           <image imageType="selected">
@@ -9434,7 +9434,7 @@
             <verification type="validation">supportive</verification>
             <level type="intensity">weak</level>
             <location GOId="GO:0005730">nucleoli</location>
-            <location GOId="GO:0005737">cytoplasm</location>
+            <location GOId="GO:0005737">cytosol</location>
             <assayImage>
               <image imageType="sampleImage">
                 <channel>antibody</channel>
@@ -9451,7 +9451,7 @@
             </assayImage>
           </data>
         </subAssay>
-      </subcellularLocation>
+      </cellExpression>
       <westernBlot technology="WB">
         <verification type="validation">supportive</verification>
       </westernBlot>

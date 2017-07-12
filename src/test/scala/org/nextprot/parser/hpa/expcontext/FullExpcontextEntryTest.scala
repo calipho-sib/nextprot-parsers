@@ -20,7 +20,7 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
 
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFile);
     val hpaParser = new HPAExpcontextNXParser();
-    val fname = "src/test/resources/hpa/20140121/ENS/G00/000/272/047/ENSG00000272047.xml";
+    val fname = "src/test/resources/hpa/expression/ENSG00000272047.xml";
     try {
       val result = hpaParser.parse(fname);
       result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
@@ -40,7 +40,7 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     System.setProperty("hpa.tissue.mapping.file", "src/test/resources/NextProt_tissues.from-db.txt")
 
     val hpaParser = new HPAExpcontextNXParser();
-    val fname = "src/test/resources/hpa/20140121/ENS/G00/000/180/066/ENSG00000180066.xml";
+    val fname = "src/test/resources/hpa/expression/ENSG00000272333.xml";
     val result = hpaParser.parse(fname);
 
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFile);
@@ -61,8 +61,8 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
 
     // old version of mapping file causing problems
     val hpaParser = new HPAExpcontextNXParser();
-    val hpadir = "src/test/resources/hpa/20140121/ENS/G00/000/272/047/";
-    val result = hpaParser.parse(hpadir + "ENSG00000272047.xml");
+    val fname = "src/test/resources/hpa/expression/ENSG00000272047.xml";
+    val result = hpaParser.parse(fname);
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.with2warnings.txt")));
     result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
     val model = accumulator.getTemplateModel();
@@ -82,8 +82,8 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   "The HPAExpcontextNXParser " should " contains 3 comments about hpa terms not found in hpa-mapping file" in {
 
     val hpaParser = new HPAExpcontextNXParser();
-    val hpadir = "src/test/resources/hpa/20140121/ENS/G00/000/272/047/";
-    val result = hpaParser.parse(hpadir + "ENSG00000272047.xml");
+    val fname = "src/test/resources/hpa/expression/ENSG00000272047.xml";
+    val result = hpaParser.parse(fname);
     //println(wrapper.toXML.toString)
 
     // old version of mapping file causing problems
@@ -101,8 +101,8 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   "The HPAExpcontextNXParser " should " contains produce exactly this output for 4 tissues" in {
 
     val hpaParser = new HPAExpcontextNXParser();
-    val hpadir = "src/test/resources/hpa/20140121/ENS/G00/000/272/333/";
-    val result = hpaParser.parse(hpadir + "ENSG00000272333.xml");
+    val fname = "src/test/resources/hpa/expression/ENSG00000272333.xml";
+    val result = hpaParser.parse(fname);
 
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.txt")));
     result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
@@ -127,10 +127,10 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   "The HPAExpcontextNXParser " should " parse a HPA file and throw an error on assay type cancer" in {
 
     val hpaParser = new HPAExpcontextNXParser();
-    val hpadir = "src/test/resources/hpa/20140121/ENS/G00/000/272/104/";
+    val fname = "src/test/resources/hpa/expression/ENSG00000272104.xml";
     try {
 
-      val result = hpaParser.parse(hpadir + "ENSG00000272104.xml");
+      val result = hpaParser.parse(fname);
       val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.txt")));
       result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
       val model = accumulator.getTemplateModel();

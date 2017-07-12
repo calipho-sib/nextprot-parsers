@@ -1,0 +1,400 @@
+
+  <entry url="http://v16.proteinatlas.org/ENSG00000272047" version="16.1">
+    <name>GTF2H5</name>
+    <synonym>bA120J8.2</synonym>
+    <synonym>C6orf175</synonym>
+    <synonym>FLJ30544</synonym>
+    <synonym>TFB5</synonym>
+    <synonym>TFIIH</synonym>
+    <synonym>TTD</synonym>
+    <synonym>TTD-A</synonym>
+    <synonym>TTDA</synonym>
+    <identifier db="Ensembl" id="ENSG00000272047" version="83.38">
+      <xref db="Uniprot/SWISSPROT" id="Q6ZYL4"/>
+    </identifier>
+    <proteinClasses>
+      <proteinClass id="Za" name="Predicted intracellular proteins" parent_id=""/>
+      <proteinClass id="Dr" name="Disease related genes" parent_id=""/>
+      <proteinClass id="Ua" name="UniProt - Evidence at protein level" parent_id=""/>
+    </proteinClasses>
+    <proteinEvidence evidence="Evidence at protein level">
+      <evidence evidence="Evidence at transcript level" source="HPA"/>
+      <evidence evidence="Not available" source="MS"/>
+      <evidence evidence="Evidence at protein level" source="UniProt"/>
+    </proteinEvidence>
+    <rnaExpression technology="RNAseq">
+      <rnaTissueCategory description="Detected in 2-37 tissues but not elevated in any tissue">Mixed</rnaTissueCategory>
+      <data>
+        <cellLine>A-431</cellLine>
+        <level tpm="4.0" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>A549</cellLine>
+        <level tpm="4.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>AF22</cellLine>
+        <level tpm="5.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>AN3-CA</cellLine>
+        <level tpm="7.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>ASC TERT1</cellLine>
+        <level tpm="9.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>BEWO</cellLine>
+        <level tpm="5.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>BJ</cellLine>
+        <level tpm="7.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>BJ hTERT+</cellLine>
+        <level tpm="6.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>BJ hTERT+ SV40 Large T+</cellLine>
+        <level tpm="6.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>BJ hTERT+ SV40 Large T+ RasG12V</cellLine>
+        <level tpm="7.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>CACO-2</cellLine>
+        <level tpm="2.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>CAPAN-2</cellLine>
+        <level tpm="4.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>Daudi</cellLine>
+        <level tpm="5.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>EFO-21</cellLine>
+        <level tpm="10.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HaCaT</cellLine>
+        <level tpm="2.9" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HBF TERT88</cellLine>
+        <level tpm="7.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HDLM-2</cellLine>
+        <level tpm="7.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HEK 293</cellLine>
+        <level tpm="7.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HEL</cellLine>
+        <level tpm="8.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HeLa</cellLine>
+        <level tpm="3.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>Hep G2</cellLine>
+        <level tpm="6.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HL-60</cellLine>
+        <level tpm="3.9" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HMC-1</cellLine>
+        <level tpm="3.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>hTCEpi</cellLine>
+        <level tpm="6.0" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>HUVEC TERT2</cellLine>
+        <level tpm="4.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>K-562</cellLine>
+        <level tpm="9.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>Karpas-707</cellLine>
+        <level tpm="3.0" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>LHCN-M2</cellLine>
+        <level tpm="11.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>MCF7</cellLine>
+        <level tpm="3.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>MOLT-4</cellLine>
+        <level tpm="4.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>NB-4</cellLine>
+        <level tpm="6.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>NTERA-2</cellLine>
+        <level tpm="6.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>PC-3</cellLine>
+        <level tpm="4.0" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>REH</cellLine>
+        <level tpm="4.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>RH-30</cellLine>
+        <level tpm="4.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>RPMI-8226</cellLine>
+        <level tpm="6.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>RPTEC TERT1</cellLine>
+        <level tpm="9.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>RT4</cellLine>
+        <level tpm="3.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>SCLC-21H</cellLine>
+        <level tpm="6.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>SH-SY5Y</cellLine>
+        <level tpm="4.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>SiHa</cellLine>
+        <level tpm="9.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>SK-BR-3</cellLine>
+        <level tpm="5.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>SK-MEL-30</cellLine>
+        <level tpm="4.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>T-47d</cellLine>
+        <level tpm="5.0" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>THP-1</cellLine>
+        <level tpm="6.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>TIME</cellLine>
+        <level tpm="8.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-138 MG</cellLine>
+        <level tpm="4.9" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-2 OS</cellLine>
+        <level tpm="5.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-2197</cellLine>
+        <level tpm="6.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-251 MG</cellLine>
+        <level tpm="8.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-266/70</cellLine>
+        <level tpm="2.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-266/84</cellLine>
+        <level tpm="3.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-698</cellLine>
+        <level tpm="5.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-87 MG</cellLine>
+        <level tpm="9.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>U-937</cellLine>
+        <level tpm="3.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <cellLine>WM-115</cellLine>
+        <level tpm="9.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>adipose tissue</tissue>
+        <level tpm="5.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>adrenal gland</tissue>
+        <level tpm="8.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>appendix</tissue>
+        <level tpm="3.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>bone marrow</tissue>
+        <level tpm="1.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>breast</tissue>
+        <level tpm="6.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>cerebral cortex</tissue>
+        <level tpm="11.2" type="abundance">Medium</level>
+      </data>
+      <data>
+        <tissue>cervix, uterine</tissue>
+        <level tpm="5.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>colon</tissue>
+        <level tpm="3.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>duodenum</tissue>
+        <level tpm="2.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>endometrium 1</tissue>
+        <level tpm="6.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>epididymis</tissue>
+        <level tpm="9.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>esophagus</tissue>
+        <level tpm="4.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>fallopian tube</tissue>
+        <level tpm="6.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>gallbladder</tissue>
+        <level tpm="5.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>heart muscle</tissue>
+        <level tpm="3.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>kidney</tissue>
+        <level tpm="5.4" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>liver</tissue>
+        <level tpm="3.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>lung</tissue>
+        <level tpm="4.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>lymph node</tissue>
+        <level tpm="4.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>ovary</tissue>
+        <level tpm="5.1" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>pancreas</tissue>
+        <level tpm="0.6" type="abundance">Not detected</level>
+      </data>
+      <data>
+        <tissue>parathyroid gland</tissue>
+        <level tpm="4.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>placenta</tissue>
+        <level tpm="4.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>prostate</tissue>
+        <level tpm="7.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>rectum</tissue>
+        <level tpm="3.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>salivary gland</tissue>
+        <level tpm="1.3" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>seminal vesicle</tissue>
+        <level tpm="6.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>skeletal muscle</tissue>
+        <level tpm="3.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>skin 1</tissue>
+        <level tpm="4.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>small intestine</tissue>
+        <level tpm="2.9" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>smooth muscle</tissue>
+        <level tpm="5.5" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>spleen</tissue>
+        <level tpm="4.8" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>stomach 1</tissue>
+        <level tpm="2.7" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>testis</tissue>
+        <level tpm="7.6" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>thyroid gland</tissue>
+        <level tpm="8.2" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>tonsil</tissue>
+        <level tpm="2.9" type="abundance">Low</level>
+      </data>
+      <data>
+        <tissue>urinary bladder</tissue>
+        <level tpm="3.6" type="abundance">Low</level>
+      </data>
+    </rnaExpression>
+  </entry>

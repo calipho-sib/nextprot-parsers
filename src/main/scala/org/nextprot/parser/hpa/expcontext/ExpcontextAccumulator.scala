@@ -15,7 +15,6 @@ import org.nextprot.parser.core.constants.EvidenceCode
 class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
 
   val problems: Set[String] = Set()
-  //val accu: TreeMap[String, (String, TreeSet[String])] = new TreeMap()
   val accu: TreeMap[String, (String, TreeSet[SynoRule])] = new TreeMap()
 
   calohaMapper.errors.foreach(problems += _)
@@ -24,8 +23,14 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
   def accumulate(ted: TissueExpressionData, cme: CalohaMapEntry, rule:String) = {
     if (!accu.containsKey(cme.ac)) accu.put(cme.ac, (cme.name, new TreeSet[SynoRule]()))
     val (_, s) = accu.get(cme.ac)
-    val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization), rule)
-    s.add(sr)
+    if(ted.cellType==null) { // RNA expression has no cell types
+      val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.RnaSeq), rule)
+      s.add(sr)
+    }
+    else {
+      val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization), rule)
+      s.add(sr)
+    }
   }
 
   // for mapping caloha: try to match with ti + ct first and then with ct only 
@@ -110,9 +115,11 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
       val ac = e._1; // unused ! but dont want to ignore it
       val tissue = e._2._1;
       val syns = e._2._2;
-      val eco = EvidenceCode.ImmunoLocalization;
       val ecslist = syns.map(new ExperimentalContextSynonym(_)).toList
-      new ExperimentalContextWrapper(tissue, eco.code , eco.name ,ecslist)
+      if(syns(0).contains("RNA-seq")) 
+        new ExperimentalContextWrapper(tissue, EvidenceCode.RnaSeq.code , EvidenceCode.RnaSeq.name ,ecslist)
+      else
+        new ExperimentalContextWrapper(tissue, EvidenceCode.ImmunoLocalization.code , EvidenceCode.ImmunoLocalization.name ,ecslist)
     }).toList;
     val eclw = new ExperimentalContextListWrapper(ecwlist.toList, problems.toList.sorted)
     return eclw

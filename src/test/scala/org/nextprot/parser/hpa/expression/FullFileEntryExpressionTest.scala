@@ -13,7 +13,7 @@ class FullFileEntryExpressionTest extends HPAExpressionTestBase {
   val prettyPrinter = new PrettyPrinter(1000, 4);
   val testFolder = "src/test/resources/hpa/expression/";
 
-  "The HPAExpressionNXParser " should " parse successfully a whole HPA file and create the expected output" in {
+  "The HPAExpressionNXParser " should " parse successfully a whole HPA xml file and create the expected output" in {
 
     val hpaParser = new HPAExpressionNXParser();
 

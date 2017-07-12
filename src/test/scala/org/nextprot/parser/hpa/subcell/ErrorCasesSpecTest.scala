@@ -29,17 +29,6 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     assert(thrown.getNXExceptionType == CASE_RNA_NOT_DETECTED)
   }
 
-  //HPA_PARS_SPEC_G1-1
-  /*
-   * "a valid HPA entry should produce 1 and only 1 annotation of type "subcellular-location-info"
-   */
-  //  it should "produce 1 and only 1 annotation of type subcellular-location-info" in {
-  //    val parser = new HPANXParser();
-  //    val rowAnnots = parser.parseFile(new File("src/test/resources/ENSG_TEST_SPEC_G1.xml"))._rowAnnotations
-  //    val SLinfoCnt = rowAnnots.filter(annot => annot._type == "subcellular location info").size
-  //    assert(SLinfoCnt == 1)
-  //  }
-  //
   //HPA_PARS_SPEC_G1-2
   /*
    * "a valid HPA entry should produce at least 1 annotation of type "subcellular-location"
@@ -52,14 +41,14 @@ class ErrorCasesSpec extends HPASubcellTestBase {
   }
 
   //HPA_PARS_SPEC_G1-3
-  it should "produce 1 annotation of type subcellular-location labelled 'main' with CV term SL-0039 and 1 labelled 'additional' with CV term SL-0132" in {
+  it should "produce 1 annotation of type subcellular-location labelled 'main' with CV term SL-0091 and 1 labelled 'additional' with CV term SL-0188" in {
     val parser = new HPASubcellNXParser();
     val wrapper = parser.parse("src/test/resources/hpa/subcell/subcell-file-input.xml");
     val rowAnnots = ((wrapper.asInstanceOf[HPAAnnotationsWrapper]))._rowAnnotations
     
     assert(rowAnnots(0)._cvTermAcc == "SL-0188")
-    assert(rowAnnots(0)._description.contains("Main location"))
-    assert(rowAnnots(1)._cvTermAcc == "SL-0086")
+    assert(rowAnnots(0)._description.contains("Additional location"))
+    assert(rowAnnots(1)._cvTermAcc == "SL-0091")
     assert(rowAnnots(1)._description.contains("Main location"))
 
   }
@@ -91,25 +80,16 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     assert(thrown.getNXExceptionType == CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE)
   }
 
-  // HPA_PARS_D5
-  it should "throw a NXException with NXExceptionType == CASE_BRONZE_QUALITY when the quality is bronze" in {
-    val parser = new HPASubcellNXParser();
-    val thrown = intercept[NXException] {
-      parser.parse("src/test/resources/ENSG_WITH_BRONZE_QUALITY.xml");
-    }
-    assert(thrown.getNXExceptionType == CASE_BRONZE_QUALITY)
-  }
-
   // HPA_PARS_SPEC_G2
   "The HPA analysis quality parser" should "throw a NXException if type is not APE (integrated), SINGLE or SELECTED" in {
     a[NXException] should be thrownBy {
-      HPAQuality.getQuality(<subcellularLocation technology="IF" type="unknown"></subcellularLocation>, slSection);
+      HPAQuality.getQuality(<cellExpression technology="IF" type="unknown"></cellExpression>, slSection);
     }
   }
 
   it should "throw a NXException with NXExceptionType == CASE_IFTYPE_UNKNOWN if the RNA Sequence is not found in the cell lines" in {
     val thrown = intercept[NXException] {
-      HPAQuality.getQuality(<subcellularLocation technology="IF" type="unknown"></subcellularLocation>, slSection);
+      HPAQuality.getQuality(<cellExpression technology="IF" type="unknown"></cellExpression>, slSection);
     }
     assert(thrown.getNXExceptionType == CASE_IFTYPE_UNKNOWN)
   }

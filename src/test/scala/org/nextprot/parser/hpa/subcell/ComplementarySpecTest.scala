@@ -10,13 +10,13 @@ class ComplementarySpecTest extends HPASubcellTestBase {
   it should " calculate the correct score for the antibody" in {
 
     val antibody1 = <antibody>
-                      <subcellularLocation>
+                      <cellExpression>
                         <subAssay>
                           <data>
                             <level type="intensity">strong</level>
                           </data><data><level type="intensity">weak</level></data>
                         </subAssay>
-                      </subcellularLocation>
+                      </cellExpression>
                     </antibody>
     val score = HPAQuality.getScoreForAntibody(antibody1, slSection);
     assert(score == 6)

@@ -249,7 +249,13 @@ Cartilage cell|Chondrocyte|TS-0138
 Cartilage chondrocyte|Chondrocyte|TS-0138
 cartilage of nose|Nasal cartilage|TS-0655
 Caudate|Caudate nucleus|TS-0121
+Caudate glial cells|Caudate nucleus glial cell|TS-2503
+Caudate neuronal cells|Caudate nucleus neuron|TS-2504
 Caudate nucleus|Caudate nucleus|TS-0121
+Caudate nucleus glial cells|Caudate nucleus glial cell|TS-2503
+Caudate nucleus glial cell|Caudate nucleus glial cell|TS-2503
+Caudate nucleus neuronal cells|Caudate nucleus neuron|TS-2504
+Caudate nucleus neuron|Caudate nucleus neuron|TS-2504
 Caudatus|Caudate nucleus|TS-0121
 cDC|Conventional dendritic cell|TS-2192
 Ceca|Cecum|TS-0122
@@ -260,6 +266,9 @@ Cell|Cell type|TS-2035
 Cells|Cell type|TS-2035
 Cells in endometrial stroma|Endometrium stroma|TS-1266
 Cells in seminiferous ducts|Seminiferous tubule|TS-1239
+Cells in zona fasciculata|Adrenal gland|TS-0015
+Cells in zona glomerulosa|Adrenal gland|TS-0017
+Cells in zona reticularis|Adrenal gland|TS-0017
 Cell type|Cell type|TS-2035
 Cementoblast|Cementoblast|TS-1164
 Cementum|Dental cementum|TS-2163
@@ -296,6 +305,8 @@ Cerebral cortex neuron|Cerebral cortex neuron|TS-1259
 Cerebral cortex neuronal cell|Cerebral cortex neuron|TS-1259
 Cerebral cortex neuronal cells|Cerebral cortex neuron|TS-1259
 Cerebral cortex neuropil|Cerebral cortex neuropil|TS-2396
+Cerebral cortex processes|Cerebral cortex processes|TS-2518
+Cerebral cortex processes/nerve bundles|Cerebral cortex processes|TS-2518
 Cerebral gray matter|Cerebral grey matter|TS-2361
 Cerebral grey matter|Cerebral grey matter|TS-2361
 Cerebral hemisphere|Cerebral hemisphere|TS-2007
@@ -869,6 +880,8 @@ Hippocampus neuroglial cell|Hippocampus glial cell|TS-1257
 Hippocampus neuron|Hippocampus neuron|TS-1260
 Hippocampus neuronal cell|Hippocampus neuron|TS-1260
 Hippocampus neuronal cells|Hippocampus neuron|TS-1260
+Hippocampus processes|Hippocampus processes|TS-2519
+Hippocampus processes/nerve bundles|Hippocampus processes|TS-2519
 Histiocyte|Histiocyte|TS-2019
 Horny layer|Stratum corneum|TS-0981
 Horny layer of epidermis|Stratum corneum|TS-0981
@@ -881,6 +894,8 @@ Hypopharynx|Hypopharynx|TS-2020
 Hypophysis|Pituitary gland|TS-0798
 Hypothalamic|Hypothalamus|TS-0469
 Hypothalamus|Hypothalamus|TS-0469
+Hypothalamus processes|Hypothalamus processes|TS-2520
+Hypothalamus processes/nerve bundles|Hypothalamus processes|TS-2520
 Ilea|Ileum|TS-0472
 Ileal|Ileum|TS-0472
 Ileal mucosa|Ileal mucosa|TS-0470
@@ -1110,6 +1125,7 @@ Mediastinum|Mediastinum|TS-2338
 Medulla oblongata|Medulla oblongata|TS-0607
 Medulla of adrenal gland|Adrenal medulla|TS-0018
 Medulla of suprarenal gland|Adrenal medulla|TS-0018
+Medullary cells|Adrenal gland|TS-0018
 Megacaryoblast|Megakaryoblast|TS-0610
 Megakaryoblast|Megakaryoblast|TS-0610
 Megakaryocyte|Megakaryocyte|TS-0611

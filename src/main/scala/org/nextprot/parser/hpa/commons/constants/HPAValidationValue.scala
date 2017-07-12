@@ -16,7 +16,9 @@ object HPAValidationValue extends Enumeration {
     s match {
       case "uncertain" => return Uncertain;
       case "supportive" => return Supportive;
-      case "non-supportive" => return NotSupportive;
+      case "supported" => return Supportive;
+      case "approved" => return Uncertain;
+      //case "non-supportive" => return NotSupportive;
       case _ => throw new Exception(s + " not found for HPAValidationValue")
     }
     

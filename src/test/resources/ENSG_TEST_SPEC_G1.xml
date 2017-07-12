@@ -13,7 +13,7 @@
 	<identifier db="Ensembl" id="ENSG00000026508" version="69.37">
 		<xref db="Uniprot/SWISSPROT" id="P16070" />
 	</identifier>
-	<tissueExpression technology="IH" type="APE">
+	<tissueExpression technology="IHC" type="APE">
 		<summary type="normal"><![CDATA[Cytoplasmic and membranous staining in most epithelial and lymphatic tissues.]]></summary>
 		<verification type="reliability">medium</verification>
 		<data>
@@ -485,7 +485,7 @@
 	<antibody id="CAB000112" releaseDate="2006-10-30"
 		releaseVersion="2.0">
 		<antigenSequence></antigenSequence>
-		<tissueExpression technology="IH">
+		<tissueExpression technology="IHC">
 			<summary type="normal"><![CDATA[Squamous epithelium displayed a distinct strong cytoplasmic and membranous positivity. Basal cells of respiratory epithelium were also strong positive. Remaining normal cells were negative.]]></summary>
 			<summary type="cancer"><![CDATA[Squamous cell carcinomas, melanomas and skin cancers showed strong cytoplasmic and membranous positivity. Remaining malignancies were negative.]]></summary>
 			<verification type="validation">supportive</verification>
@@ -1037,7 +1037,7 @@
 	<antibody id="CAB000316" releaseDate="2005-08-29"
 		releaseVersion="1.0">
 		<antigenSequence></antigenSequence>
-		<tissueExpression technology="IH">
+		<tissueExpression technology="IHC">
 			<summary type="normal"><![CDATA[Most normal cells showed strong membranous positivity.]]></summary>
 			<summary type="cancer"><![CDATA[Tumor stroma showed distinct positivity. Most malignancies displayed strong membranous immunoreactivity. Testis cancer were negative.]]></summary>
 			<verification type="validation">supportive</verification>
@@ -1588,7 +1588,7 @@
 		releaseVersion="3.0">
 		<antigenSequence>DDVSSGSSSERSSTSGGYIFYTFSTVHPIPDEDSPWITDSTDRIPATTLMSTSATATETATKRQETWDWFSWLFLPSESKNHLHTTTQMAGTSSNTISAGWEPNEENEDERDRHLSFSGSGIDDDEDFISSTISTTPR
 		</antigenSequence>
-		<tissueExpression technology="IH">
+		<tissueExpression technology="IHC">
 			<summary type="normal"><![CDATA[Strong membranous immunoreactivity, accompanied with weak cytoplasmic staining was observed in squamous epithelia and lymphoid tissues. Most other normal tissues were negative. ]]></summary>
 			<summary type="cancer"><![CDATA[Moderate to strong membranous immunoreactivity, often accompanied with weak cytoplasmic staining, was observed in a few cases of most tumor types. Most positivity was found in malignant melanomas and cervical cancers. ]]></summary>
 			<verification type="validation">supportive</verification>

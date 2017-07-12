@@ -3,12 +3,13 @@ Set the eclipse vm arguments (in run configurations):
 Run applications
 ----------------
 
-There are 4 applications to parse different resources:
+There are 5 applications to parse different resources:
 
 -	Antibodies
 -	Subcellular location
--	Expression
--	Experimental context
+-	Expression (antibodies)
+-	Expression (RNA)
+-	Experimental context (common to RNA and antybody expressions)
 
 ```
 sbt run
@@ -19,8 +20,9 @@ Multiple main classes detected, select one to run:
 
  [1] org.nextprot.parser.hpa.HPAAntibodyNXParserApp
  [2] org.nextprot.parser.hpa.expression.HPAExpressionNXParserApp
- [3] org.nextprot.parser.hpa.subcell.HPASubcellNXParserApp
+ [3] org.nextprot.parser.hpa.expression.HPARNAExpressionNXParserApp
  [4] org.nextprot.parser.hpa.expcontext.HPAExpcontextNXParserApp
+ [5] org.nextprot.parser.hpa.subcell.HPASubcellNXParserApp
 
 Enter number:
 ```

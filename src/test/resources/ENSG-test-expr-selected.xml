@@ -6,7 +6,7 @@
     <identifier db="Ensembl" id="ENSG00000180104" version="73.37">
       <xref db="Uniprot/SWISSPROT" id="O60645"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="selected">
+    <tissueExpression assayType="tissue" technology="IHC" type="selected">
       <summary type="tissue"><![CDATA[A subset of cells in lymphoid tissues and bone marrow showed strong positivity while a small number of glial cells displayed moderate cytoplasmic staining. Normal tissues in general were negative.]]></summary>
       <verification type="validation">uncertain</verification>
       <image imageType="selected">

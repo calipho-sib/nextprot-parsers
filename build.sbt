@@ -29,21 +29,20 @@ fork := true
 //  10 samples => "-Dfiles.expression=ENSG00000100417.xml|ENSG00000113391.xml|ENSG00000116127.xml|ENSG00000124782.xml|ENSG00000156463.xml|ENSG00000160799.xml|ENSG00000166908.xml|ENSG00000168876.xml|ENSG00000172660.xml|ENSG00000176946.xml",
 
 
-// old core module options to be deleted if not useful
-//javaOptions ++= Seq("-Dparser.impl=org.nextprot.parser.core.ParserTest",
-//"-Dfiles.directory=/tmp/hpa-data",
-//"-Dfiles.expression=^ENSG.*.xml$"
-//)
-
 // hpa module options
 javaOptions ++= Seq(
 "-Xmx2000m",
-//"-Dfiles.directory=/tmp/ENS",
-"-Dfiles.directory=hpa-data",
-"-Dfiles.expression=^ENSG.*.xml$",
-"-Doutput.file=/tmp/hpa/output.xml",
-"-Dfailed.file=/tmp/hpa/failed.xml",
-"-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt",
+"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000",
+//"-Dfiles.directory=hpa-data",
+//"-Dfiles.expression=^ENSG.*.xml$",
+//"-Dfiles.expression=^ENSG00000180071.xml$",
+"-Dfiles.expression=^ENSG00000063177.xml$",
+//"-Dfiles.expression=^ENSG00000000003.xml$",
+//"-Dfiles.expression=^ENSG0000000.*.xml$",
+"-Doutput.file=output.xml",
+"-Dfailed.file=failed.xml",
+"-Dpretty=true",
+"-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt", // Use a copy of the latest mapping file at github controlled-vocabulary/HPA_Subcell_Mapping.txt
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
 "-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt"
 //"-Dfiles.entries=src/test/resources/org/nextprot/parser/ensg/entry-list.txt"

@@ -21,16 +21,12 @@ import org.nextprot.parser.hpa.subcell.cases.CASE_ASSAY_TYPE_NOT_TISSUE
 import org.nextprot.parser.hpa.expcontext.HPAExpcontextNXParser
 import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssocProperty
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym
-import org.nextprot.parser.hpa.datamodel.ExpHPAAnnotationsWrapper
+import org.nextprot.parser.hpa.datamodel.ExpHPARNAAnnotationsWrapper
 import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.core.constants.EvidenceCode
 
 
-object Caloha {
-  val map = HPAExpcontextConfig.readTissueMapFile.map;
-}
-
-class HPAExpressionNXParser extends NXParser {
+class HPARNAExpressionNXParser extends NXParser {
 
   
   var pInfo : String = null;
@@ -42,20 +38,17 @@ class HPAExpressionNXParser extends NXParser {
 
   def parse(fileName: String): TemplateModel = {
 
-    val teSection = "tissueExpression"
-    val assayType = "tissue" // used for building the accession (and thus URL) or evidences (AnnotationResourceAssocs)
+    val teSection = "rnaExpression"
+    val assayType = "tissueRNA" // used for building the accession (and thus URL) or evidences (AnnotationResourceAssocs)
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
-    val antibodyIds = HPAUtils.getAntibodyIdListForExpr(entryElem)
     val ensgId = HPAUtils.getEnsgId(entryElem)
-    val integrationLevel = HPAUtils.getTissueExpressionType(entryElem)
-    val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem)
-    
-    HPAValidation.checkPreconditionsForExpr(entryElem)
+    //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem)
+    val rnatedmap = HPAUtils.getTissueRnaExpression(entryElem)
+    //HPAValidation.checkPreconditionsForExpr(entryElem)
 
-    val qualityRule = HPAQuality.getQuality(entryElem, teSection);
-    val quality = qualityRule._1;
-    val ruleUsed = "as defined in NEXTPROT-1383";
+    val quality = GOLD
+    val ruleUsed = "as defined for RNA expression in NEXTPROT-1383";
 
     //Stats should not appear here
     Stats ++ ("RULES_FOR_" + quality, ruleUsed);
@@ -67,35 +60,23 @@ class HPAExpressionNXParser extends NXParser {
             throw new NXException(CASE_BRONZE_QUALITY);
     }
     
-    val data = HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "data"
-    val teds = data.map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten;
+    val rnatedlist = rnatedmap.map(rnated =>  { // convert map to TissueExpressionData objects
+    new TissueExpressionData(rnated._1, null, rnated._2)}).toList // We may have to look-up celllines if they are same as IHC counterpart
 
-    teds.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) == null).
-      foreach(ted => println("WARNING: no CALOHA mapping found for " + ted.toString + ", file " + fileName))
+    val rnatsAnnotations = rnatedlist.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
+      map(rnated => {
+        val syn = HPAExpcontextUtil.getSynonymForXml(rnated, EvidenceCode.RnaSeq) // The Expcontext synonym allows to link data between expression and expcontext xmls
+        extractTissueSpecificityAnnotation(ensgId, NXQuality.GOLD, syn, rnated.level, assayType, EvidenceCode.RnaSeq) // Always GOLD
+      }).toList // Creates the list of raw annotations
+    //Console.err.println(ensgId + ": " + rnatsAnnotations.size + " RNA annotations...")
+      
 
-    val ihctsAnnotations = teds.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
-      map(ted => {
-        val syn = HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization)
-        extractTissueSpecificityAnnotation(ensgId, quality, syn, ted.level, assayType, EvidenceCode.ImmunoLocalization)
-      }).toList
-    //Console.err.println(ensgId + ": " + ihctsAnnotations.size + " IHC annotations...")
-    
-    //	    val tedsCount = teds.size
-    //	    val tsanCount = tsAnnotations.size
-    //	    println("-------------------------------------")
-    //	    tsAnnotations.foreach(a => println(a.toXML.toString));
-    //	    println("-------------------------------------")
-    //	    println("tedsCount:" + tedsCount)
-    //	    println("tsanCount:" + tsanCount)
-
-      new ExpHPAAnnotationsWrapper(
+      new ExpHPARNAAnnotationsWrapper(
       _quality = quality,
       _ensgAc = ensgId,
       _uniprotIds = uniprotIds,
-      _antibodyIds = antibodyIds,
-      _integrationLevel = integrationLevel,
-      _summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType),
-      _rowAnnotations = ihctsAnnotations // join RNA and IHC annotations in same list
+      //_summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType),
+      _rowAnnotations = rnatsAnnotations 
       )
   }
 
@@ -122,15 +103,13 @@ class HPAExpressionNXParser extends NXParser {
     // we regard the evidence as negative it the protein is not detected 
     val negState: Boolean = (level == "not detected")
     // we need to extract the tissue name from the synonym 
+    //val pattern = """tissue->([\w\s]+);""".r
     val pattern = """tissue->([^;]+);""".r
     val tissue = pattern.findFirstMatchIn(synonym) match {
       case Some(res) => {
-        //println("synonym:"+synonym)
-        //println("result:"+res.group(1))
         res.group(1)
       }
       case None => {
-        //println("synonym:"+synonym)
         throw new Exception("Could not find tissue pattern in synonym !")
       }
     }
@@ -147,29 +126,6 @@ class HPAExpressionNXParser extends NXParser {
       _dataSource = "Human protein atlas",
       _props = List(new AnnotationResourceAssocProperty("expressionLevel", level)),
       _expContext = new ExperimentalContextSynonym(synonym))
-  }
-
-  private def extractSummaryAnnotation(identifier: String, quality: NXQuality, description: String, assayType: String): RawAnnotation = {
-    return new RawAnnotation(
-      _qualifierType = "EXP",
-      _datasource = "Human protein atlas",
-      _isPropagableByDefault = false,
-      _quality = quality,
-      _cvTermAcc = null,
-      _cvTermCategory = null,
-      _description = description,
-      _type = "expression info",
-      _assocs = List(new AnnotationResourceAssoc(
-        _resourceClass = "source.DbXref",
-        _resourceType = "DATABASE",
-        _accession = identifier + "/" + assayType,
-        _cvDatabaseName = "HPA",
-        _eco = EvidenceCode.ImmunoLocalization.code,
-        _isNegative = false,
-        _type = "EVIDENCE",
-        _quality = quality,
-        _dataSource = "Human protein atlas",
-        _props = null, _expContext = null)))
   }
 
 }

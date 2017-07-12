@@ -7,7 +7,7 @@
     <identifier db="Ensembl" id="ENSG00000007376" version="73.37">
       <xref db="Uniprot/SWISSPROT" id="Q9UJJ7"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="APE">
+    <tissueExpression assayType="tissue" technology="IHC" type="APE">
       <summary type="tissue"><![CDATA[General cytoplasmic expression.]]></summary>
       <verification type="reliability">supportive</verification>
       <image imageType="selected">
@@ -347,7 +347,7 @@
     </rnaExpression>
     <antibody id="HPA041144" releaseDate="2011-05-16" releaseVersion="8">
       <antigenSequence>VVGDLTYGEVSGREDRPFRMMLHAFYLRIPTDTECVEVCTPDPFLPSLDACWSPHTLLQSLDQLVQALRATPDPDPEDRGPRPGSPSALLP</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Normal tissues displayed moderate to strong cytoplasmic immunoreactivity which in a few cases was combined with membranous positivity.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>
@@ -590,7 +590,7 @@
     </antibody>
     <antibody id="HPA041938" releaseDate="2011-05-16" releaseVersion="8">
       <antigenSequence>GSAYRCFKERRVTKAYLALLRGHIQESRVTISHAIGRNSTEGRAHTMCIEGSQGCENPKPSLTDLVVLEHGLYAGDPVSKVLLKPLTG</antigenSequence>
-      <tissueExpression assayType="tissue" technology="IH">
+      <tissueExpression assayType="tissue" technology="IHC">
         <summary type="tissue"><![CDATA[Most normal tissues displayed weak to moderate cytoplasmic staining which in a few cases was combined with membranous positivity. Renal tubuli, hepatocytes and subsets of cells in lymphoid cells were distinctly stained. Bile ducts, prostate and glial cells were negative.]]></summary>
         <verification type="validation">uncertain</verification>
         <data>

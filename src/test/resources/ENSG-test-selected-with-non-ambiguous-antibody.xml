@@ -6,7 +6,7 @@
     <identifier db="Ensembl" id="ENSG00000180071" version="73.37">
       <xref db="Uniprot/SWISSPROT" id="Q8IVF6"/>
     </identifier>
-    <tissueExpression assayType="tissue" technology="IH" type="selected">
+    <tissueExpression assayType="tissue" technology="IHC" type="selected">
       <summary type="tissue"><![CDATA[Cytoplasmic and often membranous expression in several cell types. 
 Caution: Based on antibodies targeting proteins from multiple genes.]]></summary>
       <verification type="reliability">supportive</verification>
