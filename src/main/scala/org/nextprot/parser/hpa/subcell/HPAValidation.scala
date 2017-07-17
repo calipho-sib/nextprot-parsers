@@ -30,6 +30,12 @@ object HPAValidation {
       Stats ++ ("CASE_ASSAY_TYPE_NOT_TISSUE", "not tissue")
       throw new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
     }
+    
+    if((tesok  \ "data").size == 0) {
+      Stats ++ ("CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL", "no data")
+      throw new NXException(CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL)
+    }
+    
   }
 
   /**
