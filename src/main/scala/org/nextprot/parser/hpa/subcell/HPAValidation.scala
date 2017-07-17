@@ -16,14 +16,13 @@ object HPAValidation {
    */
   def checkPreconditionsForExpr(entryElem: NodeSeq) = {
 
-    // We always get one <tissueExpression typeAssay="tissue" technology="IH"... > from HPA but...
+    // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
 	checkMainTissueExpression(entryElem)
 
   }
 
   def checkMainTissueExpression(entryElem: NodeSeq) = {
     val tesok = (entryElem \ "tissueExpression").
-      //filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IH")
       filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IHC")
       Stats ++ ("CHECKING_TISSUE", "assayType")
 
@@ -34,23 +33,28 @@ object HPAValidation {
   }
 
   /**
+   * preconditions for RNA tissue expression
+   */
+  def checkPreconditionsForRnaExpr(accession: String, entryElem: NodeSeq) = {
+   //if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
+  }
+
+  /**
    *
    */
-  def checkPreconditions(accession: String, entryElem: NodeSeq) = {
+  def checkPreconditionsForSubcell(accession: String, entryElem: NodeSeq) = {
 
-    if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
+    //if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
 
-    //val locations = (entryElem \ "subcellularLocation" \ "data" \ "location").text;
     val locations = (entryElem \ "cellExpression" \ "data" \ "location").text;
     if (locations.isEmpty()) {
       throw new NXException(CASE_NO_SUBCELLULAR_LOCATION_DATA);
     } else {
-      //if ((entryElem \ "subcellularLocation" \ "summary").text == "The protein was not detected.")
       if ((entryElem \ "cellExpression" \ "summary").text == "The protein was not detected.")
         throw new NXException(PROTEIN_NOT_DETECTED_BUT_LOCATION_EXISTENCE)
     }
 
-    if (!isValidForCellLines(entryElem)) {
+    if (!isValidForCellLines(entryElem)) { // Must have RNA detected for at least one cell line ?
       throw new NXException(CASE_RNA_NOT_DETECTED);
     }
 
@@ -58,7 +62,6 @@ object HPAValidation {
 
   private def isValidForCellLines(entryElem: NodeSeq): Boolean = {
     val rnamap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "cellLine").text, (f \ "level").text)).toMap;
-    //val cellLineList = (entryElem \ "antibody" \ "subcellularLocation" \ "subAssay" \ "data" \ "cellLine").toList
     val cellLineList = (entryElem \ "antibody" \ "cellExpression" \ "subAssay" \ "data" \ "cellLine").toList
     var isValid: Boolean = false
 
@@ -75,6 +78,5 @@ object HPAValidation {
     })
     return isValid
   }
-
 
 }
