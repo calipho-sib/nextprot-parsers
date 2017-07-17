@@ -43,3 +43,10 @@ object CASE_MULTITARGETING_ANTIBODY extends DiscardCase("The antibodies used in 
  */
 
 object CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE extends DiscardCase("Antibody with non supportive verification in protein array");
+
+/**
+ * Value for tissueExpression assayType="tissue" technology="IHC" type="xxx" but no data (eg: ENSG00000269556, ENSG00000004846)
+ */
+
+object CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL extends DiscardCase("tissueExpression at entry level (not antibody level) but no data");
+
