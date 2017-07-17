@@ -30,7 +30,6 @@ class HPAExpcontextNXParser extends NXParser {
 	    
 	    // We have a common expcontext xml for tissueExpression and rnaExpression
 	    val dataset =  (tissueExpression \ "data").map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten.toSet;
-	    //val datasetrna =  (rnaExpression \ "data").map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten.toSet;
 	    // We exclude celllines data from the rnaExpression
 	    val datasetrna =  (rnaExpression \ "data").filter(el => (el \ "tissue").text != "").map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten.toSet;
 	    val alldata = dataset ++ datasetrna
