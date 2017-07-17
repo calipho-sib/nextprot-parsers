@@ -6,7 +6,7 @@ import org.nextprot.parser.core.constants.EvidenceCode
 
 object HPAExpcontextUtil {
 
-  // creates a list of TissueExpressionData from the HPA XML file element tissueExpression data 
+  // creates a list of TissueExpressionData from the HPA XML file element tissueExpression or rnaExpression data 
 	// TODO: we get several level type values: staining, expression (,...?), is it ok ? take data
 	// TODO: from antibody if selected / single ???
   
