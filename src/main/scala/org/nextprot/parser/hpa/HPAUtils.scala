@@ -13,22 +13,6 @@ import org.nextprot.parser.hpa.subcell.cases.CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE
 object HPAUtils {
 
   /**
-   * Returns the 'enum' value for Western blot validation for a given antibody (Supportive, Uncertain, Not supportive)
-   *  Obsolete after HPA16 now that we follow HPA validation, TODO: remove method
-   */
-  def getWesternBlot(antibodyElem: NodeSeq): HPAValidationValue = {
-    val HPAwbText = (antibodyElem \ "westernBlot" \ "verification").text;
-    //In case there is no western blot experiment we use uncertain for western blot
-    if (HPAwbText.isEmpty()) {
-      Stats ++ ("COMPLEMENT-SPECS", "western blot missing => uncertain")
-      return HPAValidationValue.withName("uncertain")
-    } else {
-      return HPAValidationValue.withName(HPAwbText)
-    }
-
-  }
-
-  /**
    * Selects the tissueExpression element having assayType=tissue
    */
   def getTissueExpressionNodeSeq(entryElem: NodeSeq): NodeSeq = {
@@ -40,27 +24,6 @@ object HPAUtils {
    */
   def getTissueExpressionSummary(entryElem: NodeSeq): String = {
     return (getTissueExpressionNodeSeq(entryElem) \ "summary").text
-  }
-
-  /**
-   * Returns the 'enum' value for Protein array validation for a given antibody (Supportive, Uncertain, Not supportive)
-   *  Obsolete after HPA16 now that we follow HPA validation, TODO: remove method
-   */
-  def getProteinArray(antibodyElem: NodeSeq): HPAValidationValue = {
-    val antibodyName = (antibodyElem \ "@id").text;
-    //In case of CAB it is always supportive
-    if (antibodyName.startsWith("CAB")) {
-      Stats ++ ("COMPLEMENT-SPECS", "CAB antibodies as Supportive")
-      HPAValidationValue.withName("supportive");
-    } else {
-      if((antibodyElem \ "proteinArray" \ "verification").isEmpty) { //Console.err.println(antibodyName + ": No PA verif section");
-        throw new NXException(CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE); // Or use PA uncertain ? ask Paula
-      }
-      val res = HPAValidationValue.withName((antibodyElem \ "proteinArray" \ "verification").text);
-      if (res.equals(NotSupportive)) throw new NXException(CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE) // rule # N1
-      return res
-
-    }
   }
 
   def getEnsgId(entryElem: NodeSeq): String = {
