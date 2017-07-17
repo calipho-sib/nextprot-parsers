@@ -37,23 +37,20 @@ class HPASubcellNXParser extends NXParser {
   }
 
   /**
-   * Parse the file and produces the wrapper containing the list of annotations
+   * Parse the file and produces the wrapper containing the list of subcell annotations
    */
   def parse(fileName: String): TemplateModel = {
 
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val accession = HPAUtils.getAccession(entryElem);
     
-    //println(entryElem)
-
-    HPAValidation.checkPreconditions(accession, entryElem)
+    HPAValidation.checkPreconditionsForSubcell(accession, entryElem)
 
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
     val antibodyIds = HPAUtils.getAntibodyIdListForSubcellular(entryElem)
     val ensgId = HPAUtils.getEnsgId(entryElem)
     val integrationLevel = HPAUtils.getSubcellIntegrationType(entryElem)
 
-    //val qualityRule = HPAQuality.getQuality(entryElem, "subcellularLocation");
     val qualityRule = HPAQuality.getQuality(entryElem, "cellExpression");
     val quality = qualityRule._1;
     val ruleUsed = qualityRule._2;
@@ -68,7 +65,6 @@ class HPASubcellNXParser extends NXParser {
       throw new NXException(CASE_BRONZE_QUALITY);
 
     val identifier = (entryElem \ "identifier" \ "@id").text;
-    //val annotations = ((entryElem \ "subcellularLocation" \ "data" \ "location").
     val annotations = ((entryElem \ "cellExpression" \ "data" \ "location").
         map(extractSubcellularLocationAnnotation(identifier, quality, _))).filter(_!=null).toList;
     if (annotations.isEmpty) throw new NXException(CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE)
