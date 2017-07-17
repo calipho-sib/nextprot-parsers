@@ -66,7 +66,7 @@ class HPAExpressionNXParser extends NXParser {
             Stats ++ ("BRONZE", "bronze")
             throw new NXException(CASE_BRONZE_QUALITY);
     }
-    
+
     val data = HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "data"
     val teds = data.map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten;
 
@@ -95,7 +95,7 @@ class HPAExpressionNXParser extends NXParser {
       _antibodyIds = antibodyIds,
       _integrationLevel = integrationLevel,
       _summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType),
-      _rowAnnotations = ihctsAnnotations // join RNA and IHC annotations in same list
+      _rowAnnotations = ihctsAnnotations
       )
   }
 
