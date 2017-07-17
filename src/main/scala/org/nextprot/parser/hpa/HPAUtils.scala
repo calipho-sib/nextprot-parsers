@@ -130,7 +130,7 @@ object HPAUtils {
     var isValid: Boolean = false
     val rnatissuemap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "tissue").text, (f \ "level").text)).toMap.drop(1); 
     rnatissuemap foreach (x => isValid |= (x._2 != "Not detected") )
-    //if(!isValid) Console.err.println("all of them 'Not detected'")
+    if(!isValid) Console.err.println("all of them 'Not detected'")
     return rnatissuemap
   }
 
@@ -159,6 +159,7 @@ object HPAUtils {
 
   private def get_ENSG_To_NX_accession(identifier: String): String = {
     // TODO: write the code and put it in the core section or somewhere else but not specific for HPA
+    // At present this step is performed by Anne at the loading stage
     return ""
   }
 
