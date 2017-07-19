@@ -57,7 +57,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.4.16",
   "com.typesafe.akka" %% "akka-testkit" % "2.4.16",
   "junit" % "junit" % "4.11" % "test",
-  "org.apache.jena" % "apache-jena-libs" % "3.0.1",
+  "org.apache.jena" % "apache-jena-libs" % "3.0.1" pomOnly(),
   "com.novocode" % "junit-interface" % "0.7" % "test->default",
   "org.scala-lang.modules" % "scala-xml_2.11" % "1.0.5",
   "code.google.com" % "xml-test" % "0.3.0" % "test",
