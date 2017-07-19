@@ -123,7 +123,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _isNegative = negState,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = "Human protein atlas",
+      _dataSource = "Human protein atlas RNA-seq",
       _props = List(new AnnotationResourceAssocProperty("expressionLevel", level)),
       _expContext = new ExperimentalContextSynonym(synonym))
   }
