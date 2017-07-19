@@ -48,7 +48,6 @@ object HPAUtils {
   }
 
   def isSelectedTreatedAsAPEForSubcell(entryElem: NodeSeq): Boolean = {
-    //val abtype = (entryElem \ "subcellularLocation" \ "@type").text.toLowerCase();
     val abtype = (entryElem \ "cellExpression" \ "@type").text.toLowerCase();
     if (abtype == "selected") { //check that is selected
       //val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty) // check that has subcellar location information for more than one antibody
