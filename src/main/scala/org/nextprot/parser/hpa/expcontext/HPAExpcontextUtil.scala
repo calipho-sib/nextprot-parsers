@@ -21,7 +21,7 @@ object HPAExpcontextUtil {
 		} else {
 			return tcs.map(x => {
 			  val ct = (x \ "cellType").text
-			  val lt = (x \ "level" \ "@type").text
+			  val lt = (x \ "level" \ "@type").text // Keep only 'staining' type if parsing antibody section
 			  val lv = (x \ "level").text
 			  new TissueExpressionData(tissue, ct, lv)
 			}).toList;
