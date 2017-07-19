@@ -12,16 +12,26 @@ import org.nextprot.parser.core.stats.Stats
 object HPAValidation {
 
   /**
+   * preconditions for antibodies
+   */
+  def checkPreconditionsForAb(entryElem: NodeSeq) = {
+
+    // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
+	checkMainTissueExpression(entryElem, "antibody")
+
+  }
+
+  /**
    * preconditions for tissue expression
    */
   def checkPreconditionsForExpr(entryElem: NodeSeq) = {
 
     // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
-	checkMainTissueExpression(entryElem)
+	checkMainTissueExpression(entryElem, "expression")
 
   }
 
-  def checkMainTissueExpression(entryElem: NodeSeq) = {
+  def checkMainTissueExpression(entryElem: NodeSeq, filter: String) = {
     val tesok = (entryElem \ "tissueExpression").
       filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IHC")
       Stats ++ ("CHECKING_TISSUE", "assayType")
@@ -31,7 +41,7 @@ object HPAValidation {
       throw new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
     }
     
-    if((tesok  \ "data").size == 0) {
+    if(filter == "expression" && (tesok  \ "data").size == 0) { // eg: ENSG00000005981, ENSG00000000005
       Stats ++ ("CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL", "no data")
       throw new NXException(CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL)
     }
