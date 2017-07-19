@@ -6,7 +6,7 @@ import org.nextprot.parser.core.constants.EvidenceCode
 
 object HPAExpcontextUtil {
 
-  // creates a list of TissueExpressionData from the HPA XML file element tissueExpression data 
+  // creates a list of TissueExpressionData from the HPA XML file element tissueExpression or rnaExpression data 
 	// TODO: we get several level type values: staining, expression (,...?), is it ok ? take data
 	// TODO: from antibody if selected / single ???
   
@@ -21,7 +21,7 @@ object HPAExpcontextUtil {
 		} else {
 			return tcs.map(x => {
 			  val ct = (x \ "cellType").text
-			  val lt = (x \ "level" \ "@type").text
+			  val lt = (x \ "level" \ "@type").text // Keep only 'staining' type if parsing antibody section
 			  val lv = (x \ "level").text
 			  new TissueExpressionData(tissue, ct, lv)
 			}).toList;

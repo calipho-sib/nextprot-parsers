@@ -39,13 +39,14 @@ class HPARNAExpressionNXParser extends NXParser {
   def parse(fileName: String): TemplateModel = {
 
     val teSection = "rnaExpression"
-    val assayType = "tissueRNA" // used for building the accession (and thus URL) or evidences (AnnotationResourceAssocs)
+    val assayType = "tissue" // used for building the accession (and thus URL) or evidences (AnnotationResourceAssocs)
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
-    val uniprotIds = HPAUtils.getAccessionList(entryElem)
     val ensgId = HPAUtils.getEnsgId(entryElem)
+    val accession = HPAUtils.getAccession(entryElem);
+    HPAValidation.checkPreconditionsForRnaExpr(accession, entryElem)
     //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem)
+    val uniprotIds = HPAUtils.getAccessionList(entryElem)
     val rnatedmap = HPAUtils.getTissueRnaExpression(entryElem)
-    //HPAValidation.checkPreconditionsForExpr(entryElem)
 
     val quality = GOLD
     val ruleUsed = "as defined for RNA expression in NEXTPROT-1383";
@@ -103,7 +104,6 @@ class HPARNAExpressionNXParser extends NXParser {
     // we regard the evidence as negative it the protein is not detected 
     val negState: Boolean = (level == "not detected")
     // we need to extract the tissue name from the synonym 
-    //val pattern = """tissue->([\w\s]+);""".r
     val pattern = """tissue->([^;]+);""".r
     val tissue = pattern.findFirstMatchIn(synonym) match {
       case Some(res) => {
@@ -123,7 +123,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _isNegative = negState,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = "Human protein atlas",
+      _dataSource = "Human protein atlas RNA-seq",
       _props = List(new AnnotationResourceAssocProperty("expressionLevel", level)),
       _expContext = new ExperimentalContextSynonym(synonym))
   }

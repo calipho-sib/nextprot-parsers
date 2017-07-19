@@ -12,18 +12,27 @@ import org.nextprot.parser.core.stats.Stats
 object HPAValidation {
 
   /**
+   * preconditions for antibodies
+   */
+  def checkPreconditionsForAb(entryElem: NodeSeq) = {
+
+    // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
+	checkMainTissueExpression(entryElem, "antibody")
+
+  }
+
+  /**
    * preconditions for tissue expression
    */
   def checkPreconditionsForExpr(entryElem: NodeSeq) = {
 
-    // We always get one <tissueExpression typeAssay="tissue" technology="IH"... > from HPA but...
-	checkMainTissueExpression(entryElem)
+    // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
+	checkMainTissueExpression(entryElem, "expression")
 
   }
 
-  def checkMainTissueExpression(entryElem: NodeSeq) = {
+  def checkMainTissueExpression(entryElem: NodeSeq, filter: String) = {
     val tesok = (entryElem \ "tissueExpression").
-      //filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IH")
       filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IHC")
       Stats ++ ("CHECKING_TISSUE", "assayType")
 
@@ -31,26 +40,37 @@ object HPAValidation {
       Stats ++ ("CASE_ASSAY_TYPE_NOT_TISSUE", "not tissue")
       throw new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
     }
+    
+    if(filter == "expression" && (tesok  \ "data").size == 0) { // eg: ENSG00000005981, ENSG00000000005
+      Stats ++ ("CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL", "no data")
+      throw new NXException(CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL)
+    }
+    
+  }
+
+  /**
+   * preconditions for RNA tissue expression
+   */
+  def checkPreconditionsForRnaExpr(accession: String, entryElem: NodeSeq) = {
+   //if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
   }
 
   /**
    *
    */
-  def checkPreconditions(accession: String, entryElem: NodeSeq) = {
+  def checkPreconditionsForSubcell(accession: String, entryElem: NodeSeq) = {
 
-    if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
+    //if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
 
-    //val locations = (entryElem \ "subcellularLocation" \ "data" \ "location").text;
     val locations = (entryElem \ "cellExpression" \ "data" \ "location").text;
     if (locations.isEmpty()) {
       throw new NXException(CASE_NO_SUBCELLULAR_LOCATION_DATA);
     } else {
-      //if ((entryElem \ "subcellularLocation" \ "summary").text == "The protein was not detected.")
       if ((entryElem \ "cellExpression" \ "summary").text == "The protein was not detected.")
         throw new NXException(PROTEIN_NOT_DETECTED_BUT_LOCATION_EXISTENCE)
     }
 
-    if (!isValidForCellLines(entryElem)) {
+    if (!isValidForCellLines(entryElem)) { // Must have RNA detected for at least one cell line ?
       throw new NXException(CASE_RNA_NOT_DETECTED);
     }
 
@@ -58,7 +78,6 @@ object HPAValidation {
 
   private def isValidForCellLines(entryElem: NodeSeq): Boolean = {
     val rnamap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "cellLine").text, (f \ "level").text)).toMap;
-    //val cellLineList = (entryElem \ "antibody" \ "subcellularLocation" \ "subAssay" \ "data" \ "cellLine").toList
     val cellLineList = (entryElem \ "antibody" \ "cellExpression" \ "subAssay" \ "data" \ "cellLine").toList
     var isValid: Boolean = false
 
@@ -75,6 +94,5 @@ object HPAValidation {
     })
     return isValid
   }
-
 
 }

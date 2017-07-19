@@ -7,7 +7,7 @@
     <identifier db="Ensembl" id="ENSG00000169188" version="69.37">
       <xref db="Uniprot/SWISSPROT" id="Q9UBZ4"/>
     </identifier>
-    <tissueExpression technology="IH" type="single">
+    <tissueExpression technology="IHC" type="single">
       <summary type="normal"><![CDATA[Strong cytoplasmic positivity was observed in cardiac myocytes while skeletal muscle cells showed moderate cytoplasmic and nuclear membranous staining. Superficial layers in esophageal and vaginal epithelia displayed moderate cytoplasmic and membranous immunoreactivity. Remaining normal tissues were negative.]]></summary>
       <verification type="validation">uncertain</verification>
       <data>
@@ -406,14 +406,14 @@
         <level type="staining">negative</level>
       </data>
     </tissueExpression>
-    <subcellularLocation technology="IF" type="single">
+    <cellExpression technology="IF" type="single">
       <summary><![CDATA[Staining of nucleus and cytoplasm in U-251 MG and A-431.]]></summary>
       <verification type="validation">uncertain</verification>
       <data>
         <location status="main">nucleus but not nucleoli</location>
         <location status="main">cytoplasm</location>
       </data>
-    </subcellularLocation>
+    </cellExpression>
     <rnaExpression technology="RNAseq">
       <summary><![CDATA[High]]></summary>
       <data>
@@ -463,7 +463,7 @@
     </rnaExpression>
     <antibody id="HPA030872" releaseDate="2010-03-26" releaseVersion="6.0">
       <antigenSequence>RLLQIRAEALLAAGSHVIILGDLNTAHRPIDHWDAVNLECFEEDPGRKWMDSLLSNLGCQSASHVGPFIDSYRCFQPKQEGAFTCWSAVT</antigenSequence>
-      <tissueExpression technology="IH">
+      <tissueExpression technology="IHC">
         <summary type="normal"><![CDATA[Strong cytoplasmic positivity was observed in cardiac myocytes while skeletal muscle cells showed moderate cytoplasmic and nuclear membranous staining. Superficial layers in esophageal and vaginal epithelia displayed moderate cytoplasmic and membranous immunoreactivity. Remaining normal tissues were negative.]]></summary>
         <summary type="cancer"><![CDATA[Malignant cells were negative.]]></summary>
         <verification type="validation">uncertain</verification>
@@ -964,7 +964,7 @@
           <level count="11" type="staining">negative</level>
         </data>
       </tissueExpression>
-      <subcellularLocation technology="IF">
+      <cellExpression technology="IF">
         <verification type="validation">uncertain</verification>
         <data>
           <cellLine>U-251 MG</cellLine>
@@ -985,7 +985,7 @@
           <verification type="validation">uncertain</verification>
           <level type="intensity">negative</level>
         </data>
-      </subcellularLocation>
+      </cellExpression>
       <westernBlot technology="WB">
         <verification type="validation">supportive</verification>
       </westernBlot>

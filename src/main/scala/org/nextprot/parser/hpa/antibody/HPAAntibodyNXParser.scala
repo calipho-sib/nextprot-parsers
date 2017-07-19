@@ -37,7 +37,7 @@ class HPAAntibodyNXParser extends NXParser {
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val antibodyElems = (entryElem \ "antibody").toList
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
-    HPAValidation.checkPreconditionsForExpr(entryElem)
+    HPAValidation.checkPreconditionsForAb(entryElem)
     val wrappers  = 
       antibodyElems.map(antibodyElem => {
         val proplist : MutableList[AntibodyIdentifierProperty] = MutableList()

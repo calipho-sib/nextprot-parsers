@@ -411,13 +411,13 @@
 			<level type="staining">moderate</level>
 		</data>
 	</tissueExpression>
-	<subcellularLocation technology="IF" type="single">
+	<cellExpression technology="IF" type="single">
 		<summary><![CDATA[Staining of nucleus in all three cell lines with additional staining of aggresome in U-2 OS.]]></summary>
 		<verification type="validation">supportive</verification>
 		<data>
 			<location status="additional">aggresome</location>
 		</data>
-	</subcellularLocation>
+	</cellExpression>
 	<rnaExpression technology="RNAseq">
 		<summary><![CDATA[Low]]></summary>
 		<data>
@@ -998,7 +998,7 @@
 				<level count="5" type="staining">negative</level>
 			</data>
 		</tissueExpression>
-		<subcellularLocation technology="IF">
+		<cellExpression technology="IF">
 			<subAssay>
 				<verification type="validation">supportive</verification>
 				<data>
@@ -1021,7 +1021,7 @@
 					<location>aggresome</location>
 				</data>
 			</subAssay>
-		</subcellularLocation>
+		</cellExpression>
 		<westernBlot technology="WB">
 			<verification type="validation">uncertain</verification>
 		</westernBlot>

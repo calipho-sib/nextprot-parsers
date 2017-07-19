@@ -96,17 +96,6 @@ class ErrorCasesSpec extends HPASubcellTestBase {
 
 
 
-  // HPA_PARS_SPEC_C1
-  "The Western blot validation parsing utility" should "return a 'Uncertain' value when there is no WB data for antibody" in {
-    val antibodyElem = <antibody id="CAB004530" releaseDate="2006-10-30" releaseVersion="2.0"></antibody>;
-    assert(HPAUtils.getWesternBlot(antibodyElem) == Uncertain)
-  }
-  // HPA_PARS_SPEC_C2
-  "The Protein Array validation parsing utility" should "return a 'Supportive' value for CAB antibodies" in {
-    val antibodyElem = <antibody id="CAB004530" releaseDate="2006-10-30" releaseVersion="2.0"></antibody>;
-    assert(HPAUtils.getProteinArray(antibodyElem) == Supportive)
-  }
-
   it should "throw a NXException with NXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING for subcellular location parser if the entry contains multiple antibodies" in {
 
     val fname = "src/test/resources/ENSG-test-multiple-uniprot-ids.xml"
