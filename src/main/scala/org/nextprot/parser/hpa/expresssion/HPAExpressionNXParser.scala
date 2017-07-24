@@ -121,7 +121,7 @@ class HPAExpressionNXParser extends NXParser {
   private def extractTissueSpecificityAnnotation(identifier: String, quality: NXQuality, synonym: String, level: String, assayType: String , eco : EvidenceCode.Value): RawAnnotation = {
     return new RawAnnotation(
       _qualifierType = "EXP",
-      _datasource = null, // "Human protein atlas",
+      _datasource = "Human protein atlas", // "Human protein atlas",
       _cvTermAcc = null,
       _cvTermCategory = null,
       _isPropagableByDefault = false,
