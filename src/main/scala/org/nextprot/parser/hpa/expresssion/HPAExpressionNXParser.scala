@@ -33,6 +33,7 @@ object Caloha {
 
 class HPAExpressionNXParser extends NXParser {
 
+  val parserDatasource = "Human protein atlas"
   
   var pInfo : String = null;
   
@@ -111,7 +112,8 @@ class HPAExpressionNXParser extends NXParser {
       _antibodyIds = antibodyIds,
       _integrationLevel = integrationLevel,
       _summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType),
-      _rowAnnotations = ihctsAnnotations
+      _rowAnnotations = ihctsAnnotations,
+      _datasource = parserDatasource
       )
   }
 
@@ -121,7 +123,7 @@ class HPAExpressionNXParser extends NXParser {
   private def extractTissueSpecificityAnnotation(identifier: String, quality: NXQuality, synonym: String, level: String, assayType: String , eco : EvidenceCode.Value): RawAnnotation = {
     return new RawAnnotation(
       _qualifierType = "EXP",
-      _datasource = "Human protein atlas", // "Human protein atlas",
+      _datasource = null, // "Human protein atlas" is set above in WrappedBean
       _cvTermAcc = null,
       _cvTermCategory = null,
       _isPropagableByDefault = false,
@@ -160,7 +162,7 @@ class HPAExpressionNXParser extends NXParser {
       _isNegative = negState,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = "Human protein atlas",
+      _dataSource = parserDatasource,
       _props = List(new AnnotationResourceAssocProperty("expressionLevel", level)),
       _expContext = new ExperimentalContextSynonym(synonym))
   }
@@ -168,7 +170,7 @@ class HPAExpressionNXParser extends NXParser {
   private def extractSummaryAnnotation(identifier: String, quality: NXQuality, description: String, assayType: String): RawAnnotation = {
     return new RawAnnotation(
       _qualifierType = "EXP",
-      _datasource = "Human protein atlas",
+      _datasource = null, // "Human protein atlas", set above in WrappedBean
       _isPropagableByDefault = false,
       _quality = quality,
       _cvTermAcc = null,
@@ -184,7 +186,7 @@ class HPAExpressionNXParser extends NXParser {
         _isNegative = false,
         _type = "EVIDENCE",
         _quality = quality,
-        _dataSource = "Human protein atlas",
+        _dataSource = parserDatasource,
         _props = null, _expContext = null)))
   }
 

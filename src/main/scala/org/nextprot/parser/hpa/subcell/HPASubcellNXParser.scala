@@ -23,6 +23,7 @@ import org.nextprot.parser.core.stats.Stats
 
 object HPASubcellCvTerms {
   val map = HPAConfig.readHPACVTermsMapFile;
+
 }
 
 /**
@@ -30,6 +31,7 @@ object HPASubcellCvTerms {
  */
 class HPASubcellNXParser extends NXParser {
 
+  val parserDatasource = "Human protein atlas subcellular localization";
   var pInfo = "";
   
   def parsingInfo: String = {
@@ -74,7 +76,8 @@ class HPASubcellNXParser extends NXParser {
       _uniprotIds = uniprotIds,
       _antibodyIds = antibodyIds,
       _integrationLevel = integrationLevel,
-      _rowAnnotations = annotations)
+      _rowAnnotations = annotations,
+      _datasource = parserDatasource)
   }
 
   /**
@@ -95,7 +98,7 @@ class HPASubcellNXParser extends NXParser {
 
     return new RawAnnotation(
       _qualifierType = null,
-      _datasource = "Human protein atlas subcellular localization",
+      _datasource = null,
       _isPropagableByDefault = true,
       _quality = quality,
       _cvTermAcc = cvterm,
@@ -119,7 +122,7 @@ class HPASubcellNXParser extends NXParser {
       _isNegative = false,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = "Human protein atlas subcellular localization",
+      _dataSource = parserDatasource,
       _props = null, _expContext = null)
   }
 }

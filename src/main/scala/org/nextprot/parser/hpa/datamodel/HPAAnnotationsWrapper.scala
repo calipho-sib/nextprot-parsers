@@ -15,8 +15,9 @@ class ExpHPAAnnotationsWrapper(
   override val _antibodyIds: List[String],
   override val _integrationLevel: String,
   override val _rowAnnotations: List[RawAnnotation],
-  override val _summaryAnnotation: RawAnnotation)
-  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, _integrationLevel, _rowAnnotations, _summaryAnnotation, ExpressionType) {
+  override val _summaryAnnotation: RawAnnotation,
+  override val _datasource: String)
+  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, _integrationLevel, _rowAnnotations, _summaryAnnotation, ExpressionType, _datasource) {
 }
 
 class SubcellularHPAAnnotationsWrapper(
@@ -25,8 +26,9 @@ class SubcellularHPAAnnotationsWrapper(
   override val _uniprotIds: List[String],
   override val _antibodyIds: List[String],
   override val _integrationLevel: String,
-  override val _rowAnnotations: List[RawAnnotation])
-  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, _integrationLevel, _rowAnnotations, null, SubcellularType) {
+  override val _rowAnnotations: List[RawAnnotation],
+  override val _datasource: String)
+  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, _integrationLevel, _rowAnnotations, null, SubcellularType, _datasource) {
 
 }
 
@@ -38,10 +40,10 @@ sealed abstract class HPAAnnotationsWrapper(
   val _integrationLevel: String,
   val _rowAnnotations: List[RawAnnotation],
   val _summaryAnnotation: RawAnnotation,
-  val _hpaType: HPAType) extends TemplateModel {
+  val _hpaType: HPAType,
+  val _datasource: String) extends TemplateModel {
 
   override def toXML =
-
     <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
       <ensgAccessionCode>{ _ensgAc }</ensgAccessionCode>
       <uniprotIds>
@@ -60,6 +62,7 @@ sealed abstract class HPAAnnotationsWrapper(
         _hpaType match {
           case ExpressionType => {
             <summaryAnnotations>
+        	  <datasource>{ _datasource }</datasource>
               <wrappedBean>
                 { _summaryAnnotation.toXML }
               </wrappedBean>
@@ -73,11 +76,13 @@ sealed abstract class HPAAnnotationsWrapper(
         _hpaType match {
           case SubcellularType => {
             <subcellAnnotations>
+        	  <datasource>{ _datasource }</datasource>
               { wrappedBeanXML }
             </subcellAnnotations>
           }
           case ExpressionType => {
             <expressionAnnotations>
+        	  <datasource>{ _datasource }</datasource>
         	  { wrappedBeanXML }
               <preComputedFeatures>false</preComputedFeatures>
             </expressionAnnotations>
