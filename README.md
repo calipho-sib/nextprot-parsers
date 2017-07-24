@@ -8,68 +8,67 @@ See: http://www.nextprot.org/
 
 ##Installation
 
-Configure your Scala Eclipse IDE by running `st eclipse` on the modules you want to add
+Configure your Scala Eclipse IDE by running `sbt eclipse` 
 
 ##Deployment
 
-To deploy locally:
+# Deploying/publishing locally:
 
 ```
 sbt publish-local
 ```
 
-To deploy on nexus (if you need credentials configured on ~/.sbt/x.x/sonatype.sbt):
+# Deploying/publishing on nexus 
+
+if you need credentials configured on ~/.sbt/x.x/sonatype.sbt:
 
 ```
 credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "$sonatype_username", "$sonatype_password")
 ```
 
-It will go to either snapshot or production repository depending on your version suffix. It it ends with -SNAPSHOT it goes to the snapshot repository otherwise it will go to the production repository. Note that when you publish to the production repository you need to specify a new version `set version:="x.x.x"` .
-
-Publish nextprot-parser-core
-----------------------------
+It will go to either snapshot or production repository depending on your version suffix. 
+If it ends with -SNAPSHOT it goes to the snapshot repository 
+otherwise it will go to the production repository. 
+Note that when you publish to the production repository you need to specify a new version within sbt with: 
+`set version:="x.x.x"` .
 
 ```
-cd core
 sbt
-> set version:="0.33.0"
+> set version:="1.1.7"
 > publish
+> exit
 ```
 
-Publish nextprot-parser-hpa
----------------------------
+## Updating dependency in nextprot-loaders and build fat jar for NP1 data integration
+
+1. Update artefact version in https://gitlab.isb-sib.ch/calipho/nextprot-loaders/blob/develop/tools.integration/pom.xml
 
 ```
-cd hpa
-sbt
-> set version:="0.37.0"
-> publish
-> exit 
-
-WARNING 1: don't forget to update verion of this dependency 
-in npteam@cactus:/work/projects/integration/nextprot-loaders/tools.integration/pom.xml 
-
-WARNING 2: 
-read note below
+<dependency>
+  <groupId>org.nextprot.parser</groupId>
+  <artifactId>nextprot-scala-parsers</artifactId>
+  <version>1.1.6</version>
+</dependency>
 
 ```
 
-IMPORTANT NOTE 
---------------
+2. Commit / push your change
 
-`publish` will take into account the dependency to nextprot-parser-core as it is defined in the hpa/build.sbt
-So you may have to manually change the dependency in this file, example:
-
+3. Rebuild the fat jar on cactus (NP1 data integration server)
 ```
-libraryDependencies ++= Seq(
-  ...
-  "org.nextprot.parser.core" % "nextprot-parser-core" % "0.32.0"
+> ssh npteam@cactus
+> cd /work/projects/integration/nextprot-loaders/tools.integration
+> git pull origin develop
+> mvn package
 ```
 
-A non SNAPSHOT publishing should depend on non SNAPSHOT jars !!!
+The resulting fat jar is in:
+```
+> ls -l /work/projects/integration/nextprot-loaders/tools.integration/target 
+```
 
-TEST
-----
+
+## TESTS
 
 To test simply use ```sbt test``` but you can also use ```test-only org.nextprot.parser.hpa.subcell.FullFileEntrySubcellTest``` if you want to specify only one test
 
