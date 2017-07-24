@@ -28,11 +28,13 @@ fork := true
 // 225 samples => "-Dfiles.expression=^ENSG0000000.*.xml$",
 //  10 samples => "-Dfiles.expression=ENSG00000100417.xml|ENSG00000113391.xml|ENSG00000116127.xml|ENSG00000124782.xml|ENSG00000156463.xml|ENSG00000160799.xml|ENSG00000166908.xml|ENSG00000168876.xml|ENSG00000172660.xml|ENSG00000176946.xml",
 
+//ENS G00 000 063 177
 
 // hpa module options
 javaOptions ++= Seq(
 "-Xmx2000m",
-"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000",
+//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000",
+"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/063/177",
 //"-Dfiles.directory=hpa-data",
 //"-Dfiles.expression=^ENSG.*.xml$",
 //"-Dfiles.expression=^ENSG00000180071.xml$",
