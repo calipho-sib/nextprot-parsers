@@ -117,8 +117,9 @@ class ExpHPARNAAnnotationsWrapper(
       </uniprotIds>
       <quality>{ _quality.toString() }</quality>
       <expressionAnnotations>
-      { wrappedBeanXML }
-      <preComputedFeatures>false</preComputedFeatures>
+        <datasource>Human protein atlas RNA-seq</datasource>
+        { wrappedBeanXML }
+        <preComputedFeatures>false</preComputedFeatures>
       </expressionAnnotations>
     </com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
 
