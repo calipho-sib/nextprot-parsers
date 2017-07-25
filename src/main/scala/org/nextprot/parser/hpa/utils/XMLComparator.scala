@@ -7,9 +7,15 @@ object XMLComparator {
 
   def compareXMLWithFile(node1: Node, file: File): Boolean = {
 
-    val n1 = node1.toString.replaceAll("[\n\r\t ]", "")
-    val expect = scala.io.Source.fromFile(file, "utf-8").getLines.mkString.replaceAll("[\n\r\t ]", "")
-    return n1.equals(expect);
+    val f1 = node1.toString.replaceAll("[\t\r\n ]", "")
+    val f2 = scala.io.Source.fromFile(file, "utf-8").getLines.mkString.replaceAll("[\t\r\n ]", "")
+    println("--- produced ---")
+    println(f1);
+    println("--- expected ---")
+    println(f2);
+    println("------------ ---")
+    
+    return f1.equals(f2);
 
   }
 

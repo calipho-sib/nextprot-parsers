@@ -8,17 +8,15 @@
 	</antibodyIds>
 	<integrationLevel>integrated</integrationLevel>
 	<quality>GOLD</quality>
-
 	<subcellAnnotations>
+		<datasource>Human protein atlas subcellular localization</datasource>
 		<wrappedBean>
 			<com.genebio.nextprot.dataloader.dto.RawAnnotation>
-				<datasource>Human protein atlas subcellular localization
-				</datasource>
 				<isPropagableByDefault>true</isPropagableByDefault>
 				<cvTermAcc>SL-0188</cvTermAcc>
 				<cvTermCategory>Uniprot subcellular location</cvTermCategory>
 				<type>subcellular location</type>
-				<description><![CDATA[Main location.]]></description>
+				<description><![CDATA[Additional location.]]></description>
 				<quality>GOLD</quality>
 				<resourceAssocs>
 					<com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
@@ -43,10 +41,8 @@
 				</resourceAssocs>
 			</com.genebio.nextprot.dataloader.dto.RawAnnotation>
 			<com.genebio.nextprot.dataloader.dto.RawAnnotation>
-				<datasource>Human protein atlas subcellular localization
-				</datasource>
 				<isPropagableByDefault>true</isPropagableByDefault>
-				<cvTermAcc>SL-0086</cvTermAcc>
+				<cvTermAcc>SL-0091</cvTermAcc>
 				<cvTermCategory>Uniprot subcellular location</cvTermCategory>
 				<type>subcellular location</type>
 				<description><![CDATA[Main location.]]></description>
