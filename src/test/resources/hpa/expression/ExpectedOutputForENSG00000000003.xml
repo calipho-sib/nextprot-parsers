@@ -9,9 +9,9 @@
     <integrationLevel>integrated</integrationLevel>
     <quality>SILVER</quality>
     <summaryAnnotations>
+        <datasource>Human protein atlas</datasource>
         <wrappedBean>
             <com.genebio.nextprot.dataloader.dto.RawAnnotation>
-                <datasource>Human protein atlas</datasource>
                 <isPropagableByDefault>false</isPropagableByDefault>
                 <type>expression info</type>
                 <description><![CDATA[Cytoplasmic and membranous expression in most tissues.]]></description>
@@ -43,6 +43,7 @@
         <preComputedFeatures>false</preComputedFeatures>
     </summaryAnnotations>
     <expressionAnnotations>
+        <datasource>Human protein atlas</datasource>
         <wrappedBean>
             <com.genebio.nextprot.dataloader.dto.RawAnnotation>
                 <isPropagableByDefault>false</isPropagableByDefault>
