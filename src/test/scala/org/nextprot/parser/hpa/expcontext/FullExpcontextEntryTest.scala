@@ -16,6 +16,8 @@ import org.nextprot.parser.core.datamodel.TemplateModel
 
 class FullExpcontextEntryTest extends HPAExpcontextTestBase {
 
+
+  
   "The HPAExpcontextNXParser " should " parse successfully a whole HPA file" in {
 
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFile);
@@ -57,7 +59,7 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     }
   }
 
-  "The HPAExpcontextNXParser " should " contains 4 comments about inconsistencies in hpa-caloha mapping file" in {
+  "The HPAExpcontextNXParser " should " contains 4 comments about inconsistencies in TEST hpa-caloha mapping file" in {
 
     // old version of mapping file causing problems
     val hpaParser = new HPAExpcontextNXParser();
@@ -67,9 +69,9 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
     val model = accumulator.getTemplateModel();
 
-//    val pp = new PrettyPrinter(1000,4)
-//    val str = pp.format(model.toXML).substring(0,800)
-//    println(str)
+    val pp = new PrettyPrinter(1000,4)
+    val str = pp.format(model.toXML).substring(0,800)
+    //println(str)
     
     assert(
       model.toXML.child.
@@ -78,11 +80,13 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
         size == 4)
   }
 
+  
+  
   // see also properties set in HPAExpcontextTestBase for "hpa.tissue.mapping.file" = hpa - caloha mappping file
-  "The HPAExpcontextNXParser " should " contains 3 comments about hpa terms not found in hpa-mapping file" in {
+  "The HPAExpcontextNXParser " should " contain 1 comment about hpa terms not found in TEST hpa-caloha mapping file" in {
 
     val hpaParser = new HPAExpcontextNXParser();
-    val fname = "src/test/resources/hpa/expression/ENSG00000272047.xml";
+    val fname = "src/test/resources/hpa/expression/ENSG00000272048.xml";
     val result = hpaParser.parse(fname);
     //println(wrapper.toXML.toString)
 
@@ -95,35 +99,97 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
       model.toXML.child.
         filter(_.isInstanceOf[scala.xml.Comment]).
         filter(_.toString.startsWith("<!--Mapping not found")).
-        size == 3)
+        size == 1)
   }
 
-  "The HPAExpcontextNXParser " should " contains produce exactly this output for 4 tissues" in {
+
+  "The HPAExpcontextNXParser " should " contains find 37 tissues in RNA expression and produce corresponding ECs" in {
 
     val hpaParser = new HPAExpcontextNXParser();
     val fname = "src/test/resources/hpa/expression/ENSG00000272333.xml";
-    val result = hpaParser.parse(fname);
 
+    val xmlin = scala.xml.XML.loadFile(fname)
+    val expectedCount = (xmlin \\ "rnaExpression" \\ "tissue").size // no <tissueCell> in RNA expression
+    println("INPUT - count of tissue in RNA expression section: " + expectedCount)  // 37 tissues
+    
+    val result = hpaParser.parse(fname);
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.txt")));
     result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
     val model = accumulator.getTemplateModel();
-
-    val prettyPrinter = new PrettyPrinter(1000, 4)
-    val output = prettyPrinter.format(model.toXML).replaceAll("[\n\r\t ]", "")
-    // val expect = scala.xml.XML.loadFile("src/test/resources/ExpectedOutputForENSG00000272333.xml")..replaceAll("[\n\r\t ]", "")
-    val expect = scala.io.Source.fromFile("src/test/resources/ExpectedOutputForENSG00000272333.xml", "utf-8").getLines.mkString.replaceAll("[\n\r\t ]", "")
-    //     println("---------------------------------------")
-    //     println(output)
-    //     println("---------------------------------------")
-    //     println("---------------------------------------")
-    //     println(expect)
-    //     println("---------------------------------------")
-    //	   println("output length:"+output.length())
-    //	   println("expect length:"+expect.length())
-    assert(output == expect)
-
+    val xmlout = model.toXML
+    
+    //println("----- RAW ------")
+    //val prettyPrinter = new PrettyPrinter(1000, 4)
+    //println(prettyPrinter.format(xmlount))
+    //println("----- x x x ------")
+    
+    val ecCount = (xmlout \ "com.genebio.nextprot.dataloader.context.ExperimentalContextWrapper").size
+    println("OUTPUT - experimental context count:" + ecCount)
+    assert(ecCount == expectedCount)
+    
+    val ecoList = (xmlout.child \ "wrappedBean" \ "detectionMethod" \ "cvName").toList
+    println("OUTPUT - ecoCount:" + ecoList.size)
+    assert(ecoList.size == expectedCount)
+    ecoList.foreach(n => assert(n.text == "ECO:0000295[ACC]") )
+    
+    val tissueList = (xmlout.child \ "wrappedBean" \ "tissue" \ "cvName").toList
+    println("OUTPUT - tissueCount:" + tissueList.size)
+    assert(tissueList.size == expectedCount)
+    
+    val synoList = (xmlout.child \ "wrappedBean" \ "contextSynonyms" \\ "synonymName").toList
+    println("OUTPUT - synoCount:" + synoList.size)
+    synoList.foreach(n => assert(n.text.contains("eco->") && n.text.contains("tissue->")))
+    
   }
 
+
+  "The HPAExpcontextNXParser " should " contains find tissues in IHC and RNA expression and produce corresponding EC synonyms" in {
+
+    val hpaParser = new HPAExpcontextNXParser();
+    val fname = "src/test/resources/hpa/expression/ENSG00000000003.xml";
+
+    val xmlin = scala.xml.XML.loadFile(fname)
+    val expectedRNACount = (xmlin \ "rnaExpression" \\ "tissue").size        // we have    no <tissueCell>, only <tissue>
+    val expectedIHCCount = (xmlin \ "tissueExpression" \\ "tissueCell").size // we may have N <tissueCell> for 1 <tissue>
+    val expectedCount = expectedRNACount + expectedIHCCount
+    println("INPUT - count of tissue in RNA expression section: " + expectedRNACount)  // 37 tissues
+    println("INPUT - count of tissue in IHC expression section: " + expectedIHCCount)  // 80 tissues
+    println("INPUT - count of tissue in IHC + RNA expression section: " + expectedCount)  
+    
+    val result = hpaParser.parse(fname);
+    val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.txt")));
+    result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
+    val model = accumulator.getTemplateModel();
+    val xmlout = model.toXML
+    
+    //println("----- RAW ------")
+    //val prettyPrinter = new PrettyPrinter(1000, 4)
+    //println(prettyPrinter.format(xmlount))
+    //println("----- x x x ------")
+    
+    val ecCount = (xmlout \ "com.genebio.nextprot.dataloader.context.ExperimentalContextWrapper").size
+    println("OUTPUT - experimental context count:" + ecCount)
+    
+    val synoList = (xmlout.child \ "wrappedBean" \ "contextSynonyms" \\ "synonymName").toList  // we may have N synonyms in 1 ec
+    println("OUTPUT - synoCount:" + synoList.size)
+    assert(synoList.size == expectedCount)
+    synoList.foreach(n => assert(n.text.contains("eco->") && n.text.contains("tissue->")))
+    val methods = synoList.groupBy(n => methodGroup(n.text)).map(el => (el._1, el._2.length)).toMap
+    println("Synonyms by method:" + methods)
+    assert(methods("IHC") == expectedIHCCount)
+    assert(methods("RNA") == expectedRNACount)
+   
+  }
+
+  def methodGroup(syn: String): String = {
+      if (syn.contains("immunolocalization")) return "IHC";
+      if (syn.contains("RNA-seq")) return "RNA";
+      return "???";    
+  }
+  
+  
+
+  
   "The HPAExpcontextNXParser " should " parse a HPA file and throw an error on assay type cancer" in {
 
     val hpaParser = new HPAExpcontextNXParser();
@@ -165,6 +231,7 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   }
 
 
+  
 }
   
   

@@ -15,7 +15,7 @@ import java.io.FileWriter
 
 class NanoTest extends HPAExpcontextTestBase {
 
-  "The test" should "succeed" in {
+  ignore should "this test succeed" in {
 
     myloop(tutu)
     assert(true)
