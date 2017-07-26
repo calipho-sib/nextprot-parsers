@@ -26,7 +26,7 @@ object CASE_NO_UNIPROT_MAPPING extends DiscardCase("There is no Uniprot / Swissp
 /**
  * Case when there are multiple Uniprot / Swissprot mapping for the entry (this is not an error, but the entry must be discarded)
  */
-object CASE_MULTIPLE_UNIPROT_MAPPING extends DiscardCase("There is no Uniprot / Swissprot mapping for the entry");
+object CASE_MULTIPLE_UNIPROT_MAPPING extends DiscardCase("There is multiple Uniprot / Swissprot mapping for the entry");
 
 /**
  * Case where the subcellular mapping for the given location is not applicable in the domain of NextProt (it appears a '-' in the mapping file) (this is not an error, but the entry must be discarded)
