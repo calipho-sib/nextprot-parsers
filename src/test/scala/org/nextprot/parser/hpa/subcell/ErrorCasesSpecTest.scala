@@ -53,7 +53,8 @@ class ErrorCasesSpec extends HPASubcellTestBase {
 
   }
 
-  // HPA_PARS_D1
+  /* 
+  // HPA_PARS_D1: not used any more 
   it should "throw a NXException with NXExceptionType == CASE_NO_UNIPROT_MAPPING when there is no UniProt / Swissprot mapping for the entry" in {
     val parser = new HPASubcellNXParser();
     val thrown = intercept[NXException] {
@@ -61,7 +62,8 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     }
     assert(thrown.getNXExceptionType == CASE_NO_UNIPROT_MAPPING)
   }
-
+  */
+  
   // HPA_PARS_D2	
   it should "throw a NXException with NXExceptionType == CASE_NO_SUBCELLULAR_LOCATION_DATA when there is no subcellular location data in the entry" in {
     val parser = new HPASubcellNXParser();
@@ -96,7 +98,7 @@ class ErrorCasesSpec extends HPASubcellTestBase {
 
 
 
-  it should "throw a NXException with NXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING for subcellular location parser if the entry contains multiple antibodies" in {
+  it should "throw a NXException with NXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING for subcellular location parser if the entry contains multiple uniprot ids" in {
 
     val fname = "src/test/resources/ENSG-test-multiple-uniprot-ids.xml"
     val parser = new HPASubcellNXParser();
