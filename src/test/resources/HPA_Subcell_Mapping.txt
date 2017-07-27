@@ -31,6 +31,8 @@ peroxisomes	SL-0204	-
 plasma membrane	SL-0039	-
 rods & rings	SL-0086	Note=Associated with rods and rings
 vesicles	SL-0088	-
+cytoplasm	SL-0086	-
+cytoskeleton	SL-0090	-
 focal adhesions	SL-0118	-
 microtubule plus end	SL-0090	Note=Associated with microtubules plus end
-nucleus but not nucleoli	SL-0190	- 	
+nucleus but not nucleoli	SL-0190	-
