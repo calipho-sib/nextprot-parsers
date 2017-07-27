@@ -35,7 +35,7 @@
 						<isNegativeEvidence>false</isNegativeEvidence>
 						<type>EVIDENCE</type>
 						<assignedBy>
-							<cvName>Human protein atlas subcellular localization</cvName>
+							<cvName>Human protein atlas</cvName>
 						</assignedBy>
 					</com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
 				</resourceAssocs>
@@ -64,7 +64,7 @@
 						<isNegativeEvidence>false</isNegativeEvidence>
 						<type>EVIDENCE</type>
 						<assignedBy>
-							<cvName>Human protein atlas subcellular localization</cvName>
+							<cvName>Human protein atlas</cvName>
 						</assignedBy>
 					</com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
 				</resourceAssocs>
