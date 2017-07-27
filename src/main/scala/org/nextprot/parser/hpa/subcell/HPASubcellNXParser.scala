@@ -32,6 +32,8 @@ object HPASubcellCvTerms {
 class HPASubcellNXParser extends NXParser {
 
   val parserDatasource = "Human protein atlas subcellular localization";
+  val endUserDatasource = "Human protein atlas"
+
   var pInfo = "";
   
   def parsingInfo: String = {
@@ -122,7 +124,7 @@ class HPASubcellNXParser extends NXParser {
       _isNegative = false,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = parserDatasource,
+      _dataSource = endUserDatasource,
       _props = null, _expContext = null)
   }
 }

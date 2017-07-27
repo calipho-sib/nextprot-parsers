@@ -28,6 +28,7 @@ import org.nextprot.parser.core.constants.EvidenceCode
 
 class HPARNAExpressionNXParser extends NXParser {
 
+  val endUserDatasource = "Human protein atlas"
   
   var pInfo : String = null;
   
@@ -123,7 +124,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _isNegative = negState,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = "Human protein atlas RNA-seq",
+      _dataSource = endUserDatasource,
       _props = List(new AnnotationResourceAssocProperty("expressionLevel", level)),
       _expContext = new ExperimentalContextSynonym(synonym))
   }

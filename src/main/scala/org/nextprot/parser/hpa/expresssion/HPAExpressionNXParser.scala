@@ -34,6 +34,7 @@ object Caloha {
 class HPAExpressionNXParser extends NXParser {
 
   val parserDatasource = "Human protein atlas"
+  val endUserDatasource = "Human protein atlas"
   
   var pInfo : String = null;
   
@@ -162,7 +163,7 @@ class HPAExpressionNXParser extends NXParser {
       _isNegative = negState,
       _type = "EVIDENCE",
       _quality = quality,
-      _dataSource = parserDatasource,
+      _dataSource = endUserDatasource,
       _props = List(new AnnotationResourceAssocProperty("expressionLevel", level)),
       _expContext = new ExperimentalContextSynonym(synonym))
   }
