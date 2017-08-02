@@ -30,6 +30,10 @@ class AntibodyEntryWrapper(val _quality: String, val _dbxref: String, val _versi
   		_uniprotIds.map(id => {<string>{id}</string>} )
   		}
   	 </uniprotIds>
-     { _annots.toXML }
+        {
+          if (_annots != null) {
+      	    { _annots.toXML }
+          }
+        }
     </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
 }

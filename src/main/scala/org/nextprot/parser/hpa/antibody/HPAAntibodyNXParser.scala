@@ -37,7 +37,7 @@ class HPAAntibodyNXParser extends NXParser {
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val antibodyElems = (entryElem \ "antibody").toList
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
-    HPAValidation.checkPreconditionsForAb(entryElem)
+    HPAValidation.checkPreconditionsForAb(entryElem)  // should have either cell expression or ihc tissue expression 
     val wrappers  = 
       antibodyElems.map(antibodyElem => {
         val proplist : MutableList[AntibodyIdentifierProperty] = MutableList()
@@ -58,10 +58,20 @@ class HPAAntibodyNXParser extends NXParser {
         propvalue = (antibodyElem \ "proteinArray" \ "verification").text
         if(propvalue != "") {proplist +=  new AntibodyIdentifierProperty("protein array validation",propvalue)}
 
-        val (quality,r)=HPAQuality.getQualityForOneAntibody(entryElem, antibodyElem, "tissueExpression")
-        
-        val annotations = ((antibodyElem \ "tissueExpression").map(extractAntibodyAnnotation(dbxref, _))).toList;
-        val annots = new HPAAntibodyAnnotationListWrapper(_HPAaccession = dbxref, _rowAnnotations = annotations)
+        val hasIHCExprData = (HPAValidation.checkMainTissueExpression(entryElem) == null)  // null = no error = IHC expr data available
+
+        val (quality,r)= if (hasIHCExprData) {
+          HPAQuality.getQualityForOneAntibody(entryElem, antibodyElem, "tissueExpression")
+        } else {
+          HPAQuality.getQualityForOneAntibody(entryElem, antibodyElem, "cellExpression")          
+        }
+        val annots = if (hasIHCExprData) {
+          val annotations = ((antibodyElem \ "tissueExpression").map(extractAntibodyAnnotation(dbxref, _))).toList;
+          new HPAAntibodyAnnotationListWrapper(_HPAaccession = dbxref, _rowAnnotations = annotations)
+        } else {
+          null
+        }
+
         new AntibodyEntryWrapper(quality.toString(), dbxref, version, new BioSequenceList(List(bioSequence)), new AntibodyIdentifierPropertyList(proplist.toList), annots, uniprotIds)
       })
       

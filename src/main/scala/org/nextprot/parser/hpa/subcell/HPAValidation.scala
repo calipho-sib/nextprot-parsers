@@ -11,71 +11,78 @@ import org.nextprot.parser.core.stats.Stats
 
 object HPAValidation {
 
+
   /**
-   * preconditions for antibodies
+   * preconditions for RNA tissue expression
    */
-  def checkPreconditionsForAb(entryElem: NodeSeq) = {
-
-    // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
-	checkMainTissueExpression(entryElem, "antibody")
-
+  def checkPreconditionsForRnaExpr(accession: String, entryElem: NodeSeq) = {
+    // nothing to do !
   }
 
   /**
    * preconditions for tissue expression
    */
   def checkPreconditionsForExpr(entryElem: NodeSeq) = {
-
-    // We always get one <tissueExpression typeAssay="tissue" technology="IHC"... > from HPA but...
-	checkMainTissueExpression(entryElem, "expression")
+	val error = checkMainTissueExpression(entryElem)
+    if (error != null) throw error
+  }
+  
+  /**
+   * preconditions for subcell
+   */
+  def checkPreconditionsForSubcell(entryElem: NodeSeq) = {
+    val error = checkSubcell(entryElem)
+    if (error != null) throw error
+  }
+  
+  /**
+   * preconditions for antibodies: we want at least 1 tissue expression and / or 1 subcell annotation valid section
+   */
+  def checkPreconditionsForAb(entryElem: NodeSeq) = {
+    val teError = checkMainTissueExpression(entryElem)
+    val suError = checkSubcell(entryElem)
+    if (teError != null && suError != null) throw new NXException(CASE_ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA)
 
   }
 
-  def checkMainTissueExpression(entryElem: NodeSeq, filter: String) = {
+  
+  def checkMainTissueExpression(entryElem: NodeSeq) :NXException = {
     val tesok = (entryElem \ "tissueExpression").
       filter(el => (el \ "@assayType").text == "tissue" && (el \ "@technology").text == "IHC")
       Stats ++ ("CHECKING_TISSUE", "assayType")
 
     if (tesok.size != 1) {
       Stats ++ ("CASE_ASSAY_TYPE_NOT_TISSUE", "not tissue")
-      throw new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
+      return new NXException(CASE_ASSAY_TYPE_NOT_TISSUE)
     }
-    
-    if(filter == "expression" && (tesok  \ "data").size == 0) { // eg: ENSG00000005981, ENSG00000000005
+    if((tesok  \ "data").size == 0) { // eg: ENSG00000005981, ENSG00000000005
       Stats ++ ("CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL", "no data")
-      throw new NXException(CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL)
+      return new NXException(CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL)
     }
-    
+    return null
   }
 
-  /**
-   * preconditions for RNA tissue expression
-   */
-  def checkPreconditionsForRnaExpr(accession: String, entryElem: NodeSeq) = {
-   //if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
-  }
+  
 
   /**
    *
    */
-  def checkPreconditionsForSubcell(accession: String, entryElem: NodeSeq) = {
-
-    //if (accession.isEmpty()) throw new NXException(CASE_NO_UNIPROT_MAPPING);
-
+  def checkSubcell(entryElem: NodeSeq) :NXException = {
     val locations = (entryElem \ "cellExpression" \ "data" \ "location").text;
     if (locations.isEmpty()) {
-      throw new NXException(CASE_NO_SUBCELLULAR_LOCATION_DATA);
+      return new NXException(CASE_NO_SUBCELLULAR_LOCATION_DATA);
     } else {
       if ((entryElem \ "cellExpression" \ "summary").text == "The protein was not detected.")
-        throw new NXException(PROTEIN_NOT_DETECTED_BUT_LOCATION_EXISTENCE)
+        return new NXException(PROTEIN_NOT_DETECTED_BUT_LOCATION_EXISTENCE)
     }
-
     if (!isValidForCellLines(entryElem)) { // Must have RNA detected for at least one cell line ?
-      throw new NXException(CASE_RNA_NOT_DETECTED);
+      return new NXException(CASE_RNA_NOT_DETECTED);
     }
-
+    return null
   }
 
+  
+  
   private def isValidForCellLines(entryElem: NodeSeq): Boolean = {
     val rnamap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "cellLine").text, (f \ "level").text)).toMap;
     val cellLineList = (entryElem \ "antibody" \ "cellExpression" \ "subAssay" \ "data" \ "cellLine").toList

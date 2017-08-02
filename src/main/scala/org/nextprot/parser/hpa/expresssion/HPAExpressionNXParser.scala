@@ -17,7 +17,6 @@ import org.nextprot.parser.hpa.subcell.cases.CASE_BRONZE_QUALITY
 import org.nextprot.parser.core.datamodel.annotation.AnnotationListWrapper
 import org.nextprot.parser.core.datamodel.annotation.RawAnnotation
 import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssoc
-import org.nextprot.parser.hpa.subcell.cases.CASE_ASSAY_TYPE_NOT_TISSUE
 import org.nextprot.parser.hpa.expcontext.HPAExpcontextNXParser
 import org.nextprot.parser.core.datamodel.annotation.AnnotationResourceAssocProperty
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym

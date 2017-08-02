@@ -40,3 +40,7 @@ object CASE_IFTYPE_UNKNOWN extends ErrorCase("The IF analysis type is neither AP
 object CASE_ASSAY_TYPE_NOT_TISSUE extends ErrorCase("The tissue expression assay type is discarded");
 object CASE_VALUES_EMPTY extends ErrorCase("No values in list");
 
+/**
+ * Error case thrown by antibody parser when no data about subcell nor tissue expression is found
+ */
+object CASE_ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA extends ErrorCase("Antibody without tissue expression not subcellular location data is discarded");
