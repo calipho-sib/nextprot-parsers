@@ -18,8 +18,7 @@ object HPAReliabilityValue extends Enumeration {
       case "validated" => return Supportive;
       case "uncertain" => return Uncertain;
       case "approved" => return Uncertain;
-      case "unreliable" => return Uncertain;
-      //case "non-supportive" => return NotSupportive;
+      case "unreliable" => return NotSupportive;
       case _ => throw new Exception(s + " not found for HPAReliabilityValue")
     }
 
