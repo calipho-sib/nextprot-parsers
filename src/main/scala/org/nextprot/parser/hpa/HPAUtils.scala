@@ -30,17 +30,6 @@ object HPAUtils {
     (entryElem \ "identifier" \ "@id").text;
   }
 
-  def getAccession(entryElem: NodeSeq): String = {
-    if ((entryElem \ "identifier" \ "xref" \\ "@id").size > 1)
-      throw new NXException(CASE_MULTIPLE_UNIPROT_MAPPING);
-
-    val accession = (entryElem \ "identifier" \ "xref" \ "@id").text;
-    if (accession.isEmpty()) {
-      // Try to retrieve mapping another way
-      return get_ENSG_To_NX_accession((entryElem \ "identifier" \ "@id").text) // should pass ensg ? anyway not implemented
-    } else return accession;
-  }
-
   // according to Anne, an entry might contain more than one uniprot AC: cases exist !
   def getAccessionList(entryElem: NodeSeq): List[String] = {
     val uids = (entryElem \ "identifier" \ "xref")

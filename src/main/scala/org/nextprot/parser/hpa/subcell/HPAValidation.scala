@@ -15,7 +15,7 @@ object HPAValidation {
   /**
    * preconditions for RNA tissue expression
    */
-  def checkPreconditionsForRnaExpr(accession: String, entryElem: NodeSeq) = {
+  def checkPreconditionsForRnaExpr(entryElem: NodeSeq) = {
     // nothing to do !
   }
 
@@ -61,6 +61,7 @@ object HPAValidation {
     }
     return null
   }
+  
 
   
 

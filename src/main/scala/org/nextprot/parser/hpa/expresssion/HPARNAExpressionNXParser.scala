@@ -42,9 +42,8 @@ class HPARNAExpressionNXParser extends NXParser {
     val assayType = "tissue" // used for building the accession (and thus URL) or evidences (AnnotationResourceAssocs)
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val ensgId = HPAUtils.getEnsgId(entryElem)
-    val accession = HPAUtils.getAccession(entryElem);
-    HPAValidation.checkPreconditionsForRnaExpr(accession, entryElem)
-    //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem)
+    HPAValidation.checkPreconditionsForRnaExpr(entryElem)
+    //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem) // not used (yet?)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
     val rnatedmap = HPAUtils.getTissueRnaExpression(entryElem)
 
@@ -76,7 +75,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _quality = quality,
       _ensgAc = ensgId,
       _uniprotIds = uniprotIds,
-      //_summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType),
+      //_summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType), // not used (yet?)
       _rowAnnotations = rnatsAnnotations 
       )
   }

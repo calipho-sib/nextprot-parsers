@@ -46,8 +46,6 @@ class HPASubcellNXParser extends NXParser {
   def parse(fileName: String): TemplateModel = {
 
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
-    val accession = HPAUtils.getAccession(entryElem);
-    
     HPAValidation.checkPreconditionsForSubcell(entryElem)
 
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
