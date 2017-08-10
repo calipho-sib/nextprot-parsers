@@ -76,14 +76,11 @@ object HPAValidation {
       if ((entryElem \ "cellExpression" \ "summary").text == "The protein was not detected.")
         return new NXException(PROTEIN_NOT_DETECTED_BUT_LOCATION_EXISTENCE)
     }
-    if (!isValidForCellLines(entryElem)) { // Must have RNA detected for at least one cell line ?
-      return new NXException(CASE_RNA_NOT_DETECTED);
-    }
     return null
   }
 
   
-  
+  // not used any more in checkSubCell(): discussion Paula, Pam, Anne, Monique 10.08.2017
   private def isValidForCellLines(entryElem: NodeSeq): Boolean = {
     val rnamap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "cellLine").text, (f \ "level").text)).toMap;
     val cellLineList = (entryElem \ "antibody" \ "cellExpression" \ "subAssay" \ "data" \ "cellLine").toList
