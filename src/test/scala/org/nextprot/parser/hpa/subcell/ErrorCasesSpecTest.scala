@@ -20,7 +20,8 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     assert(parser.isInstanceOf[NXParser])
   }
 
-  // HPA_PARS_D3
+  // HPA_PARS_D3 obsolete
+  /*
   it should "throw a NXException with NXExceptionType == CASE_RNA_NOT_DETECTED if the RNA Sequence is not found in the cell lines" in {
     val parser = new HPASubcellNXParser();
     val thrown = intercept[NXException] {
@@ -28,7 +29,8 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     }
     assert(thrown.getNXExceptionType == CASE_RNA_NOT_DETECTED)
   }
-
+  */
+  
   //HPA_PARS_SPEC_G1-2
   /*
    * "a valid HPA entry should produce at least 1 annotation of type "subcellular-location"
@@ -97,7 +99,8 @@ class ErrorCasesSpec extends HPASubcellTestBase {
   }
 
 
-
+  // obsolete
+  /*
   it should "throw a NXException with NXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING for subcellular location parser if the entry contains multiple uniprot ids" in {
 
     val fname = "src/test/resources/ENSG-test-multiple-uniprot-ids.xml"
@@ -108,6 +111,6 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     }
     assert(thrown.getNXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING)
   }
-
+*/
 }
 
