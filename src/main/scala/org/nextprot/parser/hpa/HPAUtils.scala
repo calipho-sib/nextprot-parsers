@@ -79,9 +79,11 @@ object HPAUtils {
    // new rnaseq data
     def getTissueRnaExpression(entryElem: NodeSeq): Map[String, String] = {
     var isValid: Boolean = false
-    val rnatissuemap = (entryElem \ "rnaExpression" \ "data").map(f => ((f \ "tissue").text, (f \ "level").text)).toMap.drop(1); 
-    rnatissuemap foreach (x => isValid |= (x._2 != "Not detected") )
-    if(!isValid) Console.err.println("all of them 'Not detected'")
+    val rnatissuemap = (entryElem \ "rnaExpression" \ "data")
+    	.map(f => ((f \ "tissue").text, HPAUtils.getCheckedLevel((f \ "level").text)))
+    	.toMap.drop(1) 
+    rnatissuemap foreach (x => isValid |= (x._2 != "not detected") )
+    if(!isValid) Console.err.println("all of them 'not detected'")
     return rnatissuemap
   }
 
@@ -108,6 +110,21 @@ object HPAUtils {
     }
   }
 
+  
+
+
+	def getCheckedLevel(someLevel: String): String = {
+		val level = someLevel.toLowerCase();
+		if (level == "not detected") return level;
+		if (level == "negative") return level;
+		if (level == "positive") return level;
+		if (level == "low") return level;
+		if (level == "medium") return level;
+		if (level == "high") return level;
+		throw new Exception("Unexpected expression level value:" + someLevel )
+	}
+
+  
   private def get_ENSG_To_NX_accession(identifier: String): String = {
     // TODO: write the code and put it in the core section or somewhere else but not specific for HPA
     // At present this step is performed by Anne at the loading stage

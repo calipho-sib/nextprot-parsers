@@ -2,32 +2,31 @@ package org.nextprot.parser.hpa.expcontext
 
 import scala.xml.Node
 import org.nextprot.parser.core.constants.EvidenceCode
-
+import org.nextprot.parser.hpa.HPAUtils
 
 object HPAExpcontextUtil {
 
-  // creates a list of TissueExpressionData from the HPA XML file element tissueExpression or rnaExpression data 
+    // creates a list of TissueExpressionData from the HPA XML file element tissueExpression or rnaExpression data 
 	// TODO: we get several level type values: staining, expression (,...?), is it ok ? take data
 	// TODO: from antibody if selected / single ???
-  
 	def createTissueExpressionLists(el: Node) :List[TissueExpressionData] = {
 	    val tissue:String = (el \ "tissue").text
 	    if(tissue == "") Console.err.println("no tissue in: " + el);
 		val tcs = (el \ "tissueCell")
 		if (tcs.size==0) { //Console.err.println("no  cellType: " + tissue);
 			// It's the case for all rnaExpression, check if some celltypes are implicit...
-		  val lev = (el \ "level").text 
+		  val lev = HPAUtils.getCheckedLevel((el \ "level").text )
 		    return List(new TissueExpressionData(tissue,null,lev));
 		} else {
 			return tcs.map(x => {
 			  val ct = (x \ "cellType").text
 			  val lt = (x \ "level" \ "@type").text // Keep only 'staining' type if parsing antibody section
-			  val lv = (x \ "level").text
+			  val lv = HPAUtils.getCheckedLevel((x \ "level").text)
 			  new TissueExpressionData(tissue, ct, lv)
 			}).toList;
 		}
 	}
-
+	
 	
 	// eco->spatial pattern of protein expression evidence;tissue->liver;
 	// eco->spatial pattern of protein expression evidence;tissue->adrenal gland;cell type->glandular cells;

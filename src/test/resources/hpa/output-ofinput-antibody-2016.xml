@@ -42,7 +42,7 @@
      <uniprotIds>
   		<string>Q8IZE3</string>
   	 </uniprotIds>
-     <summaryAnnotations>
+        <summaryAnnotations>
      <ac>HPA005624</ac>
      <preComputedFeatures>false</preComputedFeatures>
      <wrappedBean><com.genebio.nextprot.dataloader.dto.RawAnnotation>
