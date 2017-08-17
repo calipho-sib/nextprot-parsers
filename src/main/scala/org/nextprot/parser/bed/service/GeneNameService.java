@@ -34,7 +34,7 @@ public class GeneNameService {
 		String[] geneNames = mapper.readValue(content, String[].class);
 
 		if(geneNames.length != 1){
-			throw new RuntimeException("Found " + geneNames.length + " gene names instead of 1");
+			throw new RuntimeException("Found " + geneNames.length + " gene names instead of 1, for: " + geneName);
 		}
 		
 		return geneNames[0];
