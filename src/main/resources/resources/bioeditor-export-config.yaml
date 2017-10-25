@@ -1,34 +1,358 @@
-annotationsType:
+defaultAnnotationsType:
   - VP
+  - VE
 
-ionchannels: 
--   folder: ./navmutpredict/xml/
--   whiteEntries:
-      - SCN1A
-      - SCN2A
-      - SCN3A
-      - SCN4A
-      - SCN5A
-      - SCN8A
-      - SCN9A
-      - SCN10A
-      - SCN11A
 
-cancer: 
--   folder: ./caviar/xml/
--   whiteEntries:
-      - BRCA1
-      - BRCA2
-      - EPCAM
-      - MLH1
-      - MLH3
-      - MSH2
-      - MSH6
-      - PMS2
-    
-    
-kkp: 
--   folder: ./kkp/???
--   whiteEntries:
-      - ...
-    
+sources: 
+
+  - ionchannels: 
+    -   host: strauss
+    -   namespace: navmutpredict
+    -   entries:
+          - SCN1A
+          - SCN2A
+          - SCN3A
+          - SCN4A
+          - SCN5A
+          - SCN8A
+          - SCN9A
+          - SCN10A
+          - SCN11A
+
+  - cancer: 
+    -   host: gauss
+    -   namespace: caviar
+    -   entries:
+          - BRCA1
+          - BRCA2
+          - EPCAM
+          - MLH1
+          - MLH3
+          - MSH2
+          - MSH6
+          - PMS2
+
+  - kkp: 
+    - host: strauss
+    - namespace: kkp
+    - entries: 
+    aatk
+abl1
+abl2
+acvr1b
+akt1
+akt2
+akt3
+alk
+alpk1
+alpk2
+alpk3
+atm
+atr
+aurka
+aurkb
+aurkc
+axl
+blk
+bmx
+brsk1
+brsk2
+btk
+camk1
+camk1d
+camk1g
+camk2a
+camk2b
+camk2d
+camk2g
+camk4
+camkk1
+camkk2
+cask
+cdc42bpa
+cdc42bpb
+cdk1
+cdk19
+cdk2
+cdk3
+cdk4
+cdk5
+cdk6
+cdk7
+cdk8
+cdk9
+cdkl1
+cdkl2
+cdkl3
+cdkl5
+chek1
+chek2
+chuk
+clk1
+clk2
+clk3
+clk4
+csf1r
+csk
+csnk1a1
+csnk1g1
+csnk1g2
+csnk1g3
+csnk2a1
+csnk2a2
+dapk1
+dapk2
+dapk3
+dclk1
+dclk2
+dclk3
+ddr2
+dmpk
+dyrk1a
+dyrk1b
+dyrk2
+dyrk3
+dyrk4
+eef2k
+egfr
+eif2ak3
+eif2ak4
+epha1
+epha2
+epha3
+epha4
+epha5
+epha7
+epha8
+ephb1
+ephb2
+ephb3
+ephb4
+erbb4
+ern1
+fastk
+fer
+fes
+fgfr1
+fgfr2
+fgfr3
+fgfr4
+fgr
+flt1
+flt3
+flt4
+frk
+fyn
+grk5
+grk6
+grk7
+gsg2
+gsk3a
+gsk3b
+hck
+hipk1
+hipk2
+hipk3
+hunk
+igf1r
+ikbkb
+ikbke
+insr
+insrr
+irak1
+irak3
+irak4
+itk
+jak1
+jak2
+jak3
+kdr
+kit
+lats1
+lats2
+lck
+limk1
+lmtk2
+lmtk3
+lrrk1
+lrrk2
+lyn
+map2k1
+map2k2
+map2k4
+map2k6
+map2k7
+map3k5
+map3k7
+map3k9
+map4k2
+mapk1
+mapk10
+mapk11
+mapk12
+mapk13
+mapk14
+mapk3
+mapk7
+mapk8
+mapk9
+mapkapk2
+mapkapk3
+mapkapk5
+mark1
+mark2
+matk
+melk
+mertk
+met
+mink1
+mknk2
+mst1r
+mtor
+musk
+mylk
+nek11
+nek2
+nek3
+nek6
+nek7
+nek9
+nlk
+ntrk1
+ntrk2
+nuak1
+nuak2
+pak1
+pak2
+pak3
+pak4
+pak6
+pak7
+pask
+pdgfra
+pdgfrb
+pdk1
+pdk2
+pdk3
+pdk4
+pdpk1
+peak1
+phkg1
+phkg2
+pik3ca
+pik3cb
+pik3cd
+pik3cg
+pik3r4
+pim1
+pim2
+pim3
+pkmyt1
+pkn1
+pkn2
+pkn3
+plk1
+plk2
+plk3
+plk4
+prkaa1
+prkaa2
+prkaca
+prkacb
+prkacg
+prkca
+prkcb
+prkcd
+prkce
+prkcg
+prkch
+prkci
+prkcq
+prkcz
+prkd1
+prkd2
+prkd3
+prkdc
+prkg1
+prkg2
+prkx
+ptk2
+ptk2b
+ptk6
+raf1
+ret
+ripk2
+rock1
+rock2
+ros1
+rps6ka1
+rps6ka2
+rps6ka3
+rps6ka4
+rps6ka5
+rps6ka6
+rps6kb1
+rps6kb2
+ryk
+sgk1
+sgk2
+sgk3
+sik1
+src
+srpk1
+srpk2
+srpk3
+stk10
+stk11
+stk17a
+stk17b
+stk24
+stk3
+stk32a
+stk33
+stk38
+stk39
+stk4
+syk
+taok1
+taok2
+taok3
+tbk1
+tec
+tek
+tgfbr1
+tgfbr2
+tlk2
+tnik
+tnk2
+tssk1b
+tssk2
+txk
+tyro3
+ulk2
+ulk3
+vrk2
+wnk1
+wnk2
+wnk3
+yes1
+zap70
+
+  
+  - specialkkp: 
+    -   host: strauss
+    -   namespace: kkpspecial
+    -   annotationCategories:
+        - BP
+        - MP
+        - VE
+    -   entries:
+          - KIT
+          - STK11
+          - ATM
+          - RET
+          - FLT3
+          - PRKAR1A
+          - JAK2
+          - ATR
+          - PIK3CA          
