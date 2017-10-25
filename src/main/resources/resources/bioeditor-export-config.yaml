@@ -1,7 +1,9 @@
+exportDirectory:
+  - N:/...
+  
 defaultAnnotationsType:
   - VP
   - VE
-
 
 sources: 
 
