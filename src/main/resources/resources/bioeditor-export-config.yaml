@@ -1,0 +1,34 @@
+annotationsType:
+  - VP
+
+ionchannels: 
+-   folder: ./navmutpredict/xml/
+-   whiteEntries:
+      - SCN1A
+      - SCN2A
+      - SCN3A
+      - SCN4A
+      - SCN5A
+      - SCN8A
+      - SCN9A
+      - SCN10A
+      - SCN11A
+
+cancer: 
+-   folder: ./caviar/xml/
+-   whiteEntries:
+      - BRCA1
+      - BRCA2
+      - EPCAM
+      - MLH1
+      - MLH3
+      - MSH2
+      - MSH6
+      - PMS2
+    
+    
+kkp: 
+-   folder: ./kkp/???
+-   whiteEntries:
+      - ...
+    
