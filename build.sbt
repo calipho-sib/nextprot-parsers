@@ -1,10 +1,6 @@
 //You can check configuration examples here:
 //http://www.scala-sbt.org/release/docs/Examples/Quick-Configuration-Examples
 
-import AssemblyKeys._ // put this at the top of the file
-
-assemblySettings
-
 jarName in assembly := "nextprot-scala-parsers.jar"
 
 mainClass in assembly := Some("org.nextprot.parser.core.NXParserApp")
