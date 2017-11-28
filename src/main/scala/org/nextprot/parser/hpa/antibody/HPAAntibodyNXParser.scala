@@ -37,7 +37,7 @@ class HPAAntibodyNXParser extends NXParser {
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val antibodyElems = (entryElem \ "antibody").toList
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
-    HPAValidation.checkPreconditionsForAb(entryElem)  // should have either cell expression or ihc tissue expression 
+    HPAValidation.checkPreconditionsForAb(entryElem)  // No specific preconditions for Ab
     val wrappers  = 
       antibodyElems.map(antibodyElem => {
         val proplist : MutableList[AntibodyIdentifierProperty] = MutableList()
@@ -46,7 +46,7 @@ class HPAAntibodyNXParser extends NXParser {
         val dbxref = (antibodyElem \ "@id").text
         val version = (antibodyElem \ "@releaseVersion").text
         val bioSequence = new BioSequence((antibodyElem \ "antigenSequence").text, "PREST")
-        //propvalue = (HPAUtils.getTissueExpressionNodeSeq(antibodyElem) \ "verification").text // This section has no IH data...
+
         propvalue = (HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "verification").text // The 'global' validation for IH (at entryElem level)
         //Console.err.println("verif elt: " + propvalue)
         if(propvalue != "") {proplist += new AntibodyIdentifierProperty("immunohistochemistry validation",propvalue)}
@@ -59,12 +59,9 @@ class HPAAntibodyNXParser extends NXParser {
         if(propvalue != "") {proplist +=  new AntibodyIdentifierProperty("protein array validation",propvalue)}
 
         val hasIHCExprData = (HPAValidation.checkMainTissueExpression(entryElem) == null)  // null = no error = IHC expr data available
-
-        val (quality,r)= if (hasIHCExprData) {
-          HPAQuality.getQualityForOneAntibody(entryElem, antibodyElem, "tissueExpression")
-        } else {
-          HPAQuality.getQualityForOneAntibody(entryElem, antibodyElem, "cellExpression")          
-        }
+        
+        val (quality,r)= HPAQuality.getQualityForGenericAntibody(entryElem, antibodyElem) // will always be  GOLD with present rules
+        
         val annots = if (hasIHCExprData) {
           val annotations = ((antibodyElem \ "tissueExpression").map(extractAntibodyAnnotation(dbxref, _))).toList;
           new HPAAntibodyAnnotationListWrapper(_HPAaccession = dbxref, _rowAnnotations = annotations)
@@ -85,7 +82,7 @@ class HPAAntibodyNXParser extends NXParser {
    * Extract antibody annotation
    */
   private def extractAntibodyAnnotation(identifier: String, locationElem: NodeSeq): RawAnnotation = {
-    // qualifiertype ?
+    // qualifier type ?
     // We put the type (normal tissue /cancer) as a header for the elt _description
     val summary = (locationElem \ "summary" \ "@type").text + ":" + (locationElem \ "summary").text
    
