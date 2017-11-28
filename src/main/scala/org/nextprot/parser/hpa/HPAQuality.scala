@@ -76,6 +76,16 @@ object HPAQuality {
   }
 
   /**
+   * Returns the default quality for an antibody : GOLD
+   */
+  def getQualityForGenericAntibody(entryElem: NodeSeq, antibodyElem: NodeSeq): (NXQuality, String)  = {
+    val reliability = HPAReliabilityValue withName ("supportive")
+    
+    val rule = new APEQualityRule(reliability) //,    
+    return (rule.getQuality, rule.toString);
+  }
+
+  /**
    * Returns the quality for the APE case - version 2014
    * section can be either subcellularLocation or tissueExpression
    */
