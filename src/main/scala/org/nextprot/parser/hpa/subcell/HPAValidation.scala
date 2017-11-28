@@ -36,13 +36,13 @@ object HPAValidation {
   }
   
   /**
-   * preconditions for antibodies: we want at least 1 tissue expression and / or 1 subcell annotation valid section
+   * preconditions for antibodies: no preconditions
    */
   def checkPreconditionsForAb(entryElem: NodeSeq) = {
     val teError = checkMainTissueExpression(entryElem)
     val suError = checkSubcell(entryElem)
-    if (teError != null && suError != null) throw new NXException(CASE_ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA)
-
+    if (teError != null && suError != null) // throw new NXException(CASE_ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA)
+      Console.err.println("ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA -> OK")
   }
 
   
