@@ -251,11 +251,13 @@ cartilage of nose|Nasal cartilage|TS-0655
 Caudate|Caudate nucleus|TS-0121
 Caudate glial cells|Caudate nucleus glial cell|TS-2503
 Caudate neuronal cells|Caudate nucleus neuron|TS-2504
+Caudate neuronal projections|Caudate nucleus neuronal projections|TS-2533
 Caudate nucleus|Caudate nucleus|TS-0121
 Caudate nucleus glial cells|Caudate nucleus glial cell|TS-2503
 Caudate nucleus glial cell|Caudate nucleus glial cell|TS-2503
 Caudate nucleus neuronal cells|Caudate nucleus neuron|TS-2504
 Caudate nucleus neuron|Caudate nucleus neuron|TS-2504
+Caudate synapses|Caudate nucleus synapses|TS-2532
 Caudatus|Caudate nucleus|TS-0121
 cDC|Conventional dendritic cell|TS-2192
 Ceca|Cecum|TS-0122
@@ -307,6 +309,8 @@ Cerebral cortex neuronal cells|Cerebral cortex neuron|TS-1259
 Cerebral cortex neuropil|Cerebral cortex neuropil|TS-2396
 Cerebral cortex processes|Cerebral cortex processes|TS-2518
 Cerebral cortex processes/nerve bundles|Cerebral cortex processes|TS-2518
+Cerebral cortex neuronal projections|Cerebral cortex processes|TS-2518
+Cerebral cortex synapses|Cerebral cortex synapses|TS-2530
 Cerebral gray matter|Cerebral grey matter|TS-2361
 Cerebral grey matter|Cerebral grey matter|TS-2361
 Cerebral hemisphere|Cerebral hemisphere|TS-2007
@@ -493,6 +497,7 @@ Ectoderm|Ectoderm|TS-0216
 Egg|Ovum|TS-2191
 Ejaculatory duct|Ductus ejaculatorius|TS-0211
 Elbow|Elbow|TS-2222
+Elongated or late spermatids|Elongated spermatid|TS-2535
 Embryo|Embryo|TS-0229
 Embryonic|Embryo|TS-0229
 Embryonic brain|Embryonic brain|TS-0231
@@ -880,8 +885,10 @@ Hippocampus neuroglial cell|Hippocampus glial cell|TS-1257
 Hippocampus neuron|Hippocampus neuron|TS-1260
 Hippocampus neuronal cell|Hippocampus neuron|TS-1260
 Hippocampus neuronal cells|Hippocampus neuron|TS-1260
+Hippocampus neuronal projections|Hippocampus neuronal projections|TS-2519
 Hippocampus processes|Hippocampus processes|TS-2519
 Hippocampus processes/nerve bundles|Hippocampus processes|TS-2519
+Hippocampus synapses|Hippocampus synapses|TS-2531
 Histiocyte|Histiocyte|TS-2019
 Horny layer|Stratum corneum|TS-0981
 Horny layer of epidermis|Stratum corneum|TS-0981
@@ -1356,6 +1363,7 @@ Oviduct epithelium|Oviduct epithelium|TS-1316
 Oviduct glandular cell|Oviduct glandular cell|TS-1277
 Ovocyte|Oocyte|TS-0711
 Ovum|Ovum|TS-2191
+Pachytene spermatocytes|Pachytene spermatocyte|TS-2436
 Palate|Palate|TS-2212
 Pallium|Cerebral cortex|TS-0091
 Pallium of the brain|Cerebral cortex|TS-0091
@@ -1426,6 +1434,7 @@ Peripheral ganglion|Ganglion|TS-0397
 Peripheral nerve|Peripheral nerve|TS-0772
 Peripheral nervous system|Peripheral nervous system|TS-0808
 Peritoneum|Peritoneum|TS-2072
+Peritubular cells|Peritubular myoid cell|TS-2423
 Peyer patch|Peyer patch|TS-0780
 Peyer's gland|Peyer patch|TS-0780
 Peyer's patch|Peyer patch|TS-0780
@@ -1468,6 +1477,7 @@ Posterior pituitary gland|Posterior pituitary|TS-0815
 Pre-B cell|Pre-B cell|TS-0819
 Pre-B lymphocyte|Pre-B cell|TS-0819
 Pre-B-lymphocyte|Pre-B cell|TS-0819
+Preleptotene spermatocytes|Preleptotene spermatocyte|TS-2536
 Preoptic area of hypothalamus|Preoptic area of hypothalamus|TS-0822
 Preoptic nuclei|Preoptic area of hypothalamus|TS-0822
 Preoptic nucleus|Preoptic area of hypothalamus|TS-0822
@@ -1576,6 +1586,7 @@ Rhombencephalon|Hindbrain|TS-0457
 Rib|Rib|TS-2209
 Right heart ventricle|Heart right ventricle|TS-0443
 Right ventricle|Heart right ventricle|TS-0443
+Round or early spermatids|Round spermatid|TS-2534
 Sacral bone|Sacrum|TS-2201
 Sacrum|Sacrum|TS-2201
 Saliva|Saliva|TS-0891
@@ -1618,6 +1629,7 @@ Sensory neuron|Sensory neuron|TS-2387
 Sensory neurons|Sensory neuron|TS-2387
 Sensory organ|Sense organ|TS-2043
 Sertoli cell|Sertoli cell|TS-0922
+Sertoli cells|Sertoli cell|TS-0922
 Serum|Serum|TS-0923
 Shoulder|Shoulder|TS-2229
 Shoulder blade|Scapula|TS-0897
