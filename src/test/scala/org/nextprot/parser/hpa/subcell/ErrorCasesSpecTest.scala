@@ -20,17 +20,6 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     assert(parser.isInstanceOf[NXParser])
   }
 
-  // HPA_PARS_D3 obsolete
-  /*
-  it should "throw a NXException with NXExceptionType == CASE_RNA_NOT_DETECTED if the RNA Sequence is not found in the cell lines" in {
-    val parser = new HPASubcellNXParser();
-    val thrown = intercept[NXException] {
-      parser.parse("src/test/resources/ENSG_WITHOUT_RNA.xml");
-    }
-    assert(thrown.getNXExceptionType == CASE_RNA_NOT_DETECTED)
-  }
-  */
-  
   //HPA_PARS_SPEC_G1-2
   /*
    * "a valid HPA entry should produce at least 1 annotation of type "subcellular-location"
@@ -55,17 +44,6 @@ class ErrorCasesSpec extends HPASubcellTestBase {
 
   }
 
-  /* 
-  // HPA_PARS_D1: not used any more 
-  it should "throw a NXException with NXExceptionType == CASE_NO_UNIPROT_MAPPING when there is no UniProt / Swissprot mapping for the entry" in {
-    val parser = new HPASubcellNXParser();
-    val thrown = intercept[NXException] {
-      parser.parse("src/test/resources/ENSG_WITHOUT_UNIPROT_MAPPING.xml");
-    }
-    assert(thrown.getNXExceptionType == CASE_NO_UNIPROT_MAPPING)
-  }
-  */
-  
   // HPA_PARS_D2	
   it should "throw a NXException with NXExceptionType == CASE_NO_SUBCELLULAR_LOCATION_DATA when there is no subcellular location data in the entry" in {
     val parser = new HPASubcellNXParser();
@@ -84,33 +62,5 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     assert(thrown.getNXExceptionType == CASE_SUBCELULLAR_MAPPING_NOT_APPLICABLE)
   }
 
-  // HPA_PARS_SPEC_G2
-  "The HPA analysis quality parser" should "throw a NXException if type is not APE (integrated), SINGLE or SELECTED" in {
-    a[NXException] should be thrownBy {
-      HPAQuality.getQuality(<cellExpression technology="IF" type="unknown"></cellExpression>, slSection);
-    }
-  }
-
-  it should "throw a NXException with NXExceptionType == CASE_IFTYPE_UNKNOWN if the RNA Sequence is not found in the cell lines" in {
-    val thrown = intercept[NXException] {
-      HPAQuality.getQuality(<cellExpression technology="IF" type="unknown"></cellExpression>, slSection);
-    }
-    assert(thrown.getNXExceptionType == CASE_IFTYPE_UNKNOWN)
-  }
-
-
-  // obsolete
-  /*
-  it should "throw a NXException with NXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING for subcellular location parser if the entry contains multiple uniprot ids" in {
-
-    val fname = "src/test/resources/ENSG-test-multiple-uniprot-ids.xml"
-    val parser = new HPASubcellNXParser();
-
-    val thrown = intercept[NXException] {
-      val template = parser.parse(fname);
-    }
-    assert(thrown.getNXExceptionType == CASE_MULTIPLE_UNIPROT_MAPPING)
-  }
-*/
 }
 
