@@ -51,20 +51,6 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     }
   }
 
-  "The HPAExpressionNXParser " should " discard file of type selected where multiple antibody have a tissueExpression with assayType tissue" in {
-
-    val fname = "src/test/resources/ENSG-test-selected-with-ambiguous-antibody.xml"
-    try {
-      new HPAExpressionNXParser().parse(fname);
-      assert(false)
-    } catch {
-      case e: NXException => {
-        //println(e.getNXExceptionType.description)
-        assert(e.getNXExceptionType == CASE_MORE_THAN_ONE_ANTIBODY_FOUND_FOR_SELECTED)
-      }
-    }
-  }
-
   "The HPAExpressionNXParser " should " not discard file of type selected where one antibody have a tissueExpression with assayType tissue" in {
 
     val fname = "src/test/resources/ENSG-test-selected-with-non-ambiguous-antibody.xml"
@@ -135,9 +121,9 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val parser = new HPAExpressionNXParser();
     val template = parser.parse(fname);
     val summAc = (template.toXML \ "summaryAnnotations" \\ "com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc" \\ "accession").text
-    assert(summAc == "ENSG00000180066/tissue")
+    assert(summAc == "ENSG00000113361/tissue")
     val exprAc = (template.toXML \ "expressionAnnotations" \\ "com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc" \\ "accession")
-    exprAc.foreach(el => assert(el.text == "ENSG00000180066/tissue/uterus 2"))
+    exprAc.foreach(el => assert(el.text == "ENSG00000113361/tissue/endometrium"))
     
   }
 
