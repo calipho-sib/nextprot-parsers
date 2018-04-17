@@ -53,7 +53,7 @@ class HPARNAExpressionNXParser extends NXParser {
     //Stats should not appear here
     Stats ++ ("RULES_FOR_" + quality, ruleUsed);
 
-    pInfo = quality.toString();  // + "\t" + ruleUsed;
+    pInfo = quality.toString(); 
     	
     if (quality.equals(BRONZE)) { // Should never happen after HPA16
             Stats ++ ("BRONZE", "bronze")
@@ -68,8 +68,6 @@ class HPARNAExpressionNXParser extends NXParser {
         val syn = HPAExpcontextUtil.getSynonymForXml(rnated, EvidenceCode.RnaSeq) // The Expcontext synonym allows to link data between expression and expcontext xmls
         extractTissueSpecificityAnnotation(ensgId, NXQuality.GOLD, syn, rnated.level, assayType, EvidenceCode.RnaSeq) // Always GOLD
       }).toList // Creates the list of raw annotations
-    //Console.err.println(ensgId + ": " + rnatsAnnotations.size + " RNA annotations...")
-      
 
       new ExpHPARNAAnnotationsWrapper(
       _quality = quality,
