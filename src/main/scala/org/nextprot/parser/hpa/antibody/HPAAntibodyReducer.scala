@@ -29,9 +29,9 @@ class HPAAntibodyReducer extends NXPrettyReducer {
             if (!antibodyNames.contains(antibodyAccession)) {
               antibodyNames.add(antibodyAccession);
               fw.write(getPrettyFormatIfNeeded(antibody.toXML) + "\n");
-              Stats ++ ("ANTIBODY-COUNT", "NEW")
+              Stats ++ ("ANTIBODY-COUNT", "ANTIBODIES ONLY IN ONE ENSG")
             } else {
-              Stats ++ ("ANTIBODY-COUNT", "REPEATED")
+              Stats ++ ("ANTIBODY-COUNT", "ANTIBODIES IN SEVERAL ENSGs")
             }
 
           });
