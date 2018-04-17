@@ -90,7 +90,10 @@ class HPASubcellNXParser extends NXParser {
 
     val location = HPASubcellCvTerms.map(locationElem.text);
     if (location._1.equals("-")) // Known cases of skipped mapping, eg: aggresome
+      {
+      Console.err.println(identifier + " no SL mapping found for: " + locationElem.text)
       return null
+      }
     val status = (locationElem \ "@status").text;
 
     val cvterm = HPASubcellCvTerms.map(locationElem.text)._1;
