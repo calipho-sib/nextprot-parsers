@@ -95,15 +95,6 @@ class HPAExpressionNXParser extends NXParser {
         val syn = HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization)
         extractTissueSpecificityAnnotation(ensgId, quality, syn, ted.level, assayType, EvidenceCode.ImmunoLocalization)
       }).toList
-    //Console.err.println(ensgId + ": " + ihctsAnnotations.size + " IHC annotations...")
-    
-    //	    val tedsCount = teds.size
-    //	    val tsanCount = tsAnnotations.size
-    //	    println("-------------------------------------")
-    //	    tsAnnotations.foreach(a => println(a.toXML.toString));
-    //	    println("-------------------------------------")
-    //	    println("tedsCount:" + tedsCount)
-    //	    println("tsanCount:" + tsanCount)
 
       new ExpHPAAnnotationsWrapper(
       _quality = quality,
