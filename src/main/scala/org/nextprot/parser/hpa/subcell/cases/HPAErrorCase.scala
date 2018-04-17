@@ -43,4 +43,4 @@ object CASE_VALUES_EMPTY extends ErrorCase("No values in list");
 /**
  * Error case thrown by antibody parser when no data about subcell nor tissue expression is found
  */
-object CASE_ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA extends ErrorCase("Antibody without tissue expression not subcellular location data is discarded");
+//object CASE_ANTIBODY_WITH_NO_SUBCELL_NOR_TISSUE_EXPR_DATA extends ErrorCase("Antibody without tissue expression not subcellular location data is discarded");
