@@ -14,46 +14,12 @@ object HPAQuality {
   
   /*
    * Returns the global quality for sub cellular location or tissue expression
-   * @section = tissueExpression or subcellularLocation
+   * @section = tissueExpression or cellExpression
    */
   def getQuality(entryElem: NodeSeq, section: String): (NXQuality, String) = {
-    val abtype = (entryElem \ section \ "@type").text.toLowerCase();
-
-    abtype match {
-
-      case "single" => {
-        Stats ++ ("ENTRIES-TYPE", "single");
-        return getQualityForOneAntibody(entryElem, entryElem \ "antibody", section)
-      }
-
-      case "selected" => {
-
-        if ((section == "cellExpression") && HPAUtils.isSelectedTreatedAsAPEForSubcell(entryElem)) {
-          Stats ++ ("ENTRIES-TYPE", "selected but treated as ape");
-          return getQualityForIntegratedAntibody(entryElem, section)
-        } else {
-
-          //Simple check that makes sure that there is only one antibody (selected)
-          val antibodySelected = (entryElem \ "antibody").filter(a => !(a \ section).isEmpty)
-          if (antibodySelected.length > 1) 
-            throw new NXException(CASE_MORE_THAN_ONE_ANTIBODY_FOUND_FOR_SELECTED, antibodySelected.length + " antibodies ")
-
-          Stats ++ ("ENTRIES-TYPE", "ape");
-          return getQualityForOneAntibody(entryElem, antibodySelected, section)
-
-        }
-      }
-
-      case "ape" => {
-        Stats ++ ("ENTRIES-TYPE", "ape");
-        return getQualityForIntegratedAntibody(entryElem, section)
-      }
-      case _ => {
-        Stats ++ ("ENTRIES-TYPE", "unknown: " + abtype);
-        throw new NXException(CASE_IFTYPE_UNKNOWN, abtype + " not found")
-      }
-
-    }
+    // Since HPA17 the  @type attribute has disappeared, all is 'integrated'
+    Stats ++ ("ENTRIES-TYPE", "integrated")
+    return getQualityForIntegratedAntibody(entryElem, section)
 
   }
   
@@ -68,7 +34,6 @@ object HPAQuality {
    * Returns the quality for the single and selected case
    */
   def getQualityForOneAntibody(entryElem: NodeSeq, antibodyElem: NodeSeq, section: String): (NXQuality, String)  = {
-    //Console.err.println((antibodyElem  \ "@id").text)
     val reliability = getReliabilityScore(entryElem, section)
     
     val rule = new APEQualityRule(reliability) //,    
