@@ -15,12 +15,8 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
     val hpaParser = new HPAAntibodyNXParser();
     val wrapper = hpaParser.parse(hpadir + "ENSG_FOR_ONE_HPA_ANTIBODY.xml");
 
-    //println(wrapper.antibodyList(0).toXML) 
-    //val writer = new FileWriter(new File(hpadir + "ENSG_FOR_ONE_HPA_ANTIBODY_OUTPUT_nospaces.xml"))
-    //writer.write(wrapper.antibodyList(0).toXML.toString.replaceAll("[ \t]", ""))
     val writer = new FileWriter(new File(hpadir + "ENSG_FOR_ONE_HPA_ANTIBODY_OUTPUT.xml"))
     writer.write(wrapper.antibodyList(0).toXML.toString)
-    //writer.write(scala.xml.Utility.trim(wrapper.toXML).toString)
     writer.close()
     assert(wrapper != null)
   }
@@ -61,9 +57,9 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
 
   }
 
- "The HPAAntibodyNXParser " should " parse successfully input-antibody-2016.xml" in {
+ "The HPAAntibodyNXParser " should " parse successfully input-antibody-2018.xml" in {
 
-     val infile = "input-antibody-2016.xml"
+     val infile = "input-antibody-2018.xml"
      val hpaParser = new HPAAntibodyNXParser();
     val wrapper = hpaParser.parse(hpadir +infile);
     val writer = new FileWriter(new File(hpadir + "output-of" + infile))
@@ -73,9 +69,9 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
   }
  
   
-  "The HPAAntibodyNXParser " should " find IH verification value in input-antibody-2016.xml" in {
+  "The HPAAntibodyNXParser " should " find IH verification value in input-antibody-2018.xml" in {
 
-    val infile = "input-antibody-2016.xml"
+    val infile = "input-antibody-2018.xml"
     val hpaParser = new HPAAntibodyNXParser();
     val wrapper = hpaParser.parse(hpadir +infile);
     val prop = (wrapper.antibodyList(0).toXML \ "wrappedBean" \"identifierProperties" \ "com.genebio.nextprot.datamodel.identifier.IdentifierProperty" );
@@ -86,7 +82,7 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
     //Console.err.println("value:" + value);
     //Console.err.println("name :" + name);
     assert(name == "immunohistochemistry validation")
-    assert(value == "uncertain")
+    assert(value == "approved")
   } 
   
   "The HPAAntibodyNXParser " should "produce exactly this output for ENSG00000081181.xml" in {
