@@ -36,23 +36,8 @@ object HPAUtils {
     uids.map(a => (a \ "@id").text).toList
   }
 
-  def isSelectedTreatedAsAPEForSubcell(entryElem: NodeSeq): Boolean = {
-    val abtype = (entryElem \ "cellExpression" \ "@type").text.toLowerCase();
-    if (abtype == "selected") { //check that is selected
-      //val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty) // check that has subcellar location information for more than one antibody
-      val selectableAbs = (entryElem \ "antibody").filter(a => !(a \ "cellExpression").isEmpty) // check that has subcellar location information for more than one antibody
-      if (selectableAbs.length > 1) {
-        return true
-      }
-    }
-    return false
-
-  }
-
   def getAntibodyIdListForSubcellular(entryElem: NodeSeq): List[String] = {
-    //val abs = (entryElem \ "antibody").filter(a => !(a \ "subcellularLocation").isEmpty);
-    val abs = (entryElem \ "antibody").filter(a => !(a \ "cellExpression").isEmpty);
-    
+    val abs = (entryElem \ "antibody").filter(a => !(a \ "cellExpression").isEmpty);   
     // we expect one or more antibodies matching the criteria above
     val list = abs.map(a => (a \ "@id").text).toList
     if (list.size == 0) throw new NXException(CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL)
@@ -76,38 +61,25 @@ object HPAUtils {
 
   }
 
-   // new rnaseq data
+   // RNAseq data
     def getTissueRnaExpression(entryElem: NodeSeq): Map[String, String] = {
-    var isValid: Boolean = false
+    var hasExpression: Boolean = false
     val rnatissuemap = (entryElem \ "rnaExpression" \ "data")
     	.map(f => ((f \ "tissue").text, HPAUtils.getCheckedLevel((f \ "level").text)))
     	.toMap.drop(1) 
-    rnatissuemap foreach (x => isValid |= (x._2 != "not detected") )
-    if(!isValid) Console.err.println("all of them 'not detected'")
+    rnatissuemap foreach (x => hasExpression |= (x._2 != "not detected") )
+    if(!hasExpression) Console.err.println(getEnsgId(entryElem) + ": " + rnatissuemap.size + " tissues 'not detected'")
     return rnatissuemap
   }
 
-    // TODO: check with Anne / Paula
   def getTissueExpressionType(entryElem: NodeSeq): String = {
-    val hpaType = (getTissueExpressionNodeSeq(entryElem) \ "@type").text.toLowerCase()
-    hpaType match {
-      case "ape" => "integrated"
-      case "single" => "single"
-      case "selected" => "selected"
-      case _ => throw new Exception("Unexpected tissue expression type: " + hpaType)
-    }
+     // Used to be a rule based on antibody status, but since HPA17 the  @type attribute has disappeared
+    "integrated" 
   }
 
-  // TODO: check with Anne / Paula
   def getSubcellIntegrationType(entryElem: NodeSeq): String = {
-    //val hpaType = (entryElem \ "subcellularLocation" \ "@type").text.toLowerCase()
-    val hpaType = (entryElem \ "cellExpression" \ "@type").text.toLowerCase()
-    hpaType match {
-      case "ape" => "integrated"
-      case "single" => "single"
-      case "selected" => "selected"
-      case _ => throw new Exception("Unexpected subcell type: " + hpaType)
-    }
+    // Used to be a rule based on antibody status, but since HPA17 the  @type attribute has disappeared
+    "integrated" 
   }
 
   
