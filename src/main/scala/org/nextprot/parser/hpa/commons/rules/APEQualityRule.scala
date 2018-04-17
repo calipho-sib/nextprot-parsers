@@ -6,14 +6,11 @@ import org.nextprot.parser.hpa.commons.constants.HPAReliabilityValue._
 import org.nextprot.parser.core.exception.NXException
 
 
-//case class APEQualityRule(reliability: HPAReliabilityValue, hpaPA: HPAValidationIntegratedValue, hpaWB: HPAValidationIntegratedValue) {
 case class APEQualityRule(reliability: HPAReliabilityValue) {
 
 /* 
- * See specs at https://docs.google.com/spreadsheets/d/1nZmb6TXEMMFdtUtCi-2EpzUNkkeohDle3KMwfLfvjdg/edit?usp=sharing
- * sheet v.13
  *  See new specs in issue NEXTPROT-1383 
- * TODO: provide a link tp specs for new rule
+ * TODO: provide a link to specs for new rule, rename method and file IntegratedQualityRule, maybe rename the class
  */
   
   def getQuality: NXQuality = { // Current status of version v.16.1, new QC rules checked with Paula
