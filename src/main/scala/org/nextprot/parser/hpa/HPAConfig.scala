@@ -34,7 +34,29 @@ object HPAConfig {
     println()
 
     return map
-
   }
 
+  def readHPAMultiENSGListFile: List[String] = {
+
+    val multiENSGFileProperty = "hpa.multiENSG.file";
+    val multiENSGFile = if (System.getProperty(multiENSGFileProperty) != null) {
+      new File(System.getProperty(multiENSGFileProperty));
+    } else null;
+
+    if ((multiENSGFile == null)) {
+      println(multiENSGFileProperty + " property is not set. Set environment " + multiENSGFileProperty + " system property");
+      System.exit(1);
+    } else if (!multiENSGFile.exists()) {
+      println("Multi ENSG file " + multiENSGFile.getName() + " not found!.");
+      System.exit(1);
+    } else println("Loading HPA->Multi ENSG file: " + multiENSGFile)
+
+    // Build once for all HPA-multi ENSG list from file      
+    val ensgList = Source.fromFile(multiENSGFile).getLines().
+      filter(!_.startsWith("#")).toList //Remove the lines starting with a comment
+    println(ensgList.size + " ENSGs found")
+    println()
+
+    return ensgList
+  }
 }
