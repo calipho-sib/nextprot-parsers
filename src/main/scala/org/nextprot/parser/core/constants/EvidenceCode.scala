@@ -10,7 +10,7 @@ object EvidenceCode extends Enumeration {
 	}
 	implicit def valueToEvidenceCodeVal(x: Value) = x.asInstanceOf[Val] 
 
-	val ImmunoLocalization = Val("ECO:0000087","immunolocalization evidence") 
+	val ImmunoLocalization = Val("ECO:0001055","immunolocalization evidence") 
 	val ImmunocytoChemistry = Val("ECO:0001053","immunocytochemistry evidence") 
 	val RnaSeq = Val("ECO:0000295","RNA-seq evidence") 
 } 
