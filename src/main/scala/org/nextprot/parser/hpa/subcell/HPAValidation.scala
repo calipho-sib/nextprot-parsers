@@ -7,6 +7,7 @@ import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import java.io.File
 import org.nextprot.parser.hpa.HPAConfig
+import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.core.stats.Stats
 
 object HPAValidation {
@@ -15,8 +16,13 @@ object HPAValidation {
   /**
    * preconditions for RNA tissue expression
    */
-  def checkPreconditionsForRnaExpr(entryElem: NodeSeq) = {
+  def checkPreconditionsForRnaExpr(entryElem: NodeSeq, discardList: List[String]) = {
     // nothing to do !
+    val ensg = HPAUtils.getEnsgId(entryElem)
+    //if(ensg.equals("ENSG00000236737"))
+    if(discardList.contains(ensg))
+      throw new NXException(CASE_MULTIPLE_ENSG_FOR_ENTRY_LEVEL_RNAEXP)
+    //else Console.err.println(ensg + " not found in list of " + discardList.size)
   }
 
   /**
