@@ -70,21 +70,6 @@ class HPAExpressionNXParser extends NXParser {
     }
 
     var data = HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "data"
-    /*
-     * In case we change mind and want to rescue some tissue expression, remove CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL exception in checkPreconditionsForExpr
-     * 
-    if(data.size == 0) {
-      if (integrationLevel != "single") throw new NXException(CASE_NO_TISSUE_DATA_FOR_ENTRY_LEVEL) // Console.err.println("NO TISSUE DATA AT ENTRY LEVEL FOR " + integrationLevel + " " + ensgId )
-      else {
-        
-        data = HPAUtils.getTissueExpressionNodeSeq(entryElem \ "antibody") \ "data"
-        // override entry level description ?
-       Console.err.println(ensgId + " " + summaryDescr)
-       summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem \ "antibody") 
-       // expressions values use different CV !
-      }
-    }
-    */
     val teds = data.map(HPAExpcontextUtil.createTissueExpressionLists(_)).flatten;
 
     teds.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) == null).
