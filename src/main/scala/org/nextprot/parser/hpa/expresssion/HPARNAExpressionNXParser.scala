@@ -23,7 +23,12 @@ import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym
 import org.nextprot.parser.hpa.datamodel.ExpHPARNAAnnotationsWrapper
 import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.core.constants.EvidenceCode
+import org.nextprot.parser.hpa.HPAConfig
 
+
+object HPAMultiENSGTList {
+  val multiENSGTList = HPAConfig.readHPAMultiENSGListFile;
+}
 
 class HPARNAExpressionNXParser extends NXParser {
 
@@ -42,7 +47,7 @@ class HPARNAExpressionNXParser extends NXParser {
     val assayType = "tissue" // used for building the accession (and thus URL) or evidences (AnnotationResourceAssocs)
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val ensgId = HPAUtils.getEnsgId(entryElem)
-    HPAValidation.checkPreconditionsForRnaExpr(entryElem)
+    HPAValidation.checkPreconditionsForRnaExpr(entryElem, HPAMultiENSGTList.multiENSGTList)
     //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem) // not used (yet?)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
     val rnatedmap = HPAUtils.getTissueRnaExpression(entryElem)
