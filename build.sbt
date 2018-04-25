@@ -30,11 +30,10 @@ fork := true
 javaOptions ++= Seq(
 "-Xmx2000m",
 //"-Dfiles.directory=hpa-data",
-//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/106/100",
-//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000",
-//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/063/177",
-//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/269/113",
-"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/269",
+//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/269/058",
+"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000",
+//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS/G00/000/270",
+//"-Dfiles.directory=/Volumes/Calipho/newhpadata/ENS",
 //"-Dfiles.expression=^ENSG00000269113.xml$",
 //"-Dfiles.expression=^ENSG00000180071.xml$",
 //"-Dfiles.expression=^ENSG00000063177.xml$",
@@ -47,7 +46,8 @@ javaOptions ++= Seq(
 "-Dpretty=true",
 "-Dhpa.mapping.file=src/test/resources/HPA_Subcell_Mapping.txt", // a copy of the latest mapping file at github controlled-vocabulary/HPA_Subcell_Mapping.txt
 "-Dhpa.tissue.mapping.file=src/test/resources/NextProt_tissues.from-db.txt",
-"-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt"
+"-Dhpa.anti.multi.file=src/test/resources/multi_target_antibodies.txt",
+"-Dhpa.multiENSG.file=src/test/resources/multiENSG_for_same_entry.txt"
 //"-Dfiles.entries=src/test/resources/org/nextprot/parser/ensg/entry-list.txt"
 //"-Doutput.file=sp_ensg.txt"
 )
