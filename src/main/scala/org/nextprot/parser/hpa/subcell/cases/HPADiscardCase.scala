@@ -45,6 +45,12 @@ object CASE_MULTITARGETING_ANTIBODY extends DiscardCase("The antibodies used in 
 object CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE extends DiscardCase("Antibody with non supportive verification in protein array");
 
 /**
+ * Value for RNA tissueExpression when several ENSG are associated with same NP entry (eg: ENSG00000236737,  ENSG00000237671, ... for GAGE12)
+ */
+
+object CASE_MULTIPLE_ENSG_FOR_ENTRY_LEVEL_RNAEXP extends DiscardCase("RNA tissueExpression with severalENSGs for same entry level");
+
+/**
  * Value for tissueExpression assayType="tissue" technology="IHC" type="xxx" but no data (eg: ENSG00000269556, ENSG00000004846)
  */
 
