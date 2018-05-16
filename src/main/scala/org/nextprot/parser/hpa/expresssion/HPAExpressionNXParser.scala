@@ -77,8 +77,8 @@ class HPAExpressionNXParser extends NXParser {
 
     val ihctsAnnotations = teds.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
       map(ted => {
-        val syn = HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization)
-        extractTissueSpecificityAnnotation(ensgId, quality, syn, ted.level, assayType, EvidenceCode.ImmunoLocalization)
+        val syn = HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoHistochemistry)
+        extractTissueSpecificityAnnotation(ensgId, quality, syn, ted.level, assayType, EvidenceCode.ImmunoHistochemistry)
       }).toList
 
       new ExpHPAAnnotationsWrapper(
