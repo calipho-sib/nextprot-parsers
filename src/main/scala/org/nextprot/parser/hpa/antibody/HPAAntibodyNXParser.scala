@@ -108,7 +108,7 @@ class HPAAntibodyNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier,
       _cvDatabaseName = "HPA",
-      _eco = EvidenceCode.ImmunoLocalization.code,
+      _eco = EvidenceCode.Antibodymapping.code,
       _isNegative = false,
       _type = "SOURCE",
       _quality = null,
