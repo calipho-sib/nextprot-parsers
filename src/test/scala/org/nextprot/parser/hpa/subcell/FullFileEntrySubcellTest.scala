@@ -24,5 +24,19 @@ class FullFileEntrySubcellTest extends HPASubcellTestBase {
 
   }
 
+   
+    "The HPASubcellNXParser " should " process generate an XML with element annotationTag set to SubCell" in {
 
+    val fname = "src/test/resources/hpa/subcell/subcell-file-input.xml"
+    val parser = new HPASubcellNXParser();
+    val template = parser.parse(fname);
+    println(template.toXML.toString.substring(0,600))
+    val data = (template.toXML \ "annotationTag").text.trim()
+    assert("SubCell".equals(data))
+  }
+  
+
+
+  
+  
 }

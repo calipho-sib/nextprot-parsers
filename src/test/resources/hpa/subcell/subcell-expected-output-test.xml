@@ -1,4 +1,5 @@
 <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+        <annotationTag>SubCell</annotationTag>
 	<ensgAccessionCode>ENSG00000063177</ensgAccessionCode>
 	<uniprotIds>
 		<string>Q07020</string>

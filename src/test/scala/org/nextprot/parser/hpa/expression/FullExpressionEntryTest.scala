@@ -17,6 +17,8 @@ import scala.xml.PrettyPrinter
 
 class FullExpressionEntryTest extends HPAExpressionTestBase {
 
+  
+  
   "The HPAExpressionNXParser " should " process successfully a file with zero uniprot ids" in {
 
     // uniprot ids are assigned later by the loader from the ENSG identifier
@@ -138,6 +140,29 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     exprAc.foreach(el => assert(el.text == "ENSG00000007376/tissue/cervix,/,-_ uterine"))
     
   }
+  
+    "The HPAExpressionNXParser " should " process generate an XML with element annotationTag set to IHC" in {
+
+    val fname = "src/test/resources/ENSG-test-with-ihc-and-rnaseq.xml"
+    val parser = new HPAExpressionNXParser();
+    val template = parser.parse(fname);
+    //println(template.toXML.toString.substring(0,600))
+    val data = (template.toXML \ "annotationTag").text.trim()
+    assert("IHC".equals(data))
+  }
+
+    "The HPARNAExpressionNXParser " should " process generate an XML with element annotationTag set to RNASeq" in {
+
+    val fname = "src/test/resources/ENSG-test-with-ihc-and-rnaseq.xml"
+    val parser = new HPARNAExpressionNXParser();
+    val template = parser.parse(fname);
+    //println(template.toXML.toString.substring(0,600))
+    val data = (template.toXML \ "annotationTag").text.trim()
+    assert("RNASeq".equals(data))
+  }
+
+
+
   
   //ENSG00000007376.xml - UNEXPECTED_EXCEPTION$ ENSG00000007376.xml - Could not find tissue pattern in synonym !
 

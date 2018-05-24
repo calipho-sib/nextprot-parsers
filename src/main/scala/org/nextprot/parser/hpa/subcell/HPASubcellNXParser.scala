@@ -77,7 +77,8 @@ class HPASubcellNXParser extends NXParser {
       _antibodyIds = antibodyIds,
       _integrationLevel = integrationLevel,
       _rowAnnotations = annotations,
-      _datasource = parserDatasource)
+      _datasource = parserDatasource,
+      _annotationTag = "SubCell")
   }
 
   /**
@@ -121,7 +122,7 @@ class HPASubcellNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier + "/subcellular",
       _cvDatabaseName = "HPA",
-      _eco = EvidenceCode.ImmunocytoChemistry.code,
+      _eco = EvidenceCode.ImmunoCytoChemistry.code,
       _isNegative = false,
       _type = "EVIDENCE",
       _quality = quality,

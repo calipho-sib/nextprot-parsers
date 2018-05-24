@@ -89,7 +89,8 @@ class HPAExpressionNXParser extends NXParser {
       _integrationLevel = integrationLevel,
       _summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType),
       _rowAnnotations = ihctsAnnotations,
-      _datasource = parserDatasource
+      _datasource = parserDatasource,
+      _annotationTag = "IHC"
       )
   }
 

@@ -16,8 +16,10 @@ class ExpHPAAnnotationsWrapper(
   override val _integrationLevel: String,
   override val _rowAnnotations: List[RawAnnotation],
   override val _summaryAnnotation: RawAnnotation,
-  override val _datasource: String)
-  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, _integrationLevel, _rowAnnotations, _summaryAnnotation, ExpressionType, _datasource) {
+  override val _datasource: String,
+  override val _annotationTag : String)
+  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, 
+      _integrationLevel, _rowAnnotations, _summaryAnnotation, ExpressionType, _datasource, _annotationTag) {
 }
 
 class SubcellularHPAAnnotationsWrapper(
@@ -27,8 +29,10 @@ class SubcellularHPAAnnotationsWrapper(
   override val _antibodyIds: List[String],
   override val _integrationLevel: String,
   override val _rowAnnotations: List[RawAnnotation],
-  override val _datasource: String)
-  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, _integrationLevel, _rowAnnotations, null, SubcellularType, _datasource) {
+  override val _datasource: String,
+  override val _annotationTag : String)
+  extends HPAAnnotationsWrapper(_quality, _ensgAc, _uniprotIds, _antibodyIds, 
+      _integrationLevel, _rowAnnotations, null, SubcellularType, _datasource, _annotationTag) {
 
 }
 
@@ -41,10 +45,12 @@ sealed abstract class HPAAnnotationsWrapper(
   val _rowAnnotations: List[RawAnnotation],
   val _summaryAnnotation: RawAnnotation,
   val _hpaType: HPAType,
-  val _datasource: String) extends TemplateModel {
+  val _datasource: String,
+  val _annotationTag : String) extends TemplateModel {
 
   override def toXML =
     <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+      <annotationTag>{ _annotationTag }</annotationTag>
       <ensgAccessionCode>{ _ensgAc }</ensgAccessionCode>
       <uniprotIds>
         {
@@ -114,6 +120,7 @@ class ExpHPARNAAnnotationsWrapper(
   def toXML =
 
     <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+      <annotationTag>RNASeq</annotationTag>
       <ensgAccessionCode>{ _ensgAc }</ensgAccessionCode>
       <uniprotIds>
         {
