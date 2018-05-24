@@ -121,7 +121,7 @@ class HPASubcellNXParser extends NXParser {
       _resourceType = "DATABASE",
       _accession = identifier + "/subcellular",
       _cvDatabaseName = "HPA",
-      _eco = EvidenceCode.ImmunocytoChemistry.code,
+      _eco = EvidenceCode.ImmunoCytoChemistry.code,
       _isNegative = false,
       _type = "EVIDENCE",
       _quality = quality,
