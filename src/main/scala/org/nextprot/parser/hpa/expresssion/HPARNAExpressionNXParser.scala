@@ -50,6 +50,7 @@ class HPARNAExpressionNXParser extends NXParser {
     HPAValidation.checkPreconditionsForRnaExpr(entryElem, HPAMultiENSGTList.multiENSGTList)
     //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem) // not used (yet?)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
+    //if(uniprotIds.length > 1) Console.err.println(ensgId + ": " + uniprotIds)
     val rnatedmap = HPAUtils.getTissueRnaExpression(entryElem)
 
     val quality = GOLD
