@@ -8,7 +8,8 @@ import scala.xml.XML
 import org.nextprot.parser.hpa.utils.XMLComparator
 import java.io.File
 import org.nextprot.parser.core.exception.NXException
-
+import java.io.PrintWriter
+    
 class FullFileEntrySubcellTest extends HPASubcellTestBase {
 
   val prettyPrinter = new PrettyPrinter(1000, 4);
@@ -33,6 +34,18 @@ class FullFileEntrySubcellTest extends HPASubcellTestBase {
     println(template.toXML.toString.substring(0,600))
     val data = (template.toXML \ "annotationTag").text.trim()
     assert("SubCell".equals(data))
+  }
+  
+    "The HPASubcellNXParser " should " generate an XML with sub cell annotations" in {
+
+    val fname = "src/test/resources/hpa/ENSG00000085978.xml";
+    val parser = new HPASubcellNXParser();
+    val template = parser.parse(fname);
+    
+    new PrintWriter("src/test/resources/hpa/ENSG00000085978-sl-wrapper-output.xml") { 
+      write(template.toXML.toString()); close 
+    }
+    
   }
   
 
