@@ -143,17 +143,17 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   }
 
 
-  "The HPAExpcontextNXParser " should " contains find tissues in IHC and RNA expression and produce corresponding EC synonyms" in {
+  "The HPAExpcontextNXParser " should " find tissues in IHC and RNA expression and produce corresponding EC synonyms" in {
 
     val hpaParser = new HPAExpcontextNXParser();
     val fname = "src/test/resources/hpa/expression/ENSG00000000003.xml";
 
     val xmlin = scala.xml.XML.loadFile(fname)
     val expectedRNACount = (xmlin \ "rnaExpression" \\ "tissue").size        // we have    no <tissueCell>, only <tissue>
-    val expectedIHCCount = (xmlin \ "tissueExpression" \\ "tissueCell").size // we may have N <tissueCell> for 1 <tissue>
+    val expectedIHCCount = (xmlin \ "tissueExpression" \\ "tissueCell").size -6 // (minus duplicates for endometrium, soft tissues and stomach)we may have N <tissueCell> for 1 <tissue>
     val expectedCount = expectedRNACount + expectedIHCCount
     println("INPUT - count of tissue in RNA expression section: " + expectedRNACount)  // 37 tissues
-    println("INPUT - count of tissue in IHC expression section: " + expectedIHCCount)  // 80 tissues
+    println("INPUT - count of tissue in IHC expression section: " + expectedIHCCount)  // 80-6 = 74 tissues
     println("INPUT - count of tissue in IHC + RNA expression section: " + expectedCount)  
     
     val result = hpaParser.parse(fname);

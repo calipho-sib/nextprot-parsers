@@ -60,7 +60,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -73,7 +73,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->adrenal gland;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->adrenal gland;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -102,7 +102,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -115,7 +115,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->appendix;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->appendix;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -144,7 +144,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -157,7 +157,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->appendix;cell type->lymphoid tissue;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->appendix;cell type->lymphoid tissue;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -186,7 +186,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -199,7 +199,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->bone marrow;cell type->hematopoietic cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->bone marrow;cell type->hematopoietic cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -228,7 +228,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -241,7 +241,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->breast;cell type->adipocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->breast;cell type->adipocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -270,7 +270,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -283,7 +283,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->breast;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->breast;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -312,7 +312,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -325,7 +325,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->breast;cell type->myoepithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->breast;cell type->myoepithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -354,7 +354,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -367,7 +367,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->bronchus;cell type->respiratory epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->bronchus;cell type->respiratory epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -396,7 +396,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -409,7 +409,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->caudate;cell type->glial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->caudate;cell type->glial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -438,7 +438,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -451,7 +451,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->caudate;cell type->neuronal cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->caudate;cell type->neuronal cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -480,7 +480,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -493,7 +493,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebellum;cell type->cells in granular layer;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebellum;cell type->cells in granular layer;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -522,7 +522,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -535,7 +535,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebellum;cell type->cells in molecular layer;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebellum;cell type->cells in molecular layer;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -564,7 +564,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -577,7 +577,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebellum;cell type->purkinje cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebellum;cell type->purkinje cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -606,7 +606,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -619,7 +619,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebral cortex;cell type->endothelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebral cortex;cell type->endothelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -648,7 +648,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -661,7 +661,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebral cortex;cell type->glial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebral cortex;cell type->glial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -690,7 +690,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -703,7 +703,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebral cortex;cell type->neuronal cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebral cortex;cell type->neuronal cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -732,7 +732,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -745,7 +745,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cerebral cortex;cell type->neuropil;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cerebral cortex;cell type->neuropil;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -774,7 +774,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -787,7 +787,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cervix, uterine;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cervix, uterine;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -816,7 +816,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -829,7 +829,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->cervix, uterine;cell type->squamous epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->cervix, uterine;cell type->squamous epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -858,7 +858,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -871,7 +871,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->colon;cell type->endothelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->colon;cell type->endothelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -900,7 +900,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -913,7 +913,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->colon;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->colon;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -942,7 +942,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -955,7 +955,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->colon;cell type->peripheral nerve/ganglion;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->colon;cell type->peripheral nerve/ganglion;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -984,7 +984,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -997,7 +997,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->duodenum;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->duodenum;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1020,13 +1020,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium 1</accession>
+                            <accession>ENSG00000000003/tissue/endometrium</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1039,7 +1039,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->endometrium 1;cell type->cells in endometrial stroma;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->cells in endometrial stroma;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1062,13 +1062,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium 1</accession>
+                            <accession>ENSG00000000003/tissue/endometrium</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1081,7 +1081,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->endometrium 1;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1104,13 +1104,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium 2</accession>
+                            <accession>ENSG00000000003/tissue/endometrium</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1123,7 +1123,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->endometrium 2;cell type->cells in endometrial stroma;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->cells in endometrial stroma;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1146,13 +1146,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium 2</accession>
+                            <accession>ENSG00000000003/tissue/endometrium</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1165,7 +1165,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->endometrium 2;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1194,7 +1194,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1207,7 +1207,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->epididymis;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->epididymis;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1236,7 +1236,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1249,7 +1249,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->esophagus;cell type->squamous epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->esophagus;cell type->squamous epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1278,7 +1278,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1291,7 +1291,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->fallopian tube;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->fallopian tube;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1320,7 +1320,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1333,7 +1333,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->gallbladder;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->gallbladder;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1362,7 +1362,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1375,7 +1375,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->heart muscle;cell type->myocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->heart muscle;cell type->myocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1404,7 +1404,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1417,7 +1417,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->hippocampus;cell type->glial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->hippocampus;cell type->glial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1446,7 +1446,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1459,7 +1459,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->hippocampus;cell type->neuronal cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->hippocampus;cell type->neuronal cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1488,7 +1488,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1501,7 +1501,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->kidney;cell type->cells in glomeruli;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->kidney;cell type->cells in glomeruli;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1530,7 +1530,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1543,7 +1543,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->kidney;cell type->cells in tubules;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->kidney;cell type->cells in tubules;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1572,7 +1572,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1585,7 +1585,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->liver;cell type->bile duct cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->liver;cell type->bile duct cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1614,7 +1614,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1627,7 +1627,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->liver;cell type->hepatocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->liver;cell type->hepatocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1656,7 +1656,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1669,7 +1669,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->lung;cell type->macrophages;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lung;cell type->macrophages;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1698,7 +1698,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1711,7 +1711,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->lung;cell type->pneumocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lung;cell type->pneumocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1740,7 +1740,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1753,7 +1753,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->lymph node;cell type->germinal center cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lymph node;cell type->germinal center cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1782,7 +1782,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1795,7 +1795,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->lymph node;cell type->non-germinal center cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lymph node;cell type->non-germinal center cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1824,7 +1824,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1837,7 +1837,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->nasopharynx;cell type->respiratory epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->nasopharynx;cell type->respiratory epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1866,7 +1866,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1879,7 +1879,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->oral mucosa;cell type->squamous epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->oral mucosa;cell type->squamous epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1908,7 +1908,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1921,7 +1921,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->ovary;cell type->ovarian stroma cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->ovary;cell type->ovarian stroma cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1950,7 +1950,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1963,7 +1963,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->pancreas;cell type->exocrine glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->pancreas;cell type->exocrine glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1992,7 +1992,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2005,7 +2005,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->pancreas;cell type->islets of langerhans;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->pancreas;cell type->islets of langerhans;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2034,7 +2034,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2047,7 +2047,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->parathyroid gland;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->parathyroid gland;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2076,7 +2076,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2089,7 +2089,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->placenta;cell type->decidual cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->placenta;cell type->decidual cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2118,7 +2118,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2131,7 +2131,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->placenta;cell type->trophoblastic cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->placenta;cell type->trophoblastic cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2160,7 +2160,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2173,7 +2173,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->prostate;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->prostate;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2202,7 +2202,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2215,7 +2215,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->rectum;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->rectum;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2244,7 +2244,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2257,7 +2257,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->salivary gland;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->salivary gland;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2286,7 +2286,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2299,7 +2299,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->seminal vesicle;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->seminal vesicle;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2328,7 +2328,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2341,7 +2341,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->skeletal muscle;cell type->myocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skeletal muscle;cell type->myocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2364,13 +2364,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin 1</accession>
+                            <accession>ENSG00000000003/tissue/skin</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2383,7 +2383,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->skin 1;cell type->fibroblasts;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->fibroblasts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2406,13 +2406,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin 1</accession>
+                            <accession>ENSG00000000003/tissue/skin</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2425,7 +2425,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->skin 1;cell type->keratinocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->keratinocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2448,13 +2448,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin 1</accession>
+                            <accession>ENSG00000000003/tissue/skin</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2467,7 +2467,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->skin 1;cell type->langerhans;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->langerhans;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2490,13 +2490,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin 1</accession>
+                            <accession>ENSG00000000003/tissue/skin</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2509,7 +2509,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->skin 1;cell type->melanocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->melanocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2532,13 +2532,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin 2</accession>
+                            <accession>ENSG00000000003/tissue/skin</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2551,7 +2551,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->skin 2;cell type->epidermal cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->epidermal cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2580,7 +2580,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2593,7 +2593,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->small intestine;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->small intestine;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2622,7 +2622,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2635,7 +2635,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->smooth muscle;cell type->smooth muscle cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->smooth muscle;cell type->smooth muscle cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2658,13 +2658,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue 1</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2677,7 +2677,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->soft tissue 1;cell type->adipocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->adipocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2700,13 +2700,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue 1</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2719,7 +2719,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->soft tissue 1;cell type->fibroblasts;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->fibroblasts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2742,13 +2742,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue 1</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2761,7 +2761,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->soft tissue 1;cell type->peripheral nerve;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->peripheral nerve;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2784,13 +2784,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue 2</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2803,7 +2803,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->soft tissue 2;cell type->adipocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->adipocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2826,13 +2826,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue 2</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2845,7 +2845,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->soft tissue 2;cell type->fibroblasts;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->fibroblasts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2868,13 +2868,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue 2</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2887,49 +2887,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->soft tissue 2;cell type->peripheral nerve;]]></synonymName>
-                                    <synonymType>CONTEXT_SIGNATURE</synonymType>
-                                    <isMain>false</isMain>
-                                </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                            </contextSynonyms>
-                        </experimentalContext>
-                        <isNegativeEvidence>true</isNegativeEvidence>
-                        <type>EVIDENCE</type>
-                        <assignedBy>
-                            <cvName>Human protein atlas</cvName>
-                        </assignedBy>
-                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
-                </resourceAssocs>
-            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
-            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
-                <isPropagableByDefault>false</isPropagableByDefault>
-                <type>tissue specificity</type>
-                <quality>SILVER</quality>
-                <qualifierType>EXP</qualifierType>
-                <resourceAssocs>
-                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
-                        <resource class="source.DbXref">
-                            <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/spleen</accession>
-                            <cvDatabase>
-                                <cvName>HPA</cvName>
-                            </cvDatabase>
-                        </resource>
-                        <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
-                            <cvTermCategory>ECO</cvTermCategory>
-                        </evidenceCode>
-                        <qualityQualifier>SILVER</qualityQualifier>
-                        <annotationResourceAssocProperties>
-                            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
-                                <propertyName>expressionLevel</propertyName>
-                                <propertyValue>not detected</propertyValue>
-                            </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
-                        </annotationResourceAssocProperties>
-                        <experimentalContext>
-                            <contextSynonyms>
-                                <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->spleen;cell type->cells in red pulp;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->peripheral nerve;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2958,7 +2916,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -2971,7 +2929,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->spleen;cell type->cells in white pulp;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->spleen;cell type->cells in red pulp;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2994,13 +2952,55 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/stomach 1</accession>
+                            <accession>ENSG00000000003/tissue/spleen</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
+                            <cvTermCategory>ECO</cvTermCategory>
+                        </evidenceCode>
+                        <qualityQualifier>SILVER</qualityQualifier>
+                        <annotationResourceAssocProperties>
+                            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
+                                <propertyName>expressionLevel</propertyName>
+                                <propertyValue>not detected</propertyValue>
+                            </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
+                        </annotationResourceAssocProperties>
+                        <experimentalContext>
+                            <contextSynonyms>
+                                <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->spleen;cell type->cells in white pulp;]]></synonymName>
+                                    <synonymType>CONTEXT_SIGNATURE</synonymType>
+                                    <isMain>false</isMain>
+                                </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
+                            </contextSynonyms>
+                        </experimentalContext>
+                        <isNegativeEvidence>true</isNegativeEvidence>
+                        <type>EVIDENCE</type>
+                        <assignedBy>
+                            <cvName>Human protein atlas</cvName>
+                        </assignedBy>
+                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                </resourceAssocs>
+            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
+            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
+                <isPropagableByDefault>false</isPropagableByDefault>
+                <type>tissue specificity</type>
+                <quality>SILVER</quality>
+                <qualifierType>EXP</qualifierType>
+                <resourceAssocs>
+                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                        <resource class="source.DbXref">
+                            <resourceType>DATABASE</resourceType>
+                            <accession>ENSG00000000003/tissue/stomach</accession>
+                            <cvDatabase>
+                                <cvName>HPA</cvName>
+                            </cvDatabase>
+                        </resource>
+                        <evidenceCode>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3013,7 +3013,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->stomach 1;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->stomach;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3036,13 +3036,13 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/stomach 2</accession>
+                            <accession>ENSG00000000003/tissue/stomach</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3055,7 +3055,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->stomach 2;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->stomach;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3084,7 +3084,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3097,7 +3097,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->testis;cell type->cells in seminiferous ducts;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->testis;cell type->cells in seminiferous ducts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3126,7 +3126,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3139,7 +3139,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->testis;cell type->leydig cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->testis;cell type->leydig cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3168,7 +3168,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3181,7 +3181,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->thyroid gland;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->thyroid gland;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3210,7 +3210,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3223,7 +3223,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->tonsil;cell type->germinal center cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->tonsil;cell type->germinal center cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3252,7 +3252,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3265,7 +3265,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->tonsil;cell type->non-germinal center cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->tonsil;cell type->non-germinal center cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3294,7 +3294,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3307,7 +3307,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->tonsil;cell type->squamous epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->tonsil;cell type->squamous epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3336,7 +3336,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3349,7 +3349,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->urinary bladder;cell type->urothelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->urinary bladder;cell type->urothelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3378,7 +3378,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -3391,7 +3391,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunolocalization evidence;tissue->vagina;cell type->squamous epithelial cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->vagina;cell type->squamous epithelial cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>

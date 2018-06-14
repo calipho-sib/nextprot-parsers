@@ -2,7 +2,7 @@
 
 This is a code repository for the SIB - Swiss Institute of Bioinformatics CALIPHO group neXtProt project
 
-See: http://www.nextprot.org/
+See: https://www.nextprot.org/
 
 # neXtProt-parsers
 
@@ -15,8 +15,6 @@ Configure your Scala Eclipse IDE by running `sbt eclipse`
 # Deploying/publishing locally:
 
 ```
-sbt publish-local
-or
 sbt publishLocal
 ```
 
@@ -72,7 +70,12 @@ The resulting fat jar is in:
 
 ## TESTS
 
-To test simply use ```sbt test``` but you can also use ```test-only org.nextprot.parser.hpa.subcell.FullFileEntrySubcellTest``` if you want to specify only one test
+To test simply use 
+```sbt test``` 
+If you want to specify only one test you can also use 
+```sbt "test:testOnly org.nextprot.parser.hpa.expression.FullFileEntryExpressionTest"``` 
+
+ 
 
 You can configure project dependencies in eclipse
 -------------------------------------------------

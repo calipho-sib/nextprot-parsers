@@ -1,11 +1,11 @@
 <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
       <wrappedBean>
-        <qualityQualifier>SILVER</qualityQualifier>
+        <qualityQualifier>GOLD</qualityQualifier>
         <identifierType>ANTIBODY</identifierType>
         <dbXref>
           <resourceType>DATABASE</resourceType>
           <accession><![CDATA[HPA005624]]></accession>
-          <version>4</version>
+          <version>4.1</version>
           <cvDatabase>
             <cvName>HPA</cvName>
           </cvDatabase>
@@ -22,19 +22,13 @@
       <cvPropertyName>
         <cvName>immunohistochemistry validation</cvName>
       </cvPropertyName>
-      <propertyValue><![CDATA[uncertain]]></propertyValue>
-      <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
-    </com.genebio.nextprot.datamodel.identifier.IdentifierProperty><com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
-      <cvPropertyName>
-        <cvName>western blot validation</cvName>
-      </cvPropertyName>
-      <propertyValue><![CDATA[supportive]]></propertyValue>
+      <propertyValue><![CDATA[approved]]></propertyValue>
       <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
     </com.genebio.nextprot.datamodel.identifier.IdentifierProperty><com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
       <cvPropertyName>
         <cvName>protein array validation</cvName>
       </cvPropertyName>
-      <propertyValue><![CDATA[supportive]]></propertyValue>
+      <propertyValue><![CDATA[supported]]></propertyValue>
       <sequenceIdentifier class="com.genebio.nextprot.datamodel.identifier.AntibodyIdentifier" reference="../../.."/>
     </com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
               </identifierProperties>
@@ -64,7 +58,7 @@
         </cvDatabase>
       </resource>
       <evidenceCode>
-      	<cvName>ECO:0000087</cvName>
+      	<cvName>ECO:0001054</cvName>
         <cvTermCategory>ECO</cvTermCategory>
       </evidenceCode>
       
@@ -81,7 +75,7 @@
       <isPropagableByDefault>false</isPropagableByDefault>
       
       <type>expression info</type>
-      <description><![CDATA[cancer:Most tumour cells were negative. Testicular cancers and a few cases of endometrial, ovarian and breast cancers displayed moderate to strong cytoplasmic immunoreactivity.]]></description>
+      <description><![CDATA[pathology:Most tumour cells were negative. Testicular cancers and a few cases of endometrial, ovarian and breast cancers displayed moderate to strong cytoplasmic immunoreactivity.]]></description>
       
       <qualifierType>EXP</qualifierType>
       <resourceAssocs>
@@ -94,7 +88,7 @@
         </cvDatabase>
       </resource>
       <evidenceCode>
-      	<cvName>ECO:0000087</cvName>
+      	<cvName>ECO:0001054</cvName>
         <cvTermCategory>ECO</cvTermCategory>
       </evidenceCode>
       
