@@ -1,4 +1,5 @@
 <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
+	<annotationTag>IHC</annotationTag>
     <ensgAccessionCode>ENSG00000000003</ensgAccessionCode>
     <uniprotIds>
         <string>O43657</string>
