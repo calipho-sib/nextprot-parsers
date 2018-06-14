@@ -17,6 +17,8 @@ scalaVersion := "2.11.8"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature" )
 
+
+
 fork := true
 
 // 
@@ -75,6 +77,10 @@ publishTo := {
   else
     Some("releases"  at nexus + "nexus/content/repositories/nextprot-repo")
 }
+
+credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "admin", "mypassword")
+
+// see also https://www.scala-sbt.org/1.x/docs/Publishing.html
 
 publishMavenStyle := true
 

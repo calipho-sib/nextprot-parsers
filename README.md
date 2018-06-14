@@ -23,8 +23,10 @@ sbt publishLocal
 if you need credentials configured on ~/.sbt/x.x/sonatype.sbt:
 
 ```
-credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "$sonatype_username", "$sonatype_password")
+credentials+=Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "$sonatype_username", "$sonatype_password")
 ```
+
+The syntax above works if in the build.sbt file but in sbt command line utility
 
 It will go to either snapshot or production repository depending on your version suffix. 
 If it ends with -SNAPSHOT it goes to the snapshot repository 
