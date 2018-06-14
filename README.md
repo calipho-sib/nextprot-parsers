@@ -16,6 +16,8 @@ Configure your Scala Eclipse IDE by running `sbt eclipse`
 
 ```
 sbt publish-local
+or
+sbt publishLocal
 ```
 
 # Deploying/publishing on nexus 
