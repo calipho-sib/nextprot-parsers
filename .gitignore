@@ -73,3 +73,4 @@ src/test/resources/HPA_Subcell_Mapping.txt.pam
 src/test/resources/hpa/ENSG00000105642.xml
 src/test/resources/hpa/ENSG00000106100.xml
 src/test/resources/hpa/ENSG00000154065.xml
+RnaAndIHCContexts.xml

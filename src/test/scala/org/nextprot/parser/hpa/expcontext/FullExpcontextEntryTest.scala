@@ -182,7 +182,7 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   }
 
   def methodGroup(syn: String): String = {
-      if (syn.contains("immunolocalization")) return "IHC";
+      if (syn.contains("immunohistochemistry")) return "IHC";
       if (syn.contains("RNA-seq")) return "RNA";
       return "???";    
   }
@@ -232,7 +232,5 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
 
 
   
+  
 }
-  
-  
-

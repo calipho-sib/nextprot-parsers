@@ -28,7 +28,7 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
       s.add(sr)
     }
     else {
-      val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoLocalization), rule)
+      val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.ImmunoHistochemistry), rule)
       s.add(sr)
     }
   }
@@ -119,7 +119,7 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
       if(syns(0).contains("RNA-seq")) 
         new ExperimentalContextWrapper(tissue, EvidenceCode.RnaSeq.code , EvidenceCode.RnaSeq.name ,ecslist)
       else
-        new ExperimentalContextWrapper(tissue, EvidenceCode.ImmunoLocalization.code , EvidenceCode.ImmunoLocalization.name ,ecslist)
+        new ExperimentalContextWrapper(tissue, EvidenceCode.ImmunoHistochemistry.code , EvidenceCode.ImmunoHistochemistry.name ,ecslist)
     }).toList;
     val eclw = new ExperimentalContextListWrapper(ecwlist.toList, problems.toList.sorted)
     return eclw

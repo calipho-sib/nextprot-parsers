@@ -31,6 +31,8 @@ class HPAAntibodyReducer extends NXPrettyReducer {
               fw.write(getPrettyFormatIfNeeded(antibody.toXML) + "\n");
               Stats ++ ("ANTIBODY-COUNT", "ANTIBODIES ONLY IN ONE ENSG")
             } else {
+              // TODO: add other metrics for this case and count somehow 
+              // TODO: the nuber of multi-ensg antibodies BUT not add them to ANTIBODY-COUNT which is wrong !!!!
               Stats ++ ("ANTIBODY-COUNT", "ANTIBODIES IN SEVERAL ENSGs")
             }
 
