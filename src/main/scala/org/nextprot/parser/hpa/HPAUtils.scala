@@ -1,6 +1,6 @@
 package org.nextprot.parser.hpa
 
-import scala.xml.NodeSeq
+import scala.xml.{Node, NodeSeq}
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_EXPR
 import org.nextprot.parser.hpa.subcell.cases.CASE_MULTIPLE_UNIPROT_MAPPING
@@ -61,15 +61,24 @@ object HPAUtils {
 
   }
 
-   // RNAseq data
-    def getTissueRnaExpression(entryElem: NodeSeq): Map[String, String] = {
+  // RNAseq data
+  def getRnaExpression(entryElem: NodeSeq, assayType: String, tagName: String): Map[String, String] = {
     var hasExpression: Boolean = false
-    val rnatissuemap = (entryElem \ "rnaExpression" \ "data")
-    	.map(f => ((f \ "tissue").text, HPAUtils.getCheckedLevel((f \ "level").text)))
-    	.toMap.drop(1) 
-    rnatissuemap foreach (x => hasExpression |= (x._2 != "not detected") )
-    if(!hasExpression) Console.err.println(getEnsgId(entryElem) + ": " + rnatissuemap.size + " tissues 'not detected'")
-    return rnatissuemap
+
+    val rnaExpressionMap = ((entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == assayType) })
+          \ "data" filter dataNotBloodOrgan(tagName))
+      .map(f => ((f \ tagName).text, HPAUtils.getCheckedRNALevel(f \ "level")))
+      .toMap
+
+    rnaExpressionMap foreach (x => hasExpression |= (x._2 != "not detected"))
+    if (!hasExpression) {
+      Console.err.println(getEnsgId(entryElem) + ": " + rnaExpressionMap.size + " " + assayType + " 'not detected'")
+    }
+    return rnaExpressionMap
+  }
+
+  def dataNotBloodOrgan(tagName: String)(dataNode: Node): Boolean = {
+    return !((dataNode \ tagName) exists { _ \\ "@organ" exists (_.text == "Blood")});
   }
 
   def getTissueExpressionType(entryElem: NodeSeq): String = {
@@ -82,9 +91,6 @@ object HPAUtils {
     "integrated" 
   }
 
-  
-
-
 	def getCheckedLevel(someLevel: String): String = {
 		val level = someLevel.toLowerCase();
 		if (level == "not detected") return level;
@@ -96,7 +102,16 @@ object HPAUtils {
 		throw new Exception("Unexpected expression level value:" + someLevel )
 	}
 
-  
+  def getCheckedRNALevel(levelNodes: NodeSeq): String = {
+    val normalizedLevel =((levelNodes filter { _ \\ "@type" exists (_.text == "normalizedRNAExpression") }) \ "@expRNA");
+    if (normalizedLevel == null || normalizedLevel.isEmpty) {
+      throw new Exception("No normalized expression level value: " + levelNodes)
+    }
+    val level = normalizedLevel.toString().toFloat;
+    if (level < 1) return "not detected"
+    return "detected"
+  }
+
   private def get_ENSG_To_NX_accession(identifier: String): String = {
     // TODO: write the code and put it in the core section or somewhere else but not specific for HPA
     // At present this step is performed by Anne at the loading stage
