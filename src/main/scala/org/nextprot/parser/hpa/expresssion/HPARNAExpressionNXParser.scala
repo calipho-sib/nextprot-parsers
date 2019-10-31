@@ -51,7 +51,8 @@ class HPARNAExpressionNXParser extends NXParser {
     //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem) // not used (yet?)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
     //if(uniprotIds.length > 1) Console.err.println(ensgId + ": " + uniprotIds)
-    val rnatedmap = HPAUtils.getTissueRnaExpression(entryElem)
+    val rnactedmap = HPAUtils.getRnaExpression(entryElem, "consensusTissue", "tissue")
+    val rnabedmap = HPAUtils.getRnaExpression(entryElem, "blood", "bloodCell")
 
     val quality = GOLD
     val ruleUsed = "as defined for RNA expression in NEXTPROT-1383";
@@ -65,23 +66,28 @@ class HPARNAExpressionNXParser extends NXParser {
             Stats ++ ("BRONZE", "bronze")
             throw new NXException(CASE_BRONZE_QUALITY);
     }
-    
-    val rnatedlist = rnatedmap.map(rnated =>  { // convert map to TissueExpressionData objects
-    new TissueExpressionData(rnated._1, null, rnated._2)}).toList // We may have to look-up celllines if they are same as IHC counterpart
 
-    val rnatsAnnotations = rnatedlist.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
+    // convert map to TissueExpressionData objects
+    // We may have to look-up celllines if they are same as IHC counterpart
+    val rnalist = convertMapTissueExpressionData(rnabedmap) ::: convertMapTissueExpressionData(rnactedmap)
+
+    val rnatsAnnotations = rnalist.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
       map(rnated => {
         val syn = HPAExpcontextUtil.getSynonymForXml(rnated, EvidenceCode.RnaSeq) // The Expcontext synonym allows to link data between expression and expcontext xmls
         extractTissueSpecificityAnnotation(ensgId, NXQuality.GOLD, syn, rnated.level, assayType, EvidenceCode.RnaSeq) // Always GOLD
       }).toList // Creates the list of raw annotations
 
-      new ExpHPARNAAnnotationsWrapper(
+    new ExpHPARNAAnnotationsWrapper(
       _quality = quality,
       _ensgAc = ensgId,
       _uniprotIds = uniprotIds,
       //_summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType), // not used (yet?)
-      _rowAnnotations = rnatsAnnotations 
-      )
+      _rowAnnotations = rnatsAnnotations
+    )
+  }
+
+  private def convertMapTissueExpressionData(map: Map[String, String]) = {
+    map.map(expData => new TissueExpressionData(expData._1, null, expData._2)).toList
   }
 
   /**

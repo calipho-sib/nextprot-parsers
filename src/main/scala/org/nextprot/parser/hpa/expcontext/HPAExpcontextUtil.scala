@@ -9,20 +9,20 @@ object HPAExpcontextUtil {
     // creates a list of TissueExpressionData from the HPA XML file element tissueExpression or rnaExpression data 
 	// TODO: we get several level type values: staining, expression (,...?), is it ok ? take data
 	// TODO: from antibody if selected / single ???
-	def createTissueExpressionLists(el: Node) :List[TissueExpressionData] = {
-	    val tissue:String = (el \ "tissue").text
-	    if(tissue == "") Console.err.println("no tissue in: " + el);
+	def createTissueExpressionLists(el: Node, tagName: String) :List[TissueExpressionData] = {
+		val tagText:String = (el \ tagName).text
+		if (tagText == "") Console.err.println("no " + tagName + " in: " + el);
 		val tcs = (el \ "tissueCell")
-		if (tcs.size==0) { //Console.err.println("no  cellType: " + tissue);
+		if (tcs.isEmpty) { //Console.err.println("no  cellType: " + tissue);
 			// It's the case for all rnaExpression, check if some celltypes are implicit...
-		  val lev = HPAUtils.getCheckedLevel((el \ "level").text )
-		    return List(new TissueExpressionData(tissue,null,lev));
+			val lev = HPAUtils.getCheckedRNALevel((el \ "level"))
+			return List(new TissueExpressionData(tagText, null, lev));
 		} else {
 			return tcs.map(x => {
 			  val ct = (x \ "cellType").text
 			  val lt = (x \ "level" \ "@type").text // Keep only 'staining' type if parsing antibody section
 			  val lv = HPAUtils.getCheckedLevel((x \ "level").text)
-			  new TissueExpressionData(tissue, ct, lv)
+			  new TissueExpressionData(tagText, ct, lv)
 			}).toList;
 		}
 	}
