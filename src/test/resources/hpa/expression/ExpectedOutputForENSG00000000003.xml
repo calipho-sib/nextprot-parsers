@@ -1,5 +1,5 @@
 <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
-	<annotationTag>IHC</annotationTag>
+    <annotationTag>IHC</annotationTag>
     <ensgAccessionCode>ENSG00000000003</ensgAccessionCode>
     <uniprotIds>
         <string>O43657</string>
@@ -46,6 +46,48 @@
     <expressionAnnotations>
         <datasource>Human protein atlas</datasource>
         <wrappedBean>
+            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
+                <isPropagableByDefault>false</isPropagableByDefault>
+                <type>tissue specificity</type>
+                <quality>SILVER</quality>
+                <qualifierType>EXP</qualifierType>
+                <resourceAssocs>
+                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                        <resource class="source.DbXref">
+                            <resourceType>DATABASE</resourceType>
+                            <accession>ENSG00000000003/tissue/adipose tissue</accession>
+                            <cvDatabase>
+                                <cvName>HPA</cvName>
+                            </cvDatabase>
+                        </resource>
+                        <evidenceCode>
+                            <cvName>ECO:0001055</cvName>
+                            <cvTermCategory>ECO</cvTermCategory>
+                        </evidenceCode>
+                        <qualityQualifier>SILVER</qualityQualifier>
+                        <annotationResourceAssocProperties>
+                            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
+                                <propertyName>expressionLevel</propertyName>
+                                <propertyValue>not detected</propertyValue>
+                            </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
+                        </annotationResourceAssocProperties>
+                        <experimentalContext>
+                            <contextSynonyms>
+                                <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->adipose tissue;cell type->adipocytes;]]></synonymName>
+                                    <synonymType>CONTEXT_SIGNATURE</synonymType>
+                                    <isMain>false</isMain>
+                                </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
+                            </contextSynonyms>
+                        </experimentalContext>
+                        <isNegativeEvidence>true</isNegativeEvidence>
+                        <type>EVIDENCE</type>
+                        <assignedBy>
+                            <cvName>Human protein atlas</cvName>
+                        </assignedBy>
+                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+                </resourceAssocs>
+            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
             <com.genebio.nextprot.dataloader.dto.RawAnnotation>
                 <isPropagableByDefault>false</isPropagableByDefault>
                 <type>tissue specificity</type>
@@ -1021,7 +1063,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium</accession>
+                            <accession>ENSG00000000003/tissue/endometrium 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -1040,7 +1082,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->cells in endometrial stroma;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium 1;cell type->cells in endometrial stroma;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1063,7 +1105,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium</accession>
+                            <accession>ENSG00000000003/tissue/endometrium 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -1082,7 +1124,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium 1;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1105,7 +1147,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium</accession>
+                            <accession>ENSG00000000003/tissue/endometrium 2</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -1124,7 +1166,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->cells in endometrial stroma;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium 2;cell type->cells in endometrial stroma;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1147,7 +1189,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/endometrium</accession>
+                            <accession>ENSG00000000003/tissue/endometrium 2</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -1166,7 +1208,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->endometrium 2;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2365,7 +2407,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin</accession>
+                            <accession>ENSG00000000003/tissue/skin 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2384,7 +2426,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->fibroblasts;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin 1;cell type->fibroblasts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2407,7 +2449,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin</accession>
+                            <accession>ENSG00000000003/tissue/skin 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2426,7 +2468,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->keratinocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin 1;cell type->keratinocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2449,7 +2491,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin</accession>
+                            <accession>ENSG00000000003/tissue/skin 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2468,7 +2510,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->langerhans;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin 1;cell type->langerhans;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2491,7 +2533,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin</accession>
+                            <accession>ENSG00000000003/tissue/skin 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2510,7 +2552,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->melanocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin 1;cell type->melanocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2533,7 +2575,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/skin</accession>
+                            <accession>ENSG00000000003/tissue/skin 2</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2552,7 +2594,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin;cell type->epidermal cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->skin 2;cell type->epidermal cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2659,7 +2701,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2678,7 +2720,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->adipocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue 1;cell type->fibroblasts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2701,7 +2743,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2720,7 +2762,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->fibroblasts;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue 1;cell type->peripheral nerve;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2743,7 +2785,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue 2</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2762,7 +2804,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->peripheral nerve;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue 2;cell type->fibroblasts;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2785,7 +2827,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue</accession>
+                            <accession>ENSG00000000003/tissue/soft tissue 2</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -2804,91 +2846,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->adipocytes;]]></synonymName>
-                                    <synonymType>CONTEXT_SIGNATURE</synonymType>
-                                    <isMain>false</isMain>
-                                </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                            </contextSynonyms>
-                        </experimentalContext>
-                        <isNegativeEvidence>true</isNegativeEvidence>
-                        <type>EVIDENCE</type>
-                        <assignedBy>
-                            <cvName>Human protein atlas</cvName>
-                        </assignedBy>
-                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
-                </resourceAssocs>
-            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
-            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
-                <isPropagableByDefault>false</isPropagableByDefault>
-                <type>tissue specificity</type>
-                <quality>SILVER</quality>
-                <qualifierType>EXP</qualifierType>
-                <resourceAssocs>
-                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
-                        <resource class="source.DbXref">
-                            <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue</accession>
-                            <cvDatabase>
-                                <cvName>HPA</cvName>
-                            </cvDatabase>
-                        </resource>
-                        <evidenceCode>
-                            <cvName>ECO:0001055</cvName>
-                            <cvTermCategory>ECO</cvTermCategory>
-                        </evidenceCode>
-                        <qualityQualifier>SILVER</qualityQualifier>
-                        <annotationResourceAssocProperties>
-                            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
-                                <propertyName>expressionLevel</propertyName>
-                                <propertyValue>not detected</propertyValue>
-                            </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
-                        </annotationResourceAssocProperties>
-                        <experimentalContext>
-                            <contextSynonyms>
-                                <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->fibroblasts;]]></synonymName>
-                                    <synonymType>CONTEXT_SIGNATURE</synonymType>
-                                    <isMain>false</isMain>
-                                </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                            </contextSynonyms>
-                        </experimentalContext>
-                        <isNegativeEvidence>true</isNegativeEvidence>
-                        <type>EVIDENCE</type>
-                        <assignedBy>
-                            <cvName>Human protein atlas</cvName>
-                        </assignedBy>
-                    </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
-                </resourceAssocs>
-            </com.genebio.nextprot.dataloader.dto.RawAnnotation>
-            <com.genebio.nextprot.dataloader.dto.RawAnnotation>
-                <isPropagableByDefault>false</isPropagableByDefault>
-                <type>tissue specificity</type>
-                <quality>SILVER</quality>
-                <qualifierType>EXP</qualifierType>
-                <resourceAssocs>
-                    <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
-                        <resource class="source.DbXref">
-                            <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/soft tissue</accession>
-                            <cvDatabase>
-                                <cvName>HPA</cvName>
-                            </cvDatabase>
-                        </resource>
-                        <evidenceCode>
-                            <cvName>ECO:0001055</cvName>
-                            <cvTermCategory>ECO</cvTermCategory>
-                        </evidenceCode>
-                        <qualityQualifier>SILVER</qualityQualifier>
-                        <annotationResourceAssocProperties>
-                            <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
-                                <propertyName>expressionLevel</propertyName>
-                                <propertyValue>not detected</propertyValue>
-                            </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
-                        </annotationResourceAssocProperties>
-                        <experimentalContext>
-                            <contextSynonyms>
-                                <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue;cell type->peripheral nerve;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->soft tissue 2;cell type->peripheral nerve;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -2995,7 +2953,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/stomach</accession>
+                            <accession>ENSG00000000003/tissue/stomach 1</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -3014,7 +2972,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->stomach;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->stomach 1;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -3037,7 +2995,7 @@
                     <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
                         <resource class="source.DbXref">
                             <resourceType>DATABASE</resourceType>
-                            <accession>ENSG00000000003/tissue/stomach</accession>
+                            <accession>ENSG00000000003/tissue/stomach 2</accession>
                             <cvDatabase>
                                 <cvName>HPA</cvName>
                             </cvDatabase>
@@ -3056,7 +3014,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->stomach;cell type->glandular cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->stomach 2;cell type->glandular cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
