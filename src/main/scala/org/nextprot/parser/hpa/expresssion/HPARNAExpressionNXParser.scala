@@ -51,8 +51,9 @@ class HPARNAExpressionNXParser extends NXParser {
     //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem) // not used (yet?)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
     //if(uniprotIds.length > 1) Console.err.println(ensgId + ": " + uniprotIds)
-    val rnactedmap = HPAUtils.getRnaExpression(entryElem, "consensusTissue", "tissue")
-    val rnabedmap = HPAUtils.getRnaExpression(entryElem, "blood", "bloodCell")
+    val rnaConsensusTissueExpressionDataMap = HPAUtils.getRnaExpression(entryElem, "consensusTissue", "tissue")
+    val rnaHumanBrainExpressionDataMap = HPAUtils.getRnaExpression(entryElem, "humanBrain", "tissue")
+    val rnaBloodExpressionDataMap = HPAUtils.getRnaExpression(entryElem, "blood", "bloodCell")
 
     val quality = GOLD
     val ruleUsed = "as defined for RNA expression in NEXTPROT-1383";
@@ -69,7 +70,7 @@ class HPARNAExpressionNXParser extends NXParser {
 
     // convert map to TissueExpressionData objects
     // We may have to look-up celllines if they are same as IHC counterpart
-    val rnalist = convertMapTissueExpressionData(rnabedmap) ::: convertMapTissueExpressionData(rnactedmap)
+    val rnalist = convertMapTissueExpressionData(rnaBloodExpressionDataMap) ::: convertMapTissueExpressionData(rnaHumanBrainExpressionDataMap) ::: convertMapTissueExpressionData(rnaConsensusTissueExpressionDataMap)
 
     val rnatsAnnotations = rnalist.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
       map(rnated => {

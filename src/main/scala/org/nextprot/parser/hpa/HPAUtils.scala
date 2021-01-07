@@ -66,7 +66,7 @@ object HPAUtils {
     var hasExpression: Boolean = false
 
     val rnaExpressionMap = ((entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == assayType) })
-          \ "data" filter dataNotBloodOrgan(tagName))
+          \ "data" filter dataToNotExclude(tagName))
       .map(f => ((f \ tagName).text, HPAUtils.getCheckedRNALevel(f \ "level")))
       .toMap
 
@@ -77,8 +77,18 @@ object HPAUtils {
     return rnaExpressionMap
   }
 
-  def dataNotBloodOrgan(tagName: String)(dataNode: Node): Boolean = {
-    return !((dataNode \ tagName) exists { _ \\ "@organ" exists (_.text == "Blood")});
+  // Return true if data should not be excluded.
+  // - we want to exclude tissues 1) without attribute 'organ' or 2) with attribute 'organ' equals to Blood
+  def dataToNotExclude(tagName: String)(dataNode: Node): Boolean = {
+
+    var notToExclude: Boolean = true;
+    if (tagName.equals("tissue")) {
+      val filteredData = (dataNode \ tagName)
+        .filter(t => t.attributes("organ") != null)
+        .filter(t => !(t exists { _ \\ "@organ" exists (_.text == "Blood")}));
+      notToExclude = filteredData.nonEmpty;
+    }
+    return notToExclude;
   }
 
   def getTissueExpressionType(entryElem: NodeSeq): String = {

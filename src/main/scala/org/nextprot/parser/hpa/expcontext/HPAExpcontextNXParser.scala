@@ -7,7 +7,8 @@ import java.io.File
 import scala.xml.Node
 import scala.xml.NodeSeq
 import org.nextprot.parser.core.exception.NXException
-import org.nextprot.parser.hpa.HPAUtils.dataNotBloodOrgan
+import org.nextprot.parser.hpa.HPAUtils
+import org.nextprot.parser.hpa.HPAUtils.dataToNotExclude
 
 class HPAExpcontextNXParser extends NXParser {
   
@@ -21,22 +22,21 @@ class HPAExpcontextNXParser extends NXParser {
 	    val tissueExpression = entryElem \ "tissueExpression";
 	    val rnaExpression = entryElem \ "rnaExpression";
 	    val rnaConsensusTissueExprMap = ((entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "consensusTissue") }))
+	    val rnaBrainExprMap = ((entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "humanBrain") }))
 	    val rnaBloodExprMap = ((entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "blood") }))
 
-	    val assayType = (tissueExpression \ "@assayType").text;
-	    val technology = (tissueExpression \ "@technology").text;
-	 	    
 	    // We have a common expcontext xml for tissueExpression and rnaExpression
 	    val dataset =  (tissueExpression \ "data").flatMap(HPAExpcontextUtil.createTissueExpressionLists(_, "tissue")).toSet;
 	    // We exclude celllines data from the rnaExpression
 	    val consensusTissueDatasetRna = getDatasetRna(rnaConsensusTissueExprMap, "tissue");
+	    val brainDatasetRna = getDatasetRna(rnaBrainExprMap, "tissue");
 	    val bloodDatasetRna = getDatasetRna(rnaBloodExprMap, "bloodCell");
-	    val alldata = dataset ++ consensusTissueDatasetRna ++ bloodDatasetRna
+	    val alldata = dataset ++ consensusTissueDatasetRna ++ bloodDatasetRna ++ brainDatasetRna
 	    new TissueExpressionDataSet(alldata);
   }
 
-	private def getDatasetRna(rnaConsensusTissueExprMap: NodeSeq, tagName: String) = {
-		(rnaConsensusTissueExprMap \ "data" filter dataNotBloodOrgan(tagName))
+	private def getDatasetRna(rnaExprMap: NodeSeq, tagName: String) = {
+		(rnaExprMap \ "data" filter dataToNotExclude(tagName))
 			.filter(el => (el \ tagName).text != "").flatMap(HPAExpcontextUtil.createTissueExpressionLists(_, tagName)).toSet
 	}
 }
