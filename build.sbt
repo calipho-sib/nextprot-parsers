@@ -78,7 +78,8 @@ publishTo := {
     Some("releases"  at nexus + "nexus/content/repositories/nextprot-repo")
 }
 
-credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "admin", "mypassword")
+//credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "admin", "mypassword")
+credentials += Credentials("Sonatype Nexus Repository Manager", "miniwatt.isb-sib.ch", "admin", "admin123")
 
 // see also https://www.scala-sbt.org/1.x/docs/Publishing.html
 

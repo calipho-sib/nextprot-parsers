@@ -41,6 +41,11 @@ sbt
 > exit
 ```
 
+NOTE 
+about user / password for credential
+1) See note above about sonatype
+2) or use user /password for nexus on miniwatt (admin pwd)
+
 ## Updating dependency in nextprot-loaders and build fat jar for NP1 data integration
 
 1. Update artefact version in https://gitlab.isb-sib.ch/calipho/nextprot-loaders/blob/develop/tools.integration/pom.xml
