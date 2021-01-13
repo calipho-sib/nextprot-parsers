@@ -14,10 +14,10 @@ object HPAReliabilityValue extends Enumeration {
 
     s match {
       case "enhanced" => return Supportive;
-      case "supportive" => return Supportive;
-      case "supported" => return Supportive; // Supposedely obsolete but still in a few records
-      case "uncertain" => return Uncertain;
+      case "supportive" => return Uncertain;
+      case "supported" => return Uncertain; // Supposedely obsolete but still in a few records
       case "approved" => return Uncertain;
+      case "uncertain" => return NotSupportive;
       case _ => throw new Exception(s + " not found for HPAReliabilityValue")
     }
 
