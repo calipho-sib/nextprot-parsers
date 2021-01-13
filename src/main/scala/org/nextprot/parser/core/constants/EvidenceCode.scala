@@ -14,7 +14,8 @@ object EvidenceCode extends Enumeration {
 	val ImmunoLocalization = Val("ECO:0000087","immunolocalization evidence") 
 	val ImmunoHistochemistry = Val("ECO:0001055","immunohistochemistry evidence") 
 	val ImmunoCytoChemistry = Val("ECO:0001053","immunocytochemistry evidence") 
-	val RnaSeq = Val("ECO:0000295","RNA-seq evidence") 
+	val RnaSeq = Val("ECO:0000295","RNA-seq evidence")
+	val scRnaSeq = Val("ECO:0001560","scRNA-seq evidence")
 } 
 
 

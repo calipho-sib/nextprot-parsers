@@ -78,12 +78,20 @@ class HPARNAExpressionNXParser extends NXParser {
         extractTissueSpecificityAnnotation(ensgId, NXQuality.GOLD, syn, rnated.level, assayType, EvidenceCode.RnaSeq) // Always GOLD
       }).toList // Creates the list of raw annotations
 
+    val scRnaExpressionDataMap = HPAUtils.getScRnaExpression(entryElem)
+    val scRnaList = convertMapTissueExpressionData(scRnaExpressionDataMap)
+    val scRnaAnnotations = scRnaList.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) != null).
+      map(scrnated => {
+        val syn = HPAExpcontextUtil.getSynonymForXml(scrnated, EvidenceCode.scRnaSeq) // The Expcontext synonym allows to link data between expression and expcontext xmls
+        extractTissueSpecificityAnnotation(ensgId, NXQuality.GOLD, syn, scrnated.level, assayType, EvidenceCode.scRnaSeq) // Always GOLD
+      }).toList // Creates the list of raw annotations
+
     new ExpHPARNAAnnotationsWrapper(
       _quality = quality,
       _ensgAc = ensgId,
       _uniprotIds = uniprotIds,
       //_summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType), // not used (yet?)
-      _rowAnnotations = rnatsAnnotations
+      _rowAnnotations = rnatsAnnotations ::: scRnaAnnotations
     )
   }
 

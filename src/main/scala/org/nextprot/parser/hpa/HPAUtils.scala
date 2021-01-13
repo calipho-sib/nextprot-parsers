@@ -3,12 +3,7 @@ package org.nextprot.parser.hpa
 import scala.xml.{Node, NodeSeq}
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_EXPR
-import org.nextprot.parser.hpa.subcell.cases.CASE_MULTIPLE_UNIPROT_MAPPING
-import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.subcell.cases.CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE
 
 object HPAUtils {
 
@@ -75,6 +70,21 @@ object HPAUtils {
       Console.err.println(getEnsgId(entryElem) + ": " + rnaExpressionMap.size + " " + assayType + " 'not detected'")
     }
     return rnaExpressionMap
+  }
+
+  // scRNAseq data
+  def getScRnaExpression(entryElem: NodeSeq): Map[String, String] = {
+    var hasExpression: Boolean = false
+
+    val expressionMap = ((entryElem \ "cellTypeExpression") \ "singleCellTypeExpression")
+      .map(f => ((f \\ "@name").text, HPAUtils.getCheckedRNALevel(f)))
+      .toMap
+
+    expressionMap foreach (x => hasExpression |= (x._2 != "not detected"))
+    if (!hasExpression) {
+      Console.err.println(getEnsgId(entryElem) + ": " + expressionMap.size + " scRNA-seq expression 'not detected'")
+    }
+    return expressionMap
   }
 
   // Return true if data should not be excluded.
