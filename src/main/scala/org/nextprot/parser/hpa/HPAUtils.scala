@@ -65,10 +65,6 @@ object HPAUtils {
       .map(f => ((f \ tagName).text, HPAUtils.getCheckedRNALevel(f \ "level")))
       .toMap
 
-    rnaExpressionMap foreach (x => hasExpression |= (x._2 != "not detected"))
-    if (!hasExpression) {
-      Console.err.println(getEnsgId(entryElem) + ": " + rnaExpressionMap.size + " " + assayType + " 'not detected'")
-    }
     return rnaExpressionMap
   }
 
@@ -80,10 +76,6 @@ object HPAUtils {
       .map(f => ((f \\ "@name").text, HPAUtils.getCheckedRNALevel(f)))
       .toMap
 
-    expressionMap foreach (x => hasExpression |= (x._2 != "not detected"))
-    if (!hasExpression) {
-      Console.err.println(getEnsgId(entryElem) + ": " + expressionMap.size + " scRNA-seq expression 'not detected'")
-    }
     return expressionMap
   }
 

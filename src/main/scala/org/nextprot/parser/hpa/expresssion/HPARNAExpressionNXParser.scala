@@ -42,7 +42,6 @@ class HPARNAExpressionNXParser extends NXParser {
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val ensgId = HPAUtils.getEnsgId(entryElem)
     HPAValidation.checkPreconditionsForRnaExpr(entryElem, HPAMultiENSGTList.multiENSGTList)
-    //val summaryDescr = HPAUtils.getTissueExpressionSummary(entryElem) // not used (yet?)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
 
     // TODO: need some refactoring between all RNA-seq data but no time to do it now
@@ -90,6 +89,13 @@ class HPARNAExpressionNXParser extends NXParser {
         extractTissueSpecificityAnnotation(ensgId, NXQuality.GOLD, syn, scrnated.level, "celltype", EvidenceCode.scRnaSeq) // Always GOLD
       }).toList
 
+    var hasExpression: Boolean = false
+    val expressionMap = rnaConsensusTissueMap ++ rnaHumanBrainMap ++ rnaBloodMap ++ scRnaExpressionDataMap
+    expressionMap foreach (x => hasExpression |= (x._2 != "not detected"))
+    if (!hasExpression) {
+      Console.err.println(ensgId + ": " + expressionMap.size + " expression 'not detected'")
+    }
+
     val quality = GOLD
     val ruleUsed = "as defined for RNA expression in NEXTPROT-1383";
 
@@ -107,7 +113,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _quality = quality,
       _ensgAc = ensgId,
       _uniprotIds = uniprotIds,
-      //_summaryAnnotation = extractSummaryAnnotation(ensgId, quality, summaryDescr, assayType), // not used (yet?)
+      _summaryAnnotations = extractSummaryAnnotations(ensgId, entryElem),
       _rowAnnotations = rnaConsensusTissueAnnotations ::: rnaBloodAnnotations ::: rnaHumanBrainAnnotations ::: scRnaAnnotations
     )
   }
@@ -166,4 +172,92 @@ class HPARNAExpressionNXParser extends NXParser {
       _expContext = new ExperimentalContextSynonym(synonym))
   }
 
+  private def extractSummaryAnnotations(identifier: String, entryElem: NodeSeq): List[RawAnnotation] = {
+    List(extractRNASpecificityAndDistributionAnnotations(identifier, entryElem),
+      extractScRNASpecificityAnnotation(identifier, entryElem))
+  }
+
+  private def extractRNASpecificityAndDistributionAnnotations(identifier: String, entryElem: NodeSeq): RawAnnotation = {
+    val elmt = entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "consensusTissue") }
+
+    var specificity: String = extractSpecificity(elmt, "rnaSpecificity",
+      "tissue", "specificity", "RNA tissue specificity")
+
+    val distributionElmt = elmt.map(f => f \ "rnaDistribution")
+    var distribution = "";
+    if (distributionElmt.nonEmpty) {
+      distribution = "RNA tissue distribution: " + distributionElmt.head.text + ".";
+    }
+
+    val summary = specificity + (if (specificity.nonEmpty) " " else "") + distribution;
+
+    return new RawAnnotation(
+      _datasource = null,
+      _cvTermAcc = null,
+      _cvTermCategory = null,
+      _qualifierType = "EXP",
+      _isPropagableByDefault = false,
+      _type = "expression info",
+      _description = summary,
+      _quality = null,
+      _assocs = List(new AnnotationResourceAssoc(
+        _resourceClass = "source.DbXref",
+        _resourceType = "DATABASE",
+        _accession = identifier + "/tissue",
+        _cvDatabaseName = "HPA",
+        _eco = EvidenceCode.RnaSeq.code,
+        _isNegative = false,
+        _type = "SOURCE",
+        _quality = null,
+        _dataSource = null,
+        _props = null,
+        _expContext = null)))
+  }
+
+  private def extractScRNASpecificityAnnotation(identifier: String, entryElem: NodeSeq): RawAnnotation = {
+    val elmt = entryElem \ "cellTypeExpression"
+
+    val specificity: String = extractSpecificity(elmt, "cellTypeSpecificity",
+      "cellType", "category", "Single cell type specificity")
+
+    return new RawAnnotation(
+      _datasource = null,
+      _cvTermAcc = null,
+      _cvTermCategory = null,
+      _qualifierType = "EXP",
+      _isPropagableByDefault = false,
+      _type = "expression info",
+      _description = specificity,
+      _quality = null,
+      _assocs = List(new AnnotationResourceAssoc(
+        _resourceClass = "source.DbXref",
+        _resourceType = "DATABASE",
+        _accession = identifier + "/celltype",
+        _cvDatabaseName = "HPA",
+        _eco = EvidenceCode.scRnaSeq.code,
+        _isNegative = false,
+        _type = "SOURCE",
+        _quality = null,
+        _dataSource = null,
+        _props = null,
+        _expContext = null)))
+  }
+
+  private def extractSpecificity(elmt: NodeSeq, subsetName: String, tagName: String, attrName:String,
+                                prefix: String) = {
+
+    val specificityElmt = elmt.map(f => f \ subsetName)
+    var specificity = "";
+    if (specificityElmt.nonEmpty) {
+      val t = (specificityElmt.head \ tagName).map(f => f.text)
+
+      // Note: there is an issue in HPA files. To avoid to display it, we do this replacement
+      var specificTissues = t.mkString(", ").replace("Alveolar cells type, Alveolar cells type",
+                                    "Alveolar cells type 1, Alveolar cells type 2")
+      if (specificTissues.nonEmpty)
+        specificTissues = " (" + specificTissues + ")"
+      specificity = prefix + ": " + (specificityElmt.head \\ ("@" + attrName)).text + specificTissues + ".";
+    }
+    specificity
+  }
 }
