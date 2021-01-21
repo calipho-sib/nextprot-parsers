@@ -251,9 +251,7 @@ class HPARNAExpressionNXParser extends NXParser {
     if (specificityElmt.nonEmpty) {
       val t = (specificityElmt.head \ tagName).map(f => f.text)
 
-      // Note: there is an issue in HPA files. To avoid to display it, we do this replacement
-      var specificTissues = t.mkString(", ").replace("Alveolar cells type, Alveolar cells type",
-                                    "Alveolar cells type 1, Alveolar cells type 2")
+      var specificTissues = t.mkString(", ")
       if (specificTissues.nonEmpty)
         specificTissues = " (" + specificTissues + ")"
       specificity = prefix + ": " + (specificityElmt.head \\ ("@" + attrName)).text + specificTissues + ".";
