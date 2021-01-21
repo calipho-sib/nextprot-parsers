@@ -60,8 +60,8 @@ class HPAAntibodyNXParser extends NXParser {
 
         val hasIHCExprData = (HPAValidation.checkMainTissueExpression(entryElem) == null)  // null = no error = IHC expr data available
         
-        val (quality,r)= HPAQuality.getQualityForGenericAntibody(entryElem, antibodyElem) // will always be  GOLD with present rules
-        
+        val quality = GOLD; // always GOLD quality for all antibodies regardless of expression data according to 'Specifications HPA'
+
         val annots = if (hasIHCExprData) {
           val annotations = ((antibodyElem \ "tissueExpression").map(extractAntibodyAnnotation(dbxref, _))).toList;
           new HPAAntibodyAnnotationListWrapper(_HPAaccession = dbxref, _rowAnnotations = annotations)

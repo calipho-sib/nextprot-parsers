@@ -113,7 +113,7 @@ class ExpHPARNAAnnotationsWrapper(
   val _quality: NXQuality,
   val _ensgAc: String,
   val _uniprotIds: List[String],
-  //val _summaryAnnotation: RawAnnotation),
+  val _summaryAnnotations: List[RawAnnotation],
   val _rowAnnotations: List[RawAnnotation])
   extends TemplateModel
   {
@@ -130,19 +130,33 @@ class ExpHPARNAAnnotationsWrapper(
       <quality>{ _quality.toString() }</quality>
       <expressionAnnotations>
         <datasource>Human protein atlas RNA-seq</datasource>
-        { wrappedBeanXML }
+        { exprWrappedBeanXML }
         <preComputedFeatures>false</preComputedFeatures>
       </expressionAnnotations>
+      <summaryAnnotations>
+        <datasource>Human protein atlas RNA-seq</datasource>
+        <preComputedFeatures>false</preComputedFeatures>
+        { summaryExprWrappedBeanXML }
+      </summaryAnnotations>
+
     </com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
 
-  private def wrappedBeanXML = <wrappedBean>
+  private def exprWrappedBeanXML = <wrappedBean>
                                  {
-                                   if (_rowAnnotations != null && !_rowAnnotations.isEmpty) {
+                                   if (_rowAnnotations != null && _rowAnnotations.nonEmpty) {
                                      { _rowAnnotations.map(_.toXML) }
                                    }
                                  }
                                </wrappedBean>
 
-  override def getQuality: NXQuality = _quality;    
+    private def summaryExprWrappedBeanXML = <wrappedBean>
+                                {
+                                if (_summaryAnnotations != null && _summaryAnnotations.nonEmpty) {
+                                  { _summaryAnnotations.map(_.toXML) }
+                                }
+                                }
+                              </wrappedBean>
+
+    override def getQuality: NXQuality = _quality;
 }
 

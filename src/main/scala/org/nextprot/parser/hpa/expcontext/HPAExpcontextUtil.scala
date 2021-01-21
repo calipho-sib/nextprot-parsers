@@ -31,16 +31,24 @@ object HPAExpcontextUtil {
 	// eco->spatial pattern of protein expression evidence;tissue->liver;
 	// eco->spatial pattern of protein expression evidence;tissue->adrenal gland;cell type->glandular cells;
 	def getSynonymForXml(ted: TissueExpressionData, eco: EvidenceCode.Value) : String = {
-		val cleanTissue = ted.tissue.replace(";", ",").toLowerCase()
-		if (ted.cellType==null) {
-			"eco->"+ eco.name + ";tissue->"+ cleanTissue +";"
+		var cleanTissue = ted.tissue;
+		if (cleanTissue != null) {
+	    cleanTissue = ted.tissue.replace(";", ",").toLowerCase();
+		}
+		if (ted.cellType == null) {
+	    "eco->" + eco.name + ";tissue->" + cleanTissue + ";"
+		} else if (ted.tissue == null) {
+	    "eco->" + eco.name + ";cell type->" + ted.cellType +";"
 		} else {
-			"eco->"+ eco.name + ";tissue->"+ cleanTissue +";cell type->"+ ted.cellType.toLowerCase() +";"
+	    "eco->" + eco.name + ";tissue->" + cleanTissue + ";cell type->" + ted.cellType.toLowerCase() + ";"
 		}
 	}
 	
 	// for mapping caloha: lower case, removes trailing digits and spaces
     def getCleanTissue(s:String): String = {
+	    if (s == null) {
+	    	return s;
+	    }
     	val pattern = "\\s+[0-9]*\\s*$".r;
     	val res = pattern replaceFirstIn(s, "");
     	return res.toLowerCase();
@@ -48,18 +56,19 @@ object HPAExpcontextUtil {
 
     // for mapping caloha: lower case, replaces some patterns with some strings
     def getCleanCellType(s: String): String = {
-		val frlist = List(
-		   ("lymphoid cells outside reaction centra".r,"lymphoid cell"),
-		   ("pneumocytes".r,"pneumocyte"),
-		   ("ovarian stroma cells".r,"ovarian stromal cells"),
-		   ("myocytes".r,"myocyte"));
-		var res = s.toLowerCase();
-		frlist.foreach(el => res = el._1 replaceFirstIn(res,el._2));
-		return res;
+	    if (s == null) {
+	    	return s;
+	    }
+	    val frlist = List(
+	    	("lymphoid cells outside reaction centra".r,"lymphoid cell"),
+	    	("pneumocytes".r,"pneumocyte"),
+	    	("ovarian stroma cells".r,"ovarian stromal cells"),
+	    	("myocytes".r,"myocyte"));
+	    var res = s.toLowerCase().replaceAll(" -", "");
+	    frlist.foreach(el => res = el._1 replaceFirstIn(res,el._2));
+	    return res;
     }
 
-
-	
     // for mapping caloha: try to match with ti + ct first and then with ct only 
     def getCalohaMapping(ted: TissueExpressionData,
         syn2tissueMap:scala.collection.immutable.Map[String, CalohaMapEntry]) :CalohaMapEntry  = {
@@ -82,7 +91,4 @@ object HPAExpcontextUtil {
     		}
     	}
     }
-    
-	
-	
 }

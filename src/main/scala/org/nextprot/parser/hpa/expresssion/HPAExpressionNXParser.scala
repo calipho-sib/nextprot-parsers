@@ -159,7 +159,7 @@ class HPAExpressionNXParser extends NXParser {
         _resourceType = "DATABASE",
         _accession = identifier + "/" + assayType,
         _cvDatabaseName = "HPA",
-        _eco = EvidenceCode.ImmunoLocalization.code,
+        _eco = EvidenceCode.ImmunoHistochemistry.code,
         _isNegative = false,
         _type = "EVIDENCE",
         _quality = quality,

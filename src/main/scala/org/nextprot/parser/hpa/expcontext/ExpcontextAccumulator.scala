@@ -1,6 +1,5 @@
 package org.nextprot.parser.hpa.expcontext
 
-import scala.collection.mutable.Map
 import java.util.TreeMap
 import java.util.TreeSet
 import scala.collection.mutable.Set
@@ -9,7 +8,6 @@ import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextWrapper
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextSynonym
 import org.nextprot.parser.core.datamodel.annotation.ExperimentalContextListWrapper
 import scala.collection.mutable.MutableList
-import akka.dispatch.Foreach
 import org.nextprot.parser.core.constants.EvidenceCode
 
 class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
@@ -25,6 +23,9 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
     val (_, s) = accu.get(cme.ac)
     if(ted.cellType==null) { // RNA expression has no cell types
       val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.RnaSeq), rule)
+      s.add(sr)
+    } else if(ted.tissue==null) { // scRNA expression has no tissue
+      val sr = new SynoRule(HPAExpcontextUtil.getSynonymForXml(ted, EvidenceCode.scRnaSeq), rule)
       s.add(sr)
     }
     else {
@@ -116,10 +117,12 @@ class ExpcontextAccumulator(val calohaMapper: CalohaMapper) {
       val tissue = e._2._1;
       val syns = e._2._2;
       val ecslist = syns.map(new ExperimentalContextSynonym(_)).toList
-      if(syns(0).contains("RNA-seq")) 
-        new ExperimentalContextWrapper(tissue, EvidenceCode.RnaSeq.code , EvidenceCode.RnaSeq.name ,ecslist)
+      if (syns(0).equals(EvidenceCode.RnaSeq.name))
+        new ExperimentalContextWrapper(tissue, EvidenceCode.RnaSeq.code, EvidenceCode.RnaSeq.name, ecslist)
+      else if (syns(0).equals(EvidenceCode.scRnaSeq.name))
+        new ExperimentalContextWrapper(tissue, EvidenceCode.scRnaSeq.code, EvidenceCode.scRnaSeq.name, ecslist)
       else
-        new ExperimentalContextWrapper(tissue, EvidenceCode.ImmunoHistochemistry.code , EvidenceCode.ImmunoHistochemistry.name ,ecslist)
+        new ExperimentalContextWrapper(tissue, EvidenceCode.ImmunoHistochemistry.code, EvidenceCode.ImmunoHistochemistry.name, ecslist)
     }).toList;
     val eclw = new ExperimentalContextListWrapper(ecwlist.toList, problems.toList.sorted)
     return eclw

@@ -1,10 +1,10 @@
 
-  <entry url="http://v19.proteinatlas.org/ENSG00000000003" version="19">
+  <entry url="http://v20.proteinatlas.org/ENSG00000000003" version="20">
     <name>TSPAN6</name>
     <synonym>T245</synonym>
     <synonym>TM4SF6</synonym>
     <synonym>TSPAN-6</synonym>
-    <identifier db="Ensembl" id="ENSG00000000003" version="92.38">
+    <identifier assembly="GRCh38.p12" db="Ensembl" gencodeVersion="28" id="ENSG00000000003" version="92.38">
       <xref db="Uniprot/SWISSPROT" id="O43657"/>
     </identifier>
     <proteinClasses>
@@ -34,7 +34,7 @@
     </proteinEvidence>
     <tissueExpression assayType="tissue" source="HPA" technology="IHC">
       <summary type="tissue"><![CDATA[Cytoplasmic and membranous expression in most tissues.]]></summary>
-      <verification description="Antibody staining mainly consistent with RNA expression data. Pending external verification. " type="reliability">approved</verification>
+      <verification description="Medium consistency between antibody staining and RNA expression data. Pending external verification. " type="reliability">approved</verification>
       <image imageType="selected">
         <tissue ontologyTerms="UBERON:0002107" organ="Liver &amp; gallbladder">Liver</tissue>
         <imageUrl>http://images.proteinatlas.org/4109/11813_A_8_4_rna_selected.jpg</imageUrl>
@@ -263,7 +263,7 @@
         <tissue ontologyTerms="UBERON:0000948,UBERON:0001133" organ="Muscle tissues">Heart muscle</tissue>
         <level type="expression">not detected</level>
         <tissueCell>
-          <cellType>Myocytes</cellType>
+          <cellType>Cardiomyocytes</cellType>
           <level type="expression">not detected</level>
         </tissueCell>
       </data>
@@ -295,7 +295,7 @@
         <tissue ontologyTerms="UBERON:0002107" organ="Liver &amp; gallbladder">Liver</tissue>
         <level type="expression">medium</level>
         <tissueCell>
-          <cellType>Bile duct cells</cellType>
+          <cellType>Cholangiocytes</cellType>
           <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
@@ -307,12 +307,12 @@
         <tissue ontologyTerms="UBERON:0002048" organ="Lung">Lung</tissue>
         <level type="expression">low</level>
         <tissueCell>
-          <cellType>Macrophages</cellType>
-          <level type="expression">not detected</level>
+          <cellType>Alveolar cells</cellType>
+          <level type="expression">low</level>
         </tissueCell>
         <tissueCell>
-          <cellType>Pneumocytes</cellType>
-          <level type="expression">low</level>
+          <cellType>Macrophages</cellType>
+          <level type="expression">not detected</level>
         </tissueCell>
       </data>
       <data>
@@ -359,7 +359,7 @@
           <level type="expression">medium</level>
         </tissueCell>
         <tissueCell>
-          <cellType>Islets of Langerhans</cellType>
+          <cellType>Pancreatic endocrine cells</cellType>
           <level type="expression">low</level>
         </tissueCell>
       </data>
@@ -577,71 +577,71 @@
       <rnaCancerDistribution>Detected in all</rnaCancerDistribution>
       <data>
         <tissue organ="Female tissues">Breast cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="7.71e-2" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="7.71e-2" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Female tissues">Cervical cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="8.97e-2" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="8.97e-2" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Gastrointestinal tract">Colorectal cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="3.56e-2" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="3.56e-2" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Female tissues">Endometrial cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.57e-1" prognosticType="unfavourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.57e-1" prognosticType="unfavorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Brain">Glioma</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.71e-3" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.71e-3" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Gastrointestinal tract">Head and neck cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="5.93e-2" prognosticType="unfavourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="5.93e-2" prognosticType="unfavorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Liver &amp; gallbladder">Liver cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.04e-1" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.04e-1" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Lung">Lung cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.09e-2" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.09e-2" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Skin">Melanoma</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.19e-2" prognosticType="unfavourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.19e-2" prognosticType="unfavorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Female tissues">Ovarian cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.80e-3" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.80e-3" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Pancreas">Pancreatic cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.04e-3" prognosticType="unfavourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.04e-3" prognosticType="unfavorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Male tissues">Prostate cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="8.76e-2" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="8.76e-2" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Kidney &amp; urinary bladder">Renal cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="3.83e-3" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="3.83e-3" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Gastrointestinal tract">Stomach cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="4.28e-2" prognosticType="unfavourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="4.28e-2" prognosticType="unfavorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Male tissues">Testis cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.14e-1" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="1.14e-1" prognosticType="favorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Endocrine tissues">Thyroid cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.24e-1" prognosticType="unfavourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="2.24e-1" prognosticType="unfavorable" source="HPA"/>
       </data>
       <data>
         <tissue organ="Kidney &amp; urinary bladder">Urothelial cancer</tissue>
-        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="9.54e-3" prognosticType="favourable" source="HPA"/>
+        <survivalAnalysis dataSource="TCGA" isPrognostic="false" pValue="9.54e-3" prognosticType="favorable" source="HPA"/>
       </data>
     </pathologyExpression>
     <cellExpression source="HPA" technology="ICC/IF">
@@ -1387,6 +1387,273 @@
         <RNASample age="80" expRNA="150.8" sampleId="265" sex="Male" unitRNA="pTPM"/>
       </data>
     </rnaExpression>
+    <rnaExpression assayType="humanBrain" source="HPA" technology="RNAseq">
+      <data>
+        <tissue organ="PFC">Anterior cingulate gyrus, pregenual-dorsal</tissue>
+        <level expRNA="5.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="5.7" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="5" sampleId="79" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.8" sampleId="80" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.9" sampleId="81" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.4" sampleId="82" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.4" sampleId="83" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.9" sampleId="84" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="3.9" sampleId="85" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.7" sampleId="86" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.1" sampleId="87" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Anterior cingulate gyrus, pregenual-ventral</tissue>
+        <level expRNA="6.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.6" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="5.5" sampleId="88" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="11.8" sampleId="89" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.6" sampleId="90" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.8" sampleId="91" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="8.1" sampleId="92" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Anterior cingulate gyrus, subgenual</tissue>
+        <level expRNA="6.6" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.6" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="6.2" sampleId="93" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.2" sampleId="94" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="12" sampleId="95" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.4" sampleId="96" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.8" sampleId="97" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.3" sampleId="98" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9.9" sampleId="99" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Dorsolateral prefrontal cortex</tissue>
+        <level expRNA="6.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.0" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="6.8" sampleId="13" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7" sampleId="14" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.6" sampleId="15" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4" sampleId="16" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="4.3" sampleId="17" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="6" sampleId="18" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="8.2" sampleId="19" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Dorsomedial prefrontal cortex</tissue>
+        <level expRNA="6.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.1" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="10.2" sampleId="8" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.8" sampleId="9" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.1" sampleId="10" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.2" sampleId="11" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.4" sampleId="12" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue ontologyTerms="UBERON:0001870" organ="CTX">Frontal cortex</tissue>
+        <level expRNA="6.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="5.9" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="9.8" sampleId="141" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.2" sampleId="142" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="2.1" sampleId="143" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="2.6" sampleId="144" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.4" sampleId="145" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.7" sampleId="146" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.4" sampleId="147" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="3.7" sampleId="148" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9.7" sampleId="149" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.8" sampleId="150" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="6.4" sampleId="151" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="10.2" sampleId="152" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Frontomarginal cortex</tissue>
+        <level expRNA="6.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.9" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="7" sampleId="34" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="8.2" sampleId="35" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.9" sampleId="36" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.6" sampleId="37" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.1" sampleId="38" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="8.5" sampleId="39" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="11.9" sampleId="40" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.1" sampleId="41" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9.9" sampleId="42" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Frontopolar cortex</tissue>
+        <level expRNA="6.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="8.9" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="10.7" sampleId="27" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="10" sampleId="28" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.1" sampleId="29" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.2" sampleId="30" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.4" sampleId="31" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="8.4" sampleId="32" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="10.5" sampleId="33" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Gyrus rectus</tissue>
+        <level expRNA="8.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="8.4" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="6" sampleId="43" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.3" sampleId="44" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.5" sampleId="45" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="8.8" sampleId="46" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.2" sampleId="47" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="11.8" sampleId="48" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7" sampleId="49" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="11.2" sampleId="50" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Inferior frontal gyrus, orbital</tissue>
+        <level expRNA="5.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.8" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="7.5" sampleId="69" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="11.5" sampleId="70" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="8.6" sampleId="71" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.1" sampleId="72" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="2.6" sampleId="73" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="12.3" sampleId="74" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="2.8" sampleId="75" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="3.5" sampleId="76" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.7" sampleId="77" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="4.3" sampleId="78" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Inferior frontal gyrus, triangular</tissue>
+        <level expRNA="5.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.5" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="7" sampleId="111" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.5" sampleId="112" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.5" sampleId="113" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="2.1" sampleId="114" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4" sampleId="115" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="13.8" sampleId="116" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.2" sampleId="117" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9.3" sampleId="118" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Orbitofrontal gyrus, lateral</tissue>
+        <level expRNA="6.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.9" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="7.9" sampleId="62" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.5" sampleId="63" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.4" sampleId="64" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="4.1" sampleId="65" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="5.1" sampleId="66" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.5" sampleId="67" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9" sampleId="68" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Orbitofrontal gyrus, medial</tissue>
+        <level expRNA="8.6" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="8.8" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="12.8" sampleId="51" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="10.1" sampleId="52" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="15.7" sampleId="53" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.1" sampleId="54" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.6" sampleId="55" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.6" sampleId="56" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.6" sampleId="57" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9" sampleId="58" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="8" sampleId="59" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.1" sampleId="60" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="10.1" sampleId="61" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Orbitofrontal gyrus, posterior</tissue>
+        <level expRNA="5.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.1" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="6.1" sampleId="100" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.3" sampleId="101" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7" sampleId="102" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.7" sampleId="103" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="3.8" sampleId="104" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.3" sampleId="105" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="5.1" sampleId="106" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="6.2" sampleId="107" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9.3" sampleId="108" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="3.3" sampleId="109" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="5.7" sampleId="110" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="CTX">Parietal cortex</tissue>
+        <level expRNA="6.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.5" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="6.2" sampleId="153" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.9" sampleId="154" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.1" sampleId="155" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="12.1" sampleId="156" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="5.8" sampleId="157" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="6" sampleId="158" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Subcallosal gyrus</tissue>
+        <level expRNA="7.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.2" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="5" sampleId="119" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.9" sampleId="120" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.9" sampleId="121" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.3" sampleId="122" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.6" sampleId="123" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.5" sampleId="124" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.8" sampleId="125" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7" sampleId="126" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="8.7" sampleId="127" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="10.8" sampleId="128" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="4.8" sampleId="129" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="9.9" sampleId="130" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Superior frontal gyrus</tissue>
+        <level expRNA="6.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.0" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="8.5" sampleId="131" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9.1" sampleId="132" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.4" sampleId="133" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5" sampleId="134" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="1.9" sampleId="135" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="7.5" sampleId="136" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="5.2" sampleId="137" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="6.3" sampleId="138" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.4" sampleId="139" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="2.9" sampleId="140" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue ontologyTerms="UBERON:0016538" organ="CTX">Temporal cortex</tissue>
+        <level expRNA="5.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.7" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="7.9" sampleId="159" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="2.5" sampleId="160" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="1.4" sampleId="161" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.8" sampleId="162" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6" sampleId="163" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="2.6" sampleId="164" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.7" sampleId="165" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Ventrolateral prefrontal cortex</tissue>
+        <level expRNA="6.6" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.6" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="7.6" sampleId="20" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.6" sampleId="21" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="6.1" sampleId="22" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="5.6" sampleId="23" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="5.7" sampleId="24" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="4.3" sampleId="25" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="10.2" sampleId="26" sex="Female" unitRNA="TPM"/>
+      </data>
+      <data>
+        <tissue organ="PFC">Ventromedial prefrontal cortex</tissue>
+        <level expRNA="7.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="8.1" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="10.5" sampleId="1" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="9" sampleId="2" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="11.4" sampleId="3" sex="Male" unitRNA="TPM"/>
+        <RNASample expRNA="4.8" sampleId="4" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="6.5" sampleId="5" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.4" sampleId="6" sex="Female" unitRNA="TPM"/>
+        <RNASample expRNA="7.1" sampleId="7" sex="Female" unitRNA="TPM"/>
+      </data>
+    </rnaExpression>
     <rnaExpression assayType="humanBrainRegional" source="HPA" technology="RNAseq">
       <rnaSpecificity description="At least four-fold higher mRNA levels in a particular region as compared to all other regions" specificity="Region enriched">
         <region>pons and medulla</region>
@@ -1657,7 +1924,7 @@
     <rnaExpression assayType="pigBrain" source="HPA" technology="RNAseq">
       <data>
         <tissue ontologyTerms="UBERON:0001876" region="AMY">Amygdala</tissue>
-        <level expRNA="3.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="8.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="8.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="10.1" sampleId="1052" sex="N/A" unitRNA="pTPM"/>
@@ -1667,7 +1934,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001873" region="BG">Caudate</tissue>
-        <level expRNA="2.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="6.1" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="6.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="7.8" sampleId="1064" sex="N/A" unitRNA="pTPM"/>
@@ -1677,7 +1944,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0002037" region="CB">Cerebellum</tissue>
-        <level expRNA="1.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="1.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="5.0" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="5.0" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="7.1" sampleId="1062" sex="N/A" unitRNA="pTPM"/>
@@ -1687,7 +1954,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0003027" region="CTX">Cingulate cortex</tissue>
-        <level expRNA="2.6" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="7.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="7.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="7.4" sampleId="1053" sex="N/A" unitRNA="pTPM"/>
@@ -1697,7 +1964,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0002336" region="CC">Corpus callosum</tissue>
-        <level expRNA="1.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="1.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="5.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="5.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="4.8" sampleId="1061" sex="N/A" unitRNA="pTPM"/>
@@ -1707,7 +1974,7 @@
       </data>
       <data>
         <tissue region="HPF">Dorsal hippocampus </tissue>
-        <level expRNA="2.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="8.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="8.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="10.2" sampleId="1069" sex="N/A" unitRNA="pTPM"/>
@@ -1717,7 +1984,7 @@
       </data>
       <data>
         <tissue region="SC">Dorsal spinal cord</tissue>
-        <level expRNA="6.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="5.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="18.1" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="18.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="12.4" sampleId="1079" sex="N/A" unitRNA="pTPM"/>
@@ -1727,7 +1994,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0002728" region="HPF">Entorhinal cortex</tissue>
-        <level expRNA="3.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.7" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="8.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="8.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="7.2" sampleId="1054" sex="N/A" unitRNA="pTPM"/>
@@ -1737,7 +2004,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001898" region="HY">Hypothalamus</tissue>
-        <level expRNA="4.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="3.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="14.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="14.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="23" sampleId="1071" sex="N/A" unitRNA="pTPM"/>
@@ -1747,7 +2014,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0034891" region="CTX">Insular cortex</tissue>
-        <level expRNA="2.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="1.7" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="5.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="5.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="6.4" sampleId="1055" sex="N/A" unitRNA="pTPM"/>
@@ -1757,7 +2024,7 @@
       </data>
       <data>
         <tissue region="PM">Medulla</tissue>
-        <level expRNA="5.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="14.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="14.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="12.8" sampleId="1072" sex="N/A" unitRNA="pTPM"/>
@@ -1767,7 +2034,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001891" region="MB">Midbrain</tissue>
-        <level expRNA="5.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="13.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="13.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="16" sampleId="1073" sex="N/A" unitRNA="pTPM"/>
@@ -1777,7 +2044,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001384" region="CTX">Motor cortex</tissue>
-        <level expRNA="3.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.7" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="7.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="7.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="6.4" sampleId="1056" sex="N/A" unitRNA="pTPM"/>
@@ -1787,7 +2054,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0016540" region="CTX">Occipital cortex</tissue>
-        <level expRNA="2.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="6.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="6.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="6" sampleId="1057" sex="N/A" unitRNA="pTPM"/>
@@ -1797,7 +2064,7 @@
       </data>
       <data>
         <tissue region="OLF">Olfactory bulb</tissue>
-        <level expRNA="1.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="1.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="7.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="7.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="9" sampleId="1074" sex="N/A" unitRNA="pTPM"/>
@@ -1808,7 +2075,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0003040" region="MB">Periaqueductal gray</tissue>
-        <level expRNA="5.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="17.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="17.2" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="14.9" sampleId="1110" sex="N/A" unitRNA="pTPM"/>
@@ -1817,7 +2084,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0000007" region="PIT">Pituitary gland</tissue>
-        <level expRNA="4.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="3.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="15.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="15.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="26.2" sampleId="1075" sex="N/A" unitRNA="pTPM"/>
@@ -1827,7 +2094,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0000988" region="PM">Pons</tissue>
-        <level expRNA="6.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="5.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="16.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="16.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="15.7" sampleId="1076" sex="N/A" unitRNA="pTPM"/>
@@ -1837,7 +2104,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0000451" region="CTX">Prefrontal cortex</tissue>
-        <level expRNA="2.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.3" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="6.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="6.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="5.4" sampleId="1058" sex="N/A" unitRNA="pTPM"/>
@@ -1847,7 +2114,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001874" region="BG">Putamen</tissue>
-        <level expRNA="3.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="6.0" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="6.0" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="9.7" sampleId="1077" sex="N/A" unitRNA="pTPM"/>
@@ -1857,7 +2124,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0000966" region="RET">Retina</tissue>
-        <level expRNA="0.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="0.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="2.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="2.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="1.7" sampleId="1068" sex="N/A" unitRNA="pTPM"/>
@@ -1867,7 +2134,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0013531" region="CTX">Retrosplenial cortex</tissue>
-        <level expRNA="2.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="6.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="6.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="6.9" sampleId="1059" sex="N/A" unitRNA="pTPM"/>
@@ -1877,7 +2144,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0004714" region="BG">Septum</tissue>
-        <level expRNA="3.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="10.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="10.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="8.9" sampleId="1081" sex="N/A" unitRNA="pTPM"/>
@@ -1887,7 +2154,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0008930" region="CTX">Somatosensory cortex</tissue>
-        <level expRNA="3.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.7" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="8.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="8.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="8.1" sampleId="1094" sex="N/A" unitRNA="pTPM"/>
@@ -1896,7 +2163,7 @@
       </data>
       <data>
         <tissue region="HPF">Subiculum</tissue>
-        <level expRNA="3.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="10.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="10.2" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="11.9" sampleId="1083" sex="N/A" unitRNA="pTPM"/>
@@ -1906,7 +2173,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0002038" region="MB">Substantia nigra</tissue>
-        <level expRNA="5.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="15.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="15.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="19.9" sampleId="1082" sex="N/A" unitRNA="pTPM"/>
@@ -1916,7 +2183,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001945" region="MB">Superior colliculi</tissue>
-        <level expRNA="8.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="24.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="24.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="24.8" sampleId="1078" sex="N/A" unitRNA="pTPM"/>
@@ -1926,7 +2193,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0016538" region="CTX">Temporal cortex</tissue>
-        <level expRNA="2.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.3" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="7.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="7.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="7.6" sampleId="1060" sex="N/A" unitRNA="pTPM"/>
@@ -1936,7 +2203,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0001897" region="TH">Thalamus</tissue>
-        <level expRNA="6.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="5.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="16.0" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="16.0" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="21.1" sampleId="1084" sex="N/A" unitRNA="pTPM"/>
@@ -1946,7 +2213,7 @@
       </data>
       <data>
         <tissue region="HPF">Ventral hippocampus </tissue>
-        <level expRNA="3.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="9.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="9.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="9.4" sampleId="1070" sex="N/A" unitRNA="pTPM"/>
@@ -1956,7 +2223,7 @@
       </data>
       <data>
         <tissue ontologyTerms="UBERON:0002778" region="BG">Ventral pallidum</tissue>
-        <level expRNA="2.6" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="2.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="6.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="6.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="4.5" sampleId="1085" sex="N/A" unitRNA="pTPM"/>
@@ -1966,7 +2233,7 @@
       </data>
       <data>
         <tissue region="SC">Ventral spinal cord</tissue>
-        <level expRNA="5.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="13.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="13.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="9.3" sampleId="1080" sex="N/A" unitRNA="pTPM"/>
@@ -1977,13 +2244,13 @@
     </rnaExpression>
     <rnaExpression assayType="cellLine" source="HPA" technology="RNAseq">
       <rnaSpecificity description="At least four-fold higher mRNA levels in a particular cell line as compared to average levels in all cell lines" specificity="Cell line enhanced">
-        <cellLine cellosaurusID="CVCL_0034" organ="Renal, urinary, male reproductive system">NTERA-2</cellLine>
-        <cellLine cellosaurusID="CVCL_0036" organ="Renal, urinary, male reproductive system">RT4</cellLine>
+        <cellLine cellosaurusID="CVCL_0034" organ="Kidney &amp; urinary bladder">NTERA-2</cellLine>
+        <cellLine cellosaurusID="CVCL_0036" organ="Kidney &amp; urinary bladder">RT4</cellLine>
       </rnaSpecificity>
       <rnaDistribution description="n>33% and n&lt;all">Detected in many</rnaDistribution>
       <data>
         <cellLine cellosaurusID="CVCL_0037" organ="Skin">A-431</cellLine>
-        <level expRNA="7.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="33.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="27.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="36.5" sampleId="1" sex="N/A" unitRNA="pTPM"/>
@@ -1991,7 +2258,7 @@
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_0023" organ="Lung">A549</cellLine>
-        <level expRNA="10.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="10.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="45.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="37.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="47.2" sampleId="3" sex="N/A" unitRNA="pTPM"/>
@@ -1999,46 +2266,46 @@
       </data>
       <data>
         <cellLine cellosaurusID="" organ="Brain">AF22</cellLine>
-        <level expRNA="28.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="28.7" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="134.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="108.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="129.6" sampleId="347" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="139.4" sampleId="348" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0028" organ="Breast, female reproductive system">AN3-CA</cellLine>
-        <level expRNA="14.3" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0028" organ="Female reproductive system">AN3-CA</cellLine>
+        <level expRNA="14.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="64.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="51.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="62.7" sampleId="90" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="66.1" sampleId="91" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="" organ="Sarcoma">ASC diff</cellLine>
-        <level expRNA="12.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="" organ="Mesenchymal">ASC diff</cellLine>
+        <level expRNA="12.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="37.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="32.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="39.9" sampleId="889" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="34.8" sampleId="890" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_U602" organ="Sarcoma">ASC TERT1</cellLine>
-        <level expRNA="6.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_U602" organ="Mesenchymal">ASC TERT1</cellLine>
+        <level expRNA="6.8" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="20.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="17.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="20.5" sampleId="425" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="21.2" sampleId="426" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0044" organ="Miscellaneous">BEWO</cellLine>
-        <level expRNA="11.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0044" organ="Female reproductive system">BEWO</cellLine>
+        <level expRNA="11.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="53.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="42.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="52.8" sampleId="95" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="54.1" sampleId="96" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_3653" organ="Fibroblast">BJ</cellLine>
+        <cellLine cellosaurusID="CVCL_3653" organ="Mesenchymal">BJ</cellLine>
         <level expRNA="4.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="18.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="14.9" type="RNAExpression" unitRNA="TPM"/>
@@ -2046,40 +2313,40 @@
         <RNASample expRNA="19.8" sampleId="66" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_6573" organ="Fibroblast">BJ hTERT+</cellLine>
-        <level expRNA="7.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_6573" organ="Mesenchymal">BJ hTERT+</cellLine>
+        <level expRNA="7.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="26.5" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="22.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="25.4" sampleId="427" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="27.7" sampleId="428" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="" organ="Fibroblast">BJ hTERT+ SV40 Large T+</cellLine>
-        <level expRNA="8.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="" organ="Mesenchymal">BJ hTERT+ SV40 Large T+</cellLine>
+        <level expRNA="9.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="38.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="31.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="38.8" sampleId="431" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="38.1" sampleId="432" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="" organ="Fibroblast">BJ hTERT+ SV40 Large T+ RasG12V</cellLine>
-        <level expRNA="20.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="" organ="Mesenchymal">BJ hTERT+ SV40 Large T+ RasG12V</cellLine>
+        <level expRNA="21.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="94.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="77.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="91.3" sampleId="429" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="97.5" sampleId="430" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0025" organ="Abdominal">CACO-2</cellLine>
-        <level expRNA="23.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0025" organ="Gastrointestinal tract">CACO-2</cellLine>
+        <level expRNA="23.8" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="94.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="77.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="94.9" sampleId="5" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="94.7" sampleId="6" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0026" organ="Abdominal">CAPAN-2</cellLine>
-        <level expRNA="13.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0026" organ="Pancreas">CAPAN-2</cellLine>
+        <level expRNA="13.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="58.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="47.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="65.2" sampleId="111" sex="N/A" unitRNA="pTPM"/>
@@ -2094,15 +2361,15 @@
         <RNASample expRNA="0" sampleId="8" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0029" organ="Breast, female reproductive system">EFO-21</cellLine>
-        <level expRNA="18.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0029" organ="Female reproductive system">EFO-21</cellLine>
+        <level expRNA="19.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="83.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="68.2" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="83.8" sampleId="82" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="83.9" sampleId="287" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_GZ73" organ="Fibroblast">FHDF/TERT166</cellLine>
+        <cellLine cellosaurusID="CVCL_GZ73" organ="Mesenchymal">FHDF/TERT166</cellLine>
         <level expRNA="4.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="16.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="14.1" type="RNAExpression" unitRNA="TPM"/>
@@ -2110,8 +2377,16 @@
         <RNASample expRNA="15" sampleId="902" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
+        <cellLine cellosaurusID="CVCL_1226" organ="Brain">GAMG</cellLine>
+        <level expRNA="6.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="30.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
+        <level expRNA="25.0" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="30.2" sampleId="1198" sex="N/A" unitRNA="pTPM"/>
+        <RNASample expRNA="31.6" sampleId="1199" sex="N/A" unitRNA="pTPM"/>
+      </data>
+      <data>
         <cellLine cellosaurusID="CVCL_0038" organ="Skin">HaCaT</cellLine>
-        <level expRNA="6.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="6.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="27.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="22.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="31" sampleId="143" sex="N/A" unitRNA="pTPM"/>
@@ -2127,15 +2402,15 @@
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_X491" organ="Lung">HBEC3-KT</cellLine>
-        <level expRNA="8.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="8.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="29.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="24.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="31" sampleId="895" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="27.4" sampleId="896" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_9Q52" organ="Fibroblast">HBF TERT88</cellLine>
-        <level expRNA="10.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_9Q52" organ="Mesenchymal">HBF TERT88</cellLine>
+        <level expRNA="10.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="47.0" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="38.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="46.6" sampleId="433" sex="N/A" unitRNA="pTPM"/>
@@ -2149,8 +2424,8 @@
         <RNASample expRNA="0.3" sampleId="84" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0045" organ="Renal, urinary, male reproductive system">HEK 293</cellLine>
-        <level expRNA="15.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0045" organ="Kidney &amp; urinary bladder">HEK 293</cellLine>
+        <level expRNA="15.4" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="66.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="54.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="65.9" sampleId="9" sex="N/A" unitRNA="pTPM"/>
@@ -2165,24 +2440,24 @@
         <RNASample expRNA="6.1" sampleId="12" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0030" organ="Breast, female reproductive system">HeLa</cellLine>
-        <level expRNA="6.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0030" organ="Female reproductive system">HeLa</cellLine>
+        <level expRNA="6.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="22.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="18.0" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="40.2" sampleId="13" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="5" sampleId="14" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0027" organ="Abdominal">Hep G2</cellLine>
-        <level expRNA="26.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0027" organ="Liver &amp; gallbladder">Hep G2</cellLine>
+        <level expRNA="26.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="87.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="71.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="83.4" sampleId="15" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="92.4" sampleId="16" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="" organ="Miscellaneous">HHSteC</cellLine>
-        <level expRNA="6.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="" organ="Mesenchymal">HHSteC</cellLine>
+        <level expRNA="7.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="26.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="22.0" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="25.6" sampleId="903" sex="N/A" unitRNA="pTPM"/>
@@ -2205,16 +2480,16 @@
         <RNASample expRNA="4.6" sampleId="154" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="" organ="Miscellaneous">HSkMC</cellLine>
-        <level expRNA="13.2" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="" organ="Muscle">HSkMC</cellLine>
+        <level expRNA="13.3" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="42.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="36.2" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="41.4" sampleId="899" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="44.2" sampleId="900" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_AQ44" organ="Miscellaneous">HTCEpi</cellLine>
-        <level expRNA="4.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_AQ44" organ="Eye">HTCEpi</cellLine>
+        <level expRNA="4.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="13.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="11.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="13.4" sampleId="435" sex="N/A" unitRNA="pTPM"/>
@@ -2222,27 +2497,43 @@
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_JM27" organ="Endothelial">HTEC/SVTERT24-B</cellLine>
-        <level expRNA="7.8" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="36.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="30.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="34.8" sampleId="893" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="38.9" sampleId="894" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_3383" organ="Breast, female reproductive system">HTERT-HME1</cellLine>
-        <level expRNA="3.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_3383" organ="Female reproductive system">HTERT-HME1</cellLine>
+        <level expRNA="3.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="10.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="8.9" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="11" sampleId="891" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="10.9" sampleId="892" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
+        <cellLine cellosaurusID="CVCL_4388" organ="Eye">HTERT-RPE1</cellLine>
+        <level expRNA="13.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="44.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
+        <level expRNA="36.6" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="42.2" sampleId="1202" sex="N/A" unitRNA="pTPM"/>
+        <RNASample expRNA="46.6" sampleId="1203" sex="N/A" unitRNA="pTPM"/>
+      </data>
+      <data>
         <cellLine cellosaurusID="CVCL_9Q53" organ="Endothelial">HUVEC TERT2</cellLine>
-        <level expRNA="18.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="19.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="72.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="61.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="73.7" sampleId="437" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="72.1" sampleId="438" sex="N/A" unitRNA="pTPM"/>
+      </data>
+      <data>
+        <cellLine cellosaurusID="CVCL_0065" organ="Lymphoid">JURKAT</cellLine>
+        <level expRNA="0.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="0.1" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
+        <level expRNA="0.0" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="0.1" sampleId="1196" sex="N/A" unitRNA="pTPM"/>
+        <RNASample expRNA="0" sampleId="1197" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_0004" organ="Myeloid">K-562</cellLine>
@@ -2261,16 +2552,16 @@
         <RNASample expRNA="0.3" sampleId="156" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_8890" organ="Sarcoma">LHCN-M2</cellLine>
-        <level expRNA="9.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_8890" organ="Mesenchymal">LHCN-M2</cellLine>
+        <level expRNA="9.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="35.2" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="29.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="32.8" sampleId="439" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="37.6" sampleId="440" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0031" organ="Breast, female reproductive system">MCF7</cellLine>
-        <level expRNA="8.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0031" organ="Female reproductive system">MCF7</cellLine>
+        <level expRNA="8.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="30.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="25.1" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="29.1" sampleId="25" sex="N/A" unitRNA="pTPM"/>
@@ -2293,16 +2584,24 @@
         <RNASample expRNA="0.5" sampleId="185" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0034" organ="Renal, urinary, male reproductive system">NTERA-2</cellLine>
-        <level expRNA="42.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0034" organ="Kidney &amp; urinary bladder">NTERA-2</cellLine>
+        <level expRNA="43.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="201.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="165.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="199.7" sampleId="186" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="203.4" sampleId="187" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0035" organ="Renal, urinary, male reproductive system">PC-3</cellLine>
-        <level expRNA="7.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_1622" organ="Proximal digestive tract">OE19</cellLine>
+        <level expRNA="12.0" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="38.1" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
+        <level expRNA="32.0" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="37.9" sampleId="1200" sex="N/A" unitRNA="pTPM"/>
+        <RNASample expRNA="38.4" sampleId="1201" sex="N/A" unitRNA="pTPM"/>
+      </data>
+      <data>
+        <cellLine cellosaurusID="CVCL_0035" organ="Male tissues">PC-3</cellLine>
+        <level expRNA="8.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="34.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="28.9" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="32.2" sampleId="27" sex="N/A" unitRNA="pTPM"/>
@@ -2317,8 +2616,8 @@
         <RNASample expRNA="0" sampleId="158" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0041" organ="Sarcoma">RH-30</cellLine>
-        <level expRNA="13.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0041" organ="Mesenchymal">RH-30</cellLine>
+        <level expRNA="13.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="61.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="50.3" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="60.7" sampleId="29" sex="N/A" unitRNA="pTPM"/>
@@ -2333,16 +2632,16 @@
         <RNASample expRNA="0" sampleId="215" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_K278" organ="Renal, urinary, male reproductive system">RPTEC TERT1</cellLine>
-        <level expRNA="13.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_K278" organ="Kidney &amp; urinary bladder">RPTEC TERT1</cellLine>
+        <level expRNA="14.1" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="48.1" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="40.8" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="52.7" sampleId="441" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="43.5" sampleId="442" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0036" organ="Renal, urinary, male reproductive system">RT4</cellLine>
-        <level expRNA="64.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0036" organ="Kidney &amp; urinary bladder">RT4</cellLine>
+        <level expRNA="65.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="261.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="203.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="258" sampleId="31" sex="N/A" unitRNA="pTPM"/>
@@ -2358,21 +2657,21 @@
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_0019" organ="Brain">SH-SY5Y</cellLine>
-        <level expRNA="7.7" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="7.8" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="39.1" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="31.5" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="37.7" sampleId="221" sex="N/A" unitRNA="pTPM"/>
         <RNASample expRNA="40.5" sampleId="222" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0032" organ="Breast, female reproductive system">SiHa</cellLine>
-        <level expRNA="4.4" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0032" organ="Female reproductive system">SiHa</cellLine>
+        <level expRNA="4.5" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="22.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="18.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="22.8" sampleId="33" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0033" organ="Breast, female reproductive system">SK-BR-3</cellLine>
+        <cellLine cellosaurusID="CVCL_0033" organ="Female reproductive system">SK-BR-3</cellLine>
         <level expRNA="3.9" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="13.9" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="11.4" type="RNAExpression" unitRNA="TPM"/>
@@ -2388,7 +2687,15 @@
         <RNASample expRNA="21.5" sampleId="277" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0553" organ="Breast, female reproductive system">T-47d</cellLine>
+        <cellLine cellosaurusID="CVCL_L280" organ="Male tissues">SuSa</cellLine>
+        <level expRNA="24.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="101.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
+        <level expRNA="83.0" type="RNAExpression" unitRNA="TPM"/>
+        <RNASample expRNA="99" sampleId="1204" sex="N/A" unitRNA="pTPM"/>
+        <RNASample expRNA="103.6" sampleId="1205" sex="N/A" unitRNA="pTPM"/>
+      </data>
+      <data>
+        <cellLine cellosaurusID="CVCL_0553" organ="Female reproductive system">T-47d</cellLine>
         <level expRNA="5.7" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="25.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="20.8" type="RNAExpression" unitRNA="TPM"/>
@@ -2419,8 +2726,8 @@
         <RNASample expRNA="25.7" sampleId="254" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0042" organ="Sarcoma">U-2 OS</cellLine>
-        <level expRNA="8.5" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0042" organ="Mesenchymal">U-2 OS</cellLine>
+        <level expRNA="8.6" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="42.6" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="33.9" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="42.6" sampleId="42" sex="N/A" unitRNA="pTPM"/>
@@ -2429,8 +2736,8 @@
         <RNASample expRNA="32.6" sampleId="290" sex="N/A" unitRNA="pTPM"/>
       </data>
       <data>
-        <cellLine cellosaurusID="CVCL_0043" organ="Sarcoma">U-2197</cellLine>
-        <level expRNA="9.1" type="normalizedRNAExpression" unitRNA="NX"/>
+        <cellLine cellosaurusID="CVCL_0043" organ="Mesenchymal">U-2197</cellLine>
+        <level expRNA="9.2" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="40.3" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="32.7" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="37.1" sampleId="255" sex="N/A" unitRNA="pTPM"/>
@@ -2472,7 +2779,7 @@
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_0022" organ="Brain">U-87 MG</cellLine>
-        <level expRNA="4.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="5.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="22.4" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="18.6" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="21.7" sampleId="261" sex="N/A" unitRNA="pTPM"/>
@@ -2490,7 +2797,7 @@
       </data>
       <data>
         <cellLine cellosaurusID="CVCL_0040" organ="Skin">WM-115</cellLine>
-        <level expRNA="3.9" type="normalizedRNAExpression" unitRNA="NX"/>
+        <level expRNA="4.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="18.8" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="15.4" type="RNAExpression" unitRNA="TPM"/>
         <RNASample expRNA="19.8" sampleId="269" sex="N/A" unitRNA="pTPM"/>
@@ -2537,7 +2844,7 @@
         <RNASample expRNA="0" sampleId="1039" sex="Female" unitRNA="pTPM"/>
       </data>
       <data>
-        <bloodCell lineage="T-cells">GdTCR</bloodCell>
+        <bloodCell lineage="T-cells">GdT-cell</bloodCell>
         <level expRNA="1.0" type="normalizedRNAExpression" unitRNA="NX"/>
         <level expRNA="0.7" type="proteinCodingRNAExpression" unitRNA="pTPM"/>
         <level expRNA="0.5" type="RNAExpression" unitRNA="TPM"/>
@@ -2732,7 +3039,65 @@
       </rnaSpecificity>
       <rnaDistribution description="n=1">Detected in single</rnaDistribution>
     </rnaExpression>
-    <antibody RRID="AB_1080301" id="HPA004109" releaseDate="2006-10-30" releaseVersion="2">
+    <cellTypeExpression assayType="cell" technology="scRNAseq">
+      <cellTypeSpecificity category="Group enriched">
+        <cellType>Early spermatids</cellType>
+        <cellType>Late spermatids</cellType>
+      </cellTypeSpecificity>
+      <cellTypeDistribution>Detected in many</cellTypeDistribution>
+      <singleCellTypeExpression expRNA="51.9" name="Enterocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="42.7" name="Mucus-secreting cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="46.0" name="Paneth cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="115.1" name="Ciliated cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="21.6" name="Club cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="11.1" name="Exocrine glandular cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="36.0" name="Basal glandular cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="46.5" name="Glandular cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="6.4" name="Basal keratinocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="4.6" name="Suprabasal keratinocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="61.1" name="Cholangiocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="94.2" name="Hepatocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="3.0" name="Alveolar cells type 1" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="8.5" name="Alveolar cells type 2" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="89.0" name="Collecting duct cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="19.9" name="Distal tubular cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="37.7" name="Proximal tubular cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="64.9" name="Ductal cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="19.4" name="Sertoli cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="78.2" name="Urothelial cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="32.3" name="Intestinal endocrine cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="20.9" name="Pancreatic endocrine cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="30.5" name="Leydig cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="0.0" name="Cone photoreceptor cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="1.5" name="Rod photoreceptor cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="0.7" name="Bipolar cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="0.0" name="Horizontal cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="38.6" name="Muller glia cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="32.2" name="Spermatogonia" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="19.0" name="Spermatocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="313.3" name="Early spermatids" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="1149.4" name="Late spermatids" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="26.5" name="Cytotrophoblasts" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="11.3" name="Syncytiotrophoblasts" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="33.5" name="Extravillous trophoblasts" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="22.2" name="Endothelial cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="7.3" name="Cardiomyocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="7.5" name="Smooth muscle cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="10.1" name="Melanocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="17.7" name="Fibroblasts" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="58.9" name="Ito cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="33.6" name="Peritubular cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="78.3" name="Undifferentiated cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="7.8" name="B-cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="3.5" name="T-cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="0.0" name="Granulocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="1.8" name="Monocytes" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="2.9" name="Macrophages" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="3.8" name="Hofbauer cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="11.8" name="Kupffer cells" type="normalizedRNAExpression" unitRNA="NX"/>
+      <singleCellTypeExpression expRNA="0.0" name="Erythroid cells" type="normalizedRNAExpression" unitRNA="NX"/>
+    </cellTypeExpression>
+    <antibody RRID="AB_1080301" id="HPA004109" releaseDate="2006-10-30" releaseVersion="2.0">
       <antigenSequence source="HPA">NSFKNNYEKALKQYNSTGDYRSHAVDKIQNTLHCCGVTDYRDWTDTNYYSEKGFPKSCCKLEDCTPQRDADKVNNEG</antigenSequence>
       <antibodyTargetWeights source="HPA">
         <weight unit="kDa" value="27.6"/>
@@ -2742,7 +3107,7 @@
       <tissueExpression assayType="tissue" source="HPA" technology="IHC">
         <summary type="tissue"><![CDATA[Moderate to strong cytoplasmic and membranous staining was observed in most normal tissues. Cells in CNS, hepatocytes, lymphoid tissues and muscle cells were generally negative.]]></summary>
         <verification type="validation">approved</verification>
-        <validation type="RNAConsistency">Mainly consistent with RNA expression data</validation>
+        <validation type="RNAConsistency">Medium consistency between antibody staining and RNA expression data</validation>
         <validation type="literatureConformity">Consistent with gene/protein characterization data</validation>
         <image description="Immunohistochemical staining of human breast shows strong cytoplasmic and membranous positivity in glandular cells." imageType="selected">
           <imageUrl>http://images.proteinatlas.org/4109/ihc_selected.jpg</imageUrl>
@@ -3764,7 +4129,7 @@
         <data>
           <tissue ontologyTerms="UBERON:0000948,UBERON:0001133" organ="Muscle tissues">Heart muscle</tissue>
           <tissueCell>
-            <cellType>Myocytes</cellType>
+            <cellType>Cardiomyocytes</cellType>
             <level type="staining">not detected</level>
             <level type="intensity">negative</level>
             <quantity>none</quantity>
@@ -3936,7 +4301,7 @@
         <data>
           <tissue ontologyTerms="UBERON:0002107" organ="Liver &amp; gallbladder">Liver</tissue>
           <tissueCell>
-            <cellType>Bile duct cells</cellType>
+            <cellType>Cholangiocytes</cellType>
             <level type="staining">medium</level>
             <level type="intensity">moderate</level>
             <quantity>>75%</quantity>
@@ -4002,18 +4367,18 @@
         <data>
           <tissue ontologyTerms="UBERON:0002048" organ="Lung">Lung</tissue>
           <tissueCell>
+            <cellType>Alveolar cells</cellType>
+            <level type="staining">low</level>
+            <level type="intensity">weak</level>
+            <quantity>>75%</quantity>
+            <location>cytoplasmic/membranous</location>
+          </tissueCell>
+          <tissueCell>
             <cellType>Macrophages</cellType>
             <level type="staining">not detected</level>
             <level type="intensity">negative</level>
             <quantity>none</quantity>
             <location>none</location>
-          </tissueCell>
-          <tissueCell>
-            <cellType>Pneumocytes</cellType>
-            <level type="staining">low</level>
-            <level type="intensity">weak</level>
-            <quantity>>75%</quantity>
-            <location>cytoplasmic/membranous</location>
           </tissueCell>
           <patient>
             <sex>Male</sex>
@@ -4308,7 +4673,7 @@
             <location>cytoplasmic/membranous</location>
           </tissueCell>
           <tissueCell>
-            <cellType>Islets of Langerhans</cellType>
+            <cellType>Pancreatic endocrine cells</cellType>
             <level type="staining">low</level>
             <level type="intensity">weak</level>
             <quantity>>75%</quantity>
@@ -12003,7 +12368,7 @@
             <imageUrl>http://images.proteinatlas.org/4109/1843_B2_17_cr5af971a263864_selected.jpg</imageUrl>
           </image>
           <data>
-            <cellLine cellosaurusID="CVCL_0025" organ="Abdominal">CACO-2</cellLine>
+            <cellLine cellosaurusID="CVCL_0025" organ="Gastrointestinal tract">CACO-2</cellLine>
             <location GOId="GO:0001650">nucleoli fibrillar center</location>
             <location GOId="GO:0005829" singleCellVariationIntensity="true">cytosol</location>
             <assayImage>
@@ -12022,7 +12387,7 @@
             </assayImage>
           </data>
           <data>
-            <cellLine cellosaurusID="CVCL_0036" organ="Renal, urinary, male reproductive system">RT4</cellLine>
+            <cellLine cellosaurusID="CVCL_0036" organ="Kidney &amp; urinary bladder">RT4</cellLine>
             <location GOId="GO:0001650">nucleoli fibrillar center</location>
             <location GOId="GO:0030054">cell junctions</location>
             <location GOId="GO:0005829">cytosol</location>
@@ -12042,7 +12407,7 @@
             </assayImage>
           </data>
           <data>
-            <cellLine cellosaurusID="CVCL_0042" organ="Sarcoma">U-2 OS</cellLine>
+            <cellLine cellosaurusID="CVCL_0042" organ="Mesenchymal">U-2 OS</cellLine>
             <location GOId="GO:0005829">cytosol</location>
             <assayImage>
               <image imageType="sampleImage">
@@ -12065,7 +12430,7 @@
         <verification description="Pass with quality comment low specificity (binding to 1-2 PrESTs >15% and &lt;40%)." type="validation">approved</verification>
         <antibodyDilution dilution="1:3000"/>
         <image imageType="assay">
-          <imageUrl>http://v19.proteinatlas.org/images_protein_array/4109_medium.png</imageUrl>
+          <imageUrl>http://v20.proteinatlas.org/images_protein_array/4109_medium.png</imageUrl>
         </image>
       </proteinArray>
     </antibody>

@@ -3,12 +3,7 @@ package org.nextprot.parser.hpa
 import scala.xml.{Node, NodeSeq}
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_EXPR
-import org.nextprot.parser.hpa.subcell.cases.CASE_MULTIPLE_UNIPROT_MAPPING
-import org.nextprot.parser.core.stats.Stats
 import org.nextprot.parser.hpa.subcell.cases.CASE_NO_ANTIBODY_FOUND_FOR_SUBCELL
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.subcell.cases.CASE_NO_RULE_FOR_PA_NOT_SUPPORTIVE
 
 object HPAUtils {
 
@@ -66,19 +61,36 @@ object HPAUtils {
     var hasExpression: Boolean = false
 
     val rnaExpressionMap = ((entryElem \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == assayType) })
-          \ "data" filter dataNotBloodOrgan(tagName))
+          \ "data" filter dataToNotExclude(tagName))
       .map(f => ((f \ tagName).text, HPAUtils.getCheckedRNALevel(f \ "level")))
       .toMap
 
-    rnaExpressionMap foreach (x => hasExpression |= (x._2 != "not detected"))
-    if (!hasExpression) {
-      Console.err.println(getEnsgId(entryElem) + ": " + rnaExpressionMap.size + " " + assayType + " 'not detected'")
-    }
     return rnaExpressionMap
   }
 
-  def dataNotBloodOrgan(tagName: String)(dataNode: Node): Boolean = {
-    return !((dataNode \ tagName) exists { _ \\ "@organ" exists (_.text == "Blood")});
+  // scRNAseq data
+  def getScRnaExpression(entryElem: NodeSeq): Map[String, String] = {
+    var hasExpression: Boolean = false
+
+    val expressionMap = ((entryElem \ "cellTypeExpression") \ "singleCellTypeExpression")
+      .map(f => ((f \\ "@name").text, HPAUtils.getCheckedRNALevel(f)))
+      .toMap
+
+    return expressionMap
+  }
+
+  // Return true if data should not be excluded.
+  // - we want to exclude tissues 1) without attribute 'organ' or 2) with attribute 'organ' equals to Blood
+  def dataToNotExclude(tagName: String)(dataNode: Node): Boolean = {
+
+    var notToExclude: Boolean = true;
+    if (tagName.equals("tissue")) {
+      val filteredData = (dataNode \ tagName)
+        .filter(t => t.attributes("organ") != null)
+        .filter(t => !(t exists { _ \\ "@organ" exists (_.text == "Blood")}));
+      notToExclude = filteredData.nonEmpty;
+    }
+    return notToExclude;
   }
 
   def getTissueExpressionType(entryElem: NodeSeq): String = {

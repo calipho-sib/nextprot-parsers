@@ -7,7 +7,7 @@ import java.io.File
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
 import org.nextprot.parser.hpa.HPAUtils
-import org.nextprot.parser.hpa.HPAUtils.dataNotBloodOrgan
+import org.nextprot.parser.hpa.HPAUtils.dataToNotExclude
 import org.nextprot.parser.hpa.HPAQuality
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
 import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
@@ -121,10 +121,10 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     val fname = "src/test/resources/hpa/expression/ENSG00000272333.xml";
 
     val xmlin = scala.xml.XML.loadFile(fname)
-    val (consensusExpectedCount: Int, bloodExpectedCount: Int, expectedCount: Int) = getExpectedCount(xmlin)
+    val (consensusExpectedCount: Int, bloodExpectedCount: Int, brainExpectedCount: Int, expectedCount: Int) = getExpectedCounts(xmlin)
 
-    println("INPUT - count of tissue in RNA expression section: " + consensusExpectedCount + " consensus tissues and " +
-      bloodExpectedCount + " blood cells")  // 54 consensus tissues and 20 blood cells
+    println("INPUT - count of tissue in RNA expression section: " + consensusExpectedCount + " consensus tissues, " +
+      bloodExpectedCount + " blood cells and " + brainExpectedCount + " human brain tissues")  // 54 consensus tissues and 20 blood cells
     
     val result = hpaParser.parse(fname);
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.txt")));
@@ -156,12 +156,15 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     
   }
 
-  private def getExpectedCount(xmlin: Elem) = {
+  private def getExpectedCounts(xmlin: Elem) = {
     val consensusExpectedCount = ((xmlin \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "consensusTissue") })
-      \ "data" filter dataNotBloodOrgan("tissue")).size;
+      \ "data" filter dataToNotExclude("tissue")).size;
     val bloodExpectedCount = ((xmlin \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "blood") }) \ "data").size;
-    val expectedCount = consensusExpectedCount + bloodExpectedCount;
-    (consensusExpectedCount, bloodExpectedCount, expectedCount)
+    val brainExpectedCount = ((xmlin \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "humanBrain") })
+      \ "data" filter dataToNotExclude("tissue")).size;
+    val expectedCount = consensusExpectedCount + bloodExpectedCount + brainExpectedCount;
+
+    (consensusExpectedCount, bloodExpectedCount, brainExpectedCount, expectedCount)
   }
 
   "The HPAExpcontextNXParser " should " find tissues in IHC and RNA expression and produce corresponding EC synonyms" in {
@@ -170,11 +173,11 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     val fname = "src/test/resources/hpa/expression/ENSG00000000003.xml";
 
     val xmlin = scala.xml.XML.loadFile(fname)
-    val (consensusExpectedCount: Int, bloodExpectedCount: Int, expectedRNACount: Int) = getExpectedCount(xmlin)
+    val (consensusExpectedCount: Int, bloodExpectedCount: Int, brainExpectedCount: Int, expectedRNACount: Int) = getExpectedCounts(xmlin)
     val expectedIHCCount = (xmlin \ "tissueExpression" \\ "tissueCell").size
     val expectedCount = expectedRNACount + expectedIHCCount
-    println("INPUT - count of tissue in RNA expression section: " + expectedRNACount)  // 37 tissues
-    println("INPUT - count of tissue in IHC expression section: " + expectedIHCCount)  // 80-6 = 74 tissues
+    println("INPUT - count of tissue in RNA expression section: " + expectedRNACount)
+    println("INPUT - count of tissue in IHC expression section: " + expectedIHCCount)
     println("INPUT - count of tissue in IHC + RNA expression section: " + expectedCount)  
     
     val result = hpaParser.parse(fname);
@@ -185,7 +188,7 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     
     //println("----- RAW ------")
     //val prettyPrinter = new PrettyPrinter(1000, 4)
-    //println(prettyPrinter.format(xmlount))
+    //println(prettyPrinter.format(xmlout))
     //println("----- x x x ------")
     
     val ecCount = (xmlout \ "com.genebio.nextprot.dataloader.context.ExperimentalContextWrapper").size
