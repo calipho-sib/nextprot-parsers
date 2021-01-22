@@ -36,6 +36,7 @@ class HPAAntibodyNXParser extends NXParser {
 
     val entryElem = scala.xml.XML.loadFile(new File(fileName))
     val antibodyElems = (entryElem \ "antibody").toList
+    val ensgId = HPAUtils.getEnsgId(entryElem)
     val uniprotIds = HPAUtils.getAccessionList(entryElem)
     HPAValidation.checkPreconditionsForAb(entryElem)  // No specific preconditions for Ab
     val wrappers  = 
@@ -69,7 +70,8 @@ class HPAAntibodyNXParser extends NXParser {
           null
         }
 
-        new AntibodyEntryWrapper(quality.toString(), dbxref, version, new BioSequenceList(List(bioSequence)), new AntibodyIdentifierPropertyList(proplist.toList), annots, uniprotIds)
+        new AntibodyEntryWrapper(quality.toString(), dbxref, version, new BioSequenceList(List(bioSequence)),
+          new AntibodyIdentifierPropertyList(proplist.toList), annots, uniprotIds, ensgId)
       })
       
     new AntibodyEntryWrapperList(wrappers)

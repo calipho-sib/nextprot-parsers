@@ -1,13 +1,13 @@
 package org.nextprot.parser.core.datamodel.antibody
 
 import org.nextprot.parser.core.datamodel.biosequence.BioSequenceList
-import org.nextprot.parser.core.datamodel.TemplateModel
-import org.nextprot.parser.core.constants.NXQuality.NXQuality
-import org.nextprot.parser.core.constants.NXQuality
 
 case class AntibodyEntryWrapperList(val antibodyList: List[AntibodyEntryWrapper])
 
-class AntibodyEntryWrapper(val _quality: String, val _dbxref: String, val _version: String, val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList, val _annots: HPAAntibodyAnnotationListWrapper, val _uniprotIds: List[String]) {
+class AntibodyEntryWrapper(val _quality: String, val _dbxref: String, val _version: String,
+                           val _bioSequenceList: BioSequenceList, val _propertyList: AntibodyIdentifierPropertyList,
+                           val _annots: HPAAntibodyAnnotationListWrapper, val _uniprotIds: List[String],
+                           val _ensgAc: String) {
 
   def toXML =
     <com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
@@ -25,15 +25,16 @@ class AntibodyEntryWrapper(val _quality: String, val _dbxref: String, val _versi
         { _bioSequenceList.toXML }
         { _propertyList.toXML }
       </wrappedBean>
-     <uniprotIds>
-  		{
-  		_uniprotIds.map(id => {<string>{id}</string>} )
-  		}
-  	 </uniprotIds>
+      <uniprotIds>
         {
-          if (_annots != null) {
-      	    { _annots.toXML }
-          }
+        _uniprotIds.map(id => {<string>{id}</string>} )
         }
+      </uniprotIds>
+      <ensgAccessionCode>{ _ensgAc }</ensgAccessionCode>
+      {
+      if (_annots != null) {
+        { _annots.toXML }
+      }
+      }
     </com.genebio.nextprot.dataloader.expression.AntibodyEntryWrapper>
 }
