@@ -6,19 +6,19 @@ See: https://www.nextprot.org/
 
 # neXtProt-parsers
 
-##Installation
+## Installation
 
 Configure your Scala Eclipse IDE by running `sbt eclipse` 
 
-##Deployment
+## Deployment
 
-# Deploying/publishing locally:
+### Deploying/publishing locally:
 
 ```
 sbt publishLocal
 ```
 
-# Deploying/publishing on nexus 
+### Deploying/publishing on nexus 
 
 if you need credentials configured on ~/.sbt/x.x/sonatype.sbt:
 
@@ -42,11 +42,14 @@ sbt
 ```
 
 NOTE 
-about user / password for credential
+* about user / password for credential
 1) See note above about sonatype
 2) or use user /password for nexus on miniwatt (admin pwd)
+* check on miniwatt if deployment is ok
+1) check if defined version is available
+2) check metadata files, they should have the date of the deployement. If not, 'rebuild metadata' and 'update index' of the nextprot-scala-parser (you have to be logged in to be able to do it)
 
-## Updating dependency in nextprot-loaders and build fat jar for NP1 data integration
+### Updating dependency in nextprot-loaders and build fat jar for NP1 data integration
 
 1. Update artefact version in https://gitlab.isb-sib.ch/calipho/nextprot-loaders/blob/develop/tools.integration/pom.xml
 
