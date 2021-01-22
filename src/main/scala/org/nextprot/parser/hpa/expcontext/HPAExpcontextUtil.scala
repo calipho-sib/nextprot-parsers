@@ -64,7 +64,7 @@ object HPAExpcontextUtil {
 	    	("pneumocytes".r,"pneumocyte"),
 	    	("ovarian stroma cells".r,"ovarian stromal cells"),
 	    	("myocytes".r,"myocyte"));
-	    var res = s.toLowerCase().replaceAll(" -", "");
+	    var res = s.toLowerCase()
 	    frlist.foreach(el => res = el._1 replaceFirstIn(res,el._2));
 	    return res;
     }
