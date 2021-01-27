@@ -103,7 +103,7 @@ object HPAUtils {
     "integrated" 
   }
 
-	def getCheckedLevel(someLevel: String): String = {
+	def getCheckedLevel(ensgId: String, someLevel: String): String = {
 		val level = someLevel.toLowerCase();
 		if (level == "not detected") return level;
 		if (level == "negative") return level;
@@ -111,6 +111,10 @@ object HPAUtils {
 		if (level == "low") return level;
 		if (level == "medium") return level;
 		if (level == "high") return level;
+		if (level == "not representative") {
+			println("WARNING: " + ensgId + " - some data skipped due to expression level 'not representative'")
+			return null
+		};
 		throw new Exception("Unexpected expression level value:" + someLevel )
 	}
 

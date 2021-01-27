@@ -70,7 +70,7 @@ class HPAExpressionNXParser extends NXParser {
     }
 
     var data = HPAUtils.getTissueExpressionNodeSeq(entryElem) \ "data"
-    val teds = data.flatMap(HPAExpcontextUtil.createTissueExpressionLists(_, "tissue"));
+    val teds = data.flatMap(HPAExpcontextUtil.createTissueExpressionLists(ensgId, _, "tissue"));
 
     teds.filter(HPAExpcontextUtil.getCalohaMapping(_, Caloha.map) == null).
       foreach(ted => println("WARNING: no CALOHA mapping found for " + ted.toString + ", file " + fileName))
