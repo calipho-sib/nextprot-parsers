@@ -199,7 +199,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _isPropagableByDefault = false,
       _type = "expression info",
       _description = summary,
-      _quality = null,
+      _quality = NXQuality.GOLD, // always gold for RNA-seq (NEXTPROT-2074)
       _assocs = List(new AnnotationResourceAssoc(
         _resourceClass = "source.DbXref",
         _resourceType = "DATABASE",
@@ -207,9 +207,9 @@ class HPARNAExpressionNXParser extends NXParser {
         _cvDatabaseName = "HPA",
         _eco = EvidenceCode.RnaSeq.code,
         _isNegative = false,
-        _type = "SOURCE",
-        _quality = null,
-        _dataSource = null,
+        _type = "EVIDENCE",
+        _quality = NXQuality.GOLD, // always gold for RNA-seq (NEXTPROT-2074)
+        _dataSource = endUserDatasource,
         _props = null,
         _expContext = null)))
   }
@@ -228,7 +228,7 @@ class HPARNAExpressionNXParser extends NXParser {
       _isPropagableByDefault = false,
       _type = "expression info",
       _description = specificity,
-      _quality = null,
+      _quality = NXQuality.GOLD, // always gold for RNA-seq (NEXTPROT-2074)
       _assocs = List(new AnnotationResourceAssoc(
         _resourceClass = "source.DbXref",
         _resourceType = "DATABASE",
@@ -236,9 +236,9 @@ class HPARNAExpressionNXParser extends NXParser {
         _cvDatabaseName = "HPA",
         _eco = EvidenceCode.scRnaSeq.code,
         _isNegative = false,
-        _type = "SOURCE",
-        _quality = null,
-        _dataSource = null,
+        _type = "EVIDENCE",
+        _quality = NXQuality.GOLD, // always gold for RNA-seq (NEXTPROT-2074)
+        _dataSource = endUserDatasource,
         _props = null,
         _expContext = null)))
   }
