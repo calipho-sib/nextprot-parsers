@@ -1,22 +1,14 @@
 package org.nextprot.parser.hpa.expcontext
 
 import org.scalatest._
-import org.nextprot.parser.core.NXParser
 import java.io.File
 
-import org.nextprot.parser.core.exception.NXException
-import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.HPAUtils
-import org.nextprot.parser.hpa.HPAUtils.dataToNotExclude
-import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
-
-import scala.util.matching.Regex
-import scala.xml.{Elem, PrettyPrinter}
-import java.io.FileWriter
-
 import org.nextprot.parser.core.datamodel.TemplateModel
+import org.nextprot.parser.core.exception.NXException
+import org.nextprot.parser.hpa.HPAUtils.dataToNotExclude
+import org.nextprot.parser.hpa.subcell.cases._
+
+import scala.xml.Elem
 
 class FullExpcontextEntryTest extends HPAExpcontextTestBase {
 
@@ -115,17 +107,19 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
   }
 
 
-  "The HPAExpcontextNXParser " should " contains find 54 consensus tissues and 20 blood cells in RNA expression and produce corresponding ECs" in {
+  "The HPAExpcontextNXParser " should " contains find expected consensus tissues and cells counts in expression and produce corresponding ECs" in {
 
     val hpaParser = new HPAExpcontextNXParser();
     val fname = "src/test/resources/hpa/expression/ENSG00000272333.xml";
 
     val xmlin = scala.xml.XML.loadFile(fname)
-    val (consensusExpectedCount: Int, bloodExpectedCount: Int, brainExpectedCount: Int, expectedCount: Int) = getExpectedCounts(xmlin)
+    val (consensusExpectedCount: Int, bloodExpectedCount: Int, brainExpectedCount: Int,
+          scRNAseqExpectedCount: Int, expectedCount: Int) = getExpectedCounts(xmlin)
 
     println("INPUT - count of tissue in RNA expression section: " + consensusExpectedCount + " consensus tissues, " +
-      bloodExpectedCount + " blood cells and " + brainExpectedCount + " human brain tissues")  // 54 consensus tissues and 20 blood cells
-    
+      bloodExpectedCount + " blood cells, " + brainExpectedCount + " human brain tissues and " +
+      scRNAseqExpectedCount + " cells from scRNA-seq. Total expected: "+ expectedCount)
+
     val result = hpaParser.parse(fname);
     val accumulator = new ExpcontextAccumulator(HPAExpcontextConfig.readTissueMapFileFromFile(new File("src/test/resources/NextProt_tissues.from-db.txt")));
     result.dataset.foreach(accumulator.accumulateCalohaMapping(_));
@@ -144,15 +138,18 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     val ecoList = (xmlout.child \ "wrappedBean" \ "detectionMethod" \ "cvName").toList
     println("OUTPUT - ecoCount:" + ecoList.size)
     assert(ecoList.size == expectedCount)
-    ecoList.foreach(n => assert(n.text == "ECO:0000295[ACC]") )
-    
+    ecoList.foreach(n => assert(n.text == "ECO:0000295[ACC]"     // RNA-seq evidence
+                              || n.text == "ECO:0001055[ACC]"    // immunohistochemistry evidence
+                              || n.text == "ECO:0001560[ACC]") ) // scRNA-seq evidence
+
     val tissueList = (xmlout.child \ "wrappedBean" \ "tissue" \ "cvName").toList
     println("OUTPUT - tissueCount:" + tissueList.size)
     assert(tissueList.size == expectedCount)
     
     val synoList = (xmlout.child \ "wrappedBean" \ "contextSynonyms" \\ "synonymName").toList
     println("OUTPUT - synoCount:" + synoList.size)
-    synoList.foreach(n => assert(n.text.contains("eco->") && n.text.contains("tissue->")))
+    synoList.foreach(n => assert((n.text.contains("eco->RNA-seq evidence") && n.text.contains("tissue->"))
+                                  || (n.text.contains("eco->scRNA-seq evidence") && n.text.contains("cell type->"))))
     
   }
 
@@ -162,9 +159,11 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     val bloodExpectedCount = ((xmlin \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "blood") }) \ "data").size;
     val brainExpectedCount = ((xmlin \ "rnaExpression" filter { _ \\ "@assayType" exists (_.text == "humanBrain") })
       \ "data" filter dataToNotExclude("tissue")).size;
-    val expectedCount = consensusExpectedCount + bloodExpectedCount + brainExpectedCount;
+    val scRNAseqExpectedCount = (xmlin \ "cellTypeExpression" \ "singleCellTypeExpression").size;
 
-    (consensusExpectedCount, bloodExpectedCount, brainExpectedCount, expectedCount)
+    val expectedCount = consensusExpectedCount + bloodExpectedCount + brainExpectedCount + scRNAseqExpectedCount;
+
+    (consensusExpectedCount, bloodExpectedCount, brainExpectedCount, scRNAseqExpectedCount, expectedCount)
   }
 
   "The HPAExpcontextNXParser " should " find tissues in IHC and RNA expression and produce corresponding EC synonyms" in {
@@ -173,7 +172,8 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     val fname = "src/test/resources/hpa/expression/ENSG00000000003.xml";
 
     val xmlin = scala.xml.XML.loadFile(fname)
-    val (consensusExpectedCount: Int, bloodExpectedCount: Int, brainExpectedCount: Int, expectedRNACount: Int) = getExpectedCounts(xmlin)
+    val (consensusExpectedCount: Int, bloodExpectedCount: Int, brainExpectedCount: Int,
+          scRNAseqExpectedCount: Int, expectedRNACount: Int) = getExpectedCounts(xmlin)
     val expectedIHCCount = (xmlin \ "tissueExpression" \\ "tissueCell").size
     val expectedCount = expectedRNACount + expectedIHCCount
     println("INPUT - count of tissue in RNA expression section: " + expectedRNACount)
@@ -198,7 +198,9 @@ class FullExpcontextEntryTest extends HPAExpcontextTestBase {
     println("OUTPUT - synoCount:" + synoList.size)
     assert(synoList.size == expectedCount)
 
-    synoList.foreach(n => assert(n.text.contains("eco->") && n.text.contains("tissue->")))
+    synoList.foreach(n => assert((n.text.contains("eco->RNA-seq evidence") && n.text.contains("tissue->"))
+      || (n.text.contains("eco->scRNA-seq evidence") && n.text.contains("cell type->"))
+      || (n.text.contains("eco->immunohistochemistry evidence") && n.text.contains("tissue->") && n.text.contains("cell type->"))))
 
     val methods = synoList.groupBy(n => methodGroup(n.text)).map(el => (el._1, el._2.length)).toMap
     println("Synonyms by method:" + methods)

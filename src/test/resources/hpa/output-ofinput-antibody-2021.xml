@@ -33,10 +33,11 @@
     </com.genebio.nextprot.datamodel.identifier.IdentifierProperty>
               </identifierProperties>
       </wrappedBean>
-     <uniprotIds>
-  		<string>Q8IZE3</string>
-  	 </uniprotIds>
-        <summaryAnnotations>
+      <uniprotIds>
+        <string>Q8IZE3</string>
+      </uniprotIds>
+      <ensgAccessionCode>ENSG00000000457</ensgAccessionCode>
+      <summaryAnnotations>
      <ac>HPA005624</ac>
      <preComputedFeatures>false</preComputedFeatures>
      <wrappedBean><com.genebio.nextprot.dataloader.dto.RawAnnotation>

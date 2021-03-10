@@ -1,23 +1,16 @@
 package org.nextprot.parser.hpa.expression
 
 import org.scalatest._
-import org.nextprot.parser.core.NXParser
-import java.io.File
+import java.io.FileWriter
+
 import org.nextprot.parser.core.exception.NXException
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.HPAUtils
-import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue
-import scala.util.matching.Regex
-import scala.xml.PrettyPrinter
-import java.io.FileWriter
-import org.nextprot.parser.hpa.subcell.HPAValidation
+
 import scala.xml.PrettyPrinter
 
 class FullExpressionEntryTest extends HPAExpressionTestBase {
 
-  
+  System.setProperty("hpa.multiENSG.file", "src/test/resources/multiENSG_for_same_entry.txt")
   
   "The HPAExpressionNXParser " should " process successfully a file with zero uniprot ids" in {
 
@@ -37,7 +30,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val template = parser.parse(fname);
     //println(template.toXML.toString.substring(0,300))
     val data = (template.toXML \ "uniprotIds" \ "string").map(s => s.text).mkString(",")
-    assert(data == "Q9NPA5,Q9NTW7")
+    assert(data == "O43657,Q9NTW7")
   }
 
   "The HPAExpressionNXParser " should " discard file where no antibody has a tissueExpression with assayType tissue" in {
@@ -80,7 +73,11 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     fw.close
   }
 
-  "The HPAExpressionNXParser " should " process successfully a file with selected antibody" in {
+  /*
+  This test is ignored because this case (selected antibody) no longer exists according to the xsd of HPA
+  See https://www.proteinatlas.org/download/proteinatlas.xsd
+   */
+  ignore should " process successfully a file with selected antibody" in {
 
     val fname = "src/test/resources/ENSG-test-expr-selected.xml"
     val parser = new HPAExpressionNXParser();
@@ -125,7 +122,8 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val summAc = (template.toXML \ "summaryAnnotations" \\ "com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc" \\ "accession").text
     assert(summAc == "ENSG00000113361/tissue")
     val exprAc = (template.toXML \ "expressionAnnotations" \\ "com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc" \\ "accession")
-    exprAc.foreach(el => assert(el.text == "ENSG00000113361/tissue/endometrium"))
+    exprAc.foreach(el => assert(el.text == "ENSG00000113361/tissue/endometrium 1"
+                             || el.text == "ENSG00000113361/tissue/endometrium 2"))
     
   }
 
@@ -137,7 +135,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val summAc = (template.toXML \ "summaryAnnotations" \\ "com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc" \\ "accession").text
     assert(summAc == "ENSG00000007376/tissue")
     val exprAc = (template.toXML \ "expressionAnnotations" \\ "com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc" \\ "accession")
-    exprAc.foreach(el => assert(el.text == "ENSG00000007376/tissue/cervix,/,-_ uterine"))
+    exprAc.foreach(el => assert(el.text == "ENSG00000007376/tissue/cervix, uterine"))
     
   }
   
@@ -151,7 +149,7 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     assert("IHC".equals(data))
   }
 
-    "The HPARNAExpressionNXParser " should " process generate an XML with element annotationTag set to RNASeq" in {
+  "The HPARNAExpressionNXParser " should " process generate an XML with element annotationTag set to RNASeq" in {
 
     val fname = "src/test/resources/ENSG-test-with-ihc-and-rnaseq.xml"
     val parser = new HPARNAExpressionNXParser();
@@ -160,10 +158,5 @@ class FullExpressionEntryTest extends HPAExpressionTestBase {
     val data = (template.toXML \ "annotationTag").text.trim()
     assert("RNASeq".equals(data))
   }
-
-
-
-  
-  //ENSG00000007376.xml - UNEXPECTED_EXCEPTION$ ENSG00000007376.xml - Could not find tissue pattern in synonym !
 
 }

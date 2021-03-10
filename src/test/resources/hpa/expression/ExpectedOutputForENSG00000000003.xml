@@ -28,7 +28,7 @@
                             </cvDatabase>
                         </resource>
                         <evidenceCode>
-                            <cvName>ECO:0000087</cvName>
+                            <cvName>ECO:0001055</cvName>
                             <cvTermCategory>ECO</cvTermCategory>
                         </evidenceCode>
                         <qualityQualifier>SILVER</qualityQualifier>
@@ -1418,7 +1418,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->heart muscle;cell type->myocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->heart muscle;cell type->cardiomyocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1628,7 +1628,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->liver;cell type->bile duct cells;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->liver;cell type->cholangiocytes;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
@@ -1706,19 +1706,19 @@
                         <annotationResourceAssocProperties>
                             <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
                                 <propertyName>expressionLevel</propertyName>
-                                <propertyValue>not detected</propertyValue>
+                                <propertyValue>low</propertyValue>
                             </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
                         </annotationResourceAssocProperties>
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lung;cell type->macrophages;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lung;cell type->alveolar cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
                             </contextSynonyms>
                         </experimentalContext>
-                        <isNegativeEvidence>true</isNegativeEvidence>
+                        <isNegativeEvidence>false</isNegativeEvidence>
                         <type>EVIDENCE</type>
                         <assignedBy>
                             <cvName>Human protein atlas</cvName>
@@ -1748,19 +1748,19 @@
                         <annotationResourceAssocProperties>
                             <com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
                                 <propertyName>expressionLevel</propertyName>
-                                <propertyValue>low</propertyValue>
+                                <propertyValue>not detected</propertyValue>
                             </com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssocProperty>
                         </annotationResourceAssocProperties>
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lung;cell type->pneumocytes;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->lung;cell type->macrophages;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
                             </contextSynonyms>
                         </experimentalContext>
-                        <isNegativeEvidence>false</isNegativeEvidence>
+                        <isNegativeEvidence>true</isNegativeEvidence>
                         <type>EVIDENCE</type>
                         <assignedBy>
                             <cvName>Human protein atlas</cvName>
@@ -2048,7 +2048,7 @@
                         <experimentalContext>
                             <contextSynonyms>
                                 <com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>
-                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->pancreas;cell type->islets of langerhans;]]></synonymName>
+                                    <synonymName><![CDATA[eco->immunohistochemistry evidence;tissue->pancreas;cell type->pancreatic endocrine cells;]]></synonymName>
                                     <synonymType>CONTEXT_SIGNATURE</synonymType>
                                     <isMain>false</isMain>
                                 </com.genebio.nextprot.datamodel.resource.ExperimentalContextSynonym>

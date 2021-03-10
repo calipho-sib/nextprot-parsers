@@ -1,6 +1,5 @@
 package org.nextprot.parser.hpa.antibody
 
-
 import scala.xml.PrettyPrinter
 import java.io.File
 import java.io.FileWriter
@@ -57,9 +56,9 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
 
   }
 
- "The HPAAntibodyNXParser " should " parse successfully input-antibody-2018.xml" in {
+ "The HPAAntibodyNXParser " should " parse successfully input-antibody-2021.xml" in {
 
-     val infile = "input-antibody-2018.xml"
+     val infile = "input-antibody-2021.xml"
      val hpaParser = new HPAAntibodyNXParser();
     val wrapper = hpaParser.parse(hpadir +infile);
     val writer = new FileWriter(new File(hpadir + "output-of" + infile))
@@ -69,9 +68,9 @@ class FullAntibodyEntryTest extends HPAAntibodyTestBase {
   }
  
   
-  "The HPAAntibodyNXParser " should " find IH verification value in input-antibody-2018.xml" in {
+  "The HPAAntibodyNXParser " should " find IH verification value in input-antibody-2021.xml" in {
 
-    val infile = "input-antibody-2018.xml"
+    val infile = "input-antibody-2021.xml"
     val hpaParser = new HPAAntibodyNXParser();
     val wrapper = hpaParser.parse(hpadir +infile);
     val prop = (wrapper.antibodyList(0).toXML \ "wrappedBean" \"identifierProperties" \ "com.genebio.nextprot.datamodel.identifier.IdentifierProperty" );

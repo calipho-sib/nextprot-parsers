@@ -1,5 +1,5 @@
 <com.genebio.nextprot.dataloader.expression.HPAAnnotationsWrapper>
-        <annotationTag>SubCell</annotationTag>
+	<annotationTag>SubCell</annotationTag>
 	<ensgAccessionCode>ENSG00000063177</ensgAccessionCode>
 	<uniprotIds>
 		<string>Q07020</string>
@@ -8,17 +8,17 @@
 		<string>HPA046572</string>
 	</antibodyIds>
 	<integrationLevel>integrated</integrationLevel>
-	<quality>GOLD</quality>
+	<quality>SILVER</quality>
 	<subcellAnnotations>
 		<datasource>Human protein atlas subcellular localization</datasource>
 		<wrappedBean>
 			<com.genebio.nextprot.dataloader.dto.RawAnnotation>
 				<isPropagableByDefault>true</isPropagableByDefault>
-				<cvTermAcc>SL-0188</cvTermAcc>
+				<cvTermAcc>SL-0091</cvTermAcc>
 				<cvTermCategory>Uniprot subcellular location</cvTermCategory>
 				<type>subcellular location</type>
-				<description><![CDATA[Additional location.]]></description>
-				<quality>GOLD</quality>
+				<description><![CDATA[Main location.]]></description>
+				<quality>SILVER</quality>
 				<resourceAssocs>
 					<com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
 						<resource class="source.DbXref">
@@ -32,7 +32,7 @@
 							<cvName>ECO:0001053</cvName>
 							<cvTermCategory>ECO</cvTermCategory>
 						</evidenceCode>
-						<qualityQualifier>GOLD</qualityQualifier>
+						<qualityQualifier>SILVER</qualityQualifier>
 						<isNegativeEvidence>false</isNegativeEvidence>
 						<type>EVIDENCE</type>
 						<assignedBy>
@@ -43,11 +43,11 @@
 			</com.genebio.nextprot.dataloader.dto.RawAnnotation>
 			<com.genebio.nextprot.dataloader.dto.RawAnnotation>
 				<isPropagableByDefault>true</isPropagableByDefault>
-				<cvTermAcc>SL-0091</cvTermAcc>
+				<cvTermAcc>SL-0095</cvTermAcc>
 				<cvTermCategory>Uniprot subcellular location</cvTermCategory>
 				<type>subcellular location</type>
 				<description><![CDATA[Main location.]]></description>
-				<quality>GOLD</quality>
+				<quality>SILVER</quality>
 				<resourceAssocs>
 					<com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
 						<resource class="source.DbXref">
@@ -61,7 +61,37 @@
 							<cvName>ECO:0001053</cvName>
 							<cvTermCategory>ECO</cvTermCategory>
 						</evidenceCode>
-						<qualityQualifier>GOLD</qualityQualifier>
+						<qualityQualifier>SILVER</qualityQualifier>
+						<isNegativeEvidence>false</isNegativeEvidence>
+						<type>EVIDENCE</type>
+						<assignedBy>
+							<cvName>Human protein atlas</cvName>
+						</assignedBy>
+					</com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+				</resourceAssocs>
+			</com.genebio.nextprot.dataloader.dto.RawAnnotation>
+			<com.genebio.nextprot.dataloader.dto.RawAnnotation>
+				<isPropagableByDefault>true</isPropagableByDefault>
+				<cvTermAcc>SL-0188
+				</cvTermAcc>
+				<cvTermCategory>Uniprot subcellular location</cvTermCategory>
+				<type>subcellular location</type>
+				<description><![CDATA[Additional location.]]></description>
+				<quality>SILVER</quality>
+				<resourceAssocs>
+					<com.genebio.nextprot.datamodel.annotation.AnnotationResourceAssoc>
+						<resource class="source.DbXref">
+							<resourceType>DATABASE</resourceType>
+							<accession>ENSG00000063177/subcellular</accession>
+							<cvDatabase>
+								<cvName>HPA</cvName>
+							</cvDatabase>
+						</resource>
+						<evidenceCode>
+							<cvName>ECO:0001053</cvName>
+							<cvTermCategory>ECO</cvTermCategory>
+						</evidenceCode>
+						<qualityQualifier>SILVER</qualityQualifier>
 						<isNegativeEvidence>false</isNegativeEvidence>
 						<type>EVIDENCE</type>
 						<assignedBy>

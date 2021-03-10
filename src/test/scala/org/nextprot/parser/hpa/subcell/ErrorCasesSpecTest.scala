@@ -1,16 +1,9 @@
 package org.nextprot.parser.hpa.subcell
+
 import org.scalatest._
 import org.nextprot.parser.core.exception.NXException
-import org.nextprot.parser.core.constants.NXQuality._
 import org.nextprot.parser.hpa.subcell.cases._
-import org.nextprot.parser.hpa.commons.rules.APEQualityRule
-import org.nextprot.parser.hpa.commons.constants.HPAValidationValue._
-import org.nextprot.parser.hpa.commons.rules.APEQualityRule
 import org.nextprot.parser.core.NXParser
-import org.nextprot.parser.hpa.commons.rules.APEQualityRule
-import org.nextprot.parser.core.datamodel.annotation.AnnotationListWrapper
-import org.nextprot.parser.hpa.HPAQuality
-import org.nextprot.parser.hpa.HPAUtils
 import org.nextprot.parser.hpa.datamodel.HPAAnnotationsWrapper
 
 class ErrorCasesSpec extends HPASubcellTestBase {
@@ -36,11 +29,13 @@ class ErrorCasesSpec extends HPASubcellTestBase {
     val parser = new HPASubcellNXParser();
     val wrapper = parser.parse("src/test/resources/hpa/subcell/subcell-file-input.xml");
     val rowAnnots = ((wrapper.asInstanceOf[HPAAnnotationsWrapper]))._rowAnnotations
-    
-    assert(rowAnnots(0)._cvTermAcc == "SL-0188")
-    assert(rowAnnots(0)._description.contains("Additional location"))
-    assert(rowAnnots(1)._cvTermAcc == "SL-0091")
+
+    assert(rowAnnots(0)._cvTermAcc == "SL-0091")
+    assert(rowAnnots(0)._description.contains("Main location"))
+    assert(rowAnnots(1)._cvTermAcc == "SL-0095")
     assert(rowAnnots(1)._description.contains("Main location"))
+    assert(rowAnnots(2)._cvTermAcc == "SL-0188")
+    assert(rowAnnots(2)._description.contains("Additional location"))
 
   }
 

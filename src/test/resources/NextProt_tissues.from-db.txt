@@ -1,6 +1,7 @@
 Right adrenal gland cortex|Right adrenal gland cortex|TS-2685
 Inner layer of eyeball|Retina|TS-0865
 Inguinal part of abdomen|Groin|TS-2339
+Granulocytes|Granulocyte|TS-0422
 oesophagus mucosa|Esophagus mucosa|TS-2626
 Embryonic lung fibroblast|Embryonic lung fibroblast|TS-0254
 Fetal auditory apparatus|Fetal ear|TS-2111
@@ -12,6 +13,7 @@ Anatomical site|Body part|TS-2084
 Cervical epithelium|Uterine cervix epithelium|TS-0137
 striate cortex|Primary visual cortex|TS-2638
 Memory B cell|Memory B-cell|TS-2551
+Nasopharynx ciliated cells (cell body)|Nasopharynx ciliated cells (cell body)|TS-2802
 Granular leucocyte|Granulocyte|TS-0422
 Leukocyte|Leukocyte|TS-0549
 Tonsil germinal center cell|Tonsil germinal center cell|TS-1288
@@ -39,6 +41,7 @@ Thoracic muscle|Thoracic muscle|TS-1037
 Oral epithelium|Oral epithelium|TS-0715
 Cardiac muscle of right atrium|Cardiac muscle of right atrium|TS-2617
 Yellow body of ovary|Corpus luteum|TS-0181
+T-cells|T-cell|TS-1001
 Extraembryonic tissue|Extraembryonic tissue|TS-2119
 BA46|Brodmann (1909) area 46|TS-2655
 Dorsal surface of tongue|Superior surface of tongue|TS-2440
@@ -48,7 +51,9 @@ Interstitial cells of Leydig|Leydig cell|TS-1150
 Epididymis glandular cell|Epididymis glandular cell|TS-1276
 Interstitial cells of Cajal|Interstitial cell of Cajal|TS-2407
 Involuntary muscle cell|Smooth muscle cell|TS-2159
+Fallopian tube ciliated cells (ciliary rootlets)|Fallopian tube ciliated cells (ciliary rootlets)|TS-2800
 Intermediate monocyte|Intermediate monocyte|TS-2548
+GdT-cell|Gamma delta T cells|TS-2393
 Left testis|Left testis|TS-2721
 Type-I alveolar cell|Type I alveolar epithelial cell|TS-2526
 Retinal microglial cell|Retinal microglial cell|TS-2525
@@ -88,13 +93,16 @@ Spermatozoa|Spermatozoon|TS-0949
 Dorsal raphe glial cell|Dorsal raphe glial cell|TS-2559
 Bronchoalveolar system|Bronchoalveolar system|TS-1296
 Finger|Finger|TS-2460
+Cerebellum synaptic glomeruli - core|Cerebellum synaptic glomeruli (core)|TS-2811
 Retinal pigmented epithelium|Retinal pigment epithelium|TS-0869
 Vermix|Appendix|TS-1267
 Stomach glandular cells|Stomach glandular cell|TS-1284
 Chief cell of parathyroid gland|Parathyroid chief cell|TS-2140
 Salivary gland glandular cells|Salivary gland glandular cell|TS-1282
 Tonsil squamous cell|Tonsil squamous cell|TS-1253
+Cardiomyocytes|Heart muscle cell|TS-0115
 Fornicate gyrus|Limbic lobe|TS-2061
+macrophagocytus stellatus|Kupffer cell|TS-2750
 Dentate cerebellar nucleus|Dentate nucleus|TS-2567
 Ethmoid sinus|Ethmoid sinus|TS-2477
 Cardiac|Heart|TS-0445
@@ -107,6 +115,7 @@ Stripped muscle|Striated muscle tissue|TS-2047
 Liver and biliary system|Liver and biliary system|TS-1308
 T lymphocyte|T-cell|TS-1001
 Cerebellum neuronal projections|Cerebellar neuronal projections|TS-2564
+Cerebellum molecular layer cells nucleus|Cerebellum molecular layer cells (nucleus)|TS-2793
 Meninges of brain|Brain meninges|TS-2147
 Lip|Lip|TS-0558
 Cortex of thymus|Thymic cortex|TS-2442
@@ -126,6 +135,7 @@ Kidney outer medulla|Kidney outer medulla|TS-0508
 Hippocampus neuroglial cell|Hippocampus glial cell|TS-1257
 Granular layer of cerebellar cortex|Cerebellum granular layer|TS-1247
 Frontal gyrus|Frontal gyrus|TS-2761
+Cerebellum Bergmann glia (cytoplasm/membrane)|Cerebellum Bergmann glia (cytoplasm/membrane)|TS-2806
 Striated myocyte|Striated muscle cell|TS-2157
 Fetal testis|Fetal testis|TS-0357
 Craniopharyngeal duct|Craniopharyngeal duct|TS-2347
@@ -174,6 +184,7 @@ Fetal retina|Fetal retina|TS-0349
 Chorioamniotic membrane|Chorioamniotic membrane|TS-0141
 Cytolytic T-cell|Cytotoxic T-cell|TS-0190
 Extra-embryonic tissue|Extraembryonic tissue|TS-2119
+Cerebellum Bergmann glia (nucleus)|Cerebellum Bergmann glia (nucleus)|TS-2807
 Brachia pontis|Middle cerebellar peduncle|TS-2415
 Cecal appendix|Appendix|TS-1267
 Duodenum epithelium|Duodenal epithelium|TS-2087
@@ -182,6 +193,7 @@ Corpus, uterine|Uterine corpus|TS-1265
 Muscle tissue|Muscle tissue|TS-0642
 Foot sole|Foot sole|TS-0379
 Kidney cells in glomeruli|Renal glomerulus|TS-0862
+Intestinal mucus secreting cells|Intestinal mucus secreting cell|TS-2727
 Brain striatum|Corpus striatum|TS-0183
 Adrenal gland cells in zona fasciculata|Zona fasciculata of adrenal gland|TS-2501
 C1 spinal cord segment|C1 segment of cervical spinal cord|TS-2654
@@ -194,6 +206,7 @@ Trophoblast|Trophoblast|TS-1070
 Bronchiolar epithelium|Bronchiolar epithelium|TS-0570
 Fibula|Fibula|TS-2203
 Visceral adipose tissue of abdominal region|Visceral adipose tissue of abdominal region|TS-2405
+Nasopharynx ciliated cell|Nasopharyngeal ciliated cell|TS-2776
 Spinal cord meninges|Spinal cord meninges|TS-2148
 Cornea endothelium|Corneal endothelium|TS-0172
 conventional DC|Conventional dendritic cell|TS-2192
@@ -203,6 +216,7 @@ Lung macrophages|Lung macrophage|TS-0576
 Taste system|Gustatory system|TS-2544
 Upper lobe of lung|Upper lobe of lung|TS-2678
 Small intestinal mucosa|Small intestine mucosa|TS-0941
+Bergmann astrocyte|Bergmann glial cell|TS-2778
 Ventricular system of brain|Ventricular system of brain|TS-1295
 Retinal bipolar neuron|Retinal bipolar neuron|TS-2742
 Left ovary|Left ovary|TS-2720
@@ -212,12 +226,14 @@ Lymph node non-germinal center cells|Lymph node nongerminal center cell|TS-2171
 Pancreas duct|Pancreatic duct|TS-2571
 Red pulp of spleen|Spleen red pulp|TS-1263
 Large bowel epithelium|Large intestine epithelium|TS-2105
+Cerebellum processes in molecular layer|Cerebellum processes in molecular layer|TS-2781
 Parahippocampal gyrus|Parahippocampal gyrus|TS-2038
 Tonsillar squamous epithelial cell|Tonsil squamous cell|TS-1253
 Ovary follicle|Ovarian follicle|TS-0726
 Placenta|Placenta|TS-0799
 heart endocardium|Endocardium|TS-2075
 type I NK T lymphocyte|Type I NK T cell|TS-2441
+Cerebellum Purkinje cells (dendrites)|Cerebellum Purkinje cells (dendrites)|TS-2788
 Epithelium of prostate|Prostate epithelium|TS-2065
 Fetal amniotic fluid|Amniotic fluid|TS-0034
 Ankle|Ankle|TS-2219
@@ -234,16 +250,19 @@ Reproductive system|Reproductive system|TS-1318
 Epididymal glandular cell|Epididymis glandular cell|TS-1276
 Endocardium|Endocardium|TS-2075
 musculo-skeletal system|Musculoskeletal system|TS-1311
+Cerebellum granular cells nucleus|Cerebellum granular cells (nucleus)|TS-2791
 Para-aortic splanchnopleura|Para-aortic splanchnopleura|TS-2390
 Putamen|Putamen|TS-2041
 Abdomen|Abdomen|TS-0001
 Cerebellar|Cerebellum|TS-0125
 Retinal cone|Retinal cone cell|TS-0866
+Bowmans capsule|Glomerular capsule|TS-2774
 Ventrolateral prefrontal cortex|Ventrolateral prefrontal cortex|TS-2755
 Umbilical cord vein|Umbilical vein|TS-1082
 Tracheobronchia epithelium|Tracheobronchial epithelium|TS-1063
 Frontomarginal cortex|Frontomarginal cortex|TS-2765
 Haematopoietic|Hematopoietic and immune systems|TS-0449
+Bronchial goblet cell|Bronchus goblet cell|TS-2770
 T8 Lymphocytes|CD8-Positive T-cell|TS-2439
 Hypothalamus processes/nerve bundles|Hypothalamus neuronal projections|TS-2520
 Muscle of thigh|Hindlimb stylopod muscle|TS-2619
@@ -255,6 +274,7 @@ Epithelium of distal colon|Distal colon epithelium|TS-0203
 Pharynx mucous membrane|Pharyngeal mucosa|TS-2437
 Brain meninx|Brain meninges|TS-2147
 Nerve|Peripheral nerve|TS-0772
+Inferior frontal gyrus, triangular|Triangular inferior frontal gyrus|TS-2763
 Fascia of Otto|Rectovaginal fascia|TS-2491
 Musculoskeletal system|Musculoskeletal system|TS-1311
 Natural killer T cell|Natural killer T cell|TS-2165
@@ -262,6 +282,7 @@ Integumental system|Dermal system|TS-1299
 Naive thymus-derived CD4-positive, alpha-beta T lymphocyte|Naive CD4 T-cell|TS-2553
 Bone cell|Bone cell|TS-2097
 Zone of skin|Zone of skin|TS-2580
+Cerebellum gluc cells (nucleus)|Cerebellum gluc cells (nucleus)|TS-2809
 Endocrine part of pancreas|Endocrine pancreas|TS-1302
 Salivary gland epithelium|Salivary gland epithelium|TS-2067
 Outer root sheath|Hair external root sheath|TS-2511
@@ -287,6 +308,7 @@ Aorticopulmonary septum|Aortico-pulmonary septum|TS-2409
 Oesophageal epithelium|Esophageal epithelium|TS-0698
 Mouth roof|Palate|TS-2212
 Right ventricle|Heart right ventricle|TS-0443
+Cerebellum Purkinje cells - nucleus|Cerebellum Purkinje cells (nucleus)|TS-2789
 Lymphomyeloid system|Hemolymphoid and immune system|TS-2018
 Dermis|Dermis|TS-2076
 Melanocytes|Melanocyte|TS-0613
@@ -294,6 +316,7 @@ Fetal ventricular zone|Fetal ventricular zone|TS-2714
 Layer of synovial tissue|Synovium|TS-0998
 T-cell|T-cell|TS-1001
 Mammary gland glandular cell|Mammary gland glandular cell|TS-1272
+von Kupffer cell|Kupffer cell|TS-2750
 Lymph|Lymph|TS-0580
 Tendon synovium|Tendon synovium|TS-2139
 Descending thoracic aorta|Descending thoracic aorta|TS-2605
@@ -317,6 +340,7 @@ Ethmoidal sinuses|Ethmoid sinus|TS-2477
 Neutrophil granulocyte|Neutrophil|TS-0688
 Cytolytic T-lymphocyte|Cytotoxic T-cell|TS-0190
 Tunica vasculosa of eyeball|Uvea|TS-2228
+Kidney proximal tubules (microvilli)|Kidney proximal tubules (microvilli)|TS-2786
 Thyroid gland|Thyroid|TS-1047
 Lower esophagus|Lower esophagus|TS-2629
 Fetal esophagus|Fetal esophagus|TS-1185
@@ -339,6 +363,7 @@ Glia cell|Glial cell|TS-0415
 BA10|Brodmann (1909) area 10|TS-2659
 Muscle cell|Muscle cell|TS-2032
 Cerebral cortex processes/nerve bundles|Cerebral cortex neuronal projections|TS-2518
+Fallopian tube ciliated cells (tip of cilia)|Fallopian tube ciliated cells (tip of cilia)|TS-2801
 Mesoderm|Mesoderm|TS-0623
 Motor neurons|Motor neuron|TS-2386
 Smooth muscle cell|Smooth muscle cell|TS-2159
@@ -348,7 +373,6 @@ Retinal inner nuclear layer|Inner nuclear layer of retina|TS-2514
 Umbilical vein|Umbilical vein|TS-1082
 Oculus|Eye|TS-0309
 Gastro-intestinal system|Gastrointestinal tract|TS-0407
-Fetal adrenal tissue|Fetal adrenal gland|TS-0323
 Intestinal ileum|Ileum|TS-0472
 Pancreas body|Body of pancreas|TS-2587
 Spermatid|Spermatid|TS-0950
@@ -370,6 +394,7 @@ Fetal lung|Fetal lung|TS-0345
 Intestinal mucus secreting cell|Intestinal mucus secreting cell|TS-2727
 Endothelial cells|Endothelial cell|TS-2401
 Gluteus muscle|Gluteal muscle|TS-2614
+Nasopharynx ciliated cells (ciliary rootlets)|Nasopharynx ciliated cells (ciliary rootlets)|TS-2804
 Trophoderm|Trophoblast|TS-1070
 Stomach|Stomach|TS-0980
 Toe|Toe|TS-2494
@@ -391,10 +416,14 @@ Embryonic frontal lobe|Embryonic frontal lobe|TS-2708
 Embryonic thymus|Embryonic thymus|TS-2706
 Chorion|Chorionic membrane|TS-0144
 Limbic system|Limbic system|TS-1307
+Bronchus ciliated cells - cell body|Bronchus ciliated cells (cell body)|TS-2794
 sigmoid colon mucous membrane|Mucosa of sigmoid colon|TS-2633
 Retinal pigment epithelium|Retinal pigment epithelium|TS-0869
 Dentate gyrus|Dentate gyrus|TS-2388
 Renal tubule|Renal tubule|TS-1262
+Kidney distal tubules|Renal distal tubule|TS-0504
+Nasopharynx ciliated cells - cilia axoneme|Nasopharynx ciliated cells (cilia axoneme)|TS-2803
+Bergmann glial cell of cerebellum|Bergmann glial cell|TS-2778
 Lactating mammary gland|Lactating mammary gland|TS-0513
 Peripheral nerve|Peripheral nerve|TS-0772
 Gallbladder glandular cells|Gall bladder glandular cell|TS-1278
@@ -404,6 +433,7 @@ Mouth floor|Mouth floor|TS-2207
 Beta cell of pancreatic islet|Type B pancreatic cell|TS-2575
 Mesenchymal stem cell|Mesenchymal stem cell|TS-0618
 Paraganglia of Zuckerkandl|Paraaortic body|TS-2484
+Urinary bladder urothelial cell|Urinary bladder urothelial cell|TS-2816
 Great alveolar cell|Type II alveolar epithelial cell|TS-2527
 Tunica interna of eyeball|Retina|TS-0865
 Gall bladder glandular cells|Gall bladder glandular cell|TS-1278
@@ -439,6 +469,7 @@ Craniopharyngeal canal|Craniopharyngeal duct|TS-2347
 Right lung|Right lung|TS-2718
 Epithelium of mucosa of mouth|Oral epithelium|TS-0715
 Uveal tract|Uvea|TS-2228
+Bronchial basal cells|Bronchus basal cell|TS-2771
 Piriform recess|Piriform sinus|TS-2489
 Adrenal tissue|Adrenal tissue|TS-2683
 Fetal pituitary gland|Fetal pituitary gland|TS-2117
@@ -447,6 +478,7 @@ MAIT T-cells|Mucosal associated invariant T-cell|TS-2557
 Uterine cervix squamous epithelial cell|Uterine cervix squamous cell|TS-1251
 Radix pili|Hair root|TS-0433
 Epithelium|Epithelium|TS-0288
+Cerebellum Purkinje cells - cytoplasm/membrane|Cerebellum Purkinje cells (cytoplasm/membrane)|TS-2787
 Grey matter of telencephalon|Cerebral grey matter|TS-2361
 Ganglia|Ganglion|TS-0397
 Renal cortex|Kidney cortex|TS-0503
@@ -455,8 +487,8 @@ Large bowel|Large intestine|TS-1306
 Pituitary gland|Pituitary gland|TS-0798
 Prostate epithelium|Prostate epithelium|TS-2065
 Oesophagus squamous epithelial cell|Esophageal squamous cell|TS-1250
-Hair external root sheath|Hair external root sheath|TS-2511
 Fetus|Fetus|TS-0360
+Hair external root sheath|Hair external root sheath|TS-2511
 White blood cell|Leukocyte|TS-0549
 Tarsal region|Ankle|TS-2219
 Tonsil reaction center|Tonsil germinal center cell|TS-1288
@@ -467,6 +499,7 @@ Tear gland|Lacrimal gland|TS-0512
 Basal keratinocyte|Basal keratinocyte|TS-2735
 left adrenal cortex|Left adrenal gland cortex|TS-2684
 Pyloric part of stomach|Pylorus|TS-2426
+Stratum spinosum of epidermis|Stratum spinosum|TS-2734
 Caeca|Cecum|TS-0122
 Skeletal muscle myocyte|Skeletal muscle cell|TS-2158
 Kidney cortex|Kidney cortex|TS-0503
@@ -507,6 +540,7 @@ Retinal ganglia|Retinal ganglion|TS-0867
 area frontalis media|Brodmann (1909) area 46|TS-2655
 muscle tissue of heart muscle|Heart muscle tissue|TS-0440
 Mucosa of jejunum|Jejunal mucosa|TS-0495
+Bronchus ciliated cells (cell body)|Bronchus ciliated cells (cell body)|TS-2794
 Hypophysis|Pituitary gland|TS-0798
 Eye primordium|Embryonic eye|TS-2696
 Oocyte MI arrested|Primary oocyte|TS-2434
@@ -515,13 +549,16 @@ Flank|Flank|TS-2336
 Mammary fibroblast|Mammary fibroblast|TS-0594
 Brain cortex glial cell|Cerebral cortex glial cell|TS-1256
 Appendage of eye|Ocular adnexa|TS-2454
+Mucus secreting cells|Intestinal mucus secreting cell|TS-2727
 Arterial vessel|Artery|TS-0054
 Thymocyte|Thymocyte|TS-1042
+Basal keratinocytes|Basal keratinocyte|TS-2735
 Skeletal muscle tissue of biceps brachii|Skeletal muscle tissue of biceps|TS-2622
 Small intestine glandular cells|Small intestine glandular cell|TS-1286
 Hippocampal dentate gyrus|Dentate gyrus|TS-2388
 chorionic villi|Chorionic villus|TS-2676
 RBC|Erythrocyte|TS-0290
+Fallopian tube ciliated cells - tip of cilia|Fallopian tube ciliated cells (tip of cilia)|TS-2801
 Corpus, uterine epithelium|Uterine corpus epithelium|TS-2154
 Large intestinal mucosa|Large intestine mucosa|TS-2106
 Cortex of hair|Hair cortex|TS-2508
@@ -536,10 +573,12 @@ Mammary glands|Mammary gland|TS-0595
 Hypopharynx|Hypopharynx|TS-2020
 Cerebellar hemisphere|Cerebellar hemisphere|TS-2637
 Skin epidermal cells|Epidermis|TS-0283
+Ciliated cells|Ciliated cell|TS-2814
 Esophageal squamous cell|Esophageal squamous cell|TS-1250
 Regulatory T cell|Regulatory T cell|TS-2408
 Microgliocyte|Microglia|TS-0627
 Lateral globus pallidus|Lateral globus pallidus|TS-2420
+Nasopharynx basal cell|Nasopharyngeal basal cell|TS-2775
 Epithelium of duodenum|Duodenal epithelium|TS-2087
 Prepuce|Foreskin|TS-0383
 Squamous alveolar lining cell|Type I alveolar epithelial cell|TS-2526
@@ -574,6 +613,7 @@ Lymph node germinal center|Lymph node germinal center cell|TS-1269
 Adluminal compartment of the seminiferous tubule|Adluminal compartment of the seminiferous tubule|TS-2196
 Articular cartilage|Articular cartilage|TS-0055
 Cardiac left ventricle|Heart left ventricle|TS-0439
+Cerebellum molecular layer cells (nucleus)|Cerebellum molecular layer cells (nucleus)|TS-2793
 Joint fluid|Synovial fluid|TS-0996
 Tongue epithelial cell|Tongue epithelium|TS-1051
 Naive thymus-dervied CD8-positive, alpha-beta T-cell|Naive CD8 T-cell|TS-2554
@@ -598,8 +638,8 @@ Adipocytes|Adipocyte|TS-0012
 Follicle of hair|Hair follicle|TS-0432
 Decidua placentalis|Decidua placentalis|TS-0193
 Uterus body|Uterine corpus|TS-1265
-Hypothalamus glial cell|Hypothalamus glial cell|TS-2505
 Pituitary neurointermediate lobe|Pituitary neurointermediate lobe|TS-0795
+Hypothalamus glial cell|Hypothalamus glial cell|TS-2505
 Embryonic testis|Embryonic testis|TS-0266
 Trachea epithelium|Tracheal epithelium|TS-1061
 Future tongue|Embryonic tongue|TS-2133
@@ -610,6 +650,7 @@ Horizontal cells of the eye|Horizontal cells of the eye|TS-2743
 Pancreatic B cell|Type B pancreatic cell|TS-2575
 Intestinal enteroendocrine cell|Intestinal enteroendocrine cell|TS-2739
 Peripheral blood T-cell|Peripheral blood T-cell|TS-0770
+Nasopharynx ciliated cells (cilia axoneme)|Nasopharynx ciliated cells (cilia axoneme)|TS-2803
 Spleen red pulp|Spleen red pulp|TS-1263
 Caudate nucleus glial cells|Caudate nucleus glial cell|TS-2503
 Regulatory T lymphocyte|Regulatory T cell|TS-2408
@@ -624,12 +665,15 @@ Optic nerve|Optic nerve|TS-0713
 Cerebellar cortex|Cerebellar cortex|TS-2000
 Parietal neocortex|Parietal cortex|TS-2690
 Fetal B lymphocyte|Fetal B-cell|TS-0326
+aCGs|Anterior cingulate gyrus, subgenual|TS-2759
 Fetal dura mater|Fetal dura mater|TS-2113
 Uterus endometrium stroma|Endometrium stroma|TS-1266
 Myofibroblast cell|Myofibroblast cell|TS-2410
 Secondary spermatocyte|Secondary spermatocyte|TS-2195
 Medulla of suprarenal gland|Adrenal medulla|TS-0018
+Kidney collecting ducts|Renal collecting duct|TS-0860
 Large intestinal mesentery|Mesocolon|TS-2483
+Cerebellum synaptic glomeruli - capsule|Cerebellum synaptic glomeruli (capsule)|TS-2810
 Preputial skin|Foreskin|TS-0383
 Cytotoxic T lymphocyte|Cytotoxic T-cell|TS-0190
 Cerebellar neuron|Cerebellar neuron|TS-2359
@@ -672,8 +716,8 @@ Cerebellum glial cell|Cerebellar glial cell|TS-2566
 cardiac muscle|Heart muscle tissue|TS-0440
 Osseous tissue|Bone tissue|TS-2011
 Hypothalamus|Hypothalamus|TS-0469
-Embryonic structure|Embryonic structure|TS-2110
 Parietal lobe|Parietal lobe|TS-0747
+Embryonic structure|Embryonic structure|TS-2110
 Small intestine mucosa|Small intestine mucosa|TS-0941
 Heart right ventricle|Heart right ventricle|TS-0443
 Glomerus|Renal glomerulus|TS-0862
@@ -692,13 +736,14 @@ Eye|Eye|TS-0309
 Atrium of heart|Heart atrium|TS-0437
 Hair cortex|Hair cortex|TS-2508
 Malphigian glomerulus|Renal glomerulus|TS-0862
+Cerebellum gluc cells (cytoplasm/membrane)|Cerebellum gluc cells (cytoplasm/membrane)|TS-2808
 Skeletal muscle tissue of rectus abdominis|Skeletal muscle tissue of rectus abdominis|TS-2623
 Embryonic germ layer|Embryonic tissue|TS-2100
 Fetal adrenal tissue|Fetal adrenal tissue|TS-2716
 Olfactory region|Olfactory bulb|TS-0702
 transverse colon mucosa of organ|Mucosa of transverse colon|TS-2632
-Retinal rod cell|Retinal rod cell|TS-0870
 Fetal heart|Fetal heart|TS-0338
+Retinal rod cell|Retinal rod cell|TS-0870
 Gingiva epithelial tissue|Gingival epithelium|TS-2625
 Duct of pancreas|Pancreatic duct|TS-2571
 Small bowel|Small intestine|TS-0942
@@ -722,6 +767,7 @@ Body of tongue|Body of tongue|TS-2682
 Tissue macrophage|Histiocyte|TS-2019
 Umbilical cord|Umbilical cord|TS-1078
 Cells in inner nuclear layer|Inner nuclear layer of retina|TS-2514
+Cerebellum molecular layer cells|Cerebellum molecular layer|TS-1248
 Bronchotracheal epithelium|Tracheobronchial epithelium|TS-1063
 Embryonic thyroid|Embryonic thyroid|TS-2137
 CD4-positive, alpha-beta memory T lymphocyte|Memory CD4 T-cell|TS-2555
@@ -749,6 +795,8 @@ Kidney glomerus|Renal glomerulus|TS-0862
 Pancreatic acinar cell|Pancreatic acinar cell|TS-0737
 Bone marrow hematopoietic stem cell|Hematopoietic stem cell|TS-0448
 Pons and medulla oblongata|Pons and medulla oblongata|TS-2562
+Mucus-secreting cells|Intestinal mucus secreting cell|TS-2727
+Cerebellar GLUC cells|Cerebellar GLUC cells|TS-2779
 Sensory neuron|Sensory neuron|TS-2387
 Capillary vessel|Capillary|TS-2006
 Hippocampus proper|Hippocampus|TS-0460
@@ -790,9 +838,12 @@ Bone marrow stroma|Bone marrow stroma|TS-0085
 Cerebrum cortex neuron|Cerebral cortex neuron|TS-1259
 Pharyngeal mucosa|Pharyngeal mucosa|TS-2437
 Blood plasma|Plasma|TS-0800
+Bronchus goblet cells|Bronchus goblet cell|TS-2770
 Breast adipocytes|Breast adipocyte|TS-2377
 White adipose tissue|White adipose tissue|TS-1119
+Cerebellum granular cells|Cerebellum granular layer|TS-1247
 Preputial glands|Preputial gland|TS-0824
+Cerebellum Bergmann glia - nucleus|Cerebellum Bergmann glia (nucleus)|TS-2807
 Germinal layer|Embryonic tissue|TS-2100
 Ventromedial prefrontal cortex|Ventromedial prefrontal cortex|TS-2754
 Calcaneus|Heel bone|TS-2448
@@ -803,8 +854,8 @@ Cerebral cortex neuron|Cerebral cortex neuron|TS-1259
 area 9 of Brodmann-1909|Brodmann (1909) area 9|TS-2658
 Cumulus oocyte complex|Cumulus oocyte complex|TS-2419
 Articular cartilage of joint|Articular cartilage|TS-0055
-Nasopharyngeal goblet cell|Nasopharyngeal goblet cell|TS-2777
 Appendix glandular cell|Appendix glandular cell|TS-1271
+Nasopharyngeal goblet cell|Nasopharyngeal goblet cell|TS-2777
 Sympathetic nervous system|Sympathetic nervous system|TS-2050
 Paraaortic body|Paraaortic body|TS-2484
 Fibroblast|Fibroblast|TS-0362
@@ -813,12 +864,13 @@ Retinal photoreceptor|Retinal photoreceptor|TS-0868
 Oral cavity mucosa squamous epithelial cell|Oral mucosa squamous cell|TS-1252
 Ovary surface epithelium|Ovarian surface epithelium|TS-2573
 Sense organ|Sense organ|TS-2043
+Cerebellum white matter cells (nucleus)|Cerebellum white matter cells (nucleus)|TS-2813
 Bronchiolar epithelial cell|Bronchiolar epithelium|TS-0570
 Bile duct cells|Bile duct|TS-0075
 Vascular endothelial cell|Vascular endothelial cell|TS-2402
-Corneal epithelium|Corneal epithelium|TS-0173
 Superficial temporal artery|Superficial temporal artery|TS-2608
 Back|Back|TS-2223
+Corneal epithelium|Corneal epithelium|TS-0173
 Suprarenal medulla|Adrenal medulla|TS-0018
 Tooth pulp|Dental pulp|TS-0195
 Skeletal system|Skeletal system|TS-1320
@@ -827,10 +879,11 @@ Gluteus|Gluteal muscle|TS-2614
 Frontal cortex|Frontal cortex|TS-2688
 Oral mucosa squamous cell|Oral mucosa squamous cell|TS-1252
 Tracheobronchial epithelium|Tracheobronchial epithelium|TS-1063
+Horizontal cells|Horizontal cells of the eye|TS-2743
 Periodontal ligament|Periodontal ligament|TS-0763
 Aortic vascular smooth muscle|Aortic smooth muscle|TS-0048
-Helper T-cell|Helper T-cell|TS-1146
 Corpus luteum|Corpus luteum|TS-0181
+Helper T-cell|Helper T-cell|TS-1146
 Stomach epithelium|Stomach epithelium|TS-2068
 Pre-B-lymphocyte|Pre-B cell|TS-0819
 Cutaneous appendage|Skin appendage|TS-0051
@@ -860,6 +913,7 @@ Posterior pituitary|Posterior pituitary|TS-0815
 Hard palate|Hard palate|TS-2479
 Fetal visual apparatus|Fetal eye|TS-0334
 Axilla|Axilla|TS-2208
+Inferior frontal gyrus, orbital part|Orbital inferior frontal gyrus|TS-2764
 Dorsal raphe glial cells|Dorsal raphe glial cell|TS-2559
 Left oviduct|Left uterine tube|TS-2593
 Dorsal nucleus of vagus nerve|Dorsal vagal nucleus|TS-2381
@@ -874,23 +928,29 @@ Blood|Blood|TS-0079
 Sputum|Sputum|TS-0963
 Purkinje's cell|Purkinje cell|TS-0845
 Aorta smooth muscle tissue|Aortic smooth muscle|TS-0048
+Cerebellum Purkinje cells nucleus|Cerebellum Purkinje cells (nucleus)|TS-2789
 Conventional dendritic cell|Conventional dendritic cell|TS-2192
 Ito cell|Hepatic stellate cell|TS-0452
 Liver stellate cell|Hepatic stellate cell|TS-0452
 Lymphoblast|Lymphoblast|TS-0581
+Syncytiotrophoblasts - cell body|Syncytiotrophoblasts (cell body)|TS-2817
 Cerebral cortex neuronal projections|Cerebral cortex neuronal projections|TS-2518
 Upper leg|Thigh|TS-2039
 Lower third of esophagus|Lower esophagus|TS-2629
 Mammary epithelium|Mammary epithelium|TS-0593
 Appendix mucosa|Appendix mucosa|TS-2022
+Fallopian tube ciliated cells (cilia axoneme)|Fallopian tube ciliated cells (cilia axoneme)|TS-2799
 BA23|Brodmann (1909) area 23|TS-2660
 vagus X inferior ganglion|Inferior vagus X ganglion|TS-2653
 cerebral cortex cortical plate|Cortical plate|TS-2651
 area 10 of Brodmann|Brodmann (1909) area 10|TS-2659
 Lingual epithelial cell|Tongue epithelium|TS-1051
+Fallopian tube non-ciliated cells|Oviduct non-ciliated epithelial cell|TS-2773
 Hippocampus neural cell|Hippocampus neuron|TS-1260
 Blood cells|Peripheral blood cell|TS-0771
 NK-cell|Natural killer cell|TS-0664
+littoral cell of hepatic sinusoid|Kupffer cell|TS-2750
+Cerebellum Purkinje cells (cytoplasm/membrane)|Cerebellum Purkinje cells (cytoplasm/membrane)|TS-2787
 Nerve fibers in nerve fiber layer|Nerve fiber layer of retina|TS-2515
 Cecal appendix glandular cell|Appendix glandular cell|TS-1271
 Mucosa of urinary bladder|Urinary bladder mucosa|TS-2591
@@ -899,18 +959,22 @@ Pharyngeal|Pharynx|TS-0785
 Cervix squamous epithelium|Cervix squamous epithelium|TS-2636
 Hindbrain|Hindbrain|TS-0457
 Autonomic ganglion|Autonomic ganglion|TS-2340
+Goblet cell bronchus|Bronchus goblet cell|TS-2770
 Preoptic nucleus|Preoptic area of hypothalamus|TS-0822
 Endometrium epithelium|Endometrium epithelium|TS-2631
 Pyriform sinus|Piriform sinus|TS-2489
 Neural progenitor cells|Neural progenitor cell|TS-2394
+Erythropoietic cell|Erythroid cell|TS-2752
 Rectal epithelium|Rectal epithelium|TS-2066
 Retina|Retina|TS-0865
 Diencephalon|Diencephalon|TS-0199
 Extraocular muscle|Extraocular muscle|TS-0305
 Sebaceous gland|Sebaceous gland|TS-2384
+Urinary bladder urothelial cells|Urinary bladder urothelial cell|TS-2816
 Paratesticular tissue|Paratesticular tissue|TS-2355
 Metencephalon|Metencephalon|TS-2029
 Uterine cervix squamous cell|Uterine cervix squamous cell|TS-1251
+Alveolar cells type 1|Type I alveolar epithelial cell|TS-2526
 Pelvis|Pelvis|TS-2227
 Inferior vena cava|Inferior vena cava|TS-2481
 Caudate|Caudate nucleus|TS-0121
@@ -920,6 +984,7 @@ esophageal mucous membrane|Esophagus mucosa|TS-2626
 Uterine body epithelium|Uterine corpus epithelium|TS-2154
 Submaxillary gland|Submandibular gland|TS-0988
 Lymphocyte|Lymphocyte|TS-0583
+Cerebellum Bergmann glia - cytoplasm/membrane|Cerebellum Bergmann glia (cytoplasm/membrane)|TS-2806
 Neural retina|Neuroretina|TS-0685
 Horny layer of epidermis|Stratum corneum|TS-0981
 Esophagus squamous epithelial cells|Esophageal squamous cell|TS-1250
@@ -930,6 +995,9 @@ Sphenoid bone|Sphenoid bone|TS-2343
 Pancreatic islet|Pancreatic islet|TS-0741
 Pharynx|Pharynx|TS-0785
 Smooth muscle tissue|Smooth muscle tissue|TS-0943
+Orbital part of inferior frontal gyrus|Orbital inferior frontal gyrus|TS-2764
+Cerebellum white matter cells - cytoplasm/membrane|Cerebellum white matter cells (cytoplasm/membrane)|TS-2812
+Pancreatic endocrine cells|Pancreatic endocrine cell|TS-2740
 Pylorus|Pylorus|TS-2426
 Triceps brachii muscle|Triceps muscle|TS-2613
 Anterior cingulate cortex|Anterior cingulate cortex|TS-2657
@@ -946,15 +1014,18 @@ Alveolar macrophage|Alveolar macrophage|TS-0030
 Small intestinal epithelium|Small intestine epithelium|TS-2104
 Fetal cochlea|Fetal cochlea|TS-2112
 Buccal mucosa cell|Buccal mucosa cell|TS-2579
+Basal cell of epidermis|Basal keratinocyte|TS-2735
 Embryonic eye|Embryonic eye|TS-2696
 Skeletal system of head|Skull|TS-2344
 Type-II alveolar cell|Type II alveolar epithelial cell|TS-2527
 White pulp of spleen|Spleen white pulp|TS-1264
+Goblet cell of epithelium of bronchus|Bronchus goblet cell|TS-2770
 Male germ cell|Male germ cell|TS-2369
 Type II alveolar cell|Type II alveolar epithelial cell|TS-2527
 Spiral organ of Corti|Organ of Corti|TS-0717
 Rectal mucosa|Rectum mucosa|TS-2107
 Anal canal|Anal canal|TS-2160
+Cerebellum molecular layer cells (cytoplasm/membrane)|Cerebellum molecular layer cells (cytoplasm/membrane)|TS-2792
 Fetal spinal cord|Fetal spinal cord|TS-0354
 Cerebral cortex neuropil|Cerebral cortex neuropil|TS-2396
 cortex of left adrenal gland|Left adrenal gland cortex|TS-2684
@@ -983,16 +1054,20 @@ Memory CD8 T-cell|Memory CD8 T-cell|TS-2556
 Haematopoietic stem cell|Hematopoietic stem cell|TS-0448
 CD4-positive, alpha-beta memory T-cell|Memory CD4 T-cell|TS-2555
 Spermatocyte|Spermatocyte|TS-0951
+Bronchus ciliated cells (tip of cilia)|Bronchus ciliated cells (tip of cilia)|TS-2797
 Retina inner plexiform layer|Inner plexiform layer of retina|TS-2513
+Muller glia cell of eye|Muller glial cell|TS-2744
 Uterine endometrium stroma|Endometrium stroma|TS-1266
 Salivary gland|Salivary gland|TS-0892
 right adrenal cortex|Right adrenal gland cortex|TS-2685
+Basal glandular cells|Prostate basal cell|TS-2732
 Molar|Molar|TS-0637
 Sella turcica|Sella turcica|TS-2342
 Respiratory system|Respiratory system|TS-1319
 Bone element|Bone|TS-0088
 Peripheral blood leukocyte|Peripheral blood leukocyte|TS-0766
 Retinal cone photoreceptor cells|Retinal cone cell|TS-0866
+Ito cells|Hepatic stellate cell|TS-0452
 Cell type|Cell type|TS-2035
 Esophagus squamous cell|Esophageal squamous cell|TS-1250
 Heart atrium|Heart atrium|TS-0437
@@ -1009,6 +1084,8 @@ Skeletal muscle cell|Skeletal muscle cell|TS-2158
 Hair outer root sheath|Hair external root sheath|TS-2511
 Bronchial epithelium cell|Bronchus epithelial cell|TS-2399
 Cerebellum|Cerebellum|TS-0125
+Erythroid cells|Erythroid cell|TS-2752
+Fallopian tube ciliated cell|Oviduct ciliated cell|TS-2772
 Retroperitoneum|Retroperitoneal space|TS-2337
 Embryonic tongue|Embryonic tongue|TS-2133
 Inner root sheath|Hair inner root sheath|TS-2510
@@ -1017,6 +1094,7 @@ Prostate glandular cells|Prostate glandular cell|TS-1280
 Subungual region|Subungual region|TS-2351
 Cardiac muscle tissue|Heart muscle tissue|TS-0440
 Pancreatic body|Body of pancreas|TS-2587
+Nasopharynx basal cells|Nasopharyngeal basal cell|TS-2775
 Cerebellar vermis|Vermis|TS-2059
 substantia nigra compacta|Substantia nigra pars compacta|TS-2427
 Epithelium of thymus|Thymic epithelium|TS-1040
@@ -1043,11 +1121,14 @@ Cerebral cortex|Cerebral cortex|TS-0091
 ganglion of sympathetic nervous system|Sympathetic ganglion|TS-0994
 Quadriceps femoris muscle|Quadriceps femoris muscle|TS-2596
 Brodmann area 10|Brodmann (1909) area 10|TS-2659
+Orbitofrontal gyrus, lateral|Lateral orbitofrontal gyrus|TS-2767
 Reticulocyte|Reticulocyte|TS-0864
 Mucosa of stomach|Stomach mucosa|TS-0404
 Neural retina inner nuclear layer|Inner nuclear layer of retina|TS-2514
 area 23 of Brodmann-1909|Brodmann (1909) area 23|TS-2660
+Bowman's capsule|Glomerular capsule|TS-2774
 Auditory apparatus|Ear|TS-1165
+Nasopharynx ciliated cells - cell body|Nasopharynx ciliated cells (cell body)|TS-2802
 Skin Melanocyte|Skin Melanocyte|TS-2374
 Temporal lobe|Temporal lobe|TS-1020
 Hepatocytes|Hepatocyte|TS-0454
@@ -1059,6 +1140,7 @@ Haploid germ cell|Gamete|TS-0395
 Cerebellum cells in molecular layer|Cerebellum molecular layer|TS-1248
 Cerebellar Purkinje neuron|Purkinje cell|TS-0845
 Distal colon mucosa|Distal colon mucosa|TS-1160
+Ciliated cell of the bronchus|Bronchus ciliated cell|TS-2729
 Retinal ganglion cells|Retinal ganglion|TS-0867
 4th ventricle|Fourth ventricle|TS-2015
 Embryonic rhombencephalon|Embryonic rhombencephalon|TS-2118
@@ -1083,6 +1165,7 @@ Renal proximal convoluted tubule|Renal proximal convoluted tubule|TS-2198
 Uterine tube|Oviduct|TS-0732
 Small intestine glandular cell|Small intestine glandular cell|TS-1286
 Epidermal cells|Epidermis|TS-0283
+Cerebellum Bergmann glia|Bergmann glial cell|TS-2778
 Duodenal epithelium|Duodenal epithelium|TS-2087
 Embryonic skin|Embryonic skin|TS-2693
 Labia|Labia|TS-2210
@@ -1107,20 +1190,25 @@ Hair cuticle|Hair cuticle|TS-2509
 Right hepatic lobe|Right lobe of liver|TS-2584
 Embryonic lung|Embryonic lung|TS-0253
 Oropharynx|Oropharynx|TS-0718
+Cerebellum gluc cells - nucleus|Cerebellum gluc cells (nucleus)|TS-2809
+Subcallosal gyrus|Paraterminal gyrus|TS-2760
 Trachea epithelial cell|Tracheal epithelium|TS-1061
 Brain temporal lobe|Temporal lobe|TS-1020
 Hair follicle dermal papilla|Dermal papilla|TS-0431
 Corpus, uterine glandular cell|Uterine corpus glandular cell|TS-1287
 Inferior olivari nucleus|Inferior olivari nucleus|TS-2383
 Cells in endometrial stroma|Stromal cell of endometrium|TS-2578
+Stratum germinativum|Stratum basale|TS-2733
 Bladder organ mucosa|Urinary bladder mucosa|TS-2591
 Cochlear duct|Cochlear duct|TS-0152
 Muscle organ|Muscle organ|TS-2594
 Rectum epithelium|Rectal epithelium|TS-2066
+Urothelial cell|Urothelial cell|TS-2815
 Zona fasciculata of adrenal gland|Zona fasciculata of adrenal gland|TS-2501
 Buccal mucosa|Buccal mucosa|TS-2349
 Ovarian stromal cell|Ovarian stroma|TS-1246
 Gastric tissue|Stomach|TS-0980
+Pars triangularis|Triangular inferior frontal gyrus|TS-2763
 Pelvic cavity|Pelvic cavity|TS-2487
 Pulp of tooth|Dental pulp|TS-0195
 endometrium epithelial tissue|Endometrium epithelium|TS-2631
@@ -1154,6 +1242,7 @@ Subiculum|Subiculum|TS-2450
 Female germ cell|Female germ cell|TS-2368
 Anus|Anus|TS-2005
 CD4-positive helper T lymphocyte|CD4-positive helper T cell|TS-2438
+Cone photoreceptor cells|Retinal cone cell|TS-0866
 Visual apparatus|Eye|TS-0309
 Monocyte|Monocyte|TS-0638
 Oral cavity mucosa|Oral mucosa|TS-0716
@@ -1205,6 +1294,7 @@ Naive CD8 T-cells|Naive CD8 T-cell|TS-2554
 Naive B cell|Naive B cell|TS-2552
 Urinary system|Urinary system|TS-1323
 Epididymal tail|Cauda epididymis|TS-2674
+Triangular part of inferior frontal gyrus|Triangular inferior frontal gyrus|TS-2763
 Choroid plexus epithelium|Choroid plexus epithelium|TS-2630
 Transverse colon|Transverse colon|TS-2052
 Ectoderm|Ectoderm|TS-0216
@@ -1226,6 +1316,7 @@ Jugular vein endothelium|Jugular vein endothelium|TS-0498
 Future pituitary gland|Embryonic pituitary gland|TS-2692
 Heart left ventricle|Heart left ventricle|TS-0439
 Aorta|Aorta|TS-0046
+aCGpd|Anterior cingulate gyrus, pregenual-dorsal|TS-2757
 Caudate glial cells|Caudate nucleus glial cell|TS-2503
 Spermatozoid|Spermatozoon|TS-0949
 Orbital inferior frontal gyrus|Orbital inferior frontal gyrus|TS-2764
@@ -1243,8 +1334,8 @@ C1 segment|C1 segment of cervical spinal cord|TS-2654
 Mucosa of middle ear|Middle ear mucosa|TS-0631
 Suprarenal cortex|Adrenal cortex|TS-0015
 Urinary bladder epithelium|Urinary bladder urothelium|TS-1088
-Oocyte|Oocyte|TS-0711
 Right coronary artery|Right coronary artery|TS-2609
+Oocyte|Oocyte|TS-0711
 Inner ear vestibule|Inner ear vestibule|TS-0479
 Blood cell|Peripheral blood cell|TS-0771
 T cell|T-cell|TS-1001
@@ -1269,8 +1360,9 @@ Brown adipose tissue|Brown adipose tissue|TS-0099
 Epithelium of large intestine|Large intestine epithelium|TS-2105
 Epididymal|Epididymis|TS-0285
 Gum|Gingiva|TS-2074
-Skeletal muscle tissue of biceps|Skeletal muscle tissue of biceps|TS-2622
+Fallopian tube ciliated cells - ciliary rootlets|Fallopian tube ciliated cells (ciliary rootlets)|TS-2800
 Pectoralis muscle|Pectoralis muscle|TS-0751
+Skeletal muscle tissue of biceps|Skeletal muscle tissue of biceps|TS-2622
 type I NK T-cell|Type I NK T cell|TS-2441
 Saphenous vein|Saphenous vein|TS-0893
 Joints|Joint|TS-2023
@@ -1288,13 +1380,14 @@ Nucleus raphes posterior|Dorsal raphe nucleus|TS-2558
 Sensory organ|Sense organ|TS-2043
 epithelium of endometrium|Endometrium epithelium|TS-2631
 Vaginal squamous cell|Vagina squamous cell|TS-1254
+Cerebellum molecular layer cells - cytoplasm/membrane|Cerebellum molecular layer cells (cytoplasm/membrane)|TS-2792
 Male haploid germ cell|Spermatozoon|TS-0949
 Ovary follicle cells|Ovarian follicle|TS-0726
 Olivary nucleus|Olivary body|TS-2668
 Cardiac myocyte|Heart muscle cell|TS-0115
 Cornea epithelial cell|Corneal epithelium|TS-0173
-Lateral orbitofrontal gyrus|Lateral orbitofrontal gyrus|TS-2767
 Myeloid dendritic cell|Myeloid dendritic cell|TS-2550
+Lateral orbitofrontal gyrus|Lateral orbitofrontal gyrus|TS-2767
 Mucous membrane|Mucosa|TS-2031
 Orbital|Orbit of skull|TS-2455
 Vestibular nucleus|Vestibular nuclei|TS-2078
@@ -1309,6 +1402,7 @@ Middle frontal gyrus|Middle frontal gyrus|TS-2642
 Naive thymus-derived CD8-positive, alpha-beta T cell|Naive CD8 T-cell|TS-2554
 Cerebrum cortex neural cell|Cerebral cortex neuron|TS-1259
 Large intestine glandular cell|Large intestine glandular cell|TS-2726
+Kidney Bowman's capsule|Glomerular capsule|TS-2774
 Arachnoid membrane|Arachnoid membrane|TS-0052
 Schwalbe corpuscle|Taste bud|TS-1015
 Osteoclast|Osteoclast|TS-0721
@@ -1331,12 +1425,16 @@ granular frontal area|Brodmann (1909) area 9|TS-2658
 Erythroblast|Erythroblast|TS-0289
 Spinal ganglion|Spinal ganglion|TS-0954
 Endothelial cells of cerebral cortex|Cerebral cortex endothelial cell|TS-2372
+Collecting duct cells|Renal collecting duct|TS-0860
 Adnexa of skin|Skin appendage|TS-0051
+Gyrus frontalis inferior, pars triangularis|Triangular inferior frontal gyrus|TS-2763
 Between brain|Diencephalon|TS-0199
 Epithelium of seminal vesicle|Seminal vesicle epithelium|TS-2069
 Lymphatic vessel vascular endothelium|Lymphatic vessel vascular endothelium|TS-2156
 Peripheral blood T-lymphocyte|Peripheral blood T-cell|TS-0770
+Cerebellum processes in granular layer|Cerebellum processes in granular layer|TS-2780
 Glandular cell of endometrium|Endometrial glandular cell|TS-2430
+Urothelial cells|Urothelial cell|TS-2815
 Vermis of cerebellum|Vermis|TS-2059
 inferior ganglion of vagus nerve|Inferior vagus X ganglion|TS-2653
 cardiac right atrium|Right atrium|TS-2618
@@ -1382,11 +1480,13 @@ Myelencephalon|Myelencephalon|TS-2365
 Mammary gland myoepithelial cell|Mammary gland myoepithelial cell|TS-2378
 Muller glial cell|Muller glial cell|TS-2744
 Circulating blood|Blood|TS-0079
+Basal cell of epithelium of bronchus|Bronchus basal cell|TS-2771
 Hair|Hair|TS-0430
 granular cingulate area|Brodmann (1909) area 23|TS-2660
 CA1 field of the hippocampus|CA1 field of hippocampus|TS-2649
 Intestine|Intestine|TS-0490
 Orbit|Orbit of skull|TS-2455
+Spermatocytes|Spermatocyte|TS-0951
 Fetal|Fetus|TS-0360
 Foot sole tissue|Foot sole|TS-0379
 Middle ear mucosa|Middle ear mucosa|TS-0631
@@ -1402,8 +1502,10 @@ Pituitary|Pituitary gland|TS-0798
 Jugular vein|Jugular vein|TS-0497
 Naive thymus-derived CD4-positive, alpha-beta T-lymphocyte|Naive CD4 T-cell|TS-2553
 Pancreas|Pancreas|TS-0736
+Enterocyte|Enterocytes|TS-2725
 Whole embryo|Embryo|TS-0229
 Skeletal ligament|Articular ligament|TS-2146
+White matter of cerebellum|White matter of cerebellum|TS-2784
 Muscle|Muscle organ|TS-2594
 Fetal small intestine|Fetal small intestine|TS-2134
 temporal lobe cortex|Temporal cortex|TS-2689
@@ -1421,6 +1523,7 @@ Hand|Hand|TS-2213
 Liver|Liver|TS-0564
 Adrenal|Adrenal gland|TS-0016
 Vastus lateralis|Vastus lateralis|TS-2597
+Pars triangularis gyri frontalis inferioris|Triangular inferior frontal gyrus|TS-2763
 Dorsomedial prefrontal cortex|Dorsomedial prefrontal cortex|TS-2753
 Dental enamel|Tooth enamel|TS-1057
 Lower leg|Lower leg|TS-2461
@@ -1437,6 +1540,7 @@ Esophagogastric junction muscularis propria|Esophagogastric junction muscularis 
 Glandula vesiculosa|Seminal vesicle|TS-0919
 Haemolymph system|Hemolymphoid and immune system|TS-2018
 First milk|Colostrum|TS-0167
+Exocrine glandular cells|Pancreas exocrine glandular cell|TS-1242
 Cementum of tooth|Dental cementum|TS-2163
 Larynx|Larynx|TS-0532
 Macrophage|Macrophage|TS-0587
@@ -1525,6 +1629,7 @@ Articular ligament|Articular ligament|TS-2146
 Occipital lobe|Occipital lobe|TS-0693
 Fallopian tube epithelium|Oviduct epithelium|TS-1316
 homotypical cortex|Neocortex|TS-2639
+Liver sinusoid|Hepatic sinusoid|TS-2751
 Skin of hip|Skin of hip|TS-2601
 Triceps muscle|Triceps muscle|TS-2613
 Head of epidymis|Caput epididymis|TS-2672
@@ -1548,10 +1653,11 @@ first branchial arch|First arch|TS-2089
 Lymph node nongerminal center cell|Lymph node nongerminal center cell|TS-2171
 Ductus ejaculatorius|Ductus ejaculatorius|TS-0211
 Bronchus epithelium|Bronchus epithelium|TS-1240
-Breast adipocyte|Breast adipocyte|TS-2377
 Gamma delta T cells|Gamma delta T cells|TS-2393
+Breast adipocyte|Breast adipocyte|TS-2377
 Epithelium of fallopian tube|Oviduct epithelium|TS-1316
 Pancreatic duct|Pancreatic duct|TS-2571
+Early spermatids|Round spermatid|TS-2534
 Cerebral hemisphere|Cerebral hemisphere|TS-2007
 Fetal cerebral cortex|Fetal cerebral cortex|TS-1211
 Womb|Uterus|TS-1102
@@ -1560,24 +1666,29 @@ Inguinal region|Groin|TS-2339
 Cortical thymic dendritic cell CD303-positive|Cortical thymic dendritic cell CD303-positive|TS-2445
 1st branchial arch|First arch|TS-2089
 Exocrine pancreas|Exocrine pancreas|TS-1241
+heart muscle|Heart muscle tissue|TS-0440
 Synovial fluid|Synovial fluid|TS-0996
 Sympathetic trunk|Sympathetic chain|TS-2049
 Subcutaneous abdominal adipose tissue|Subcutaneous abdominal adipose tissue|TS-2406
+Alveolar cells type 2|Type II alveolar epithelial cell|TS-2527
 Gingiva|Gingiva|TS-2074
 Brainstem|Brain stem|TS-0093
-Caudate nucleus synapses|Caudate nucleus synapses|TS-2532
 Caudate nucleus|Caudate nucleus|TS-0121
+Caudate nucleus synapses|Caudate nucleus synapses|TS-2532
 Naive thymus-derived CD4-positive, alpha-beta T-cell|Naive CD4 T-cell|TS-2553
 Corpus, uterine glandular cells|Uterine corpus glandular cell|TS-1287
+smooth muscle|Smooth muscle tissue|TS-0943
 Glomerular capsule|Glomerular capsule|TS-2774
 Zona glomerulosa|Adrenal glomerulosa|TS-0017
 Visual cortex|Visual cortex|TS-1117
 Colon|Colon|TS-0158
+Paneth cells|Paneth cell|TS-2728
 Round or early spermatids|Round spermatid|TS-2534
 Jejunal smooth muscle|Jejunal smooth muscle|TS-1216
 Subthalamus|Subthalamus|TS-2048
 Primary visual cortex|Primary visual cortex|TS-2638
 Hematolymphoid system|Hemolymphoid and immune system|TS-2018
+Undifferentiated cells|Undifferentiated cells of the intestine|TS-2748
 Ovarian follicle|Ovarian follicle|TS-0726
 Amnionic/chorionic membrane|Chorioamniotic membrane|TS-0141
 brodmann's area 23|Brodmann (1909) area 23|TS-2660
@@ -1631,6 +1742,7 @@ Lower lobe of lung|Lower lobe of lung|TS-2679
 Ligament|Ligament|TS-2145
 Caliculus gustatorius|Taste bud|TS-1015
 Retina outer plexiform layer|Outer plexiform layer of retina|TS-2512
+Precommissural hippocampus|Paraterminal gyrus|TS-2760
 vulva/anal skin epidermal cells|Vulva/Anal skin epidermal cell|TS-2170
 Uterus womb epithelium|Uterine corpus epithelium|TS-2154
 Female reproductive system|Female reproductive system|TS-1303
@@ -1640,6 +1752,7 @@ Uvea|Uvea|TS-2228
 Hippocampus|Hippocampus|TS-0460
 Pancreas islet cells|Pancreatic islet|TS-0741
 Cerebrospinal fluid|Cerebrospinal fluid|TS-0130
+Limbic lobe cortex|Limbic cortex|TS-2756
 Malphigian corpuscle|Renal corpuscle|TS-1317
 Fetal pallium|Fetal cerebral cortex|TS-1211
 Serum|Serum|TS-0923
@@ -1674,6 +1787,7 @@ Ilea|Ileum|TS-0472
 Submandibular gland|Submandibular gland|TS-0988
 Finger Phalanges|Phalanx|TS-2211
 Ectocervix|Uterine ectocervix|TS-1098
+Club cells|Club cell|TS-2731
 Tonsil germinal center|Tonsil germinal center cell|TS-1288
 Talus bone|Talus bone|TS-2417
 Breastbone|Sternum|TS-0972
@@ -1684,6 +1798,7 @@ Presumptive hindbrain|Embryonic rhombencephalon|TS-2118
 Oligodendroglia|Oligodendrocyte|TS-0709
 Olfactory bulb|Olfactory bulb|TS-0702
 Neural layer of retina|Neuroretina|TS-0685
+Ciliated cell|Ciliated cell|TS-2814
 Neck|Neck|TS-2045
 Neck of uterus|Uterine cervix|TS-0134
 Epididymus|Epididymis|TS-0285
@@ -1696,6 +1811,7 @@ Grey matter of cerebrum|Cerebral grey matter|TS-2361
 Mastocyte|Mast cell|TS-0603
 Eosinophilic granulocyte|Eosinophil|TS-0279
 Microglia of spinal cord|Spinal cord microglia|TS-2152
+Kidney proximal tubules - cell body|Kidney proximal tubules (cell body)|TS-2785
 Thyroid gland right lobe|Right lobe of thyroid gland|TS-2585
 Auditory system|Auditory system|TS-2541
 Gastric cardia|Cardia of stomach|TS-2391
@@ -1718,6 +1834,7 @@ Lymph node reaction center cells|Lymph node germinal center cell|TS-1269
 Subcutaneous fat of abdominal region|Subcutaneous abdominal adipose tissue|TS-2406
 Nasopharynx respiratory epithelial cells|Nasopharyngeal epithelial cell|TS-2398
 Preputial gland|Preputial gland|TS-0824
+Syncytiotrophoblasts (microvilli)|Syncytiotrophoblasts (microvilli)|TS-2818
 Synovial joint|Joint synovium|TS-2138
 Fundus of stomach|Stomach fundus|TS-2425
 Myoblast|Myoblast|TS-0650
@@ -1735,6 +1852,7 @@ Ocular ciliary body|Ocular ciliary body|TS-0694
 Hippocampal formation|Hippocampal formation|TS-2449
 Fetal ovary|Fetal ovary|TS-2135
 Bronchiole|Bronchiole|TS-2003
+Inferior frontal gyrus, orbital|Orbital inferior frontal gyrus|TS-2764
 Omentum|Omentum|TS-2004
 Prostatic gland epithelium|Prostate epithelium|TS-2065
 Subcutaneous adipose tissue|Subcutaneous adipose tissue|TS-2431
@@ -1753,18 +1871,18 @@ Skin appendage|Skin appendage|TS-0051
 Brodmann area 9, granular frontal|Brodmann (1909) area 9|TS-2658
 Blindgut|Cecum|TS-0122
 Organ of Corti|Organ of Corti|TS-0717
-Urinary bladder urothelial cells|Urinary bladder urothelium|TS-1088
 Squamous epithelium of esophagous|Esophageal squamous epithelium|TS-2624
 Large intestine mucosa|Large intestine mucosa|TS-2106
 Exocrine acinar cell|Pancreatic acinar cell|TS-0737
 Frontopolar cortex|Brodmann (1909) area 10|TS-2659
 Trigeminal ganglion|Trigeminal ganglion|TS-2433
 future neocortex|Cortical plate|TS-2651
+Cerebellum white matter cells - nucleus|Cerebellum white matter cells (nucleus)|TS-2813
 Submaxillary salivary gland|Submandibular gland|TS-0988
 Cortex of cerebral hemisphere|Cerebral cortex|TS-0091
 Uterine ectocervix|Uterine ectocervix|TS-1098
-Type I NK T cell|Type I NK T cell|TS-2441
 Rib|Rib|TS-2209
+Type I NK T cell|Type I NK T cell|TS-2441
 Popliteal fossa|Popliteal area|TS-2490
 Vascular smooth muscle|Vascular smooth muscle|TS-1107
 Natural killer cell|Natural killer cell|TS-0664
@@ -1782,6 +1900,7 @@ Mesencephalon|Midbrain|TS-0630
 Cardiac cell|Heart muscle cell|TS-0115
 Sperm cell|Spermatozoon|TS-0949
 Urothelium|Urothelium|TS-1096
+Bergmann glial cell|Bergmann glial cell|TS-2778
 Neuroglia cell|Glial cell|TS-0415
 Auditory cortex|Auditory cortex|TS-2545
 Forelimb|Upper limb|TS-2214
@@ -1790,9 +1909,8 @@ Adult mammalian kidney|Kidney|TS-0510
 Inner plexiform layer of retina|Inner plexiform layer of retina|TS-2513
 Cervix epithelial cell|Uterine cervix epithelium|TS-0137
 Sinonasal and nasal cavity|Sinonasal and nasal cavity|TS-2456
-Inferior olivary nuclei|Inferior olivary complex|TS-2667
-Parietal cortex|Parietal lobe|TS-0747
 Upper leg skin|Upper leg skin|TS-2602
+Cerebellum Purkinje cells - dendrites|Cerebellum Purkinje cells (dendrites)|TS-2788
 Epithelium of small intestine|Small intestine epithelium|TS-2104
 Microglia of brain|Brain microglia|TS-2150
 Abdominal subcutaneous adipose tissue|Subcutaneous abdominal adipose tissue|TS-2406
@@ -1808,10 +1926,13 @@ Adrenal Fasciculata|Zona fasciculata of adrenal gland|TS-2501
 Gallbladder epithelium|Gall bladder epithelium|TS-1304
 Stem cell|Stem cell|TS-2086
 Brodmann (1909) area 23|Brodmann (1909) area 23|TS-2660
+Cerebellum Purkinje cells dendrites|Cerebellum Purkinje cells (dendrites)|TS-2788
 Neural crest cell|Migratory neural crest cell|TS-2411
-Parathyroid|Parathyroid|TS-0745
 Iliac vein|Iliac vein|TS-2498
+Parathyroid|Parathyroid|TS-0745
 Slow-twitch skeletal muscle|Slow-twitch skeletal muscle|TS-0940
+Cerebellum gluc cells - cytoplasm/membrane|Cerebellum gluc cells (cytoplasm/membrane)|TS-2808
+Fallopian tube ciliated cells - cell body|Fallopian tube ciliated cells (cell body)|TS-2798
 Colon nerve tissue|Colon nerve tissue|TS-2373
 Mucosa|Mucosa|TS-2031
 Forebrain|Forebrain|TS-0380
@@ -1834,8 +1955,8 @@ Type I alveolar epithelial cell|Type I alveolar epithelial cell|TS-2526
 Fetal bone|Fetal bone|TS-2014
 Esophageal epithelium|Esophageal epithelium|TS-0698
 Arterial smooth muscle|Artery smooth muscle|TS-1198
-Parapharyngeal space|Parapharyngeal space|TS-2357
 Ear|Ear|TS-1165
+Parapharyngeal space|Parapharyngeal space|TS-2357
 Vulva/anal squamous epithelial cell|Vulva/Anal squamous cell|TS-1255
 Choroid plexus ependymal cell|Choroid plexus ependymal cell|TS-2563
 Genital system|Reproductive system|TS-1318
@@ -1859,6 +1980,7 @@ Nervous system cell|Nervous system cell|TS-2040
 Epithelium of nasopharynx|Nasopharyngeal epithelium|TS-0662
 Horny layer|Stratum corneum|TS-0981
 eighth cranial nerve|Vestibulocochlear nerve|TS-2496
+Medial part of gyri orbitales|Gyrus rectus|TS-2766
 Zona glomerulosa of suprarenal gland|Adrenal glomerulosa|TS-0017
 Intestinum caecum|Cecum|TS-0122
 Thyroid follicular cell|Thyroid follicular cell|TS-1285
@@ -1874,11 +1996,13 @@ Inframammary crease|Inframammary fold|TS-2350
 Oesophageal squamous epithelium|Esophageal squamous epithelium|TS-2624
 Respiratory epithelium|Airway epithelium|TS-0023
 Large intestine epithelium|Large intestine epithelium|TS-2105
+Oviduct non-ciliated luminal epithelial cell|Oviduct non-ciliated epithelial cell|TS-2773
 Cerebral cortex glial cell|Cerebral cortex glial cell|TS-1256
 Colorectal smooth muscle|Colon smooth muscle|TS-0165
 CR cell|Cajal-Retzius cell|TS-1171
 Germ layer|Embryonic tissue|TS-2100
 Skin|Skin|TS-0934
+Orbitofrontal gyrus, posterior|Posterior orbitofrontal gyrus|TS-2769
 Cervix, uterine glandular cells|Uterine cervix glandular cell|TS-1273
 CD4-positive, alpha-beta memory T-lymphocyte|Memory CD4 T-cell|TS-2555
 Pharyngeal arch 1|First arch|TS-2089
@@ -1893,6 +2017,7 @@ Endoderm|Endoderm|TS-0273
 Uterine decidua|Decidua menstrualis|TS-2161
 Cortical thymic dendritic cell CD209-positive|Cortical thymic dendritic cell CD209-positive|TS-2446
 CD8-positive, alpha-beta T-lymphocyte|CD8-Positive T-cell|TS-2439
+Fallopian tube ciliated cells - cilia axoneme|Fallopian tube ciliated cells (cilia axoneme)|TS-2799
 pars intermedia|Pituitary neurointermediate lobe|TS-0795
 Lateral pharyngeal space|Parapharyngeal space|TS-2357
 Esophageal squamous epithelium|Esophageal squamous epithelium|TS-2624
@@ -1906,6 +2031,7 @@ T-helper cell|Helper T-cell|TS-1146
 Cingulate gyrus|Cingulate gyrus|TS-2453
 neopallial cortex|Neocortex|TS-2639
 Mammary epithelial cell|Mammary epithelium|TS-0593
+Nasopharynx ciliated cells - ciliary rootlets|Nasopharynx ciliated cells (ciliary rootlets)|TS-2804
 Epithelium of seminiferous tubule|Seminiferous epithelium|TS-0920
 Ejaculatory duct|Ductus ejaculatorius|TS-0211
 Lactating breast|Lactating mammary gland|TS-0513
@@ -1916,6 +2042,7 @@ Helper T lymphocyte|Helper T-cell|TS-1146
 venous vessel|Vein|TS-1108
 orbito-frontal cortex|Orbitofrontal cortex|TS-2650
 Cerebral spinal fluid|Cerebrospinal fluid|TS-0130
+Cerebellum gluc cells nucleus|Cerebellum gluc cells (nucleus)|TS-2809
 Type 1 pneumocyte|Type I alveolar epithelial cell|TS-2526
 Fovea|Fovea centralis|TS-2055
 Uterine|Uterus|TS-1102
@@ -1924,6 +2051,8 @@ Epithelium of gingiva|Gingival epithelium|TS-2625
 Venae cavae|Vena cava|TS-2429
 post central gyrus|Postcentral gyrus|TS-2640
 Thymic cortex|Thymic cortex|TS-2442
+Cerebellum white matter cells (cytoplasm/membrane)|Cerebellum white matter cells (cytoplasm/membrane)|TS-2812
+Macrophages|Macrophage|TS-0587
 Aortic|Aorta|TS-0046
 Oviduct ciliated cell|Oviduct ciliated cell|TS-2772
 Anterior pituitary gland|Pituitary anterior lobe|TS-0794
@@ -1942,6 +2071,7 @@ Lateral ventricle neural cell|Lateral ventricle neuron|TS-1261
 Polymorphonuclear leukocytes|Granulocyte|TS-0422
 Gastric glandular cell|Stomach glandular cell|TS-1284
 Small intestinal glandular cell|Small intestine glandular cell|TS-1286
+Intestinal endocrine cells|Intestinal enteroendocrine cell|TS-2739
 Upper extremity|Upper limb|TS-2214
 Ovum|Ovum|TS-2191
 Egg|Ovum|TS-2191
@@ -1957,6 +2087,7 @@ Bones|Bone|TS-0088
 Alveolus ridge|Alveolar ridge|TS-2467
 Embryonic stomach|Embryonic stomach|TS-2694
 Fetal B-cell|Fetal B-cell|TS-0326
+Rectal gyrus|Gyrus rectus|TS-2766
 Mucosa of bladder|Urinary bladder mucosa|TS-2591
 Retina nerve fiber layer|Nerve fiber layer of retina|TS-2515
 Myoepithelial cell|Myoepithelial cell|TS-2379
@@ -1976,21 +2107,26 @@ Tonsil reaction center cells|Tonsil germinal center cell|TS-1288
 Autonomic ganglia|Autonomic ganglion|TS-2340
 Exocrine pancreas glandular cell|Pancreas exocrine glandular cell|TS-1242
 Heart muscle myocyte|Heart muscle cell|TS-0115
+Cerebellum granular cells - nucleus|Cerebellum granular cells (nucleus)|TS-2791
 Epididymis head|Caput epididymis|TS-2672
 Pancreas exocrine glandular cell|Pancreas exocrine glandular cell|TS-1242
+Bronchus ciliated cells - cilia axoneme|Bronchus ciliated cells (cilia axoneme)|TS-2795
 Right oviduct|Right uterine tube|TS-2592
 Nucleus raphes dorsalis|Dorsal raphe nucleus|TS-2558
 Fetal female gonad|Fetal ovary|TS-2135
 Ventral tegmentum|Ventral tegmental area|TS-2389
+Capsula glomerularis|Glomerular capsule|TS-2774
 Rectal glandular cell|Rectum glandular cell|TS-1281
 classical NK T cell|Type I NK T cell|TS-2441
+Nasopharynx goblet cell|Nasopharyngeal goblet cell|TS-2777
 Tubulus renalis colligen|Renal collecting duct|TS-0860
 Endometrium|Endometrium|TS-0276
+hepatic macrophage|Kupffer cell|TS-2750
 Gestational structure|Gestational structure|TS-2092
 Secondary oocyte|Secondary oocyte|TS-2435
 Oesophagus squamous cell|Esophageal squamous cell|TS-1250
-Middle temporal gyrus|Middle temporal gyrus|TS-2644
 Right atrium auricular region|Right atrium auricular region|TS-2717
+Middle temporal gyrus|Middle temporal gyrus|TS-2644
 Gastric epithelium|Stomach epithelium|TS-2068
 Sphenoid|Sphenoid bone|TS-2343
 Adrenal gland glandular cells|Adrenal gland glandular cell|TS-2177
@@ -2003,12 +2139,13 @@ Parathyroid gland glandular cells|Parathyroid glandular cell|TS-1279
 Subglottis|Subglottis|TS-2475
 Type I pneumocyte|Type I alveolar epithelial cell|TS-2526
 Kidney cells in tubules|Renal tubule|TS-1262
-Uterine endothelium|Uterine endothelium|TS-1099
 Thoracic wall|Thoracic wall|TS-2464
+Uterine endothelium|Uterine endothelium|TS-1099
 Groin|Groin|TS-2339
 Sebum secreting cell|Sebum secreting cell|TS-2523
 Digestive system|Alimentary system|TS-1293
 Intra-abdominal fat|Visceral adipose tissue of abdominal region|TS-2405
+Muller cell|Muller glial cell|TS-2744
 Ocular adnexa|Ocular adnexa|TS-2454
 Promyelocyte|Promyelocyte|TS-0825
 Cochlear scala media|Cochlear duct|TS-0152
@@ -2017,6 +2154,7 @@ Anterior pituitary|Pituitary anterior lobe|TS-0794
 Epithelium of pancreatic duct|Pancreatic duct epithelium|TS-2572
 Appendix lymphoid tissue|Appendix lymphoid tissue|TS-1268
 Cell|Cell type|TS-2035
+Rod photoreceptor cells|Retinal rod cell|TS-0870
 Synovial membrane of synovial joint|Synovial membrane of synovial joint|TS-2665
 Hepatic parenchymal cell|Hepatocyte|TS-0454
 Vagina squamous cell|Vagina squamous cell|TS-1254
@@ -2032,6 +2170,7 @@ T-cytotoxic cell|Cytotoxic T-cell|TS-0190
 Renal glomerulus cell|Renal glomerulus|TS-0862
 Bile duct|Bile duct|TS-0075
 Cervix, uterine squamous epithelial cells|Uterine cervix squamous cell|TS-1251
+Cerebellar glomeruli|Cerebellar glomerulus|TS-2783
 Synovial tendon sheath |Tendon synovium|TS-2139
 Gamma delta T cell|Gamma delta T cells|TS-2393
 Caudate neuronal cells|Caudate nucleus neuron|TS-2504
@@ -2042,6 +2181,7 @@ Tonsil nongerminal center cell|Tonsil nongerminal center cell|TS-2172
 Small intestinal epithelial cell|Small intestine epithelium|TS-2104
 Stomach glandular cell|Stomach glandular cell|TS-1284
 Arachnoid|Arachnoid membrane|TS-0052
+Hofbauer cells|Hofbauer cell|TS-2749
 vagus nerve nodose ganglion|Inferior vagus X ganglion|TS-2653
 Lung fibroblast|Lung fibroblast|TS-0575
 Vagina|Vagina|TS-1103
@@ -2060,11 +2200,13 @@ Dentate gyrus of hippocampal formation|Dentate gyrus|TS-2388
 Meninx of spinal cord|Spinal cord meninges|TS-2148
 Multicuspid tooth|Molar|TS-0637
 Sensory neurons|Sensory neuron|TS-2387
+Bipolar cells|Retinal bipolar neuron|TS-2742
 Renal glomerular cell|Renal glomerulus|TS-0862
 lactating lactiferous gland duct|Lactating lactiferous duct|TS-2516
 Labyrinth|Inner ear|TS-0478
 Cowper's gland|Bulbourethral gland|TS-0103
 Mouth mucosa|Oral mucosa|TS-0716
+Cortex of limbic lobe|Limbic cortex|TS-2756
 vagus nerve inferior ganglion|Inferior vagus X ganglion|TS-2653
 Sternum|Sternum|TS-0972
 Stria vascularis of cochlea|Stria vascularis|TS-0982
@@ -2093,12 +2235,14 @@ Memory CD4 T-cells|Memory CD4 T-cell|TS-2555
 Embryonic hypothalamus|Embryonic hypothalamus|TS-2703
 Tonsil lymphoid cell|Tonsil lymphoid cell|TS-1270
 Uterus|Uterus|TS-1102
+Ductal cells|Pancreatic duct|TS-2571
 Cornea|Cornea|TS-0171
 Lymphoid tissue|Lymphoid tissue|TS-0584
 Scapula|Scapula|TS-0897
 iNKT cell|Type I NK T cell|TS-2441
 cerebellum hemisphere|Cerebellar hemisphere|TS-2637
 Renal|Kidney|TS-0510
+Bronchus basal cells|Bronchus basal cell|TS-2771
 Epithelium of seminiferous tubule of testis|Seminiferous epithelium|TS-0920
 Myelin sheath|Myelin sheath|TS-2363
 Type B enteroendocrine cell|Type B pancreatic cell|TS-2575
@@ -2117,6 +2261,8 @@ Enteric nervous system|Enteric nervous system|TS-2093
 Cytotrophoblasts|Cytotrophoblasts|TS-2745
 Island of Langerhans|Pancreatic islet|TS-0741
 Tracheal|Trachea|TS-1060
+aCGpv|Anterior cingulate gyrus, pregenual-ventral|TS-2758
+Cerebellum synaptic glomeruli (capsule)|Cerebellum synaptic glomeruli (capsule)|TS-2810
 Clitoris|Clitoris|TS-2538
 Sensory system|Sensory system|TS-2540
 Colon endothelial cells|Colon endothelial cell|TS-2397
@@ -2132,6 +2278,7 @@ Bronchus|Bronchus|TS-1229
 Embryonic mesoderm|Mesoderm|TS-0623
 Male germinal epithelium|Seminiferous epithelium|TS-0920
 Olfactory mucosa|Olfactory mucosa|TS-2197
+Cerebellum molecular layer - neuropil|Cerebral cortex neuropil|TS-2396
 Peripheral blood T lymphocyte|Peripheral blood T-cell|TS-0770
 Mouth|Mouth|TS-1315
 Nasal cartilage|Nasal cartilage|TS-0655
@@ -2142,9 +2289,10 @@ esophagus mucous membrane|Esophagus mucosa|TS-2626
 Bone marrow hematopoietic cells|Bone marrow hematopoietic cell|TS-2109
 Uterine cervix|Uterine cervix|TS-0134
 Trabecular bone|Cancellous bone|TS-0110
-Body part|Body part|TS-2084
 Right lobe of liver|Right lobe of liver|TS-2584
+Body part|Body part|TS-2084
 Spinal macroglia|Spinal cord macroglia|TS-2151
+Basal cell of prostate|Prostate basal cell|TS-2732
 Esophagogastric junction|Esophagogastric junction|TS-2499
 Stratum corneum|Stratum corneum|TS-0981
 cDC|Conventional dendritic cell|TS-2192
@@ -2161,6 +2309,7 @@ Internal ear|Inner ear|TS-0478
 Cauda epididymis|Cauda epididymis|TS-2674
 Urine|Urine|TS-1092
 Oligodendrocyte|Oligodendrocyte|TS-0709
+Nasopharynx goblet cells|Nasopharyngeal goblet cell|TS-2777
 Female haploid germ cell|Oocyte|TS-0711
 Tonsil non-germinal center cells|Tonsil nongerminal center cell|TS-2172
 Vas deferens|Vas deferens|TS-1105
@@ -2183,6 +2332,7 @@ Endometrial stroma|Endometrium stroma|TS-1266
 Extrinsic muscle of eyeball|Extraocular muscle|TS-0305
 Pulmonary vein|Pulmonary vein|TS-0840
 Tooth|Tooth|TS-1055
+Cerebellum granular cells - cytoplasm/membrane|Cerebellum granular cells (cytoplasm/membrane)|TS-2790
 Epithelium of mouth|Oral epithelium|TS-0715
 Prostate urothelial cell|Prostate urothelial cell|TS-2738
 Interbrain|Diencephalon|TS-0199
@@ -2204,6 +2354,7 @@ tunica mucosa oesophagi|Esophagus mucosa|TS-2626
 Sweat gland|Sweat gland|TS-0993
 Medulla oblongata|Medulla oblongata|TS-0607
 Hypothalamus neuronal cells|Hypothalamus neuron|TS-2506
+Cerebellar glomerulus|Cerebellar glomerulus|TS-2783
 Foreskin|Foreskin|TS-0383
 Nipple|Nipple|TS-2234
 Dura mater|Dura mater|TS-2008
@@ -2237,6 +2388,7 @@ Epithelium of vermiform appendix|Appendix epithelium|TS-2062
 Cowper's glands|Bulbourethral gland|TS-0103
 Type I alveolar cell|Type I alveolar epithelial cell|TS-2526
 Nasopharynx|Nasopharynx|TS-0663
+Cerebellum white matter cells nucleus|Cerebellum white matter cells (nucleus)|TS-2813
 Cheek|Cheek|TS-2470
 Purkinje cell|Purkinje cell|TS-0845
 Fetal telencephalon|Fetal telencephalon|TS-2404
@@ -2273,6 +2425,7 @@ Colon smooth muscle|Colon smooth muscle|TS-0165
 Kupffer cell|Kupffer cell|TS-2750
 Ischium|Ischium|TS-2451
 Posterior motor nucleus of vagus|Dorsal vagal nucleus|TS-2381
+Basal cell of bronchus|Bronchus basal cell|TS-2771
 Small intestine epithelial cell|Small intestine epithelium|TS-2104
 Gallbladder|Gall bladder|TS-0394
 Regulatory T-lymphocyte|Regulatory T cell|TS-2408
@@ -2283,8 +2436,10 @@ Hippocampus processes|Hippocampus neuronal projections|TS-2519
 Schwann cell|Schwann cell|TS-0898
 Ganglion|Ganglion|TS-0397
 Mammary gland duct|Lactiferous duct|TS-2385
+liver macrophage|Kupffer cell|TS-2750
 Nasal vestibule|Nasal vestibule|TS-0660
 squamous epithelium of tongue|Tongue squamous epithelium|TS-2635
+Renal glomerular capsule|Glomerular capsule|TS-2774
 Uterine cervix epithelial cell|Uterine cervix epithelium|TS-0137
 Preoptic nuclei|Preoptic area of hypothalamus|TS-0822
 Aorta smooth muscle|Aortic smooth muscle|TS-0048
@@ -2302,6 +2457,7 @@ Ureter|Ureter|TS-1084
 Kidney collecting duct|Renal collecting duct|TS-0860
 Perineum|Perineum|TS-2488
 Basophil|Basophil|TS-0073
+Bronchus ciliated cells (cilia axoneme)|Bronchus ciliated cells (cilia axoneme)|TS-2795
 Eosinophil granulocyte|Eosinophil|TS-0279
 Ventral tegmental area|Ventral tegmental area|TS-2389
 Gluteal muscle|Gluteal muscle|TS-2614
@@ -2318,6 +2474,8 @@ Expectoration|Sputum|TS-0963
 Mucous membrane of pharynx|Pharyngeal mucosa|TS-2437
 Astroglia|Astrocyte|TS-0060
 Hippocampus processes/nerve bundles|Hippocampus neuronal projections|TS-2519
+Orbitofrontal gyrus, medial|Medial orbitofrontal gyrus|TS-2768
+Proximal tubular cells|Renal proximal tubule|TS-0509
 Pons and medulla|Pons and medulla oblongata|TS-2562
 Pancreas exocrine glandular cells|Pancreas exocrine glandular cell|TS-1242
 Jaw region|Jaw region|TS-2482
@@ -2334,6 +2492,7 @@ Fetal forebrain|Fetal forebrain|TS-2712
 Exocrine pancreatic acinar cell|Pancreatic acinar cell|TS-0737
 Pubic region|Hypogastrium|TS-2346
 Colon nervous tissue|Colon nerve tissue|TS-2373
+stellate cell of von Kupffer|Kupffer cell|TS-2750
 Fetal cochlear organ|Fetal cochlea|TS-2112
 Pancreatic epithelial cell|Epithelial cell of pancreas|TS-2574
 organ mucosa of transverse colon|Mucosa of transverse colon|TS-2632
@@ -2353,12 +2512,14 @@ epithelium of tunica mucosa of endometrium|Endometrium epithelium|TS-2631
 Muscular system|Muscular system|TS-2724
 Peripheral blood granulocyte|Peripheral blood granulocyte|TS-0765
 Hofbauer cell|Hofbauer cell|TS-2749
+Suprabasal keratinocytes|Suprabasal keratinocyte|TS-2736
 Myeloid|Myeloid cell|TS-0647
 nucleus hypoglossalis|Neocortex|TS-2639
 Nasopharyngeal ciliated cell|Nasopharyngeal ciliated cell|TS-2776
 Glandular cell|Glandular cell|TS-2085
 Globus pallidus|Globus pallidus|TS-2013
 Seminiferous epithelium|Seminiferous epithelium|TS-0920
+Nasopharynx ciliated cells (tip of cilia)|Nasopharynx ciliated cells (tip of cilia)|TS-2805
 Kidney inner medulla|Kidney inner medulla|TS-0506
 Pericardium|Pericardium|TS-0761
 Endometrial glandular cell|Endometrial glandular cell|TS-2430
@@ -2367,8 +2528,8 @@ Brodmann area 17, striate|Primary visual cortex|TS-2638
 Corneal fibroblast|Corneal fibroblast|TS-1159
 Cochlear canal|Cochlear duct|TS-0152
 Adrenal gland cortex|Adrenal cortex|TS-0015
-Sacrum|Sacrum|TS-2201
 Hemolymphoid and immune system|Hemolymphoid and immune system|TS-2018
+Sacrum|Sacrum|TS-2201
 transverse colon organ mucosa|Mucosa of transverse colon|TS-2632
 Striated Muscle Tissue Cell|Striated muscle cell|TS-2157
 Third ventricle|Third ventricle|TS-2058
@@ -2381,6 +2542,7 @@ Heart myocardium|Myocardium|TS-2616
 Multipotent MSC stem cell|Mesenchymal stem cell|TS-0618
 Prostate gland epithelium|Prostate epithelium|TS-2065
 orbital frontal cortex|Orbitofrontal cortex|TS-2650
+Cerebellum Bergmann glia nucleus|Cerebellum Bergmann glia (nucleus)|TS-2807
 Parathyroid gland glandular cell|Parathyroid glandular cell|TS-1279
 Umbilical vein endothelium|Umbilical vein endothelium|TS-1081
 Cerebellar Purkinje cell|Purkinje cell|TS-0845
@@ -2392,6 +2554,7 @@ Pubis region|Hypogastrium|TS-2346
 Femoral bone|Femur|TS-0322
 Prostate glandular cell|Prostate glandular cell|TS-1280
 Mesothelium|Mesothelium|TS-1183
+Syncytiotrophoblasts - microvilli|Syncytiotrophoblasts (microvilli)|TS-2818
 Colonic epithelial cell|Colon epithelium|TS-0163
 Bowel|Intestine|TS-0490
 Lymphatic tissue|Lymphoid tissue|TS-0584
@@ -2412,6 +2575,7 @@ Lymphoblastoid|Lymphoblast|TS-0581
 Mesentery|Mesentery|TS-2465
 Olfactory part of nasal mucosa|Olfactory mucosa|TS-2197
 Stomach mucosa|Stomach mucosa|TS-0404
+Cerebellum molecular layer cells - nucleus|Cerebellum molecular layer cells (nucleus)|TS-2793
 Lateral ventricle neuronal cells|Lateral ventricle neuron|TS-1261
 Squamous alveolar cell|Type I alveolar epithelial cell|TS-2526
 Primary gustatory cortex|Gustatory cortex|TS-2546
@@ -2420,6 +2584,7 @@ region 1 of Ammon's horn|CA1 field of hippocampus|TS-2649
 Gastric body|Body of stomach|TS-2588
 Carotid body|Carotid body|TS-2469
 muscle tissue of heart myocardium|Heart muscle tissue|TS-0440
+Muller glia cells|Muller glial cell|TS-2744
 Uterine corpus glandular cell|Uterine corpus glandular cell|TS-1287
 Splenocyte|Splenocyte|TS-0957
 Metanephros|Metanephros|TS-2581
@@ -2436,12 +2601,14 @@ T lymphoblast|T lymphoblast|TS-0999
 Total PBMC|Peripheral blood mononuclear cell|TS-2370
 Patella|Patella|TS-2416
 Urinary bladder mucosa|Urinary bladder mucosa|TS-2591
+Cerebellum granular cells (nucleus)|Cerebellum granular cells (nucleus)|TS-2791
 Cerebellum cortex|Cerebellar cortex|TS-2000
 Striated cell|Striated muscle cell|TS-2157
 Triceps|Triceps muscle|TS-2613
 Fetal cerebrum|Fetal telencephalon|TS-2404
 Striated muscle cell|Striated muscle cell|TS-2157
 Archistriatum|Amygdala|TS-0037
+Pars triangularis of frontal operculum (Ono)|Triangular inferior frontal gyrus|TS-2763
 Ductus deferens|Vas deferens|TS-1105
 Chest|Thorax|TS-1039
 Lactating lactiferous duct|Lactating lactiferous duct|TS-2516
@@ -2452,6 +2619,7 @@ Striated muscle myocyte|Striated muscle cell|TS-2157
 Marginal zone of spleen|Marginal zone of spleen|TS-2395
 CA1 field of the Ammon horn|CA1 field of hippocampus|TS-2649
 Olfactory system|Olfactory system|TS-2542
+Bronchus ciliated cells - tip of cilia|Bronchus ciliated cells (tip of cilia)|TS-2797
 Heart ventrical|Heart ventricle|TS-0444
 Outer plexiform layer of retina|Outer plexiform layer of retina|TS-2512
 Lymph gland lymphoid cell|Lymph node lymphoid cell|TS-1289
@@ -2474,6 +2642,7 @@ Semicircular canal|Semicircular canal|TS-2164
 Squamous epithelial cell|Squamous cell|TS-1249
 Airway epithelial cell|Airway epithelium|TS-0023
 Mesocolon|Mesocolon|TS-2483
+Stratum basale of epidermis|Stratum basale|TS-2733
 Spiral organ|Organ of Corti|TS-0717
 Anterior cingulate gyrus, pregenual-ventral|Anterior cingulate gyrus, pregenual-ventral|TS-2758
 Cervix, uterine|Uterine cervix|TS-0134
@@ -2491,6 +2660,7 @@ Cardiac atrial|Heart atrium|TS-0437
 area frontalis granularis|Brodmann (1909) area 9|TS-2658
 Brain endothelium|Brain endothelium|TS-0092
 iso-cortex|Neocortex|TS-2639
+Kidney proximal tubules (cell body)|Kidney proximal tubules (cell body)|TS-2785
 Bone marrow|Bone marrow|TS-0087
 cervical squamous epithelium|Cervix squamous epithelium|TS-2636
 Synoviocyte|Synovial cell|TS-0995
@@ -2512,6 +2682,7 @@ Colonic epithelium|Colon epithelium|TS-0163
 Pancreatic islet core|Type B pancreatic cell|TS-2575
 Uterine tube glandular cell|Oviduct glandular cell|TS-1277
 Parathyroid chief cells|Parathyroid chief cell|TS-2140
+Kidney proximal tubules - microvilli|Kidney proximal tubules (microvilli)|TS-2786
 Peritubular cells|Peritubular myoid cell|TS-2423
 Gallbladder glandular cell|Gall bladder glandular cell|TS-1278
 Seminal fluid|Seminal plasma|TS-0918
@@ -2525,9 +2696,12 @@ Haemopoietic tissue|Hematopoietic tissue|TS-2142
 Brain meninges|Brain meninges|TS-2147
 Fetal breastbone|Fetal sternum|TS-0356
 Gustatory bud|Taste bud|TS-1015
+Syncytiotrophoblasts (cell body)|Syncytiotrophoblasts (cell body)|TS-2817
 Subthalamic nuclei|Subthalamic nucleus|TS-1154
 Large intestinal epithelium|Large intestine epithelium|TS-2105
+Bronchus ciliated cells - ciliary rootlets|Bronchus ciliated cells (ciliary rootlets)|TS-2796
 placental villus|Chorionic villus|TS-2676
+Monocytes|Monocyte|TS-0638
 Fetal adrenal gland|Fetal adrenal gland|TS-0323
 Inframammary fold|Inframammary fold|TS-2350
 mesenchyme tissue|Mesenchyme|TS-0620
@@ -2538,6 +2712,8 @@ Tonsil epithelium|Tonsil epithelium|TS-2070
 cornu ammonis 1|CA1 field of hippocampus|TS-2649
 Uterine cervix glandular cell|Uterine cervix glandular cell|TS-1273
 Ovaries|Ovary|TS-0730
+Inferior frontal convolution|Inferior frontal gyrus|TS-2762
+Cerebellum synaptic glomeruli (core)|Cerebellum synaptic glomeruli (core)|TS-2811
 Skin keratinocyte|Keratinocyte|TS-0500
 B09-23|Brodmann (1909) area 23|TS-2660
 Small intestine epithelium|Small intestine epithelium|TS-2104
@@ -2552,6 +2728,7 @@ Internal globus pallidus|Medial globus pallidus|TS-2421
 Cavity of mouth|Oral cavity|TS-2582
 Prefrontal cortex|Prefrontal cortex|TS-2424
 Keratocytes|Corneal fibroblast|TS-1159
+Nasopharynx ciliated cells - tip of cilia|Nasopharynx ciliated cells (tip of cilia)|TS-2805
 Thyroid follicle epithelium|Thyroid epithelium|TS-2167
 CD4-positive helper T cell|CD4-positive helper T cell|TS-2438
 Cardiomyocyte|Heart muscle cell|TS-0115
@@ -2592,6 +2769,7 @@ Periodontal membrane|Periodontal ligament|TS-0763
 Maxillary sinus|Maxillary sinus|TS-2231
 Spinal meninges|Spinal cord meninges|TS-2148
 MSC stem cell|Mesenchymal stem cell|TS-0618
+Gyrus frontalis inferior, pars orbitalis|Orbital inferior frontal gyrus|TS-2764
 Spleen|Spleen|TS-0956
 Trunk|Trunk|TS-1071
 Cardia of stomach|Cardia of stomach|TS-2391
@@ -2602,14 +2780,17 @@ Tongue squamous epithelium|Tongue squamous epithelium|TS-2635
 Thorax muscle|Thoracic muscle|TS-1037
 Langerhans cell of skin|Skin Langerhans cell|TS-2376
 Natural killer T-cell|Natural killer T cell|TS-2165
-Palpebral conjunctiva|Palpebral conjunctiva|TS-2663
 Glottis|Glottis|TS-2474
+Palpebral conjunctiva|Palpebral conjunctiva|TS-2663
 intermediate frontal gyrus|Middle frontal gyrus|TS-2642
 Neuron|Neuron|TS-0683
+B-cells|B-cell|TS-0068
 Amniotic membrane|Amnion|TS-0033
 Acinar cell of pancreas|Pancreatic acinar cell|TS-0737
 Unstriated muscle|Smooth muscle tissue|TS-0943
 Lateral nuclear group of thalamus|Lateral thalamic nuclei|TS-2028
+Fallopian tube ciliated cells (cell body)|Fallopian tube ciliated cells (cell body)|TS-2798
+Musculature of the body|Muscular system|TS-2724
 Rhombencephalon|Hindbrain|TS-0457
 Fetal ear|Fetal ear|TS-2111
 Epithelium of salivary gland|Salivary gland epithelium|TS-2067
@@ -2633,9 +2814,11 @@ Postcentral gyrus|Postcentral gyrus|TS-2640
 Keratinocytes|Keratinocyte|TS-0500
 Epithelial cells of bronchus|Bronchus epithelial cell|TS-2399
 CD8-positive, T-cell|CD8-Positive T-cell|TS-2439
+Rectus gyrus|Gyrus rectus|TS-2766
 Corpus Luysi|Subthalamic nucleus|TS-1154
 Smooth muscle myocytes|Smooth muscle cell|TS-2159
 Aortic smooth muscle tissue|Aortic smooth muscle|TS-0048
+Fallopian tube non-ciliated luminal epithelial cell|Oviduct non-ciliated epithelial cell|TS-2773
 Urachus|Urachus|TS-2500
 Carotid arteries|Carotid artery|TS-0116
 C1 cervical spinal cord|C1 segment of cervical spinal cord|TS-2654
@@ -2659,17 +2842,20 @@ Renal collecting tubule|Renal collecting duct|TS-0860
 Primary oocyte|Primary oocyte|TS-2434
 Brodmann area 23, ventral posterior cingulate|Brodmann (1909) area 23|TS-2660
 Seminal vesicle epithelium|Seminal vesicle epithelium|TS-2069
+Bronchus ciliated cells (ciliary rootlets)|Bronchus ciliated cells (ciliary rootlets)|TS-2796
 Lymph node nongerminal center|Lymph node nongerminal center cell|TS-2171
 Epithelium of lens|Lens epithelium|TS-0543
 Epithelium of bronchiole|Bronchiolar epithelium|TS-0570
 organ mucosa of sigmoid colon|Mucosa of sigmoid colon|TS-2633
 Subcutaneous adipose tissue of abdominal region|Subcutaneous abdominal adipose tissue|TS-2406
 Cingulate cortex|Cingulate cortex|TS-2647
+Cerebellum Purkinje cells (nucleus)|Cerebellum Purkinje cells (nucleus)|TS-2789
 Retinal rod|Retinal rod cell|TS-0870
 area 17 of Brodmann|Primary visual cortex|TS-2638
 Frontal lobe|Frontal lobe|TS-0389
 Respiratory diaphragm|Diaphragm|TS-0198
 Agregated lymphatic nodule|Peyer patch|TS-0780
+Straight gyrus|Gyrus rectus|TS-2766
 Cochlea|Cochlea|TS-0151
 Microglia|Microglia|TS-0627
 Colorectal epithelium|Colon epithelium|TS-0163
@@ -2696,7 +2882,6 @@ Left suprarenal gland|Left adrenal gland|TS-2590
 Stromal cell of endometrium|Stromal cell of endometrium|TS-2578
 epithelial tissue of choroid plexus|Choroid plexus epithelium|TS-2630
 Naive thymus-dervied CD8-positive, alpha-beta T-lymphocyte|Naive CD8 T-cell|TS-2554
-Inferior olivary nucleus|Inferior olivary complex|TS-2667
 Kidney tubule|Renal tubule|TS-1262
 Piriform fossa|Piriform sinus|TS-2489
 Mucosal associated invariant T-cell|Mucosal associated invariant T-cell|TS-2557
@@ -2718,17 +2903,19 @@ White adipocyte|White adipose tissue|TS-1119
 Hippocampus glial cells|Hippocampus glial cell|TS-1257
 Maxilla|Maxilla|TS-2217
 Corpus callosum|Corpus callosum|TS-0180
+Pars orbitalis gyri frontalis inferioris|Orbital inferior frontal gyrus|TS-2764
 Brain capillary|Brain capillary|TS-0090
 Neurohypophysis|Posterior pituitary|TS-0815
 Cerebral cortex endothelial cells|Cerebral cortex endothelial cell|TS-2372
 Neural progenitor cell|Neural progenitor cell|TS-2394
 Dorsal raphe nucleus|Dorsal raphe nucleus|TS-2558
+Cerebellum synaptic glomeruli|Cerebellar glomerulus|TS-2783
 Leydig cell|Leydig cell|TS-1150
 Caudatus|Caudate nucleus|TS-0121
 Major salivary gland|Major salivary gland|TS-2458
 Brain temporal cortex|Temporal cortex|TS-2689
+Cerebellum white matter cells|White matter of cerebellum|TS-2784
 1st pharyngeal arch|First arch|TS-2089
-Urinary bladder urothelial cell|Urinary bladder urothelium|TS-1088
 Retinal|Retina|TS-0865
 Vulva/anal skin squamous epithelial cells|Vulva/Anal squamous cell|TS-1255
 Adenohypophysis|Pituitary anterior lobe|TS-0794
@@ -2739,6 +2926,7 @@ Conjunctiva|Conjunctiva|TS-2232
 Notochord|Notochord|TS-0690
 Oral cavity|Oral cavity|TS-2582
 Superior frontal gyrus|Superior frontal gyrus|TS-2641
+Cholangiocytes|Cholangiocyte|TS-2737
 fronto-orbital cortex|Orbitofrontal cortex|TS-2650
 Appendix epithelium|Appendix epithelium|TS-2062
 Hematopoietic cell|Hematopoietic cell|TS-2017
@@ -2748,6 +2936,7 @@ Bronchial trunk|Bronchus|TS-1229
 Chondrocytes|Chondrocyte|TS-0138
 Seminiferous tubule|Seminiferous tubule|TS-1239
 Medial orbitofrontal gyrus|Medial orbitofrontal gyrus|TS-2768
+Retinal bipolar cell|Retinal bipolar neuron|TS-2742
 Seminiferous duct|Seminiferous tubule|TS-1239
 Retinal rod photoreceptor cells|Retinal rod cell|TS-0870
 T-helper lymphocyte|Helper T-cell|TS-1146
@@ -2757,10 +2946,12 @@ Synovial sheath|Synovium|TS-0998
 NK lymphocyte|Natural killer cell|TS-0664
 Gemma gustatoria|Taste bud|TS-1015
 Suprachiasmatic nucleus|Suprachiasmatic nucleus|TS-0992
+Distal tubular cells|Renal distal tubule|TS-0504
 Embryonic|Embryo|TS-0229
 Ammon's horn|Hippocampus|TS-0460
 Epididymis tail|Cauda epididymis|TS-2674
 Cerebral grey matter|Cerebral grey matter|TS-2361
+Cerebellum processes in white matter|Cerebellum processes in white matter|TS-2782
 NK-cells|Natural killer cell|TS-0664
 neopallium|Neocortex|TS-2639
 Skin fibroblast|Skin fibroblast|TS-0935
@@ -2779,8 +2970,8 @@ Enamel organ|Enamel organ|TS-0271
 Red blood cell|Erythrocyte|TS-0290
 Tendon of biceps muscle|Tendon of biceps muscle|TS-2677
 paranasal sinus mucosa|Mucosa of paranasal sinus|TS-2634
-Fetal skin|Fetal skin|TS-0352
 Tendon|Tendon|TS-1021
+Fetal skin|Fetal skin|TS-0352
 Milk|Milk|TS-0636
 Aortic smooth muscle|Aortic smooth muscle|TS-0048
 Colon peripheral nerve/ganglion|Colon nerve tissue|TS-2373
@@ -2790,8 +2981,8 @@ NK cell|Natural killer cell|TS-0664
 mucous membrane of oesophagus|Esophagus mucosa|TS-2626
 area 23 of Brodmann|Brodmann (1909) area 23|TS-2660
 Enamel of tooth|Tooth enamel|TS-1057
-Taste bud|Taste bud|TS-1015
 Gingival crevicular fluid|Gingival crevicular fluid|TS-2447
+Taste bud|Taste bud|TS-1015
 Left ventricle myocardium|Left ventricle myocardium|TS-2620
 invariant NK T cell|Type I NK T cell|TS-2441
 Uterus body epithelium|Uterine corpus epithelium|TS-2154
@@ -2804,6 +2995,7 @@ Elongated spermatid|Elongated spermatid|TS-2535
 Tegmentum|Midbrain tegmentum|TS-2537
 Dendritic cell|Dendritic cell|TS-0194
 CD8-Positive T-cell|CD8-Positive T-cell|TS-2439
+Late spermatids|Elongated spermatid|TS-2535
 Lens|Lens|TS-0545
 Hepatocyte|Hepatocyte|TS-0454
 Memory CD4 T-cell|Memory CD4 T-cell|TS-2555
@@ -2846,6 +3038,7 @@ Multipotent mesenchymal stromal cell|Mesenchymal stem cell|TS-0618
 Molecular layer of cerebellar cortex|Cerebellum molecular layer|TS-1248
 Ovarian stromal cells|Ovarian stroma|TS-1246
 Proximal colon|Proximal colon|TS-2457
+Kupffer cells|Kupffer cell|TS-2750
 Cells|Cell type|TS-2035
 Vermis|Vermis|TS-2059
 Upper limb|Upper limb|TS-2214
@@ -2858,6 +3051,7 @@ Fourth ventricle|Fourth ventricle|TS-2015
 Tunica mucosa vesicae urinariae|Urinary bladder mucosa|TS-2591
 Basal ganglion|Basal ganglia|TS-1149
 Brodmann (1909) area 10|Brodmann (1909) area 10|TS-2659
+Cerebellum granular cells (cytoplasm/membrane)|Cerebellum granular cells (cytoplasm/membrane)|TS-2790
 Exocrine part of pancreas|Exocrine pancreas|TS-1241
 Tibia|Tibia|TS-1048
 Skull|Skull|TS-2344
