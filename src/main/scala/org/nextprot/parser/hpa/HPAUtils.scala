@@ -115,6 +115,14 @@ object HPAUtils {
 			println("WARNING: " + ensgId + " - some data skipped due to expression level 'not representative'")
 			return null
 		};
+    if (level == "ascending") {
+      println("WARNING: " + ensgId + " - some data skipped due to expression level 'ascending'")
+      return null
+    };
+    if (level == "descending") {
+      println("WARNING: " + ensgId + " - some data skipped due to expression level 'descending'")
+      return null
+    };
 		throw new Exception("Unexpected expression level value:" + someLevel )
 	}
 
