@@ -21,6 +21,15 @@ class StatisticsCollector {
     }
   }
 
+  def --(metric: String, label: String) = {
+    this.synchronized {
+      val metricValues = stats.getOrElse(metric, new TrieMap());
+      val labelValue: (String, Integer) = metricValues.getOrElse(label, (label, 1));
+      val newValue = labelValue._2 - 1;
+      metricValues.put(label, (label, newValue));
+      stats.put(metric, metricValues);
+  }
+
   def printStats = {
 
     println("Printing statistics:\n");
